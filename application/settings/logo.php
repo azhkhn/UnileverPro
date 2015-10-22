@@ -1,0 +1,1 @@
+http://localhost/smartmartpro/public/upload/Logo/logo@2x.png
