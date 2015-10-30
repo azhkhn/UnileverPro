@@ -1,7 +1,7 @@
 <aside id="sidebar_main">
         <a href="#" class="uk-close sidebar_main_close_button"></a>
         <div class="sidebar_main_header">
-            <div class="sidebar_logo"><a href="<?php echo site_url('admin/dashboard')?>"><img src="assets/img/logo_main.png" alt="" height="15" width="71"/></a></div>
+            <div class="sidebar_logo"><a href="<?php echo site_url('admin/dashboard')?>"><img src="<?php echo base_url('public/assets/img/logo_main.png')?>" alt="" height="15" width="71"/></a></div>
             <div class="sidebar_actions">
                 <select id="lang_switcher" name="lang_switcher">
                     <option value="gb" selected>English</option>

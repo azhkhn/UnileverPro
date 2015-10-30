@@ -27,7 +27,7 @@
                                     </li>
                                     <li>
                                         <div class="md-list-addon-element">
-                                            <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_07_tn.png" alt=""/>
+                                            <img class="md-user-image md-list-addon-avatar" src="<?php echo base_url('public/assets/img/avatars/avatar_07_tn.png')?>" alt=""/>
                                         </div>
                                         <div class="md-list-content">
                                             <span class="md-list-heading"><a href="pages_mailbox.html">Iusto sint molestiae.</a></span>
@@ -45,7 +45,7 @@
                                     </li>
                                     <li>
                                         <div class="md-list-addon-element">
-                                            <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_02_tn.png" alt=""/>
+                                            <img class="md-user-image md-list-addon-avatar" src="<?php echo base_url('public/assets/img/avatars/avatar_02_tn.png')?>" alt=""/>
                                         </div>
                                         <div class="md-list-content">
                                             <span class="md-list-heading"><a href="pages_mailbox.html">Sint dolorem.</a></span>
@@ -54,7 +54,7 @@
                                     </li>
                                     <li>
                                         <div class="md-list-addon-element">
-                                            <img class="md-user-image md-list-addon-avatar" src="assets/img/avatars/avatar_09_tn.png" alt=""/>
+                                            <img class="md-user-image md-list-addon-avatar" src="<?php echo base_url('public/assets/img/avatars/avatar_09_tn.png')?>" alt=""/>
                                         </div>
                                         <div class="md-list-content">
                                             <span class="md-list-heading"><a href="pages_mailbox.html">Consequatur nobis quas.</a></span>
@@ -109,7 +109,7 @@
                             </div>
                         </li>
                         <li data-uk-dropdown="{mode:'click'}">
-                            <a href="#" class="user_action_image"><img class="md-user-image" src="assets/img/avatars/avatar_11_tn.png" alt=""/></a>
+                            <a href="#" class="user_action_image"><img class="md-user-image" src="<?php echo base_url('public/assets/img/avatars/avatar_11_tn.png')?>" alt=""/></a>
                             <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
                                 <ul class="uk-nav js-uk-prevent">
                                     <li><a href="page_user_profile.html">My profile</a></li>
