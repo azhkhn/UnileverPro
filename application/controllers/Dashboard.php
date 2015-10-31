@@ -10,9 +10,6 @@
 		public function index(){
 			$this->load->view('dashboard');
 		}
-		
-		public function d(){
-			$this->load->view('dashboard');
-		}
+	
 	}
 ?>
