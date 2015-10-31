@@ -6,13 +6,13 @@
 		public function __construct(){
 			parent::__construct();
 			$this->load->library("session");
-		//	$this->isLoggedIn();
+			$this->isLoggedIn();
 		}
 
 		public function isLoggedIn(){
 			$isLoggedIn = $this->session->userdata('logged_in');			
 			if(!isset($isLoggedIn) || $isLoggedIn!=true){
-				redirect("auth");
+				redirect("admin/auth");
 			}
 		}
 	}

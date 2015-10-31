@@ -64,10 +64,10 @@ $query_builder = TRUE;
 
 $db['development'] = array(
 	'dsn'	=> '',
-	'database' => 'unilever_reporting_system_db',
-	'hostname' => 'localhost', 	
-	'username' => 'darapenhchet', 	
-	'password' => '',
+	'database' => 'vuthea_smartmartdemo',
+	'hostname' => 'mysql1003.mochahost.com', 	
+	'username' => 'vuthea_coffee', 	
+	'password' => 'abc123+-*',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
