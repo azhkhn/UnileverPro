@@ -1,29 +1,4 @@
-		
-	<!-- main header -->
-	<?php $this->load->view('_include') ?>  
-     <!-- /main header end -->
-     
-		<!-- additional styles for plugins -->
-        <!-- weather icons -->
-        <link rel="stylesheet" href="<?php echo base_url('public/bower_components/weather-icons/css/weather-icons.min.css') ?>" media="all">
-        <!-- metrics graphics (charts) -->
-        <link rel="stylesheet" href="<?php echo base_url('public/bower_components/metrics-graphics/dist/metricsgraphics.css')?>">
-        <!-- c3.js (charts) -->
-        <link rel="stylesheet" href="<?php echo base_url('public/bower_components/c3js-chart/c3.min.css')?>">
-        
 
-</head>
-<body class="sidebar_main_open">
-    
-    
-    <!--  header -->
-	<?php $this->load->view('_header') ?>  
-     <!-- / header end -->
-    
-    
-    <!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
-    <!-- /left side bar -->
     
     
 
