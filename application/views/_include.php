@@ -9,11 +9,7 @@
     <link rel="icon" type="image/png" href="<?php echo base_url('public/assets/img/favicon-16x16.png') ?>" sizes="16x16">
     <link rel="icon" type="image/png" href="<?php echo base_url('public/assets/img/favicon-32x32.png') ?>" sizes="32x32">
 
-<<<<<<< HEAD:application/views/_include.php
-    <title>Unilever</title>
-=======
     <title>UNILEVER REPORTING SYSTEM</title>
->>>>>>> origin/master:application/views/admin-kh4it/_include.php
 
     	
     

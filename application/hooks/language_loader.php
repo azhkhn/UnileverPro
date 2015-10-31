@@ -24,10 +24,10 @@ class Language_loader {
         $language = $this->CI->input->cookie('LANGUAGE');
         //log_message('debug','Language_loader...'.$this->languages[$language]);
         if($language){
-            $this->CI->lang->load('smartmart',$this->languages[$language]);
+            $this->CI->lang->load('unilever',$this->languages[$language]);
             log_message('debug','IF Language_loader...'.$this->languages[$language]);
         }else{
-            $this->CI->lang->load('smartmart', $this->CI->config->item('language'));
+            $this->CI->lang->load('unilever', $this->CI->config->item('language'));
             //log_message('debug','ELSE Language_loader...'.$this->languages[$language]);
         }    
     }
