@@ -2,6 +2,12 @@
         <a href="#" class="uk-close sidebar_main_close_button"></a>
         <div class="sidebar_main_header">
             <div class="sidebar_logo"><a href="<?php echo site_url('dashboard')?>"><img src="assets/img/logo_main.png" alt="" height="15" width="71"/></a></div>
+<<<<<<< HEAD
+=======
+
+            <div class="sidebar_logo"><a href="<?php echo site_url('admin/dashboard')?>"><img src="<?php echo base_url('public/assets/img/logo_main.png')?>" alt="" height="15" width="71"/></a></div>
+
+>>>>>>> dce84f4ecc028c8d9abfdb3f5d11d51b57414a23
             <div class="sidebar_actions">
                 <select id="lang_switcher" name="lang_switcher">
                     <option value="gb" selected>English</option>

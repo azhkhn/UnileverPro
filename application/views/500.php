@@ -48,9 +48,7 @@
 
         </section>
 
-        <!-- BEGGIN FOOTER SECTION -->
-        <?php $this->load->view('_footer'); ?>
-        <!-- END FOOTER SECTION -->
+     
 
 </body>
 </html>
