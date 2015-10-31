@@ -18,16 +18,16 @@
     <div id="page_content">
         <div id="page_content_inner">
 
-            <h4 class="heading_a uk-margin-bottom">Brand</h4>
+            <h4 class="heading_a uk-margin-bottom">Promotion type</h4>
             
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
                     <table id="dt_tableTools" class="uk-table" cellspacing="0" width="100%">
                         <thead>
                         <tr>
+                            <th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Brand parent</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -35,9 +35,9 @@
 
                         <tfoot>
                         <tr>
+                             <th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Brand parent</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>

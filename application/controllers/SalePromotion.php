@@ -1,18 +1,18 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-	class Brand extends CI_Controller{
+	class SalePromotion extends CI_Controller{
 
 		public function __construct(){
 			parent::__construct();
 		}
 
 		public function index(){
-			$this->load->view('brand');
+			$this->load->view('salepromotion');
 		}
 		
 		public function add(){
-			$this->load->view('addbrand');
+			$this->load->view('addsalepromotion');
 		}
 	
 	}

@@ -25,9 +25,8 @@
                     <table id="dt_tableTools" class="uk-table" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th>Code</th>
+                        	<th>No</th>
                             <th>Name</th>
-                            <th>Brand parent</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -35,9 +34,8 @@
 
                         <tfoot>
                         <tr>
-                            <th>Code</th>
+                        	<th>No</th>
                             <th>Name</th>
-                            <th>Brand parent</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -48,11 +46,23 @@
                         <tr>
                             <td>Donna Snider</td>
                             <td>Customer Support</td>
-                            <td>27</td>
                             <td>
                             	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label></td>
-                            
+			                    <label for="switch_demo_primary" class="inline-label">Active</label>
+			                </td>
+                            <td>
+                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
+                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
+                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
+                            </td>
+                        </tr>
+                          <tr>
+                            <td>Donna Snider</td>
+                            <td>Customer Support</td>
+                            <td>
+                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
+			                    <label for="switch_demo_primary" class="inline-label">Active</label>
+			                </td>
                            <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
@@ -62,28 +72,13 @@
                           <tr>
                             <td>Donna Snider</td>
                             <td>Customer Support</td>
-                            <td>27</td>
                             <td>
                             	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label></td>
-                            
+			                    <label for="switch_demo_primary" class="inline-label">Active</label>
+			                </td>
                             <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
-                            </td>
-                        </tr>
-                          <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>27</td>
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label></td>
-                            
-                            <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
+                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a> 
+                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a> 
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>

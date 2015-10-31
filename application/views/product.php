@@ -25,19 +25,29 @@
                     <table id="dt_tableTools" class="uk-table" cellspacing="0" width="100%">
                         <thead>
                         <tr>
+                        	<th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Brand parent</th>
+                            <th>Size</th>
+                            <th>Unit</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th>Promotion</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
 
                         <tfoot>
-                        <tr>
+                         <tr>
+                        	<th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Brand parent</th>
+                            <th>Size</th>
+                            <th>Unit</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th>Promotion</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -48,25 +58,35 @@
                         <tr>
                             <td>Donna Snider</td>
                             <td>Customer Support</td>
+                            <td>New York</td>
                             <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td> 
                             <td>
                             	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label></td>
-                            
+			                    <label for="switch_demo_primary" class="inline-label">Active</label>
+			                </td>
                            <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
-                          <tr>
+                         <tr>
                             <td>Donna Snider</td>
                             <td>Customer Support</td>
+                            <td>New York</td>
                             <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td> 
                             <td>
                             	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label></td>
-                            
+			                    <label for="switch_demo_primary" class="inline-label">Active</label>
+			                </td>
                             <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
@@ -76,12 +96,17 @@
                           <tr>
                             <td>Donna Snider</td>
                             <td>Customer Support</td>
+                            <td>New York</td>
                             <td>27</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td>
+                            <td>2011/01/25</td>
+                            <td>$112,000</td> 
                             <td>
                             	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label></td>
-                            
-                            <td>
+			                    <label for="switch_demo_primary" class="inline-label">Active</label>
+			                </td>
+                           <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
