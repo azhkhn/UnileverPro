@@ -525,5 +525,22 @@ class Ion_auth
 		 */
 		return $check_all;
 	}
+	
+	public function getUserGroup($user_id = false)
+    {
+        $user_id || $user_id = $this->session->userdata('user_id');
+
+        $group_id = $this->getUserGroupID($user_id);
+        return $this->ion_auth->group($group_id)->row();
+
+    }
+
+    public function getUserGroupID($user_id = false)
+    {
+        $user_id || $user_id = $this->session->userdata('user_id');
+
+        $user = $this->ion_auth->user($user_id)->row();
+        return $user->group_id;
+    }
 
 }

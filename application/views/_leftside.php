@@ -1,8 +1,6 @@
 <aside id="sidebar_main">
         <a href="#" class="uk-close sidebar_main_close_button"></a>
         <div class="sidebar_main_header">
-            <div class="sidebar_logo"><a href="<?php echo site_url('dashboard')?>"><img src="assets/img/logo_main.png" alt="" height="15" width="71"/></a></div>
-
             <div class="sidebar_logo"><a href="<?php echo site_url('admin/dashboard')?>"><img src="<?php echo base_url('public/assets/img/logo_main.png')?>" alt="" height="15" width="71"/></a></div>
 
 
@@ -156,6 +154,12 @@
                         <span class="menu_icon uk-icon-th-large"></span>
                         Report
                     </a>
+                    <ul>
+                        <li><a href="<?php echo site_url('user/dailybareport/1')?>">BA DAILY REPORT</a></li>
+                        <li><a href="<?php echo site_url('user/dailysupervisorreport/1')?>">SUPERVISOR DAILY REPORT</a></li>
+                        <li><a href="<?php echo site_url('user/dailygmreport/1')?>">BA's EXECUTIVE DAILY REPORT</a></li>
+                        <li><a href="<?php echo site_url('user/dailypmreport/1')?>">BA PROGRAM DAILY REPORT</a></li>
+                    </ul>
                 </li>
                 
                 

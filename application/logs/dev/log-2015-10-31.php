@@ -22569,3 +22569,1416 @@ INFO - 2015-10-31 12:38:26 --> Language Class Initialized
 INFO - 2015-10-31 12:38:26 --> Language Class Initialized
 ERROR - 2015-10-31 12:38:26 --> 404 Page Not Found: Outlettype/assets
 ERROR - 2015-10-31 12:38:26 --> 404 Page Not Found: Outlettype/assets
+INFO - 2015-10-31 12:21:54 --> Config Class Initialized
+INFO - 2015-10-31 12:21:54 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:21:54 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:21:54 --> URI Class Initialized
+INFO - 2015-10-31 12:21:54 --> Router Class Initialized
+INFO - 2015-10-31 12:21:54 --> Output Class Initialized
+INFO - 2015-10-31 12:21:54 --> Security Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:21:54 --> Input Class Initialized
+INFO - 2015-10-31 12:21:54 --> Language Class Initialized
+INFO - 2015-10-31 12:21:54 --> Loader Class Initialized
+INFO - 2015-10-31 12:21:54 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:21:54 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:21:54 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:21:54 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:21:54 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:21:54 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:21:54 --> Encryption Class Initialized
+INFO - 2015-10-31 12:21:54 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:21:54 --> Email Class Initialized
+INFO - 2015-10-31 12:21:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:21:54 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:21:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:21:54 --> Model Class Initialized
+INFO - 2015-10-31 12:21:54 --> Model Class Initialized
+INFO - 2015-10-31 12:21:54 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:21:54 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:21:54 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> Language_loader...
+INFO - 2015-10-31 12:21:54 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/users/beauty_executive_daily_report.php
+INFO - 2015-10-31 12:21:54 --> Final output sent to browser
+DEBUG - 2015-10-31 12:21:54 --> Total execution time: 0.0199
+INFO - 2015-10-31 12:21:54 --> Config Class Initialized
+INFO - 2015-10-31 12:21:54 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:21:54 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:21:54 --> URI Class Initialized
+INFO - 2015-10-31 12:21:54 --> Router Class Initialized
+INFO - 2015-10-31 12:21:54 --> Output Class Initialized
+INFO - 2015-10-31 12:21:54 --> Security Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:21:54 --> Input Class Initialized
+INFO - 2015-10-31 12:21:54 --> Language Class Initialized
+INFO - 2015-10-31 12:21:54 --> Loader Class Initialized
+INFO - 2015-10-31 12:21:54 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:21:54 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:21:54 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:21:54 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:21:54 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:21:54 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:21:54 --> Encryption Class Initialized
+INFO - 2015-10-31 12:21:54 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:21:54 --> Email Class Initialized
+INFO - 2015-10-31 12:21:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:21:54 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:21:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:21:54 --> Model Class Initialized
+INFO - 2015-10-31 12:21:54 --> Model Class Initialized
+INFO - 2015-10-31 12:21:54 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:21:54 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:21:54 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:21:54 --> Language_loader...
+INFO - 2015-10-31 12:21:54 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:21:54 --> File loaded: /home/ubuntu/workspace/application/views/users/beauty_executive_daily_report.php
+INFO - 2015-10-31 12:21:54 --> Final output sent to browser
+DEBUG - 2015-10-31 12:21:54 --> Total execution time: 0.0139
+INFO - 2015-10-31 12:21:55 --> Config Class Initialized
+INFO - 2015-10-31 12:21:55 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:21:55 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:21:55 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:21:55 --> URI Class Initialized
+INFO - 2015-10-31 12:21:55 --> Router Class Initialized
+INFO - 2015-10-31 12:21:55 --> Output Class Initialized
+INFO - 2015-10-31 12:21:55 --> Security Class Initialized
+DEBUG - 2015-10-31 12:21:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:21:55 --> Input Class Initialized
+INFO - 2015-10-31 12:21:55 --> Language Class Initialized
+ERROR - 2015-10-31 12:21:55 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:22:03 --> Config Class Initialized
+INFO - 2015-10-31 12:22:03 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:03 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:03 --> URI Class Initialized
+INFO - 2015-10-31 12:22:03 --> Router Class Initialized
+INFO - 2015-10-31 12:22:03 --> Output Class Initialized
+INFO - 2015-10-31 12:22:03 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:03 --> Input Class Initialized
+INFO - 2015-10-31 12:22:03 --> Language Class Initialized
+INFO - 2015-10-31 12:22:03 --> Loader Class Initialized
+INFO - 2015-10-31 12:22:03 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:22:03 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:22:03 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:22:03 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:22:03 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:22:03 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:22:03 --> Encryption Class Initialized
+INFO - 2015-10-31 12:22:03 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> Language_loader...
+INFO - 2015-10-31 12:22:03 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:22:03 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:22:03 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:22:03 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:22:03 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:22:03 --> File loaded: /home/ubuntu/workspace/application/views/addgroup.php
+INFO - 2015-10-31 12:22:03 --> Final output sent to browser
+DEBUG - 2015-10-31 12:22:03 --> Total execution time: 0.0151
+INFO - 2015-10-31 12:22:03 --> Config Class Initialized
+INFO - 2015-10-31 12:22:03 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:03 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:03 --> URI Class Initialized
+INFO - 2015-10-31 12:22:03 --> Router Class Initialized
+INFO - 2015-10-31 12:22:03 --> Output Class Initialized
+INFO - 2015-10-31 12:22:03 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:03 --> Input Class Initialized
+INFO - 2015-10-31 12:22:03 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:03 --> 404 Page Not Found: Group/assets
+INFO - 2015-10-31 12:22:03 --> Config Class Initialized
+INFO - 2015-10-31 12:22:03 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:03 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:03 --> URI Class Initialized
+INFO - 2015-10-31 12:22:03 --> Router Class Initialized
+INFO - 2015-10-31 12:22:03 --> Output Class Initialized
+INFO - 2015-10-31 12:22:03 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:03 --> Input Class Initialized
+INFO - 2015-10-31 12:22:03 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:03 --> 404 Page Not Found: Group/assets
+INFO - 2015-10-31 12:22:03 --> Config Class Initialized
+INFO - 2015-10-31 12:22:03 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:03 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:03 --> URI Class Initialized
+INFO - 2015-10-31 12:22:03 --> Router Class Initialized
+INFO - 2015-10-31 12:22:03 --> Output Class Initialized
+INFO - 2015-10-31 12:22:03 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:03 --> Input Class Initialized
+INFO - 2015-10-31 12:22:03 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:03 --> 404 Page Not Found: Group/assets
+INFO - 2015-10-31 12:22:10 --> Config Class Initialized
+INFO - 2015-10-31 12:22:10 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:10 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:10 --> URI Class Initialized
+INFO - 2015-10-31 12:22:10 --> Router Class Initialized
+INFO - 2015-10-31 12:22:10 --> Output Class Initialized
+INFO - 2015-10-31 12:22:10 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:10 --> Input Class Initialized
+INFO - 2015-10-31 12:22:10 --> Language Class Initialized
+INFO - 2015-10-31 12:22:10 --> Loader Class Initialized
+INFO - 2015-10-31 12:22:10 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:22:10 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:22:10 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:22:10 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:22:10 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:22:10 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:22:10 --> Encryption Class Initialized
+INFO - 2015-10-31 12:22:10 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> Language_loader...
+INFO - 2015-10-31 12:22:10 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:22:10 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:22:10 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:22:10 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:22:10 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:22:10 --> File loaded: /home/ubuntu/workspace/application/views/addgroup.php
+INFO - 2015-10-31 12:22:10 --> Final output sent to browser
+DEBUG - 2015-10-31 12:22:10 --> Total execution time: 0.0156
+INFO - 2015-10-31 12:22:10 --> Config Class Initialized
+INFO - 2015-10-31 12:22:10 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:10 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:10 --> URI Class Initialized
+INFO - 2015-10-31 12:22:10 --> Router Class Initialized
+INFO - 2015-10-31 12:22:10 --> Output Class Initialized
+INFO - 2015-10-31 12:22:10 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:10 --> Input Class Initialized
+INFO - 2015-10-31 12:22:10 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:10 --> 404 Page Not Found: Group/assets
+INFO - 2015-10-31 12:22:10 --> Config Class Initialized
+INFO - 2015-10-31 12:22:10 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:10 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:10 --> URI Class Initialized
+INFO - 2015-10-31 12:22:10 --> Router Class Initialized
+INFO - 2015-10-31 12:22:10 --> Output Class Initialized
+INFO - 2015-10-31 12:22:10 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:10 --> Input Class Initialized
+INFO - 2015-10-31 12:22:10 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:10 --> 404 Page Not Found: Group/assets
+INFO - 2015-10-31 12:22:10 --> Config Class Initialized
+INFO - 2015-10-31 12:22:10 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:10 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:10 --> URI Class Initialized
+INFO - 2015-10-31 12:22:10 --> Router Class Initialized
+INFO - 2015-10-31 12:22:10 --> Output Class Initialized
+INFO - 2015-10-31 12:22:10 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:10 --> Input Class Initialized
+INFO - 2015-10-31 12:22:10 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:10 --> 404 Page Not Found: Group/assets
+INFO - 2015-10-31 12:22:14 --> Config Class Initialized
+INFO - 2015-10-31 12:22:14 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:14 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:14 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:14 --> URI Class Initialized
+INFO - 2015-10-31 12:22:14 --> Router Class Initialized
+INFO - 2015-10-31 12:22:14 --> Output Class Initialized
+INFO - 2015-10-31 12:22:14 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:14 --> Input Class Initialized
+INFO - 2015-10-31 12:22:14 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:14 --> 404 Page Not Found: Saletarget/add
+INFO - 2015-10-31 12:22:16 --> Config Class Initialized
+INFO - 2015-10-31 12:22:16 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:16 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:16 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:16 --> URI Class Initialized
+INFO - 2015-10-31 12:22:16 --> Router Class Initialized
+INFO - 2015-10-31 12:22:16 --> Output Class Initialized
+INFO - 2015-10-31 12:22:16 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:16 --> Input Class Initialized
+INFO - 2015-10-31 12:22:16 --> Language Class Initialized
+INFO - 2015-10-31 12:22:16 --> Loader Class Initialized
+INFO - 2015-10-31 12:22:16 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:22:16 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:22:16 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:22:16 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:22:16 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:22:16 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:22:16 --> Encryption Class Initialized
+INFO - 2015-10-31 12:22:16 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:22:16 --> Language_loader...
+INFO - 2015-10-31 12:22:16 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:22:16 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:22:16 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:22:16 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:22:16 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:22:16 --> File loaded: /home/ubuntu/workspace/application/views/addgroup.php
+INFO - 2015-10-31 12:22:16 --> Final output sent to browser
+DEBUG - 2015-10-31 12:22:16 --> Total execution time: 0.0296
+INFO - 2015-10-31 12:22:20 --> Config Class Initialized
+INFO - 2015-10-31 12:22:20 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:20 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:20 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:20 --> URI Class Initialized
+INFO - 2015-10-31 12:22:20 --> Router Class Initialized
+INFO - 2015-10-31 12:22:20 --> Output Class Initialized
+INFO - 2015-10-31 12:22:20 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:20 --> Input Class Initialized
+INFO - 2015-10-31 12:22:20 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:20 --> 404 Page Not Found: Salepromotion/index
+INFO - 2015-10-31 12:22:22 --> Config Class Initialized
+INFO - 2015-10-31 12:22:22 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:22 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:22 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:22 --> URI Class Initialized
+INFO - 2015-10-31 12:22:22 --> Router Class Initialized
+INFO - 2015-10-31 12:22:22 --> Output Class Initialized
+INFO - 2015-10-31 12:22:22 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:22 --> Input Class Initialized
+INFO - 2015-10-31 12:22:22 --> Language Class Initialized
+INFO - 2015-10-31 12:22:22 --> Loader Class Initialized
+INFO - 2015-10-31 12:22:22 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:22:22 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:22:22 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:22:22 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:22:22 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:22:22 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:22:22 --> Encryption Class Initialized
+INFO - 2015-10-31 12:22:22 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:22:22 --> Language_loader...
+INFO - 2015-10-31 12:22:22 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:22:22 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:22:22 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:22:22 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:22:22 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:22:22 --> File loaded: /home/ubuntu/workspace/application/views/addgroup.php
+INFO - 2015-10-31 12:22:22 --> Final output sent to browser
+DEBUG - 2015-10-31 12:22:22 --> Total execution time: 0.0128
+INFO - 2015-10-31 12:22:26 --> Config Class Initialized
+INFO - 2015-10-31 12:22:26 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:26 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:26 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:26 --> URI Class Initialized
+INFO - 2015-10-31 12:22:26 --> Router Class Initialized
+INFO - 2015-10-31 12:22:26 --> Output Class Initialized
+INFO - 2015-10-31 12:22:26 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:26 --> Input Class Initialized
+INFO - 2015-10-31 12:22:26 --> Language Class Initialized
+INFO - 2015-10-31 12:22:26 --> Loader Class Initialized
+INFO - 2015-10-31 12:22:26 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:22:26 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:22:26 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:22:26 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:22:26 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:22:26 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:22:26 --> Encryption Class Initialized
+INFO - 2015-10-31 12:22:26 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:22:26 --> Language_loader...
+INFO - 2015-10-31 12:22:26 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:22:26 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:22:26 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:22:26 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:22:26 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:22:26 --> File loaded: /home/ubuntu/workspace/application/views/addoutlet.php
+INFO - 2015-10-31 12:22:26 --> Final output sent to browser
+DEBUG - 2015-10-31 12:22:26 --> Total execution time: 0.0130
+INFO - 2015-10-31 12:22:27 --> Config Class Initialized
+INFO - 2015-10-31 12:22:27 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:27 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:27 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:27 --> URI Class Initialized
+INFO - 2015-10-31 12:22:27 --> Router Class Initialized
+INFO - 2015-10-31 12:22:27 --> Output Class Initialized
+INFO - 2015-10-31 12:22:27 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:27 --> Input Class Initialized
+INFO - 2015-10-31 12:22:27 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:27 --> 404 Page Not Found: Outlet/assets
+INFO - 2015-10-31 12:22:27 --> Config Class Initialized
+INFO - 2015-10-31 12:22:27 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:27 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:27 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:27 --> URI Class Initialized
+INFO - 2015-10-31 12:22:27 --> Router Class Initialized
+INFO - 2015-10-31 12:22:27 --> Output Class Initialized
+INFO - 2015-10-31 12:22:27 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:27 --> Input Class Initialized
+INFO - 2015-10-31 12:22:27 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:27 --> 404 Page Not Found: Outlet/assets
+INFO - 2015-10-31 12:22:27 --> Config Class Initialized
+INFO - 2015-10-31 12:22:27 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:27 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:27 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:27 --> URI Class Initialized
+INFO - 2015-10-31 12:22:27 --> Router Class Initialized
+INFO - 2015-10-31 12:22:27 --> Output Class Initialized
+INFO - 2015-10-31 12:22:27 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:27 --> Input Class Initialized
+INFO - 2015-10-31 12:22:27 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:27 --> 404 Page Not Found: Outlet/assets
+INFO - 2015-10-31 12:22:45 --> Config Class Initialized
+INFO - 2015-10-31 12:22:45 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:45 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:45 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:45 --> URI Class Initialized
+INFO - 2015-10-31 12:22:45 --> Router Class Initialized
+INFO - 2015-10-31 12:22:45 --> Output Class Initialized
+INFO - 2015-10-31 12:22:45 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:45 --> Input Class Initialized
+INFO - 2015-10-31 12:22:45 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:45 --> 404 Page Not Found: Outlettype/add
+INFO - 2015-10-31 12:22:47 --> Config Class Initialized
+INFO - 2015-10-31 12:22:47 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:47 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:47 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:47 --> URI Class Initialized
+INFO - 2015-10-31 12:22:47 --> Router Class Initialized
+INFO - 2015-10-31 12:22:47 --> Output Class Initialized
+INFO - 2015-10-31 12:22:47 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:47 --> Input Class Initialized
+INFO - 2015-10-31 12:22:47 --> Language Class Initialized
+INFO - 2015-10-31 12:22:47 --> Loader Class Initialized
+INFO - 2015-10-31 12:22:47 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:22:47 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:22:47 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:22:47 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:22:47 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:22:47 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:22:47 --> Encryption Class Initialized
+INFO - 2015-10-31 12:22:47 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:22:47 --> Language_loader...
+INFO - 2015-10-31 12:22:47 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:22:47 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:22:47 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:22:47 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:22:47 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:22:47 --> File loaded: /home/ubuntu/workspace/application/views/addoutlet.php
+INFO - 2015-10-31 12:22:47 --> Final output sent to browser
+DEBUG - 2015-10-31 12:22:47 --> Total execution time: 0.0106
+INFO - 2015-10-31 12:22:51 --> Config Class Initialized
+INFO - 2015-10-31 12:22:51 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:51 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:51 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:51 --> URI Class Initialized
+INFO - 2015-10-31 12:22:51 --> Router Class Initialized
+INFO - 2015-10-31 12:22:51 --> Output Class Initialized
+INFO - 2015-10-31 12:22:51 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:51 --> Input Class Initialized
+INFO - 2015-10-31 12:22:51 --> Language Class Initialized
+ERROR - 2015-10-31 12:22:51 --> 404 Page Not Found: Saleitem/index
+INFO - 2015-10-31 12:22:54 --> Config Class Initialized
+INFO - 2015-10-31 12:22:54 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:22:54 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:22:54 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:22:54 --> URI Class Initialized
+INFO - 2015-10-31 12:22:54 --> Router Class Initialized
+INFO - 2015-10-31 12:22:54 --> Output Class Initialized
+INFO - 2015-10-31 12:22:54 --> Security Class Initialized
+DEBUG - 2015-10-31 12:22:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:22:54 --> Input Class Initialized
+INFO - 2015-10-31 12:22:54 --> Language Class Initialized
+INFO - 2015-10-31 12:22:54 --> Loader Class Initialized
+INFO - 2015-10-31 12:22:54 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:22:54 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:22:54 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:22:54 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:22:54 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:22:54 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:22:54 --> Encryption Class Initialized
+INFO - 2015-10-31 12:22:54 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:22:54 --> Language_loader...
+INFO - 2015-10-31 12:22:54 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:22:54 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:22:54 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:22:54 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:22:54 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:22:54 --> File loaded: /home/ubuntu/workspace/application/views/addoutlet.php
+INFO - 2015-10-31 12:22:54 --> Final output sent to browser
+DEBUG - 2015-10-31 12:22:54 --> Total execution time: 0.0159
+INFO - 2015-10-31 12:23:00 --> Config Class Initialized
+INFO - 2015-10-31 12:23:00 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:00 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:00 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:00 --> URI Class Initialized
+INFO - 2015-10-31 12:23:00 --> Router Class Initialized
+INFO - 2015-10-31 12:23:00 --> Output Class Initialized
+INFO - 2015-10-31 12:23:00 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:00 --> Input Class Initialized
+INFO - 2015-10-31 12:23:00 --> Language Class Initialized
+ERROR - 2015-10-31 12:23:00 --> 404 Page Not Found: User/add
+INFO - 2015-10-31 12:23:03 --> Config Class Initialized
+INFO - 2015-10-31 12:23:03 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:03 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:03 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:03 --> URI Class Initialized
+INFO - 2015-10-31 12:23:03 --> Router Class Initialized
+INFO - 2015-10-31 12:23:03 --> Output Class Initialized
+INFO - 2015-10-31 12:23:03 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:03 --> Input Class Initialized
+INFO - 2015-10-31 12:23:03 --> Language Class Initialized
+INFO - 2015-10-31 12:23:03 --> Loader Class Initialized
+INFO - 2015-10-31 12:23:03 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:23:03 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:23:03 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:23:03 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:23:03 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:23:03 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:23:03 --> Encryption Class Initialized
+INFO - 2015-10-31 12:23:03 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:23:03 --> Language_loader...
+INFO - 2015-10-31 12:23:03 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:23:03 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:23:03 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:23:03 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:23:03 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:23:03 --> File loaded: /home/ubuntu/workspace/application/views/addoutlet.php
+INFO - 2015-10-31 12:23:03 --> Final output sent to browser
+DEBUG - 2015-10-31 12:23:03 --> Total execution time: 0.0115
+INFO - 2015-10-31 12:23:06 --> Config Class Initialized
+INFO - 2015-10-31 12:23:06 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:06 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:06 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:06 --> URI Class Initialized
+INFO - 2015-10-31 12:23:06 --> Router Class Initialized
+INFO - 2015-10-31 12:23:06 --> Output Class Initialized
+INFO - 2015-10-31 12:23:06 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:06 --> Input Class Initialized
+INFO - 2015-10-31 12:23:06 --> Language Class Initialized
+ERROR - 2015-10-31 12:23:06 --> 404 Page Not Found: Report/index
+INFO - 2015-10-31 12:23:09 --> Config Class Initialized
+INFO - 2015-10-31 12:23:09 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:09 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:09 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:09 --> URI Class Initialized
+INFO - 2015-10-31 12:23:09 --> Router Class Initialized
+INFO - 2015-10-31 12:23:09 --> Output Class Initialized
+INFO - 2015-10-31 12:23:09 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:09 --> Input Class Initialized
+INFO - 2015-10-31 12:23:09 --> Language Class Initialized
+INFO - 2015-10-31 12:23:09 --> Loader Class Initialized
+INFO - 2015-10-31 12:23:09 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:23:09 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:23:09 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:23:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:23:09 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:23:09 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:23:09 --> Encryption Class Initialized
+INFO - 2015-10-31 12:23:09 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:23:09 --> Language_loader...
+INFO - 2015-10-31 12:23:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:23:09 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:23:09 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:23:09 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:23:09 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:23:09 --> File loaded: /home/ubuntu/workspace/application/views/addoutlet.php
+INFO - 2015-10-31 12:23:09 --> Final output sent to browser
+DEBUG - 2015-10-31 12:23:09 --> Total execution time: 0.0150
+INFO - 2015-10-31 12:23:33 --> Config Class Initialized
+INFO - 2015-10-31 12:23:33 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:33 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:33 --> URI Class Initialized
+INFO - 2015-10-31 12:23:33 --> Router Class Initialized
+INFO - 2015-10-31 12:23:33 --> Output Class Initialized
+INFO - 2015-10-31 12:23:33 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:33 --> Input Class Initialized
+INFO - 2015-10-31 12:23:33 --> Language Class Initialized
+INFO - 2015-10-31 12:23:33 --> Loader Class Initialized
+INFO - 2015-10-31 12:23:33 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:23:33 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:23:33 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:23:33 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:23:33 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:23:33 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:23:33 --> Encryption Class Initialized
+INFO - 2015-10-31 12:23:33 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> Language_loader...
+INFO - 2015-10-31 12:23:33 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:23:33 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:23:33 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:23:33 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:23:33 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:23:33 --> File loaded: /home/ubuntu/workspace/application/views/addproduct.php
+INFO - 2015-10-31 12:23:33 --> Final output sent to browser
+DEBUG - 2015-10-31 12:23:33 --> Total execution time: 0.0141
+INFO - 2015-10-31 12:23:33 --> Config Class Initialized
+INFO - 2015-10-31 12:23:33 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:33 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:33 --> URI Class Initialized
+INFO - 2015-10-31 12:23:33 --> Router Class Initialized
+INFO - 2015-10-31 12:23:33 --> Output Class Initialized
+INFO - 2015-10-31 12:23:33 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:33 --> Input Class Initialized
+INFO - 2015-10-31 12:23:33 --> Language Class Initialized
+ERROR - 2015-10-31 12:23:33 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:23:33 --> Config Class Initialized
+INFO - 2015-10-31 12:23:33 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:33 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:33 --> URI Class Initialized
+INFO - 2015-10-31 12:23:33 --> Router Class Initialized
+INFO - 2015-10-31 12:23:33 --> Output Class Initialized
+INFO - 2015-10-31 12:23:33 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:33 --> Input Class Initialized
+INFO - 2015-10-31 12:23:33 --> Language Class Initialized
+ERROR - 2015-10-31 12:23:33 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:23:33 --> Config Class Initialized
+INFO - 2015-10-31 12:23:33 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:23:33 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:23:33 --> URI Class Initialized
+INFO - 2015-10-31 12:23:33 --> Router Class Initialized
+INFO - 2015-10-31 12:23:33 --> Output Class Initialized
+INFO - 2015-10-31 12:23:33 --> Security Class Initialized
+DEBUG - 2015-10-31 12:23:33 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:23:33 --> Input Class Initialized
+INFO - 2015-10-31 12:23:33 --> Language Class Initialized
+ERROR - 2015-10-31 12:23:33 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:24:57 --> Config Class Initialized
+INFO - 2015-10-31 12:24:57 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:24:57 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:24:57 --> URI Class Initialized
+INFO - 2015-10-31 12:24:57 --> Router Class Initialized
+INFO - 2015-10-31 12:24:57 --> Output Class Initialized
+INFO - 2015-10-31 12:24:57 --> Security Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:24:57 --> Input Class Initialized
+INFO - 2015-10-31 12:24:57 --> Language Class Initialized
+INFO - 2015-10-31 12:24:57 --> Loader Class Initialized
+INFO - 2015-10-31 12:24:57 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:24:57 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:24:57 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:24:57 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:24:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:24:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:24:57 --> Encryption Class Initialized
+INFO - 2015-10-31 12:24:57 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> Language_loader...
+INFO - 2015-10-31 12:24:57 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:24:57 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:24:57 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:24:57 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:24:57 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:24:57 --> File loaded: /home/ubuntu/workspace/application/views/addproduct.php
+INFO - 2015-10-31 12:24:57 --> Final output sent to browser
+DEBUG - 2015-10-31 12:24:57 --> Total execution time: 0.0175
+INFO - 2015-10-31 12:24:57 --> Config Class Initialized
+INFO - 2015-10-31 12:24:57 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:24:57 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:24:57 --> URI Class Initialized
+INFO - 2015-10-31 12:24:57 --> Router Class Initialized
+INFO - 2015-10-31 12:24:57 --> Output Class Initialized
+INFO - 2015-10-31 12:24:57 --> Security Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:24:57 --> Input Class Initialized
+INFO - 2015-10-31 12:24:57 --> Language Class Initialized
+ERROR - 2015-10-31 12:24:57 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:24:57 --> Config Class Initialized
+INFO - 2015-10-31 12:24:57 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:24:57 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:24:57 --> URI Class Initialized
+INFO - 2015-10-31 12:24:57 --> Router Class Initialized
+INFO - 2015-10-31 12:24:57 --> Output Class Initialized
+INFO - 2015-10-31 12:24:57 --> Security Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:24:57 --> Input Class Initialized
+INFO - 2015-10-31 12:24:57 --> Language Class Initialized
+ERROR - 2015-10-31 12:24:57 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:24:57 --> Config Class Initialized
+INFO - 2015-10-31 12:24:57 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:24:57 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:24:57 --> URI Class Initialized
+INFO - 2015-10-31 12:24:57 --> Router Class Initialized
+INFO - 2015-10-31 12:24:57 --> Output Class Initialized
+INFO - 2015-10-31 12:24:57 --> Security Class Initialized
+DEBUG - 2015-10-31 12:24:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:24:57 --> Input Class Initialized
+INFO - 2015-10-31 12:24:57 --> Language Class Initialized
+ERROR - 2015-10-31 12:24:57 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:25:26 --> Config Class Initialized
+INFO - 2015-10-31 12:25:26 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:26 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:26 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:26 --> URI Class Initialized
+INFO - 2015-10-31 12:25:26 --> Router Class Initialized
+INFO - 2015-10-31 12:25:26 --> Output Class Initialized
+INFO - 2015-10-31 12:25:26 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:26 --> Input Class Initialized
+INFO - 2015-10-31 12:25:26 --> Language Class Initialized
+INFO - 2015-10-31 12:25:26 --> Loader Class Initialized
+INFO - 2015-10-31 12:25:26 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:25:26 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:25:26 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:25:26 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:25:26 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:25:26 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:25:26 --> Encryption Class Initialized
+INFO - 2015-10-31 12:25:26 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:25:26 --> Language_loader...
+INFO - 2015-10-31 12:25:26 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:25:26 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:25:26 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:25:26 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:25:26 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:25:26 --> File loaded: /home/ubuntu/workspace/application/views/addproduct.php
+INFO - 2015-10-31 12:25:26 --> Final output sent to browser
+DEBUG - 2015-10-31 12:25:26 --> Total execution time: 0.0165
+INFO - 2015-10-31 12:25:26 --> Config Class Initialized
+INFO - 2015-10-31 12:25:26 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:26 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:26 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:26 --> URI Class Initialized
+INFO - 2015-10-31 12:25:26 --> Router Class Initialized
+INFO - 2015-10-31 12:25:26 --> Output Class Initialized
+INFO - 2015-10-31 12:25:26 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:26 --> Input Class Initialized
+INFO - 2015-10-31 12:25:26 --> Language Class Initialized
+ERROR - 2015-10-31 12:25:26 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:25:26 --> Config Class Initialized
+INFO - 2015-10-31 12:25:26 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:26 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:26 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:26 --> URI Class Initialized
+INFO - 2015-10-31 12:25:26 --> Router Class Initialized
+INFO - 2015-10-31 12:25:26 --> Output Class Initialized
+INFO - 2015-10-31 12:25:26 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:26 --> Input Class Initialized
+INFO - 2015-10-31 12:25:26 --> Language Class Initialized
+ERROR - 2015-10-31 12:25:26 --> 404 Page Not Found: Product/assets
+INFO - 2015-10-31 12:25:34 --> Config Class Initialized
+INFO - 2015-10-31 12:25:34 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:34 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:34 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:34 --> URI Class Initialized
+INFO - 2015-10-31 12:25:34 --> Router Class Initialized
+INFO - 2015-10-31 12:25:34 --> Output Class Initialized
+INFO - 2015-10-31 12:25:34 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:34 --> Input Class Initialized
+INFO - 2015-10-31 12:25:34 --> Language Class Initialized
+INFO - 2015-10-31 12:25:34 --> Loader Class Initialized
+INFO - 2015-10-31 12:25:34 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:25:34 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:25:34 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:25:34 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:25:34 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:25:34 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:25:34 --> Encryption Class Initialized
+INFO - 2015-10-31 12:25:34 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:25:34 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:25:34 --> Email Class Initialized
+INFO - 2015-10-31 12:25:34 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:25:34 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:25:34 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:25:34 --> Model Class Initialized
+INFO - 2015-10-31 12:25:34 --> Model Class Initialized
+INFO - 2015-10-31 12:25:34 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:25:34 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:25:34 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:25:34 --> Language_loader...
+INFO - 2015-10-31 12:25:34 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:25:34 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:25:34 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:25:34 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:25:34 --> File loaded: /home/ubuntu/workspace/application/views/users/beauty_agent_daily_report.php
+INFO - 2015-10-31 12:25:34 --> Final output sent to browser
+DEBUG - 2015-10-31 12:25:34 --> Total execution time: 0.0194
+INFO - 2015-10-31 12:25:36 --> Config Class Initialized
+INFO - 2015-10-31 12:25:36 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:36 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:36 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:36 --> URI Class Initialized
+INFO - 2015-10-31 12:25:36 --> Router Class Initialized
+INFO - 2015-10-31 12:25:36 --> Output Class Initialized
+INFO - 2015-10-31 12:25:36 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:36 --> Input Class Initialized
+INFO - 2015-10-31 12:25:36 --> Language Class Initialized
+ERROR - 2015-10-31 12:25:36 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:25:44 --> Config Class Initialized
+INFO - 2015-10-31 12:25:44 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:44 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:44 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:44 --> URI Class Initialized
+INFO - 2015-10-31 12:25:44 --> Router Class Initialized
+INFO - 2015-10-31 12:25:44 --> Output Class Initialized
+INFO - 2015-10-31 12:25:44 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:44 --> Input Class Initialized
+INFO - 2015-10-31 12:25:44 --> Language Class Initialized
+INFO - 2015-10-31 12:25:44 --> Loader Class Initialized
+INFO - 2015-10-31 12:25:44 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:25:44 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:25:44 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:25:44 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:25:44 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:25:44 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:25:44 --> Encryption Class Initialized
+INFO - 2015-10-31 12:25:44 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:25:44 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:25:44 --> Email Class Initialized
+INFO - 2015-10-31 12:25:44 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:25:44 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:25:44 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:25:44 --> Model Class Initialized
+INFO - 2015-10-31 12:25:44 --> Model Class Initialized
+INFO - 2015-10-31 12:25:44 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:25:44 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:25:44 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:25:44 --> Language_loader...
+INFO - 2015-10-31 12:25:44 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:25:44 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:25:44 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:25:44 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:25:44 --> File loaded: /home/ubuntu/workspace/application/views/users/supervisor_daily_report.php
+INFO - 2015-10-31 12:25:44 --> Final output sent to browser
+DEBUG - 2015-10-31 12:25:44 --> Total execution time: 0.0159
+INFO - 2015-10-31 12:25:46 --> Config Class Initialized
+INFO - 2015-10-31 12:25:46 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:46 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:46 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:46 --> URI Class Initialized
+INFO - 2015-10-31 12:25:46 --> Router Class Initialized
+INFO - 2015-10-31 12:25:46 --> Output Class Initialized
+INFO - 2015-10-31 12:25:46 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:46 --> Input Class Initialized
+INFO - 2015-10-31 12:25:46 --> Language Class Initialized
+ERROR - 2015-10-31 12:25:46 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:25:57 --> Config Class Initialized
+INFO - 2015-10-31 12:25:57 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:57 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:57 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:57 --> URI Class Initialized
+INFO - 2015-10-31 12:25:57 --> Router Class Initialized
+INFO - 2015-10-31 12:25:57 --> Output Class Initialized
+INFO - 2015-10-31 12:25:57 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:57 --> Input Class Initialized
+INFO - 2015-10-31 12:25:57 --> Language Class Initialized
+INFO - 2015-10-31 12:25:57 --> Loader Class Initialized
+INFO - 2015-10-31 12:25:57 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:25:57 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:25:57 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:25:57 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:25:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:25:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:25:57 --> Encryption Class Initialized
+INFO - 2015-10-31 12:25:57 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:25:57 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:25:57 --> Email Class Initialized
+INFO - 2015-10-31 12:25:57 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:25:57 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:25:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:25:57 --> Model Class Initialized
+INFO - 2015-10-31 12:25:57 --> Model Class Initialized
+INFO - 2015-10-31 12:25:57 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:25:57 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:25:57 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:25:57 --> Language_loader...
+INFO - 2015-10-31 12:25:57 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:25:57 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:25:57 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:25:57 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:25:57 --> File loaded: /home/ubuntu/workspace/application/views/users/beauty_executive_daily_report.php
+INFO - 2015-10-31 12:25:57 --> Final output sent to browser
+DEBUG - 2015-10-31 12:25:57 --> Total execution time: 0.0121
+INFO - 2015-10-31 12:25:58 --> Config Class Initialized
+INFO - 2015-10-31 12:25:58 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:25:58 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:25:58 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:25:58 --> URI Class Initialized
+INFO - 2015-10-31 12:25:58 --> Router Class Initialized
+INFO - 2015-10-31 12:25:58 --> Output Class Initialized
+INFO - 2015-10-31 12:25:58 --> Security Class Initialized
+DEBUG - 2015-10-31 12:25:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:25:58 --> Input Class Initialized
+INFO - 2015-10-31 12:25:58 --> Language Class Initialized
+ERROR - 2015-10-31 12:25:58 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:26:17 --> Config Class Initialized
+INFO - 2015-10-31 12:26:17 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:26:17 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:26:17 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:26:17 --> URI Class Initialized
+INFO - 2015-10-31 12:26:17 --> Router Class Initialized
+INFO - 2015-10-31 12:26:17 --> Output Class Initialized
+INFO - 2015-10-31 12:26:17 --> Security Class Initialized
+DEBUG - 2015-10-31 12:26:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:26:17 --> Input Class Initialized
+INFO - 2015-10-31 12:26:17 --> Language Class Initialized
+INFO - 2015-10-31 12:26:17 --> Loader Class Initialized
+INFO - 2015-10-31 12:26:17 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:26:17 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:26:17 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:26:17 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:26:17 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:26:17 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:26:17 --> Encryption Class Initialized
+INFO - 2015-10-31 12:26:17 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:26:17 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:26:17 --> Email Class Initialized
+INFO - 2015-10-31 12:26:17 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:26:17 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:26:17 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:26:17 --> Model Class Initialized
+INFO - 2015-10-31 12:26:17 --> Model Class Initialized
+INFO - 2015-10-31 12:26:17 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:26:17 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:26:17 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:26:17 --> Language_loader...
+INFO - 2015-10-31 12:26:17 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:26:17 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:26:17 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:26:17 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:26:17 --> File loaded: /home/ubuntu/workspace/application/views/users/project_holder_daily_report.php
+INFO - 2015-10-31 12:26:17 --> Final output sent to browser
+DEBUG - 2015-10-31 12:26:17 --> Total execution time: 0.0127
+INFO - 2015-10-31 12:26:18 --> Config Class Initialized
+INFO - 2015-10-31 12:26:18 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:26:18 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:26:18 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:26:18 --> URI Class Initialized
+INFO - 2015-10-31 12:26:18 --> Router Class Initialized
+INFO - 2015-10-31 12:26:18 --> Output Class Initialized
+INFO - 2015-10-31 12:26:18 --> Security Class Initialized
+DEBUG - 2015-10-31 12:26:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:26:18 --> Input Class Initialized
+INFO - 2015-10-31 12:26:18 --> Language Class Initialized
+ERROR - 2015-10-31 12:26:18 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:26:31 --> Config Class Initialized
+INFO - 2015-10-31 12:26:31 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:26:31 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:26:31 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:26:31 --> URI Class Initialized
+INFO - 2015-10-31 12:26:31 --> Router Class Initialized
+INFO - 2015-10-31 12:26:31 --> Output Class Initialized
+INFO - 2015-10-31 12:26:31 --> Security Class Initialized
+DEBUG - 2015-10-31 12:26:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:26:31 --> Input Class Initialized
+INFO - 2015-10-31 12:26:31 --> Language Class Initialized
+INFO - 2015-10-31 12:26:31 --> Loader Class Initialized
+INFO - 2015-10-31 12:26:31 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:26:31 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:26:31 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:26:31 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:26:31 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:26:31 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:26:31 --> Encryption Class Initialized
+INFO - 2015-10-31 12:26:31 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:26:31 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:26:31 --> Email Class Initialized
+INFO - 2015-10-31 12:26:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:26:31 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:26:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:26:31 --> Model Class Initialized
+INFO - 2015-10-31 12:26:31 --> Model Class Initialized
+INFO - 2015-10-31 12:26:31 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:26:31 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:26:31 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:26:31 --> Language_loader...
+INFO - 2015-10-31 12:26:31 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:26:31 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:26:31 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:26:31 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:26:31 --> File loaded: /home/ubuntu/workspace/application/views/users/supervisor_daily_report.php
+INFO - 2015-10-31 12:26:31 --> Final output sent to browser
+DEBUG - 2015-10-31 12:26:31 --> Total execution time: 0.0150
+INFO - 2015-10-31 12:26:32 --> Config Class Initialized
+INFO - 2015-10-31 12:26:32 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:26:32 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:26:32 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:26:32 --> URI Class Initialized
+INFO - 2015-10-31 12:26:32 --> Router Class Initialized
+INFO - 2015-10-31 12:26:32 --> Output Class Initialized
+INFO - 2015-10-31 12:26:32 --> Security Class Initialized
+DEBUG - 2015-10-31 12:26:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:26:32 --> Input Class Initialized
+INFO - 2015-10-31 12:26:32 --> Language Class Initialized
+ERROR - 2015-10-31 12:26:32 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:27:32 --> Config Class Initialized
+INFO - 2015-10-31 12:27:32 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:27:32 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:27:32 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:27:32 --> URI Class Initialized
+INFO - 2015-10-31 12:27:32 --> Router Class Initialized
+INFO - 2015-10-31 12:27:32 --> Output Class Initialized
+INFO - 2015-10-31 12:27:32 --> Security Class Initialized
+DEBUG - 2015-10-31 12:27:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:27:32 --> Input Class Initialized
+INFO - 2015-10-31 12:27:32 --> Language Class Initialized
+INFO - 2015-10-31 12:27:32 --> Loader Class Initialized
+INFO - 2015-10-31 12:27:32 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:27:32 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:27:32 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:27:32 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:27:32 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:27:32 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:27:32 --> Encryption Class Initialized
+INFO - 2015-10-31 12:27:32 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:27:32 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:27:32 --> Email Class Initialized
+INFO - 2015-10-31 12:27:32 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:27:32 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:27:32 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:27:32 --> Model Class Initialized
+INFO - 2015-10-31 12:27:32 --> Model Class Initialized
+INFO - 2015-10-31 12:27:32 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:27:32 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:27:32 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:27:32 --> Language_loader...
+INFO - 2015-10-31 12:27:32 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:27:32 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:27:32 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:27:32 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:27:32 --> File loaded: /home/ubuntu/workspace/application/views/users/supervisor_daily_report.php
+INFO - 2015-10-31 12:27:32 --> Final output sent to browser
+DEBUG - 2015-10-31 12:27:32 --> Total execution time: 0.0224
+INFO - 2015-10-31 12:27:35 --> Config Class Initialized
+INFO - 2015-10-31 12:27:35 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:27:35 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:27:35 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:27:35 --> URI Class Initialized
+INFO - 2015-10-31 12:27:35 --> Router Class Initialized
+INFO - 2015-10-31 12:27:35 --> Output Class Initialized
+INFO - 2015-10-31 12:27:35 --> Security Class Initialized
+DEBUG - 2015-10-31 12:27:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:27:35 --> Input Class Initialized
+INFO - 2015-10-31 12:27:35 --> Language Class Initialized
+ERROR - 2015-10-31 12:27:35 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:27:57 --> Config Class Initialized
+INFO - 2015-10-31 12:27:57 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:27:57 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:27:57 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:27:57 --> URI Class Initialized
+INFO - 2015-10-31 12:27:57 --> Router Class Initialized
+INFO - 2015-10-31 12:27:57 --> Output Class Initialized
+INFO - 2015-10-31 12:27:57 --> Security Class Initialized
+DEBUG - 2015-10-31 12:27:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:27:57 --> Input Class Initialized
+INFO - 2015-10-31 12:27:57 --> Language Class Initialized
+INFO - 2015-10-31 12:27:57 --> Loader Class Initialized
+INFO - 2015-10-31 12:27:57 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:27:57 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:27:57 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:27:57 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:27:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:27:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:27:57 --> Encryption Class Initialized
+INFO - 2015-10-31 12:27:57 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:27:57 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:27:57 --> Email Class Initialized
+INFO - 2015-10-31 12:27:57 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:27:57 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:27:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:27:57 --> Model Class Initialized
+INFO - 2015-10-31 12:27:57 --> Model Class Initialized
+INFO - 2015-10-31 12:27:57 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:27:57 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:27:57 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:27:57 --> Language_loader...
+INFO - 2015-10-31 12:27:57 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:27:57 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:27:57 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:27:57 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:27:57 --> File loaded: /home/ubuntu/workspace/application/views/users/supervisor_daily_report.php
+INFO - 2015-10-31 12:27:57 --> Final output sent to browser
+DEBUG - 2015-10-31 12:27:57 --> Total execution time: 0.0168
+INFO - 2015-10-31 12:27:58 --> Config Class Initialized
+INFO - 2015-10-31 12:27:58 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:27:58 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:27:58 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:27:58 --> URI Class Initialized
+INFO - 2015-10-31 12:27:58 --> Router Class Initialized
+INFO - 2015-10-31 12:27:58 --> Output Class Initialized
+INFO - 2015-10-31 12:27:58 --> Security Class Initialized
+DEBUG - 2015-10-31 12:27:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:27:58 --> Input Class Initialized
+INFO - 2015-10-31 12:27:58 --> Language Class Initialized
+ERROR - 2015-10-31 12:27:58 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:28:29 --> Config Class Initialized
+INFO - 2015-10-31 12:28:29 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:28:29 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:28:29 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:28:29 --> URI Class Initialized
+INFO - 2015-10-31 12:28:29 --> Router Class Initialized
+INFO - 2015-10-31 12:28:29 --> Output Class Initialized
+INFO - 2015-10-31 12:28:29 --> Security Class Initialized
+DEBUG - 2015-10-31 12:28:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:28:29 --> Input Class Initialized
+INFO - 2015-10-31 12:28:29 --> Language Class Initialized
+INFO - 2015-10-31 12:28:29 --> Loader Class Initialized
+INFO - 2015-10-31 12:28:29 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:28:29 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:28:29 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:28:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:28:29 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:28:29 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:28:29 --> Encryption Class Initialized
+INFO - 2015-10-31 12:28:29 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:28:29 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:28:29 --> Email Class Initialized
+INFO - 2015-10-31 12:28:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:28:29 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:28:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:28:29 --> Model Class Initialized
+INFO - 2015-10-31 12:28:29 --> Model Class Initialized
+INFO - 2015-10-31 12:28:29 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:28:29 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:28:29 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:28:29 --> Language_loader...
+INFO - 2015-10-31 12:28:29 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:28:29 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:28:29 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:28:29 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:28:29 --> File loaded: /home/ubuntu/workspace/application/views/users/supervisor_daily_report.php
+INFO - 2015-10-31 12:28:29 --> Final output sent to browser
+DEBUG - 2015-10-31 12:28:29 --> Total execution time: 0.0189
+INFO - 2015-10-31 12:28:31 --> Config Class Initialized
+INFO - 2015-10-31 12:28:31 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:28:31 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:28:31 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:28:31 --> URI Class Initialized
+INFO - 2015-10-31 12:28:31 --> Router Class Initialized
+INFO - 2015-10-31 12:28:31 --> Output Class Initialized
+INFO - 2015-10-31 12:28:31 --> Security Class Initialized
+DEBUG - 2015-10-31 12:28:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:28:31 --> Input Class Initialized
+INFO - 2015-10-31 12:28:31 --> Language Class Initialized
+ERROR - 2015-10-31 12:28:31 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:28:41 --> Config Class Initialized
+INFO - 2015-10-31 12:28:41 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:28:41 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:28:41 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:28:41 --> URI Class Initialized
+INFO - 2015-10-31 12:28:41 --> Router Class Initialized
+INFO - 2015-10-31 12:28:41 --> Output Class Initialized
+INFO - 2015-10-31 12:28:41 --> Security Class Initialized
+DEBUG - 2015-10-31 12:28:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:28:41 --> Input Class Initialized
+INFO - 2015-10-31 12:28:41 --> Language Class Initialized
+INFO - 2015-10-31 12:28:41 --> Loader Class Initialized
+INFO - 2015-10-31 12:28:41 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:28:41 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:28:41 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:28:41 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:28:41 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:28:41 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:28:41 --> Encryption Class Initialized
+INFO - 2015-10-31 12:28:41 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:28:41 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:28:41 --> Email Class Initialized
+INFO - 2015-10-31 12:28:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:28:41 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:28:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:28:41 --> Model Class Initialized
+INFO - 2015-10-31 12:28:41 --> Model Class Initialized
+INFO - 2015-10-31 12:28:41 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:28:41 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:28:41 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:28:41 --> Language_loader...
+INFO - 2015-10-31 12:28:41 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:28:41 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:28:41 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:28:41 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:28:41 --> File loaded: /home/ubuntu/workspace/application/views/users/beauty_agent_list.php
+INFO - 2015-10-31 12:28:41 --> Final output sent to browser
+DEBUG - 2015-10-31 12:28:41 --> Total execution time: 0.0225
+INFO - 2015-10-31 12:28:43 --> Config Class Initialized
+INFO - 2015-10-31 12:28:43 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:28:43 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:28:43 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:28:43 --> URI Class Initialized
+INFO - 2015-10-31 12:28:43 --> Router Class Initialized
+INFO - 2015-10-31 12:28:43 --> Output Class Initialized
+INFO - 2015-10-31 12:28:43 --> Security Class Initialized
+DEBUG - 2015-10-31 12:28:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:28:43 --> Input Class Initialized
+INFO - 2015-10-31 12:28:43 --> Language Class Initialized
+ERROR - 2015-10-31 12:28:43 --> 404 Page Not Found: Saleitem/index
+INFO - 2015-10-31 12:28:45 --> Config Class Initialized
+INFO - 2015-10-31 12:28:45 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:28:45 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:28:45 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:28:45 --> URI Class Initialized
+INFO - 2015-10-31 12:28:45 --> Router Class Initialized
+INFO - 2015-10-31 12:28:45 --> Output Class Initialized
+INFO - 2015-10-31 12:28:45 --> Security Class Initialized
+DEBUG - 2015-10-31 12:28:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:28:45 --> Input Class Initialized
+INFO - 2015-10-31 12:28:45 --> Language Class Initialized
+INFO - 2015-10-31 12:28:45 --> Loader Class Initialized
+INFO - 2015-10-31 12:28:45 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:28:45 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:28:45 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:28:45 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:28:45 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:28:45 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:28:45 --> Encryption Class Initialized
+INFO - 2015-10-31 12:28:45 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:28:45 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:28:45 --> Email Class Initialized
+INFO - 2015-10-31 12:28:45 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:28:45 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:28:45 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:28:45 --> Model Class Initialized
+INFO - 2015-10-31 12:28:45 --> Model Class Initialized
+INFO - 2015-10-31 12:28:45 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:28:45 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:28:45 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:28:45 --> Language_loader...
+INFO - 2015-10-31 12:28:45 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:28:45 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:28:45 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:28:45 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:28:45 --> File loaded: /home/ubuntu/workspace/application/views/users/beauty_agent_list.php
+INFO - 2015-10-31 12:28:45 --> Final output sent to browser
+DEBUG - 2015-10-31 12:28:45 --> Total execution time: 0.0198
+INFO - 2015-10-31 12:28:52 --> Config Class Initialized
+INFO - 2015-10-31 12:28:52 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:28:52 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:28:52 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:28:52 --> URI Class Initialized
+INFO - 2015-10-31 12:28:52 --> Router Class Initialized
+INFO - 2015-10-31 12:28:52 --> Output Class Initialized
+INFO - 2015-10-31 12:28:52 --> Security Class Initialized
+DEBUG - 2015-10-31 12:28:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:28:52 --> Input Class Initialized
+INFO - 2015-10-31 12:28:52 --> Language Class Initialized
+INFO - 2015-10-31 12:28:52 --> Loader Class Initialized
+INFO - 2015-10-31 12:28:52 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:28:52 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:28:52 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:28:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:28:52 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:28:52 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:28:52 --> Encryption Class Initialized
+INFO - 2015-10-31 12:28:52 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:28:52 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:28:52 --> Email Class Initialized
+INFO - 2015-10-31 12:28:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:28:52 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:28:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:28:52 --> Model Class Initialized
+INFO - 2015-10-31 12:28:52 --> Model Class Initialized
+INFO - 2015-10-31 12:28:52 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:28:52 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:28:52 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:28:52 --> Language_loader...
+INFO - 2015-10-31 12:28:52 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:28:52 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:28:52 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:28:52 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:28:52 --> File loaded: /home/ubuntu/workspace/application/views/users/beauty_agent_daily_report.php
+INFO - 2015-10-31 12:28:52 --> Final output sent to browser
+DEBUG - 2015-10-31 12:28:52 --> Total execution time: 0.0120
+INFO - 2015-10-31 12:28:54 --> Config Class Initialized
+INFO - 2015-10-31 12:28:54 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:28:54 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:28:54 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:28:54 --> URI Class Initialized
+INFO - 2015-10-31 12:28:54 --> Router Class Initialized
+INFO - 2015-10-31 12:28:54 --> Output Class Initialized
+INFO - 2015-10-31 12:28:54 --> Security Class Initialized
+DEBUG - 2015-10-31 12:28:54 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:28:54 --> Input Class Initialized
+INFO - 2015-10-31 12:28:54 --> Language Class Initialized
+ERROR - 2015-10-31 12:28:54 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:29:01 --> Config Class Initialized
+INFO - 2015-10-31 12:29:01 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:29:01 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:29:01 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:29:01 --> URI Class Initialized
+INFO - 2015-10-31 12:29:01 --> Router Class Initialized
+INFO - 2015-10-31 12:29:01 --> Output Class Initialized
+INFO - 2015-10-31 12:29:01 --> Security Class Initialized
+DEBUG - 2015-10-31 12:29:01 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:29:01 --> Input Class Initialized
+INFO - 2015-10-31 12:29:01 --> Language Class Initialized
+INFO - 2015-10-31 12:29:01 --> Loader Class Initialized
+INFO - 2015-10-31 12:29:01 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:29:01 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:29:01 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:29:01 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:29:01 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:29:01 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:29:01 --> Encryption Class Initialized
+INFO - 2015-10-31 12:29:01 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:29:01 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2015-10-31 12:29:01 --> Email Class Initialized
+INFO - 2015-10-31 12:29:01 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2015-10-31 12:29:01 --> Helper loaded: cookie_helper
+DEBUG - 2015-10-31 12:29:01 --> Session class already loaded. Second attempt ignored.
+INFO - 2015-10-31 12:29:01 --> Model Class Initialized
+INFO - 2015-10-31 12:29:01 --> Model Class Initialized
+INFO - 2015-10-31 12:29:01 --> Helper loaded: date_helper
+INFO - 2015-10-31 12:29:01 --> Helper loaded: form_helper
+INFO - 2015-10-31 12:29:01 --> Form Validation Class Initialized
+DEBUG - 2015-10-31 12:29:01 --> Language_loader...
+INFO - 2015-10-31 12:29:01 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:29:01 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:29:01 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:29:01 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:29:01 --> File loaded: /home/ubuntu/workspace/application/views/users/supervisor_daily_report.php
+INFO - 2015-10-31 12:29:01 --> Final output sent to browser
+DEBUG - 2015-10-31 12:29:01 --> Total execution time: 0.0159
+INFO - 2015-10-31 12:29:02 --> Config Class Initialized
+INFO - 2015-10-31 12:29:02 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:29:02 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:29:02 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:29:02 --> URI Class Initialized
+INFO - 2015-10-31 12:29:02 --> Router Class Initialized
+INFO - 2015-10-31 12:29:02 --> Output Class Initialized
+INFO - 2015-10-31 12:29:02 --> Security Class Initialized
+DEBUG - 2015-10-31 12:29:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:29:02 --> Input Class Initialized
+INFO - 2015-10-31 12:29:02 --> Language Class Initialized
+ERROR - 2015-10-31 12:29:02 --> 404 Page Not Found: Public/bower_components
+INFO - 2015-10-31 12:32:38 --> Config Class Initialized
+INFO - 2015-10-31 12:32:38 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:38 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:38 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:38 --> URI Class Initialized
+INFO - 2015-10-31 12:32:38 --> Router Class Initialized
+INFO - 2015-10-31 12:32:38 --> Output Class Initialized
+INFO - 2015-10-31 12:32:38 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:38 --> Input Class Initialized
+INFO - 2015-10-31 12:32:38 --> Language Class Initialized
+INFO - 2015-10-31 12:32:38 --> Loader Class Initialized
+INFO - 2015-10-31 12:32:38 --> Helper loaded: url_helper
+INFO - 2015-10-31 12:32:38 --> Helper loaded: language_helper
+INFO - 2015-10-31 12:32:38 --> Database Driver Class Initialized
+INFO - 2015-10-31 12:32:38 --> Session: Class initialized using 'files' driver.
+DEBUG - 2015-10-31 12:32:38 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2015-10-31 12:32:38 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2015-10-31 12:32:38 --> Encryption Class Initialized
+INFO - 2015-10-31 12:32:38 --> Controller Class Initialized
+DEBUG - 2015-10-31 12:32:38 --> Language_loader...
+INFO - 2015-10-31 12:32:38 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2015-10-31 12:32:38 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2015-10-31 12:32:38 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2015-10-31 12:32:38 --> File loaded: /home/ubuntu/workspace/application/views/_leftside.php
+INFO - 2015-10-31 12:32:38 --> File loaded: /home/ubuntu/workspace/application/views/_rightside.php
+INFO - 2015-10-31 12:32:38 --> File loaded: /home/ubuntu/workspace/application/views/brand.php
+INFO - 2015-10-31 12:32:38 --> Final output sent to browser
+DEBUG - 2015-10-31 12:32:38 --> Total execution time: 0.0610
+INFO - 2015-10-31 12:32:39 --> Config Class Initialized
+INFO - 2015-10-31 12:32:39 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:39 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:39 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:39 --> URI Class Initialized
+INFO - 2015-10-31 12:32:39 --> Router Class Initialized
+INFO - 2015-10-31 12:32:39 --> Output Class Initialized
+INFO - 2015-10-31 12:32:39 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:39 --> Input Class Initialized
+INFO - 2015-10-31 12:32:39 --> Language Class Initialized
+ERROR - 2015-10-31 12:32:39 --> 404 Page Not Found: Assets/img
+INFO - 2015-10-31 12:32:39 --> Config Class Initialized
+INFO - 2015-10-31 12:32:39 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:39 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:39 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:39 --> URI Class Initialized
+INFO - 2015-10-31 12:32:39 --> Router Class Initialized
+INFO - 2015-10-31 12:32:39 --> Output Class Initialized
+INFO - 2015-10-31 12:32:39 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:39 --> Input Class Initialized
+INFO - 2015-10-31 12:32:39 --> Language Class Initialized
+ERROR - 2015-10-31 12:32:39 --> 404 Page Not Found: Assets/img
+INFO - 2015-10-31 12:32:39 --> Config Class Initialized
+INFO - 2015-10-31 12:32:39 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:39 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:39 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:39 --> URI Class Initialized
+INFO - 2015-10-31 12:32:39 --> Router Class Initialized
+INFO - 2015-10-31 12:32:39 --> Output Class Initialized
+INFO - 2015-10-31 12:32:39 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:39 --> Input Class Initialized
+INFO - 2015-10-31 12:32:39 --> Language Class Initialized
+ERROR - 2015-10-31 12:32:39 --> 404 Page Not Found: Assets/img
+INFO - 2015-10-31 12:32:55 --> Config Class Initialized
+INFO - 2015-10-31 12:32:55 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:55 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:55 --> URI Class Initialized
+INFO - 2015-10-31 12:32:55 --> Router Class Initialized
+INFO - 2015-10-31 12:32:55 --> Output Class Initialized
+INFO - 2015-10-31 12:32:55 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:55 --> Input Class Initialized
+INFO - 2015-10-31 12:32:55 --> Language Class Initialized
+ERROR - 2015-10-31 12:32:55 --> 404 Page Not Found: Bower_components/datatables-tabletools
+INFO - 2015-10-31 12:32:55 --> Config Class Initialized
+INFO - 2015-10-31 12:32:55 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:55 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:55 --> URI Class Initialized
+INFO - 2015-10-31 12:32:55 --> Router Class Initialized
+INFO - 2015-10-31 12:32:55 --> Output Class Initialized
+INFO - 2015-10-31 12:32:55 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:55 --> Input Class Initialized
+INFO - 2015-10-31 12:32:55 --> Language Class Initialized
+ERROR - 2015-10-31 12:32:55 --> 404 Page Not Found: Bower_components/datatables-tabletools
+INFO - 2015-10-31 12:32:55 --> Config Class Initialized
+INFO - 2015-10-31 12:32:55 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:55 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:55 --> URI Class Initialized
+INFO - 2015-10-31 12:32:55 --> Router Class Initialized
+INFO - 2015-10-31 12:32:55 --> Output Class Initialized
+INFO - 2015-10-31 12:32:55 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:55 --> Input Class Initialized
+INFO - 2015-10-31 12:32:55 --> Language Class Initialized
+ERROR - 2015-10-31 12:32:55 --> 404 Page Not Found: Bower_components/datatables-tabletools
+INFO - 2015-10-31 12:32:55 --> Config Class Initialized
+INFO - 2015-10-31 12:32:55 --> Hooks Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> UTF-8 Support Enabled
+INFO - 2015-10-31 12:32:55 --> Utf8 Class Initialized
+INFO - 2015-10-31 12:32:55 --> URI Class Initialized
+INFO - 2015-10-31 12:32:55 --> Router Class Initialized
+INFO - 2015-10-31 12:32:55 --> Output Class Initialized
+INFO - 2015-10-31 12:32:55 --> Security Class Initialized
+DEBUG - 2015-10-31 12:32:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2015-10-31 12:32:55 --> Input Class Initialized
+INFO - 2015-10-31 12:32:55 --> Language Class Initialized
+ERROR - 2015-10-31 12:32:55 --> 404 Page Not Found: Bower_components/datatables-tabletools

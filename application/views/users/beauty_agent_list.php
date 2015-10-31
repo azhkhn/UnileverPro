@@ -28,11 +28,11 @@
             <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-grid" data-uk-grid-margin="">
-                        <div class="uk-width-medium-4-10">
+                        <div class="uk-width-medium-2-10">
                             <label for="product_search_name">Full Name</label>
                             <input type="text" class="md-input" id="product_search_name">
                         </div>
-<!--                        <div class="uk-width-medium-1-10">
+                        <div class="uk-width-medium-2-10">
                             <div class="uk-margin-small-top">
                                 <select id="product_search_status" data-md-selectize multiple data-md-selectize-bottom>
                                     <option value="">Gender</option>
@@ -40,8 +40,17 @@
                                     <option value="2">Male</option>
                                 </select>
                             </div>
-                        </div>-->
+                        </div>
                         <div class="uk-width-medium-3-10">
+                            <div class="uk-margin-small-top">
+                                <select id="product_search_status" data-md-selectize multiple data-md-selectize-bottom>
+                                    <option value="">Supervisor</option>
+                                    <option value="1">Supervisor 1</option>
+                                    <option value="2">Supervisor 2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--<div class="uk-width-medium-3-10">
                             <div class="uk-margin-small-top">
                                 <select id="product_search_status" data-md-selectize multiple data-md-selectize-bottom>
                                     <option value="">Group</option>
@@ -51,7 +60,7 @@
                                     <option value="4">PROJECT HOLDER</option>
                                 </select>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="uk-width-medium-1-10">
                             <div class="uk-margin-top uk-text-nowrap">
                                 <input type="checkbox" name="product_search_active" id="product_search_active" data-md-icheck/>
@@ -78,8 +87,8 @@
                                             <th>Gender</th>
                                             <th>Email</th>
                                             <th>Telephone</th>
-                                            <th>Group</th>
-                                            <th>Status</th>
+                                            <th>Supervisor</th>
+                                            <th>Remark</th>
                                             <th>Active</th>
                                             <th>Action</th>
                                         </tr>
@@ -87,8 +96,8 @@
                                     <tbody>
                                     	<?php foreach ($users as $user):?>
                                         <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
+                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
+                                            <td class="uk-text-large uk-text-nowrap"><a href="<?php echo base_url('user/dailybareport/'.$user->id) ?>"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
                                             <td class="uk-text-nowrap">Female</td>
                                             <td><?php echo $user->email ?></td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->phone ?></span></td>
@@ -97,10 +106,13 @@
 													<?php echo $group->name;?><br />
 								                <?php endforeach?>
 											</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-success">Active</span></td>
+                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info">Stop Working</span></td>
                                             <td><i class="material-icons uk-text-muted md-24">&#xE835;</i></td>
                                             <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
+                                                <a href="<?php echo base_url('user/information/'.$user->id) ?>"><i class="material-icons md-24">&#xE8F4;</i></a>
+                                                <a href="<?php echo base_url('user/information/'.$user->id) ?>"><i class="material-icons md-24">&#xE8F4;</i></a>
+                                                <a href="<?php echo base_url('user/information/'.$user->id) ?>"><i class="material-icons md-24">&#xE8F4;</i></a>
+                                                <a href="<?php echo base_url('user/information/'.$user->id) ?>"><i class="material-icons md-24">&#xE8F4;</i></a>
                                                 <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
                                             </td>
                                         </tr>

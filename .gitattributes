@@ -19,4 +19,4 @@
 #Config.php , database.php, .htaccess
 *.htaccess
 *config.php
-*.database.php
+*database.php
