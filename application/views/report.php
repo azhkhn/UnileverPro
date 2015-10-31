@@ -1,17 +1,17 @@
 	<!-- main header -->
-	<?php $this->load->view('admin-kh4it/_include') ?>  
+	<?php $this->load->view('_include') ?>  
      <!-- /main header end -->
 
 </head>
 <body class="sidebar_main_open">
     
     <!--  header -->
-	<?php $this->load->view('admin-kh4it/_header') ?>  
+	<?php $this->load->view('_header') ?>  
      <!-- / header end -->
 
 	
    	<!-- left side bar -->
-	<?php $this->load->view('admin-kh4it/_leftside') ?>    
+	<?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
 
     <div id="page_content">

@@ -12,7 +12,7 @@
 		public function isLoggedIn(){
 			$isLoggedIn = $this->session->userdata('logged_in');			
 			if(!isset($isLoggedIn) || $isLoggedIn!=true){
-				redirect("admin/auth");
+				redirect("auth");
 			}
 		}
 	}

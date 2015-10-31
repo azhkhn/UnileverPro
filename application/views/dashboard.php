@@ -1,6 +1,6 @@
 		
 	<!-- main header -->
-	<?php $this->load->view('admin-kh4it/_include') ?>  
+	<?php $this->load->view('_include') ?>  
      <!-- /main header end -->
      
 		<!-- additional styles for plugins -->
@@ -17,12 +17,12 @@
     
     
     <!--  header -->
-	<?php $this->load->view('admin-kh4it/_header') ?>  
+	<?php $this->load->view('_header') ?>  
      <!-- / header end -->
     
     
     <!-- left side bar -->
-	<?php $this->load->view('admin-kh4it/_leftside') ?>    
+	<?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
     
     
@@ -632,7 +632,7 @@
 
     
     <!-- right sidebar -->
-    <?php $this->load->view('admin-kh4it/_rightside') ?>    
+    <?php $this->load->view('_rightside') ?>    
     <!-- right sidebar end -->
 
     

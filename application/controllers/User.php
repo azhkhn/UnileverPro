@@ -1,14 +1,18 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-	class Dashboard extends ADMIN_Controller{
+	class User extends CI_Controller{
 
 		public function __construct(){
 			parent::__construct();
 		}
+		
 		public function index(){
-			$this->load->view('admin-kh4it/dashboard');
+			$this->load->view('user');
 		}
 		
+		public function add(){
+			$this->load->view('adduser');
+		}
 		
 	}
