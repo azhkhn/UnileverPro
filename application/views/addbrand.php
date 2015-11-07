@@ -17,7 +17,7 @@
     <div id="page_content">
         <div id="page_content_inner">
 
-        <form action="#" id="brandform">
+        <form action="#" id="frmAddBrand">
         
             <div class="md-card">
                 <div class="md-card-content">
@@ -26,14 +26,14 @@
                        
                         <div class="uk-width-medium-1-2">
                             <div class="uk-form-row">
-                                <label>Code</label>
-                                <input type="text" id="code" class="md-input"  required/>
+                                <label>Name</label>
+                                <input type="text" id="name" name="name" class="md-input"  required/>
                             </div>
                              
                              <div class="uk-form-row">
                             	<label>Parent Brand</label>
 	                             
-				 							<select id="selec_adv_2" name="selec_adv_2" multiple>
+				 							<select id="selec_adv_2 parent_brand" name="parent_brand" multiple>
 				                                <option value="">Select email...</option>
 				                            </select>
 		                        
@@ -42,22 +42,6 @@
                        		  
                         </div>
                         
-                        <div class="uk-width-medium-1-2">
-                        
-                        	<div class="uk-form-row">
-                                <label>Name</label>
-                                <input type="text"  id="name" class="md-input"  required/>
-                            </div>
-                            
-                             <div class="uk-form-row">
-                            		<label>Status</label><br/>
-                                   <div class="uk-width-medium-1-4">
-			                            <input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                            <label for="switch_demo_primary" class="inline-label">Active</label>
-			                        </div>
-                             </div>
-                        
-                        </div>
                       
                         
                         
@@ -152,7 +136,43 @@
         });
     </script>
     
-    
+    <script type="text/javascript">
+	 var action = "inserted";
+	$(function(){
+		 $("form#frmAddBrand").submit(function(e){
+			e.preventDefault();
+// 		 	$("#frmWaiting").modal('show');
+			$.ajax({
+				type: "POST",
+				url: $("form#frmAddBrand").attr("action"),
+				dataType: 'json',
+				data: {
+					name			   	 : $.trim($("#name").val()),
+					parent_brand	     : $.trim($("#parent_brand").val()),
+					description		     : $.trim($("#description").val())
+				},success: function(data){
+					if(data==true){
+ 						$("#getTxt").html("<h5>You have been "+action+" successfully.</h5>");
+						setTimeout(function(){ 
+							location.href= "<?php  echo site_url('admin/product')?>";
+ 							$("#frmWaiting").modal('hide');
+						}, 1000);
+					}else{
+						alert("You have not been  "+action+" successfully.");
+					}
+					console.log("SUCCESSDATA:",data);
+				},
+				error: function(data){
+					console.log("ERROR:",data);
+					$("#frmWaiting").modal('hide');
+				}
+			});
+		
+
+		});
+
+	});
+	</script>
     
     
 </body>
