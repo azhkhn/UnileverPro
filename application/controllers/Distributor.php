@@ -5,7 +5,7 @@ class Distributor extends CI_Controller{
 
 		public function __construct(){
 			parent::__construct();
-			$this->load->model("dto/DtoDistributor");
+			$this->load->model("dto/DtoDistributors");
 			$this->load->model("dao/DistributorsDAO");
 		}
 	
@@ -19,10 +19,10 @@ class Distributor extends CI_Controller{
 		}
 	
 		public function addingpro(){
-			$this->DtoDistributor->setName($this->input->post('name'));
-			$this->DtoDistributor->setDescription($this->input->post('description'));
-			$this->DtoDistributor->setCreated_by(1);
-			$this->DistributorsDAO->addDistributor($this->DtoDistributor);
+			$this->DtoDistributors->setName($this->input->post('name'));
+			$this->DtoDistributors->setDescription($this->input->post('description'));
+			$this->DtoDistributors->setCreated_by(1);
+			$this->DistributorsDAO->addDistributor($this->DtoDistributors);
 			redirect("distributor");
 		}
 		
@@ -42,12 +42,12 @@ class Distributor extends CI_Controller{
 		}
 
 		public function updatepro($id){
-			$this->DtoDistributor->setId($id);
-			$this->DtoDistributor->setName($this->input->post('name'));
-			$this->DtoDistributor->setDescription($this->input->post('description'));
-			$this->DtoDistributor->setUpdated_by(1);
+			$this->DtoDistributors->setId($id);
+			$this->DtoDistributors->setName($this->input->post('name'));
+			$this->DtoDistributors->setDescription($this->input->post('description'));
+			$this->DtoDistributors->setUpdated_by(1);
 			
-			$this->DistributorsDAO->updateDistributor($this->DtoDistributor);
+			$this->DistributorsDAO->updateDistributor($this->DtoDistributors);
 			redirect('distributor');
 			
 		}

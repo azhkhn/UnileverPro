@@ -22,14 +22,13 @@
             
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
-                    <table id="dt_tableTools" class="uk-table" cellspacing="0" width="100%">
+                    <table id="vu-table" class="uk-table" cellspacing="0" width="100%">
                         <thead>
                         <tr>
                             <th>No</th>
                             <th>Name</th>
-                            <th>Type</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
+                            <th>Created Date</th>
+                            <th>Created By</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -37,60 +36,36 @@
 
                         <tfoot>
                          <tr>
-                            <th>No</th>
+                           	<th>No</th>
                             <th>Name</th>
-                            <th>Type</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
+                            <th>Created Date</th>
+                            <th>Created By</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
 
                         <tbody>
-                        
+                   <?php foreach ($lists as $data ) {
+                       # code...
+                    ?>  
                         <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>27</td>
+                        	<td><?php echo $data->id ?></td>
+                            <td><?php echo $data->name ?></td>
+                            <td><?php echo $data->created_date ?></td>
+                            <td><?php echo $data->created_by ?></td>
                             <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
+                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" <?php if($data->status){echo "checked";}else{echo "";} ?>/>
 			                    <label for="switch_demo_primary" class="inline-label">Active</label>
 			                 </td>
                             <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
+                            	<a href="<?php echo site_url()?>distributor/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
+                            	<a href="<?php echo site_url()?>distributor/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
-                         <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>27</td>
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                 </td>
-                            <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
-                            </td>
-                        </tr>
-                          <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>27</td>
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                 </td>
-                            <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
-                            </td>
-                        </tr>
+                     
+                     <?php  } ?>    
                         
                         </tbody>
                     </table>
@@ -151,7 +126,8 @@
     <!-- enable hires images -->
     <script>
         $(function() {
-            altair_helpers.retina_images();
+            $("#vu-table").DataTable();
+           // altair_helpers.retina_images();
         });
     </script>
 

@@ -1,4 +1,4 @@
-<?
+<?php
 	class ChannelDAO extends CI_Model{
 		public function ChannelDAO(){
 			parent::__construct();
