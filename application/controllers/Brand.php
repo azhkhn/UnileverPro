@@ -5,8 +5,8 @@
 
 		public function __construct(){
 			parent::__construct();
-			$this->load->model("BrandDto");
-			$this->load->model("BrandDao");
+			$this->load->model("dto/DtoBrand");
+			$this->load->model("dao/DaoBrand");
 		}
 
 		public function index(){
@@ -18,21 +18,21 @@
 		}
 		
 		public function listBrandJson(){
-			$result = $this->BrandDao->listBrand();
+			$result = $this->DaoBrand->listBrand();
 			$this->output->set_content_type('application/json')->set_output(json_encode($result));
 		}
 		
 		public function addBrand(){
-			$this->BrandDto->setName($this->input->post('name'));
-			$this->BrandDto->setDescription($this->input->post('description'));
+			$this->DtoBrand->setName($this->input->post('name'));
+			$this->DtoBrand->setDescription($this->input->post('description'));
 			if($this->input->post("parent_brand") == ""){
-				$this->BrandDto->setParent_brand(null);
+				$this->DtoBrand->setParent_brand(null);
 			}else{
-				$this->BrandDto->setParent_brand($this->input->post("parent_brand"));
+				$this->DtoBrand->setParent_brand($this->input->post("parent_brand"));
 			}
-			$this->BrandDto->setCreated_by(1);
+			$this->DtoBrand->setCreated_by(1);
 			$data["a"] = "123";
-			if($this->BrandDao->addBrand($this->BrandDto)){
+			if($this->DaoBrand->addBrand($this->DtoBrand)){
 				$data["ERROR"] = false;
 			}else{
 				$data["ERROR"] = true;

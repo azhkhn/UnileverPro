@@ -5,7 +5,7 @@ class BrandDao extends CI_Model{
 	
 	public function BrandDao(){
 		parent::__construct();
-		$this->load->model("BrandDto");
+		$this->load->model("dto/DtoBrand");
 	}
 	
 	public function addBrand(BrandDto $b){
