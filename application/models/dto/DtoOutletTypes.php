@@ -6,6 +6,7 @@
 		private $created_date;
 		private $created_by;
 		private $updated_date;
+		private $updated_by;
 		private $status;
 		private $deleted_at;
 
@@ -55,6 +56,14 @@
 
 	public function setUpdated_date($updated_date){
 		$this->updated_date = $updated_date;
+	}
+
+	public function getUpdated_by(){
+		return $this->updated_by;
+	}
+
+	public function setUpdated_by($updated_by){
+		$this->updated_by = $updated_by;
 	}
 
 	public function getStatus(){

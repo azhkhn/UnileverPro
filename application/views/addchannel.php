@@ -17,7 +17,7 @@
     <div id="page_content">
         <div id="page_content_inner">
 
-        <form action="#" id="brandform">
+        <form action="#" id="channelform">
         
             <div class="md-card">
                 <div class="md-card-content">
@@ -27,7 +27,7 @@
                         <div class="uk-width-medium-1-2">
                             <div class="uk-form-row">
                                 <label>Name</label>
-                                <input type="text" id="code" class="md-input"  required/>
+                                <input type="text" id="name" class="md-input"  required/>
                             </div>
                        		 
                             
@@ -54,8 +54,8 @@
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-large-1-12 uk-width-medium-1-2">
                             <div class="uk-input-group">
-                            	<a href="<?= site_url() ?>brand" class="md-btn"  v>Cancel</a>
-                               <input type="submit" class="md-btn md-btn-primary" value="Save"/>
+                            	<a href="<?= site_url() ?>channel" class="md-btn"  v>Cancel</a>
+                               <input type="submit" class="md-btn md-btn-primary" value="Save" id="btnsubmit"/>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,57 @@
     <!-- enable hires images -->
     <script>
         $(function() {
-            altair_helpers.retina_images();
+           altair_helpers.retina_images();
+           <?php if(isset($getpro)) { 
+                foreach ($getpro as $data ) {
+            ?>
+                $("#name").val('<?php echo $data->name ?>');
+                $("#name").focus();
+                $("#description").val('<?php echo $data->description ?>');
+                editid = <?php echo $data->id ?> ;
+            <?php } ?>
+            $("#btnsubmit").val("Update");
+            $(".heading_a").text("Update Channel");
+            $("#channelform").submit(function(e){
+                e.preventDefault();
+                modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>'); 
+                $.ajax({
+                    url : "<?php echo site_url()?>channel/updatepro/"+ editid,
+                    method: "POST",
+                    data: {
+                        name : $("#name").val(),
+                        description : $("#description").val()
+                    },
+                    success : function(data){
+                        modal.hide();
+                        location.href="<?php echo site_url()?>channel";
+                    }
+                });
+
+            });
+
+            <?php }else{ ?>
+
+                $("#channelform").submit(function(e){
+                    e.preventDefault();
+                     modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>'); 
+                    $.ajax({
+                        url : "<?php echo site_url()?>channel/addingpro",
+                        method: "POST",
+                        data: {
+                            name : $("#name").val(),
+                            description : $("#description").val()
+                        },
+                        success : function(data){
+                            modal.hide();
+                            location.href="<?php echo site_url()?>channel";
+                        }
+                    });
+
+                });
+
+
+            <?php } ?>
         });
     </script>
     

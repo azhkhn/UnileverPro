@@ -59,9 +59,8 @@
 			                    <label for="switch_demo_primary" class="inline-label">Active</label>
 			                 </td>
                             <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="<?php echo site_url()?>distributor/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="<?php echo site_url()?>distributor/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
+                            	<a href="<?php echo site_url()?>distributor/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="md-icon material-icons">edit</i></a>
+                            	<a href="<?php echo site_url()?>distributor/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="md-icon material-icons">delete</i></a>
                             </td>
                         </tr>
                      
@@ -127,7 +126,7 @@
     <script>
         $(function() {
             $("#vu-table").DataTable();
-           // altair_helpers.retina_images();
+           altair_helpers.retina_images();
         });
     </script>
 

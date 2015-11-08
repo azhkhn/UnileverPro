@@ -62,5 +62,29 @@
 			$query = $this->db->get();
 			return $query->result();
 		}
+
+		public function listdistributors(){
+			$this->db->select('id, name');
+			$this->db->from('distributors');
+			$this->db->order_by("id", "desc");
+			$query = $this->db->get();
+			return $query->result();
+		}
+
+		public function listchannels(){
+			$this->db->select('id, name');
+			$this->db->from('channels');
+			$this->db->order_by("id", "desc");
+			$query = $this->db->get();
+			return $query->result();
+		}
+
+		public function listoutlettypes(){
+			$this->db->select('id, name');
+			$this->db->from('outlet_types');
+			$this->db->order_by("id", "desc");
+			$query = $this->db->get();
+			return $query->result();
+		}
 	}
 ?>

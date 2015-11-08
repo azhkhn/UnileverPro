@@ -39,7 +39,7 @@
 
 		public function getpro($id){
 			$data['getpro'] = $this->PromotionTypeDAO->getPromotiontype($id);
-			$this->load->view('addoutlettype', $data);
+			$this->load->view('addpromotionType', $data);
 		}
 
 		public function updatepro($id){

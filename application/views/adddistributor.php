@@ -24,20 +24,9 @@
                     <h3 class="heading_a">Add distributor</h3>
                     <div class="uk-grid" data-uk-grid-margin>
                        
-                        
-                         <div class="uk-width-medium-1-2">
-                         
-                            <div class="uk-form-row">
-                                <label>Code</label>
-                                <input type="text" id="code" class="md-input"  required/>
-                            </div>
-                             
-	                        
-	                          	  
-                         </div> 
+                      
                             
-                            
-                           <div class="uk-width-medium-1-2">
+                           <div class="uk-width-medium-1-1">
                            
                            		 <div class="uk-form-row">
                               		  <label>Name</label>
@@ -63,7 +52,7 @@
                         <div class="uk-width-large-1-12 uk-width-medium-1-2">
                             <div class="uk-input-group">
                             	<a href="<?= site_url() ?>distributor" class="md-btn">Cancel</a>
-                               <input type="submit" class="md-btn md-btn-primary" value="Save"/>
+                               <input type="submit" class="md-btn md-btn-primary" value="Save" id="btnsubmit"/>
                             </div>
                         </div>
                     </div>
@@ -130,28 +119,57 @@
     <!-- enable hires images -->
     <script>
         $(function() {
-           // altair_helpers.retina_images();
+           altair_helpers.retina_images();
+           <?php if(isset($getpro)) { 
+                foreach ($getpro as $data ) {
+            ?>
+                $("#name").val('<?php echo $data->name ?>');
+                $("#name").focus();
+                $("#description").val('<?php echo $data->description ?>');
+                editid = <?php echo $data->id ?> ;
+            <?php } ?>
+            $("#btnsubmit").val("Update");
+            $(".heading_a").text("Update distributor");
             $("#distributorform").submit(function(e){
                 e.preventDefault();
-                
-                alert($("#code").val());
-                alert($("#name").val());
-                alert($("#description").val());
-
+                modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>'); 
                 $.ajax({
-                    url : "<?php echo site_url()?>distributor/addingpro",
+                    url : "<?php echo site_url()?>distributor/updatepro/"+ editid,
                     method: "POST",
                     data: {
-                        code : $("#code").val(),
                         name : $("#name").val(),
                         description : $("#description").val()
                     },
                     success : function(data){
-                        alert(data);
+                        modal.hide();
+                        location.href="<?php echo site_url()?>distributor";
                     }
                 });
 
             });
+
+            <?php }else{ ?>
+
+                $("#distributorform").submit(function(e){
+                    e.preventDefault();
+                     modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>'); 
+                    $.ajax({
+                        url : "<?php echo site_url()?>distributor/addingpro",
+                        method: "POST",
+                        data: {
+                            name : $("#name").val(),
+                            description : $("#description").val()
+                        },
+                        success : function(data){
+                            modal.hide();
+                            location.href="<?php echo site_url()?>distributor";
+                        }
+                    });
+
+                });
+
+
+            <?php } ?>
         });
     </script>
     

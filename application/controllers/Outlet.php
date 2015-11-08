@@ -43,12 +43,12 @@ class Outlet extends CI_Controller{
 		}
 
 		public function getpro($id){
-			$data['getpro'] = $this->OutletsDAO->getOutlet($id);
+			$data['getpro'] = $this->OutletsDAO->getOutlets($id);
 			$this->load->view('addoutlet', $data);
 		}
 
 		public function updatepro($id){
-			$this->DtoOutletTypes->setId($id);
+			$this->DtoOutlets->setId($id);
 			$this->DtoOutlets->setDms_code($this->input->post('dms_code'));
 			$this->DtoOutlets->setDistributor($this->input->post('distributor'));
 			$this->DtoOutlets->setChannel_id($this->input->post('channel_id'));
@@ -61,6 +61,21 @@ class Outlet extends CI_Controller{
 			$this->OutletsDAO->updateOutlet($this->DtoOutlets);
 			redirect('outlet');
 			
+		}
+
+		public function listdistributorjson(){
+			$result = $this->OutletsDAO->listdistributors();
+			$this->output->set_content_type('application/json')->set_output(json_encode($result));
+		}
+
+		public function listchanneljson(){
+			$result = $this->OutletsDAO->listchannels();
+			$this->output->set_content_type('application/json')->set_output(json_encode($result));
+		}
+
+		public function listoutlettypejson(){
+			$result = $this->OutletsDAO->listoutlettypes();
+			$this->output->set_content_type('application/json')->set_output(json_encode($result));
 		}
 }
 ?>
