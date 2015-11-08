@@ -1,14 +1,14 @@
 <?php
 
-class BrandDao extends CI_Model{
+class DaoBrand extends CI_Model{
 	
 	
-	public function BrandDao(){
+	public function DaoBrand(){
 		parent::__construct();
 		$this->load->model("dto/DtoBrand");
 	}
 	
-	public function addBrand(BrandDto $b){
+	public function addBrand(DtoBrand $b){
 		$brand = array(
 				"name" 			 => 		$b->getName(),
 				"description"	 => 		$b->getDescription(),
@@ -25,7 +25,7 @@ class BrandDao extends CI_Model{
 		}
 	}
 	
-	public function updateBrand(BrandDto $b){
+	public function updateBrand(DtoBrand $b){
 		$data = array(
 				"name" 			 => 		$b->getName(),
 				"description"	 => 		$b->getDescription(),

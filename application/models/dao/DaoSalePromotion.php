@@ -1,5 +1,5 @@
 <?php
 	
-class SalePromotionDao extends CI_Model{
+class DaoSalePromotion extends CI_Model{
 	
 }

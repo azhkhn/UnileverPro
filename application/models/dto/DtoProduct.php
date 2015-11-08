@@ -1,6 +1,6 @@
 <?php
 
-class Product{
+class DtoProduct{
 
 	private $id;
 	private $code;

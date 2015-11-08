@@ -1,6 +1,6 @@
 <?php
 
-class Group {
+class DtoGroup {
 	
 	private $id;
 	private $supervisor;

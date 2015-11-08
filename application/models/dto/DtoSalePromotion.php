@@ -1,6 +1,6 @@
 <?php
 
-class SalePromotion{
+class DtoSalePromotion{
 	
 	private $id;
 	private $code;

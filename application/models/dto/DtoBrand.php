@@ -1,6 +1,6 @@
 <?php
 
-class BrandDto{
+class DtoBrand{
 
 	private $id;
 	private $name;

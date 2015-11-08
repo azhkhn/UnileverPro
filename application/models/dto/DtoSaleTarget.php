@@ -1,6 +1,6 @@
 <?php
 
-class SaleTarget {
+class DtoSaleTarget {
 	
 	private $id;
 	private $name;

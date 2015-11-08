@@ -1,6 +1,6 @@
 <?php
 
-class Group  extends CI_Model{
+class DaoGroup  extends CI_Model{
 	
 	
 }

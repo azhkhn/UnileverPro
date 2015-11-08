@@ -1,6 +1,6 @@
 <?php
 
-class ProductDao extends CI_Model{
+class DaoProduct extends CI_Model{
 	
 	
 	
