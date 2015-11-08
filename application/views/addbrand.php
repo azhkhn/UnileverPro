@@ -2,6 +2,15 @@
 	<?php $this->load->view('_include') ?>  
      <!-- /main header end -->
 
+	<!-- kendo UI -->
+    <link rel="stylesheet" href="<?php echo base_url()?>public/bower_components/kendo-ui-core/styles/kendo.common-material.min.css"/>
+    <link rel="stylesheet" href="<?php echo base_url()?>public/bower_components/kendo-ui-core/styles/kendo.material.min.css"/>
+	
+
+	 <!-- common functions -->
+    <script src="<?php echo base_url()?>public/assets/js/common.min.js"></script>
+    
+    
 </head>
 <body class="sidebar_main_open">
    
@@ -17,7 +26,7 @@
     <div id="page_content">
         <div id="page_content_inner">
 
-        <form action="#" id="frmAddBrand">
+        <form action="<?php  echo site_url('brand/addBrand')?>" id="frmAddBrand" method="post" >
         
             <div class="md-card">
                 <div class="md-card-content">
@@ -32,23 +41,13 @@
                              
                              <div class="uk-form-row">
                             	<label>Parent Brand</label>
-	                             
-				 							<select id="selec_adv_2 parent_brand" name="parent_brand" multiple>
-				                                <option value="">Select email...</option>
-				                            </select>
-		                        
-                            </div>
-                       		 
-                       		  
+                                <div class="uk-form-row">
+     								 <input id="parentid"  class="uk-form-width-medium"  />
+                                </div>
+                            </div> 
                         </div>
-                        
-                      
-                        
-                        
                     </div>
-                    
                       <br/>
-                            
                      	 <div class="uk-form-row">
                                <div class="uk-width-1-1">
 		                            <div class="uk-form-row">
@@ -74,7 +73,8 @@
             </div>
 
           </form>  
-            
+  
+          
         </div>
     </div>
 
@@ -110,9 +110,7 @@
 
      <!-- momentJS date library -->
     <script src="<?php echo base_url()?>public/bower_components/moment/min/moment.min.js"></script>
-
-    <!-- common functions -->
-    <script src="<?php echo base_url()?>public/assets/js/common.min.js"></script>
+	
     <!-- uikit functions -->
     <script src="<?php echo base_url()?>public/assets/js/uikit_custom.min.js"></script>
     <!-- altair common functions/helpers -->
@@ -128,43 +126,82 @@
 
     <!--  forms advanced functions -->
     <script src="<?php echo base_url()?>public/assets/js/pages/forms_advanced.min.js"></script>
-    
+   
     <!-- enable hires images -->
     <script>
         $(function() {
             altair_helpers.retina_images();
         });
     </script>
-    
+   
+   
+    <!-- page specific plugins -->
+    <!-- kendo UI -->
+    <script src="<?php echo base_url()?>public/assets/js/kendoui.custom.min.js"></script>
+
+    <!--  kendoui functions -->
+    <script src="<?php echo base_url()?>public/assets/js/pages/kendoui.min.js"></script>
+    	
+    <script type="text/javascript">
+	      $(document).ready(function() {
+	        $("#parentid").kendoComboBox({
+	          placeholder: "Select parent brand",
+	          dataTextField: "name",
+	          dataValueField: "id",
+	          filter: "contains",
+	          autoBind: false,
+	          minLength: 3,
+	          dataSource: {
+	            type: "odata",
+	            serverFiltering: true,
+	            transport: {
+	              read: {
+	                url: "<?php  echo site_url('brand/listBrandJson')?>",
+	              }
+	            }
+	          },
+	          change: function(e) {
+	            var widget = e.sender;
+	            if (widget.value() && widget.select() === -1) {
+	              //custom has been selected
+	              widget.value(""); //reset widget
+	            }
+	          }
+	        });
+	      });
+	</script>	
+	   
     <script type="text/javascript">
 	 var action = "inserted";
 	$(function(){
-		 $("form#frmAddBrand").submit(function(e){
-			e.preventDefault();
-// 		 	$("#frmWaiting").modal('show');
+		 $("form#frmAddBrand11").submit(function(event) {
+			    event.preventDefault();
+			    alert(1);
+// 			var json = {
+// 				"name" : $(".parent_id").val();
+// 			}
+// 			alert(json);
+		 	$("#frmWaiting").modal('show');
 			$.ajax({
 				type: "POST",
 				url: $("form#frmAddBrand").attr("action"),
 				dataType: 'json',
 				data: {
 					name			   	 : $.trim($("#name").val()),
-					parent_brand	     : $.trim($("#parent_brand").val()),
+					parent_brand	     : $.trim($("#selec_adv_2").val()),
 					description		     : $.trim($("#description").val())
-				},success: function(data){
-					if(data==true){
- 						$("#getTxt").html("<h5>You have been "+action+" successfully.</h5>");
-						setTimeout(function(){ 
-							location.href= "<?php  echo site_url('admin/product')?>";
- 							$("#frmWaiting").modal('hide');
-						}, 1000);
-					}else{
-						alert("You have not been  "+action+" successfully.");
-					}
-					console.log("SUCCESSDATA:",data);
+				},success: function(){
+					console.log("SUCCESS");
+//  						$("#getTxt").html("<h5>You have been "+action+" successfully.</h5>");
+// 						setTimeout(function(){ 
+				//			location.href= "<?php  // echo site_url('admin/brand')?>";
+//  							$("#frmWaiting").modal('hide');
+// 						}, 1000);
+						
 				},
 				error: function(data){
-					console.log("ERROR:",data);
-					$("#frmWaiting").modal('hide');
+					console.log("ERROR");
+// 					$("#frmWaiting").modal('hide');
 				}
 			});
 		
@@ -173,7 +210,35 @@
 
 	});
 	</script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			 $("form#frmAddBrand").submit(function(event) {
+			    event.preventDefault();
+				$.ajax({
+					type: "POST",
+					url: $("form#frmAddBrand").attr("action"),
+					dataType: 'json',
+					data: {
+						name			   	 : $.trim($("#name").val()),
+						parent_brand	     : $.trim($("#parentid").val()),
+						description		     : $.trim($("#description").val())
+					},success: function(data){
+						console.log("SUCCESS" );
+					},
+					error: function(data){
+						console.log("ERROR" , data.a);
+					}
+				});
+				
+			 });
+		});
+	</script>
+
+
     
     
+  
 </body>
 </html>

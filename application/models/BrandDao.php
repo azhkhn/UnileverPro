@@ -17,7 +17,12 @@ class BrandDao extends CI_Model{
 		);
 		$this->db->set('created_date', 'NOW()', FALSE);
 		$this->db->set('status', TRUE);
-		return $this->db->insert("BRAND",$brand);
+		$this->db->insert("BRANDS",$brand);
+		if($this->db->affected_rows()==1){
+			return true;
+		}else{
+			return false;
+		}
 	}
 	
 	public function updateBrand(BrandDto $b){
@@ -30,12 +35,12 @@ class BrandDao extends CI_Model{
 		$this->db->set('updated_date', 'NOW()', FALSE);
 		$this->db->set('status', TRUE);
 		$this->db->where('id' , $p->getId());
-		$this->db->update('BRAND' , $data);
+		$this->db->update('BRANDS' , $data);
 	}
 	
 	public function listBrand(){
 		$this->db->select('id ,name,description,parent_brand,created_date,created_by,updated_date,updated_by,status,deleted_at');
-		$this->db->from('BRAND');
+		$this->db->from('BRANDS');
 		$this->db->order_by("id", "desc");
 		$query = $this->db->get();
 		return $query->result();
@@ -45,12 +50,12 @@ class BrandDao extends CI_Model{
 		$this->db->set('status', FALSE);
 		$this->db->set('deleted_at', 'NOW()', FALSE);
 		$this->db->where('id' , $id);
-		$this->db->update('BRAND');
+		$this->db->update('BRANDS');
 	}
 	
 	public function getBrand($id){
 		$this->db->select('id ,name,description,parent_brand,created_date,created_by,updated_date,updated_by,status,deleted_at');
-		$this->db->from('BRAND');
+		$this->db->from('BRANDS');
 		$this->db->where('id',$id);
 		$query = $this->db->get();
 		return $query->result();

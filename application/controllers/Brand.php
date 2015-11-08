@@ -17,13 +17,29 @@
 			$this->load->view('addbrand');
 		}
 		
+		public function listBrandJson(){
+			$result = $this->BrandDao->listBrand();
+			$this->output->set_content_type('application/json')->set_output(json_encode($result));
+		}
+		
 		public function addBrand(){
 			$this->BrandDto->setName($this->input->post('name'));
 			$this->BrandDto->setDescription($this->input->post('description'));
-			$this->BrandDto->setParent_brand($this->input->post("parent_brand"));
+			if($this->input->post("parent_brand") == ""){
+				$this->BrandDto->setParent_brand(null);
+			}else{
+				$this->BrandDto->setParent_brand($this->input->post("parent_brand"));
+			}
 			$this->BrandDto->setCreated_by(1);
-			$this->BrandDao->addBrand($this->BrandDto);
-			redirect("brand");
+			$data["a"] = "123";
+			if($this->BrandDao->addBrand($this->BrandDto)){
+				$data["ERROR"] = false;
+			}else{
+				$data["ERROR"] = true;
+				$data["ERR_MSG"] = "Error! Cannot insert brand!.";
+			}
+// 			echo json_encode($data);
+			json_encode($data);
 		}
 	
 	}
