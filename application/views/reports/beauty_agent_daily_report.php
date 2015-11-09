@@ -138,11 +138,23 @@
                                         </div>
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
-                                                <label for="product_edit_name_control">Valid Of Date</label>
+                                                <!-- <label for="product_edit_name_control">Valid Of Date</label> -->
                                                 <!--<input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="000123"/>-->
-                                                <form class="uk-form-stacked">
+                                                <!-- <form class="uk-form-stacked">
                                                     <input id="kUI_datepicker_a" value="10-06-2015" />
-                                                </form>
+                                                </form> -->
+                                                <div class="uk-input-group">
+                                                    <span class="uk-input-group-addon">
+                                                        <i class="uk-input-group-icon uk-icon-calendar"></i>
+                                                    </span>
+                                                    <div class="md-input-wrapper md-input-filled">
+                                                        <label for="validOfDate">Valid Of Date</label>
+                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                        <span class="md-input-bar"></span>
+                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                        <span class="md-input-bar"></span>
+                                                    </div>
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">

@@ -145,8 +145,11 @@
                         Users
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('user/')?>">Users</a></li>
-                        <li><a href="<?php echo site_url('user/add')?>">Add User</a></li>
+                        <li><a href="<?php echo site_url('user/bainformation')?>">BA's Information</a></li>
+                        <li><a href="<?php echo site_url('user/supervisorinformation')?>">Supervisor Information</a></li>
+                        <li><a href="<?php echo site_url('user/baexecutiveinformation')?>">BA's Executive Information</a></li>
+                        <li><a href="<?php echo site_url('user/projectholderinformation')?>">Project Holder Information</a></li>
+                        <!-- <li><a href="<?php echo site_url('user/add')?>">Add User</a></li> -->
                     </ul>
                 </li>
                  <li class="act_section">
@@ -155,10 +158,10 @@
                         Report
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('user/dailybareport/1')?>">BA DAILY REPORT</a></li>
-                        <li><a href="<?php echo site_url('user/dailysupervisorreport/1')?>">SUPERVISOR DAILY REPORT</a></li>
-                        <li><a href="<?php echo site_url('user/dailygmreport/1')?>">BA's EXECUTIVE DAILY REPORT</a></li>
-                        <li><a href="<?php echo site_url('user/dailypmreport/1')?>">BA PROGRAM DAILY REPORT</a></li>
+                        <li><a href="<?php echo site_url('report/dailybareport/1')?>">BA DAILY REPORT</a></li>
+                        <li><a href="<?php echo site_url('report/dailysupervisorreport/1')?>">SUPERVISOR DAILY REPORT</a></li>
+                        <li><a href="<?php echo site_url('report/dailygmreport/1')?>">BA's EXECUTIVE DAILY REPORT</a></li>
+                        <li><a href="<?php echo site_url('report/dailypmreport/1')?>">BA PROGRAM DAILY REPORT</a></li>
                     </ul>
                 </li>
                 

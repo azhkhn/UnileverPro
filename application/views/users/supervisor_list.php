@@ -13,7 +13,7 @@
         
 
 </head>
-<body class="sidebar_main_open">
+<body>
 	<!--  header -->
 	<?php $this->load->view('_header') ?>  
      <!-- / header end -->
@@ -23,16 +23,19 @@
     <!-- /left side bar -->
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">SUPERVISOR INFORMATIONS</h1>
+        </div>
         <div id="page_content_inner">
 
             <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-grid" data-uk-grid-margin="">
-                        <div class="uk-width-medium-4-10">
+                        <div class="uk-width-medium-2-10">
                             <label for="product_search_name">Full Name</label>
                             <input type="text" class="md-input" id="product_search_name">
                         </div>
-<!--                        <div class="uk-width-medium-1-10">
+                        <div class="uk-width-medium-2-10">
                             <div class="uk-margin-small-top">
                                 <select id="product_search_status" data-md-selectize multiple data-md-selectize-bottom>
                                     <option value="">Gender</option>
@@ -40,15 +43,13 @@
                                     <option value="2">Male</option>
                                 </select>
                             </div>
-                        </div>-->
+                        </div>
                         <div class="uk-width-medium-3-10">
                             <div class="uk-margin-small-top">
                                 <select id="product_search_status" data-md-selectize multiple data-md-selectize-bottom>
-                                    <option value="">Group</option>
-                                    <option value="1">BEAUTY AGENT</option>
-                                    <option value="2">SUPERVISOR</option>
-                                    <option value="3">BA's EXECUTIVE</option>
-                                    <option value="4">PROJECT HOLDER</option>
+                                    <option value="">Supervisor</option>
+                                    <option value="1">Supervisor 1</option>
+                                    <option value="2">Supervisor 2</option>
                                 </select>
                             </div>
                         </div>
@@ -78,8 +79,8 @@
                                             <th>Gender</th>
                                             <th>Email</th>
                                             <th>Telephone</th>
-                                            <th>Group</th>
-                                            <th>Status</th>
+                                            <th>Supervisor</th>
+                                            <th>Remark</th>
                                             <th>Active</th>
                                             <th>Action</th>
                                         </tr>
@@ -87,8 +88,8 @@
                                     <tbody>
                                     	<?php foreach ($users as $user):?>
                                         <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
+                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
+                                            <td class="uk-text-large uk-text-nowrap"><a href="<?php echo base_url('user/dailybareport/'.$user->id) ?>"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
                                             <td class="uk-text-nowrap">Female</td>
                                             <td><?php echo $user->email ?></td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->phone ?></span></td>
@@ -97,122 +98,14 @@
 													<?php echo $group->name;?><br />
 								                <?php endforeach?>
 											</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-success">Active</span></td>
+                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info">Stop Working</span></td>
                                             <td><i class="material-icons uk-text-muted md-24">&#xE835;</i></td>
                                             <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
+                                                <a href="<?php echo base_url('user/information/'.$user->id) ?>"><i class="material-icons md-24">&#xE8F4;</i></a>
                                                 <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
                                             </td>
                                         </tr>
                                        	<?php endforeach;?>
-<!--                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Necessitatibus aliquam modi adipisci.</a></td>
-                                            <td class="uk-text-nowrap">$ 507.00</td>
-                                            <td>32</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-muted">Ships in 3-5 days</span></td>
-                                            <td><i class="material-icons uk-text-success md-24">&#xE834;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_3.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Quia rerum fugit.</a></td>
-                                            <td class="uk-text-nowrap">$ 595.00</td>
-                                            <td>65</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-success">In stock</span></td>
-                                            <td><i class="material-icons uk-text-muted md-24">&#xE835;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_3.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Omnis autem magni a.</a></td>
-                                            <td class="uk-text-nowrap">$ 496.00</td>
-                                            <td>77</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-muted">Ships in 3-5 days</span></td>
-                                            <td><i class="material-icons uk-text-success md-24">&#xE834;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_1.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Vel officia et repudiandae.</a></td>
-                                            <td class="uk-text-nowrap">$ 550.00</td>
-                                            <td>14</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-danger">Out of stock</span></td>
-                                            <td><i class="material-icons uk-text-muted md-24">&#xE835;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_1.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Odio at itaque.</a></td>
-                                            <td class="uk-text-nowrap">$ 529.00</td>
-                                            <td>73</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-success">In stock</span></td>
-                                            <td><i class="material-icons uk-text-success md-24">&#xE834;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_1.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Ullam voluptatibus nostrum.</a></td>
-                                            <td class="uk-text-nowrap">$ 456.00</td>
-                                            <td>64</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-danger">Out of stock</span></td>
-                                            <td><i class="material-icons uk-text-muted md-24">&#xE835;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_1.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Dolor quia nulla.</a></td>
-                                            <td class="uk-text-nowrap">$ 526.00</td>
-                                            <td>65</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-success">In stock</span></td>
-                                            <td><i class="material-icons uk-text-muted md-24">&#xE835;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_1.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Quas nihil in quas.</a></td>
-                                            <td class="uk-text-nowrap">$ 523.00</td>
-                                            <td>75</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-danger">Out of stock</span></td>
-                                            <td><i class="material-icons uk-text-success md-24">&#xE834;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_1.jpg" alt=""></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="ecommerce_product_details.html">Enim ut voluptas.</a></td>
-                                            <td class="uk-text-nowrap">$ 598.00</td>
-                                            <td>83</td>
-                                            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-success">In stock</span></td>
-                                            <td><i class="material-icons uk-text-muted md-24">&#xE835;</i></td>
-                                            <td class="uk-text-nowrap">
-                                                <a href="ecommerce_product_details.html"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a href="#"><i class="material-icons md-24">&#xE872;</i></a>
-                                            </td>
-                                        </tr>-->
                                     </tbody>
                                 </table>
                             </div>
@@ -232,6 +125,127 @@
             </div>
 
         </div>
+    </div>
+    <div>
+        <div class="uk-modal" id="modal_header_footer">
+            <div class="uk-modal-dialog uk-modal-dialog-large">
+                <button type="button" class="uk-modal-close uk-close"></button>
+                <div class="uk-modal-header">
+                    <h3 class="uk-modal-title">REGISTER A NEW SUPERVISOR</h3>
+                </div>
+                <form action="" class="uk-form-stacked" id="form_validation">
+                    <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                        <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+                            <div class="md-card">
+                                <div class="md-card-toolbar">
+                                    <div class="md-card-toolbar-actions">
+                                        <i class="md-icon material-icons">&#xE146;</i>
+                                    </div>
+                                    <h3 class="md-card-toolbar-heading-text">
+                                        Photo
+                                    </h3>
+                                </div>
+                                <div class="md-card-content">
+                                    <div class="uk-margin-bottom uk-text-center uk-position-relative">
+                                        <img src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge.jpg" alt="" class="img_medium"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md-card">
+                                <div class="md-card-content">
+                                    <div class="uk-float-right">
+                                        <input type="checkbox" data-switchery checked name="product_edit_active_control" id="product_edit_active_control" />
+                                    </div>
+                                    <label class="uk-display-block uk-margin-small-top" for="product_edit_active_control">Active</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+                            <div class="md-card">
+                                <div class="md-card-toolbar">
+                                    <h3 class="md-card-toolbar-heading-text">
+                                        INFORMATION DETAILS
+                                    </h3>
+                                </div>
+                                <div class="md-card-content large-padding">
+                                    <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                        <div class="uk-width-large-1-2">
+                                            <div class="uk-form-row">
+                                                <label for="fullname" class="uk-form-label">Code<span class="req">*</span></label>
+                                                <input type="text" name="code" required class="md-input" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="fullname" class="uk-form-label">Last Name<span class="req">*</span></label>
+                                                <input type="text" name="lastname" required class="md-input" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="fullname" class="uk-form-label">First Name<span class="req">*</span></label>
+                                                <input type="text" name="firstname" required class="md-input" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="product_edit_sn_control" class="uk-form-label">Gender<span class="req">*</span></label>
+                                                <select id="product_edit_color_control" name="product_edit_color_control" required data-md-selectize>
+                                                    <option value="white">Gender</option>
+                                                    <option value="black" selected>Female</option>
+                                                    <option value="red">Male</option>
+                                                </select>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="product_edit_name_control" class="uk-form-label">Supervisor<span class="req">*</span></label>
+                                                <select id="product_search_status" data-md-selectize data-md-selectize-bottom required>
+                                                    <option value="">Supervisor</option>
+                                                    <option value="1">Supervisor 1</option>
+                                                    <option value="2">Supervisor 2</option>
+                                                </select>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="product_edit_memory_control" class="uk-form-label">Telephone<span class="req">*</span></label>
+                                                <input type="text" class="md-input" id="product_edit_sn_control" name="product_edit_sn_control" required value=""/>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="uk-width-large-1-2">
+                                            <div class="uk-form-row">
+                                                <label for="email" class="uk-form-label">Email<span class="req">*</span></label>
+                                                <input type="email" name="email" data-parsley-trigger="change" required  class="md-input" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="product_edit_memory_control" class="uk-form-label">Password<span class="req">*</span></label>
+                                                <input type="text" class="md-input" id="product_edit_sn_control" name="product_edit_sn_control" required value=""/>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="product_edit_memory_control" class="uk-form-label">Confirmation Password<span class="req">*</span></label>
+                                                <input type="text" class="md-input" id="product_edit_sn_control" name="product_edit_sn_control" required value=""/>
+                                            </div>
+                                            
+                                            <div class="uk-form-row">
+                                                <div class="md-input-wrapper md-input-filled">
+                                                    <label for="validOfDate" class="uk-form-label">Start Working<span class="req">*</span></label>
+                                                    <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}" required>
+                                                </div>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="product_edit_description_control" class="uk-form-label">Remark</label>
+                                                <textarea class="md-input" name="product_edit_description_control" id="product_edit_description_control" cols="30" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button>
+                    <input type="submit" class="md-btn md-btn-flat md-btn-flat-primary" id="btnSave" value="Save">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-primary" href="#" id="product_insert_submit" data-uk-modal="{target:'#modal_header_footer'}">
+            <i class="material-icons">&#xE145;</i>
+        </a>
     </div>
 
     <!-- google web fonts -->
@@ -265,6 +279,15 @@
     <!-- altair common functions/helpers -->
     <script src="<?php echo base_url()?>public/assets/js/altair_admin_common.min.js"></script>
 
+    <script>
+    // load parsley config (altair_admin_common.js)
+    altair_forms.parsley_validation_config();
+    </script>
+
+    <script src="<?php echo base_url()?>public/bower_components/parsleyjs/dist/parsley.min.js"></script>
+
+    <!--  forms_validation functions -->
+    <script src="<?php echo base_url()?>public/assets/js/pages/forms_validation.min.js"></script>
 
     <!-- enable hires images -->
     <script>
