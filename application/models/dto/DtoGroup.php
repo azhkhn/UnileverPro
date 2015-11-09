@@ -3,9 +3,8 @@
 class DtoGroup {
 	
 	private $id;
-	private $supervisor;
-	private $beauty_agent;
-	private $project_holder;
+	private $name;
+	private $description;
 	
 	public function getId(){
 		return $this->id;
@@ -15,27 +14,20 @@ class DtoGroup {
 		$this->id = $id;
 	}
 	
-	public function getSupervisor(){
-		return $this->supervisor;
+	public function getName(){
+		return $this->name;
 	}
 	
-	public function setSupervisor($supervisor){
-		$this->supervisor = $supervisor;
+	public function setName($name){
+		$this->name = $name;
 	}
 	
-	public function getBeauty_agent(){
-		return $this->beauty_agent;
+	public function getDescription(){
+		return $this->description;
 	}
 	
-	public function setBeauty_agent($beauty_agent){
-		$this->beauty_agent = $beauty_agent;
+	public function setDescription($description){
+		$this->description = $description;
 	}
 	
-	public function getProject_holder(){
-		return $this->project_holder;
-	}
-	
-	public function setProject_holder($project_holder){
-		$this->project_holder = $project_holder;
-	}
 }

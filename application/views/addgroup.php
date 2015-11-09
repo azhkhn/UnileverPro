@@ -17,7 +17,7 @@
     <div id="page_content">
         <div id="page_content_inner">
 
-        <form action="#" id="groupfro">
+       <form action="<?php  echo site_url('group/addGroup')?>"  name="frmGroup" id="frmGroup" method="post" >
         
             <div class="md-card">
                 <div class="md-card-content">
@@ -29,18 +29,10 @@
                             
                             <div class="uk-form-row">
                                 <label>Name</label>
-                                <input type="text" id="code" class="md-input"  required/>
+                                <input type="text" id="name" class="md-input"  required/>
+                                 <input type="text" id="id" class="md-input"  required/>
                             </div>
                              
-                              <div class="uk-form-row">
-                            		<label>Status</label><br/>
-                                   <div class="uk-width-medium-1-4">
-			                            <input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                            <label for="switch_demo_primary" class="inline-label">Active</label>
-			                        </div>
-                             </div>
-                       		 
-                       		  
                        		  <br/>
                             
                      	 		<div class="uk-form-row">
@@ -69,7 +61,7 @@
                         <div class="uk-width-large-1-12 uk-width-medium-1-2">
                             <div class="uk-input-group">
                             	<a href="<?= site_url() ?>brand" class="md-btn"  v>Cancel</a>
-                               <input type="submit" class="md-btn md-btn-primary" value="Save"/>
+                               <input type="submit"  class="md-btn md-btn-primary" value="Save"/>
                             </div>
                         </div>
                     </div>
@@ -140,6 +132,59 @@
         });
     </script>
     
+    <script type="text/javascript">
+		$(function(){
+
+			 $("#frmGroup").submit(function(event) {
+			    event.preventDefault();
+			    console.log($("form#frmGroup").attr("action"));
+			    modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>');
+				$.ajax({
+					type: "POST",
+					url: $("form#frmGroup").attr("action"),
+					dataType: 'json',
+					data: {
+						id			   	     : $.trim($("#id").val()),
+						name			   	 : $.trim($("#name").val()),
+						description		     : $.trim($("#description").val())
+					},success: function(data){
+						console.log(data);
+							console.log(data);
+							modal.hide();
+							location.href= "<?php   echo site_url('group')?>";
+					},
+					error: function(data){
+						modal.hide();
+						console.log("ERROR" + data);
+					}
+				});
+				
+			 });
+
+
+		 		<?php
+					if(isset($getGroup)){
+						foreach($getGroup as $v){
+						?>
+						console.log("update");
+						document.title= "Edit Brand";
+						$("#id").focus().val("<?php echo $v->id?>");
+						$("#name").focus().val("<?php echo $v->name?>");
+						$("#description").focus().val("<?php echo $v->description ?>");
+						document.frmGroup.action="<?php echo site_url('group/updateGroup')?>";
+						document.title = "Edit group";
+						<?php
+						 }
+					}
+				 ?>	
+
+
+					
+
+					 	 
+					 
+		});
+	</script>
     
     
     

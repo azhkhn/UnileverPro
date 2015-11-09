@@ -28,11 +28,11 @@
 
         
         
-        <form action="<?php  echo site_url('brand/addBrand')?>"  name="frmAddBrand" id="frmAddBrand" method="post" >
+        <form action="<?php  echo site_url('brand/updateBrand')?>" id="frmUpdateBrand" method="post" >
         
             <div class="md-card">
                 <div class="md-card-content">
-                    <h3 class="heading_a">Add Brand</h3>
+                    <h3 class="heading_a">Edit Brand</h3>
                     
                    		<div class="uk-form-row" style="width: 80%;display: none" id="msgError" >
                        		<div class="uk-alert uk-alert-danger" data-uk-alert="">
@@ -44,7 +44,7 @@
                         <div class="uk-form-row" style="width: 80%;display: none" id="msgSUCCESS" >
                        		<div class="uk-alert uk-alert-success" data-uk-alert="">
                                 <a href="#" class="uk-alert-close uk-close"></a>
-                                Brand has added successfully!
+                                Brand was updated successfully!
                             </div>
                         </div>
                         
@@ -56,12 +56,16 @@
                         
                         <br/><br/>
                        
+                       
+                         	
+                            
                         <div class="uk-width-medium-1-2">
                         
-                            
                             <div class="uk-form-row">
                                 <label>Brand name</label>
                                 <input type="text" id="name" name="name" class="md-input"  required/>
+                                <input type="text" id="id" name="id" class="md-input" placeholder="id" required/>
+                                <input type="text" id="oldname" name="oldname" class="md-input" placeholder="Old Brand name" required/>
                             </div>
                              
                              <div class="uk-form-row">
@@ -211,45 +215,57 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript">
 		$(function(){
-
-			 $("#frmAddBrand").submit(function(event) {
-			    event.preventDefault();
-			    console.log("Add");
-			    modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>');
-				$.ajax({
-					type: "POST",
-					url: $("form#frmAddBrand").attr("action"),
-					dataType: 'json',
-					data: {
-						name			   	 : $.trim($("#name").val()),
-						parent_brand	     : $.trim($("#parentid").val()),
-						description		     : $.trim($("#description").val())
-					},success: function(data){
-						console.log(data);
-						if(data["ERROR"]==true){
-							console.log(data["ERR_MSG"]);
-							modal.hide();
-							$("#name").css('border-color','red').focus();
-							$("#msgError").fadeIn(2500);
-						}else{
-							console.log(data["ERR_MSG"]);
-							location.href= "<?php  echo site_url('brand')?>";	
-							//modal.hide();
-// 							$("#msgSUCCESS").fadeIn(2500).fadeOut(3000);
-// 							setTimeout(function(){ 
-								
-// 				 			}, 5000);
+			 		<?php
+						if($brand != null ){
+							foreach($brand as $v){
+							?>
+							document.title= "Edit Brand";
+							$("#id").focus().val("<?php echo $v->id?>");
+							$("#name").focus().val("<?php echo $v->name?>");
+							$("#oldname").focus().val("<?php echo $v->name?>");
+							$("#parentid").focus().val("<?php echo $v->parent_brand?>");
+							$("#description").focus().val("<?php echo $v->description ?>");
+							<?php
+							 }
 						}
-					},
-					error: function(data){
-						modal.hide();
-						console.log("ERROR" + data);
-					}
-				});
-				
-			 });
+					 ?>		 
 
-					 
+					 $("#frmUpdateBrand").submit(function(event) {
+						    event.preventDefault();
+						    console.log("Update");
+						    modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>');
+						    $.ajax({
+								type: "POST",
+								url: $("form#frmUpdateBrand").attr("action"),
+								dataType: 'json',
+								data: {
+									id					 : $.trim($("#id").val()),
+									name			   	 : $.trim($("#name").val()),
+									oldname			   	 : $.trim($("#oldname").val()),
+									parent_brand	     : $.trim($("#parentid").val()),
+									description		     : $.trim($("#description").val())
+								},success: function(data){
+									console.log(data);
+									if(data["ERROR"]==true){
+										console.log(data["ERR_MSG"]);
+										modal.hide();
+										$("#name").css('border-color','red');
+										$("#msgError").fadeIn(2500);
+									}else{
+										console.log(data["ERR_MSG"]);
+										location.href= "<?php   echo site_url('brand')?>";	
+// 										$("#msgSUCCESS").fadeIn(2500).fadeOut(3000);
+// 										setTimeout(function(){
+// 							 			}, 5000);
+									}
+								},
+								error: function(data){
+									modal.hide();
+									console.log("ERROR" + data);
+								}
+							});
+							
+					});	 
 		});
 	</script>
 

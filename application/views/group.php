@@ -27,7 +27,7 @@
                         <tr>
                         	<th>No</th>
                             <th>Name</th>
-                            <th>Status</th>
+                            <th>Descritpion</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -36,52 +36,25 @@
                         <tr>
                         	<th>No</th>
                             <th>Name</th>
-                            <th>Status</th>
+                            <th>Description</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
 
                         <tbody>
                         
+                        <?php foreach ($group as $v) {?>
                         <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                </td>
+                            <td><?= $v->id ?></td>
+                            <td><?= $v->name ?></td>
+                            <td><?= $v->description ?></td>
                             <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
+                            	<a href="<?php  echo site_url('group/update')?>/<?= $v->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
                             </td>
                         </tr>
-                          <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                </td>
-                           <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
-                            </td>
-                        </tr>
-                          <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                </td>
-                            <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a> 
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a> 
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
-                            </td>
-                        </tr>
+                         <?php } ?>
+                         
                         
                         </tbody>
                     </table>
