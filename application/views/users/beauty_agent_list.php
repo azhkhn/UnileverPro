@@ -85,7 +85,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="CONTENTS">
                                     	<?php foreach ($users as $user):?>
                                         <tr>
                                             <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
@@ -115,7 +115,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <ul class="uk-pagination uk-margin-medium-top uk-margin-medium-bottom">
+                            <!-- <ul class="uk-pagination uk-margin-medium-top uk-margin-medium-bottom">
                                 <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
                                 <li class="uk-active"><span>1</span></li>
                                 <li><a href="#">2</a></li>
@@ -124,7 +124,12 @@
                                 <li><span>&hellip;</span></li>
                                 <li><a href="#">20</a></li>
                                 <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
-                            </ul>
+                            </ul> -->
+                            <div id="PAGINATION">
+                            <?php
+                               echo $page_links;
+                            ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -254,6 +259,40 @@
             <i class="material-icons">&#xE145;</i>
         </a>
     </div>
+    <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
+        <tr>
+            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
+            <td class="uk-text-large uk-text-nowrap"><a href="<?php echo base_url('user/dailybareport/'.$user->id) ?>">{{= last_name}} {{= first_name}}</a></td>
+            <td class="uk-text-nowrap">
+                {{if gender == "M"}}
+                    Male
+                {{/if}}
+                {{if gender == "F"}}
+                    Female
+                {{/if}}
+            </td>
+            <td>{{= email}}</td>
+            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info">{{= phone}}</span></td>
+            <td>
+                {{= supervisor}}
+            </td>
+            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info">
+                {{if remark  == ""}}
+                    No Remark
+                {{else}}
+                    {{= remark}}
+                {{/if}}
+
+            </span></td>
+            <td>
+                <input data-before-template  type="checkbox" id="btnStatus" data="{{=id}}" data-switchery data-switchery-color="#1e88e5"/>
+            </td>
+            <td class="uk-text-nowrap">
+                <a href="javascript:;" id="btnUpdate" data="{{=id}}"><i class="material-icons md-24">&#xE3C9;</i></a>
+                <a href="javascript:;" id="btnDelete" data="{{=id}}"><i class="material-icons md-24">&#xE872;</i></a>
+            </td>
+        </tr>
+    </script>
 
     <!-- google web fonts -->
     <script>
@@ -300,6 +339,7 @@
             altair_helpers.retina_images();
         });
     </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/beauty_agent_list.js">
     </script>
 

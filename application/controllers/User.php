@@ -3,6 +3,8 @@
 
 	class User extends ADMIN_CONTROLLER{
 
+		private $limit = 5;
+
 		public function __construct(){
 
 			parent::__construct();
@@ -23,10 +25,52 @@
 
 		public function BAInformation(){
 			$this->load->model('Dao/Daouser');
-			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
-			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
+            $total_rows = $this->Daouser->count('BEAUTY_AGENT');
+
+            $this->load->helper('app');
+			$this->data["page_links"] = pagination($total_rows, $this->limit,'user/ajax', 3);
+
+            //$this->pagination->initialize($config);
+			$this->data["users"] = $this->Daouser->all('BEAUTY_AGENT', $this->limit);//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
 			$this->load->view('users/beauty_agent_list', $this->data);
 		}
+
+		public function ajax(){
+			$this->load->model('Dao/Daouser');
+            $total_rows = $this->Daouser->count('BEAUTY_AGENT');
+
+            $this->load->helper('app');
+			$this->data["page_links"] = pagination($total_rows, $this->limit);
+
+            //$this->pagination->initialize($config);
+			$this->data["users"] = $this->Daouser->all('BEAUTY_AGENT', $this->limit, 'user/ajax', 3);//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
+			//$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
+			//$this->load->view('users/beauty_agent_list', $this->data);
+			echo json_encode($this->data);
+		}
+
+		/*public function index()
+		{
+			$this->load->model('contact_model', 'contact');
+			$query = $this->contact->all($this->limit);
+			$total_rows = $this->contact->count();		
+			$this->load->helper('app');
+			$pagination_links = pagination($total_rows, $this->limit);
+			$this->load->view('header');
+			$this->load->view('index', compact('query', 'pagination_links'));
+			$this->load->view('footer');
+		}*/
+		/*public function ajax()
+		{
+			$this->load->model('contact_model', 'contact');
+			$query = $this->contact->all($this->limit);
+			$total_rows = $this->contact->count();
+			$this->load->helper('app');
+			$pagination_links = pagination($total_rows, $this->limit);
+			if ( ! $this->input->is_ajax_request()) $this->load->view('header');
+			$this->load->view('ajax', compact('query', 'pagination_links'));
+			if ( ! $this->input->is_ajax_request()) $this->load->view('footer');
+		}	*/
 
 		public function supervisorInformation(){
 			$this->data['users'] = $this->ion_auth->users('SUPERVISOR')->result();

@@ -1,5 +1,43 @@
 $(function(){
-	// TODO: ADD USER
+	
+	// TODO: CREATE USERS OBJECT
+	var users = {};
+
+	// TODO: LIST ALL USERS
+	users.getAllUsers = function(URL){
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: URL,
+			type: "POST",
+			dataType: "JSON",
+			success: function(data){
+				if(data.users.length>0){
+					$("tbody#CONTENTS").html('');
+					$("#PAGINATION").html(data.page_links);
+					for(var i=0;i<data.users.length;i++){
+                        data.users[i]['check']='';
+                        users.formatData(data.users[i]);
+                    }
+					$("#CONTENT_TEMPLATE").tmpl(data.users).appendTo("tbody#CONTENTS");
+				}else{
+					$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
+				}
+				modal.hide();
+			},
+			error: function(data){
+				modal.hide();
+				console.log(data);
+			}
+		});
+	};
+
+	// TODO: USER FORMART DATA
+	users.formatData = function(val){
+        val['check'] = (val["active"] == 1) ? 'Check' : '';
+        val['remark'] = ($.trim(val["remark"]) == "") ? 'No Remark' : val["remark"];
+    }
+
+	// TODO: ADD NEW USER
 	$("#frmAddNewBeautyAgent").submit(function(e){
 		e.preventDefault();
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
@@ -166,4 +204,12 @@ $(function(){
 
 
 	// TODO: DELETE USER
+
+	// TODO: PAGINATION ON USER
+	$('body').on('click', '.uk-pagination a', function(e){
+		e.preventDefault();
+		var URL = $(this).attr('href');
+		users.getAllUsers(URL);
+		return false;
+	});
 });
