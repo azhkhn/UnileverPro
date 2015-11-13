@@ -285,11 +285,11 @@
 
             </span></td>
             <td>
-                <input data-before-template  type="checkbox" id="btnStatus" data="{{=id}}" data-switchery data-switchery-color="#1e88e5"/>
+                <input data-before-template  type="checkbox" id="btnStatus" data="{{= id}}" data-switchery data-switchery-color="#1e88e5"/>
             </td>
             <td class="uk-text-nowrap">
-                <a href="javascript:;" id="btnUpdate" data="{{=id}}"><i class="material-icons md-24">&#xE3C9;</i></a>
-                <a href="javascript:;" id="btnDelete" data="{{=id}}"><i class="material-icons md-24">&#xE872;</i></a>
+                <a href="javascript:;" id="btnUpdate" data="{{= id}}"><i class="material-icons md-24">&#xE3C9;</i></a>
+                <a href="javascript:;" id="btnDelete" data="{{= id}}"><i class="material-icons md-24">&#xE872;</i></a>
             </td>
         </tr>
     </script>
