@@ -24,7 +24,7 @@
 		}
 
 		public function BAInformation(){
-			$this->load->model('Dao/Daouser');
+			$this->load->model('dao/Daouser');
             $total_rows = $this->Daouser->count('BEAUTY_AGENT');
 
             $this->load->helper('app');
@@ -32,11 +32,12 @@
 
             //$this->pagination->initialize($config);
 			$this->data["users"] = $this->Daouser->all('BEAUTY_AGENT', $this->limit);//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
+			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
 			$this->load->view('users/beauty_agent_list', $this->data);
 		}
 
 		public function ajax(){
-			$this->load->model('Dao/Daouser');
+			$this->load->model('dao/Daouser');
             $total_rows = $this->Daouser->count('BEAUTY_AGENT');
 
             $this->load->helper('app');
@@ -73,11 +74,22 @@
 		}	*/
 
 		public function supervisorInformation(){
-			$this->data['users'] = $this->ion_auth->users('SUPERVISOR')->result();
+			/*$this->data['users'] = $this->ion_auth->users('SUPERVISOR')->result();
 			foreach ($this->data['users'] as $k => $user)
 			{
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
+			$this->load->view('users/supervisor_list', $this->data);*/
+			
+			$this->load->model('dao/Daouser');
+            $total_rows = $this->Daouser->count('SUPERVISOR');
+
+            $this->load->helper('app');
+			$this->data["page_links"] = pagination($total_rows, $this->limit,'user/ajax', 3);
+
+            //$this->pagination->initialize($config);
+			$this->data["users"] = $this->Daouser->all('SUPERVISOR', $this->limit);//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
+			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('ADMIN');
 			$this->load->view('users/supervisor_list', $this->data);
 		}
 
@@ -125,8 +137,14 @@
 	        }
 	        $this->form_validation->set_rules('code', 'Code is required and cannot duplicate with other.', 'trim|required|is_unique[' . $tables['users'] . '.code]');
 	        $this->form_validation->set_rules('gender', 'Gender is required.', 'required');
-	        $this->form_validation->set_rules('supervisor', 'Supervisor is required.', 'required');
-	        $this->form_validation->set_rules('startworking', 'Start working is required.', 'required');
+	        if($this->input->post('group')==3){
+	        	$this->form_validation->set_rules('supervisor', 'Supervisor is required.', 'required');
+	        }else if($this->input->post('group')==2){
+	        	$this->form_validation->set_rules('supervisor', "BA's Executive is required.", 'required');
+	        }
+	        if($this->input->post('group')!=4){
+	        	$this->form_validation->set_rules('startworking', 'Start working is required.', 'required');
+	        }
 	        $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
 	        $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
 	        $this->form_validation->set_rules('password', $this->lang->line('create_user_validation_password_label'), 'required|min_length[' . $this->config->item('min_password_length', 'ion_auth') . ']|max_length[' . $this->config->item('max_password_length', 'ion_auth') . ']|matches[confirmpassword]');
@@ -151,8 +169,10 @@
 	                'photo'		   => $this->input->post('photo'),
 	                'remark'	   => $this->input->post('remark')
 	            );
+
+	            $groups = array($this->input->post('group'));
 	        }
-	        if ($this->form_validation->run() == true && $this->ion_auth->register($identity, $password, $email, $additional_data))
+	        if ($this->form_validation->run() == true && $this->ion_auth->register($identity, $password, $email, $additional_data, $groups))
 	        {
 	            echo json_encode(array(
 	            		'message' => 'You have been inserted successfully.',
@@ -219,6 +239,7 @@
 		}
 
 		public function updateUser($id){
+			
 			$this->data['title'] = "Edit User";
 			$tables = $this->config->item('tables','ion_auth');
 			if (!$this->ion_auth->logged_in() || (!$this->ion_auth->is_admin() && !($this->ion_auth->user()->row()->id == $id)))
@@ -228,21 +249,26 @@
 						'message' => 'Your have not yet login or not the admin.'
 					));
 			}
+			else{
 
-			$user = $this->ion_auth->user($id)->row();
-			$groups=$this->ion_auth->groups()->result_array();
-			$currentGroups = $this->ion_auth->get_users_groups($id)->result();
+				//$user = $this->ion_auth->user($id)->row();
+				//$groups=$this->ion_auth->groups()->result_array();
+				//$currentGroups = $this->ion_auth->get_users_groups($id)->result();
 
-			// validate form input
-			//$this->form_validation->set_rules('code', 'Code is required and cannot duplicate with other.', 'trim|required|is_unique[' . $tables['users'] . '.code]');
-	        $this->form_validation->set_rules('gender', 'Gender is required.', 'required');
-	        $this->form_validation->set_rules('supervisor', 'Supervisor is required.', 'required');
-	        $this->form_validation->set_rules('startworking', 'Start working is required.', 'required');
-	        $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
-	        $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
-
-			if (isset($_POST) && !empty($_POST))
-			{
+				// validate form input
+				//$this->form_validation->set_rules('code', 'Code is required and cannot duplicate with other.', 'trim|required|is_unique[' . $tables['users'] . '.code]');
+		        $this->form_validation->set_rules('gender', 'Gender is required.', 'required');
+		        if($this->input->post('group')==3){
+		        	$this->form_validation->set_rules('supervisor', 'Supervisor is required.', 'required');
+		        }else if($this->input->post('group')==2){
+		        	$this->form_validation->set_rules('supervisor', "BA's Executive is required.", 'required');
+		        }
+		        if($this->input->post('group')!=4){
+		        	$this->form_validation->set_rules('startworking', 'Start working is required.', 'required');
+		        }
+		        $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
+		        $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
+				
 				// update the password if it was posted
 				if ($this->input->post('password'))
 				{
@@ -273,8 +299,10 @@
 						$data['password'] = $this->input->post('password');
 					}
 
+					//print_r($data);
 					// check to see if we are updating the user
-				   if($this->ion_auth->update($user->id, $data))
+				    if($this->ion_auth->update($id, $data))
+				    //if($this->model->Daouser->updateUser($data))
 				    {
 				    	// redirect them back to the admin page if admin, or to the base url if non admin
 					    //$this->session->set_flashdata('message', $this->ion_auth->messages() );
@@ -293,18 +321,74 @@
 						));
 				    }
 
+				}else{
+					// display the create user form
+		            // set the flash data error message if there is one
+		            $this->data['status'] = false;
+		            $this->data['message'] = (validation_errors() ? validation_errors() : ($this->ion_auth->errors() ? $this->ion_auth->errors() : $this->session->flashdata('message')));
+
+		            $this->data['first_name'] = array(
+		                'name'  => 'first_name',
+		                'id'    => 'first_name',
+		                'type'  => 'text',
+		                'value' => $this->form_validation->set_value('first_name'),
+		            );
+		            $this->data['last_name'] = array(
+		                'name'  => 'last_name',
+		                'id'    => 'last_name',
+		                'type'  => 'text',
+		                'value' => $this->form_validation->set_value('last_name'),
+		            );
+		            $this->data['code'] = array(
+		                'name'  => 'code',
+		                'id'    => 'code',
+		                'type'  => 'text',
+		                'value' => $this->form_validation->set_value('code'),
+		            );
+		            $this->data['email'] = array(
+		                'name'  => 'email',
+		                'id'    => 'email',
+		                'type'  => 'text',
+		                'value' => $this->form_validation->set_value('email'),
+		            );
+		            $this->data['company'] = array(
+		                'name'  => 'company',
+		                'id'    => 'company',
+		                'type'  => 'text',
+		                'value' => $this->form_validation->set_value('company'),
+		            );
+		            $this->data['phone'] = array(
+		                'name'  => 'phone',
+		                'id'    => 'phone',
+		                'type'  => 'text',
+		                'value' => $this->form_validation->set_value('phone'),
+		            );
+		            $this->data['startworking'] = array(
+		                'name'  => 'startworking',
+		                'id'    => 'startworking',
+		                'type'  => 'startworking',
+		                'value' => $this->form_validation->set_value('startworking'),
+		            );
+		            $this->data['supervisor'] = array(
+		                'name'  => 'supervisor',
+		                'id'    => 'supervisor',
+		                'type'  => 'supervisor',
+		                'value' => $this->form_validation->set_value('supervisor'),
+		            );
+		            echo json_encode($this->data);
 				}
+				
 			}
 		}
 
 		public function getUser($id){
-			$this->load->model('Dao/Daouser');
+			$this->load->model('dao/Daouser');
 			echo json_encode($this->Daouser->getUserById($id));
 		}
 
 		public function changeStatus($id){
-			$this->load->model('Dao/Daouser');
-			$this->load->model('Dto/Dtouser');
+			$this->load->model('dao/Daouser');
+			$this->load->model('dto/Dtouser');
 			$this->Dtouser->setId($id);
 			$this->Dtouser->setActive($this->input->post('active'));
 			echo json_encode($this->Daouser->changeStatus($this->Dtouser));

@@ -55,7 +55,7 @@
                     </div>
                 </form>
             </div>
-            <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p>
+            <!-- <p><a href="forgot_password"><?php echo lang('login_forgot_password');?></a></p> -->
             <div class="md-card-content large-padding uk-position-relative" id="login_help" style="display: none">
                 <button type="button" class="uk-position-top-right uk-close uk-margin-right uk-margin-top" id="login_help_close"></button>
                 <h2 class="heading_b uk-text-success">Can't log in?</h2>

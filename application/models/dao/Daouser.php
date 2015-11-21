@@ -91,11 +91,15 @@
 		}
 
 		public function changeStatus(Dtouser $user){
-			$this->db->set('updated_date', 'NOW()', FALSE);
+			$this->db->set('updated_date', date('Y-m-d H:i:s'));
 			$this->db->set('updated_by', $this->ion_auth->get_user_id());
 			$this->db->set('active', 1 - $user->getActive());
 			$this->db->where('id', $user->getId());
 			return $this->db->update('users');
+		}
+
+		public function updateUser($data){
+			return true;
 		}
 
 		

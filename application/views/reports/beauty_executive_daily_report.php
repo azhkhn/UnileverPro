@@ -53,7 +53,7 @@
                                                             <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
                                                         </div>
                                                         <h3 class="md-card-toolbar-heading-text">
-                                                            Supervisor Information
+                                                            Reported By Supervisor
                                                         </h3>
                                                     </div>
                                                     <!-- <div class="mGraph-wrapper">
@@ -201,11 +201,11 @@
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
                                                 <label for="product_edit_name_control">Monthly Target</label>
-                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="000123"/>
+                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="product_edit_name_control">Today Target</label>
-                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="Galaxy S6 edge"/>
+                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
@@ -239,29 +239,29 @@
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="product_edit_name_control">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="000123"/>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="product_edit_name_control">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="Galaxy S6 edge"/>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="product_edit_manufacturer_control">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value="Samsung"/>
+                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="product_edit_name_control">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="000123"/>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="product_edit_name_control">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="Galaxy S6 edge"/>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="product_edit_manufacturer_control">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value="Samsung"/>
+                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
                                         </div>
                                     </div>
                                 </div>

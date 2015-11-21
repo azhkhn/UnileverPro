@@ -107,8 +107,9 @@
                                                 <input type="checkbox" id="btnStatus" data="<?php echo $user->id?>" data-switchery data-switchery-color="#1e88e5" <?php echo ($user->active==1)?"checked":""?>/>
                                             </td>
                                             <td class="uk-text-nowrap">
-                                                <a href="javascript:;" id="btnUpdate" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE3C9;</i></a>
-                                                <a href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE872;</i></a>
+                                                <a title="View" data-uk-tooltip="{pos:'left'}" href="<?php echo base_url('user/information/'.$user->id) ?>"><i class="material-icons md-24">&#xE8F4;</i></a>
+                                                <a title="Update" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnUpdate" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE3C9;</i></a>
+                                                <a title="Delete" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE872;</i></a>
                                             </td>
                                         </tr>
                                        	<?php endforeach;?>
@@ -196,7 +197,7 @@
                                             <div class="uk-form-row">
                                                 <label for="gender" >Gender<span class="req">*</span></label>
                                                 <select name="gender" required data-md-selectize id="selectGender">
-                                                    <option value="">Gender</option>
+                                                    <option value="F">Gender</option>
                                                     <option value="F" selected>Female</option>
                                                     <option value="M">Male</option>
                                                 </select>
@@ -246,16 +247,16 @@
                         </div>
                     </div>
                 <div class="uk-modal-footer uk-text-right">
-                    <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button>
-                    <input type="button" class="md-btn md-btn-flat md-btn-flat-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
-                    <input type="submit" class="md-btn md-btn-flat md-btn-flat-primary" id="btnSave" value="Save" />
+                    <button type="button" class="md-btn uk-modal-close">Close</button>
+                    <input type="button" class="md-btn md-btn-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
+                    <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" />
                 </div>
                 </form>
             </div>
         </div>
     </div>
     <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-primary" href="#" id="product_insert_submit" data-uk-modal="{target:'#modalRegisterNewBA'}">
+        <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalRegisterNewBA'}">
             <i class="material-icons">&#xE145;</i>
         </a>
     </div>
