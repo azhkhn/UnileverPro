@@ -84,6 +84,49 @@ $(function(){
 		});
 	});
 
+	// TODO: VIEW USER INFORMATION
+
+	$(document).on('click',"#btnView", function(){
+		var id = $(this).attr("data");
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'user/getuser/'+id,
+			type: "GET",
+			dataType: "JSON",
+			success: function(data){
+				var $select = $("#selectGender").selectize();
+				var selectize = $select[0].selectize;
+				var $selectSupervisor = $("#selectSupervisor").selectize();
+				var selectSupervisor = $selectSupervisor[0].selectize;
+				console.log(data);
+				$("#txtCode").val(data.code);
+				$("#txtLastName").val(data.last_name);
+				$("#txtFirstName").val(data.first_name);
+				selectize.setValue(data.gender); 
+				$("#txtTelephone").val(data.phone);
+				selectSupervisor.setValue(data.parent_id);
+				$("#txtEmail").val(data.email);
+				$("#startWorking").val(data.starting_date)
+				$("#txtRemark").val(data.remark);
+				modal.hide();
+				$("#btnSave").hide();
+				$("#btnUpdateSave").hide();
+				var modalPopup = UIkit.modal("#modalRegisterNewSupervisor");
+				if ( modalPopup.isActive() ) {
+				    modalPopup.hide();
+				} else {
+				    modalPopup.show();
+				}
+				$('.md-input-wrapper').addClass('md-input-filled');
+			},
+			error: function(data){
+				console.log(data);
+				modal.hide();
+				UIkit.modal.alert(data.message);
+			}
+		});
+	});
+
 	// TODO: VIEW USER TO UPDATE USER
 	$(document).on('click','#btnUpdate', function(){
 		var id = $(this).attr("data");
@@ -180,8 +223,8 @@ $(function(){
 	// TODO: UPDATE STATUS
 	$(document).on('change','#btnStatus', function(){
 		var id = $(this).attr('data');
-		var value = ($(this).val()=="on") ? 0 : 1 ;
-		//$(this).val(($(this).val()=="on") ? "off" : "on")
+		var value = ($(this).val()=="on") ? 1 : 0 ;
+		var _this = $(this);
 		UIkit.modal.confirm('Are you sure?', 
 			function(){ 
 				modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
@@ -196,9 +239,10 @@ $(function(){
 						modal.hide();
 						console.log(data);
 						if(data){
+							_this.val((_this.val()=="on") ? "off" : "on")
 							UIkit.modal.alert('You have been changed successfully!'); 	
 						}else{
-							$(this).val(($(this).val()=="on") ? "off" : "on")
+							_this.val((_this.val()=="on") ? "on" : "off")
 							UIkit.modal.alert('You have an error when changing the status. Please try again!'); 	
 						}
 					},
@@ -208,9 +252,8 @@ $(function(){
 					}
 				});
 			}
-		);
+		);		
 	});
-
 
 	// TODO: DELETE USER
 
