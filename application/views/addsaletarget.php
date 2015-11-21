@@ -49,8 +49,8 @@
 								<div class="uk-form-row">
 									<label>Name</label> 
 									<input type="text" id="name" name="name" class="md-input" required /> 
-									<input type="text" id="id" name="id" class="md-input" placeholder="id" required />
-									<input type="text" id="oldname" name="oldname" class="md-input" placeholder="old name" required />
+									<input type="hidden" id="id" name="id"  placeholder="id" required />
+									<input type="hidden" id="oldname" name="oldname"  placeholder="old name" required />
 								</div>
 
 								<div class="uk-form-row">

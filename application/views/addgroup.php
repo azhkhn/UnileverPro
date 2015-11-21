@@ -30,7 +30,7 @@
                             <div class="uk-form-row">
                                 <label>Name</label>
                                 <input type="text" id="name" class="md-input"  required/>
-                                 <input type="text" id="id" class="md-input"  required/>
+                                 <input type="hidden" id="id"   />
                             </div>
                              
                        		  <br/>

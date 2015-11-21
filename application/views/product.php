@@ -33,7 +33,6 @@
                             <th>Brand</th>
                             <th>Price</th>
                             <th>Promotion</th>
-                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -48,70 +47,31 @@
                             <th>Brand</th>
                             <th>Price</th>
                             <th>Promotion</th>
-                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
 
                         <tbody>
                         
+                          <?php foreach ($product as $v) {?>
                         <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td> 
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                </td>
-                           <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
-                            </td>
-                        </tr>
-                         <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td> 
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                </td>
+                            <td><?= $v->id ?></td>
+                            <td><?= $v->code ?></td>
+                            <td><?= $v->name ?></td>
+                            <td><?= $v->size ?></td>
+                            <td><?= $v->unit ?></td>
+                            <td><?= $v->brand ?></td>
+                            <td><?= $v->price ?></td>
+                            <td><?= $v->promotion ?></td>
                             <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
+                            	<a href="<?php  echo site_url('product/update')?>/<?= $v->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
+                            	<a href="<?php  echo site_url('product/delete')?>/<?= $v->id ?>" onClick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
+                            </td>
                             </td>
                         </tr>
-                          <tr>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td>
-                            <td>2011/01/25</td>
-                            <td>$112,000</td> 
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" checked id="switch_demo_primary" />
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                </td>
-                           <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
-                            </td>
-                        </tr>
+                         <?php } ?>
+                        
                         
                         </tbody>
                     </table>

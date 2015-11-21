@@ -64,8 +64,8 @@
                             <div class="uk-form-row">
                                 <label>Brand name</label>
                                 <input type="text" id="name" name="name" class="md-input"  required/>
-                                <input type="text" id="id" name="id" class="md-input" placeholder="id" required/>
-                                <input type="text" id="oldname" name="oldname" class="md-input" placeholder="Old Brand name" required/>
+                                <input type="hidden" id="id" name="id"  placeholder="id" required/>
+                                <input type="hidden" id="oldname" name="oldname"  placeholder="Old Brand name" required/>
                             </div>
                              
                              <div class="uk-form-row">

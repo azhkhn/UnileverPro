@@ -46,15 +46,14 @@
 							<div class="uk-width-medium-1-2">
 
 								<div class="uk-form-row">
-									<label>Code</label> <input type="text" id="code" name="code"
-										class="md-input" required />
-										
-									ID	
-									<input type="text" id="id" name="id" class="md-input" placeholder="id" required />
-									Old Name
-									<input type="text" id="oldname" name="oldname" class="md-input" placeholder="old name" required />
-									Old code
-									<input type="text" id="oldcode" name="oldcode" class="md-input" placeholder="old code" required />
+									<label>Code</label> 
+									
+									<input type="text" id="code" name="code"	class="md-input" required />
+
+
+									<input type="hidden" id="id" name="id"  placeholder="id"  />
+									<input type="hidden" id="oldname" name="oldname"  placeholder="old name"  />
+									<input type="hidden" id="oldcode" name="oldcode"  placeholder="old code"  />
 									
 								</div>
 
@@ -241,11 +240,13 @@
 	</script>
 
 	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script>
 	
 	<script type="text/javascript">
 		$(function(){
 			 $("#frmSalepromotion").submit(function(event) {
 			    event.preventDefault();
+			    alert($.trim($("#code").val()));
 			    console.log($("#frmSalepromotion").attr("action"));
 			    modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>');
 				$.ajax({

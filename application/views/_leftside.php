@@ -24,7 +24,7 @@
                         Brand
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('brand/')?>">All Brand</a></li>
+                        <li><a href="<?php echo site_url('brand/')?>">Brand</a></li>
                         <li><a href="<?php echo site_url('brand/add')?>">Add brand</a></li>
                     </ul>
                 </li>
@@ -34,7 +34,7 @@
                         Product
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('product/')?>">All product</a></li>
+                        <li><a href="<?php echo site_url('product/')?>">Product</a></li>
                         <li><a href="<?php echo site_url('product/add')?>">Add product</a></li>
                     </ul>
                 </li>
@@ -44,7 +44,7 @@
                         Group
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('group/')?>">All group</a></li>
+                        <li><a href="<?php echo site_url('group/')?>">Group</a></li>
                         <li><a href="<?php echo site_url('group/add')?>">Add group</a></li>
                     </ul>
                 </li>
@@ -54,7 +54,7 @@
                         Sale Target
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('saletarget/')?>">All Sale Target</a></li>
+                        <li><a href="<?php echo site_url('saletarget/')?>">Sale Target</a></li>
                         <li><a href="<?php echo site_url('saletarget/add')?>">Add Sale Target</a></li>
                     </ul>
                 </li>

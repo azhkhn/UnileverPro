@@ -59,15 +59,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-$active_group = 'development';
+$active_group = 'testing';
 $query_builder = TRUE;
 
 $db['development'] = array(
 	'dsn'	=> '',
-	'database' => 'unilever_reporting_system_db',
-	'hostname' => 'localhost', 	
-	'username' => 'darapenhchet', 	
-	'password' => '',
+	'database' => 'vuthea_unilever',
+	'hostname' => 'mysql1003.mochahost.com', 	
+	'username' => 'vuthea_unilever', 	
+	'password' => 'abc123+-*',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -89,7 +89,7 @@ $db['testing'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'vuthea_smartmart',
+	'database' => 'vuthea_unilever',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
