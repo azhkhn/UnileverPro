@@ -154,14 +154,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="md-card">
+                            <!-- <div class="md-card">
                                 <div class="md-card-content">
                                     <div class="uk-float-right">
                                         <input type="checkbox" data-switchery checked name="product_edit_active_control" id="product_edit_active_control" />
                                     </div>
                                     <label class="uk-display-block uk-margin-small-top" for="product_edit_active_control">Active</label>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
                             <div class="md-card">

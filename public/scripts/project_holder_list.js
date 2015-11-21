@@ -93,11 +93,14 @@ $(function(){
 			type: "GET",
 			dataType: "JSON",
 			success: function(data){
+				var $select = $("#selectGender").selectize();
+				var selectize = $select[0].selectize;
 				console.log(data);
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
-				$("#selectGender").val(data.gender);
+				//$("#selectGender").val(data.gender);
+				selectize.setValue(data.gender);
 				$("#txtTelephone").val(data.phone);
 				$("#txtEmail").val(data.email);
 				$("#startWorking").val(data.starting_date)

@@ -197,7 +197,7 @@
                                             <div class="uk-form-row">
                                                 <label for="gender" >Gender<span class="req">*</span></label>
                                                 <select name="gender" required data-md-selectize id="selectGender">
-                                                    <option value="F">Gender</option>
+                                                    <option value="">Gender</option>
                                                     <option value="F" selected>Female</option>
                                                     <option value="M">Male</option>
                                                 </select>
