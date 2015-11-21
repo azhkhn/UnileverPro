@@ -27,16 +27,6 @@
 			$this->load->model('dao/Daouser');
             $total_rows = $this->Daouser->count('BEAUTY_AGENT');
 
-			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
-			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
-			$this->load->view('users/beauty_agent_list', $this->data);
-		}
-
-		/*
-		public function BAInformation(){
-			$this->load->model('dao/Daouser');
-            $total_rows = $this->Daouser->count('BEAUTY_AGENT');
-
             $this->load->helper('app');
 			$this->data["page_links"] = pagination($total_rows, $this->limit,'user/ajax', 3);
 
@@ -58,7 +48,7 @@
 			//$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
 			//$this->load->view('users/beauty_agent_list', $this->data);
 			echo json_encode($this->data);
-		}*/
+		}
 
 		/*public function index()
 		{

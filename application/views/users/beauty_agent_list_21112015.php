@@ -28,7 +28,7 @@
         </div>
         <div id="page_content_inner">
 
-            <!-- <div class="md-card">
+            <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-grid" data-uk-grid-margin="">
                         <div class="uk-width-medium-2-10">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <div class="md-card">
                 <div class="md-card-content">
@@ -126,11 +126,11 @@
                                 <li><a href="#">20</a></li>
                                 <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
                             </ul> -->
-                            <!-- <div id="PAGINATION">
+                            <div id="PAGINATION">
                             <?php
                                echo $page_links;
                             ?>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -333,24 +333,10 @@
 
     <script src="<?php echo base_url()?>public/bower_components/parsleyjs/dist/parsley.min.js"></script>   
 
-    <!-- page specific plugins -->
-    <!-- datatables -->
-    <script src="<?php echo base_url()?>public/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-    <!-- datatables colVis-->
-    <script src="<?php echo base_url()?>public/bower_components/datatables-colvis/js/dataTables.colVis.js"></script>
-    <!-- datatables tableTools-->
-    <script src="<?php echo base_url()?>public/bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
-    <!-- datatables custom integration -->
-    <script src="<?php echo base_url()?>public/assets/js/custom/datatables_uikit.min.js"></script>
-
-    <!--  datatables functions -->
-    <script src="<?php echo base_url()?>public/assets/js/pages/plugins_datatables.min.js"></script>
-
     <!-- enable hires images -->
     <script>
         var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
-            $("table").DataTable();
             altair_helpers.retina_images();
         });
     </script>
