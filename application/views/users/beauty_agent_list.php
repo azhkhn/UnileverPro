@@ -233,7 +233,7 @@
                                             <div class="uk-form-row">
                                                 <div class="md-input-wrapper md-input-filled">
                                                     <label for="startWorking" >Start Working<span class="req">*</span></label>
-                                                    <input class="md-input" type="text" id="startWorking" name="startWorking" data-uk-datepicker="{format:'YYYY-MM-DD'}" required>
+                                                    <input class="md-input" type="text" id="startWorking" name="startWorking" data-uk-datepicker="{format:'DD-MMMM-YYYY', addClass: 'dropdown-modal'}" required>
                                                 </div>
                                             </div>
                                             <div class="uk-form-row">

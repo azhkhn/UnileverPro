@@ -21,7 +21,14 @@ class Auth extends CI_Controller {
 		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
 		{
 			// redirect them to the home page because they must be an administrator to view this
-			return show_error('You must be an administrator to view this page.');
+			//return show_error('You must be an administrator to view this page.');
+			if($this->ion_auth->in_group('SUPERVISOR')){
+				echo 'SUPERVISOR ADMIN';
+			}elseif($this->ion_auth->in_group('BEAUTY_AGENT')){
+				redirect('sale', 'refresh');
+			}elseif($this->ion_auth->in_group('PROJECT_HOLDER')){
+				echo 'PROJECT HOLDER';
+			}
 		}
 		else
 		{
@@ -35,8 +42,8 @@ class Auth extends CI_Controller {
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
 
-			$this->_render_page('auth/index1', $this->data);
-			//redirect('/dashboard');
+			//$this->_render_page('auth/index1', $this->data);
+			redirect('/dashboard');
 		}
 	}
 
@@ -69,7 +76,7 @@ class Auth extends CI_Controller {
 				}elseif($this->ion_auth->in_group('SUPERVISOR')){
 					echo 'SUPERVISOR ADMIN';
 				}elseif($this->ion_auth->in_group('BEAUTY_AGENT')){
-					echo 'BEAUTY AGENT ADMIN';
+					redirect('/sale','refresh');
 				}elseif($this->ion_auth->in_group('PROJECT_HOLDER')){
 					echo 'PROJECT HOLDER';
 				}

@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 if ( ! function_exists('pagination') ) 
 {
-	function pagination($total_rows, $per_page, $url = null, $uri_segment = 3)
+	function pagination($total_rows, $per_page=15, $url = null, $uri_segment = 3)
 	{
 		$ci =& get_instance();
 		if (is_null($url)) {
