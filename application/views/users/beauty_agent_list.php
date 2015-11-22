@@ -28,7 +28,7 @@
         </div>
         <div id="page_content_inner">
 
-            <div class="md-card">
+            <!-- <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-grid" data-uk-grid-margin="">
                         <div class="uk-width-medium-2-10">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="md-card">
                 <div class="md-card-content">
@@ -104,11 +104,12 @@
                                             </td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->remark ? $user->remark : "No Remark"; ?></span></td>
                                             <td>
-                                                <input type="checkbox" id="btnStatus" data="<?php echo $user->id?>" data-switchery data-switchery-color="#1e88e5" <?php echo ($user->active==1)?"checked":""?>/>
+                                                <input type="checkbox" id="btnStatus" data="<?php echo $user->id?>" data-switchery data-switchery-color="#1e88e5" <?php echo ($user->active==1)?"checked":""?> <?php echo ($user->active==1)?" value='on'":" value='off'"?>/>
                                             </td>
                                             <td class="uk-text-nowrap">
-                                                <a href="javascript:;" id="btnUpdate" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE3C9;</i></a>
-                                                <a href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE872;</i></a>
+                                                <a title="View" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnView" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE8F4;</i></a>
+                                                <a title="Update" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnUpdate" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE3C9;</i></a>
+                                                <a title="Delete" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE872;</i></a>
                                             </td>
                                         </tr>
                                        	<?php endforeach;?>
@@ -125,11 +126,11 @@
                                 <li><a href="#">20</a></li>
                                 <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
                             </ul> -->
-                            <div id="PAGINATION">
+                            <!-- <div id="PAGINATION">
                             <?php
                                echo $page_links;
                             ?>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -232,7 +233,7 @@
                                             <div class="uk-form-row">
                                                 <div class="md-input-wrapper md-input-filled">
                                                     <label for="startWorking" >Start Working<span class="req">*</span></label>
-                                                    <input class="md-input" type="text" id="startWorking" name="startWorking" data-uk-datepicker="{format:'YYYY-MM-DD'}" required>
+                                                    <input class="md-input" type="text" id="startWorking" name="startWorking" data-uk-datepicker="{format:'DD-MMMM-YYYY', addClass: 'dropdown-modal'}" required>
                                                 </div>
                                             </div>
                                             <div class="uk-form-row">
@@ -246,16 +247,16 @@
                         </div>
                     </div>
                 <div class="uk-modal-footer uk-text-right">
-                    <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button>
-                    <input type="button" class="md-btn md-btn-flat md-btn-flat-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
-                    <input type="submit" class="md-btn md-btn-flat md-btn-flat-primary" id="btnSave" value="Save" />
+                    <button type="button" class="md-btn uk-modal-close">Close</button>
+                    <input type="button" class="md-btn md-btn-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
+                    <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" />
                 </div>
                 </form>
             </div>
         </div>
     </div>
     <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-primary" href="#" id="product_insert_submit" data-uk-modal="{target:'#modalRegisterNewBA'}">
+        <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalRegisterNewBA'}">
             <i class="material-icons">&#xE145;</i>
         </a>
     </div>
@@ -332,10 +333,24 @@
 
     <script src="<?php echo base_url()?>public/bower_components/parsleyjs/dist/parsley.min.js"></script>   
 
+    <!-- page specific plugins -->
+    <!-- datatables -->
+    <script src="<?php echo base_url()?>public/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <!-- datatables colVis-->
+    <script src="<?php echo base_url()?>public/bower_components/datatables-colvis/js/dataTables.colVis.js"></script>
+    <!-- datatables tableTools-->
+    <script src="<?php echo base_url()?>public/bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
+    <!-- datatables custom integration -->
+    <script src="<?php echo base_url()?>public/assets/js/custom/datatables_uikit.min.js"></script>
+
+    <!--  datatables functions -->
+    <script src="<?php echo base_url()?>public/assets/js/pages/plugins_datatables.min.js"></script>
+
     <!-- enable hires images -->
     <script>
         var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
+            $("table").DataTable();
             altair_helpers.retina_images();
         });
     </script>

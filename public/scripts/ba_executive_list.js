@@ -38,7 +38,7 @@ $(function(){
     }
 
 	// TODO: ADD NEW USER
-	$("#frmAddNewBeautyAgent").submit(function(e){
+	$("#frmBAExecutiveAddNew").submit(function(e){
 		e.preventDefault();
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
 		$.ajax({
@@ -51,7 +51,7 @@ $(function(){
 				'firstname': $("#txtFirstName").val(),
 				'gender'   : $("#selectGender").val(),
 				'phone'    : $("#txtTelephone").val(),
-				'supervisor' : $("#selectSupervisor").val(),
+				//'supervisor' : $("#selectSupervisor").val(),
 				'email'    : $("#txtEmail").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
@@ -59,23 +59,23 @@ $(function(){
 				'remark'   : $("#txtRemark").val(),
 				'company'  : 'UNILEVER',
 				'photo'    : $("#photo").attr('src'),
-				'group'    : 3
+				'group'    : 1
 			},
 			success: function(data){
 				console.log(data);
 				modal.hide();
 				if(data.status==true){
 					UIkit.modal.alert(data.message);
-					var modalPopup = UIkit.modal("#modalRegisterNewBA");
+					var modalPopup = UIkit.modal("#modalBAExecutiveAddNew");
 					if ( modalPopup.isActive() ) {
 					    modalPopup.hide();
 					} else {
 					    modalPopup.show();
 					}
-					location.href=SITE_URL + "user/bainformation";
 				}else{
 					UIkit.modal.alert(data.message);
 				}
+				location.href=SITE_URL + "user/baexecutiveinformation";
 			},
 			error: function(data){
 				modal.hide();
@@ -84,7 +84,7 @@ $(function(){
 		});
 	});
 
-	// TODO: VIEW USER INFORMATION DETAILS
+	// TODO: VIEW USER INFORMATION
 	$(document).on('click','#btnView', function(){
 		var id = $(this).attr("data");
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
@@ -95,30 +95,24 @@ $(function(){
 			success: function(data){
 				var $select = $("#selectGender").selectize();
 				var selectize = $select[0].selectize;
-				var $selectSupervisor = $("#selectSupervisor").selectize();
-				var selectSupervisor = $selectSupervisor[0].selectize;
 				console.log(data);
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
-				selectSupervisor.setValue(data.parent_id);
 				$("#txtEmail").val(data.email);
 				$("#startWorking").val(data.starting_date)
 				$("#txtRemark").val(data.remark);
-				$('#txtPassword').val('');
-				$('#txtConfirmationPassword').val('');
 				modal.hide();
 				$("#btnSave").hide();
 				$("#btnUpdateSave").hide();
-				var modalPopup = UIkit.modal("#modalRegisterNewBA");
+				var modalPopup = UIkit.modal("#modalBAExecutiveAddNew");
 				if ( modalPopup.isActive() ) {
 				    modalPopup.hide();
 				} else {
 				    modalPopup.show();
 				}
-
 				$('.md-input-wrapper').addClass('md-input-filled');
 			},
 			error: function(data){
@@ -140,33 +134,25 @@ $(function(){
 			success: function(data){
 				var $select = $("#selectGender").selectize();
 				var selectize = $select[0].selectize;
-				var $selectSupervisor = $("#selectSupervisor").selectize();
-				var selectSupervisor = $selectSupervisor[0].selectize;
 				console.log(data);
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
-				//$("#selectGender").val(data.gender);
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
-				//$("#selectSupervisor").val(data.parent_id);
-				selectSupervisor.setValue(data.parent_id);
 				$("#txtEmail").val(data.email);
 				$("#startWorking").val(data.starting_date)
 				$("#txtRemark").val(data.remark);
-				$('#txtPassword').val('');
-				$('#txtConfirmationPassword').val('');
 				modal.hide();
 				$("#btnSave").hide();
 				$("#btnUpdateSave").attr('data',data.id);
 				$("#btnUpdateSave").show();
-				var modalPopup = UIkit.modal("#modalRegisterNewBA");
+				var modalPopup = UIkit.modal("#modalBAExecutiveAddNew");
 				if ( modalPopup.isActive() ) {
 				    modalPopup.hide();
 				} else {
 				    modalPopup.show();
 				}
-
 				$('.md-input-wrapper').addClass('md-input-filled');
 			},
 			error: function(data){
@@ -191,15 +177,14 @@ $(function(){
 				'firstname': $("#txtFirstName").val(),
 				'gender'   : $("#selectGender").val(),
 				'phone'    : $("#txtTelephone").val(),
-				'supervisor' : $("#selectSupervisor").val(),
+				//'supervisor' : $("#selectSupervisor").val(),
 				'email'    : $("#txtEmail").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
 				'startworking' : $("#startWorking").val(),
 				'remark'   : $("#txtRemark").val(),
 				'company'  : 'UNILEVER',
-				'photo'    : $("#photo").attr('src'),
-				'group'	   : 3
+				'photo'    : $("#photo").attr('src')
 			},
 			success: function(data){
 				console.log(data);
@@ -207,7 +192,7 @@ $(function(){
 				console.log(data);
 				if(data.status==true){
 					UIkit.modal.alert(data.message);
-					var modalPopup = UIkit.modal("#modalRegisterNewBA");
+					var modalPopup = UIkit.modal("#modalBAExecutiveAddNew");
 					if ( modalPopup.isActive() ) {
 					    modalPopup.hide();
 					} else {
@@ -216,7 +201,7 @@ $(function(){
 				}else{
 					UIkit.modal.alert(data.message);
 				}
-				location.href=SITE_URL + "user/bainformation";
+				location.href=SITE_URL + "user/baexecutiveinformation";
 			},
 			error: function(data){
 				console.log(data);
@@ -279,4 +264,5 @@ $(function(){
 		$('.md-input-wrapper').find('.md-input').val('');
 		$('.md-input-wrapper').removeClass('md-input-filled');
 	});
+
 });

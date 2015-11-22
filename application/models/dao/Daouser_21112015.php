@@ -62,7 +62,6 @@
 			$this->db->join('groups C','B.group_id = C.id','LEFT');
 			$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
 			$this->db->where('C.name', $name);
-			$this->db->order_by('A.parent_id');
 			$query = $this->db->get();
 			return $query->result();
 		}

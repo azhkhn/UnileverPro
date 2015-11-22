@@ -5,16 +5,20 @@
 
 		public function __construct(){
 			parent::__construct();
-			//$this->load->library("session");
-			//$this->isLoggedIn();
+			$this->load->library("ion_auth");
+			$this->isLoggedIn();
 		}
 
-		/*public function isLoggedIn(){
-			$isLoggedIn = $this->session->userdata('logged_in');			
-			if(!isset($isLoggedIn) || $isLoggedIn!=true){
-				redirect("admin/auth");
+		public function isLoggedIn(){
+			if(!$this->ion_auth->logged_in())
+			{
+				// redirect them to the login page
+				redirect('auth/login', 'refresh');
 			}
-		}*/
+			if($this->ion_auth->in_group(array('SUPERVISOR','BEAUTY_AGENT','PROJECT_HOLDER'))){
+				return show_error("You must be an BA's Executive to view this page.");
+			}
+		}
 	}
 
 ?>
