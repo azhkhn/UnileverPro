@@ -39,10 +39,11 @@ class DaoBrand extends CI_Model{
 	}
 	
 	public function listBrand(){
-		$this->db->select('id ,name,description,parent_brand,created_date,created_by,updated_date,updated_by,status,deleted_at');
-		$this->db->from('BRANDS');
-		$this->db->where('status' , 1);
-		$this->db->order_by("id", "desc");
+		$this->db->select('b.id ,b.name,b.description,b.name as parent_brand,b.created_date,b.created_by,b.updated_date,b.updated_by,b.status,b.deleted_at');
+		$this->db->from('BRANDS b');
+		$this->db->join('BRANDS bb','b.parent_brand = bb.id', 'LEFT');
+		$this->db->where('b.status' , 1);
+		$this->db->order_by("b.id", "desc");
 		$query = $this->db->get();
 		return $query->result();
 	}

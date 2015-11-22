@@ -38,9 +38,11 @@
 								<div class="uk-form-row">
 									<label>Code</label> <input type="text" id="code"
 										class="md-input" required />
+										
+										<input type="hidden" id="id" />
 								</div>
 								
-								<input type="hidden" id="id" />
+								
 								
 								<div class="uk-form-row">
 									<label>Size </label> <input type="text" id="size"

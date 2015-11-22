@@ -46,11 +46,14 @@ class DaoProduct extends CI_Model {
 			return false;
 		}
 	}
+	
 	public function listProduct() {
-		$this->db->select ( 'id,code,name,description,size,unit,brand,price,promotion,created_by,created_date,updated_date,updated_by,status,deleted_at' );
-		$this->db->from ( 'PRODUCTS' );
-		$this->db->where ( 'status', 1 );
-		$this->db->order_by ( "id", "desc" );
+		$this->db->select ( 'p.id,p.code,p.name,p.description,p.size,p.unit,b.name as brand,p.price,pro.name as promotion,p.created_by,p.created_date,p.updated_date,p.updated_by,p.status,p.deleted_at' );
+		$this->db->from ( 'PRODUCTS p' );
+		$this->db->join('BRANDS b','p.brand = b.id', 'LEFT');
+		$this->db->join('SALE_PROMOTIONS pro','p.promotion = pro.id', 'LEFT');
+		$this->db->where ( 'p.status', 1 );
+		$this->db->order_by ( "p.id", "desc" );
 		$query = $this->db->get ();
 		return $query->result ();
 	}
