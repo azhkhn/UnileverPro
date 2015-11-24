@@ -45,40 +45,70 @@
                                             </select>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtSupervisorName">Supervisor Name</label>
-                                            <input type="text" class="md-input" id="txtSupervisorName" name="txtSupervisorName" value=""/>
+                                            <label for="product_edit_name_control">Supervisor Name</label>
+                                            <select id="selectedSupervisor" data-md-selectize data-md-selectize-bottom>
+                                                <option value="">Supervisor</option>
+                                                <?php foreach ($supervisor_users as $user):?>
+                                                    <option value="<?php echo $user->id;?>"><?php echo $user->username; ?></option>
+                                                <?php endforeach?>
+                                            </select>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtBAExecutive">BA's Executive Name</label>
-                                            <input type="text" class="md-input" id="txtBAExecutive" name="txtBAExecutive" value=""/>
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-large-1-4">
-                                        <div class="uk-form-row">
-                                            <label for="txtMarketName">Market Name</label>
-                                            <input type="text" class="md-input" id="txtMarketName" name="txtMarketName" value=""/>
-                                        </div>
-                                        <div class="uk-form-row">
-                                            <label for="txtOutletName">Outlet Name</label>
-                                            <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value=""/>
-                                        </div>
-                                        <div class="uk-form-row">
-                                            <label for="txtDMSCode">DMS Code</label>
-                                            <input type="text" class="md-input" id="txtDMSCode" name="txtDMSCode" value=""/>
+                                            <label for="selectedBAExecutive">BA's Executive Name</label>
+                                            <select id="selectedBAExecutive" data-md-selectize data-md-selectize-bottom>
+                                                <option value="">BA's Executive Name</option>
+                                                <?php foreach ($ba_executive_users as $user):?>
+                                                    <option value="<?php echo $user->id;?>"><?php echo $user->username; ?></option>
+                                                <?php endforeach?>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-1-4">
                                         <div class="uk-form-row">
-                                            <label for="txtDT">DT</label>
-                                            <input type="text" class="md-input" id="txtDT" name="txtDT" value=""/>
+                                            <label for="product_edit_name_control">Market Name</label>
+                                            <select id="product_search_status" data-md-selectize data-md-selectize-bottom>
+                                                <option value="">Market Name</option>
+                                                <option value="1">Market Name 1</option>
+                                                <option value="2">Market Name 2</option>
+                                            </select>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtCustomerType">Customer Type</label>
-                                            <input type="text" class="md-input" id="txtCustomerType" name="txtCustomerType" value=""/>
+                                            <label for="product_edit_name_control">Outlet Name</label>
+                                            <select id="product_search_status" data-md-selectize data-md-selectize-bottom>
+                                                <option value="">Outlet Name</option>
+                                                <option value="1">Outlet Name 1</option>
+                                                <option value="2">Outlet Name 2</option>
+                                            </select>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtChannel">Channel</label>
-                                            <input type="text" class="md-input" id="txtChannel" name="txtChannel" value=""/>
+                                            <label for="product_edit_manufacturer_control">DMS Code</label>
+                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-large-1-4">
+                                        <div class="uk-form-row">
+                                            <label for="product_edit_name_control">DT</label>
+                                            <select id="product_search_status" data-md-selectize data-md-selectize-bottom>
+                                                <option value="">DT</option>
+                                                <option value="1">DT 1</option>
+                                                <option value="2">DT 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="uk-form-row">
+                                            <label for="product_edit_name_control">Customer Type</label>
+                                            <select id="product_search_status" data-md-selectize data-md-selectize-bottom>
+                                                <option value="">Customer Type</option>
+                                                <option value="1">Customer Type 1</option>
+                                                <option value="2">Customer Type 2</option>
+                                            </select>
+                                        </div>
+                                        <div class="uk-form-row">
+                                            <label for="product_edit_manufacturer_control">Channel</label>
+                                            <select id="product_search_status" data-md-selectize data-md-selectize-bottom>
+                                                <option value="">Channel</option>
+                                                <option value="1">Channel 1</option>
+                                                <option value="2">Channel 2</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-1-4">
@@ -101,16 +131,21 @@
                                     <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
-                                                <label for="txtMonthlyTarget">Monthly Target</label>
-                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value=""/>
+                                                <label for="product_edit_name_control">Monthly Target</label>
+                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                             </div>
                                             <div class="uk-form-row">
-                                                <label for="txtTodayTarget">Today Target</label>
-                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value=""/>
+                                                <label for="product_edit_name_control">Today Target</label>
+                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
+                                                <!-- <label for="product_edit_name_control">Valid Of Date</label> -->
+                                                <!--<input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="000123"/>-->
+                                                <!-- <form class="uk-form-stacked">
+                                                    <input id="kUI_datepicker_a" value="10-06-2015" />
+                                                </form> -->
                                                 <div class="uk-input-group">
                                                     <span class="uk-input-group-addon">
                                                         <i class="uk-input-group-icon uk-icon-calendar"></i>
@@ -127,8 +162,8 @@
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="txtNumberOfWorking">Number of working days</label>
-                                            <input type="text" class="md-input" id="txtNumberOfWorking" name="txtNumberOfWorking" value="26"/>
+                                            <label for="product_edit_name_control">Number of working days</label>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="26"/>
                                         </div>
                                     </div>
                                 </div>
@@ -139,30 +174,30 @@
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="txtTodayAchievement">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" value=""/>
+                                            <label for="product_edit_name_control">$ Today Achievement</label>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtMonthToDateAchievement">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" value=""/>
+                                            <label for="product_edit_name_control">$ Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtYearToDateAchievement">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" value=""/>
+                                            <label for="product_edit_manufacturer_control">$ Year to Date Achievement</label>
+                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="txtTodayAchievementPercent">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value=""/>
+                                            <label for="product_edit_name_control">% Today Achievement</label>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value=""/>
+                                            <label for="product_edit_name_control">% Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value=""/>
+                                            <label for="product_edit_manufacturer_control">% Year to Date Achievement</label>
+                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
                                         </div>
                                     </div>
                                 </div>

@@ -30,7 +30,7 @@
 			$this->data["sale_archievement_month_to_date"] = $this->Daosale->getSaleArchievement($this->Dtosale,1);
 			$this->data["sale_archievement_year_to_date"] = $this->Daosale->getSaleArchievement($this->Dtosale,2);
 
-			$this->data["sale_archievement"] = $this->Daosale->getSaleArchievement($this->Dtosale);
+			//$this->data["sale_archievement"] = $this->Daosale->getSaleArchievement($this->Dtosale);
 			$this->data["products"] = $this->Daosale->getAllProducts();
 			/*$total_rows = $this->Daosale->count($this->Dtosale); 
 			$this->load->helper('app');

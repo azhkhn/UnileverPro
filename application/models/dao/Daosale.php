@@ -102,7 +102,7 @@
 			return $this->db->count_all_results();
 		}
 
-		public function getSaleArchievement(Dtosale $Dtosale,$status="0"){
+		public function getSaleArchievement(Dtosale $Dtosale,$status=0){
 			/*$this->db->select ("
 							  (SELECT IFNULL(SUM(sale_items.price*sale_items.quantity),0) 
 							  	FROM  sales 
@@ -126,11 +126,11 @@
 			$this->db->where('sales.ba_id', $Dtosale->getBaId());
 			$this->db->where('sales.outlet_id', $Dtosale->getOutletId());
 			if($status==0){
-				$this->db->where("DATE(sales.sale_date)=DATE_FORMAT(NOW(),'%Y-%m-%d')");
+				$this->db->where("DATE(sales.sale_date)=DATE_FORMAT(CONVERT_TZ(NOW(), @@session.time_zone, '+07:00'),'%Y-%m-%d')");
 			}else if($status==1){
-				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND NOW() )");
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
 			}else if($status==2){
-				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-01-01') AND NOW() )");
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
 			}
 			$query = $this->db->get ();
 			return $query->row();	

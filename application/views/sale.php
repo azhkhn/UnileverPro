@@ -390,7 +390,7 @@
             altair_helpers.retina_images();
         });
     </script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script src="<?php echo base_url()?>public/scripts/sale.js"></script>
 
 </body>
