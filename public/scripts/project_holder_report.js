@@ -1,39 +1,11 @@
 $(function(){
+
+	$("#startDate").val(moment('2015-01-01').format('DD-MMMM-YYYY'));
+	$("#endDate").val(moment('2015-12-31').format('DD-MMMM-YYYY'));
 	
 	// TODO: CREATE SALES OBJECT
 	var sales = {};
 
-	// TODO: LIST ALL USERS
-	sales.getAllSales = function(URL){
-		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
-		$.ajax({
-			url: URL,
-			type: "POST",
-			dataType: "JSON",
-			data: {
-				'sale_date' : selectedDate,
-				'outlet_id' : $("#txtOutletId").val(),
-			},
-			success: function(data){
-				console.log(data);
-				$("#PAGINATION").html(data.page_links);
-				if(data.sales.length>0){
-					$("tbody#CONTENTS").html('');
-					for(var i=0;i<data.sales.length;i++){
-                        data.sales[i]['check']='';
-                    }
-					$("#CONTENT_TEMPLATE").tmpl(data.sales).appendTo("tbody#CONTENTS");
-				}else{
-					$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
-				}
-				modal.hide();
-			},
-			error: function(data){
-				modal.hide();
-				console.log(data);
-			}
-		});
-	};
 
 	// TODO: ON CHANGE ON BA 
 	$("#selectedBA").change(function(){

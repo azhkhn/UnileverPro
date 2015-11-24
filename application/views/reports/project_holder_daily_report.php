@@ -36,23 +36,14 @@
                                     <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
-                                                <label for="product_edit_name_control">Monthly Target</label>
-                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                                <label for="txtMonthlyTarget">Monthly Target</label>
+                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value="$ 0.00"/>
                                             </div>
                                             <div class="uk-form-row">
-                                                <label for="product_edit_name_control">Today Target</label>
-                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                                <label for="txtTodayTarget">Today Target</label>
+                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value="$ 0.00"/>
                                             </div>
                                         </div>
-                                        <!-- <div class="uk-width-large-1-4">
-                                            <div class="uk-form-row">
-                                                <label for="product_edit_name_control">Valid Of Date</label>
-                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="000123"/>
-                                                <form class="uk-form-stacked">
-                                                    <input id="kUI_datepicker_a" value="10-06-2015" />
-                                                </form>
-                                        </div> -->
-
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
                                                 <div class="uk-input-group">
@@ -60,7 +51,7 @@
                                                         <i class="uk-input-group-icon uk-icon-calendar"></i>
                                                     </span>
                                                     <div class="md-input-wrapper md-input-filled">
-                                                        <label for="validOfDate">Valid Of Date</label>
+                                                        <label for="validOfDate">Valid Of Target</label>
                                                             <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
                                                         <span class="md-input-bar"></span>
                                                             <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
@@ -77,30 +68,30 @@
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtTodayAchievement">$ Today Achievement</label>
+                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" value="<?php echo '$ '. $today_achievement ?>"/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtMonthToDateAchievement">$ Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" value="<?php echo '$ '. $month_achievement ?>"/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_manufacturer_control">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
+                                            <label for="txtYearToDateAchievement">$ Year to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" value="<?php echo '$ '. $year_achievement ?>"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtTodayAchievementPercent">% Today Achievement</label>
+                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value="% 0.00"/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value="% 0.00"/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_manufacturer_control">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
+                                            <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value="% 0.00"/>
                                         </div>
                                     </div>
                                 </div>
@@ -163,10 +154,12 @@
     
     <!-- enable hires images -->
     <script>
+        var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
             altair_helpers.retina_images();
         });
     </script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/project_holder_report.js"></script>
 
 </body>
 </html>

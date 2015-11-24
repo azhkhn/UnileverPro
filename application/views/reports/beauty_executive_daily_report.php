@@ -36,11 +36,12 @@
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large-1-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_manufacturer_control">BA's Executive Name</label>
-                                            <select id="product_search_status" data-md-selectize data-md-selectize-bottom>
+                                            <label for="selectedBAExecutive">BA's Executive Name</label>
+                                            <select id="selectedBAExecutive" data-md-selectize data-md-selectize-bottom>
                                                 <option value="">BA's Executive Name</option>
-                                                <option value="1">BA's Executive Name 1</option>
-                                                <option value="2">BA's Executive Name 2</option>
+                                                <?php foreach ($executive_users as $user):?>
+                                                    <option value="<?php echo $user->id;?>"><?php echo $user->username; ?></option>
+                                                <?php endforeach?>
                                             </select>
                                         </div>
                                     </div>
@@ -56,65 +57,32 @@
                                                             Reported By Supervisor
                                                         </h3>
                                                     </div>
-                                                    <!-- <div class="mGraph-wrapper">
+                                                    <div class="mGraph-wrapper">
                                                         <div class="uk-overflow-container">
                                                             <table class="uk-table uk-table-no-border uk-text-nowrap">
-                                                            <thead>
+                                                            <!-- <thead>
                                                                 <tr>
                                                                     <th>Date</th>
                                                                     <th>Best Seller</th>
                                                                     <th>Total Sale</th>
                                                                     <th>Change</th>
                                                                 </tr>
-                                                            </thead>
-                                                            <tbody>
+                                                            </thead> -->
+                                                            <tbody id="CONTENTS">
                                                                 <tr>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <!-- <tr>
                                                                     <td>January 2014</td>
                                                                     <td>Non ad quos neque.</td>
                                                                     <td>$3 234 162</td>
                                                                     <td>0</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>February 2014</td>
-                                                                    <td>Molestias et ut.</td>
-                                                                    <td>$3 771 083</td>
-                                                                    <td class="uk-text-success">+2.5%</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>March 2014</td>
-                                                                    <td>Qui itaque ea reiciendis quo.</td>
-                                                                    <td>$2 429 352</td>
-                                                                    <td class="uk-text-danger">-4.6%</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>April 2014</td>
-                                                                    <td>Eveniet adipisci magni.</td>
-                                                                    <td>$4 844 169</td>
-                                                                    <td class="uk-text-success">+7%</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>May 2014</td>
-                                                                    <td>Impedit distinctio est.</td>
-                                                                    <td>$5 284 318</td>
-                                                                    <td class="uk-text-success">+3.2%</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>June 2014</td>
-                                                                    <td>Cum est voluptatum.</td>
-                                                                    <td>$4 688 183</td>
-                                                                    <td class="uk-text-danger">-6%</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>July 2014</td>
-                                                                    <td>Tempora quia.</td>
-                                                                    <td>$4 353 427</td>
-                                                                    <td class="uk-text-success">-5.3%</td>
-                                                                </tr>
+                                                                </tr> -->
                                                             </tbody>
                                                         </table>
                                                         </div>
-                                                    </div> -->
-                                                    <div class="md-card-content">
+                                                    </div>
+                                                    <!-- <div class="md-card-content">
                                                         <div class="md-card-fullscreen-content">
                                                             <div class="uk-overflow-container">
                                                                 <table class="uk-table uk-table-no-border uk-text-nowrap">
@@ -172,10 +140,8 @@
                                                                 </tbody>
                                                             </table>
                                                             </div>
-                                                            <!-- <p class="uk-margin-large-top uk-margin-small-bottom heading_list uk-text-success">Some Info:</p>
-                                                            <p class="uk-margin-top-remove">Vitae quia id sed dolores ut et molestiae repudiandae explicabo esse quidem repellat dolore perferendis ipsa ipsam molestias molestiae repudiandae soluta nesciunt non aut non cumque atque maiores ut nulla accusamus eos fugit adipisci sint corrupti quia autem nesciunt et soluta magni eligendi rerum et velit incidunt quis eos aut nam et quae amet excepturi voluptas ut vitae voluptates rerum tenetur officia tenetur ut delectus aperiam beatae optio ut dignissimos qui quibusdam laudantium ut non veniam nam voluptate unde est eius dolor iure voluptas ut explicabo ea in autem quis incidunt nisi recusandae pariatur sit voluptate facere vel quibusdam magni error earum dolores similique assumenda amet sunt nemo eveniet aut.</p> -->
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -200,12 +166,12 @@
                                     <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
-                                                <label for="product_edit_name_control">Monthly Target</label>
-                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                                <label for="txtMonthlyTarget">Monthly Target</label>
+                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value=""/>
                                             </div>
                                             <div class="uk-form-row">
-                                                <label for="product_edit_name_control">Today Target</label>
-                                                <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                                <label for="txtTodayTarget">Today Target</label>
+                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value=""/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
@@ -226,8 +192,8 @@
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">Number of working days</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="26"/>
+                                            <label for="txtNumberOfWorking">Number of working days</label>
+                                            <input type="text" class="md-input" id="txtNumberOfWorking" name="txtNumberOfWorking" value="26"/>
                                         </div>
                                     </div>
                                 </div>
@@ -238,30 +204,30 @@
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtTodayAchievement">$ Today Achievement</label>
+                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtMonthToDateAchievement">$ Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_manufacturer_control">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
+                                            <label for="txtYearToDateAchievement">$ Year to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" value=""/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtTodayAchievementPercent">% Today Achievement</label>
+                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value=""/>
+                                            <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value=""/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_manufacturer_control">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value=""/>
+                                            <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -279,6 +245,12 @@
             <i class="material-icons">&#xE161;</i>
         </a>
     </div> -->
+
+    <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
+        <tr>
+            <td>{{= username}}</td>
+        </tr>
+    </script>
 
     <!-- google web fonts -->
     <script>
@@ -324,10 +296,13 @@
     
     <!-- enable hires images -->
     <script>
+        var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
             altair_helpers.retina_images();
         });
     </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/ba_executive_report.js"></script>
 
 </body>
 </html>

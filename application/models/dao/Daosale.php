@@ -136,6 +136,71 @@
 			return $query->row();	
 		}
 
+		public function getSaleOfSupervisorArchievement(Dtouser $Dtouser,$status=0){
+			$this->db->select("
+							IFNULL(SUM(sale_items.price*sale_items.quantity),0) AS amount
+							",FALSE);
+			$this->db->from('sales');
+			$this->db->join('users', 'sales.ba_id = users.id AND users.active = 1', 'LEFT');
+			$this->db->join('sale_items', 'sales.id=sale_items.sale_id', 'LEFT');
+			$this->db->where('sales.status', 1);
+			$this->db->where('users.parent_id', $Dtouser->getId());
+			if($status==0){
+				$this->db->where("DATE(sales.sale_date)=DATE_FORMAT(CONVERT_TZ(NOW(), @@session.time_zone, '+07:00'),'%Y-%m-%d')");
+			}else if($status==1){
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
+			}else if($status==2){
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
+			}
+			$query = $this->db->get ();
+			return $query->row();	
+		}
+
+		public function getSaleOfBAExecutiveArchievement(Dtouser $Dtouser,$status=0){
+			$this->db->select("
+							IFNULL(SUM(sale_items.price*sale_items.quantity),0) AS amount
+							",FALSE);
+			$this->db->from('sales');
+			$this->db->join('users', 'sales.ba_id = users.id AND users.active = 1', 'LEFT');
+			$this->db->join('sale_items', 'sales.id=sale_items.sale_id', 'LEFT');
+			$this->db->where('sales.status', 1);
+			$this->db->where('users.parent_id IN (SELECT id FROM users where parent_id = '.$Dtouser->getId().')');
+			if($status==0){
+				$this->db->where("DATE(sales.sale_date)=DATE_FORMAT(CONVERT_TZ(NOW(), @@session.time_zone, '+07:00'),'%Y-%m-%d')");
+			}else if($status==1){
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
+			}else if($status==2){
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
+			}
+			$query = $this->db->get ();
+			return $query->row();	
+		}
+
+		public function getSaleOfProjectHolderArchievement($status=0){
+			$this->db->select("
+							IFNULL(SUM(sale_items.price*sale_items.quantity),0) AS amount
+							",FALSE);
+			$this->db->from('sales');
+			$this->db->join('users', 'sales.ba_id = users.id AND users.active = 1', 'LEFT');
+			$this->db->join('sale_items', 'sales.id=sale_items.sale_id', 'LEFT');
+			$this->db->where('sales.status', 1);
+			$this->db->where('users.parent_id IN ((SELECT users.id 
+												  FROM users
+												  WHERE active = 1 AND users.parent_id IN (SELECT users.id 
+												  		FROM users 
+												  		INNER JOIN users_groups ON users.id = users_groups.user_id 
+												  		WHERE users.active = 1 AND users_groups.group_id = 1)))') ;
+			if($status==0){
+				$this->db->where("DATE(sales.sale_date)=DATE_FORMAT(CONVERT_TZ(NOW(), @@session.time_zone, '+07:00'),'%Y-%m-%d')");
+			}else if($status==1){
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
+			}else if($status==2){
+				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
+			}
+			$query = $this->db->get ();
+			return $query->row();	
+		}
+
 		public function addNewsale(Dtosale $sale){
 			$this->db->trans_begin();
 			$data = array(

@@ -36,15 +36,65 @@
 		}
 		
 		public function dailySupervisorReport($id){
-			$this->load->view('reports/supervisor_daily_report');
+			$this->load->model('dao/Daouser');
+			$this->load->model('dto/Dtouser');
+			$this->data["supervisor_users"] = $this->Daouser->getAllUsersByGroupId(2);
+			$this->load->view('reports/supervisor_daily_report', $this->data);
+		}
+
+		public function changeSupervisor(){
+			$this->load->model('dao/Daouser');
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtouser');
+
+			$this->Dtouser->setId($this->input->post('supervisor_id'));
+			$this->data["ba_users"] = $this->Daouser->getAllUsersByParent($this->Dtouser);
+			$today_amount = $this->Daosale->getSaleOfSupervisorArchievement($this->Dtouser);
+			$monthToDate = $this->Daosale->getSaleOfSupervisorArchievement($this->Dtouser,1);
+			$yearToDate = $this->Daosale->getSaleOfSupervisorArchievement($this->Dtouser,2);
+			$this->data["user"] = $this->Daouser->getSupervisorInformation($this->Dtouser);
+			$this->data["today_achievement"] = $today_amount->amount;
+			$this->data["month_achievement"] = $monthToDate->amount;
+			$this->data["year_achievement"] = $yearToDate->amount;
+			echo json_encode($this->data);
 		}
 		
 		public function dailyGMReport($id){
-			$this->load->view('reports/beauty_executive_daily_report');
+			$this->load->model('dao/Daouser');
+			$this->load->model('dto/Dtouser');
+			$this->data["executive_users"] = $this->Daouser->getAllUsersByGroupId(1);
+			$this->load->view('reports/beauty_executive_daily_report',$this->data);
+		}
+
+		public function changeBAExecutive(){
+			$this->load->model('dao/Daouser');
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtouser');
+
+			$this->Dtouser->setId($this->input->post('executive_id'));
+			$this->data["supervisor_users"] = $this->Daouser->getAllUsersByParent($this->Dtouser);
+			$today_amount = $this->Daosale->getSaleOfBAExecutiveArchievement($this->Dtouser);
+			$monthToDate = $this->Daosale->getSaleOfBAExecutiveArchievement($this->Dtouser,1);
+			$yearToDate = $this->Daosale->getSaleOfBAExecutiveArchievement($this->Dtouser,2);
+			$this->data["today_achievement"] = $today_amount->amount;
+			$this->data["month_achievement"] = $monthToDate->amount;
+			$this->data["year_achievement"] = $yearToDate->amount;
+			echo json_encode($this->data);
 		}
 		
 		public function dailyPMReport($id){
-			$this->load->view('reports/project_holder_daily_report');
+			$this->load->model('dao/Daouser');
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtouser');
+
+			$today_amount = $this->Daosale->getSaleOfProjectHolderArchievement();
+			$monthToDate = $this->Daosale->getSaleOfProjectHolderArchievement(1);
+			$yearToDate = $this->Daosale->getSaleOfProjectHolderArchievement(2);
+			$this->data["today_achievement"] = $today_amount->amount;
+			$this->data["month_achievement"] = $monthToDate->amount;
+			$this->data["year_achievement"] = $yearToDate->amount;
+			//echo json_encode($this->data);
+			$this->load->view('reports/project_holder_daily_report', $this->data);
 		}
 	}
 ?>
