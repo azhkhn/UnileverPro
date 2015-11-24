@@ -84,6 +84,7 @@ $(function(){
 			},
 			success: function(data){
 				console.log(data);
+				$('.md-input-wrapper').find('.md-input').val('');
 				if(data.user){
 					$("#txtSupervisorName").val(data.user.supervisor);
 					$("#txtBAExecutive").val(data.user.executive);
@@ -108,6 +109,7 @@ $(function(){
 				modal.hide();
 			},
 			error: function(data){
+				$('.md-input-wrapper').find('.md-input').val('');
 				modal.hide();
 				console.log(data);
 			}
