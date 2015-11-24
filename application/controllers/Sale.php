@@ -21,9 +21,10 @@
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtosale');
 			$this->Dtosale->setBaId($user->id);
-			$this->Dtosale->setOutletid(3);
+			$this->Dtosale->setOutletId($this->input->post('outlet_id'));
 			$this->Dtosale->setSaleDate(date('Y-m-d'));
 			$this->data["user"] = $this->Daosale->getSellerInformation($this->Dtosale);
+			$this->Dtosale->setOutletId($this->data["user"]->outlet_id);
 			//$this->data["user"]->monthly_target = ($this->data["user"]->monthly_target) ? $this->data["user"]->monthly_target : 0;
 			$this->data["sale_archievement"] = $this->Daosale->getSaleArchievement($this->Dtosale);
 			$this->data["sale_archievement_month_to_date"] = $this->Daosale->getSaleArchievement($this->Dtosale,1);
@@ -31,11 +32,13 @@
 
 			$this->data["sale_archievement"] = $this->Daosale->getSaleArchievement($this->Dtosale);
 			$this->data["products"] = $this->Daosale->getAllProducts();
-			$total_rows = $this->Daosale->count($this->Dtosale); 
+			/*$total_rows = $this->Daosale->count($this->Dtosale); 
 			$this->load->helper('app');
 			$this->data["page_links"] = pagination($total_rows, 15,'sale/ajax', 3);
-			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale);
+			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale);*/
+			//var_dump($this->data["sales"]);
 			$this->load->view('sale', $this->data);
+
 		}
 
 		public function ajax(){
@@ -43,7 +46,7 @@
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtosale');
 			$this->Dtosale->setBaId($user->id);
-			$this->Dtosale->setOutletid(3);
+			$this->Dtosale->setOutletId($this->input->post('outlet_id'));
 			$this->Dtosale->setSaleDate($this->input->post('sale_date'));
 			$total_rows = $this->Daosale->count($this->Dtosale); 
 			$this->load->helper('app');

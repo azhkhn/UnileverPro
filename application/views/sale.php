@@ -202,7 +202,7 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody id="CONTENTS">
-                                                                    <?php foreach ($sales as $sale):?>
+                                                                    <!--<?php foreach ($sales as $sale):?>
                                                                     <tr>
                                                                         <td><?php echo $sale->code ?></td>
                                                                         <td><?php echo $sale->product_name ?></td>
@@ -214,6 +214,7 @@
                                                                         <td><?php echo $sale->promotion_type ?></td>
                                                                     </tr>
                                                                     <?php endforeach;?>
+                                                                    -->
                                                                     <!-- <td>
                                                                         <a title="View" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnView" data="<?php echo $sale->id?>"><i class="material-icons md-24">&#xE8F4;</i></a>
                                                                         <a title="Update" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnUpdate" data="<?php echo $sale->id?>"><i class="material-icons md-24">&#xE3C9;</i></a>
@@ -223,9 +224,9 @@
                                                             </table>
                                                         </div>
                                                         <div id="PAGINATION">
-                                                            <?php
+                                                            <!--<?php
                                                                echo $page_links;
-                                                            ?>
+                                                            ?>-->
                                                         </div>
                                                     </div>
                                                 </div>

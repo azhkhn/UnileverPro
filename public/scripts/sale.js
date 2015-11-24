@@ -13,7 +13,8 @@ $(function(){
 			type: "POST",
 			dataType: "JSON",
 			data: {
-				'sale_date' : selectedDate
+				'sale_date' : selectedDate,
+				'outlet_id' : $("#txtOutletId").val(),
 			},
 			success: function(data){
 				console.log(data);
@@ -36,6 +37,8 @@ $(function(){
 			}
 		});
 	};
+
+	sales.getAllSales(SITE_URL+"sale/ajax");
 
 	// TODO: SALES FORMART DATA
 	sales.formatData = function(val){

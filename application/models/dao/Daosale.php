@@ -38,7 +38,7 @@
 			$this->db->join('distributors C', 'B.distributor=C.id', 'LEFT');
 			$this->db->join('channels D', 'B.channel_id=D.id', 'LEFT');
 			$this->db->join('outlet_types E', 'B.outlet_type_id=E.id', 'LEFT');
-			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1', 'LEFT');
+			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1 AND F.end_date > NOW()', 'LEFT');
 			$this->db->where ('A.active', 1);
 			//$this->db->where('F.start_date < NOW()');
 			$this->db->where('A.id', $Dtosale->getBaId());
@@ -142,7 +142,8 @@
 							"ba_id" => $sale->getBaId(),
 							"sale_by" => $sale->getSaleBy(),
 							"outlet_id" => $sale->getOutletId(),
-							"status" => 1
+							"status" => 1,
+							"sale_date" => date('Y-m-d H:i:s')
 					);
 			$this->db->insert("sales",$data);
 			$saleId = $this->db->insert_id();
@@ -157,6 +158,7 @@
 					$saleItem["promotion_type_id"] = NULL;
 				}
 				$saleItem["created_by"] = $sale->getSaleBy();
+				$saleItem["created_date"] = date('Y-m-d H:i:s');
 				$this->db->insert("sale_items",$saleItem);
 			}
 			if($this->db->trans_status()===FALSE){
