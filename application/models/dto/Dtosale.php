@@ -7,6 +7,8 @@ class Dtosale{
 	private $sale_date;
 	private $sale_by;
 	private $outletId;
+	private $promotionId;
+	private $saleItems = array();
 	private $updated_date;
 	private $updated_by;
 	private $status;
@@ -28,6 +30,13 @@ class Dtosale{
 		$this->ba_id = $baId;
 	}
 
+	public function setSaleBy($sale_by){
+		$this->sale_by = $sale_by;
+	}
+	public function getSaleBy(){
+		return $this->sale_by;
+	}
+
 	public function setSaleDate($sale_date){
 		$this->sale_date = $sale_date;
 	}
@@ -43,20 +52,28 @@ class Dtosale{
 	public function getOutletId(){
 		return $this->outletId;
 	}
-	
-	public function getUpdated_date(){
+
+	public function setSaleItems($saleItems){
+		$this->saleItems = $saleItems;
+	}
+
+	public function getSaleItems(){
+		return $this->saleItems;
+	}
+
+	public function getUpdatedDate(){
 		return $this->updated_date;
 	}
 	
-	public function setUpdated_date($updated_date){
+	public function setUpdatedDate($updated_date){
 		$this->updated_date = $updated_date;
 	}
 	
-	public function getUpdated_by(){
+	public function getUpdatedBy(){
 		return $this->updated_by;
 	}
 	
-	public function setUpdated_by($updated_by){
+	public function setUpdatedBy($updated_by){
 		$this->updated_by = $updated_by;
 	}
 	
@@ -68,12 +85,20 @@ class Dtosale{
 		$this->status = $status;
 	}
 	
-	public function getDeleted_at(){
+	public function getDeletedAt(){
 		return $this->deleted_at;
 	}
 	
-	public function setDeleted_at($deleted_at){
+	public function setDeletedAt($deleted_at){
 		$this->deleted_at = $deleted_at;
+	}
+
+	public function setPromotionId($promotionId){
+		$this->promotionId = $promotionId;
+	}
+
+	public function getPromotionId(){
+		return $this->promotionId;
 	}
 	
 }

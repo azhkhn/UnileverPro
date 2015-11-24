@@ -20,6 +20,7 @@
 								   		WHERE S.id = A.parent_id)) AS executive
 								, B.dms_code
 								, B.address AS outlet_address
+								, B.id As outlet_id
 								, B.name AS outlet_name 
 								, B.id AS outlet_id
 								, C.name AS distributor
@@ -29,16 +30,17 @@
 								, DATE_FORMAT(F.start_date,'%d-%M-%Y') As start_date
 								, DATE_FORMAT(F.end_date,'%d-%M-%Y') As end_date
 								, F.target_achievement
-								, (F.target_achievement / TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY))) As monthly_target,
+								, IFNUlL((F.target_achievement / TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY))),'0') As monthly_target,
 								, TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY)) As number_of_months" 
 								, FALSE);
 			$this->db->from('users A');
-			$this->db->from('outlets B', 'A.id=B.ba_id', 'LEFT');
-			$this->db->from('distributors C', 'B.distributor=C.id', 'LEFT');
-			$this->db->from('channels D', 'B.channel_id=D.id', 'LEFT');
-			$this->db->from('outlet_types E', 'B.outlet_type_id=E.outlet_type.id', 'LEFT');
-			$this->db->from('sale_targets F', 'F.ba_id = A.id');
+			$this->db->join('outlets B', 'A.id=B.ba_id', 'LEFT');
+			$this->db->join('distributors C', 'B.distributor=C.id', 'LEFT');
+			$this->db->join('channels D', 'B.channel_id=D.id', 'LEFT');
+			$this->db->join('outlet_types E', 'B.outlet_type_id=E.id', 'LEFT');
+			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1', 'LEFT');
 			$this->db->where ('A.active', 1);
+			//$this->db->where('F.start_date < NOW()');
 			$this->db->where('A.id', $Dtosale->getBaId());
 			$query = $this->db->get ();
 			return $query->row();
@@ -101,9 +103,23 @@
 		}
 
 		public function getSaleArchievement(Dtosale $Dtosale,$status="0"){
-			$this->db->select ('sales.id
-							  , SUM(sale_items.price*sale_items.quantity) AS amount
- 							');
+			/*$this->db->select ("
+							  (SELECT IFNULL(SUM(sale_items.price*sale_items.quantity),0) 
+							  	FROM  sales 
+							  	WHERE (sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-%d') AND NOW() )
+							  	) AS amount_daily,
+							  (SELECT IFNULL(SUM(sale_items.price*sale_items.quantity),0) 
+							  	FROM  sales 
+							  	WHERE (sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND NOW() )
+							  	) AS amount_monthly,
+				    		  (SELECT IFNULL(SUM(sale_items.price*sale_items.quantity),0) 
+							  	FROM  sales 
+							  	WHERE (sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-01-01') AND NOW() )
+							  	) AS amount_yearly*
+ 							");*/
+			$this->db->select("
+								IFNULL(SUM(sale_items.price*sale_items.quantity),0) AS amount
+				",FALSE);
 			$this->db->from('sales');
 			$this->db->join('sale_items', 'sales.id=sale_items.sale_id', 'LEFT');
 			$this->db->where('sales.status', 1);
@@ -118,6 +134,39 @@
 			}
 			$query = $this->db->get ();
 			return $query->row();	
+		}
+
+		public function addNewsale(Dtosale $sale){
+			$this->db->trans_begin();
+			$data = array(
+							"ba_id" => $sale->getBaId(),
+							"sale_by" => $sale->getSaleBy(),
+							"outlet_id" => $sale->getOutletId(),
+							"status" => 1
+					);
+			$this->db->insert("sales",$data);
+			$saleId = $this->db->insert_id();
+			
+			foreach($sale->getSaleItems() as $saleItem){
+				$saleItem["sale_id"] = $saleId;
+				$saleItem["status"] = 1;
+				if($saleItem["promotion_id"]==""){
+					$saleItem["promotion_id"] = NULL;
+				}
+				if($saleItem["promotion_type_id"]==""){
+					$saleItem["promotion_type_id"] = NULL;
+				}
+				$saleItem["created_by"] = $sale->getSaleBy();
+				$this->db->insert("sale_items",$saleItem);
+			}
+			if($this->db->trans_status()===FALSE){
+				$this->db->trans_rollback();
+				return FALSE;
+			}else{
+				
+				$this->db->trans_commit();
+				return TRUE;
+			}
 		}
 	}
 ?>

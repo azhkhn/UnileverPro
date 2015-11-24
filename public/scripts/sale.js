@@ -47,8 +47,6 @@ $(function(){
 		e.preventDefault();
 		var URL = $(this).attr('href');
 		if(URL!="#"){
-			//$(this).parents(".uk-pagination").find('li').removeClass('uk-active');
-			//$(this).parent('li').addClass('uk-active');
 			sales.getAllSales(URL);
 		}
 		return false;
@@ -89,18 +87,76 @@ $(function(){
 		selectItemCode.setValue($(this).val()); 
 	});*/
 
+
+	// TODO: ON CHANGE ON THE PRICE
 	$("#txtPrice").change(function(){
 		$("#txtAmount").val($('#txtQuantitySold').val() * $("#txtPrice").val());
 		$('#txtAmount').parents('.md-input-wrapper').addClass('md-input-filled');
 	});
 
+	// TODO: ON KEY UP WHEN CHANGE ON THE QUANTITY SOLD
 	$("#txtQuantitySold").keyup(function(){
 		$("#txtAmount").val($('#txtQuantitySold').val() * $("#txtPrice").val());
 		$('#txtAmount').parents('.md-input-wrapper').addClass('md-input-filled');
 	});
 
+	// TODO: ON CHANGE ON Transaction Of Date
 	$("#txtTransactionOf").change(function(){
 		sales.getAllSales(SITE_URL+"sale/ajax");
+	});
+
+	// TODO: ADD NEW SALE 
+	$("#frmAddNewSale").submit(function(e){
+		e.preventDefault();
+		if($("#selectedItemName").val()=="" || $("#selectedItemCode").val()==""){
+			UIkit.modal.alert("PLEASE CHOOSE THE ITEM YOU WANT TO SALE");
+			return false;
+		}
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		var selectedValue = $("#selectedItemCode").val().split(';');
+		$.ajax({
+			url: SITE_URL+'sale/add',
+			type: "POST",
+			dataType: "JSON",
+			data:{
+				'outlet_id'         : $("#txtOutletId").val(),
+				'product_id'        : selectedValue[0],
+				'price'   			: $("#txtPrice").val(),
+				'promotion_id' 		: $("#txtPromotion").val(),
+				'promotion_type_id' : $("#selectedPromotionType").val(),
+				'quantity'			: $("#txtQuantitySold").val(),	
+				'saleItems'         : [
+					{
+						'product_id'        : selectedValue[0],
+						'price'   			: $("#txtPrice").val(),
+						'promotion_id' 		: $("#txtPromotion").val(),
+						'promotion_type_id' : $("#selectedPromotionType").val(),
+						'quantity'			: $("#txtQuantitySold").val(),	
+					}
+				]
+			},
+			success: function(data){
+				console.log(data);
+				modal.hide();
+				if(data.status==true){
+					UIkit.modal.alert(data.message);
+					var modalPopup = UIkit.modal("#modalAddNewSale");
+					if ( modalPopup.isActive() ) {
+					    modalPopup.hide();
+					} else {
+					    modalPopup.show();
+					}
+				}else{
+					UIkit.modal.alert(data.message);
+				}
+				location.href=SITE_URL + "sale";
+			},
+			error: function(data){
+				modal.hide();
+				UIkit.modal.alert(data);
+			}
+		});
+		
 	});
 
 });
