@@ -144,10 +144,8 @@ $(function(){
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
-				//$("#selectGender").val(data.gender);
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
-				//$("#selectSupervisor").val(data.parent_id);
 				selectSupervisor.setValue(data.parent_id);
 				$("#txtEmail").val(data.email);
 				$("#startWorking").val(data.starting_date)
