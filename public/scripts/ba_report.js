@@ -85,6 +85,8 @@ $(function(){
 			success: function(data){
 				console.log(data);
 				$('.md-input-wrapper').find('.md-input').val('');
+				$('.md-input-wrapper').removeClass('md-input-filled');
+				$("#txtNumberOfWorking").val(26);
 				if(data.user){
 					$("#txtSupervisorName").val(data.user.supervisor);
 					$("#txtBAExecutive").val(data.user.executive);
@@ -110,6 +112,8 @@ $(function(){
 			},
 			error: function(data){
 				$('.md-input-wrapper').find('.md-input').val('');
+				$('.md-input-wrapper').removeClass('md-input-filled');
+				$("#txtNumberOfWorking").val(26);
 				modal.hide();
 				console.log(data);
 			}
