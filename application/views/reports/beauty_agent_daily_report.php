@@ -175,11 +175,11 @@
         </div>
     </div>
 
-    <div class="md-fab-wrapper">
+    <!-- <div class="md-fab-wrapper">
         <a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
             <i class="material-icons">&#xE161;</i>
         </a>
-    </div>
+    </div> -->
 
     <!-- google web fonts -->
     <script>
