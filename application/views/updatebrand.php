@@ -69,11 +69,13 @@
                             </div>
                              
                              <div class="uk-form-row">
-                            	<label>Parent Brand</label>
-                                <div class="uk-form-row">
-     								 <input id="parentid"  class="uk-form-width-medium"  />
-                                </div>
-                            </div> 
+                                     <label for="supervisor" >Parent Brand<span class="req">*</span></label>
+                                     <select id="parentid" name="parentid" data-md-selectize data-md-selectize-bottom required>
+                                     <?php foreach ($lstBrand as $brand1):?>
+                                            <option value="<?php echo $brand1->id;?>"><?php echo $brand1->id . ' '. $brand1->name;?></option>
+                                     <?php endforeach?>
+                                    </select>
+                            </div>
                         </div>
                     </div>
                       <br/>
@@ -180,41 +182,15 @@
    <!--  notifications functions -->
     <script src="<?php echo base_url()?>public/assets/js/pages/components_notifications.min.js"></script>
    
-    	
-    <script type="text/javascript">
-	      $(document).ready(function() {
-	        $("#parentid").kendoComboBox({
-	          placeholder: "Select parent brand",
-	          dataTextField: "name",
-	          dataValueField: "id",
-	          filter: "contains",
-	          autoBind: false,
-	          minLength: 3,
-	          dataSource: {
-	            type: "odata",
-	            serverFiltering: true,
-	            transport: {
-	              read: {
-	                url: "<?php  echo site_url('brand/listBrandJson')?>",
-	              }
-	            }
-	          },
-	          change: function(e) {
-	            var widget = e.sender;
-	            if (widget.value() && widget.select() === -1) {
-	              //custom has been selected
-	              widget.value(""); //reset widget
-	            }
-	          }
-	        });
-	      });
-	</script>	
+   
 	   
    
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript">
 		$(function(){
+				var $selectBrand = $("#parentid").selectize();
+				var selecttBrand = $selectBrand[0].selectize;
 			 		<?php
 						if($brand != null ){
 							foreach($brand as $v){
@@ -223,7 +199,8 @@
 							$("#id").focus().val("<?php echo $v->id?>");
 							$("#name").focus().val("<?php echo $v->name?>");
 							$("#oldname").focus().val("<?php echo $v->name?>");
-							$("#parentid").focus().val("<?php echo $v->parent_brand?>");
+							selecttBrand.setValue(<?php echo $v->parent_brand?>); 
+							console.log("ID : " + <?php echo $v->parent_brand?>);
 							$("#description").focus().val("<?php echo $v->description ?>");
 							<?php
 							 }

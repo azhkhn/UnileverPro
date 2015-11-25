@@ -60,16 +60,21 @@
                         
                             
                             <div class="uk-form-row">
-                                <label>Brand name</label>
+                                <label>Brand name*</label>
                                 <input type="text" id="name" name="name" class="md-input"  required/>
                             </div>
                              
-                             <div class="uk-form-row">
-                            	<label>Parent Brand</label>
-                                <div class="uk-form-row">
-     								 <input id="parentid"  class="uk-form-width-medium"  />
-                                </div>
-                            </div> 
+                            
+                            <div class="uk-form-row">
+                                     <label for="supervisor" >Parent Brand<span class="req">*</span></label>
+                                     <select id="parentid" name="parentid" data-md-selectize data-md-selectize-bottom required>
+                                     <?php foreach ($lstBrand as $brand):?>
+                                            <option value="<?php echo $brand->id;?>"><?php echo $brand->id . ' '. $brand->name;?></option>
+                                     <?php endforeach?>
+                                    </select>
+                            </div>
+                                            
+                                            
                         </div>
                     </div>
                       <br/>
@@ -176,35 +181,7 @@
    <!--  notifications functions -->
     <script src="<?php echo base_url()?>public/assets/js/pages/components_notifications.min.js"></script>
    
-    	
-    <script type="text/javascript">
-	      $(document).ready(function() {
-	        $("#parentid").kendoComboBox({
-	          placeholder: "Select parent brand",
-	          dataTextField: "name",
-	          dataValueField: "id",
-	          filter: "contains",
-	          autoBind: false,
-	          minLength: 3,
-	          dataSource: {
-	            type: "odata",
-	            serverFiltering: true,
-	            transport: {
-	              read: {
-	                url: "<?php  echo site_url('brand/listBrandJson')?>",
-	              }
-	            }
-	          },
-	          change: function(e) {
-	            var widget = e.sender;
-	            if (widget.value() && widget.select() === -1) {
-	              //custom has been selected
-	              widget.value(""); //reset widget
-	            }
-	          }
-	        });
-	      });
-	</script>	
+    
 	   
    
 
@@ -233,12 +210,10 @@
 							$("#msgError").fadeIn(2500);
 						}else{
 							console.log(data["ERR_MSG"]);
-							location.href= "<?php  echo site_url('brand')?>";	
-							//modal.hide();
-// 							$("#msgSUCCESS").fadeIn(2500).fadeOut(3000);
-// 							setTimeout(function(){ 
-								
-// 				 			}, 5000);
+							$("#msgSUCCESS").fadeIn(2500).fadeOut(3000);
+							setTimeout(function(){ 
+								location.href= "<?php  echo site_url('brand')?>";	
+				 			}, 5000);
 						}
 					},
 					error: function(data){

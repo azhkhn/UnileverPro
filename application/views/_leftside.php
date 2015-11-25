@@ -14,65 +14,45 @@
             <ul>
                 <li class="act_section">
                     <a href="<?php echo site_url('dashboard')?>">
-                        <span class="menu_icon uk-icon-th-large"></span>
+                    	<i class="menu_icon material-icons">&#xE871;</i>
                         Dashboard
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                <li>		
+                    <a href="<?php echo site_url('brand/')?>">
+                    	<i class="menu_icon material-icons">&#xE41D;</i>
                         Brand
                     </a>
-                    <ul>
-                        <li><a href="<?php echo site_url('brand/')?>">Brand</a></li>
-                        <li><a href="<?php echo site_url('brand/add')?>">Add brand</a></li>
-                    </ul>
                 </li>
                  <li>
-                    <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                    <a href="<?php echo site_url('product/')?>">
+                   		 <i class="menu_icon material-icons">&#xE854;</i>
                         Product
                     </a>
-                    <ul>
-                        <li><a href="<?php echo site_url('product/')?>">Product</a></li>
-                        <li><a href="<?php echo site_url('product/add')?>">Add product</a></li>
-                    </ul>
                 </li>
                  <li>
-                    <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                    <a href="<?php echo site_url('group/')?>">
+                        <i class="menu_icon material-icons">&#xE02F;</i>
                         Group
                     </a>
-                    <ul>
-                        <li><a href="<?php echo site_url('group/')?>">Group</a></li>
-                        <li><a href="<?php echo site_url('group/add')?>">Add group</a></li>
-                    </ul>
                 </li>
                  <li>
-                    <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                    <a href="<?php echo site_url('saletarget/')?>">
+                    	<i class="menu_icon material-icons">&#xE163;</i>
                         Sale Target
                     </a>
-                    <ul>
-                        <li><a href="<?php echo site_url('saletarget/')?>">Sale Target</a></li>
-                        <li><a href="<?php echo site_url('saletarget/add')?>">Add Sale Target</a></li>
-                    </ul>
                 </li>
                 
                 <li>
-                    <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                    <a href="<?php echo site_url('salepromotion/')?>">
+                        <i class="menu_icon material-icons">&#xE547;</i>
                         Sale Promotion
                     </a>
-                    <ul>
-                        <li><a href="<?php echo site_url('salepromotion/')?>">Sale promotion</a></li>
-                        <li><a href="<?php echo site_url('salepromotion/add')?>">Add Sale promotion</a></li>
-                    </ul>
                 </li>
                 
                 <li>
                     <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                       <i class="menu_icon material-icons">&#xE80D;</i>
                         Promotion Type
                     </a>
                     <ul>
@@ -83,7 +63,7 @@
                 
                 <li>
                     <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                        <i class="menu_icon material-icons">&#xE86D;</i>
                         Channel
                     </a>
                     <ul>
@@ -94,7 +74,7 @@
                 
                  <li>
                     <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                       <i class="menu_icon material-icons">&#xE566;</i>
                         Distributor
                     </a>
                     <ul>
@@ -105,7 +85,7 @@
                 
                 <li>
                     <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                       <i class="menu_icon material-icons">&#xE8D1;</i>
                         Outlet
                     </a>
                     <ul>
@@ -116,7 +96,7 @@
                 
                  <li>
                     <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                       <i class="menu_icon material-icons">&#xE865;</i>
                         Outlet type
                     </a>
                     <ul>
@@ -127,21 +107,21 @@
                 
                  <li >
                     <a href="<?php echo site_url('sale')?>">
-                        <span class="menu_icon uk-icon-th-large"></span>
+                         <i class="menu_icon material-icons">&#xE547;</i>
                         Sale
                     </a>
                 </li>
                 
                 <li>
                     <a href="<?php echo site_url('saleitem')?>">
-                        <span class="menu_icon uk-icon-th-large"></span>
+                       <i class="menu_icon material-icons">&#xE8CB;</i>
                         Sale item
                     </a>
                 </li>
                 
                 <li>
                     <a href="#">
-                        <span class="menu_icon uk-icon-list-alt"></span>
+                       <i class="menu_icon material-icons">&#xE7FB;</i>
                         Users
                     </a>
                     <ul>
@@ -154,7 +134,7 @@
                 </li>
                  <li class="act_section">
                     <a href="<?php echo site_url('report')?>">
-                        <span class="menu_icon uk-icon-th-large"></span>
+                        <i class="menu_icon material-icons">&#xE873;</i>
                         Report
                     </a>
                     <ul>

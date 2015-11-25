@@ -65,7 +65,7 @@
                             <td><?= $v->promotion ?></td>
                             <td>
                             	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-                            	<a href="<?php  echo site_url('product/update')?>/<?= $v->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
+                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit" id="btnUpdate" data="<?php echo $v->id?>"><i class="material-icons">edit</i></a>
                             	<a href="<?php  echo site_url('product/delete')?>/<?= $v->id ?>" onClick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
                             </td>
                             </td>
@@ -85,6 +85,117 @@
     <?php $this->load->view('_rightside') ?>    
     <!-- right sidebar end -->
     
+    
+    <div>
+        <div class="uk-modal" id="modalProduct">
+            <div class="uk-modal-dialog uk-modal-dialog-large">
+                <button type="button" class="uk-modal-close uk-close"></button>
+                <div class="uk-modal-header">
+                    <h3 class="uk-modal-title">+ Product</h3>
+                </div>
+                <form action="#" class="uk-form-stacked" id="frmProduct" method="POST">
+                    <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                       
+                       <div class="uk-width-xLarge-12-12  uk-width-large-12-12">
+                            <div class="md-card1">
+                                
+                                
+                                <div class="md-card-content large-padding">
+                                    
+                                    
+                                    <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                        <div class="uk-width-large-1-2">
+                                           
+                                            <div class="uk-form-row">
+												<label>Code <span class="req">*</span></label> <input type="text" id="code" class="md-input" required />
+													
+											</div>
+											
+											
+											
+											<div class="uk-form-row">
+												<label>Size <span class="req">*</span></label> <input type="text" id="size"
+													class="md-input" required />
+											</div>
+											
+											<div class="uk-form-row">
+												<label for="supervisor">Promotion</label>
+												<select id="promotion" name="promotion" data-md-selectize data-md-selectize-bottom >
+				                                    	<option></option>
+				                                     <?php foreach ($lstPromotion as $v):?>
+				                                            <option
+														value="<?php echo $v->id;?>"><?php echo  $v->name;?></option>
+				                                     <?php endforeach?>
+				                                    </select>
+											</div>
+											
+											<div class="uk-form-row">
+												<label for="supervisor">Brand</label>
+												<select id="brand" name="brand" data-md-selectize
+													data-md-selectize-bottom>
+													<option></option>
+				                                     <?php foreach ($lstBrand as $v):?>
+				                                            <option
+														value="<?php echo $v->id;?>"><?php echo  $v->name;?></option>
+				                                     <?php endforeach?>
+				                                    </select>
+											</div>
+                                            
+                                        </div>
+                                        
+                                        <div class="uk-width-large-1-2">
+                                            <div class="uk-form-row">
+											<label>Name <span class="req">*</span></label> <input type="text" id="name"
+												class="md-input" required />
+											</div>
+			
+											<div class="uk-form-row">
+												<label>Price <span class="req">*</span></label> <input type="text" id="price"
+													class="md-input" required />
+											</div>
+			
+											<div class="uk-form-row">
+												<label>Unit <span class="req">*</span></label> <input type="text" id="unit"
+													class="md-input" required />
+											</div>
+											
+											<div class="uk-form-row">
+												<div class="uk-width-1-1">
+													<div class="uk-form-row">
+														<label>Description</label>
+														<textarea cols="30" rows="4" class="md-input" id="description"> </textarea>
+													</div>
+												</div>
+											</div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button type="button" class="md-btn uk-modal-close">Close</button>
+                    <input type="button" class="md-btn md-btn-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
+                    <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" />
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+	
+	
+    <div class="md-fab-wrapper">
+		<a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew"
+			data-uk-modal="{target:'#modalProduct'}"> <i
+			class="material-icons">&#xE145;</i>
+		</a>
+	</div>
+	
     <!-- google web fonts -->
     <script>
         WebFontConfig = {
@@ -131,10 +242,13 @@
     
     <!-- enable hires images -->
     <script>
+    	var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
             altair_helpers.retina_images();
         });
     </script>
+    
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/product.js"></script>
 
 </body>
 </html>

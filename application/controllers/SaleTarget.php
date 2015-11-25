@@ -7,9 +7,12 @@
 			parent::__construct();
 			$this->load->model("dto/DtoSaleTarget");
 			$this->load->model("dao/DaoSaleTarget");
+			$this->load->library('ion_auth');
 		}	
 
 		public function index(){
+			$this->load->model('dao/Daouser');
+			$data["lstBA"] = $this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
 			$data["saletarget"] = $this->DaoSaleTarget->listSaleTarget();
 			$this->load->view('saletarget' , $data);
 		}
@@ -25,31 +28,30 @@
 			$this->DtoSaleTarget->setStart_date($this->input->post('start_date'));
 			$this->DtoSaleTarget->setEnd_date($this->input->post('end_date'));
 			$this->DtoSaleTarget->setTarget_achievement($this->input->post('target_achievement'));
-			$this->DtoSaleTarget->setCreated_by(1);
+			$this->DtoSaleTarget->setCreated_by($this->ion_auth->get_user_id());
 			
 			if($this->DaoSaleTarget->checkIfNameExist($this->input->post('name'))>0){
 				$data["ERROR"] = true;
-				$data["ERR_MSG"] = "SaleTarget name has already existed.";
+				$data["MSG"] = "SaleTarget name has already existed.";
 			}else{
 				$this->DaoSaleTarget->addSaleTarget($this->DtoSaleTarget);
 				$data["ERROR"] = false;
-				$data["ERR_MSG"] = "SaleTarget has inserted sucessfully.";
+				$data["MSG"] = "SaleTarget has inserted sucessfully.";
 			}
 			echo json_encode($data);
 		}
 		
 		public function delete($id){
-			$this->DaoSaleTarget->deleteSaleTarget($id);
+			$this->DaoSaleTarget->deleteSaleTarget($id , $this->ion_auth->get_user_id());
 			redirect("saletarget");
 		}
 		
 		public function update($id){
-			$data["saletarget"] = $this->DaoSaleTarget->getSaleTarget($id);
-			$this->load->view('addsaletarget',$data);
+			echo json_encode($this->DaoSaleTarget->getSaleTarget($id));
 		}
 		
-		public function updateSaleTarget(){
-			$this->DtoSaleTarget->setId($this->input->post('id'));
+		public function updateSaleTarget($id){
+			$this->DtoSaleTarget->setId($this->ion_auth->get_user_id());
 			$this->DtoSaleTarget->setName($this->input->post('name'));
 			$this->DtoSaleTarget->setDescription($this->input->post('description'));
 			$this->DtoSaleTarget->setBa_id($this->input->post('ba_id'));
@@ -63,19 +65,19 @@
 				if($this->DaoSaleTarget->checkIfNameExist($this->input->post('name'))>0){
 					$data["ERROR"] = true;
 					$data["CHANGE"] = "EXISTED";
-					$data["ERR_MSG"] = "Update | SaleTarget name has already existed.";
+					$data["MSG"] = "SaleTarget name has already existed.";
 				}else{
 					$this->DaoSaleTarget->updateSaleTarget($this->DtoSaleTarget);
 					$data["ERROR"] = false;
 					$data["CHANGE"] = "CHANGED";
-					$data["ERR_MSG"] = "SaleTarget was updated sucessfully.";
+					$data["MSG"] = "SaleTarget was updated sucessfully.";
 				}
 			}else{
-				// If SaleTarget namme is not changed
+				// If SaleTarget name is not changed
 				$this->DaoSaleTarget->updateSaleTarget($this->DtoSaleTarget);
 				$data["ERROR"] = false;
 				$data["CHANGE"] = "NOT_CHANGE";
-				$data["ERR_MSG"] = "SaleTarget name was updated sucessfully.";
+				$data["MSG"] = "SaleTarget was updated sucessfully.";
 			
 			}
 			

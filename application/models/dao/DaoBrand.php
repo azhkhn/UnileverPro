@@ -39,7 +39,7 @@ class DaoBrand extends CI_Model{
 	}
 	
 	public function listBrand(){
-		$this->db->select('b.id ,b.name,b.description,b.name as parent_brand,b.created_date,b.created_by,b.updated_date,b.updated_by,b.status,b.deleted_at');
+		$this->db->select('b.id ,b.name,b.description,bb.name as parent_brand,b.created_date,b.created_by,b.updated_date,b.updated_by,b.status,b.deleted_at');
 		$this->db->from('BRANDS b');
 		$this->db->join('BRANDS bb','b.parent_brand = bb.id', 'LEFT');
 		$this->db->where('b.status' , 1);
@@ -48,7 +48,8 @@ class DaoBrand extends CI_Model{
 		return $query->result();
 	}
 	
-	public function deleteBrand($id){
+	public function deleteBrand($id , $updated_by){
+		$this->db->set('updated_by', $updated_by);
 		$this->db->set('status', FALSE);
 		$this->db->set('deleted_at', 'NOW()', FALSE);
 		$this->db->where('id' , $id);
@@ -61,7 +62,8 @@ class DaoBrand extends CI_Model{
 		$this->db->where('id',$id);
 		$this->db->where('status' , 1);
 		$query = $this->db->get();
-		return $query->result();
+		return $query->row();
+		
 	}
 	
 	function checkIfBrandExist($brand){

@@ -48,7 +48,7 @@ class DaoGroup  extends CI_Model{
 		$this->db->from('GROUPS');
 		$this->db->where('id',$id);
 		$query = $this->db->get();
-		return $query->result();
+		return $query->row();
 	}
 	
 	

@@ -34,12 +34,7 @@
 					<div class="md-card-content">
 						<h3 class="heading_a">Sale Target</h3>
 						
-						<div class="uk-form-row" style="width: 100%;display: none" id="msgError" >
-                       		<div class="uk-alert uk-alert-danger" data-uk-alert="">
-                                <a href="#" class="uk-alert-close uk-close"></a>
-                                Name has already existed.
-                            </div>
-                        </div>
+						
                         
                         
 						<div class="uk-grid" data-uk-grid-margin>

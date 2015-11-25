@@ -49,28 +49,30 @@ class DaoSalePromotion extends CI_Model{
 	}
 	
 	public function listSalePromotion(){
-		$this->db->select('id,code,name,description,type,start_date,end_date,created_date,created_by,updated_date,updated_by,status,deleted_at');
-		$this->db->from('SALE_PROMOTIONS');
-		$this->db->where('status' , 1);
-		$this->db->order_by("id", "desc");
+		$this->db->select('s.id,s.code,s.name,s.description,p.name as type,s.start_date,s.end_date,s.created_date,s.created_by,s.updated_date,s.updated_by,s.status,s.deleted_at');
+		$this->db->from('SALE_PROMOTIONS s');
+		$this->db->join('PROMOTION_TYPES p','p.id = s.type', 'LEFT');
+		$this->db->where('s.status' , 1);
+		$this->db->order_by("s.id", "desc");
 		$query = $this->db->get();
 		return $query->result();
 	}
 	
-	public function deleteSalePromotion($id){
+	public function deleteSalePromotion($id ,$updated_by){
+		$this->db->set('updated_by', $updated_by);
 		$this->db->set('status', FALSE);
 		$this->db->set('deleted_at', 'NOW()', FALSE);
 		$this->db->where('id' , $id);
 		$this->db->update('SALE_PROMOTIONS');
 	}
 	
-	public function getSalePromotion(){
+	public function getSalePromotion($id){
 		$this->db->select('id,name,code,description,type,start_date,end_date,created_date,created_by,updated_date,updated_by,status,deleted_at');
 		$this->db->from('SALE_PROMOTIONS');
 		$this->db->where('id',$id);
 		$this->db->where('status' , 1);
 		$query = $this->db->get();
-		return $query->result();
+		return $query->row();
 	}
 	
 	function checkIfNameExist($name){

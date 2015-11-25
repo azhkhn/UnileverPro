@@ -49,15 +49,17 @@ class DaoSaleTarget  extends CI_Model{
 	}
 	
 	public function listSaleTarget(){
-		$this->db->select('id,name,description,ba_id,start_date,end_date,target_achievement,created_date,created_by,updated_date,updated_by,status,deleted_at');
-		$this->db->from('SALE_TARGETS');
-		$this->db->where('status' , 1);
-		$this->db->order_by("id", "desc");
+		$this->db->select('s.id,s.name,s.description,b.first_name as ba_id,s.start_date,s.end_date,s.target_achievement,s.created_date,s.created_by,s.updated_date,s.updated_by,s.status,s.deleted_at');
+		$this->db->from('SALE_TARGETS s');
+		$this->db->join('USERS b','s.ba_id = b.id', 'LEFT');
+		$this->db->where('s.status' , 1);
+		$this->db->order_by("s.id", "desc");
 		$query = $this->db->get();
 		return $query->result();
 	}
 	
-	public function deleteSaleTarget($id){
+	public function deleteSaleTarget($id,$updated_by){
+		$this->db->set('updated_by', $updated_by);
 		$this->db->set('status', FALSE);
 		$this->db->set('deleted_at', 'NOW()', FALSE);
 		$this->db->where('id' , $id);
@@ -70,7 +72,7 @@ class DaoSaleTarget  extends CI_Model{
 		$this->db->where('id',$id);
 		$this->db->where('status' , 1);
 		$query = $this->db->get();
-		return $query->result();
+		return $query->row();
 	}
 	
 	function checkIfNameExist($name){

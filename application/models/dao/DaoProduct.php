@@ -26,7 +26,7 @@ class DaoProduct extends CI_Model {
 	}
 	public function updateProduct(DtoProduct $v) {
 		$dto = array (
-				"code" => $v->getName (),
+				"code" => $v->getCode (),
 				"name" => $v->getName (),
 				"description" => $v->getDescription (),
 				"size" => $v->getSize (),
@@ -65,14 +65,15 @@ class DaoProduct extends CI_Model {
 		$query = $this->db->get ();
 		return $query->result ();
 	}
-	public function listPromotiontypes() {
+	public function listSalePromotiont() {
 		$this->db->select ( 'id,  name' );
 		$this->db->from ( 'sale_promotions' );
 		$this->db->order_by ( "id", "desc" );
 		$query = $this->db->get ();
 		return $query->result ();
 	}
-	public function deleteProduct($id) {
+	public function deleteProduct($id ,$updated_by) {
+		$this->db->set ( 'updated_by', $updated_by );
 		$this->db->set ( 'status', FALSE );
 		$this->db->set ( 'deleted_at', 'NOW()', FALSE );
 		$this->db->where ( 'id', $id );
@@ -84,7 +85,7 @@ class DaoProduct extends CI_Model {
 		$this->db->where ( 'id', $id );
 		$this->db->where ( 'status', 1 );
 		$query = $this->db->get ();
-		return $query->result ();
+		return $query->row();
 	}
 }
 	

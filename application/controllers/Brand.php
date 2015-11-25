@@ -7,15 +7,18 @@
 			parent::__construct();
 			$this->load->model("dto/DtoBrand");
 			$this->load->model("dao/DaoBrand");
+			$this->load->library('ion_auth');
 		}
 
 		public function index(){
 			$data["brand"] = $this->DaoBrand->listBrand();
+			$data["lstBrand"] = $this->DaoBrand->listBrand();
 			$this->load->view('brand',$data);
 		}
 		
 		public function add(){
-			$this->load->view('addbrand');
+			$data["lstBrand"] = $this->DaoBrand->listBrand();
+			$this->load->view('addbrand',$data);
 		}
 		
 		public function listBrandJson(){
@@ -24,6 +27,8 @@
 		}
 		
 		public function addBrand(){
+			
+			
 			$this->DtoBrand->setName($this->input->post('name'));
 			$this->DtoBrand->setDescription($this->input->post('description'));
 			if($this->input->post("parent_brand") == ""){
@@ -31,32 +36,31 @@
 			}else{
 				$this->DtoBrand->setParent_brand($this->input->post("parent_brand"));
 			}
-			$this->DtoBrand->setCreated_by(1);
+			$this->DtoBrand->setCreated_by($this->ion_auth->get_user_id());
 			if($this->DaoBrand->checkIfBrandExist($this->input->post('name'))>0){
 				$data["ERROR"] = true;
 				$data["ERR_MSG"] = "Brand already exist.";
 			}else{
 				$this->DaoBrand->addBrand($this->DtoBrand);
 				$data["ERROR"] = false;
-				$data["ERR_MSG"] = "Brand inserted sucessfully.";
+				$data["ERR_MSG"] = "Brand has been inserted sucessfully.";
 			}
 			echo json_encode($data);
 		}
 	
 		
 		public function delete($id){
-			$this->DaoBrand->deleteBrand($id);
+			$this->DaoBrand->deleteBrand($id , $this->ion_auth->get_user_id());
 			redirect("brand");
 		}
 		
 		public function update($id){
-			$data["brand"] = $this->DaoBrand->getBrand($id);
-			$this->load->view('updatebrand',$data);
+			echo json_encode( $this->DaoBrand->getBrand($id));
 		}
 		
 		
-		public function updateBrand(){
-			$this->DtoBrand->setId($this->input->post('id'));
+		public function updateBrand($id){
+			$this->DtoBrand->setId($id);
 			$this->DtoBrand->setName($this->input->post('name'));
 			$this->DtoBrand->setDescription($this->input->post('description'));
 			if($this->input->post("parent_brand") == ""){
@@ -64,7 +68,7 @@
 			}else{
 				$this->DtoBrand->setParent_brand($this->input->post("parent_brand"));
 			}
-			$this->DtoBrand->setUpdated_by(2);
+			$this->DtoBrand->setUpdated_by($this->ion_auth->get_user_id());
 			
 			// If brand name is changed
 			if($this->input->post('oldname') != $this->input->post('name')){
