@@ -22,7 +22,7 @@
             
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
-                    <table id="dt_tableTools" class="uk-table" cellspacing="0" width="100%">
+                    <table id="to_table" class="uk-table" cellspacing="0" width="100%">
                         <thead>
                         <tr>
                         	<th>No</th>
@@ -195,6 +195,7 @@
    		var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
             altair_helpers.retina_images();
+            $("#to_table").DataTable();
         });
     </script>
 	<script type="text/javascript" src="<?php echo base_url()?>public/scripts/group.js"></script>
