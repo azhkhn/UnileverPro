@@ -26,7 +26,7 @@
             
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
-                    <table id="dt_tableTools" class="uk-table" cellspacing="0" width="100%">
+                    <table id="to-table" class="uk-table" cellspacing="0" width="100%">
                         <thead>
                         <tr>
                             <th>No</th>
@@ -276,7 +276,7 @@
     	var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
             altair_helpers.retina_images();
-
+            $("#to-table").DataTable();
             $("#end_date,#start_date").kendoDatePicker({
             	  format: "yyyy-MM-dd"
            	});
