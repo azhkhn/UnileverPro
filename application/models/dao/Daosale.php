@@ -6,7 +6,7 @@
 			$this->load->model("dto/Dtosale");
 		}		
 
-		public function getSellerInformation(Dtosale $Dtosale){
+		public function getSellerInformation(Dtosale $Dtosale, $dmsCode=0){
 			$this->db->select ("A.id
 								, A.first_name
 								, A.last_name
@@ -40,11 +40,60 @@
 			$this->db->join('outlet_types E', 'B.outlet_type_id=E.id', 'LEFT');
 			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1 AND F.end_date > NOW()', 'LEFT');
 			$this->db->where ('A.active', 1);
-			//$this->db->where('F.start_date < NOW()');
-			$this->db->where('A.id', $Dtosale->getBaId());
+			if($dmsCode==0){
+				$this->db->where('A.id', $Dtosale->getBaId());
+			}else{
+				$this->db->where('B.dms_code', $Dtosale->getDMSCode());
+			}
+
 			$query = $this->db->get ();
 			return $query->row();
 		}
+
+		public function getSupervisorSaleTarget(Dtouser $user){
+			$this->db->select ("
+								IFNULL(SUM(F.target_achievement),0) AS target_achievement,
+								IFNUlL(SUM((F.target_achievement / TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY)))),'0') As monthly_target"
+								, FALSE);
+			$this->db->from('users A');
+			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1 AND F.end_date > NOW()', 'LEFT');
+			$this->db->where ('A.active', 1);
+			$this->db->where('A.parent_id', $user->getId());
+			$query = $this->db->get ();
+			return $query->row();
+		}
+
+		public function getBAExecutiveSaleTarget(Dtouser $user){
+			$this->db->select ("
+								IFNULL(SUM(F.target_achievement),0) AS target_achievement,
+								IFNUlL(SUM((F.target_achievement / TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY)))),'0') As monthly_target"
+								, FALSE);
+			$this->db->from('users A');
+			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1 AND F.end_date > NOW()', 'LEFT');
+			$this->db->where ('A.active', 1);
+			$this->db->where('A.parent_id IN (SELECT id FROM users where parent_id = '.$user->getId().')');
+			$query = $this->db->get ();
+			return $query->row();
+		}
+
+		public function getProjectHolderSaleTarget(Dtouser $user){
+			$this->db->select ("
+								IFNULL(SUM(F.target_achievement),0) AS target_achievement,
+								IFNUlL(SUM((F.target_achievement / TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY)))),'0') As monthly_target"
+								, FALSE);
+			$this->db->from('users A');
+			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1 AND F.end_date > NOW()', 'LEFT');
+			$this->db->where ('A.active', 1);
+			$this->db->where('A.parent_id IN ((SELECT users.id 
+									  FROM users
+									  WHERE active = 1 AND users.parent_id IN (SELECT users.id 
+												  		FROM users 
+												  		INNER JOIN users_groups ON users.id = users_groups.user_id 
+												  		WHERE users.active = 1 AND users_groups.group_id = 1)))') ;
+			$query = $this->db->get ();
+			return $query->row();
+		}
+
 
 		public function getAllProducts(){
 			$this->db->select ('id

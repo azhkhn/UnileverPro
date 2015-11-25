@@ -17,11 +17,7 @@
 	<!--  header -->
 	<?php $this->load->view('_header') ?>  
      <!-- / header end -->
- 
-    <!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
-    <!-- /left side bar -->
-
+     
     <div id="page_content">
         <div id="page_heading">
             <h1 id="product_edit_name">BA PROGRAM DAILY REPORT TOTAL COUNTRY</h1>
@@ -37,11 +33,11 @@
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
                                                 <label for="txtMonthlyTarget">Monthly Target</label>
-                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value="$ 0.00"/>
+                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value="<?php echo '$ '. $sale_target->monthly_target; ?>"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtTodayTarget">Today Target</label>
-                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value="$ 0.00"/>
+                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value="<?php echo '$ '. $sale_target->monthly_target / 26; ?>"/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
@@ -83,15 +79,15 @@
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtTodayAchievementPercent">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value="% 0.00"/>
+                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value="<?php echo '% '.$today_achievement_percent ?>"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value="% 0.00"/>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value="<?php echo '% '.$month_achievement_percent ?>"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value="% 0.00"/>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value="<?php echo '% '.$year_achievement_percent ?>"/>
                                         </div>
                                     </div>
                                 </div>
