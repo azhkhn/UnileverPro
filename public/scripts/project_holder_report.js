@@ -23,18 +23,10 @@ $(function(){
 				$('.md-input-wrapper').removeClass('md-input-filled');
 				$("#txtNumberOfWorking").val(26);
 				if(data.user){
-					$("#txtSupervisorName").val(data.user.supervisor);
-					$("#txtBAExecutive").val(data.user.executive);
-					$("#txtMarketName").val(data.user.outlet_address);
-					$("#txtOutletName").val(data.user.outlet_name);
-					$("#txtDMSCode").val(data.user.dms_code);
-					$("#txtDT").val(data.user.distributor);
-					$("#txtCustomerType").val(data.user.customer_type);
-					$("#txtChannel").val(data.user.channel);
-					$("#txtMonthlyTarget").val('$ '+ data.user.monthly_target);
-					$("#txtTodayTarget").val('$ ' + data.user.monthly_target/26);
-					$("#startDate").val(data.user.start_date);
-					$("#endDate").val(data.user.end_date);
+					$("#txtMonthlyTarget").val('$ '+ data.sale_target.monthly_target);
+					$("#txtTodayTarget").val('$ ' + data.sale_target.monthly_target/26);
+					//$("#startDate").val(data.user.start_date);
+					//$("#endDate").val(data.user.end_date);
 					$("#txtTodayAchievement").val('$ ' + data.today_achievement);
 					$("#txtMonthToDateAchievement").val('$ ' + data.month_achievement);
 					$("#txtYearToDateAchievement").val('$ ' + data.year_achievement);

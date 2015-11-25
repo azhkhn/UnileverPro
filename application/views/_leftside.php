@@ -161,7 +161,7 @@
                         <li><a href="<?php echo site_url('report/dailybareport/1')?>">BA DAILY REPORT</a></li>
                         <li><a href="<?php echo site_url('report/dailysupervisorreport/1')?>">SUPERVISOR DAILY REPORT</a></li>
                         <li><a href="<?php echo site_url('report/dailygmreport/1')?>">BA's EXECUTIVE DAILY REPORT</a></li>
-                        <li><a href="<?php echo site_url('report/dailypmreport/1')?>">BA PROGRAM DAILY REPORT</a></li>
+                        <!-- <li><a href="<?php echo site_url('report/dailypmreport/1')?>">BA PROGRAM DAILY REPORT</a></li> -->
                     </ul>
                 </li>
                 

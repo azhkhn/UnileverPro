@@ -25,16 +25,16 @@ $(function(){
 					$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
 				}
 				if(data){
-					//$("#txtMonthlyTarget").val('$ '+ data.user.monthly_target);
-					//$("#txtTodayTarget").val('$ ' + data.user.monthly_target/26);
+					$("#txtMonthlyTarget").val('$ '+ data.sale_target.monthly_target);
+					$("#txtTodayTarget").val('$ ' + data.sale_target.monthly_target/26);
 					//$("#startDate").val(data.user.start_date);
 					//$("#endDate").val(data.user.end_date);
 					$("#txtTodayAchievement").val('$ ' + data.today_achievement);
 					$("#txtMonthToDateAchievement").val('$ ' + data.month_achievement);
 					$("#txtYearToDateAchievement").val('$ ' + data.year_achievement);
-					//$("#txtTodayAchievementPercent").val('% ' + data.today_achievement_percent);
-					//$("#txtMonthToDateAchievementPercent").val('% ' + data.month_achievement_percent);
-					//$("#txtYearToDateAchievementPercent").val('% ' + data.year_achievement_percent);*/
+					$("#txtTodayAchievementPercent").val('% ' + data.today_achievement_percent);
+					$("#txtMonthToDateAchievementPercent").val('% ' + data.month_achievement_percent);
+					$("#txtYearToDateAchievementPercent").val('% ' + data.year_achievement_percent);
 					$('.md-input-wrapper').addClass('md-input-filled');
 				}
 				modal.hide();

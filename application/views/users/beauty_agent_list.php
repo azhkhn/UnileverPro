@@ -255,11 +255,16 @@
             </div>
         </div>
     </div>
-    <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalRegisterNewBA'}">
-            <i class="material-icons">&#xE145;</i>
-        </a>
-    </div>
+    <?php 
+    if($this->ion_auth->in_group('ADMIN')){ ?>
+        <div class="md-fab-wrapper">
+            <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalRegisterNewBA'}">
+                <i class="material-icons">&#xE145;</i>
+            </a>
+        </div>
+    <?php
+    }
+    ?>
     <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
         <tr>
             <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
