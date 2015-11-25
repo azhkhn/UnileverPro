@@ -6,7 +6,7 @@
 			$this->load->model("dto/Dtosale");
 		}		
 
-		public function getSellerInformation(Dtosale $Dtosale){
+		public function getSellerInformation(Dtosale $Dtosale, $dmsCode=0){
 			$this->db->select ("A.id
 								, A.first_name
 								, A.last_name
@@ -40,8 +40,12 @@
 			$this->db->join('outlet_types E', 'B.outlet_type_id=E.id', 'LEFT');
 			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1 AND F.end_date > NOW()', 'LEFT');
 			$this->db->where ('A.active', 1);
-			//$this->db->where('F.start_date < NOW()');
-			$this->db->where('A.id', $Dtosale->getBaId());
+			if($dmsCode==0){
+				$this->db->where('A.id', $Dtosale->getBaId());
+			}else{
+				$this->db->where('B.dms_code', $Dtosale->getDMSCode());
+			}
+
 			$query = $this->db->get ();
 			return $query->row();
 		}

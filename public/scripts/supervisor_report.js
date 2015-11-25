@@ -22,6 +22,7 @@ $(function(){
 					$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
 				}
 				if(data.user){
+					$("#txtPhoto").attr('src',data.user.photo);
 					$("#txtBAExecutive").val(data.user.executive);
 					$("#txtMonthlyTarget").val('$ '+ data.sale_target.monthly_target);
 					$("#txtTodayTarget").val('$ ' + data.sale_target.monthly_target/26);

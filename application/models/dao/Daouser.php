@@ -77,6 +77,7 @@
 							   A.gender, 
 							   A.email, 
 							   A.phone,
+							   A.photo,
 							   A.parent_id,
 							   CONCAT(D.last_name, ' ', D.first_name) AS supervisor,
 							   A.remark,

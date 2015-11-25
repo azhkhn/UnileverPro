@@ -13,6 +13,7 @@ class Dtosale{
 	private $updated_by;
 	private $status;
 	private $deleted_at;
+	private $dmsCode;
 	
 	public function getId(){
 		return $this->id;
@@ -99,6 +100,14 @@ class Dtosale{
 
 	public function getPromotionId(){
 		return $this->promotionId;
+	}
+
+	public function setDMSCode($dmsCode){
+		$this->dmsCode = $dmsCode;
+	}
+
+	public function getDMSCode(){
+		return $this->dmsCode;
 	}
 	
 }
