@@ -1,7 +1,7 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-	class PromotionType extends CI_Controller{
+	class PromotionType extends ADMIN_Controller{
 
 		public function __construct(){
 			parent::__construct();
