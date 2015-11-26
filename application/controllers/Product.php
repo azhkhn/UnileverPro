@@ -12,7 +12,7 @@
 
 		public function index(){
 			$data["lstBrand"] = $this->Daoproduct->listBrand();
-			$data["lstPromotion"] = $this->Daoproduct->listSalePromotiont();
+			$data["lstPromotion"] = $this->Daoproduct->listSalePromotion();
 			$data["product"] = $this->Daoproduct->listProduct();
 			$this->load->view('product',$data);
 		}
