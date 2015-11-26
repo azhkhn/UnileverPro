@@ -62,6 +62,9 @@
 			$this->db->join('groups C','B.group_id = C.id','LEFT');
 			$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
 			$this->db->where('C.name', $name);
+			if($this->ion_auth->in_group('SUPERVISOR')){
+				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
+			}
 			$this->db->order_by('A.parent_id');
 			$query = $this->db->get();
 			return $query->result();
@@ -118,6 +121,9 @@
 			$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
 			$this->db->where('C.id', $id);
 			$this->db->where('A.active', 1);
+			if($this->ion_auth->in_group('SUPERVISOR')){
+				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
+			}
 			$this->db->order_by("A.parent_id, A.last_name");
 			$query = $this->db->get();
 			return $query->result();

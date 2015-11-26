@@ -19,7 +19,7 @@
      <!-- / header end -->
  
     <!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
+	<?php $this->load->view('_leftside_supervisor') ?>    
     <!-- /left side bar -->
 
     <div id="page_content">
@@ -230,7 +230,7 @@
         });
     </script>
     
-    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/ba_report.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/ba_report.js"></script>
 
 </body>
 </html>
