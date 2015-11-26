@@ -45,6 +45,9 @@
 			}else{
 				$this->db->where('B.dms_code', $Dtosale->getDMSCode());
 			}
+			if($this->ion_auth->in_group('SUPERVISOR')){
+				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
+			}
 
 			$query = $this->db->get ();
 			return $query->row();
@@ -171,6 +174,7 @@
 				",FALSE);
 			$this->db->from('sales');
 			$this->db->join('sale_items', 'sales.id=sale_items.sale_id', 'LEFT');
+			$this->db->join('users A', 'A.id = sales.ba_id','LEFT');
 			$this->db->where('sales.status', 1);
 			$this->db->where('sales.ba_id', $Dtosale->getBaId());
 			$this->db->where('sales.outlet_id', $Dtosale->getOutletId());
@@ -180,6 +184,9 @@
 				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
 			}else if($status==2){
 				$this->db->where("(sales.sale_date between  DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )");
+			}
+			if($this->ion_auth->in_group('SUPERVISOR')){
+				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
 			}
 			$query = $this->db->get ();
 			return $query->row();	

@@ -19,12 +19,12 @@
      <!-- / header end -->
  
     <!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
+	<?php $this->load->view('_leftside_supervisor') ?>    
     <!-- /left side bar -->
 
     <div id="page_content">
         <div id="page_heading">
-            <h1 id="product_edit_name">BA DAILY REPORT</h1>
+            <h1 id="product_edit_name">SUPERVISOR DAILY REPORT</h1>
             <!--<span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">SM-G925TZKFTMB</span>-->
         </div>
         <div id="page_content_inner">
@@ -36,49 +36,41 @@
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large-1-4">
                                         <div class="uk-form-row">
-                                            <label for="selectedBA"> BA Name</label>
-                                            <select id="selectedBA" name="selectedBA" data-md-selectize data-md-selectize-bottom>
-                                                <option value="">BA Name</option>
-                                                <?php foreach ($ba_users as $user):?>
-                                                    <option value="<?php echo $user->id;?>"><?php echo $user->username; ?></option>
-                                                <?php endforeach?>
-                                            </select>
-                                        </div>
-                                        <div class="uk-form-row">
-                                            <label for="txtSupervisorName">Supervisor Name</label>
-                                            <input type="text" class="md-input" id="txtSupervisorName" name="txtSupervisorName" value=""/>
+                                            <label for="selectedSupervisor">Supervisor Name</label>
+                                            <input type="text" class="md-input" id="txtSupervisorName" name="txtSupervisorName" value="<?php echo $user->last_name . ' ' . $user->first_name; ?>" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtBAExecutive">BA's Executive Name</label>
-                                            <input type="text" class="md-input" id="txtBAExecutive" name="txtBAExecutive" value=""/>
+                                            <input type="text" class="md-input" id="txtBAExecutive" name="txtBAExecutive" value="<?php echo $user->executive ?>" readonly="readonly"/>
                                         </div>
                                     </div>
-                                    <div class="uk-width-large-1-4">
-                                        <div class="uk-form-row">
-                                            <label for="txtMarketName">Market Name</label>
-                                            <input type="text" class="md-input" id="txtMarketName" name="txtMarketName" value=""/>
-                                        </div>
-                                        <div class="uk-form-row">
-                                            <label for="txtOutletName">Outlet Name</label>
-                                            <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value=""/>
-                                        </div>
-                                        <div class="uk-form-row">
-                                            <label for="txtDMSCode">DMS Code</label>
-                                            <input type="text" class="md-input" id="txtDMSCode" name="txtDMSCode" value=""/>
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-large-1-4">
-                                        <div class="uk-form-row">
-                                            <label for="txtDT">DT</label>
-                                            <input type="text" class="md-input" id="txtDT" name="txtDT" value=""/>
-                                        </div>
-                                        <div class="uk-form-row">
-                                            <label for="txtCustomerType">Customer Type</label>
-                                            <input type="text" class="md-input" id="txtCustomerType" name="txtCustomerType" value=""/>
-                                        </div>
-                                        <div class="uk-form-row">
-                                            <label for="txtChannel">Channel</label>
-                                            <input type="text" class="md-input" id="txtChannel" name="txtChannel" value=""/>
+                                    <div class="uk-width-large-2-4">
+                                        <div class="uk-grid">
+                                            <div class="uk-width-1-1">
+                                                <div class="md-card">
+                                                    <div class="md-card-toolbar">
+                                                        <div class="md-card-toolbar-actions">
+                                                            <i class="md-icon material-icons md-card-fullscreen-activate">&#xE5D0;</i>
+                                                        </div>
+                                                        <h3 class="md-card-toolbar-heading-text">
+                                                            Reported By BA
+                                                        </h3>
+                                                    </div>
+                                                    <div class="mGraph-wrapper">
+                                                        <div class="uk-overflow-container">
+                                                            <table class="uk-table uk-text-nowrap">
+                                                            <tbody id="CONTENTS">
+                                                            <?php foreach ($ba_users as $user):?>
+                                                                <tr>
+                                                                    <td><?php echo $user->username ?></td>
+                                                                </tr>
+                                                            <?php endforeach;?>
+                                                            </tbody>
+                                                        </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-1-4">
@@ -86,6 +78,7 @@
                                             <div class="md-card">
                                                 <div class="md-card-content">
                                                     <div class="uk-margin-bottom uk-text-center uk-position-relative">
+                                                        
                                                         <img src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge.jpg" alt="" class="img_medium" id="txtPhoto" />
                                                     </div>
                                                 </div>
@@ -101,11 +94,11 @@
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
                                                 <label for="txtMonthlyTarget">Monthly Target</label>
-                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value=""/>
+                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value="$ <?php echo $sale_target->monthly_target?>" readonly="readonly"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtTodayTarget">Today Target</label>
-                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value=""/>
+                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value="$ <?php echo $sale_target->monthly_target /26?>" readonly="readonly"/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
@@ -127,41 +120,42 @@
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtNumberOfWorking">Number of working days</label>
-                                            <input type="text" class="md-input" id="txtNumberOfWorking" name="txtNumberOfWorking" value="26"/>
+                                            <input type="text" class="md-input" id="txtNumberOfWorking" name="txtNumberOfWorking" value="26" readonly="readonly"/>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- large chart -->
                         <div class="md-card">
                             <div class="md-card-content large-padding">
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtTodayAchievement">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" value=""/>
+                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" value="$ <?php echo $today_achievement ?>" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtMonthToDateAchievement">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" value=""/>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" value="$ <?php echo $month_achievement ?>" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtYearToDateAchievement">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" value=""/>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" value="$ <?php echo $year_achievement ?>" readonly="readonly"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtTodayAchievementPercent">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value=""/>
+                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value="% <?php echo $today_achievement_percent ?>" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value=""/>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value="% <?php echo $month_achievement_percent ?>" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value=""/>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value="% <?php echo $year_achievement_percent ?>" readonly="readonly"/>
                                         </div>
                                     </div>
                                 </div>
@@ -179,6 +173,12 @@
             <i class="material-icons">&#xE161;</i>
         </a>
     </div> -->
+
+    <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
+        <tr>
+            <td>{{= username}}</td>
+        </tr>
+    </script>
 
     <!-- google web fonts -->
     <script>
@@ -229,8 +229,8 @@
             altair_helpers.retina_images();
         });
     </script>
-    
-    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/ba_report.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor_report.js"></script>
 
 </body>
 </html>

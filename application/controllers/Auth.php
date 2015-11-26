@@ -23,7 +23,7 @@ class Auth extends CI_Controller {
 			// redirect them to the home page because they must be an administrator to view this
 			//return show_error('You must be an administrator to view this page.');
 			if($this->ion_auth->in_group('SUPERVISOR')){
-				echo 'SUPERVISOR';
+				redirect('supervisor', 'refresh');
 			}elseif($this->ion_auth->in_group('BEAUTY_AGENT')){
 				redirect('sale', 'refresh');
 			}elseif($this->ion_auth->in_group('PROJECT_HOLDER')){
@@ -74,7 +74,7 @@ class Auth extends CI_Controller {
 					$this->session->set_flashdata('message', $this->ion_auth->messages());
 					redirect('/dashboard', 'refresh');
 				}elseif($this->ion_auth->in_group('SUPERVISOR')){
-					echo 'SUPERVISOR ADMIN';
+					redirect('supervisor', 'refresh');
 				}elseif($this->ion_auth->in_group('BEAUTY_AGENT')){
 					redirect('/sale','refresh');
 				}elseif($this->ion_auth->in_group('PROJECT_HOLDER')){
