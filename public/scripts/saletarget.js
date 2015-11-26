@@ -1,6 +1,8 @@
 $(function() {
 
-	var brand = {};
+	$("#btnOpenAddNew").click(function(){
+		$("#frmSaleTarget")[0].reset();
+	});
 
 	$("#frmSaleTarget")
 			.submit(

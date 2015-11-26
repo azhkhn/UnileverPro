@@ -1,6 +1,8 @@
 $(function() {
 
-	var brand = {};
+	$("#btnOpenAddNew").click(function(){
+		$("#frmSalePromotion")[0].reset();
+	});
 
 	$("#frmSalePromotion")
 			.submit(
@@ -57,7 +59,6 @@ $(function() {
 	
 	$(document).on('click','#btnUpdate', function(){
 		var id = $(this).attr("data");
-		alert(id); 
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
 		$.ajax({
 			url: SITE_URL+'SalePromotion/update/'+id,

@@ -1,7 +1,11 @@
 $(function() {
 
-	var brand = {};
+	
 
+	$("#btnOpenAddNew").click(function(){
+		$("#frmGroup")[0].reset();
+	});
+	
 	$("#frmGroup")
 			.submit(
 					function(event) {

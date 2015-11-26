@@ -2,6 +2,12 @@ $(function() {
 
 	var brand = {};
 
+	
+	$("#btnOpenAddNew").click(function(){
+		$("#frmAddBrand")[0].reset();
+	});
+	
+	
 	$("#frmAddBrand")
 			.submit(
 					function(event) {
