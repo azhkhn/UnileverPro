@@ -20,3 +20,4 @@
 *.htaccess
 *config.php
 *database.php
+*/logs/dev/log-*.php

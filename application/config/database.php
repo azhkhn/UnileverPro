@@ -59,14 +59,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-$active_group = 'testing';
+$active_group = 'development';
 $query_builder = TRUE;
 
 $db['development'] = array(
 	'dsn'	=> '',
 	'database' => 'vuthea_unilever',
 	'hostname' => 'mysql1003.mochahost.com', 	
-	'username' => 'vuthea_unilever', 	
+	'username' => 'vuthea_coffee', 	
 	'password' => 'abc123+-*',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
