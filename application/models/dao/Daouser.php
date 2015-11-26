@@ -44,30 +44,52 @@
 
 
 		public function getAllUsersByGroupName($name=''){
-			$this->db->select("A.id,
-							   B.group_id,
-							   C.name AS group_name,
-							   A.first_name, 
-							   A.last_name, 
-							   A.gender, 
-							   A.email, 
-							   A.phone,
-							   A.parent_id,
-							   CONCAT(D.last_name, ' ', D.first_name) AS supervisor,
-							   A.remark,
-							   A.starting_date,
-							   A.active", FALSE);
-			$this->db->from('users A');
-			$this->db->join('users_groups B','A.id = B.user_id', 'LEFT');
-			$this->db->join('groups C','B.group_id = C.id','LEFT');
-			$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
-			$this->db->where('C.name', $name);
 			if($this->ion_auth->in_group('SUPERVISOR')){
+				$this->db->select("A.id,
+								   B.group_id,
+								   C.name AS group_name,
+								   A.first_name, 
+								   A.last_name, 
+								   A.gender, 
+								   A.email, 
+								   A.phone,
+								   A.parent_id,
+								   CONCAT(D.last_name, ' ', D.first_name) AS supervisor,
+								   A.remark,
+								   A.starting_date,
+								   A.active", FALSE);
+				$this->db->from('users A');
+				$this->db->join('users_groups B','A.id = B.user_id', 'LEFT');
+				$this->db->join('groups C','B.group_id = C.id','LEFT');
+				$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
+				$this->db->where('C.name', $name);
 				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
+				$this->db->order_by('A.parent_id');
+				$query = $this->db->get();
+				return $query->result();
+			}else{
+				$this->db->select("A.id,
+								   B.group_id,
+								   C.name AS group_name,
+								   A.first_name, 
+								   A.last_name, 
+								   A.gender, 
+								   A.email, 
+								   A.phone,
+								   A.parent_id,
+								   CONCAT(D.last_name, ' ', D.first_name) AS supervisor,
+								   A.remark,
+								   A.starting_date,
+								   A.active", FALSE);
+				$this->db->from('users A');
+				$this->db->join('users_groups B','A.id = B.user_id', 'LEFT');
+				$this->db->join('groups C','B.group_id = C.id','LEFT');
+				$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
+				$this->db->where('C.name', $name);
+				$this->db->order_by('A.parent_id');
+				$query = $this->db->get();
+				return $query->result();
 			}
-			$this->db->order_by('A.parent_id');
-			$query = $this->db->get();
-			return $query->result();
 		}
 
 		public function getUserById($id){
@@ -108,25 +130,42 @@
 		}
 
 		public function getAllUsersByGroupId($id=3){
-			$this->db->select("A.id,
-							   B.group_id,
-							   C.name AS group_name,
-							   CONCAT(A.last_name, ' ', A.first_name) AS username, 
-							   A.parent_id,
-							   CONCAT(D.last_name, ' ', D.first_name) AS supervisor,
-							   A.active", FALSE);
-			$this->db->from('users A');
-			$this->db->join('users_groups B','A.id = B.user_id', 'LEFT');
-			$this->db->join('groups C','B.group_id = C.id','LEFT');
-			$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
-			$this->db->where('C.id', $id);
-			$this->db->where('A.active', 1);
 			if($this->ion_auth->in_group('SUPERVISOR')){
+				$this->db->select("A.id,
+								   B.group_id,
+								   C.name AS group_name,
+								   CONCAT(A.last_name, ' ', A.first_name) AS username, 
+								   A.parent_id,
+								   CONCAT(D.last_name, ' ', D.first_name) AS supervisor,
+								   A.active", FALSE);
+				$this->db->from('users A');
+				$this->db->join('users_groups B','A.id = B.user_id', 'LEFT');
+				$this->db->join('groups C','B.group_id = C.id','LEFT');
+				$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
+				$this->db->where('C.id', $id);
+				$this->db->where('A.active', 1);
 				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
+				$this->db->order_by("A.parent_id, A.last_name");
+				$query = $this->db->get();
+				return $query->result();
+			}else{
+				$this->db->select("A.id,
+								   B.group_id,
+								   C.name AS group_name,
+								   CONCAT(A.last_name, ' ', A.first_name) AS username, 
+								   A.parent_id,
+								   CONCAT(D.last_name, ' ', D.first_name) AS supervisor,
+								   A.active", FALSE);
+				$this->db->from('users A');
+				$this->db->join('users_groups B','A.id = B.user_id', 'LEFT');
+				$this->db->join('groups C','B.group_id = C.id','LEFT');
+				$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
+				$this->db->where('C.id', $id);
+				$this->db->where('A.active', 1);
+				$this->db->order_by("A.parent_id, A.last_name");
+				$query = $this->db->get();
+				return $query->result();
 			}
-			$this->db->order_by("A.parent_id, A.last_name");
-			$query = $this->db->get();
-			return $query->result();
 		}
 
 		public function getAllUsersByParent(Dtouser $user){

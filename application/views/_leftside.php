@@ -105,7 +105,7 @@
                     </ul>
                 </li>
                 
-                 <li >
+                <!-- <li >
                     <a href="<?php echo site_url('sale')?>">
                          <i class="menu_icon material-icons">&#xE547;</i>
                         Sale
@@ -117,7 +117,7 @@
                        <i class="menu_icon material-icons">&#xE8CB;</i>
                         Sale item
                     </a>
-                </li>
+                </li> -->
                 
                 <li>
                     <a href="#">
