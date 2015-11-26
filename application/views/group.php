@@ -18,7 +18,7 @@
     <div id="page_content">
         <div id="page_content_inner">
 
-            <h4 class="heading_a uk-margin-bottom">Brand</h4>
+            <h4 class="heading_a uk-margin-bottom">Groups</h4>
             
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
@@ -49,7 +49,7 @@
                             <td><?= $v->name ?></td>
                             <td><?= $v->description ?></td>
                             <td>
-                            	<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
+                            	
                             	<a href="#" id="btnUpdate" data="<?php echo $v->id?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
                             </td>
                         </tr>

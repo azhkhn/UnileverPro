@@ -81,5 +81,9 @@
 			redirect('product');
 		}
 	
+		public function getProductDetail($id){
+			echo json_encode( $this->DaoProduct->getProductDetail($id) );
+		}
+		
 	}
 ?>

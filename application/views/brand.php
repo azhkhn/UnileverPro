@@ -19,7 +19,7 @@
 	<div id="page_content">
 		<div id="page_content_inner">
 
-			<h4 class="heading_a uk-margin-bottom">Brand</h4>
+			<h4 class="heading_a uk-margin-bottom">Brands </h4>
 
 			<div class="md-card uk-margin-medium-bottom">
 				<div class="md-card-content">
@@ -50,8 +50,7 @@
 								<td><?= $v->name ?></td>
 								<td><?= $v->parent_brand ?></td>
 								<td>
-									<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail"><i class="material-icons">remove_red_eye</i></a>
-									<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit" id="btnUpdate" data="<?php echo $v->id?>"><i class="material-icons">edit</i></a>
+									<a href="#" data-uk-tooltip="{pos:'left'}" title="Edit" id="btnUpdate" data="<?php echo $v->id?>"><i class="material-icons">edit </i></a>
 									<a href="<?php  echo site_url('brand/delete')?>/<?= $v->id ?>" onClick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a></td>
 							</tr>
                          <?php } ?>

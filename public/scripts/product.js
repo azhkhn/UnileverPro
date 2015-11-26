@@ -43,7 +43,6 @@ $(function() {
 						
 	$(document).on('click','#btnUpdate', function(){
 		var id = $(this).attr("data");
-		alert(id);
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
 		$.ajax({
 			url: SITE_URL+'product/update/'+id,
@@ -127,7 +126,46 @@ $(function() {
 		});
 	});
 	
-	
+	$(document).on('click','#btnView', function(){
+		var id = $(this).attr("data");
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'product/getProductDetail/'+id,
+			type: "GET",
+			dataType: "JSON",
+			success: function(data){
+				
+				console.log("Success " +data);
+
+				$("#getCode").text(data.code);
+				$("#getProName").text(data.name);
+				$("#getPrice").text(data.size);
+				$("#geSize").text(data.size);
+				$("#getUnit").text(data.unit);
+				$("#getBrand").text(data.brand);
+				$("#getPromotion").text(data.promotion);
+				$("#getCreateDate").text(data.created_date);
+				$("#getCreateBy").text(data.created_by);
+				$("#getUpdatedate").text(data.updated_date);
+				$("#getUpdateBy").text(data.updated_by);
+				$("#getDescription").text(data.description);
+				modal.hide();
+				
+				var modalPopup = UIkit.modal("#modalProductDetail");
+				if ( modalPopup.isActive() ) {
+				    modalPopup.hide();
+				} else {
+				    modalPopup.show();
+				}
+
+			},
+			error: function(data){
+				console.log("Error" + data);
+				modal.hide();
+				UIkit.modal.alert(data.message);
+			}
+		});
+	});
 	
 	
 });

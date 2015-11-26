@@ -46,12 +46,11 @@ class DaoProduct extends CI_Model {
 			return false;
 		}
 	}
-	
 	public function listProduct() {
 		$this->db->select ( 'p.id,p.code,p.name,p.description,p.size,p.unit,b.name as brand,p.price,pro.name as promotion,p.created_by,p.created_date,p.updated_date,p.updated_by,p.status,p.deleted_at' );
 		$this->db->from ( 'PRODUCTS p' );
-		$this->db->join('BRANDS b','p.brand = b.id', 'LEFT');
-		$this->db->join('SALE_PROMOTIONS pro','p.promotion = pro.id', 'LEFT');
+		$this->db->join ( 'BRANDS b', 'p.brand = b.id', 'LEFT' );
+		$this->db->join ( 'SALE_PROMOTIONS pro', 'p.promotion = pro.id', 'LEFT' );
 		$this->db->where ( 'p.status', 1 );
 		$this->db->order_by ( "p.id", "desc" );
 		$query = $this->db->get ();
@@ -72,7 +71,7 @@ class DaoProduct extends CI_Model {
 		$query = $this->db->get ();
 		return $query->result ();
 	}
-	public function deleteProduct($id ,$updated_by) {
+	public function deleteProduct($id, $updated_by) {
 		$this->db->set ( 'updated_by', $updated_by );
 		$this->db->set ( 'status', FALSE );
 		$this->db->set ( 'deleted_at', 'NOW()', FALSE );
@@ -85,7 +84,18 @@ class DaoProduct extends CI_Model {
 		$this->db->where ( 'id', $id );
 		$this->db->where ( 'status', 1 );
 		$query = $this->db->get ();
-		return $query->row();
+		return $query->row ();
+	}
+	public function getProductDetail($id) {
+		$this->db->select ( 'p.id,p.code,p.name,p.description,p.size,p.unit,b.name as brand,p.price,pro.name as promotion,u.first_name as created_by,p.created_date,p.updated_date,p.updated_by,p.status,p.deleted_at' );
+		$this->db->from ( 'PRODUCTS p' );
+		$this->db->join ( 'BRANDS b', 'p.brand = b.id', 'LEFT' );
+		$this->db->join ( 'SALE_PROMOTIONS pro', 'p.promotion = pro.id', 'LEFT' );
+		$this->db->join('USERS u' , 'u.id = p.created_by' , 'LEFT');
+		$this->db->where ( 'p.id', $id );
+		$this->db->where ( 'p.status', 1 );
+		$query = $this->db->get ();
+		return $query->row ();
 	}
 }
 	
