@@ -12,7 +12,7 @@ class DaoGroup  extends CI_Model{
 				"name" 			         => 		$v->getName(),
 				"description"	 	     => 		$v->getDescription()
 		);
-		$this->db->insert("GROUPS",$dto);
+		$this->db->insert("groups",$dto);
 		if($this->db->affected_rows()==1){
 			return true;
 		}else{
@@ -26,7 +26,7 @@ class DaoGroup  extends CI_Model{
 				"description"	 	     => 		$v->getDescription()
 		);
 		$this->db->where('id' , $v->getId());
-		$this->db->update('GROUPS' , $dto);
+		$this->db->update('groups' , $dto);
 		if($this->db->affected_rows()==1){
 			return true;
 		}else{
@@ -36,7 +36,7 @@ class DaoGroup  extends CI_Model{
 	
 	public function listGroup(){
 		$this->db->select('id ,name,description');
-		$this->db->from('GROUPS');
+		$this->db->from('groups');
 		$this->db->order_by("id", "desc");
 		$query = $this->db->get();
 		return $query->result();
@@ -45,7 +45,7 @@ class DaoGroup  extends CI_Model{
 	
 	public function getGroup($id){
 		$this->db->select('id ,name,description');
-		$this->db->from('GROUPS');
+		$this->db->from('groups');
 		$this->db->where('id',$id);
 		$query = $this->db->get();
 		return $query->row();

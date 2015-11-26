@@ -19,7 +19,7 @@ class DaoSaleTarget  extends CI_Model{
 		);
 		$this->db->set('created_date', 'NOW()', FALSE);
 		$this->db->set('status', TRUE);
-		$this->db->insert("SALE_TARGETS",$dto);
+		$this->db->insert("sale_targets",$dto);
 		if($this->db->affected_rows()==1){
 			return true;
 		}else{
@@ -40,7 +40,7 @@ class DaoSaleTarget  extends CI_Model{
 		$this->db->set('updated_date', 'NOW()', FALSE);
 		$this->db->set('status', TRUE);
 		$this->db->where('id' , $v->getId());
-		$this->db->update('SALE_TARGETS' , $dto);
+		$this->db->update('sale_targets' , $dto);
 		if($this->db->affected_rows()==1){
 			return true;
 		}else{
@@ -50,8 +50,8 @@ class DaoSaleTarget  extends CI_Model{
 	
 	public function listSaleTarget(){
 		$this->db->select('s.id,s.name,s.description,b.first_name as ba_id,s.start_date,s.end_date,s.target_achievement,s.created_date,s.created_by,s.updated_date,s.updated_by,s.status,s.deleted_at');
-		$this->db->from('SALE_TARGETS s');
-		$this->db->join('USERS b','s.ba_id = b.id', 'LEFT');
+		$this->db->from('sale_targets s');
+		$this->db->join('users b','s.ba_id = b.id', 'LEFT');
 		$this->db->where('s.status' , 1);
 		$this->db->order_by("s.id", "desc");
 		$query = $this->db->get();
@@ -63,12 +63,12 @@ class DaoSaleTarget  extends CI_Model{
 		$this->db->set('status', FALSE);
 		$this->db->set('deleted_at', 'NOW()', FALSE);
 		$this->db->where('id' , $id);
-		$this->db->update('SALE_TARGETS');
+		$this->db->update('sale_targets');
 	}
 	
 	public function getSaleTarget($id){
 		$this->db->select('id,name,description,ba_id,start_date,end_date,target_achievement,created_date,created_by,updated_date,updated_by,status,deleted_at');
-		$this->db->from('SALE_TARGETS');
+		$this->db->from('sale_targets');
 		$this->db->where('id',$id);
 		$this->db->where('status' , 1);
 		$query = $this->db->get();
@@ -76,7 +76,7 @@ class DaoSaleTarget  extends CI_Model{
 	}
 	
 	function checkIfNameExist($name){
-		$this->db->from('SALE_TARGETS');
+		$this->db->from('sale_targets');
 		$this->db->where('name', $name);
 		return $this->db->count_all_results();
 	}

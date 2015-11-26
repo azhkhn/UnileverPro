@@ -19,7 +19,7 @@ class DaoSalePromotion extends CI_Model{
 		);
 		$this->db->set('created_date', 'NOW()', FALSE);
 		$this->db->set('status', TRUE);
-		$this->db->insert("SALE_PROMOTIONS",$dto);
+		$this->db->insert("sale_promotions",$dto);
 		if($this->db->affected_rows()==1){
 			return true;
 		}else{
@@ -40,7 +40,7 @@ class DaoSalePromotion extends CI_Model{
 		$this->db->set('updated_date', 'NOW()', FALSE);
 		$this->db->set('status', TRUE);
 		$this->db->where('id' , $v->getId());
-		$this->db->update('SALE_PROMOTIONS' , $dto);
+		$this->db->update('sale_promotions' , $dto);
 		if($this->db->affected_rows()==1){
 			return true;
 		}else{
@@ -50,8 +50,8 @@ class DaoSalePromotion extends CI_Model{
 	
 	public function listSalePromotion(){
 		$this->db->select('s.id,s.code,s.name,s.description,p.name as type,s.start_date,s.end_date,s.created_date,s.created_by,s.updated_date,s.updated_by,s.status,s.deleted_at');
-		$this->db->from('SALE_PROMOTIONS s');
-		$this->db->join('PROMOTION_TYPES p','p.id = s.type', 'LEFT');
+		$this->db->from('sale_promotions s');
+		$this->db->join('promotion_types p','p.id = s.type', 'LEFT');
 		$this->db->where('s.status' , 1);
 		$this->db->order_by("s.id", "desc");
 		$query = $this->db->get();
@@ -63,12 +63,12 @@ class DaoSalePromotion extends CI_Model{
 		$this->db->set('status', FALSE);
 		$this->db->set('deleted_at', 'NOW()', FALSE);
 		$this->db->where('id' , $id);
-		$this->db->update('SALE_PROMOTIONS');
+		$this->db->update('sale_promotions');
 	}
 	
 	public function getSalePromotion($id){
 		$this->db->select('id,name,code,description,type,start_date,end_date,created_date,created_by,updated_date,updated_by,status,deleted_at');
-		$this->db->from('SALE_PROMOTIONS');
+		$this->db->from('sale_promotions');
 		$this->db->where('id',$id);
 		$this->db->where('status' , 1);
 		$query = $this->db->get();
@@ -76,12 +76,12 @@ class DaoSalePromotion extends CI_Model{
 	}
 	
 	function checkIfNameExist($name){
-		$this->db->from('SALE_PROMOTIONS');
+		$this->db->from('sale_promotions');
 		$this->db->where('name', $name);
 		return $this->db->count_all_results();
 	}
 	function checkIfCodeExist($code){
-		$this->db->from('SALE_PROMOTIONS');
+		$this->db->from('sale_promotions');
 		$this->db->where('code', $code);
 		return $this->db->count_all_results();
 	}
