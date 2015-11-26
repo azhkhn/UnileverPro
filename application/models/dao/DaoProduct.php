@@ -2,7 +2,7 @@
 class DaoProduct extends CI_Model {
 	public function DaoBrand() {
 		parent::__construct ();
-		$this->load->model ( "dto/DtoProduct" );
+		$this->load->model ( "dto/Dtoproduct" );
 	}
 	public function addProduct(DtoProduct $v) {
 		$dto = array (

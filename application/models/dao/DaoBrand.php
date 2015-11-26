@@ -5,7 +5,7 @@ class DaoBrand extends CI_Model{
 	
 	public function DaoBrand(){
 		parent::__construct();
-		$this->load->model("dto/DtoBrand");
+		$this->load->model("dto/Dtobrand");
 	}
 	
 	public function addBrand(DtoBrand $b){

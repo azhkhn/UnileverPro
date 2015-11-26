@@ -96,7 +96,7 @@
 				<div class="uk-modal-header">
 					<h3 class="uk-modal-title">+ Product</h3>
 				</div>
-				<form action="#" class="uk-form-stacked" id="frmProduct"
+				<form action="#" class="uk-form-stacked" id="frmProduct" name="frmProduct"
 					method="POST">
 					<div class="uk-grid uk-grid-medium" data-uk-grid-margin>
 
@@ -203,7 +203,6 @@
 			data-uk-modal="{target:'#modalProduct'}"> <i class="material-icons">&#xE145;</i>
 		</a>
 	</div>
-
 
 	<div>
 		<div class="uk-modal" id="modalProductDetail">

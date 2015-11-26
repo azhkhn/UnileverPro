@@ -4,7 +4,7 @@ class DaoSaleTarget  extends CI_Model{
 	
 	public function DaoSaleTarget(){
 		parent::__construct();
-		$this->load->model("dto/DtoSaleTarget");
+		$this->load->model("dto/Dtosaletarget");
 	}
 	
 	public function addSaleTarget(DtoSaleTarget $v){

@@ -1,5 +1,12 @@
 $(function() {
 
+	
+	$("#btnOpenAddNew").click(function(){
+		$('form[name="frmProduct"]')[0].reset();
+	});
+	 
+
+	
 	$("#frmProduct").submit(function(event) {
 						
 						event.preventDefault();

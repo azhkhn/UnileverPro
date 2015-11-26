@@ -5,15 +5,15 @@
 
 	public function __construct(){
 			parent::__construct();
-			$this->load->model("dto/DtoProduct");
-			$this->load->model("dao/DaoProduct");
+			$this->load->model("dto/Dtoproduct");
+			$this->load->model("dao/Daoproduct");
 			$this->load->library('ion_auth');
 		}
 
 		public function index(){
-			$data["lstBrand"] = $this->DaoProduct->listBrand();
-			$data["lstPromotion"] = $this->DaoProduct->listSalePromotiont();
-			$data["product"] = $this->DaoProduct->listProduct();
+			$data["lstBrand"] = $this->Daoproduct->listBrand();
+			$data["lstPromotion"] = $this->Daoproduct->listSalePromotiont();
+			$data["product"] = $this->Daoproduct->listProduct();
 			$this->load->view('product',$data);
 		}
 		
@@ -22,26 +22,26 @@
 		}
 		
 		public function listBrandJson(){
-			$result = $this->DaoProduct->listBrand();
+			$result = $this->Daoproduct->listBrand();
 			$this->output->set_content_type('application/json')->set_output(json_encode($result));
 		}
 		
 		public function listPromotionJson(){
-			$result = $this->DaoProduct->listPromotiontypes();
+			$result = $this->Daoproduct->listPromotiontypes();
 			$this->output->set_content_type('application/json')->set_output(json_encode($result));
 		}
 		
 		public function addProduct(){
-			$this->DtoProduct->setCode($this->input->post('code'));
-			$this->DtoProduct->setName($this->input->post('name'));
-			$this->DtoProduct->setDescription($this->input->post('description'));
-			$this->DtoProduct->setSize($this->input->post('size'));
-			$this->DtoProduct->setUnit($this->input->post('unit'));
-			$this->DtoProduct->setBrand($this->input->post('brand'));
-			$this->DtoProduct->setPrice($this->input->post('price'));
-			$this->DtoProduct->setPromotion($this->input->post('promotion'));
-			$this->DtoProduct->setCreated_by($this->ion_auth->get_user_id());
-			if($this->DaoProduct->addProduct($this->DtoProduct)){
+			$this->Dtoproduct->setCode($this->input->post('code'));
+			$this->Dtoproduct->setName($this->input->post('name'));
+			$this->Dtoproduct->setDescription($this->input->post('description'));
+			$this->Dtoproduct->setSize($this->input->post('size'));
+			$this->Dtoproduct->setUnit($this->input->post('unit'));
+			$this->Dtoproduct->setBrand($this->input->post('brand'));
+			$this->Dtoproduct->setPrice($this->input->post('price'));
+			$this->Dtoproduct->setPromotion($this->input->post('promotion'));
+			$this->Dtoproduct->setCreated_by($this->ion_auth->get_user_id());
+			if($this->Daoproduct->addProduct($this->Dtoproduct)){
 				$data["ERROR"] = false;
 				$data["MSG"] = "Product has been inserted sucessfully.";
 			}else{
@@ -52,21 +52,21 @@
 		}
 		
 		public function update($id){
-			echo json_encode( $this->DaoProduct->getProduct($id) );
+			echo json_encode( $this->Daoproduct->getProduct($id) );
 		}
 		
 		public function updateProduct($id){
-			$this->DtoProduct->setId($id);
-			$this->DtoProduct->setCode($this->input->post('code'));
-			$this->DtoProduct->setName($this->input->post('name'));
-			$this->DtoProduct->setDescription($this->input->post('description'));
-			$this->DtoProduct->setSize($this->input->post('size'));
-			$this->DtoProduct->setUnit($this->input->post('unit'));
-			$this->DtoProduct->setBrand($this->input->post('brand'));
-			$this->DtoProduct->setPrice($this->input->post('price'));
-			$this->DtoProduct->setPromotion($this->input->post('promotion'));
-			$this->DtoProduct->setUpdated_by($this->ion_auth->get_user_id());
-			if($this->DaoProduct->updateProduct($this->DtoProduct)){
+			$this->Dtoproduct->setId($id);
+			$this->Dtoproduct->setCode($this->input->post('code'));
+			$this->Dtoproduct->setName($this->input->post('name'));
+			$this->Dtoproduct->setDescription($this->input->post('description'));
+			$this->Dtoproduct->setSize($this->input->post('size'));
+			$this->Dtoproduct->setUnit($this->input->post('unit'));
+			$this->Dtoproduct->setBrand($this->input->post('brand'));
+			$this->Dtoproduct->setPrice($this->input->post('price'));
+			$this->Dtoproduct->setPromotion($this->input->post('promotion'));
+			$this->Dtoproduct->setUpdated_by($this->ion_auth->get_user_id());
+			if($this->Daoproduct->updateProduct($this->Dtoproduct)){
 				$data["NO_ERROR"] = false;
 				$data["MSG"] = "Product has been updated sucessfully.";
 			}else{
@@ -77,12 +77,12 @@
 		}
 		
 		public function delete($id){
-			$this->DaoProduct->deleteProduct($id,$this->ion_auth->get_user_id());
+			$this->Daoproduct->deleteProduct($id,$this->ion_auth->get_user_id());
 			redirect('product');
 		}
 	
 		public function getProductDetail($id){
-			echo json_encode( $this->DaoProduct->getProductDetail($id) );
+			echo json_encode( $this->Daoproduct->getProductDetail($id) );
 		}
 		
 	}

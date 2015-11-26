@@ -4,7 +4,7 @@ class DaoSalePromotion extends CI_Model{
 	
 	public function DaoSalePromotion(){
 		parent::__construct();
-		$this->load->model("dto/DtoSalePromotion");
+		$this->load->model("dto/Dtosalepromotion");
 	}
 	
 	public function addSalePromotion(DtoSalePromotion $v){

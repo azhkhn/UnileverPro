@@ -4,7 +4,7 @@ class DaoGroup  extends CI_Model{
 	
 	public function DaoGroup(){
 		parent::__construct();
-		$this->load->model("dto/DtoGroup");
+		$this->load->model("dto/Dtogroup");
 	}
 	
 	public function addGroup(DtoGroup $v){

@@ -5,12 +5,12 @@
 
 		public function __construct(){
 			parent::__construct();
-			$this->load->model("dto/DtoGroup");
-			$this->load->model("dao/DaoGroup");
+			$this->load->model("dto/Dtogroup");
+			$this->load->model("dao/Daogroup");
 		}
 
 		public function index(){
-			$data["group"] = $this->DaoGroup->listGroup();
+			$data["group"] = $this->Daogroup->listGroup();
 			$this->load->view('group',$data);
 		}
 		
@@ -19,10 +19,10 @@
 		}
 		
 		public function addGroup(){
-			$this->DtoGroup->setName($this->input->post('name'));
-			$this->DtoGroup->setDescription($this->input->post('description'));
+			$this->Dtogroup->setName($this->input->post('name'));
+			$this->Dtogroup->setDescription($this->input->post('description'));
 			
-			if($this->DaoGroup->addGroup($this->DtoGroup)){
+			if($this->Daogroup->addGroup($this->Dtogroup)){
 				$data["ERROR"] = false;
 				$data["MSG"] = "Group has been inserted sucessfully.";
 			}else{
@@ -33,16 +33,16 @@
 		}
 		
 		public function update($id){
-			echo json_encode( $this->DaoGroup->getGroup($id) );
+			echo json_encode( $this->Daogroup->getGroup($id) );
 		}
 		
 		public function updateGroup($id){
 			
-			$this->DtoGroup->setId($id);
-			$this->DtoGroup->setName($this->input->post('name'));
-			$this->DtoGroup->setDescription($this->input->post('description'));
+			$this->Dtogroup->setId($id);
+			$this->Dtogroup->setName($this->input->post('name'));
+			$this->Dtogroup->setDescription($this->input->post('description'));
 			
-			if($this->DaoGroup->updateGroup($this->DtoGroup)){
+			if($this->Daogroup->updateGroup($this->Dtogroup)){
 				$data["ERROR"] = false;
 				$data["MSG"] = "Group has been updated sucessfully.";
 			}else{
