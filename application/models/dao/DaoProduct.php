@@ -64,7 +64,7 @@ class DaoProduct extends CI_Model {
 		$query = $this->db->get ();
 		return $query->result ();
 	}
-	public function listSalePromotiont() {
+	public function listSalePromotion() {
 		$this->db->select ( 'id,  name' );
 		$this->db->from ( 'sale_promotions' );
 		$this->db->order_by ( "id", "desc" );
