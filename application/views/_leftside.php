@@ -4,11 +4,11 @@
             <div class="sidebar_logo"><a href="<?php echo site_url('admin/dashboard')?>"><!-- <img src="<?php echo base_url('public/assets/img/logo_main.png')?>" alt="" height="15" width="71"/> --><h4>Unilever Reporting System</h4></a></div>
 
 
-            <div class="sidebar_actions">
+            <!-- <div class="sidebar_actions">
                 <select id="lang_switcher" name="lang_switcher">
                     <option value="gb" selected>English</option>
                 </select>
-            </div>
+            </div> -->
         </div>
         <div class="menu_section">
             <ul>
