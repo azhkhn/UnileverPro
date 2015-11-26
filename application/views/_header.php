@@ -112,8 +112,8 @@
                             <a href="#" class="user_action_image"><img class="md-user-image" src="<?php echo base_url('public/assets/img/avatars/avatar_11_tn.png')?>" alt=""/></a>
                             <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
                                 <ul class="uk-nav js-uk-prevent">
-                                    <li><a href="page_user_profile.html">My profile</a></li>
-                                    <li><a href="page_settings.html">Settings</a></li>
+<!--                                     <li><a href="page_user_profile.html">My profile</a></li>
+                                    <li><a href="page_settings.html">Settings</a></li> -->
                                     <li><a href="<?php echo site_url('auth/logout') ?>">Logout</a></li>
                                 </ul>
                             </div>
