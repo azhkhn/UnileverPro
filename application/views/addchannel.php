@@ -126,9 +126,9 @@
            <?php if(isset($getpro)) { 
                 foreach ($getpro as $data ) {
             ?>
-                $("#name").val('<?php echo $data->name ?>');
+                $("#name").val("<?php echo $data->name ?>");
                 $("#name").focus();
-                $("#description").val('<?php echo $data->description ?>');
+                $("#description").val("<?php echo $data->description ?>");
                 editid = <?php echo $data->id ?> ;
             <?php } ?>
             $("#btnsubmit").val("Update");

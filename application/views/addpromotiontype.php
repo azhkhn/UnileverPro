@@ -141,9 +141,9 @@
            <?php if(isset($getpro)) { 
                 foreach ($getpro as $data ) {
             ?>
-                $("#code").val('<?php echo $data->code ?>');
-                $("#name").val('<?php echo $data->name ?>');
-                $("#size").val('<?php echo $data->size ?>');
+                $("#code").val("<?php echo $data->code ?>");
+                $("#name").val("<?php echo $data->name ?>");
+                $("#size").val("<?php echo $data->size ?>");
                 
                 $("#size").focus();
                 $("#name").focus();

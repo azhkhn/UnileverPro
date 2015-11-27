@@ -23,17 +23,17 @@ class OutletType extends ADMIN_Controller{
 			$this->DtoOutletTypes->setDescription($this->input->post('description'));
 			$this->DtoOutletTypes->setCreated_by(1);
 			$this->OutletTypesDAO->addOutlettype($this->DtoOutletTypes);
-			redirect("outletType");
+			redirect("outlettype");
 		}
 		
 		public function listpro(){
 			$data['lists'] = $this->OutletTypesDAO->listOutlettypes();
-			$this->load->view('outletType', $data);
+			$this->load->view('outlettype', $data);
 		}
 		
 		public function deletepro($id){
 			$this->OutletTypesDAO->deleteOutlettype($id);
-			redirect('outletType');
+			redirect('outlettype');
 		}
 
 		public function getpro($id){
@@ -48,7 +48,7 @@ class OutletType extends ADMIN_Controller{
 			$this->DtoOutletTypes->setUpdated_by(1);
 			
 			$this->OutletTypesDAO->updateOutlettype($this->DtoOutletTypes);
-			redirect('outletType');
+			redirect('outlettype');
 			
 		}
 }

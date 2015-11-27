@@ -266,11 +266,11 @@
            <?php if(isset($getpro)) { 
                 foreach ($getpro as $data ) {
             ?>
-                $("#dms_code").val('<?php echo $data->dms_code ?>');
-                $("#name").val('<?php echo $data->name ?>');
+                $("#dms_code").val("<?php echo $data->dms_code ?>");
+                $("#name").val("<?php echo $data->name ?>");
                 $("#name").focus();
                 $("#dms_code").focus();
-                $("#address").val('<?php echo $data->address ?>');
+                $("#address").val("<?php echo $data->address ?>");
                 editid = <?php echo $data->id ?> ;
 
             <?php } ?>
