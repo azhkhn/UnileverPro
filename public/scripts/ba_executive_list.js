@@ -1,5 +1,7 @@
 $(function(){
 	
+	$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
+	$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
 	// TODO: CREATE USERS OBJECT
 	var users = {};
 
@@ -51,11 +53,10 @@ $(function(){
 				'firstname': $("#txtFirstName").val(),
 				'gender'   : $("#selectGender").val(),
 				'phone'    : $("#txtTelephone").val(),
-				//'supervisor' : $("#selectSupervisor").val(),
 				'email'    : $("#txtEmail").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
-				'startworking' : $("#startWorking").val(),
+				'startworking' : moment($("#startWorking").val()).format('YYYY-MM-DD'),
 				'remark'   : $("#txtRemark").val(),
 				'company'  : 'UNILEVER',
 				'photo'    : $("#photo").attr('src'),
@@ -102,7 +103,7 @@ $(function(){
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
 				$("#txtEmail").val(data.email);
-				$("#startWorking").val(data.starting_date)
+				$("#startWorking").val(moment(data.starting_date).format('DD-MMMM-YYYY'));
 				$("#txtRemark").val(data.remark);
 				modal.hide();
 				$("#btnSave").hide();
@@ -141,7 +142,7 @@ $(function(){
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
 				$("#txtEmail").val(data.email);
-				$("#startWorking").val(data.starting_date)
+				$("#startWorking").val(moment(data.starting_date).format('DD-MMMM-YYYY'));
 				$("#txtRemark").val(data.remark);
 				modal.hide();
 				$("#btnSave").hide();
@@ -177,11 +178,10 @@ $(function(){
 				'firstname': $("#txtFirstName").val(),
 				'gender'   : $("#selectGender").val(),
 				'phone'    : $("#txtTelephone").val(),
-				//'supervisor' : $("#selectSupervisor").val(),
 				'email'    : $("#txtEmail").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
-				'startworking' : $("#startWorking").val(),
+				'startworking' : moment($("#startWorking").val()).format('YYYY-MM-DD'),
 				'remark'   : $("#txtRemark").val(),
 				'company'  : 'UNILEVER',
 				'photo'    : $("#photo").attr('src')

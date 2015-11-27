@@ -92,13 +92,14 @@
 			$this->load->view('users/supervisor_list', $this->data);*/
 			
 			$this->load->model('dao/Daouser');
-            $total_rows = $this->Daouser->count('SUPERVISOR');
+            //$total_rows = $this->Daouser->count('SUPERVISOR');
 
-            $this->load->helper('app');
-			$this->data["page_links"] = pagination($total_rows, $this->limit,'user/ajax', 3);
+            //$this->load->helper('app');
+			//$this->data["page_links"] = pagination($total_rows, $this->limit,'user/ajax', 3);
 
             //$this->pagination->initialize($config);
-			$this->data["users"] = $this->Daouser->all('SUPERVISOR', $this->limit);//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
+			//$this->data["users"] = $this->Daouser->all('SUPERVISOR', $this->limit);//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
+			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
 			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('ADMIN');
 			$this->load->view('users/supervisor_list', $this->data);
 		}
@@ -175,6 +176,7 @@
 	                'last_name'    => $this->input->post('lastname'),
 	                'company'      => $this->input->post('company'),
 	                'phone'        => $this->input->post('phone'),
+	                'position'     => $this->input->post('position'),
 	                'created_by'   => $this->ion_auth->get_user_id(),
 	                'photo'		   => $this->input->post('photo'),
 	                'remark'	   => $this->input->post('remark')
@@ -261,12 +263,17 @@
 			}
 			else{
 
-				//$user = $this->ion_auth->user($id)->row();
+				$user = $this->ion_auth->user($id)->row();
 				//$groups=$this->ion_auth->groups()->result_array();
 				//$currentGroups = $this->ion_auth->get_users_groups($id)->result();
 
 				// validate form input
-				//$this->form_validation->set_rules('code', 'Code is required and cannot duplicate with other.', 'trim|required|is_unique[' . $tables['users'] . '.code]');
+				if($this->input->post('code') != $user->code) {
+			       $is_unique_code =  '|is_unique[' . $tables['users'] . '.code]';
+			    } else {
+			       $is_unique_code =  '';
+			    }
+				$this->form_validation->set_rules('code', 'Code is required and cannot duplicate with other.', 'trim|required'.$is_unique_code);
 		        $this->form_validation->set_rules('gender', 'Gender is required.', 'required');
 		        if($this->input->post('group')==3){
 		        	$this->form_validation->set_rules('supervisor', 'Supervisor is required.', 'required');
@@ -276,6 +283,13 @@
 		        if($this->input->post('group')!=4){
 		        	$this->form_validation->set_rules('startworking', 'Start working is required.', 'required');
 		        }
+			    if($this->input->post('email') != $user->email) {
+			       $is_unique =  '|is_unique[' . $tables['users'] . '.email]';
+			    } else {
+			       $is_unique =  '';
+			    }
+		        $this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email'.$is_unique);
+
 		        $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
 		        $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
 				
@@ -289,14 +303,16 @@
 				if ($this->form_validation->run() === TRUE)
 				{
 					$data = array(
-						//'code'         => $this->input->post('code'),
+						'code'         => $this->input->post('code'),
 		            	'gender'       => $this->input->post('gender'),
+		            	'email'		   => $this->input->post('email'),
 		            	'parent_id'    => $this->input->post('supervisor'),
 		            	'starting_date'=> $this->input->post('startworking'),
 		                'first_name'   => $this->input->post('firstname'),
 		                'last_name'    => $this->input->post('lastname'),
 		                'company'      => $this->input->post('company'),
 		                'phone'        => $this->input->post('phone'),
+		                'position'     => $this->input->post('position'),
 		                'updated_by'   => $this->ion_auth->get_user_id(),
 		                'updated_date' => date('Y-m-d H:i:s'),
 		                'photo'		   => $this->input->post('photo'),
@@ -385,6 +401,12 @@
 		                'type'  => 'supervisor',
 		                'value' => $this->form_validation->set_value('supervisor'),
 		            );
+		            $this->data['email'] = array(
+		                'name'  => 'email',
+		                'id'    => 'email',
+		                'type'  => 'text',
+		                'value' => $this->form_validation->set_value('email'),
+	            	);
 		            echo json_encode($this->data);
 				}
 				

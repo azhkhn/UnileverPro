@@ -1,5 +1,7 @@
 $(function(){
 	
+	$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
+	$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
 	// TODO: CREATE USERS OBJECT
 	var users = {};
 
@@ -55,7 +57,7 @@ $(function(){
 				'email'    : $("#txtEmail").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
-				'startworking' : $("#startWorking").val(),
+				'startworking' : moment($("#startWorking").val()).format('YYYY-MM-DD'),
 				'remark'   : $("#txtRemark").val(),
 				'company'  : 'UNILEVER',
 				'photo'    : $("#photo").attr('src'),
@@ -85,7 +87,6 @@ $(function(){
 	});
 
 	// TODO: VIEW USER INFORMATION
-
 	$(document).on('click',"#btnView", function(){
 		var id = $(this).attr("data");
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
@@ -106,7 +107,7 @@ $(function(){
 				$("#txtTelephone").val(data.phone);
 				selectSupervisor.setValue(data.parent_id);
 				$("#txtEmail").val(data.email);
-				$("#startWorking").val(data.starting_date)
+				$("#startWorking").val(moment(data.starting_date).format('DD-MMMM-YYYY'));
 				$("#txtRemark").val(data.remark);
 				modal.hide();
 				$("#btnSave").hide();
@@ -148,7 +149,7 @@ $(function(){
 				$("#txtTelephone").val(data.phone);
 				selectSupervisor.setValue(data.parent_id);
 				$("#txtEmail").val(data.email);
-				$("#startWorking").val(data.starting_date)
+				$("#startWorking").val(moment(data.starting_date).format('DD-MMMM-YYYY'));
 				$("#txtRemark").val(data.remark);
 				modal.hide();
 				$("#btnSave").hide();
@@ -188,7 +189,7 @@ $(function(){
 				'email'    : $("#txtEmail").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
-				'startworking' : $("#startWorking").val(),
+				'startworking' : moment($("#startWorking").val()).format('YYYY-MM-DD'),
 				'remark'   : $("#txtRemark").val(),
 				'company'  : 'UNILEVER',
 				'photo'    : $("#photo").attr('src')
@@ -269,5 +270,7 @@ $(function(){
 		$("#btnSave").show();
 		$('.md-input-wrapper').find('.md-input').val('');
 		$('.md-input-wrapper').removeClass('md-input-filled');
+		$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
+		$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
 	});
 });
