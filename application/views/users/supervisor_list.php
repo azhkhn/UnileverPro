@@ -312,5 +312,6 @@
     </script>
 
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor_list.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

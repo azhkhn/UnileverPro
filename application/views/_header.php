@@ -112,8 +112,8 @@
                             <a href="#" class="user_action_image"><img class="md-user-image" src="<?php echo base_url('public/assets/img/avatars/avatar_11_tn.png')?>" alt=""/></a>
                             <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
                                 <ul class="uk-nav js-uk-prevent">
-<!--                                     <li><a href="page_user_profile.html">My profile</a></li>
-                                    <li><a href="page_settings.html">Settings</a></li> -->
+<!--                                     <li><a href="page_user_profile.html">My profile</a></li>-->
+                                    <li><a href="#" id="btnChangePasswordView" data-uk-modal="{target:'#modalChangePassword'}">Change Password</a></li> 
                                     <li><a href="<?php echo site_url('auth/logout') ?>">Logout</a></li>
                                 </ul>
                             </div>
@@ -129,4 +129,8 @@
                 <button class="header_main_search_btn uk-button-link"><i class="md-icon material-icons">&#xE8B6;</i></button>
             </form>
         </div>
+
+        <!-- change user password -->
+        <?php $this->load->view('changeuserpassword'); ?>
+        <!-- change user password end -->
     </header>

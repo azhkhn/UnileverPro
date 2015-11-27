@@ -13,7 +13,6 @@
 	<?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
     
-
     <div id="page_content">
         <div id="page_content_inner">
 
@@ -185,8 +184,9 @@
 					 
 		});
 	</script>
-    
-    
-    
+    <script>
+        var SITE_URL = '<?php echo site_url(); ?>';
+    </script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

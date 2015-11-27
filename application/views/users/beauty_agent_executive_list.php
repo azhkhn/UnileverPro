@@ -310,6 +310,6 @@
     </script>
 
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/ba_executive_list.js"></script>
-
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

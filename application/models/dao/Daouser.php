@@ -209,6 +209,6 @@
 			$query = $this->db->get ();
 			return $query->row();
 		}
-
+		
 	}
 ?>

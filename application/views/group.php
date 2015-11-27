@@ -199,5 +199,6 @@
         });
     </script>
 	<script type="text/javascript" src="<?php echo base_url()?>public/scripts/group.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>
