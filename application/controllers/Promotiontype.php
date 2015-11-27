@@ -15,7 +15,7 @@
 		}
 		
 		public function add(){
-			$this->load->view('addpromotionType');
+			$this->load->view('addpromotiontype');
 		}
 		
 		public function addingpro(){
@@ -24,22 +24,22 @@
 			$this->DtoPromotionType->setSize($this->input->post('size'));
 			$this->DtoPromotionType->setCreated_by(1);
 			$this->PromotionTypeDAO->addPromotiontype($this->DtoPromotionType);
-			redirect("promotionType");
+			redirect("promotiontype");
 		}
 		
 		public function listpro(){
 			$data['lists'] = $this->PromotionTypeDAO->listPromotiontypes();
-			$this->load->view('promotionType', $data);
+			$this->load->view('promotiontype', $data);
 		}
 		
 		public function deletepro($id){
 			$this->PromotionTypeDAO->deletePromotiontype($id);
-			redirect('promotionType');
+			redirect('promotiontype');
 		}
 
 		public function getpro($id){
 			$data['getpro'] = $this->PromotionTypeDAO->getPromotiontype($id);
-			$this->load->view('addpromotionType', $data);
+			$this->load->view('addpromotiontype', $data);
 		}
 
 		public function updatepro($id){
@@ -50,7 +50,7 @@
 			$this->DtoPromotionType->setUpdated_by(1);
 			
 			$this->PromotionTypeDAO->updatePromotiontype($this->DtoPromotionType);
-			redirect('promotionType');
+			redirect('promotiontype');
 			
 		}
 	
