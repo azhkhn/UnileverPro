@@ -4,7 +4,7 @@ $(function(){
         modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
         var id = $(this).attr('data');
         $.ajax({
-            url: SITE_URL+'user/changeuserpassword/'+id,
+            url: SITE_URL+'changepassword',
             type: "POST",
             dataType: "JSON",
             data:{
