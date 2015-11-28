@@ -78,6 +78,9 @@
 
     <!-- altair login page functions -->
     <script src="<?php echo base_url()?>public/assets/js/pages/login_page.min.js"></script>
-
+    <script>
+        var SITE_URL = '<?php echo site_url(); ?>';
+    </script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

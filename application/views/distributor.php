@@ -124,11 +124,12 @@
     
     <!-- enable hires images -->
     <script>
+        var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
             $("#vu-table").DataTable();
            altair_helpers.retina_images();
         });
     </script>
-
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

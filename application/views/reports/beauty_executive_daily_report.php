@@ -303,6 +303,6 @@
     </script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/ba_executive_report.js"></script>
-
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

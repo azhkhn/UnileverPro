@@ -240,9 +240,7 @@
         });
     </script>
     </script>
-
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/brand.js"></script>
-
-
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

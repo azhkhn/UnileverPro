@@ -46,6 +46,9 @@
 		public function getAllUsersByGroupName($name=''){
 			if($this->ion_auth->in_group('SUPERVISOR')){
 				$this->db->select("A.id,
+								   A.code,
+								   DATE_FORMAT(A.starting_date,'%d/%M/%Y'),
+								   A.position,
 								   B.group_id,
 								   C.name AS group_name,
 								   A.first_name, 
@@ -69,6 +72,9 @@
 				return $query->result();
 			}else{
 				$this->db->select("A.id,
+								   A.code,
+								   DATE_FORMAT(A.starting_date,'%d/%M/%Y'),
+								   A.position,
 								   B.group_id,
 								   C.name AS group_name,
 								   A.first_name, 
@@ -96,6 +102,7 @@
 			$this->db->select("A.id,
 							   A.code,
 							   B.group_id,
+							   A.position,
 							   C.name AS group_name,
 							   A.first_name, 
 							   A.last_name, 
@@ -132,6 +139,7 @@
 		public function getAllUsersByGroupId($id=3){
 			if($this->ion_auth->in_group('SUPERVISOR')){
 				$this->db->select("A.id,
+								   A.code,
 								   B.group_id,
 								   C.name AS group_name,
 								   CONCAT(A.last_name, ' ', A.first_name) AS username, 
@@ -150,6 +158,7 @@
 				return $query->result();
 			}else{
 				$this->db->select("A.id,
+								   A.code,
 								   B.group_id,
 								   C.name AS group_name,
 								   CONCAT(A.last_name, ' ', A.first_name) AS username, 
@@ -200,6 +209,6 @@
 			$query = $this->db->get ();
 			return $query->row();
 		}
-
+		
 	}
 ?>

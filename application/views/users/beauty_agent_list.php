@@ -75,10 +75,13 @@
                                     <thead>
                                         <tr>
                                             <th>Image</th>
+                                            <th>Code</th>
                                             <th>Full Name</th>
                                             <th>Gender</th>
                                             <th>Email</th>
                                             <th>Telephone</th>
+                                            <th>Position</th>
+                                            <th>Start Working</th>
                                             <th>Supervisor</th>
                                             <th>Remark</th>
                                             <th>Active</th>
@@ -89,7 +92,8 @@
                                     	<?php foreach ($users as $user):?>
                                         <tr>
                                             <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
-                                            <td class="uk-text-large uk-text-nowrap"><a href="<?php echo base_url('user/dailybareport/'.$user->id) ?>"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
+                                            <td><strong><?php echo $user->code ?></strong></td>
+                                            <td class="uk-text-large uk-text-nowrap"><a href="javascript:;"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
                                             <td class="uk-text-nowrap">
                                                 <?php if($user->gender=="M")  
                                                             echo "Male";
@@ -99,6 +103,8 @@
                                             </td>
                                             <td><?php echo $user->email ?></td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->phone ?></span></td>
+                                            <td style="text-align:center;"><?php echo $user->position ?></td>
+                                            <td><?php echo $user->starting_date ?></td>
                                             <td>
                                                 <?php echo $user->supervisor ?>
                                             </td>
@@ -218,6 +224,10 @@
                                         </div>
                                         <div class="uk-width-large-1-2">
                                             <div class="uk-form-row">
+                                                <label for="email" >Position</label>
+                                                <input type="text" name="txtPosition" id="txtPosition" data-parsley-trigger="change" required  class="md-input" />
+                                            </div>
+                                            <div class="uk-form-row">
                                                 <label for="email" >Email<span class="req">*</span></label>
                                                 <input type="email" name="email" id="txtEmail" data-parsley-trigger="change" required  class="md-input" />
                                             </div>
@@ -238,7 +248,7 @@
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="remark" >Remark</label>
-                                                <textarea class="md-input" name="remark" id="txtRemark" cols="30" rows="5"></textarea>
+                                                <textarea class="md-input" name="remark" id="txtRemark" cols="30" rows="2"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -359,9 +369,8 @@
             altair_helpers.retina_images();
         });
     </script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/beauty_agent_list.js">
     </script>
-
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

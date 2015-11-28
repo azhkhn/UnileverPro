@@ -169,7 +169,6 @@
     <!-- right sidebar -->
     <?php $this->load->view('_rightside') ?>    
     <!-- right sidebar end -->
-
     
     <!-- google web fonts -->
     <script>
@@ -231,10 +230,12 @@
     
     <!-- enable hires images -->
     <script>
+        var SITE_URL = '<?php echo site_url() ?>';
         $(function() {
             altair_helpers.retina_images();
         });
     </script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 
 </body>
 </html>

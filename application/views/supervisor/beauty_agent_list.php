@@ -361,8 +361,7 @@
         });
     </script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/beauty_agent_list.js">
-    </script>
-
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/beauty_agent_list.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>
