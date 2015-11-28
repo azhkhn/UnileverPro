@@ -26,7 +26,7 @@ class Outlet extends ADMIN_Controller{
 			$this->DtoOutlets->setName($this->input->post('name'));
 			$this->DtoOutlets->setAddress($this->input->post('address'));
 			$this->DtoOutlets->setBa_id($this->input->post('ba_id'));
-			$this->DtoOutlets->setCreated_by(1);
+			$this->DtoOutlets->setCreated_by($this->ion_auth->get_user_id());
 			
 			$this->OutletsDAO->addOutlet($this->DtoOutlets);
 			redirect("outlet");
@@ -56,7 +56,7 @@ class Outlet extends ADMIN_Controller{
 			$this->DtoOutlets->setName($this->input->post('name'));
 			$this->DtoOutlets->setAddress($this->input->post('address'));
 			$this->DtoOutlets->setBa_id($this->input->post('ba_id'));
-			$this->DtoOutlets->setUpdated_by(1);
+			$this->DtoOutlets->setUpdated_by($this->ion_auth->get_user_id());
 			
 			$this->OutletsDAO->updateOutlet($this->DtoOutlets);
 			redirect('outlet');
@@ -75,6 +75,10 @@ class Outlet extends ADMIN_Controller{
 
 		public function listoutlettypejson(){
 			$result = $this->OutletsDAO->listoutlettypes();
+			$this->output->set_content_type('application/json')->set_output(json_encode($result));
+		}
+		public function listbajson(){
+			$result = $this->OutletsDAO->listbas();
 			$this->output->set_content_type('application/json')->set_output(json_encode($result));
 		}
 }

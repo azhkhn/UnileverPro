@@ -21,7 +21,7 @@ class Distributor extends ADMIN_Controller{
 		public function addingpro(){
 			$this->DtoDistributors->setName($this->input->post('name'));
 			$this->DtoDistributors->setDescription($this->input->post('description'));
-			$this->DtoDistributors->setCreated_by(1);
+			$this->DtoDistributors->setCreated_by($this->ion_auth->get_user_id());
 			$this->DistributorsDAO->addDistributor($this->DtoDistributors);
 			redirect("distributor");
 		}
@@ -45,7 +45,7 @@ class Distributor extends ADMIN_Controller{
 			$this->DtoDistributors->setId($id);
 			$this->DtoDistributors->setName($this->input->post('name'));
 			$this->DtoDistributors->setDescription($this->input->post('description'));
-			$this->DtoDistributors->setUpdated_by(1);
+			$this->DtoDistributors->setUpdated_by($this->ion_auth->get_user_id());
 			
 			$this->DistributorsDAO->updateDistributor($this->DtoDistributors);
 			redirect('distributor');

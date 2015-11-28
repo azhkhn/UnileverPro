@@ -21,7 +21,7 @@
 		public function addingpro(){
 			$this->DtoChannels->setName($this->input->post('name'));
 			$this->DtoChannels->setDescription($this->input->post('description'));
-			$this->DtoChannels->setCreated_by(1);
+			$this->DtoChannels->setCreated_by($this->ion_auth->get_user_id());
 			$this->ChannelDAO->addChannel($this->DtoChannels);
 			redirect("channel");
 		}
@@ -45,7 +45,7 @@
 			$this->DtoChannels->setId($id);
 			$this->DtoChannels->setName($this->input->post('name'));
 			$this->DtoChannels->setDescription($this->input->post('description'));
-			$this->DtoChannels->setUpdated_by(1);
+			$this->DtoChannels->setUpdated_by($this->ion_auth->get_user_id());
 			
 			$this->ChannelDAO->updateChannel($this->DtoChannels);
 			redirect('channel');

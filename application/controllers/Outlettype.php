@@ -21,7 +21,7 @@ class OutletType extends ADMIN_Controller{
 		public function addingpro(){
 			$this->DtoOutletTypes->setName($this->input->post('name'));
 			$this->DtoOutletTypes->setDescription($this->input->post('description'));
-			$this->DtoOutletTypes->setCreated_by(1);
+			$this->DtoOutletTypes->setCreated_by($this->ion_auth->get_user_id());
 			$this->OutletTypesDAO->addOutlettype($this->DtoOutletTypes);
 			redirect("outlettype");
 		}
@@ -45,7 +45,7 @@ class OutletType extends ADMIN_Controller{
 			$this->DtoOutletTypes->setId($id);
 			$this->DtoOutletTypes->setName($this->input->post('name'));
 			$this->DtoOutletTypes->setDescription($this->input->post('description'));
-			$this->DtoOutletTypes->setUpdated_by(1);
+			$this->DtoOutletTypes->setUpdated_by($this->ion_auth->get_user_id());
 			
 			$this->OutletTypesDAO->updateOutlettype($this->DtoOutletTypes);
 			redirect('outlettype');

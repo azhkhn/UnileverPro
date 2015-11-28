@@ -22,7 +22,7 @@
 			$this->DtoPromotionType->setCode($this->input->post('code'));
 			$this->DtoPromotionType->setName($this->input->post('name'));
 			$this->DtoPromotionType->setSize($this->input->post('size'));
-			$this->DtoPromotionType->setCreated_by(1);
+			$this->DtoPromotionType->setCreated_by($this->ion_auth->get_user_id());
 			$this->PromotionTypeDAO->addPromotiontype($this->DtoPromotionType);
 			redirect("promotiontype");
 		}
@@ -47,7 +47,7 @@
 			$this->DtoPromotionType->setCode($this->input->post('code'));
 			$this->DtoPromotionType->setName($this->input->post('name'));
 			$this->DtoPromotionType->setSize($this->input->post('size'));
-			$this->DtoPromotionType->setUpdated_by(1);
+			$this->DtoPromotionType->setUpdated_by($this->ion_auth->get_user_id());
 			
 			$this->PromotionTypeDAO->updatePromotiontype($this->DtoPromotionType);
 			redirect('promotiontype');

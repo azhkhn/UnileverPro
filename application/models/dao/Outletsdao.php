@@ -86,5 +86,18 @@
 			$query = $this->db->get();
 			return $query->result();
 		}
+		
+		public function listbas(){
+			$this->db->select('g.user_id as ba_id, u.first_name');
+			$this->db->from('users_groups g');
+			$this->db->join('users u','g.user_id = u.id', 'LEFT');
+			$this->db->where('g.group_id' , 3);
+			$this->db->order_by("g.user_id", "desc");
+			$query = $this->db->get();
+			return $query->result();
+			
+		}
+		
+		
 	}
 ?>
