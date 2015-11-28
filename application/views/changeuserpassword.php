@@ -17,8 +17,7 @@
                             <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                 <div class="uk-width-large">
                                     <div class="uk-form-row">
-                                        <label for="email" >Email<span class="req">*</span></label>
-                                        <input type="email" name="txtEmailChangePassword" id="txtEmailChangePassword" data-parsley-trigger="change" required  readonly="readonly" class="md-input" value="<?php echo $this->ion_auth->user()->row()->email;?>"/>
+                                        <label for="email" >Email: <span class="req"><strong><?php echo $this->ion_auth->user()->row()->email;?></strong></span></label>
                                     </div>
                                     <div class="uk-form-row">
                                         <label for="password" >Password<span class="req">*</span></label>
