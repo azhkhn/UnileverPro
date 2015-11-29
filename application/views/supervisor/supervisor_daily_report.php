@@ -60,9 +60,9 @@
                                                         <div class="uk-overflow-container">
                                                             <table class="uk-table uk-text-nowrap">
                                                             <tbody id="CONTENTS">
-                                                            <?php foreach ($ba_users as $user):?>
+                                                            <?php foreach ($ba_users as $u):?>
                                                                 <tr>
-                                                                    <td><?php echo $user->username ?></td>
+                                                                    <td><?php echo $u->username ?></td>
                                                                 </tr>
                                                             <?php endforeach;?>
                                                             </tbody>
@@ -78,8 +78,7 @@
                                             <div class="md-card">
                                                 <div class="md-card-content">
                                                     <div class="uk-margin-bottom uk-text-center uk-position-relative">
-                                                        
-                                                        <img src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge.jpg" alt="" class="img_medium" id="txtPhoto" />
+                                                        <img src="<?php echo $user->photo ?>" alt="" class="img_medium" id="txtPhoto" />
                                                     </div>
                                                 </div>
                                             </div>

@@ -116,6 +116,7 @@ $(function(){
 				modal.hide();
 				$("#btnSave").hide();
 				$("#btnUpdateSave").hide();
+				$("#photo").attr('src', data.photo);
 				var modalPopup = UIkit.modal("#modalRegisterNewBA");
 				if ( modalPopup.isActive() ) {
 				    modalPopup.hide();
@@ -163,6 +164,7 @@ $(function(){
 				$("#btnSave").hide();
 				$("#btnUpdateSave").attr('data',data.id);
 				$("#btnUpdateSave").show();
+				$("#photo").attr('src', data.photo);
 				var modalPopup = UIkit.modal("#modalRegisterNewBA");
 				if ( modalPopup.isActive() ) {
 				    modalPopup.hide();
@@ -282,7 +284,8 @@ $(function(){
 		$("#btnSave").show();
 		$('.md-input-wrapper').find('.md-input').val('');
 		$('.md-input-wrapper').removeClass('md-input-filled');
-		$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
 		$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
+		$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
+		$("#photo").attr('src', SITE_URL+"public/assets/img/ecommerce/s6_edge.jpg");
 	});
 });

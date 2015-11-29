@@ -144,7 +144,7 @@
                             <div class="md-card">
                                 <div class="md-card-toolbar">
                                     <div class="md-card-toolbar-actions">
-                                        <i class="md-icon material-icons">&#xE146;</i>
+                                        <i class="md-icon material-icons" data-uk-modal="{target:'#modalFileManager'}">&#xE146;</i>
                                     </div>
                                     <h3 class="md-card-toolbar-heading-text">
                                         Photo
@@ -152,7 +152,8 @@
                                 </div>
                                 <div class="md-card-content">
                                     <div class="uk-margin-bottom uk-text-center uk-position-relative">
-                                        <img id="photo" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge.jpg" alt="" class="img_medium"/>
+                                        <input type="hidden" name="txtPhoto" id="txtPhoto" onchange="photoChange()">
+                                        <img src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge.jpg" alt="" class="img_medium" id="photo"/>
                                     </div>
                                 </div>
                             </div>
@@ -246,6 +247,21 @@
         </a>
     </div>
 
+    <!-- code for popup file manager -->        
+    <div class="uk-modal" id="modalFileManager">
+        <div class="uk-modal-dialog uk-modal-dialog-large">
+          <button type="button" class="uk-modal-close uk-close"></button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">File Manager</h4>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="500" src="<?php echo base_url(); ?>public/responsivefilemanager/filemanager/dialog.php?type=2&field_id=txtPhoto&fldr=" frameborder="0" style="overflow: scroll; overflow-x: hidden; overflow-y: scroll;"></iframe>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <!-- google web fonts -->
     <script>
         WebFontConfig = {
@@ -307,6 +323,16 @@
             $("#BAExecutive_table").DataTable();
             altair_helpers.retina_images();
         });
+        // TODO: CHANGE ON PHOTO
+        function photoChange(){
+            $("#photo").attr('src', $("#txtPhoto").val());
+            var modalPopup = UIkit.modal("#modalFileManager");
+            if ( modalPopup.isActive() ) {
+                modalPopup.hide();
+            }
+            var modalBAExecutiveAddNew = UIkit.modal("#modalBAExecutiveAddNew");
+            modalBAExecutiveAddNew.show();
+        };
     </script>
 
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/ba_executive_list.js"></script>

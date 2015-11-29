@@ -100,6 +100,7 @@ $(function(){
 				var $selectSupervisor = $("#selectSupervisor").selectize();
 				var selectSupervisor = $selectSupervisor[0].selectize;
 				console.log(data);
+				$("#photo").attr('src', data.photo);
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
@@ -142,6 +143,7 @@ $(function(){
 				var $selectSupervisor = $("#selectSupervisor").selectize();
 				var selectSupervisor = $selectSupervisor[0].selectize;
 				console.log(data);
+				$("#photo").attr('src', data.photo);
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
@@ -270,7 +272,8 @@ $(function(){
 		$("#btnSave").show();
 		$('.md-input-wrapper').find('.md-input').val('');
 		$('.md-input-wrapper').removeClass('md-input-filled');
-		$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
 		$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
+		$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
+		$("#photo").attr('src', SITE_URL+"public/assets/img/ecommerce/s6_edge.jpg");
 	});
 });

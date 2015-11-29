@@ -109,7 +109,7 @@
                             </div>
                         </li> -->
                         <li data-uk-dropdown="{mode:'click'}">
-                            <a href="#" class="user_action_image"><img class="md-user-image" src="<?php echo base_url('public/assets/img/avatars/avatar_11_tn.png')?>" alt=""/></a>
+                            <a href="#" class="user_action_image"><img class="md-user-image" src="<?php echo $this->ion_auth->user()->row()->photo;?>" alt=""/></a>
                             <div class="uk-dropdown uk-dropdown-small uk-dropdown-flip">
                                 <ul class="uk-nav js-uk-prevent">
 <!--                                     <li><a href="page_user_profile.html">My profile</a></li>-->
