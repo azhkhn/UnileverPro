@@ -88,7 +88,7 @@
                                     <tbody>
                                     	<?php foreach ($users as $user):?>
                                         <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
+                                            <td><img class="img_thumb" src="<?php echo $user->photo?>" alt="" style="width:50px; height:50px"></td>
                                             <td><strong><?php echo $user->code ?></strong></td>
                                             <td class="uk-text-large uk-text-nowrap"><a href="javascript:;"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
                                             <td class="uk-text-nowrap">

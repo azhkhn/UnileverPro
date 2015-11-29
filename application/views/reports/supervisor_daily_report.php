@@ -103,7 +103,6 @@
                                             <div class="md-card">
                                                 <div class="md-card-content">
                                                     <div class="uk-margin-bottom uk-text-center uk-position-relative">
-                                                        
                                                         <img src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge.jpg" alt="" class="img_medium" id="txtPhoto" />
                                                     </div>
                                                 </div>
