@@ -52,7 +52,7 @@ $(function(){
 				'gender'   : $("#selectGender").val(),
 				'phone'    : $("#txtTelephone").val(),
 				//'supervisor' : $("#selectSupervisor").val(),
-				'email'    : $("#txtEmail").val(),
+				'username'    : $("#txtUsername").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
 				'startworking' : $("#startWorking").val(),
@@ -101,7 +101,7 @@ $(function(){
 				$("#txtFirstName").val(data.first_name);
 				selectize.setValue(data.gender);
 				$("#txtTelephone").val(data.phone);
-				$("#txtEmail").val(data.email);
+				$("#txtUsername").val(data.email);
 				$("#startWorking").val(data.starting_date)
 				$("#txtRemark").val(data.remark);
 				modal.hide();
@@ -141,7 +141,7 @@ $(function(){
 				//$("#selectGender").val(data.gender);
 				selectize.setValue(data.gender);
 				$("#txtTelephone").val(data.phone);
-				$("#txtEmail").val(data.email);
+				$("#txtUsername").val(data.email);
 				$("#startWorking").val(data.starting_date)
 				$("#txtRemark").val(data.remark);
 				modal.hide();
@@ -179,7 +179,7 @@ $(function(){
 				'gender'   : $("#selectGender").val(),
 				'phone'    : $("#txtTelephone").val(),
 				'supervisor' : $("#selectSupervisor").val(),
-				'email'    : $("#txtEmail").val(),
+				'username'    : $("#txtUsername").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
 				'startworking' : $("#startWorking").val(),

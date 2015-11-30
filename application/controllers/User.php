@@ -139,12 +139,12 @@
 	        $this->form_validation->set_rules('lastname', $this->lang->line('create_user_validation_lname_label'), 'required');
 	        if($identity_column!=='email')
 	        {
-	            $this->form_validation->set_rules('identity',$this->lang->line('create_user_validation_identity_label'),'required|is_unique['.$tables['users'].'.'.$identity_column.']');
-	            $this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email');
+	            $this->form_validation->set_rules('username','Username is required.','required|is_unique['.$tables['users'].'.'.$identity_column.']');
+	            //$this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email');
 	        }
 	        else
 	        {
-	            $this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email|is_unique[' . $tables['users'] . '.email]');
+	            //$this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email|is_unique[' . $tables['users'] . '.email]');
 	        }
 	        $this->form_validation->set_rules('code', 'Code is required and cannot duplicate with other.', 'trim|required|is_unique[' . $tables['users'] . '.code]');
 	        $this->form_validation->set_rules('gender', 'Gender is required.', 'required');
@@ -164,7 +164,7 @@
 	        if ($this->form_validation->run() == true)
 	        {
 	            $email    = strtolower($this->input->post('email'));
-	            $identity = ($identity_column==='email') ? $email : $this->input->post('identity');
+	            $identity = ($identity_column==='email') ? $email : $this->input->post('username');
 	            $password = $this->input->post('password');
 
 	            $additional_data = array(
@@ -209,19 +209,18 @@
 	                'type'  => 'text',
 	                'value' => $this->form_validation->set_value('last_name'),
 	            );
-	            $this->data['identity'] = array(
-	                'name'  => 'identity',
-	                'id'    => 'identity',
+	            $this->data['username'] = array(
+	                'name'  => 'username',
+	                'id'    => 'username',
 	                'type'  => 'text',
-	                'value' => $this->form_validation->set_value('identity
-	                '),
+	                'value' => $this->form_validation->set_value('username'),
 	            );
-	            $this->data['email'] = array(
+	            /*$this->data['email'] = array(
 	                'name'  => 'email',
 	                'id'    => 'email',
 	                'type'  => 'text',
 	                'value' => $this->form_validation->set_value('email'),
-	            );
+	            );*/
 	            $this->data['company'] = array(
 	                'name'  => 'company',
 	                'id'    => 'company',
@@ -283,12 +282,12 @@
 		        if($this->input->post('group')!=4){
 		        	$this->form_validation->set_rules('startworking', 'Start working is required.', 'required');
 		        }
-			    if($this->input->post('email') != $user->email) {
-			       $is_unique =  '|is_unique[' . $tables['users'] . '.email]';
+			    if($this->input->post('username') != $user->username) {
+			       $is_unique =  '|is_unique[' . $tables['users'] . '.username]';
 			    } else {
 			       $is_unique =  '';
 			    }
-		        $this->form_validation->set_rules('email', $this->lang->line('create_user_validation_email_label'), 'required|valid_email'.$is_unique);
+		        $this->form_validation->set_rules('username', 'Username is required', 'required'.$is_unique);
 
 		        $this->form_validation->set_rules('phone', $this->lang->line('create_user_validation_phone_label'), 'trim');
 		        $this->form_validation->set_rules('company', $this->lang->line('create_user_validation_company_label'), 'trim');
@@ -305,7 +304,7 @@
 					$data = array(
 						'code'         => $this->input->post('code'),
 		            	'gender'       => $this->input->post('gender'),
-		            	'email'		   => $this->input->post('email'),
+		            	'username'	   => $this->input->post('username'),
 		            	'parent_id'    => $this->input->post('supervisor'),
 		            	'starting_date'=> $this->input->post('startworking'),
 		                'first_name'   => $this->input->post('firstname'),
@@ -371,11 +370,11 @@
 		                'type'  => 'text',
 		                'value' => $this->form_validation->set_value('code'),
 		            );
-		            $this->data['email'] = array(
-		                'name'  => 'email',
-		                'id'    => 'email',
+		            $this->data['username'] = array(
+		                'name'  => 'username',
+		                'id'    => 'username',
 		                'type'  => 'text',
-		                'value' => $this->form_validation->set_value('email'),
+		                'value' => $this->form_validation->set_value('username'),
 		            );
 		            $this->data['company'] = array(
 		                'name'  => 'company',
@@ -401,12 +400,6 @@
 		                'type'  => 'supervisor',
 		                'value' => $this->form_validation->set_value('supervisor'),
 		            );
-		            $this->data['email'] = array(
-		                'name'  => 'email',
-		                'id'    => 'email',
-		                'type'  => 'text',
-		                'value' => $this->form_validation->set_value('email'),
-	            	);
 		            echo json_encode($this->data);
 				}
 				

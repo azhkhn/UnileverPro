@@ -78,7 +78,7 @@
                                             <th>Code</th>
                                             <th>Full Name</th>
                                             <th>Gender</th>
-                                            <th>Email</th>
+                                            <th>Username</th>
                                             <th>Telephone</th>
                                             <th>Remark</th>
                                             <th>Active</th>
@@ -98,7 +98,7 @@
                                                             echo "Female";
                                                 ?>
                                             </td>
-                                            <td><?php echo $user->email ?></td>
+                                            <td><?php echo $user->username ?></td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->phone ?></span></td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->remark ? $user->remark : "No Remark"; ?></span></td>
                                             <td>
@@ -204,8 +204,8 @@
                                         </div>
                                         <div class="uk-width-large-1-2">
                                             <div class="uk-form-row">
-                                                <label for="email" class="uk-form-label">Email<span class="req">*</span></label>
-                                                <input type="email" name="txtEmail" id="txtEmail" data-parsley-trigger="change" required  class="md-input" />
+                                                <label for="txtUsername" class="uk-form-label">Username<span class="req">*</span></label>
+                                                <input type="text" name="txtUsername" id="txtUsername" data-parsley-trigger="change" required  class="md-input" />
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="product_edit_memory_control" class="uk-form-label">Password<span class="req">*</span></label>

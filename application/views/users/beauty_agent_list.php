@@ -1,9 +1,9 @@
-		
-	<!-- main header -->
-	<?php $this->load->view('_include') ?>  
+        
+    <!-- main header -->
+    <?php $this->load->view('_include') ?>  
      <!-- /main header end -->
      
-		<!-- additional styles for plugins -->
+        <!-- additional styles for plugins -->
         <!-- weather icons -->
         <link rel="stylesheet" href="<?php echo base_url('public/bower_components/weather-icons/css/weather-icons.min.css') ?>" media="all">
         <!-- metrics graphics (charts) -->
@@ -14,12 +14,12 @@
 
 </head>
 <body>
-	<!--  header -->
-	<?php $this->load->view('_header') ?>  
+    <!--  header -->
+    <?php $this->load->view('_header') ?>  
      <!-- / header end -->
  
     <!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
+    <?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
 
     <div id="page_content">
@@ -78,7 +78,7 @@
                                             <th>Code</th>
                                             <th>Full Name</th>
                                             <th>Gender</th>
-                                            <th>Email</th>
+                                            <th>Username</th>
                                             <th>Telephone</th>
                                             <th>Position</th>
                                             <th>Start Working</th>
@@ -89,7 +89,7 @@
                                         </tr>
                                     </thead>
                                     <tbody id="CONTENTS">
-                                    	<?php foreach ($users as $user):?>
+                                        <?php foreach ($users as $user):?>
                                         <tr>
                                             <td><img class="img_thumb" src="<?php echo $user->photo?>" alt="" style="width:50px; height:50px"></td>
                                             <td><strong><?php echo $user->code ?></strong></td>
@@ -118,7 +118,7 @@
                                                 <a title="Delete" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE872;</i></a>
                                             </td>
                                         </tr>
-                                       	<?php endforeach;?>
+                                        <?php endforeach;?>
                                     </tbody>
                                 </table>
                             </div>
@@ -133,9 +133,6 @@
                                 <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
                             </ul> -->
                             <!-- <div id="PAGINATION">
-                            <?php
-                               echo $page_links;
-                            ?>
                             </div> -->
                         </div>
                     </div>
@@ -151,7 +148,7 @@
                 <div class="uk-modal-header">
                     <h3 class="uk-modal-title">REGISTER A NEW BEAUTY AGENT</h3>
                 </div>
-                <form action="" class="uk-form-stacked" id="frmAddNewBeautyAgent">
+                <form class="uk-form-stacked" id="frmAddNewBeautyAgent" method="POST">
                     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
                         <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
                             <div class="md-card">
@@ -229,8 +226,8 @@
                                                 <input type="text" name="txtPosition" id="txtPosition" data-parsley-trigger="change" required  class="md-input" />
                                             </div>
                                             <div class="uk-form-row">
-                                                <label for="email" >Email<span class="req">*</span></label>
-                                                <input type="email" name="email" id="txtEmail" data-parsley-trigger="change" required  class="md-input" />
+                                                <label for="txtUsername" >Username<span class="req">*</span></label>
+                                                <input type="text" name="txtUsername" id="txtUsername" data-parsley-trigger="change" required  class="md-input" />
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="password" >Password<span class="req">*</span></label>
@@ -285,7 +282,7 @@
     <?php 
     if($this->ion_auth->in_group('ADMIN')){ ?>
         <div class="md-fab-wrapper">
-            <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalRegisterNewBA'}">
+            <a class="md-fab md-fab-primary" href="javascript:;" id="btnOpenAddNew" data-uk-modal="{target:'#modalRegisterNewBA'}">
                 <i class="material-icons">&#xE145;</i>
             </a>
         </div>
@@ -385,6 +382,10 @@
             altair_helpers.retina_images();
 
         });
+    </script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/beauty_agent_list.js"></script>
+    <script type="text/javascript">
         // TODO: CHANGE ON PHOTO
         function photoChange(){
             $("#photo").attr('src', $("#txtPhoto").val());
@@ -396,7 +397,5 @@
             modalPopupRegisterBA.show();
         };
     </script>
-    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/beauty_agent_list.js"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

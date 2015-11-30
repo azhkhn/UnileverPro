@@ -37,8 +37,8 @@
                 </div>
                 <form action="<?php echo base_url('auth/login')?>" method="POST">
                     <div class="uk-form-row">
-                        <label for="identity">Email</label>
-                        <input type="email" name="identity" id="identity" data-parsley-trigger="change" required="" class="md-input" data-parsley-id="4">
+                        <label for="identity">Username</label>
+                        <input type="text" name="identity" id="identity" data-parsley-trigger="change" required="" class="md-input" data-parsley-id="4">
                     </div>
                     <div class="uk-form-row">
                         <label for="password">Password</label>

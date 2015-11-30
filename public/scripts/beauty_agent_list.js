@@ -37,7 +37,7 @@ $(function(){
 	users.formatData = function(val){
         val['check'] = (val["active"] == 1) ? 'Check' : '';
         val['remark'] = ($.trim(val["remark"]) == "") ? 'No Remark' : val["remark"];
-    }
+    };
 
 	// TODO: ADD NEW USER
 	$("#frmAddNewBeautyAgent").submit(function(e){
@@ -55,7 +55,7 @@ $(function(){
 				'phone'    : $("#txtTelephone").val(),
 				'position' : $("#txtPosition").val(),
 				'supervisor' : $("#selectSupervisor").val(),
-				'email'    : $("#txtEmail").val(),
+				'username' : $("#txtUsername").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
 				'startworking' : moment($("#startWorking").val()).format('YYYY-MM-DD'),
@@ -108,7 +108,7 @@ $(function(){
 				$("#txtTelephone").val(data.phone);
 				selectSupervisor.setValue(data.parent_id);
 				$("#txtPosition").val(data.position);
-				$("#txtEmail").val(data.email);
+				$("#txtUsername").val(data.email);
 				$("#startWorking").val(moment(data.starting_date).format('DD-MMMM-YYYY'));
 				$("#txtRemark").val(data.remark);
 				$('#txtPassword').val('');
@@ -155,7 +155,7 @@ $(function(){
 				$("#txtTelephone").val(data.phone);
 				selectSupervisor.setValue(data.parent_id);
 				$("#txtPosition").val(data.position);
-				$("#txtEmail").val(data.email);
+				$("#txtUsername").val(data.email);
 				$("#startWorking").val(moment(data.starting_date).format('DD-MMMM-YYYY'))
 				$("#txtRemark").val(data.remark);
 				$('#txtPassword').val('');
@@ -198,7 +198,7 @@ $(function(){
 				'phone'    : $("#txtTelephone").val(),
 				'supervisor' : $("#selectSupervisor").val(),
 				'position' : $("#txtPosition").val(),
-				'email'    : $("#txtEmail").val(),
+				'username'    : $("#txtUsername").val(),
 				'password' : $("#txtPassword").val(),
 				'confirmpassword' : $("#txtConfirmationPassword").val(),
 				'startworking' : moment($("#startWorking").val()).format('YYYY-MM-DD'),

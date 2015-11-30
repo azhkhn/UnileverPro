@@ -4,7 +4,7 @@
         <div class="uk-modal-header">
             <h3 class="uk-modal-title">CHANGE PASSWORD</h3>
         </div>
-        <form action="" class="uk-form-stacked" id="frmAddNewBeautyAgent">
+        <form action="" class="uk-form-stacked">
             <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
                 <div class="uk-width-Large uk-width-large">
                     <div class="md-card">
@@ -17,7 +17,7 @@
                             <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                 <div class="uk-width-large">
                                     <div class="uk-form-row">
-                                        <label for="email" >Email: <span class="req"><strong><?php echo $this->ion_auth->user()->row()->email;?></strong></span></label>
+                                        <label for="email" >Username: <span class="req"><strong><?php echo $this->ion_auth->user()->row()->username;?></strong></span></label>
                                     </div>
                                     <div class="uk-form-row">
                                         <label for="password" >Password<span class="req">*</span></label>
