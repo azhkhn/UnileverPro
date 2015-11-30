@@ -48,12 +48,23 @@
                     <br/>
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-medium-1-4">                             
-                            <div class="uk-form-row">
+                            <!-- <div class="uk-form-row">
                                 <label>Distributor</label>
                                 <div class="uk-form-row">
                                      <input id="distributorid"  class="uk-form-width-medium"  />
                                 </div>
-                            </div> 
+                            </div> -->
+                            
+                            <div class="uk-form-row">
+								<label for="supervisor">Distributor</label>
+								<select id="distributorid" name="distributorid" data-md-selectize data-md-selectize-bottom>
+									<option>Choose</option>
+				                    
+				                </select>
+							</div>
+                            
+                            
+                            
                         </div>
                         <div class="uk-width-medium-1-4">                             
                             <div class="uk-form-row">
@@ -371,9 +382,9 @@
             <?php } ?>
         });
     </script>
-    <script>
-        var SITE_URL = '<?php echo site_url(); ?>';
-    </script>
-    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
+    
+    
+    
+    
 </body>
 </html>
