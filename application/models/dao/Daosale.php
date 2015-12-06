@@ -29,8 +29,9 @@
 								, A.photo
 								, DATE_FORMAT(F.start_date,'%d-%M-%Y') As start_date
 								, DATE_FORMAT(F.end_date,'%d-%M-%Y') As end_date
-								, F.target_achievement
-								, IFNUlL((F.target_achievement / TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY))),'0') As monthly_target,
+								, SUM(F.target_achievement) AS target_achievement
+								, IFNUlL(SUM(F.target_achievement),'0') As monthly_target,
+								, IFNULL(SUM(F.target_achievement/26),'0') AS today_target
 								, TIMESTAMPDIFF(MONTH, F.start_date, DATE_ADD(F.end_date, INTERVAL 1 DAY)) As number_of_months" 
 								, FALSE);
 			$this->db->from('users A');
@@ -38,8 +39,11 @@
 			$this->db->join('distributors C', 'B.distributor=C.id', 'LEFT');
 			$this->db->join('channels D', 'B.channel_id=D.id', 'LEFT');
 			$this->db->join('outlet_types E', 'B.outlet_type_id=E.id', 'LEFT');
-			$this->db->join('sale_targets F', 'F.ba_id = A.id AND F.status=1 AND F.end_date > NOW()', 'LEFT');
-			$this->db->where ('A.active', 1);
+			$this->db->join('sale_targets F', "F.ba_id = A.id AND F.status=1 
+										   AND F.end_date >= '". $Dtosale->getStartDate() . "' 
+										   AND F.start_date <= '". $Dtosale->getEndDate() ."' ", 'LEFT');
+			$this->db->where('A.active', 1);
+			$this->db->group_by('A.id');
 			if($dmsCode==0){
 				$this->db->where('A.id', $Dtosale->getBaId());
 			}else{
@@ -48,7 +52,6 @@
 			if($this->ion_auth->in_group('SUPERVISOR')){
 				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
 			}
-
 			$query = $this->db->get ();
 			return $query->row();
 		}
@@ -290,6 +293,174 @@
 				$this->db->trans_commit();
 				return TRUE;
 			}
+		}
+
+		public function getBAReport(Dtosale $sale){
+			$where = '';
+			if($sale->getDMSCode()){
+				$where = "O.dms_code = '".$sale->getDMSCode()."'";
+			}else{
+				$where = "U.id=".$sale->getBaId();
+			}
+			$query = $this->db->query("
+				SELECT U.id
+					 , U.photo
+					 , CONCAT(U.last_name,' ', U.first_name) username
+					 , CONCAT(U1.last_name,' ', U1.first_name) supervisor
+					 , CONCAT(U2.last_name,' ', U2.first_name) executive
+					 , O.address outlet_address
+					 , O.name outlet_name
+					 , O.dms_code
+					 , D.name distributor
+					 , C.name channel
+					 , OT.name customer_type
+					 , COALESCE(S1.sumachievement,0) sumachievement
+					 , COALESCE(S1.sumtarget,0) sumtarget
+					 , COALESCE(S1.sumtodaytarget,0) sumtodaytarget
+					 , COALESCE(S.dayachievement,0) today_achievement
+					 , COALESCE(S.monthachievement,0) month_achievement 
+					 , COALESCE(S.yearachievement,0) year_achievement
+					 , COALESCE((S.dayachievement / S1.sumtodaytarget) * 100 ,0) AS today_achievement_percent
+					 , COALESCE((S.monthachievement / S1.sumtarget) * 100 ,0) AS month_achievement_percent 
+					 , COALESCE((S.yearachievement / S.yeartarget ) * 100 ,0) AS year_achievement_percent
+					 , COALESCE(S.yeartarget,0)
+				FROM users U 
+				LEFT JOIN users U1 ON U.parent_id=U1.id 
+				LEFT JOIN users U2 ON U1.parent_id=U2.parent_id
+ 				LEFT JOIN outlets O ON U.id=O.ba_id
+ 				LEFT JOIN outlet_types OT ON OT.id = O.outlet_type_id
+ 				LEFT JOIN distributors D ON O.distributor=D.id 
+ 				LEFT JOIN channels C ON C.id=O.channel_id
+   				LEFT JOIN 
+  				(
+    				SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) sumachievement, sumtarget, sumtodaytarget
+    				FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+					INNER JOIN (
+        				SELECT ba_id, SUM(target_achievement) sumtarget , SUM(target_achievement/26) AS sumtodaytarget 
+        				FROM sale_targets 
+						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') 
+						GROUP BY ba_id
+      				) _ST ON _S.ba_id=_ST.ba_id
+    				WHERE (DATE(_S.sale_date) BETWEEN '".$sale->getStartDate()."' AND '".$sale->getEndDate()."')
+    				GROUP BY _S.ba_id
+  				) S1 ON U.id=S1.ba_id
+  				LEFT JOIN 
+  				(
+    				SELECT YS.ba_id, yearachievement, monthachievement, dayachievement, yeartarget
+    				FROM(
+      					SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) yearachievement
+      					FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+      					WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') 
+      					GROUP BY _S.ba_id
+    				) YS
+    				LEFT JOIN(
+      					SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) monthachievement
+      					FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+      					WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00')
+      					GROUP BY _S.ba_id
+    				) MS ON YS.ba_id=MS.ba_id
+    				LEFT JOIN(
+      					SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) dayachievement
+      					FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+      					WHERE (DATE(_S.sale_date)=DATE(NOW()))
+      					GROUP BY _S.ba_id
+    				) DS ON YS.ba_id=DS.ba_id
+    				LEFT JOIN (
+        				SELECT ba_id, SUM(target_achievement) yeartarget 
+        				FROM sale_targets 
+        				WHERE (YEAR(start_date)=YEAR(NOW()) AND end_date<=NOW()) 
+        				GROUP BY ba_id
+    				) _ST ON YS.ba_id=_ST.ba_id
+  				) S ON U.id=S.ba_id
+			WHERE ".$where."
+			GROUP BY U.id");
+			return $query->row();
+		}
+
+		public function getSupervisorReport(Dtosale $sale){
+			$query = $this->db->query("
+				SELECT id
+					 , photo
+					 , supervisor
+					 , executive
+					 , SUM(COALESCE(sumachievement,0)) AS sumachievement
+					 , SUM(COALESCE(sumtodaytarget,0)) AS sumtodaytarget
+					 , SUM(COALESCE(sumtarget,0)) AS sumtarget
+					 , SUM(COALESCE(today_achievement,0)) AS today_achievement
+					 , SUM(COALESCE(month_achievement,0)) AS month_achievement
+					 , SUM(COALESCE(year_achievement,0)) AS year_achievement
+					 , SUM(COALESCE(today_achievement_percent,0)) AS today_achievement_percent
+					 , SUM(COALESCE(month_achievement_percent,0)) AS month_achievement_percent
+					 , SUM(COALESCE(year_achievement_percent,0)) AS year_achievement_percent
+					 , SUM(COALESCE(yeartarget,0)) AS yeartarget
+				FROM (
+					SELECT 
+						   U1.id
+						 , U1.photo
+						 , CONCAT(U1.last_name,' ', U1.first_name) supervisor
+						 , CONCAT(U2.last_name,' ', U2.first_name) executive
+						 , S1.sumachievement
+						 , S1.sumtarget
+						 , S1.sumtodaytarget
+						 , S.dayachievement today_achievement
+						 , S.monthachievement month_achievement 
+						 , S.yearachievement year_achievement
+						 , (S.dayachievement / S1.sumtodaytarget) * 100 AS today_achievement_percent
+						 , (S.monthachievement / S1.sumtarget) * 100 AS month_achievement_percent 
+						 , (S.yearachievement / S.yeartarget ) * 100 AS year_achievement_percent
+						 , S.yeartarget
+					FROM users U 
+					LEFT JOIN users U1 ON U.parent_id=U1.id 
+					LEFT JOIN users U2 ON U1.parent_id=U2.parent_id
+	 				LEFT JOIN outlets O ON U.id=O.ba_id
+	 				LEFT JOIN outlet_types OT ON OT.id = O.outlet_type_id
+	 				LEFT JOIN distributors D ON O.distributor=D.id 
+	 				LEFT JOIN channels C ON C.id=O.channel_id
+	   				LEFT JOIN 
+	  				(
+	    				SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) sumachievement, sumtarget, sumtodaytarget
+	    				FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+						INNER JOIN (
+	        				SELECT ba_id, SUM(target_achievement) sumtarget , SUM(target_achievement/26) AS sumtodaytarget 
+	        				FROM sale_targets 
+							WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') 
+							GROUP BY ba_id
+	      				) _ST ON _S.ba_id=_ST.ba_id
+	    				WHERE (DATE(_S.sale_date) BETWEEN '".$sale->getStartDate()."' AND '".$sale->getEndDate()."')
+	    				GROUP BY _S.ba_id
+	  				) S1 ON U.id=S1.ba_id
+	  				LEFT JOIN 
+	  				(
+	    				SELECT YS.ba_id, yearachievement, monthachievement, dayachievement, yeartarget
+	    				FROM(
+	      					SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) yearachievement
+	      					FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+	      					WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') 
+	      					GROUP BY _S.ba_id
+	    				) YS
+	    				LEFT JOIN(
+	      					SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) monthachievement
+	      					FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+	      					WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00')
+	      					GROUP BY _S.ba_id
+	    				) MS ON YS.ba_id=MS.ba_id
+	    				LEFT JOIN(
+	      					SELECT _S.ba_id, SUM(_SI.quantity*_SI.price) dayachievement
+	      					FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+	      					WHERE (DATE(_S.sale_date)=DATE(NOW()))
+	      					GROUP BY _S.ba_id
+	    				) DS ON YS.ba_id=DS.ba_id
+	    				LEFT JOIN (
+	        				SELECT ba_id, SUM(target_achievement) yeartarget 
+	        				FROM sale_targets 
+	        				WHERE (YEAR(start_date)=YEAR(NOW()) AND end_date<=NOW()) 
+	        				GROUP BY ba_id
+	    				) _ST ON YS.ba_id=_ST.ba_id
+	  				) S ON U.id=S.ba_id
+				WHERE U1.id=".$sale->getBaId()."
+				GROUP BY U.id) BA
+			GROUP BY id, supervisor, executive, photo");
+			return $query->row();
 		}
 	}
 ?>

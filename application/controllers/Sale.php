@@ -17,9 +17,19 @@
 		}
 
 		public function index(){
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtosale');
+			$this->data["products"] = $this->Daosale->getAllProducts();
+			$this->load->view('sale', $this->data);
+
+		}
+
+		public function onChange(){
 			$user = $this->ion_auth->user()->row();
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtosale');
+			$this->Dtosale->setStartDate($this->input->post("start_date"));
+			$this->Dtosale->setEndDate($this->input->post("end_date"));
 			$this->Dtosale->setBaId($user->id);
 			$this->Dtosale->setOutletId($this->input->post('outlet_id'));
 			$this->Dtosale->setSaleDate(date('Y-m-d'));
@@ -31,14 +41,22 @@
 			$this->data["sale_archievement_year_to_date"] = $this->Daosale->getSaleArchievement($this->Dtosale,2);
 
 			//$this->data["sale_archievement"] = $this->Daosale->getSaleArchievement($this->Dtosale);
-			$this->data["products"] = $this->Daosale->getAllProducts();
+			//$this->data["products"] = $this->Daosale->getAllProducts();
 			/*$total_rows = $this->Daosale->count($this->Dtosale); 
 			$this->load->helper('app');
 			$this->data["page_links"] = pagination($total_rows, 15,'sale/ajax', 3);
 			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale);*/
 			//var_dump($this->data["sales"]);
-			$this->load->view('sale', $this->data);
 
+			//$user = $this->ion_auth->user()->row();
+			//$this->Dtosale->setBaId($user->id);
+			//$this->Dtosale->setOutletId($this->input->post('outlet_id'));
+			//$this->Dtosale->setSaleDate($this->input->post('sale_date'));
+			$total_rows = $this->Daosale->count($this->Dtosale); 
+			$this->load->helper('app');
+			$this->data["page_links"] = pagination($total_rows, 15);
+			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale, 15,'sale/ajax', 3);
+			echo json_encode($this->data);
 		}
 
 		public function ajax(){

@@ -14,7 +14,25 @@ class Dtosale{
 	private $status;
 	private $deleted_at;
 	private $dmsCode;
+	private $startDate;
+	private $endDate;
 	
+	public function setStartDate($startDate){
+		$this->startDate = $startDate;
+	}
+
+	public function getStartDate(){
+		return $this->startDate;
+	}
+
+	public function setEndDate($endDate){
+		$this->endDate = $endDate;
+	}
+
+	public function getEndDate(){
+		return $this->endDate;
+	}
+
 	public function getId(){
 		return $this->id;
 	}

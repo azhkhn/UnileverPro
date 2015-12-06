@@ -21,7 +21,7 @@
     <!-- left side bar -->
     <?php //$this->load->view('_leftside') ?>    
     <!-- /left side bar -->
-    <input type="text" style="display:none;" class="md-input" id="txtOutletId" name="txtOutletId" value="<?php echo $user->outlet_id ?>" readonly="readonly"/>
+    <input type="text" style="display:none;" class="md-input" id="txtOutletId" name="txtOutletId" readonly="readonly"/>
     <div id="page_content">
         <div id="page_heading">
             <h1 id="product_edit_name">SALE INFORMATION</h1>
@@ -37,43 +37,43 @@
                                     <div class="uk-width-large-1-4">
                                         <div class="uk-form-row">
                                             <label for="txtBAName">BA Name</label>
-                                            <input type="text" class="md-input" id="txtBAName" name="txtBAName" value="<?php echo (isset($user->last_name))? $user->last_name.' '.$user->first_name : ''; ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtBAName" name="txtBAName" value="" readonly="readonly" />
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtSupervisorName">Supervisor Name</label>
-                                            <input type="text" class="md-input" id="txtSupervisorName" name="txtSupervisorName" value="<?php echo $user->supervisor ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtSupervisorName" name="txtSupervisorName" value="" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtBAExecutive">BA's Executive</label>
-                                            <input type="text" class="md-input" id="txtBAExecutive" name="txtBAExecutive" value="<?php echo $user->executive ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtBAExecutive" name="txtBAExecutive" value="" readonly="readonly"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-1-4">
                                         <div class="uk-form-row">
                                             <label for="txtMarketName">Market Name</label>
-                                            <input type="text" class="md-input" id="txtMarketName" name="txtMarketName" value="<?php echo $user->outlet_address ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtMarketName" name="txtMarketName" value="" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtOutletName">Outlet Name</label>
-                                            <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value="<?php echo $user->outlet_name ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value="" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row"> 
                                             <label for="txtDMSCode">DMS Code</label>
-                                            <input type="text" class="md-input" id="txtDMSCode" name="txtDMSCode" value="<?php echo $user->dms_code ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtDMSCode" name="txtDMSCode" value="" readonly="readonly"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-1-4">
                                         <div class="uk-form-row">
                                             <label for="txtDT">DT</label>
-                                            <input type="text" class="md-input" id="txtDT" name="txtDT" value="<?php echo $user->distributor ?>" readonly="readonly" />
+                                            <input type="text" class="md-input" id="txtDT" name="txtDT" value="" readonly="readonly" />
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtCustomerType">Customer Type</label>
-                                            <input type="text" class="md-input" id="txtCustomerType" name="txtCustomerType" value="<?php echo $user->customer_type ?>" readonly="readonly" />
+                                            <input type="text" class="md-input" id="txtCustomerType" name="txtCustomerType" value="" readonly="readonly" />
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtChannel">Channel</label>
-                                            <input type="text" class="md-input" id="txtChannel" name="txtChannel" value="<?php echo $user->channel ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtChannel" name="txtChannel" value="" readonly="readonly"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-1-4">
@@ -82,7 +82,7 @@
                                                 <div class="md-card-content">
                                                     <div class="uk-margin-bottom uk-text-center uk-position-relative">
                                                         
-                                                        <img src="<?php echo $user->photo ?>" alt="" class="img_medium" id="txtPhoto" />
+                                                        <img src="<?php echo $this->ion_auth->user()->row()->photo;?>" alt="" class="img_medium" id="txtPhoto" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -97,11 +97,11 @@
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
                                                 <label for="txtMonthlyTarget">Monthly Target</label>
-                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value="<?php echo '$ ' . ($user->monthly_target)?>" readonly="readonly"/>
+                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget"  readonly="readonly"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtTodayTarget">Today Target</label>
-                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value="<?php echo '$ ' . ($user->monthly_target / 26) ?>" readonly="readonly"/>
+                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" readonly="readonly"/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
@@ -112,9 +112,9 @@
                                                     </span>
                                                     <div class="md-input-wrapper md-input-filled">
                                                         <label for="validOfTarget">Valid Of Target</label>
-                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}" value="<?php echo $user->start_date ?>">
+                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
-                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}" value="<?php echo $user->end_date ?>">
+                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
                                                     </div>
                                                 </div>
@@ -134,30 +134,30 @@
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="<?php echo '$ '. $sale_archievement->amount ?>"/>
+                                            <label for="txtTodayAchievement">$ Today Achievement</label>
+                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" />
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="<?php echo '$ '. $sale_archievement_month_to_date->amount ?>"/>
+                                            <label for="txtMonthToDateAchievement">$ Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" />
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_manufacturer_control">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value="<?php echo '$ '. $sale_archievement_year_to_date->amount ?>"/>
+                                            <label for="txtYearToDateAchievement">$ Year to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="<?php echo '% '. (($user->monthly_target)? (($sale_archievement->amount/($user->monthly_target / 26))*100) : 0)?>"/>
+                                            <label for="txtTodayAchievementPercent">% Today Achievement</label>
+                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent"/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_name_control">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="product_edit_name_control" name="product_edit_name_control" value="<?php echo '% '. (($user->monthly_target)?(($sale_archievement_month_to_date->amount/$user->monthly_target)*100) : 0) ?>"/>
+                                            <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent"/>
                                         </div>
                                         <div class="uk-form-row">
-                                            <label for="product_edit_manufacturer_control">% Year to Date Achieevemnt</label>
-                                            <input type="text" class="md-input" id="product_edit_manufacturer_control" name="product_edit_manufacturer_control" value="<?php echo '% '. (($user->monthly_target)?(($sale_archievement_year_to_date->amount/($user->target_achievement)*100)) : 0)?>"/>
+                                            <label for="txtYearToDateAchievementPercent">% Year to Date Achieevemnt</label>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent"/>
                                         </div>
                                     </div>
                                 </div>
