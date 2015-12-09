@@ -106,6 +106,24 @@ $(function(){
 						$("#txtMonthToDateAchievementPercent").val('% ' + data.user.month_achievement_percent);
 						$("#txtYearToDateAchievementPercent").val('% ' + data.user.year_achievement_percent);
 						$('.md-input-wrapper').addClass('md-input-filled');
+					}else{
+						$("#txtPhoto").attr('src',"");
+						$("#txtSupervisorName").val("");
+						$("#txtBAExecutive").val("");
+						$("#txtMarketName").val("");
+						$("#txtOutletName").val("");
+						$("#txtDT").val("");
+						$("#txtCustomerType").val("");
+						$("#txtChannel").val("");
+						$("#txtMonthlyTarget").val('$ 0.00');
+						$("#txtTodayTarget").val('$ 0.00');
+						$("#txtTodayAchievement").val('$ 0.00');
+						$("#txtMonthToDateAchievement").val('$ 0.00');
+						$("#txtYearToDateAchievement").val('$ 0.00');
+						$("#txtTodayAchievementPercent").val('% 0');
+						$("#txtMonthToDateAchievementPercent").val('% 0');
+						$("#txtYearToDateAchievementPercent").val('% 0');
+						$('.md-input-wrapper').addClass('md-input-filled');
 					}
 					modal.hide();
 				},
@@ -147,6 +165,16 @@ $(function(){
 					$("#txtTodayAchievementPercent").val('% ' + data.user.today_achievement_percent);
 					$("#txtMonthToDateAchievementPercent").val('% ' + data.user.month_achievement_percent);
 					$("#txtYearToDateAchievementPercent").val('% ' + data.user.year_achievement_percent);
+					$('.md-input-wrapper').addClass('md-input-filled');
+				}else{
+					$("#txtMonthlyTarget").val('$ 0.00');
+					$("#txtTodayTarget").val('$ 0.00');
+					$("#txtTodayAchievement").val('$ 0.00');
+					$("#txtMonthToDateAchievement").val('$ 0.00');
+					$("#txtYearToDateAchievement").val('$ 0.00');
+					$("#txtTodayAchievementPercent").val('% 0');
+					$("#txtMonthToDateAchievementPercent").val('% 0');
+					$("#txtYearToDateAchievementPercent").val('% 0');
 					$('.md-input-wrapper').addClass('md-input-filled');
 				}
 				modal.hide();

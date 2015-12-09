@@ -16,29 +16,27 @@
 		}
 				
 		public function index(){
+			$this->load->view('supervisor/supervisor_daily_report');
+		}
+
+		public function info(){
 			$this->load->model('dao/Daouser');
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtouser');
+			$this->load->model('dto/Dtosale');
 			$this->Dtouser->setId($this->ion_auth->get_user_id());
 			$this->data["ba_users"] = $this->Daouser->getAllUsersByParent($this->Dtouser);
-			$today_amount = $this->Daosale->getSaleOfSupervisorArchievement($this->Dtouser);
-			$monthToDate = $this->Daosale->getSaleOfSupervisorArchievement($this->Dtouser,1);
-			$yearToDate = $this->Daosale->getSaleOfSupervisorArchievement($this->Dtouser,2);
-			$this->data["user"] = $this->Daouser->getSupervisorInformation($this->Dtouser);
-			$this->data["sale_target"] = $this->Daosale->getSupervisorSaleTarget($this->Dtouser);
-			$this->data["today_achievement_percent"] = (double)($this->data["sale_target"]->monthly_target==0) ? 0 : ((double)$today_amount->amount / (double)($this->data["sale_target"]->monthly_target / 26)) * 100;
-			$this->data["month_achievement_percent"] = (double)($this->data["sale_target"]->monthly_target==0) ? 0 : ((double)$monthToDate->amount / (double)$this->data["sale_target"]->monthly_target) * 100;
-			$this->data["year_achievement_percent"] = (double)($this->data["sale_target"]->monthly_target==0) ? 0 : ((double)$yearToDate->amount / (double)$this->data["sale_target"]->target_achievement) * 100;
-			$this->data["today_achievement"] = $today_amount->amount;
-			$this->data["month_achievement"] = $monthToDate->amount;
-			$this->data["year_achievement"] = $yearToDate->amount;
-			$this->load->view('supervisor/supervisor_daily_report', $this->data);
+			$this->Dtosale->setBaId($this->ion_auth->get_user_id());
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getSupervisorReport($this->Dtosale);
+			echo json_encode($this->data);
 		}
 
 		public function BAInformation(){
 			$this->load->model('dao/Daouser');
             $total_rows = $this->Daouser->count('BEAUTY_AGENT');
-			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');//$this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
+			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
 			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
 			$this->load->view('supervisor/beauty_agent_list', $this->data);
 		}
@@ -60,8 +58,6 @@
 			$this->load->model('dao/Daouser');
 			$this->load->model('dto/Dtouser');
 			$this->data["ba_users"] = $this->Daouser->getAllUsersByGroupId(3);
-			//$this->data["supervisor_users"] = $this->Daouser->getAllUsersByGroupId(2);
-			//$this->data["ba_executive_users"] = $this->Daouser->getAllUsersByGroupId(1);
 			$this->load->view('supervisor/beauty_agent_daily_report', $this->data);
 		}
 
@@ -69,42 +65,20 @@
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtosale');
 			$this->Dtosale->setBaId($this->input->post("ba_id"));
-			$this->data["user"] = $this->Daosale->getSellerInformation($this->Dtosale);
-			if($this->data["user"]){
-				$this->Dtosale->setOutletId($this->data["user"]->outlet_id);
-				$today_amount = $this->Daosale->getSaleArchievement($this->Dtosale);
-				$this->data["today_achievement_percent"] = (double)($this->data["user"]->monthly_target==0) ? 0 : ((double)$today_amount->amount / (double)($this->data["user"]->monthly_target / 26)) * 100;
-				$monthToDate = $this->Daosale->getSaleArchievement($this->Dtosale,1);
-				$this->data["month_achievement_percent"] = (double)($this->data["user"]->monthly_target==0) ? 0 : ((double)$monthToDate->amount / (double)$this->data["user"]->monthly_target) * 100;
-				$yearToDate = $this->Daosale->getSaleArchievement($this->Dtosale,2);
-				$this->data["year_achievement_percent"] = (double)($this->data["user"]->monthly_target==0) ? 0 : ((double)$yearToDate->amount / (double)$this->data["user"]->target_achievement) * 100;
-				$this->data["today_achievement"] = $today_amount->amount;
-				$this->data["month_achievement"] = $monthToDate->amount;
-				$this->data["year_achievement"] = $yearToDate->amount;
-			}
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
 			echo json_encode($this->data);
-
 		}
 
 		public function changeDMSCode(){
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtosale');
 			$this->Dtosale->setDMSCode($this->input->post("dms_code"));
-			$this->data["user"] = $this->Daosale->getSellerInformation($this->Dtosale,1);
-			if($this->data["user"]){
-				$this->Dtosale->setBaId($this->data["user"]->id);
-				$this->Dtosale->setOutletId($this->data["user"]->outlet_id);
-				$today_amount = $this->Daosale->getSaleArchievement($this->Dtosale);
-				$this->data["today_achievement_percent"] = (double)($this->data["user"]->monthly_target==0) ? 0 : ((double)$today_amount->amount / (double)($this->data["user"]->monthly_target / 26)) * 100;
-				$monthToDate = $this->Daosale->getSaleArchievement($this->Dtosale,1);
-				$this->data["month_achievement_percent"] = (double)($this->data["user"]->monthly_target==0) ? 0 : ((double)$monthToDate->amount / (double)$this->data["user"]->monthly_target) * 100;
-				$yearToDate = $this->Daosale->getSaleArchievement($this->Dtosale,2);
-				$this->data["year_achievement_percent"] = (double)($this->data["user"]->monthly_target==0) ? 0 : ((double)$yearToDate->amount / (double)$this->data["user"]->target_achievement) * 100;
-				$this->data["today_achievement"] = $today_amount->amount;
-				$this->data["month_achievement"] = $monthToDate->amount;
-				$this->data["year_achievement"] = $yearToDate->amount;
-			}
-			echo json_encode($this->data);
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
+			echo json_encode($this->data);	
 		}
 	}
 ?>

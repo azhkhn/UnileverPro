@@ -35,23 +35,9 @@
 			$this->Dtosale->setSaleDate(date('Y-m-d'));
 			$this->data["user"] = $this->Daosale->getSellerInformation($this->Dtosale);
 			$this->Dtosale->setOutletId($this->data["user"]->outlet_id);
-			//$this->data["user"]->monthly_target = ($this->data["user"]->monthly_target) ? $this->data["user"]->monthly_target : 0;
 			$this->data["sale_archievement"] = $this->Daosale->getSaleArchievement($this->Dtosale);
 			$this->data["sale_archievement_month_to_date"] = $this->Daosale->getSaleArchievement($this->Dtosale,1);
 			$this->data["sale_archievement_year_to_date"] = $this->Daosale->getSaleArchievement($this->Dtosale,2);
-
-			//$this->data["sale_archievement"] = $this->Daosale->getSaleArchievement($this->Dtosale);
-			//$this->data["products"] = $this->Daosale->getAllProducts();
-			/*$total_rows = $this->Daosale->count($this->Dtosale); 
-			$this->load->helper('app');
-			$this->data["page_links"] = pagination($total_rows, 15,'sale/ajax', 3);
-			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale);*/
-			//var_dump($this->data["sales"]);
-
-			//$user = $this->ion_auth->user()->row();
-			//$this->Dtosale->setBaId($user->id);
-			//$this->Dtosale->setOutletId($this->input->post('outlet_id'));
-			//$this->Dtosale->setSaleDate($this->input->post('sale_date'));
 			$total_rows = $this->Daosale->count($this->Dtosale); 
 			$this->load->helper('app');
 			$this->data["page_links"] = pagination($total_rows, 15);
@@ -70,6 +56,17 @@
 			$this->load->helper('app');
 			$this->data["page_links"] = pagination($total_rows, 15);
 			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale, 15,'sale/ajax', 3);
+			echo json_encode($this->data);
+		}
+
+		public function changeBA(){
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtosale');
+			$this->Dtosale->setBaId($this->ion_auth->get_user_id());
+			$this->Dtosale->setOutletId($this->input->post('outlet_id'));
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
 			echo json_encode($this->data);
 		}
 

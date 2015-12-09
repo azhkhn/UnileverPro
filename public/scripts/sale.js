@@ -240,12 +240,13 @@ $(function(){
 			return false;
 		}
 		$.ajax({
-			url: SITE_URL+'sale/onchange',
+			url: SITE_URL+'sale/changeba',
 			type: "POST",
 			dataType: "JSON",
 			data: {
 				'start_date' : moment($("#startDate").val()).format('YYYY-MM-DD'),
-				'end_date'   : moment($("#endDate").val()).format('YYYY-MM-DD')
+				'end_date'   : moment($("#endDate").val()).format('YYYY-MM-DD'),
+				'outlet_id' : $("#txtOutletId").val(),
 			},
 			success: function(data){
 				console.log(data);
@@ -253,34 +254,29 @@ $(function(){
 				$('.md-input-wrapper').removeClass('md-input-filled');
 				$("#txtNumberOfWorking").val(26);
 				if(data.user){
-					/*$("#txtBAName").val(data.user.last_name + " " + data.user.first_name)
-					$("#txtSupervisorName").val(data.user.supervisor);
-					$("#txtBAExecutive").val(data.user.executive);
-					$("#txtMarketName").val(data.user.outlet_address);
-					$("#txtOutletName").val(data.user.outlet_name);
-					$("#txtOutletId").val(data.user.outlet_id);
-					$("#txtDMSCode").val(data.user.dms_code);
-					$("#txtDT").val(data.user.distributor);
-					$("#txtCustomerType").val(data.user.customer_type);
-					$("#txtChannel").val(data.user.channel);*/
-					$("#txtMonthlyTarget").val('$ '+ data.user.monthly_target);
-					$("#txtTodayTarget").val('$ ' + data.user.monthly_target/26);
-					/*$("#startDate").val(data.user.start_date);
-					$("#endDate").val(data.user.end_date);*/
-					$("#txtTodayAchievement").val('$ ' + data.sale_archievement.amount);
-					$("#txtMonthToDateAchievement").val('$ ' + data.sale_archievement_month_to_date.amount);
-					$("#txtYearToDateAchievement").val('$ ' + data.sale_archievement_year_to_date.amount);
-					$("#txtTodayAchievementPercent").val('% ' + data.sale_archievement.amount);
-					$("#txtMonthToDateAchievementPercent").val('% ' + data.sale_archievement_month_to_date.amount);
-					$("#txtYearToDateAchievementPercent").val('% ' + data.sale_archievement_year_to_date.amount);
+					$("#txtMonthlyTarget").val('$ '+ data.user.sumtarget);
+					$("#txtTodayTarget").val('$ ' + data.user.sumtodaytarget);
+					$("#txtTodayAchievement").val('$ ' + data.user.today_achievement);
+					$("#txtMonthToDateAchievement").val('$ ' + data.user.month_achievement);
+					$("#txtYearToDateAchievement").val('$ ' + data.user.year_achievement);
+					$("#txtTodayAchievementPercent").val('% ' + data.user.today_achievement_percent);
+					$("#txtMonthToDateAchievementPercent").val('% ' + data.user.month_achievement_percent);
+					$("#txtYearToDateAchievementPercent").val('% ' + data.user.year_achievement_percent);
 					$('.md-input-wrapper').addClass('md-input-filled');
-					//sales.getAllSales(SITE_URL+"sale/ajax");
-
+				}else{
+					$("#txtMonthlyTarget").val('$ 0.00');
+					$("#txtTodayTarget").val('$ 0.00');
+					$("#txtTodayAchievement").val('$ 0.00');
+					$("#txtMonthToDateAchievement").val('$ 0.00');
+					$("#txtYearToDateAchievement").val('$ 0.00');
+					$("#txtTodayAchievementPercent").val('% 0');
+					$("#txtMonthToDateAchievementPercent").val('% 0');
+					$("#txtYearToDateAchievementPercent").val('% 0');
+					$('.md-input-wrapper').addClass('md-input-filled');
 				}
 				modal.hide();
 			},
 			error: function(data){
-				$('.md-input-wrapper').find('.md-input').val('');
 				$('.md-input-wrapper').removeClass('md-input-filled');
 				$("#txtNumberOfWorking").val(26);
 				modal.hide();

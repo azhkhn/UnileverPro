@@ -48,7 +48,7 @@
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtouser');
 			$this->load->model('dto/Dtosale');
-			$this->Dtouser->setId($this->input->post('supervisor_id'));
+			$this->Dtouser->setId(($this->input->post('supervisor_id')=="") ? $this->ion_auth->get_user_id() : $this->input->post('supervisor_id'));
 			$this->data["ba_users"] = $this->Daouser->getAllUsersByParent($this->Dtouser);
 			$this->Dtosale->setBaId($this->input->post('supervisor_id'));
 			$this->Dtosale->setStartDate($this->input->post('start_date'));
@@ -68,20 +68,14 @@
 			$this->load->model('dao/Daouser');
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtouser');
+			$this->load->model('dto/Dtosale');
 
 			$this->Dtouser->setId($this->input->post('executive_id'));
 			$this->data["supervisor_users"] = $this->Daouser->getAllUsersByParent($this->Dtouser);
-			$this->data["user"] = $this->Daouser->getUserById($this->Dtouser->getId());
-			$today_amount = $this->Daosale->getSaleOfBAExecutiveArchievement($this->Dtouser);
-			$monthToDate = $this->Daosale->getSaleOfBAExecutiveArchievement($this->Dtouser,1);
-			$yearToDate = $this->Daosale->getSaleOfBAExecutiveArchievement($this->Dtouser,2);
-			$this->data["sale_target"] = $this->Daosale->getBAExecutiveSaleTarget($this->Dtouser);
-			$this->data["today_achievement_percent"] = (double)($this->data["sale_target"]->monthly_target==0) ? 0 : ((double)$today_amount->amount / (double)($this->data["sale_target"]->monthly_target / 26)) * 100;
-			$this->data["month_achievement_percent"] = (double)($this->data["sale_target"]->monthly_target==0) ? 0 : ((double)$monthToDate->amount / (double)$this->data["sale_target"]->monthly_target) * 100;
-			$this->data["year_achievement_percent"] = (double)($this->data["sale_target"]->monthly_target==0) ? 0 : ((double)$yearToDate->amount / (double)$this->data["sale_target"]->target_achievement) * 100;
-			$this->data["today_achievement"] = $today_amount->amount;
-			$this->data["month_achievement"] = $monthToDate->amount;
-			$this->data["year_achievement"] = $yearToDate->amount;
+			$this->Dtosale->setBaId($this->input->post('executive_id'));
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getBAExecutiveReport($this->Dtosale);
 			echo json_encode($this->data);
 		}
 		

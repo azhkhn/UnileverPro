@@ -75,10 +75,13 @@
                                     <thead>
                                         <tr>
                                             <th>Image</th>
+                                            <th>Code</th>
                                             <th>Full Name</th>
                                             <th>Gender</th>
-                                            <th>Email</th>
+                                            <th>Username</th>
                                             <th>Telephone</th>
+                                            <th>Position</th>
+                                            <th>Start Working</th>
                                             <th>Supervisor</th>
                                             <th>Remark</th>
                                             <th>Active</th>
@@ -86,10 +89,11 @@
                                         </tr>
                                     </thead>
                                     <tbody id="CONTENTS">
-                                    	<?php foreach ($users as $user):?>
+                                        <?php foreach ($users as $user):?>
                                         <tr>
-                                            <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>
-                                            <td class="uk-text-large uk-text-nowrap"><strong><?php echo $user->last_name . ' '. $user->first_name ?></strong></td>
+                                            <td><img class="img_thumb" src="<?php echo $user->photo?>" alt="" style="width:50px; height:50px"></td>
+                                            <td><strong><?php echo $user->code ?></strong></td>
+                                            <td class="uk-text-large uk-text-nowrap"><a href="javascript:;"><?php echo $user->last_name . ' '. $user->first_name ?></a></td>
                                             <td class="uk-text-nowrap">
                                                 <?php if($user->gender=="M")  
                                                             echo "Male";
@@ -99,6 +103,8 @@
                                             </td>
                                             <td><?php echo $user->email ?></td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->phone ?></span></td>
+                                            <td style="text-align:center;"><?php echo $user->position ?></td>
+                                            <td><?php echo $user->starting_date ?></td>
                                             <td>
                                                 <?php echo $user->supervisor ?>
                                             </td>
@@ -108,11 +114,9 @@
                                             </td>
                                             <td class="uk-text-nowrap">
                                                 <a title="View" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnView" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <!-- <a title="Update" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnUpdate" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE3C9;</i></a>
-                                                <a title="Delete" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE872;</i></a> -->
                                             </td>
                                         </tr>
-                                       	<?php endforeach;?>
+                                        <?php endforeach;?>
                                     </tbody>
                                 </table>
                             </div>
@@ -265,6 +269,7 @@
     <?php
     }
     ?>
+    
     <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
         <tr>
             <td><img class="img_thumb" src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge_2.jpg" alt="" style="width:50px; height:50px"></td>

@@ -37,11 +37,11 @@
                                     <div class="uk-width-large-1-4">
                                         <div class="uk-form-row">
                                             <label for="selectedSupervisor">Supervisor Name</label>
-                                            <input type="text" class="md-input" id="txtSupervisorName" name="txtSupervisorName" value="<?php echo $user->last_name . ' ' . $user->first_name; ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtSupervisorName" name="txtSupervisorName" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtBAExecutive">BA's Executive Name</label>
-                                            <input type="text" class="md-input" id="txtBAExecutive" name="txtBAExecutive" value="<?php echo $user->executive ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtBAExecutive" name="txtBAExecutive" readonly="readonly"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
@@ -60,11 +60,6 @@
                                                         <div class="uk-overflow-container">
                                                             <table class="uk-table uk-text-nowrap">
                                                             <tbody id="CONTENTS">
-                                                            <?php foreach ($ba_users as $u):?>
-                                                                <tr>
-                                                                    <td><?php echo $u->username ?></td>
-                                                                </tr>
-                                                            <?php endforeach;?>
                                                             </tbody>
                                                         </table>
                                                         </div>
@@ -78,7 +73,7 @@
                                             <div class="md-card">
                                                 <div class="md-card-content">
                                                     <div class="uk-margin-bottom uk-text-center uk-position-relative">
-                                                        <img src="<?php echo $user->photo ?>" alt="" class="img_medium" id="txtPhoto" />
+                                                        <img src="" alt="" class="img_medium" id="txtPhoto" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -93,11 +88,11 @@
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
                                                 <label for="txtMonthlyTarget">Monthly Target</label>
-                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value="$ <?php echo $sale_target->monthly_target?>" readonly="readonly"/>
+                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" readonly="readonly"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtTodayTarget">Today Target</label>
-                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value="$ <?php echo $sale_target->monthly_target /26?>" readonly="readonly"/>
+                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" readonly="readonly"/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
@@ -108,9 +103,9 @@
                                                     </span>
                                                     <div class="md-input-wrapper md-input-filled">
                                                         <label for="validOfDate">Valid Of Target</label>
-                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
-                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
                                                     </div>
                                                 </div>
@@ -132,29 +127,29 @@
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtTodayAchievement">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" value="$ <?php echo $today_achievement ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtMonthToDateAchievement">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" value="$ <?php echo $month_achievement ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtYearToDateAchievement">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" value="$ <?php echo $year_achievement ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" readonly="readonly"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtTodayAchievementPercent">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value="% <?php echo $today_achievement_percent ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value="% <?php echo $month_achievement_percent ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" readonly="readonly"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value="% <?php echo $year_achievement_percent ?>" readonly="readonly"/>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" readonly="readonly"/>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +224,7 @@
         });
     </script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor_report.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/supervisor_report.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>
