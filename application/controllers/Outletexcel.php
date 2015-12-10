@@ -27,29 +27,22 @@ class Outletexcel extends CI_Controller {
 		$this->excel->getActiveSheet()->getStyle('B2')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
 		$this->excel->getActiveSheet()->mergeCells('B2:K2');
 
-		//set cell A1 content with some text
-/*		$this->excel->getActiveSheet()->setCellValue('A5', 'Outlet Name');
-		$this->excel->getActiveSheet()->setCellValue('B5', 'Address');	
-		$this->excel->getActiveSheet()->setCellValue('C5', 'BA Code');
-		$this->excel->getActiveSheet()->setCellValue('D5', 'BA Name');
-		$this->excel->getActiveSheet()->setCellValue('E5', 'Target');
-		$this->excel->getActiveSheet()->setCellValue('F5', 'SKC');
-		$this->excel->getActiveSheet()->setCellValue('G5', 'Hair');
-		$this->excel->getActiveSheet()->setCellValue('H5', 'Ach.');
-		$this->excel->getActiveSheet()->setCellValue('I5', '% Ach.');
-		*/
 		$headers = array('No',
 						 'Outlet Name',
-						 'Address',
-						 'BA Code',
-						 'BA Name',
-						 'Target',
-						 'SKC',
-						 'Hair',
-						 'Ach.',
-						 '% Ach.'
+						 'January',
+						 'Febuary',
+						 'March',
+						 'April',
+						 'May',
+						 'June',
+						 'July',
+						 'August',
+						 'September',
+						 'October',
+						 'November',
+						 'December'
 						 );
-		foreach(range('B','K') as $key=>$columnID)
+		foreach(range('B','O') as $key=>$columnID)
 		{
 				$this->excel->getActiveSheet()->setCellValue($columnID."5",$headers[$key]);
     			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
@@ -71,7 +64,9 @@ class Outletexcel extends CI_Controller {
     						'ba_code'      => '002',
     						'ba_name'	  => 'Khun Socheatha'
     					)
-    			);    	
+    			);    
+    	$this->load->model('dao/Daoexcelreport');
+    	$outlets = $this->Daoexcelreport->getOutletWithItems();	
     	$this->excel->getActiveSheet()->freezePane('B6');
     	$styleArray = array(
 		    'borders' => array(
@@ -84,11 +79,11 @@ class Outletexcel extends CI_Controller {
 		        ),
 		    ),
 		);
-		$this->excel->getActiveSheet()->getStyle('B5:K5')->applyFromArray($styleArray);
+		$this->excel->getActiveSheet()->getStyle('B5:O5')->applyFromArray($styleArray);
 
 
     	$this->excel->getActiveSheet()->fromArray($outlets, NULL, 'B6');
-    	$this->excel->getActiveSheet()->getStyle('B5:K'.(count($outlets)+5))->applyFromArray($styleArray);
+    	$this->excel->getActiveSheet()->getStyle('B5:O'.(count($outlets)+5))->applyFromArray($styleArray);
 
     	$this->excel->createSheet(1);
     	//activate worksheet number 1
@@ -235,7 +230,8 @@ class Outletexcel extends CI_Controller {
 		foreach(range('B','K') as $key=>$columnID)
 		{
 				$this->excel->getActiveSheet()->setCellValue($columnID."5",$headers[$key]);
-    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(false);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setWidth(15);
     			$this->excel->getActiveSheet()->getStyle($columnID."5")->getFont()->setBold(true);
     	}
 
@@ -380,6 +376,164 @@ class Outletexcel extends CI_Controller {
 		//$this->excel->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 		//$this->excel->getActiveSheet()->freezePane('B2');
 		$filename='OUTLET_REPORT'.'_'.date('YmdHis').'.xlsx'; //save our workbook as this file name
+		header('Content-Type: application/vnd.ms-excel'); //mime type
+		header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
+		header('Cache-Control: max-age=0'); //no cache
+		            
+		//save it to Excel5 format (excel 2003 .XLS file), change this to 'Excel2007' (and adjust the filename extension, also the header mime type)
+		//if you want to save it as .XLSX Excel 2007 format
+		$objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel2007');  
+		//force user to download the Excel file without writing it to server's HD
+		$objWriter->save('php://output');
+	}
+
+	public function amount($year){
+				//load our new PHPExcel library
+		$this->load->library('excel');
+		//activate worksheet number 1
+		$this->excel->setActiveSheetIndex(0);
+		//name the worksheet
+		$this->excel->getActiveSheet()->setTitle('OUTLET_TOTAL_AMOUNT_YEAR_'.$year);
+
+		$this->excel->getActiveSheet()->setCellValue('B2',"BA's  and Outlet Sales Total Amount");
+		$this->excel->getActiveSheet()->getStyle('B2')->getFont()->setSize(16);
+		$this->excel->getActiveSheet()->getRowDimension('2')->setRowHeight(30);
+		$this->excel->getActiveSheet()->getRowDimension('5')->setRowHeight(20);
+		$this->excel->getActiveSheet()
+        			->getStyle('B2')
+        			->getFill()
+        			->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+        			->getStartColor()
+        			->setRGB('FF6699');
+		$this->excel->getActiveSheet()->getStyle('B2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
+		$this->excel->getActiveSheet()->getStyle('B2')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+		$this->excel->getActiveSheet()->mergeCells('B2:K2');
+		
+		$headers = array('No',
+						 'Outlet Name',
+						 'January',
+						 'Febuary',
+						 'March',
+						 'April',
+						 'May',
+						 'June',
+						 'July',
+						 'August',
+						 'September',
+						 'October',
+						 'November',
+						 'December'
+						 );
+		foreach(range('B','O') as $key=>$columnID)
+		{
+				$this->excel->getActiveSheet()->setCellValue($columnID."5",$headers[$key]);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(false);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setWidth(12);
+    			$this->excel->getActiveSheet()->getStyle($columnID."5")->getFont()->setBold(true);
+    	}
+    	$this->excel->getActiveSheet()->getColumnDimension("B")->setWidth(5);
+    	$this->excel->getActiveSheet()->getColumnDimension("C")->setAutoSize(true);
+
+    	$this->load->model('dao/Daoexcelreport');
+    	$outlets = $this->Daoexcelreport->getOutletSaleAmountPerYear($year);	
+    	$this->excel->getActiveSheet()->freezePane('B6');
+    	$styleArray = array(
+		    'borders' => array(
+		        'outline' => array(
+		            'style' => PHPExcel_Style_Border::BORDER_THIN
+		            //'color' => array('argb' => 'FFFF0000'),
+		        ),
+		        'inside' => array(
+		            'style' => PHPExcel_Style_Border::BORDER_THIN
+		        ),
+		    ),
+		);
+		$this->excel->getActiveSheet()->getStyle('B5:O5')->applyFromArray($styleArray);
+
+    	$this->excel->getActiveSheet()->fromArray($outlets, NULL, 'B6');
+    	$this->excel->getActiveSheet()->getStyle('B5:O'.(count($outlets)+5))->applyFromArray($styleArray);
+
+		$filename='OUTLET_TOTAL_AMOUNT_IN_YEAR_'.$year.'_'.date('YmdHis').'.xlsx'; //save our workbook as this file name
+		header('Content-Type: application/vnd.ms-excel'); //mime type
+		header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
+		header('Cache-Control: max-age=0'); //no cache
+		            
+		//save it to Excel5 format (excel 2003 .XLS file), change this to 'Excel2007' (and adjust the filename extension, also the header mime type)
+		//if you want to save it as .XLSX Excel 2007 format
+		$objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel2007');  
+		//force user to download the Excel file without writing it to server's HD
+		$objWriter->save('php://output');
+	}
+
+	public function quantity($year){
+		//load our new PHPExcel library
+		$this->load->library('excel');
+		//activate worksheet number 1
+		$this->excel->setActiveSheetIndex(0);
+		//name the worksheet
+		$this->excel->getActiveSheet()->setTitle('OUTLET_TOTAL_QUANTITY_YEAR_'.$year);
+
+		$this->excel->getActiveSheet()->setCellValue('B2',"BA's  and Outlet Sales Total Quantity");
+		$this->excel->getActiveSheet()->getStyle('B2')->getFont()->setSize(16);
+		$this->excel->getActiveSheet()->getRowDimension('2')->setRowHeight(30);
+		$this->excel->getActiveSheet()->getRowDimension('5')->setRowHeight(20);
+		$this->excel->getActiveSheet()
+        			->getStyle('B2')
+        			->getFill()
+        			->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+        			->getStartColor()
+        			->setRGB('FF6699');
+		$this->excel->getActiveSheet()->getStyle('B2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
+		$this->excel->getActiveSheet()->getStyle('B2')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+		$this->excel->getActiveSheet()->mergeCells('B2:K2');
+		
+		$headers = array('No',
+						 'Outlet Name',
+						 'Product Name',
+						 'January',
+						 'Febuary',
+						 'March',
+						 'April',
+						 'May',
+						 'June',
+						 'July',
+						 'August',
+						 'September',
+						 'October',
+						 'November',
+						 'December'
+						 );
+		foreach(range('B','P') as $key=>$columnID)
+		{
+				$this->excel->getActiveSheet()->setCellValue($columnID."5",$headers[$key]);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(false);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setWidth(12);
+    			$this->excel->getActiveSheet()->getStyle($columnID."5")->getFont()->setBold(true);
+    	}
+    	$this->excel->getActiveSheet()->getColumnDimension("A")->setWidth(1);
+    	$this->excel->getActiveSheet()->getColumnDimension("B")->setWidth(5);
+    	$this->excel->getActiveSheet()->getColumnDimension("C")->setAutoSize(true);
+    	$this->excel->getActiveSheet()->getColumnDimension("D")->setAutoSize(true);
+
+    	$this->load->model('dao/Daoexcelreport');
+    	$outlets = $this->Daoexcelreport->		getOutletSaleQtyAmountPerYear($year);	
+    	$this->excel->getActiveSheet()->freezePane('B6');
+    	$styleArray = array(
+		    'borders' => array(
+		        'outline' => array(
+		            'style' => PHPExcel_Style_Border::BORDER_THIN
+		            //'color' => array('argb' => 'FFFF0000'),
+		        ),
+		        'inside' => array(
+		            'style' => PHPExcel_Style_Border::BORDER_THIN
+		        ),
+		    ),
+		);
+		$this->excel->getActiveSheet()->getStyle('B5:P5')->applyFromArray($styleArray);
+    	$this->excel->getActiveSheet()->fromArray($outlets, NULL, 'B6');
+    	$this->excel->getActiveSheet()->getStyle('B5:P'.(count($outlets)+5))->applyFromArray($styleArray);
+
+		$filename='OUTLET_TOTAL_QUANTITY_IN_YEAR_'.$year.'_'.date('YmdHis').'.xlsx'; //save our workbook as this file name
 		header('Content-Type: application/vnd.ms-excel'); //mime type
 		header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
 		header('Cache-Control: max-age=0'); //no cache

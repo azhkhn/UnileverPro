@@ -1,7 +1,7 @@
 $(function(){
 	
-	$("#startDate").val(moment().date(1).format('YYYY-MMMM-DD'));
-	$("#endDate").val(moment().add('months', 1).date(0).format('YYYY-MMMM-DD'));
+	$("#startDate").val(moment().date(1).format('DD-MMMM-YYYY'));
+	$("#endDate").val(moment().add('months', 1).date(0).format('DD-MMMM-YYYY'));
 	
 	// TODO: ON CHANGE ON BA's EXECUTIVE
 	$("#selectedBAExecutive").change(function(){

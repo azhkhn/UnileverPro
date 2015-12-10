@@ -209,9 +209,9 @@
                                                     </span>
                                                     <div class="md-input-wrapper md-input-filled">
                                                         <label for="validOfDate">Valid Of Target</label>
-                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
-                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
                                                     </div>
                                                 </div>
