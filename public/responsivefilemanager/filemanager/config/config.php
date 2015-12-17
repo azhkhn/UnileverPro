@@ -66,7 +66,7 @@ $config = array(
 	| with start and final /
 	|
 	*/
-	'upload_dir' => '/unileverpro/public/upload/',
+	'upload_dir' => '/public/upload/',
 
 	/*
 	|--------------------------------------------------------------------------

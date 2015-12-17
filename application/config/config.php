@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'https://unileverpro-vuthea.c9users.io/';
+$config['base_url'] = 'https://reporting-darapenhchet-3.c9.io/';
 /*
 |--------------------------------------------------------------------------
 | Index File
