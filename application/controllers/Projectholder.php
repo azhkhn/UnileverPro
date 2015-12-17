@@ -32,5 +32,14 @@
 			$this->data["year_achievement"] = $yearToDate->amount;
 			$this->load->view('reports/project_holder_daily_report', $this->data);
 		}
+
+		public function dailyPMReport(){
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtosale');
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getProjectHolderReport($this->Dtosale);
+			echo json_encode($this->data);
+		}
 	}
 ?>
