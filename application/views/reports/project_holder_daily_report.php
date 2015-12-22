@@ -33,11 +33,11 @@
                                         <div class="uk-width-large-1-4">
                                             <div class="uk-form-row">
                                                 <label for="txtMonthlyTarget">Monthly Target</label>
-                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget" value="<?php echo '$ '. $sale_target->monthly_target; ?>"/>
+                                                <input type="text" class="md-input" id="txtMonthlyTarget" name="txtMonthlyTarget"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtTodayTarget">Today Target</label>
-                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget" value="<?php echo '$ '. $sale_target->monthly_target / 26; ?>"/>
+                                                <input type="text" class="md-input" id="txtTodayTarget" name="txtTodayTarget"/>
                                             </div>
                                         </div>
                                         <div class="uk-width-large-1-4">
@@ -65,29 +65,29 @@
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtTodayAchievement">$ Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" value="<?php echo '$ '. $today_achievement ?>"/>
+                                            <input type="text" class="md-input" id="txtTodayAchievement" name="txtTodayAchievement" />
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtMonthToDateAchievement">$ Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement" value="<?php echo '$ '. $month_achievement ?>"/>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievement" name="txtMonthToDateAchievement"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtYearToDateAchievement">$ Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement" value="<?php echo '$ '. $year_achievement ?>"/>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievement" name="txtYearToDateAchievement"/>
                                         </div>
                                     </div>
                                     <div class="uk-width-large-2-4">
                                         <div class="uk-form-row">
                                             <label for="txtTodayAchievementPercent">% Today Achievement</label>
-                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent" value="<?php echo '% '.$today_achievement_percent ?>"/>
+                                            <input type="text" class="md-input" id="txtTodayAchievementPercent" name="txtTodayAchievementPercent"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtMonthToDateAchievementPercent">% Month to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent" value="<?php echo '% '.$month_achievement_percent ?>"/>
+                                            <input type="text" class="md-input" id="txtMonthToDateAchievementPercent" name="txtMonthToDateAchievementPercent"/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
-                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value="<?php echo '% '.$year_achievement_percent ?>"/>
+                                            <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent"/>
                                         </div>
                                     </div>
                                 </div>
@@ -155,6 +155,7 @@
             altair_helpers.retina_images();
         });
     </script>
+    <script src="<?php echo base_url()?>public/assets/js/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/project_holder_report.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>

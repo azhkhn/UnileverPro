@@ -229,7 +229,7 @@
             altair_helpers.retina_images();
         });
     </script>
-    
+    <script src="<?php echo base_url()?>public/assets/js/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/ba_report.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
