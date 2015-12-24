@@ -16,7 +16,7 @@
 		}
 				
 		public function index(){
-			$this->load->model('dao/Daouser');
+/*			$this->load->model('dao/Daouser');
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtouser');
 
@@ -29,8 +29,9 @@
 			$this->data["year_achievement_percent"] = (double)($this->data["sale_target"]->monthly_target==0) ? 0 : ((double)$yearToDate->amount / (double)$this->data["sale_target"]->target_achievement) * 100;
 			$this->data["today_achievement"] = $today_amount->amount;
 			$this->data["month_achievement"] = $monthToDate->amount;
-			$this->data["year_achievement"] = $yearToDate->amount;
-			$this->load->view('reports/project_holder_daily_report', $this->data);
+			$this->data["year_achievement"] = $yearToDate->amount;*/
+			//$this->load->view('reports/project_holder_daily_report', $this->data);
+			$this->load->view('reports/project_holder_daily_report');
 		}
 
 		public function dailyPMReport(){
