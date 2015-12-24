@@ -248,7 +248,7 @@
 												  WHERE active = 1 AND users.parent_id IN (SELECT users.id 
 												  		FROM users 
 												  		INNER JOIN users_groups ON users.id = users_groups.user_id 
-												  		WHERE users.active = 1 AND users_groups.group_id = 1)))') ;
+												  		WHER Eusers.active = 1 AND users_groups.group_id = 1)))') ;
 			if($status==0){
 				$this->db->where("DATE(sales.sale_date)=DATE_FORMAT(CONVERT_TZ(NOW(), @@session.time_zone, '+07:00'),'%Y-%m-%d')");
 			}else if($status==1){
@@ -539,6 +539,51 @@
 						AND U2.id = ".$sale->getBaId()."
 						) V
 					GROUP BY V.id");
+			return $query->row();
+		}
+
+		public function getProjectHolderReport(Dtosale $sale){
+			$query = $this->db->query("
+					SELECT *
+						, COALESCE(((A.dayachievement / A.todaytarget) * 100),0) dayachievement_percent 
+						, COALESCE(((A.monthachievement / A.sumtarget) * 100),0) monthachievement_percent 
+						, COALESCE(((A.yearachievement / A.yeartarget) * 100),0) yearachievement_percent 
+					FROM (SELECT 
+						users.id id,
+						CONCAT(users.last_name, ' ', users.first_name) username,
+						(SELECT  COALESCE(SUM(target_achievement),0)
+						 FROM sale_targets
+						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND status = 1
+						) sumtarget,
+						(SELECT COALESCE(SUM(target_achievement/26),0)
+						FROM users
+						LEFT JOIN sale_targets ON users.id = sale_targets.ba_id
+						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND status = 1
+						) todaytarget,
+						(SELECT COALESCE(SUM(target_achievement),0)
+						FROM users
+						LEFT JOIN sale_targets ON users.id = sale_targets.ba_id
+						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND status = 1
+						) yeartarget,
+						(SELECT  COALESCE(SUM(_SI.quantity*_SI.price),0)
+					        FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+						LEFT JOIN users _U ON _U.id=_S.ba_id
+						WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-%m-%d') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00')
+						)  dayachievement,
+						(SELECT  COALESCE(SUM(_SI.quantity*_SI.price),0)
+					        FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+						LEFT JOIN users _U ON _U.id=_S.ba_id
+					       WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-%m-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') 
+						)  monthachievement,
+						( SELECT SUM(_SI.quantity*_SI.price)
+						 FROM sales _S 
+						 INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+						 LEFT JOIN users _U ON _U.id=_S.ba_id
+					  	 WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-01-01') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') )  yearachievement
+					FROM users
+					LEFT JOIN users_groups ON users.id = users_groups.user_id
+					WHERE users_groups.group_id = 4
+					) A");
 			return $query->row();
 		}
 	}
