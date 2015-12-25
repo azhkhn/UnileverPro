@@ -32,10 +32,12 @@
 			return $query->result_array();
 		}
 
-		public function getoutletsaleAmountPerYear($year){
+		public function getoutletsaleAmountPerYear($year, $option=1){
 			$this->db->query("SET @no=0;");
 			$query = $this->db->query("
-				SELECT @no := @no+1 AS No, O.name outlet_name
+				SELECT @no := @no+1 AS No
+					 , O.name outlet_name
+					 , P.name product_name
   					 , SUM(IF(month(S.sale_date)=1, SI.quantity*SI.price, 0)) jan_total
   					 , SUM(IF(month(S.sale_date)=2, SI.quantity*SI.price, 0)) feb_total
   					 , SUM(IF(month(S.sale_date)=3, SI.quantity*SI.price, 0)) mar_total
@@ -52,11 +54,15 @@
 				LEFT JOIN sale_items SI ON S.id=SI.sale_id
 				LEFT JOIN products P ON SI.product_id=P.id
 				WHERE YEAR(S.sale_date)=".$year."
-				GROUP BY outlet_name");
-			return $query->result_array();
+				GROUP BY outlet_name, SI.product_id");
+			if($option==1){
+				return $query->result_array();
+			}else{
+				return $query->result();
+			}
 		}
 
-		public function getoutletsaleQtyAmountPerYear($year){
+		public function getoutletsaleQtyAmountPerYear($year, $option=1){
 			$this->db->query("SET @no=0;");
 			$query = $this->db->query("
 				SELECT @no := @no+1 AS No, O.Name outlet_name
@@ -74,12 +80,16 @@
 						  , SUM(IF(month(S.sale_date)=11, SI.quantity, 0)) nov_total
 						  , SUM(IF(month(S.sale_date)=12, SI.quantity, 0)) dec_total
 					FROM outlets O LEFT JOIN sales S ON O.id=S.outlet_id 
-					INNER JOIN sale_items SI ON S.id=SI.sale_id
-					INNER JOIN products P ON SI.product_id=P.id
+					LEFT JOIN sale_items SI ON S.id=SI.sale_id
+					LEFT JOIN products P ON SI.product_id=P.id
 					WHERE YEAR(S.sale_date)=".$year."
 					GROUP BY outlet_name, SI.product_id
 				");
-			return $query->result_array();
+			if($option==1){
+				return $query->result_array();
+			}else{
+				return $query->result();
+			}
 		}
 	}
 ?>
