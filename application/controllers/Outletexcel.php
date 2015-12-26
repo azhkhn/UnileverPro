@@ -545,5 +545,16 @@ class Outletexcel extends CI_Controller {
 		$objWriter->save('php://output');
 	}
  
+ 	public function outlet_quantity(){
+ 		$this->load->model('dao/Daoexcelreport');
+    	$data["outlets"] = $this->Daoexcelreport->getOutletSaleQtyAmountPerYear(2015,2);	
+ 		return $this->load->view("excel_reports/outlet_total_quantity", $data);
+ 	}
+
+ 	public function outlet_amount(){
+ 		$this->load->model('dao/Daoexcelreport');
+    	$data["outlets"] = $this->Daoexcelreport->getoutletsaleAmountPerYear(2015,2);	
+ 		return $this->load->view("excel_reports/outlet_total_amount", $data);
+ 	}
 }
 ?>
