@@ -411,6 +411,7 @@ class Outletexcel extends CI_Controller {
 		
 		$headers = array('No',
 						 'Outlet Name',
+						 'Product Name',
 						 'January',
 						 'Febuary',
 						 'March',
@@ -424,7 +425,7 @@ class Outletexcel extends CI_Controller {
 						 'November',
 						 'December'
 						 );
-		foreach(range('B','O') as $key=>$columnID)
+		foreach(range('B','P') as $key=>$columnID)
 		{
 				$this->excel->getActiveSheet()->setCellValue($columnID."5",$headers[$key]);
     			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(false);
@@ -448,10 +449,10 @@ class Outletexcel extends CI_Controller {
 		        ),
 		    ),
 		);
-		$this->excel->getActiveSheet()->getStyle('B5:O5')->applyFromArray($styleArray);
+		$this->excel->getActiveSheet()->getStyle('B5:P5')->applyFromArray($styleArray);
 
     	$this->excel->getActiveSheet()->fromArray($outlets, NULL, 'B6');
-    	$this->excel->getActiveSheet()->getStyle('B5:O'.(count($outlets)+5))->applyFromArray($styleArray);
+    	$this->excel->getActiveSheet()->getStyle('B5:P'.(count($outlets)+5))->applyFromArray($styleArray);
 
 		$filename='OUTLET_TOTAL_AMOUNT_IN_YEAR_'.$year.'_'.date('YmdHis').'.xlsx'; //save our workbook as this file name
 		header('Content-Type: application/vnd.ms-excel'); //mime type
@@ -548,6 +549,8 @@ class Outletexcel extends CI_Controller {
  	public function outlet_quantity(){
  		$this->load->model('dao/Daoexcelreport');
     	$data["outlets"] = $this->Daoexcelreport->getOutletSaleQtyAmountPerYear(2015,2);	
+    	//$data["outlets_items"] = $this->Daoexcelreport->getOutletWithItems();
+    	var_dump($data);
  		return $this->load->view("excel_reports/outlet_total_quantity", $data);
  	}
 
@@ -555,6 +558,12 @@ class Outletexcel extends CI_Controller {
  		$this->load->model('dao/Daoexcelreport');
     	$data["outlets"] = $this->Daoexcelreport->getoutletsaleAmountPerYear(2015,2);	
  		return $this->load->view("excel_reports/outlet_total_amount", $data);
+ 	}
+
+ 	public function outlet_items(){
+ 		$this->load->model('dao/Daoexcelreport');
+    	$data["outlets"] = $this->Daoexcelreport->getOutletWithItems();	
+ 		return $this->load->view("excel_reports/outlet_items", $data);	
  	}
 }
 ?>

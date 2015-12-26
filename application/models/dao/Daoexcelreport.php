@@ -5,31 +5,9 @@
 		}
 
 		public function getOutletWithItems(){
-			$this->db->query("SET @sql = NULL;");
-			$this->db->query("
-					SELECT
-					  GROUP_CONCAT(DISTINCT
-					    CONCAT(
-								'SUM(CASE WHEN O.name = ''',
-					      O.name,
-					      ''' then SI.Quantity end) AS ''',
-					      O.name,''''
-					    )
-					  ) INTO @sql
-					FROM
-					  outlets O 
-					  LEFT JOIN sales S ON O.id=S.outlet_id 
-					  LEFT JOIN sale_items SI ON S.id=SI.sale_id;");
-			$this->db->query("
-					SET @sql = CONCAT('
-					SELECT P.Name product_name,
-					', @sql, '
-					FROM products P LEFT JOIN sale_items SI ON P.id=SI.product_id 
-					INNER JOIN sales S ON S.id=SI.sale_id 
-					INNER JOIN outlets O ON S.outlet_id=O.id 
-					GROUP BY product_name');");
-			$query = $this->db->query("PREPARE stmt FROM @sql;EXECUTE stmt;DEALLOCATE PREPARE stmt;");
-			return $query->result_array();
+			$query = $this->db->query("CALL ITEM_TO_OUTLET");
+			$result = $query->result_array();
+			return $result;
 		}
 
 		public function getoutletsaleAmountPerYear($year, $option=1){
@@ -65,7 +43,8 @@
 		public function getoutletsaleQtyAmountPerYear($year, $option=1){
 			$this->db->query("SET @no=0;");
 			$query = $this->db->query("
-				SELECT @no := @no+1 AS No, O.Name outlet_name
+				SELECT @no := @no+1 AS No
+						  , O.Name outlet_name
 						  , P.name product_name
 						  , SUM(IF(month(S.sale_date)=1, SI.quantity, 0)) jan_total
 						  , SUM(IF(month(S.sale_date)=2, SI.quantity, 0)) feb_total
