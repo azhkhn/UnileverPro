@@ -4,10 +4,18 @@
 			parent::__construct();
 		}
 
-		public function getOutletWithItems(){
+		public function getOutletWithItems($year, $option=1){
 			$query = $this->db->query("CALL ITEM_TO_OUTLET");
-			$result = $query->result_array();
-			return $result;
+       		if($option==1){
+				$result =  $query->result_array();
+			}else{
+				$result =  $query->result();
+			}
+			$query->next_result(); // Dump the extra resultset.
+       		$query->free_result(); // Does what it says.
+
+       		return $result;
+			
 		}
 
 		public function getoutletsaleAmountPerYear($year, $option=1){
