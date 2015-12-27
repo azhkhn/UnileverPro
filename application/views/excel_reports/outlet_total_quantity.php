@@ -49,6 +49,7 @@
                                     <option>2023</option>
                                     <option>2024</option>
                                 </select>
+                                <button id="btnExportExcel" class>Export Excel</button>
                                 <table class="uk-table">
                                     <thead>
                                         <tr>
@@ -160,5 +161,12 @@
         });
     </script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btnExportExcel").click(function(){
+                location.href=SITE_URL+"outletexcel/amount/2015";
+            });
+        });
+    </script>
 </body>
 </html>
