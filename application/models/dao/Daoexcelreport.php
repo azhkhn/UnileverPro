@@ -5,7 +5,7 @@
 		}
 
 		public function getOutletWithItems($year, $option=1){
-			$query = $this->db->query("CALL ITEM_TO_OUTLET");
+			$query = $this->db->query("CALL ITEM_TO_OUTLET(?)", $year);
        		if($option==1){
 				$result =  $query->result_array();
 			}else{

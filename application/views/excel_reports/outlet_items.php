@@ -24,7 +24,7 @@
 
     <div id="page_content">
         <div id="page_heading">
-            <h1 id="product_edit_name">OUTLET & PRODUCT TOTAL AMOUNT MONTHLY</h1>
+            <h1 id="product_edit_name">OUTLET & PRODUCT TOTAL</h1>
         </div>
         <div id="page_content_inner">
             <div class="md-card">
@@ -32,64 +32,28 @@
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-1-1">
                             <div class="uk-overflow-container">
-                                <select>
-                                    <option>2010</option>
-                                    <option>2011</option>
-                                    <option>2012</option>
-                                    <option>2013</option>
-                                    <option>2014</option>
-                                    <option>2015</option>
-                                    <option>2016</option>
-                                    <option>2017</option>
-                                    <option>2018</option>
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                    <option>2022</option>
-                                    <option>2023</option>
-                                    <option>2024</option>
+                                <select id="selectYear">
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
                                 </select>
                                 <button id="btnExportExcel" class>Export Excel</button>
                                 <table class="uk-table">
                                     <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Outlet Name</th>
-                                            <th>Product Name</th>
-                                            <th>January</th>
-                                            <th>Febuary</th>
-                                            <th>March</th>
-                                            <th>April</th>
-                                            <th>May</th>
-                                            <th>June</th>
-                                            <th>July</th>
-                                            <th>August</th>
-                                            <th>September</th>
-                                            <th>October</th>
-                                            <th>November</th>
-                                            <th>December</th>
-                                        </tr>
                                     </thead>
                                     <tbody id="CONTENTS">
-                                        <?php foreach ($outlets as $outlet):?>
-                                        <tr>
-                                            <td><?php echo($outlet->No); ?></td>
-                                            <td><?php echo($outlet->outlet_name); ?></td>
-                                            <td><?php echo($outlet->product_name); ?></td>
-                                            <td><?php echo($outlet->jan_total); ?></td>
-                                            <td><?php echo($outlet->feb_total); ?></td>
-                                            <td><?php echo($outlet->mar_total); ?></td>
-                                            <td><?php echo($outlet->apr_total); ?></td>
-                                            <td><?php echo($outlet->may_total); ?></td>
-                                            <td><?php echo($outlet->jun_total); ?></td>
-                                            <td><?php echo($outlet->jul_total); ?></td>
-                                            <td><?php echo($outlet->aug_total); ?></td>
-                                            <td><?php echo($outlet->sep_total); ?></td>
-                                            <td><?php echo($outlet->oct_total); ?></td>
-                                            <td><?php echo($outlet->nov_total); ?></td>
-                                            <td><?php echo($outlet->dec_total); ?></td>
-                                        </tr>
-                                        <?php endforeach;?>
                                     </tbody>
                                 </table>
                             </div>
@@ -155,7 +119,7 @@
     <script>
         var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
-            $("table").DataTable();
+            //$("table").DataTable();
             altair_helpers.retina_images();
 
         });
@@ -163,10 +127,59 @@
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
     <script type="text/javascript">
         $(function(){
+            var excel = {};
+            var currentYear = new Date().getFullYear()
+            $("#selectYear").val(currentYear);
+            excel.getAllProducts = function(year){
+                var start_date = moment().date(1).format('YYYY-MM-DD');
+                var end_date = moment().add('months', 1).date(0).format('YYYY-MM-DD');
+                modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+                $.ajax({
+                    url: SITE_URL+'outletexcel/outlet_items_ajax/'+ year,
+                    type: "POST",
+                    dataType: "JSON",
+                    success: function(data){
+                        console.log(data);
+                        var headers = "<tr>";
+                        for(props in data.outlets[0]){
+                            headers += "<th>" + props + "</th>";
+                        }
+                        headers +="</tr>";
+                        $("table thead").html(headers);
+
+                        htmlBody = "";
+                        $.each(data.outlets, function(key, value){
+                            htmlBody +="<tr>"
+                            for(key in value){
+                                htmlBody +="<td>"+value[key]+"</td>";
+                            }
+                            htmlBody +="</tr>"
+                        });
+
+                        $("table tbody").html(htmlBody);
+                        modal.hide();
+                    },
+                    error: function(data){
+                        modal.hide();
+                        console.log(data);
+                    }
+                });
+            };
+
+            excel.getAllProducts(currentYear);
+
+            // TODO: WHEN CLICK ON THE BUTTON EXPORT EXCEL
             $("#btnExportExcel").click(function(){
-                location.href=SITE_URL+"outletexcel/amount/2015";
+                location.href=SITE_URL+"outletexcel/outlet_items_excel/"+$("#selectYear").val();
+            });            
+
+            // TODO: WHEN CLICK ON THE COMBO BOX YEAR
+            $("#selectYear").change(function(){
+                excel.getAllProducts($(this).val());
             });
         });
     </script>
+
+
 </body>
 </html>
