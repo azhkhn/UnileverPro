@@ -66,7 +66,7 @@ class Outletexcel extends CI_Controller {
     					)
     			);    
     	$this->load->model('dao/Daoexcelreport');
-    	$outlets = $this->Daoexcelreport->getOutletWithItems();	
+    	$outlets = $this->Daoexcelreport->getOutletWithItems($year);	
     	$this->excel->getActiveSheet()->freezePane('B6');
     	$styleArray = array(
 		    'borders' => array(
@@ -410,58 +410,39 @@ class Outletexcel extends CI_Controller {
 		$this->excel->getActiveSheet()->mergeCells('B2:K2');
 		
 		$this->load->model('dao/Daoexcelreport');
-    	$outlets = $this->Daoexcelreport->getOutletWithItems(2015);	
+    	$outlets = $this->Daoexcelreport->getOutletWithItems($year);	
     	$headers = array();
-    	var_dump($outlets);
+    	$columns = array();
+    	$start = 65;
 		foreach($outlets[0] as $key => $value)
 		{
   			array_push($headers,$key);
+  			array_push($columns,chr(++$start));
 		}
-
-		var_dump($headers);
-
-		/*$headers = array('No',
-						 'Outlet Name',
-						 'Product Name',
-						 'January',
-						 'Febuary',
-						 'March',
-						 'April',
-						 'May',
-						 'June',
-						 'July',
-						 'August',
-						 'September',
-						 'October',
-						 'November',
-						 'December'
-						 );*/
-		foreach(range('B','E') as $key=>$columnID)
+		foreach($columns as $key=>$columnID)
 		{
 				$this->excel->getActiveSheet()->setCellValue($columnID."5",$headers[$key]);
     			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(false);
     			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setWidth(12);
     			$this->excel->getActiveSheet()->getStyle($columnID."5")->getFont()->setBold(true);
     	}
-    	$this->excel->getActiveSheet()->getColumnDimension("B")->setWidth(5);
-    	$this->excel->getActiveSheet()->getColumnDimension("C")->setAutoSize(true);
+    	$this->excel->getActiveSheet()->getColumnDimension("B")->setAutoSize(true);
 
     	$this->excel->getActiveSheet()->freezePane('B6');
     	$styleArray = array(
 		    'borders' => array(
 		        'outline' => array(
 		            'style' => PHPExcel_Style_Border::BORDER_THIN
-		            //'color' => array('argb' => 'FFFF0000'),
 		        ),
 		        'inside' => array(
 		            'style' => PHPExcel_Style_Border::BORDER_THIN
 		        ),
 		    ),
 		);
-		$this->excel->getActiveSheet()->getStyle('B5:E5')->applyFromArray($styleArray);
+		$this->excel->getActiveSheet()->getStyle('B5:F5')->applyFromArray($styleArray);
 
     	$this->excel->getActiveSheet()->fromArray($outlets, NULL, 'B6');
-    	$this->excel->getActiveSheet()->getStyle('B5:E'.(count($outlets)+5))->applyFromArray($styleArray);
+    	$this->excel->getActiveSheet()->getStyle('B5:F'.(count($outlets)+5))->applyFromArray($styleArray);
 
 		$filename='OUTLET_ITEMS_IN_YEAR_'.$year.'_'.date('YmdHis').'.xlsx'; //save our workbook as this file name
 		header('Content-Type: application/vnd.ms-excel'); //mime type
@@ -520,7 +501,7 @@ class Outletexcel extends CI_Controller {
     			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setWidth(12);
     			$this->excel->getActiveSheet()->getStyle($columnID."5")->getFont()->setBold(true);
     	}
-    	$this->excel->getActiveSheet()->getColumnDimension("B")->setWidth(5);
+    	$this->excel->getActiveSheet()->getColumnDimension("D")->setAutoSize(true);
     	$this->excel->getActiveSheet()->getColumnDimension("C")->setAutoSize(true);
 
     	$this->load->model('dao/Daoexcelreport');
@@ -635,23 +616,35 @@ class Outletexcel extends CI_Controller {
 	}
  
  	public function outlet_quantity(){
+ 		//$this->load->model('dao/Daoexcelreport');
+    	//$data["outlets"] = $this->Daoexcelreport->getOutletSaleQtyAmountPerYear($year,2);	
+ 		return $this->load->view("excel_reports/outlet_total_quantity");
+ 	}
+
+ 	public function outlet_quantity_ajax($year){
  		$this->load->model('dao/Daoexcelreport');
-    	$data["outlets"] = $this->Daoexcelreport->getOutletSaleQtyAmountPerYear(2015,2);	
-    	//$data["outlets_items"] = $this->Daoexcelreport->getOutletWithItems();
-    	var_dump($data);
- 		return $this->load->view("excel_reports/outlet_total_quantity", $data);
+    	$data["outlets"] = $this->Daoexcelreport->getOutletSaleQtyAmountPerYear($year,2);
+    	echo json_encode($data);
  	}
 
  	public function outlet_amount(){
+ 		return $this->load->view("excel_reports/outlet_total_amount");
+ 	}
+
+ 	public function outlet_amount_ajax($year){
  		$this->load->model('dao/Daoexcelreport');
-    	$data["outlets"] = $this->Daoexcelreport->getoutletsaleAmountPerYear(2015,2);	
- 		return $this->load->view("excel_reports/outlet_total_amount", $data);
+    	$data["outlets"] = $this->Daoexcelreport->getoutletsaleAmountPerYear($year,2);
+    	echo json_encode($data);
  	}
 
  	public function outlet_items(){
- 		$this->load->model('dao/Daoexcelreport');
-    	$data["outlets"] = $this->Daoexcelreport->getOutletWithItems();	
- 		return $this->load->view("excel_reports/outlet_items", $data);	
+ 		return $this->load->view("excel_reports/outlet_items");	
+ 	}
+
+ 	public function outlet_items_ajax($year){
+		$this->load->model('dao/Daoexcelreport');
+    	$data["outlets"] = $this->Daoexcelreport->getOutletWithItems($year);	
+    	echo json_encode($data);
  	}
 }
 ?>
