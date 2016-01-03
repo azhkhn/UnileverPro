@@ -22,7 +22,7 @@
     <div id="page_content">
         <div id="page_content_inner">
 
-            <h4 class="heading_a uk-margin-bottom">Brand</h4>
+            <h4 class="heading_a uk-margin-bottom">Sale Target</h4>
             
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">

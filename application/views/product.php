@@ -125,6 +125,24 @@
 											</div>
 
 											<div class="uk-form-row">
+												<label>Price <span class="req">*</span></label> <input
+													type="text" id="price" class="md-input" required />
+											</div>
+
+											<div class="uk-form-row">
+												<label>Unit <span class="req">*</span></label> <input
+													type="text" id="unit" class="md-input" required />
+											</div>
+
+										</div>
+
+										<div class="uk-width-large-1-2">
+											<div class="uk-form-row">
+												<label>Name <span class="req">*</span></label> <input
+													type="text" id="name" class="md-input" required />
+											</div>
+
+											<div class="uk-form-row">
 												<label for="supervisor">Promotion</label> <select
 													id="promotion" name="promotion" data-md-selectize
 													data-md-selectize-bottom>
@@ -146,24 +164,8 @@
 				                                     <?php endforeach?>
 				                                    </select>
 											</div>
-
-										</div>
-
-										<div class="uk-width-large-1-2">
-											<div class="uk-form-row">
-												<label>Name <span class="req">*</span></label> <input
-													type="text" id="name" class="md-input" required />
-											</div>
-
-											<div class="uk-form-row">
-												<label>Price <span class="req">*</span></label> <input
-													type="text" id="price" class="md-input" required />
-											</div>
-
-											<div class="uk-form-row">
-												<label>Unit <span class="req">*</span></label> <input
-													type="text" id="unit" class="md-input" required />
-											</div>
+											
+											
 
 											<div class="uk-form-row">
 												<div class="uk-width-1-1">

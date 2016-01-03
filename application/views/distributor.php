@@ -28,8 +28,6 @@
                             <th>No</th>
                             <th>Name</th>
                             <th>Created Date</th>
-                            <th>Created By</th>
-                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -39,8 +37,6 @@
                            	<th>No</th>
                             <th>Name</th>
                             <th>Created Date</th>
-                            <th>Created By</th>
-                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
@@ -53,11 +49,6 @@
                         	<td><?php echo $data->id ?></td>
                             <td><?php echo $data->name ?></td>
                             <td><?php echo $data->created_date ?></td>
-                            <td><?php echo $data->created_by ?></td>
-                            <td>
-                            	<input type="checkbox" data-switchery data-switchery-color="#1e88e5" <?php if($data->status){echo "checked";}else{echo "";} ?>/>
-			                    <label for="switch_demo_primary" class="inline-label">Active</label>
-			                </td>
                             <td>
                             	<a href="<?php echo site_url()?>distributor/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="md-icon material-icons">edit</i></a>
                             	<a href="<?php echo site_url()?>distributor/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="md-icon material-icons">delete</i></a>
