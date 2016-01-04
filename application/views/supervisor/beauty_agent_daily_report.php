@@ -11,6 +11,7 @@
             border-left: 0px;
         }
     </style>
+    <link href="<?php echo base_url()?>public/assets/css/semantic.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -167,6 +168,62 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="md-card">
+                            <div class="md-card-content large-padding">
+                                <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                    <div class="uk-width-large">
+                                        <div class="uk-width-large-1-4">
+                                            <div class="uk-form-row">
+                                                <div class="uk-input-group">
+                                                    <span class="uk-input-group-addon">
+                                                        <i class="uk-input-group-icon uk-icon-calendar"></i>
+                                                    </span>
+                                                    <div class="md-input-wrapper md-input-filled">
+                                                        <label for="txtTransactionOf">Transaction Of</label>
+                                                        <input class="md-input" type="text" id="txtTransactionOf" data-uk-datepicker="{format:'DD-MMMM-YYYY', }">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-large">
+                                        <div class="uk-width-large">
+                                            <div class="uk-form-row">
+                                                <div class="uk-grid" data-uk-grid-margin>
+                                                    <div class="uk-width-1-1">
+                                                        <div class="uk-overflow-container">
+                                                            <table class="uk-table" id="saleTransaction">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="width:10%;">Item Code</th>
+                                                                        <th style="width:30%;">Item Name</th>
+                                                                        <th style="width:10%;">Price</th>
+                                                                        <th style="width:10%;">Quantity Sold</th>
+                                                                        <th style="width:10%;">Amount</th>
+                                                                        <th style="width:15%;">Promotion</th>
+                                                                        <th style="width:15%;">Promotion Type</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="CONTENTS">
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div id="PAGINATION">
+                                                            <!--<?php
+                                                               echo $page_links;
+                                                            ?>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-modal-footer uk-text-right">
+                                            <input type="button" class="md-btn md-btn-primary" id="btnSave" value="Save" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -174,11 +231,58 @@
         </div>
     </div>
 
-    <!-- <div class="md-fab-wrapper">
-        <a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
-            <i class="material-icons">&#xE161;</i>
+
+        <div>
+        <div class="uk-modal" id="modalAddNewSale">
+            <div class="uk-modal-dialog uk-modal-dialog-large">
+                <button type="button" class="uk-modal-close uk-close"></button>
+                <div class="uk-modal-header">
+                    <h3 class="uk-modal-title">ADD NEW SALE</h3>
+                </div>
+                <form action="" class="uk-form-stacked" id="frmAddNewSale" method="POST">
+                    <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                        <div class="uk-width-xLarge-10-10  uk-width-large-10-10">
+                            <div class="md-card">
+                                <div class="md-card-toolbar">
+                                    <h3 class="md-card-toolbar-heading-text">
+                                        INFORMATION DETAILS
+                                    </h3>
+                                </div>
+                                <div class="md-card-content large-padding">
+                                    <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <!-- <button type="button" class="md-btn uk-modal-close">Close</button>
+                    <input type="button" class="md-btn md-btn-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
+                    <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" /> -->
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!--     <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalAddNewSale'}">
+            <i class="material-icons">&#xE145;</i>
         </a>
     </div> -->
+
+    <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
+        <tr>
+            <td id="itemCode">{{= code}}</td>
+            <td id="itemName">{{= name}}</td>
+            <td id="price">{{= price}}</td>
+            <td id="quantitySold" class="td-editable">{{= quantity}}</td>
+            <td id="amount">{{= amount}}</td>
+            <td id="promotion" class="td-editable">{{= promotion_name }}</td>
+            <td id="promotionType" class="td-editable">{{= promotion_type }}</td>
+        </tr>
+    </script>
 
     <!-- google web fonts -->
     <script>
@@ -229,6 +333,12 @@
             altair_helpers.retina_images();
         });
     </script>
+    <!--
+    <script src="<?php echo base_url()?>public/assets/js/jquery-2.1.3.min.js"></script>
+    <script src="<?php echo base_url()?>public/assets/js/semantic.min.js"></script>
+    <script src="<?php echo base_url()?>public/assets/js/semantic.editableRecord.js"></script>
+    <script src="<?php echo base_url()?>public/assets/js/example.js"></script>
+    -->
     <script src="<?php echo base_url()?>public/assets/js/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/ba_report.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>

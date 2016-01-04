@@ -64,10 +64,12 @@
 		public function changeBA(){
 			$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtosale');
+			$this->load->model('dao/Daoproduct');
 			$this->Dtosale->setBaId($this->input->post("ba_id"));
 			$this->Dtosale->setStartDate($this->input->post('start_date'));
 			$this->Dtosale->setEndDate($this->input->post('end_date'));
 			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
+			$this->data["products"] = $this->Daoproduct->getAllProductsOnSale();
 			echo json_encode($this->data);
 		}
 
