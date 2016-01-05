@@ -1,7 +1,7 @@
 $(function(){
 	
 	var dmsCode = false;
-
+	$("#txtTransactionOf").val(moment().format('DD-MMMM-YYYY'));
 	// TODO: ON CHANGE ON BA 
 	$("#selectedBA").change(function(){
 		var start_date = moment().date(1).format('YYYY-MM-DD');
@@ -22,9 +22,8 @@ $(function(){
 			},
 			success: function(data){
 				console.log(data);
-				$('.md-input-wrapper').find('.md-input').val('');
+				$('.md-input-wrapper').find('.md-input').not("#txtTransactionOf,#txtNumberOfWorking").val('');
 				$('.md-input-wrapper').removeClass('md-input-filled');
-				$("#txtNumberOfWorking").val(26);
 				if(data.user){
 					$("#txtPhoto").attr('src',data.user.photo);
 					$("#txtSupervisorName").val(data.user.supervisor);
@@ -46,6 +45,16 @@ $(function(){
 					$("#txtMonthToDateAchievementPercent").val('% ' + data.user.month_achievement_percent);
 					$("#txtYearToDateAchievementPercent").val('% ' + data.user.year_achievement_percent);
 					$('.md-input-wrapper').addClass('md-input-filled');
+					if(data.products.length>0){
+						$("tbody#CONTENTS").html('');
+						/*for(var i=0;i<data.products.length;i++){
+		                    data.products[i]['check']='';
+		                    products.formatData(data.products[i]);
+		                }*/
+						$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
+					}else{
+						$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
+					}
 				}
 				modal.hide();
 			},
@@ -80,7 +89,7 @@ $(function(){
 					$("#txtNumberOfWorking").val(26);
 					if(data.user){
 						dmsCode = true;
-						$('.md-input-wrapper').find('.md-input').val('');
+						$('.md-input-wrapper').find('.md-input').not("#txtTransactionOf,#txtNumberOfWorking").val('');
 						$('.md-input-wrapper').removeClass('md-input-filled');
 						$("#txtNumberOfWorking").val(26);
 						var $selectedBA = $("#selectedBA").selectize();
@@ -186,4 +195,34 @@ $(function(){
 			}
 		});
 	});
+
+	$(document).on('click','.td-editable', function(e){
+		e.stopPropagation();
+		$(this).html("<input type='text' style='width:90%; padding:0; margin:0; border:none;' class='table-input' value='"+$(this).html()+"'/>");
+		$(".table-input").focus();
+
+		var currentElement = $(this);
+		var parent = $(this).parent("tr");
+        $(".table-input").keyup(function (event) {
+            if (event.keyCode == 13 || event.keyCode == 40) {
+                currentElement.html($(".table-input").val().trim());
+            }
+            if(currentElement.attr('id')=="quantitySold"){
+            	parent.find("#amount").html(currentElement.html() * parent.find("#price").html());
+            }
+        });
+        /*$(document).click(function () {
+            currentElement.html($.trim($(".table-input").val()));
+	    });
+*/
+	    $(".table-input").on('blur', function(event){
+			currentElement.html($.trim($(".table-input").val()));
+			if(currentElement.attr('id')=="quantitySold"){
+            	parent.find("#amount").html(currentElement.html() * parent.find("#price").html());
+            }
+	    });
+
+
+	});
+
 });
