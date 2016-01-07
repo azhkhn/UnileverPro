@@ -52,6 +52,66 @@ $(function(){
 		                    products.formatData(data.products[i]);
 		                }*/
 						$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
+						var dataSource = new kendo.data.DataSource({
+				           /*pageSize: 20,*/
+				           data: data.products,
+				           autoSync: true,
+				           schema: {
+				               model: {
+				                 id: "id",
+				                 fields: {
+				                    code: { editable: false, nullable: false },
+				                    name: { editable: false },
+				                    price: { editable: false, nullable: false},
+				                    quantity: { type: "number", editable: true, validation: { required: true, min: 0}},
+				                    amount: { editable: false},
+				                    promotion: { },
+				                    promotiontype: { editable: true}
+				                 }
+				               }
+				           }
+				        });
+
+			        	var _promotionTypeDataSource = new kendo.data.DataSource({
+						    data: [
+						        { id: 1, promotiontype: "BUY 1 FREE 1" },
+						        { id: 2, promotiontype: "BUY 2 FREE 2" }
+						    ]
+						});
+				        var _grid = $("#grid").kendoGrid({
+			        		dataSource: dataSource,
+			                sortable: true,
+			                /*pageable: true,*/
+			                /*height: 550,*/
+			                toolbar: ["save"],
+			                editable: true,
+			                columns: [
+	                            { field:"id",title:"Id", hidden: true},
+	                            { field: "code", title: "Code", width:"15%"},
+	                            { field: "name", title:"Product Name", },
+	                            { field: "price", title: "Unit Price", format: "{0:c}", width: "10%"},
+	                            { field: "quantity", title: "Quantity", width: "10%"},
+	                            { field: "amount", title: "Amount", format: "{0:c}", width: "15%"},
+	                            { field: "promotion", title: "Promotion", width: "15%"},
+	                            { field: "promotiontype", title: "Promotion Type", width: "15%", 
+	                            		 editor: function(container, options) {
+							                $("<input data-bind='value:data.promotiontype' />")
+							                    .attr("id", "promotiontype")
+							                    .appendTo(container)
+							                    .kendoDropDownList({
+							                        dataSource: _promotionTypeDataSource,
+							                        dataTextField: "promotiontype",
+							                        dataValueField: "id",
+							                        template: "<span data-id='${data.id}'>${data.promotiontype}</span>",
+							                        select: function(dataItem) {
+							                        	console.log(dataItem);
+							                            return dataItem.promotiontype;
+							                        }
+							                    });
+							            }
+							    }
+	                        ]
+					    });
 					}else{
 						$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
 					}
@@ -224,5 +284,27 @@ $(function(){
 
 
 	});
+
+
+
+
+	function promotionTypeDropDownEditor(container, options) {
+        $('<input required data-text-field="CategoryName" data-value-field="PromotionTypeId" data-bind=""/>')
+            .appendTo(container)
+            .kendoDropDownList({
+                dataTextField: "promotiontype",
+                dataValueField:"id",
+                dataSource: _promotionTypeDataSource
+            });
+    }
+
+    function promotionType(promotionTypeId) {
+        for (var i = 0; i < _promotionTypeDataSource.length; i++) {
+            if (_promotionTypeDataSource[i].id == promotionTypeId) {
+                return _promotionTypeDataSource[i].promotiontype;
+            }
+        }
+    }
+
 
 });

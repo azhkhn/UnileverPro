@@ -13,6 +13,10 @@
     </style>
     <link href="<?php echo base_url()?>public/assets/css/semantic.min.css" rel="stylesheet">
 
+<!--     <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.1111/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.1111/styles/kendo.material.min.css" /> -->
+    
+
 </head>
 <body>
 	<!--  header -->
@@ -192,7 +196,7 @@
                                                 <div class="uk-grid" data-uk-grid-margin>
                                                     <div class="uk-width-1-1">
                                                         <div class="uk-overflow-container">
-                                                            <table class="uk-table" id="saleTransaction">
+                                                            <table class="uk-table" id="saleTransaction" style="display:none;">
                                                                 <thead>
                                                                     <tr>
                                                                         <th style="width:10%;">Item Code</th>
@@ -207,8 +211,9 @@
                                                                 <tbody id="CONTENTS">
                                                                 </tbody>
                                                             </table>
+                                                        <div id="grid"></div>
                                                         </div>
-                                                        <div id="PAGINATION">
+                                                        <div id="PAGINATION" style="display:none;">
                                                             <!--<?php
                                                                echo $page_links;
                                                             ?>-->
@@ -217,9 +222,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="uk-modal-footer uk-text-right">
+                                        <!-- <div class="uk-modal-footer uk-text-right">
                                             <input type="button" class="md-btn md-btn-primary" id="btnSave" value="Save" />
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -266,6 +271,10 @@
         </div>
     </div>
 
+
+
+
+
 <!--     <div class="md-fab-wrapper">
         <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalAddNewSale'}">
             <i class="material-icons">&#xE145;</i>
@@ -305,6 +314,8 @@
         })();
     </script>
 
+
+
     <!-- momentJS date library -->
     <script src="<?php echo base_url()?>public/bower_components/moment/min/moment.min.js"></script>
 
@@ -340,7 +351,64 @@
     <script src="<?php echo base_url()?>public/assets/js/example.js"></script>
     -->
     <script src="<?php echo base_url()?>public/assets/js/jquery.tmpl.min.js"></script>
+    <script src="<?php echo base_url()?>public/assets/js/kendo.all.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/ba_report.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
+    <script type="text/javascript">
+
+    </script>
+        <!-- <div id="example">
+        <div id="grid"></div>
+            <script>
+                $(document).ready(function () {
+                    var dataSource = new kendo.data.DataSource({
+                       pageSize: 20,
+                       data: products,
+                       autoSync: true,
+                       schema: {
+                           model: {
+                             id: "ProductID",
+                             fields: {
+                                ProductID: { editable: false, nullable: true },
+                                ProductName: { validation: { required: true } },
+                                Category: { defaultValue: { CategoryID: 1, CategoryName: "Beverages"} },
+                                UnitPrice: { type: "number", validation: { required: true, min: 1} }
+                             }
+                           }
+                       }
+                    });
+
+                    $("#grid").kendoGrid({
+                        dataSource: dataSource,
+                        pageable: true,
+                        height: 550,
+                        toolbar: ["create"],
+                        columns: [
+                            { field:"ProductName",title:"Product Name" },
+                            { field: "Category", title: "Category", width: "180px", editor: categoryDropDownEditor, template: "#=Category.CategoryName#" },
+                            { field: "UnitPrice", title:"Unit Price", format: "{0:c}", width: "130px" },
+                            { command: "destroy", title: " ", width: "150px" }],
+                        editable: true
+                    });
+                });
+
+                function categoryDropDownEditor(container, options) {
+                    $('<input required data-text-field="CategoryName" data-value-field="CategoryID" data-bind="value:' + options.field + '"/>')
+                        .appendTo(container)
+                        .kendoDropDownList({
+                            autoBind: false,
+                            dataSource: {
+                                type: "odata",
+                                transport: {
+                                    read: "//demos.telerik.com/kendo-ui/service/Northwind.svc/Categories"
+                                }
+                            }
+                        });
+                }
+
+            </script>
+        </div> -->
+
+       
 </body>
 </html>
