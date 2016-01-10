@@ -30,7 +30,7 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
+                            <!-- <th>Name</th> -->
                             <th>Beauty Agent</th>
                             <th>Target Achievement</th>
                             <th>Start Date</th>
@@ -42,7 +42,7 @@
                         <tfoot>
                          <tr>
                             <th>No</th>
-                            <th>Name</th>
+                            <!-- <th>Name</th> -->
                             <th>Beauty Agent</th>
                             <th>Target Achievement</th>
                             <th>Start Date</th>
@@ -55,7 +55,7 @@
                         <?php foreach ($saletarget as $v) {?>
                         <tr>
                             <td><?= $v->id ?></td>
-                            <td><?= $v->name ?></td>
+                            <!-- <td><?= $v->name ?></td> -->
                             <td><?= $v->ba_id ?></td>
                              <td><?= $v->target_achievement ?></td>
                             <td><?= $v->start_date ?></td>
@@ -117,10 +117,10 @@
 
 										<div class="uk-width-large">
 											
-											<div class="uk-form-row">
+											<div class="uk-form-row" style="display:none;">
 												<label>Name<span class="req">*</span></label> 
-												<input type="text" id="name" name="name" class="md-input" required /> 
-												<input type="hidden" id="oldname" name="oldname"  placeholder="old name"  />
+												<input type="text" id="name" name="name" class="md-input" required value="AA"/> 
+												<input type="hidden" id="oldname" name="oldname"  placeholder="old name"  value="AA"/>
 											</div>
 			
 											

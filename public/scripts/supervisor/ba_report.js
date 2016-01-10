@@ -24,16 +24,40 @@ $(function(){
 				console.log(data);
 				$('.md-input-wrapper').find('.md-input').not("#txtTransactionOf,#txtNumberOfWorking").val('');
 				$('.md-input-wrapper').removeClass('md-input-filled');
+				if(data.outlets){
+					$("#selectOutletName").html("<option value=''>Outlet Name</option>");
+					if(data.outlets.length>0){
+						for(var i=0; i<data.outlets.length;i++){
+							console.log($("#selectOutletName").html());
+							$("#selectOutletName").append("<option value='"+data.outlets[i].id+"'>"+data.outlets[i].outlet_name+"</option>");
+						}
+						$("#selectOutletName").attr('data-md-selectize','');
+						$("#selectOutletName").attr('data-md-data-md-selectize-bottom','');
+		
+					}
+
+					 /*$("#selectOutletName").kendoDropDownList({
+                          dataTextField: "outlet_name",
+                          dataValueField: "id",
+                          dataSource: data.outlets,
+                          height: 100,
+                          select: function(e){
+                          	console.log(e).item;
+                          }
+                      });*/
+                      
+				}
 				if(data.user){
 					$("#txtPhoto").attr('src',data.user.photo);
 					$("#txtSupervisorName").val(data.user.supervisor);
 					$("#txtBAExecutive").val(data.user.executive);
-					$("#txtMarketName").val(data.user.outlet_address);
+
+/*					$("#txtMarketName").val(data.user.outlet_address);
 					$("#txtOutletName").val(data.user.outlet_name);
 					$("#txtDMSCode").val(data.user.dms_code);
 					$("#txtDT").val(data.user.distributor);
 					$("#txtCustomerType").val(data.user.customer_type);
-					$("#txtChannel").val(data.user.channel);
+					$("#txtChannel").val(data.user.channel);*/
 					$("#txtMonthlyTarget").val('$ '+ data.user.sumtarget);
 					$("#txtTodayTarget").val('$ ' + data.user.sumtodaytarget);
 					$("#startDate").val(moment(start_date).format('DD-MMMM-YYYY'));
@@ -54,23 +78,91 @@ $(function(){
 						$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
 						var dataSource = new kendo.data.DataSource({
 				           /*pageSize: 20,*/
-				           data: data.products,
-				           autoSync: true,
+				           //data: data.products,
+				           change: function(e) {
+						      if (e.action == "itemchange")  {
+						        if (e.field == "quantity" || e.field == "price") {
+						       
+						          var item=  e.items[0];
+						         	item.trigger("change", {field: "amount"})
+						        } 
+						      }
+
+						    },
+				           transport: {
+                                read:  {
+                                    url: SITE_URL + "supervisor/products",
+                                    dataType: "json"
+                                },
+                                update: {
+                                    url: SITE_URL + "supervisor/products_update",
+                                    type: "POST",
+                                    data: {
+                                    	"ba_id" : 1,
+                                    	"outlet_id" : 1
+                                    },
+                                    dataType: "json",
+                                    beforeSend: function(){
+                             			modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+                                    },
+                                    complete: function(data){
+                                    	modal.hide();
+                                    	console.log(data.responseText.message);
+                                    	$("#grid").data("kendoGrid").dataSource.read(); 
+                                    }
+                                },
+                                /*destroy: {
+                                    url: SITE_URL + "/Products/Destroy",
+                                    dataType: "jsonp"
+                                },
+                                create: {
+                                    url: SITE_URL + "/Products/Create",
+                                    dataType: "jsonp"
+                                },*/
+                                parameterMap: function(options, operation) {
+                                    if (operation !== "read" && options.models) {
+                                        return { 
+                                        	models: kendo.stringify(options.models),
+                                        	//models: options.models,
+                                        	ba_id : $("#selectedBA").val(),
+                                        	outlet_id : $("#selectOutletName").val()
+
+                                        };
+                                    }
+                                }
+                            },
+                           batch: true,
+				           /*autoSync: true,*/
 				           schema: {
+				           		
 				               model: {
-				                 id: "id",
+				               	 Total:function() {
+				                  return this.get("price") * this.get("quantity");
+				                 },
+				                 id: "product_id",
 				                 fields: {
 				                    code: { editable: false, nullable: false },
 				                    name: { editable: false },
 				                    price: { editable: false, nullable: false},
 				                    quantity: { type: "number", editable: true, validation: { required: true, min: 0}},
-				                    amount: { editable: false},
+				                    amount: { 
+				                    	editable: false
+				                    },
 				                    promotion: { },
 				                    promotiontype: { editable: true}
-				                 }
+				                 },
+
 				               }
+				               
 				           }
 				        });
+
+						dataSource.fetch(function(){
+						  var view = dataSource.view();
+						  console.log(view.length); // displays "2"
+						  console.log(view[0].name); // displays "Tea"
+						  console.log(view[1].name); // displays "Ham"
+						});
 
 			        	var _promotionTypeDataSource = new kendo.data.DataSource({
 						    data: [
@@ -85,30 +177,43 @@ $(function(){
 			                /*height: 550,*/
 			                toolbar: ["save"],
 			                editable: true,
+			                selectable: true,
 			                columns: [
-	                            { field:"id",title:"Id", hidden: true},
-	                            { field: "code", title: "Code", width:"15%"},
+	                            { field:"product_id",title:"Id", hidden: true},
+	                            { field: "code", title: "Code", width:"10%"},
 	                            { field: "name", title:"Product Name", },
 	                            { field: "price", title: "Unit Price", format: "{0:c}", width: "10%"},
 	                            { field: "quantity", title: "Quantity", width: "10%"},
-	                            { field: "amount", title: "Amount", format: "{0:c}", width: "15%"},
-	                            { field: "promotion", title: "Promotion", width: "15%"},
+	                            { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
+	                            { field: "promotion", title: "Promotion", width: "15%"}, 
 	                            { field: "promotiontype", title: "Promotion Type", width: "15%", 
-	                            		 editor: function(container, options) {
-							                $("<input data-bind='value:data.promotiontype' />")
-							                    .attr("id", "promotiontype")
-							                    .appendTo(container)
-							                    .kendoDropDownList({
-							                        dataSource: _promotionTypeDataSource,
-							                        dataTextField: "promotiontype",
-							                        dataValueField: "id",
-							                        template: "<span data-id='${data.id}'>${data.promotiontype}</span>",
-							                        select: function(dataItem) {
-							                        	console.log(dataItem);
-							                            return dataItem.promotiontype;
-							                        }
-							                    });
-							            }
+                            		editor: function(container, options) {
+						                $("<input data-bind='value:promotiontype' />")
+					                    .attr("id", "ddl_roleTitle")
+					                    .appendTo(container)
+					                    .kendoDropDownList({
+					                        dataSource: _promotionTypeDataSource,
+					                        dataTextField: "promotiontype",
+					                        dataValueField: "id",
+					                        template: "<span data-id='${data.id}'>${data.promotiontype}</span>",
+					                        select: function(e) {
+					                            var id = e.item.find("span").attr("data-id");
+					                            console.log(e.item);
+					                            console.log(id);
+					                            /*var person =_grid.dataItem($(e.sender.element).closest("tr"));
+					                            person.promotiontype = id;
+					                            
+					                            setTimeout(function() {
+					                                $("#log")
+					                                    .prepend($("<div/>")
+					                                        .text(
+					                                            JSON.stringify(_grid.dataSource.data().toJSON())
+					                                         ).append("<br/><br/>")
+					                                    );
+					                                });*/
+					                        }
+					                    });
+									}
 							    }
 	                        ]
 					    });
@@ -285,26 +390,28 @@ $(function(){
 
 	});
 
-
-
-
-	function promotionTypeDropDownEditor(container, options) {
-        $('<input required data-text-field="CategoryName" data-value-field="PromotionTypeId" data-bind=""/>')
-            .appendTo(container)
-            .kendoDropDownList({
-                dataTextField: "promotiontype",
-                dataValueField:"id",
-                dataSource: _promotionTypeDataSource
-            });
-    }
-
-    function promotionType(promotionTypeId) {
-        for (var i = 0; i < _promotionTypeDataSource.length; i++) {
-            if (_promotionTypeDataSource[i].id == promotionTypeId) {
-                return _promotionTypeDataSource[i].promotiontype;
-            }
-        }
-    }
-
+	$("#selectOutletName").change(function(){
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'supervisor/outlet/'+$(this).val(),
+			type: "POST",
+			dataType: "JSON",
+			success: function(data){
+				if(data.outlet){
+					$("#txtMarketName").val(data.outlet.outlet_address);
+					/*$("#txtOutletName").val(data.outlet.outlet_name);*/
+					$("#txtDMSCode").val(data.outlet.dms_code);
+					$("#txtDT").val(data.outlet.distributor);
+					$("#txtCustomerType").val(data.outlet.customer_type);
+					$("#txtChannel").val(data.outlet.channel);
+				}
+				modal.hide();
+			},
+			error: function(data){
+				modal.hide();
+				console.log(data);
+			}
+		});
+	});
 
 });

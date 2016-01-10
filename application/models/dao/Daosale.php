@@ -273,23 +273,31 @@
 			$saleId = $this->db->insert_id();
 			
 			foreach($sale->getSaleItems() as $saleItem){
-				$saleItem["sale_id"] = $saleId;
-				$saleItem["status"] = 1;
-				if($saleItem["promotion_id"]==""){
-					$saleItem["promotion_id"] = NULL;
-				}
-				if($saleItem["promotion_type_id"]==""){
-					$saleItem["promotion_type_id"] = NULL;
-				}
-				$saleItem["created_by"] = $sale->getSaleBy();
-				$saleItem["created_date"] = date('Y-m-d H:i:s');
-				$this->db->insert("sale_items",$saleItem);
+				$item["sale_id"] = $saleId;
+				$item["product_id"] = $saleItem["product_id"];
+				$item["promotion_id"] = NULL;
+				$item["promotion_type_id"] = NULL;
+				$item["quantity"] = $saleItem["quantity"];
+				$item["price"] = $saleItem["price"];
+				$item["created_by"] = $sale->getSaleBy();
+				$item["created_date"] = date('Y-m-d H:i:s');
+				$item["status"] = 1;
+				//$saleItem["sale_id"] = $saleId;
+				//$saleItem["status"] = 1;
+				//if($saleItem["promotion_id"]==""){
+				//$saleItem["promotion_id"] = NULL;
+				//}
+				//if($saleItem["promotion_type_id"]==""){
+				//$saleItem["promotion_type_id"] = NULL;
+				//}
+				/*$saleItem["created_by"] = $sale->getSaleBy();
+				$saleItem["created_date"] = date('Y-m-d H:i:s');*/
+				$this->db->insert("sale_items",$item);
 			}
 			if($this->db->trans_status()===FALSE){
 				$this->db->trans_rollback();
 				return FALSE;
 			}else{
-				
 				$this->db->trans_commit();
 				return TRUE;
 			}
@@ -314,6 +322,7 @@
 					 , O.address outlet_address
 					 , O.name outlet_name
 					 , O.dms_code
+					 , O.id outlet_id
 					 , D.name distributor
 					 , C.name channel
 					 , OT.name customer_type
@@ -585,6 +594,41 @@
 					WHERE users_groups.group_id = 4
 					) A");
 			return $query->row();
+		}
+
+		public function addProductsSale($model){
+			$this->db->trans_begin();
+			$data = array(
+							"ba_id" => $sale->getBaId(),
+							"sale_by" => $sale->getSaleBy(),
+							"outlet_id" => $sale->getOutletId(),
+							"status" => 1,
+							"sale_date" => date('Y-m-d H:i:s')
+					);
+			$this->db->insert("sales",$data);
+			$saleId = $this->db->insert_id();
+			
+			foreach($sale->getSaleItems() as $saleItem){
+				$saleItem["sale_id"] = $saleId;
+				$saleItem["status"] = 1;
+				if($saleItem["promotion_id"]==""){
+					$saleItem["promotion_id"] = NULL;
+				}
+				if($saleItem["promotion_type_id"]==""){
+					$saleItem["promotion_type_id"] = NULL;
+				}
+				$saleItem["created_by"] = $sale->getSaleBy();
+				$saleItem["created_date"] = date('Y-m-d H:i:s');
+				$this->db->insert("sale_items",$saleItem);
+			}
+			if($this->db->trans_status()===FALSE){
+				$this->db->trans_rollback();
+				return FALSE;
+			}else{
+				
+				$this->db->trans_commit();
+				return TRUE;
+			}
 		}
 	}
 ?>
