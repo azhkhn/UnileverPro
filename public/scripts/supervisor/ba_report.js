@@ -71,10 +71,6 @@ $(function(){
 					$('.md-input-wrapper').addClass('md-input-filled');
 					if(data.products.length>0){
 						$("tbody#CONTENTS").html('');
-						/*for(var i=0;i<data.products.length;i++){
-		                    data.products[i]['check']='';
-		                    products.formatData(data.products[i]);
-		                }*/
 						$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
 						var dataSource = new kendo.data.DataSource({
 				           /*pageSize: 20,*/
@@ -149,7 +145,12 @@ $(function(){
 				                    	editable: false
 				                    },
 				                    promotion: { },
-				                    promotiontype: { editable: true}
+				                    promotion_name: { 
+				                    	editable: false
+				                    },
+				                    promotiontype: { editable: true},
+				                    promotiontype1: {},
+				                    promotion_type_id: {}
 				                 },
 
 				               }
@@ -175,42 +176,43 @@ $(function(){
 			                sortable: true,
 			                /*pageable: true,*/
 			                /*height: 550,*/
-			                toolbar: ["save"],
+			                toolbar: ["save", "excel"],
+				            excel: {
+				                fileName: "BA REPORT.xlsx"
+				            },
 			                editable: true,
 			                selectable: true,
 			                columns: [
 	                            { field:"product_id",title:"Id", hidden: true},
 	                            { field: "code", title: "Code", width:"10%"},
 	                            { field: "name", title:"Product Name", },
-	                            { field: "price", title: "Unit Price", format: "{0:c}", width: "10%"},
+	                            { field: "price", title: "Unit Price", format: "{0:c2}", width: "10%", attributes: {'data-format': 'c' },},
 	                            { field: "quantity", title: "Quantity", width: "10%"},
 	                            { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
-	                            { field: "promotion", title: "Promotion", width: "15%"}, 
-	                            { field: "promotiontype", title: "Promotion Type", width: "15%", 
+	                            { field: "promotion", title: "Promotion", width: "15%", hidden:true}, 
+	                            { field: "promotion_name", title: "Promotion", width:"15%"},
+	                            { field: "promotiontype", title: "Promotion Type", width: "15%", hidden:true},
+	                            { field: "promotiontype1", title: "Promotion Type", width: "15%",
                             		editor: function(container, options) {
-						                $("<input data-bind='value:promotiontype' />")
+                            			var dataSource = $.parseJSON('[' + options.model["promotiontype"] + ']');
+                            			console.log(container, options);
+                            			console.log(dataSource);
+						                $("<input data-bind='value:promotiontype1.id' />")
 					                    .attr("id", "ddl_roleTitle")
 					                    .appendTo(container)
 					                    .kendoDropDownList({
-					                        dataSource: _promotionTypeDataSource,
-					                        dataTextField: "promotiontype",
+					                        dataSource : new kendo.data.DataSource({
+											    data : dataSource											    
+											}),
+					                        dataTextField: "name",
 					                        dataValueField: "id",
-					                        template: "<span data-id='${data.id}'>${data.promotiontype}</span>",
+					                        template: "<span data-id='${data.id}'>${data.name}</span>",
 					                        select: function(e) {
+					                        	console.log(this.dataItem(e.item.index()));
 					                            var id = e.item.find("span").attr("data-id");
-					                            console.log(e.item);
-					                            console.log(id);
-					                            /*var person =_grid.dataItem($(e.sender.element).closest("tr"));
-					                            person.promotiontype = id;
-					                            
-					                            setTimeout(function() {
-					                                $("#log")
-					                                    .prepend($("<div/>")
-					                                        .text(
-					                                            JSON.stringify(_grid.dataSource.data().toJSON())
-					                                         ).append("<br/><br/>")
-					                                    );
-					                                });*/
+					                            var dataItem = e.sender.dataItem();
+        										options.model.set("promotiontype1", this.dataItem(e.item.index()).name);
+        										options.model.set("promotion_type_id", this.dataItem(e.item.index()).id);
 					                        }
 					                    });
 									}

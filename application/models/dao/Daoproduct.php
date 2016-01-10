@@ -99,10 +99,21 @@ class DaoProduct extends CI_Model {
 	}
 
 	public function getAllProductsOnSale(){
-		$this->db->select('id AS product_id, code, name, price, 0 AS quantity, 0 AS amount , promotion, 0 AS promotiontype');
+		$this->db->select("products.id AS product_id
+						, products.code
+						, products.name
+						, price
+						, 0 AS quantity
+						, 0 AS amount
+						, promotion
+						, sale_promotions.name AS promotion_name
+						, GROUP_CONCAT(CONCAT('{\"id\":\"', promotion_types.id, '\", \"name\":\"',promotion_types.name,'\"}')) promotiontype", FALSE);
 		$this->db->from('products');
-		$this->db->order_by("name");
-		$this->db->where('status', 1);
+		$this->db->join('sale_promotions', 'products.promotion = sale_promotions.id AND sale_promotions.end_date>=NOW()', 'LEFT');
+		$this->db->join('promotion_types', 'sale_promotions.id = promotion_types.sale_promotion_id','LEFT');
+		$this->db->group_by('products.name');
+		$this->db->order_by("products.name");
+		$this->db->where('products.status', 1);
 		$query = $this->db->get();
 		return $query->result();
 	}
