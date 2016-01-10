@@ -15,55 +15,53 @@
     
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">PROMOTION TYPE MANAGEMENT</h1>
+        </div>
         <div id="page_content_inner">
-
         <form action="#" id="promotiontypeform">
         
             <div class="md-card">
                 <div class="md-card-content">
-                    <h3 class="heading_a">Add Promotion type</h3>
                     <div class="uk-grid" data-uk-grid-margin>
-                       
-                        
                          <div class="uk-width-medium-1-2">
                          
                             <div class="uk-form-row">
                                 <label>Code</label>
                                 <input type="text" id="code" class="md-input"  required/>
-                            </div>
-                           
-	                          	  
+                            </div>  
                          </div> 
-                            
-                            
                            <div class="uk-width-medium-1-2">
                            
                            		 <div class="uk-form-row">
                               		  <label>Name</label>
                               		  <input type="text" id="name" class="md-input"  required/>
                             	</div>
-                           	
-	                         	 
-	                         	 
-	                          
                             </div>
-                            
-                       		  
-                        </div>
-                        
-                         
-                  			  	 
+                        </div>	  	 
                    <br/>
-                    
-                    <div class="uk-form-row">
-                               <div class="uk-width-1-2">
-		                            <div class="uk-form-row">
-		                                <label>Size</label>
-		                               <input type="text" id="size" class="md-input"  required/>
-		                            </div>
-		                        </div>
+                    <div class="uk-grid" data-uk-grid-margin>
+                       <div class="uk-width-1-2">
+                            <div class="uk-form-row">
+                                <label>Size</label>
+                               <input type="text" id="size" class="md-input"  required/>
+                            </div>
+                        </div>
+                         <div class="uk-width-1-2">
+                            <div class="uk-form-row">
+                               <label>Sale Promotion</label>
+                               <select id="selectSalePromotion" name="type" data-md-selectize data-md-selectize-bottom required>
+                                    <option value="">Sale Promotion</option>
+                                    <?php foreach ($sale_promotions as $v):?>
+                                        <option value="<?php echo $v->id;?>" <?php if($v->id == $getpro->sale_promotion_id) echo "selected"?>><?php echo $v->name;?></option>
+                                     <?php endforeach?>                                    
+                               </select>
+                            </div>
+                        </div>
+                       
                     </div>
                    
+
                    <br/>
                             
                     <div class="uk-grid" data-uk-grid-margin>
@@ -86,12 +84,7 @@
     <!-- right sidebar -->
     <?php $this->load->view('_rightside') ?>    
     <!-- right sidebar end -->
-    
-    
 
-    
-    
-    
      <!-- google web fonts -->
     <script>
         WebFontConfig = {
@@ -138,18 +131,15 @@
      <script>
         $(function() {
            altair_helpers.retina_images();
-           <?php if(isset($getpro)) { 
-                foreach ($getpro as $data ) {
-            ?>
-                $("#code").val("<?php echo $data->code ?>");
-                $("#name").val("<?php echo $data->name ?>");
-                $("#size").val("<?php echo $data->size ?>");
-                
+           <?php if(isset($getpro)) {?>
+                $("#code").val("<?php echo $getpro->code ?>");
+                $("#name").val("<?php echo $getpro->name ?>");
+                $("#size").val("<?php echo $getpro->size ?>");
+                $("#selectSalePromotion").val("<?php echo $getpro->sale_promotion_id ?>");                
                 $("#size").focus();
                 $("#name").focus();
                 $("#code").focus();
-                editid = <?php echo $data->id ?> ;
-            <?php } ?>
+                editid = <?php echo $getpro->id ?> ;
             $("#btnsubmit").val("Update");
             $(".heading_a").text("Update Promotiontype");
             $("#promotiontypeform").submit(function(e){
@@ -161,7 +151,8 @@
                     data: {
                         code : $("#code").val(),
                         name : $("#name").val(),
-                        size : $("#size").val()
+                        size : $("#size").val(),
+                        sale_promotion_id : $("#selectSalePromotion").val()
                     },
                     success : function(data){
                         modal.hide();
@@ -181,8 +172,9 @@
                         method: "POST",
                         data: {
                            code : $("#code").val(),
-                          name : $("#name").val(),
-                          size : $("#size").val()
+                           name : $("#name").val(),
+                           size : $("#size").val(),
+                           sale_promotion_id : $("#selectSalePromotion").val()
                         },
                         success : function(data){
                             modal.hide();
@@ -191,7 +183,6 @@
                     });
 
                 });
-
 
             <?php } ?>
         });

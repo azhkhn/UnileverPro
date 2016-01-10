@@ -14,8 +14,10 @@
     <!-- /left side bar -->
     
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">GROUP MANAGEMENT</h1>
+        </div>
         <div id="page_content_inner">
-
        <form action="<?php  echo site_url('group/addGroup')?>"  name="frmGroup" id="frmGroup" method="post" >
         
             <div class="md-card">

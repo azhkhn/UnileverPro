@@ -1,10 +1,11 @@
 <?php
-	class DtoPromotionType{
+	class Dtopromotiontype{
 
 		private $id;
 		private $code;
 		private $name;
 		private $size;
+		private $sale_promotion;
 		private $created_date;
 		private $created_by;
 		private $updated_by;
@@ -82,8 +83,16 @@
 	public function setDeleted_at($deleted_at){
 		$this->deleted_at = $deleted_at;
 	}
-		
+
+	public function getSalePromotion(){
+		return $this->sale_promotion;
 	}
+
+	public function setSalePromotion($sale_promotion){
+		$this->sale_promotion = $sale_promotion;
+	}
+		
+}
 
 
 

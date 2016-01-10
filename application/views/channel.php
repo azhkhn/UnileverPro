@@ -16,8 +16,10 @@
    
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">CHANNEL MANAGEMENT</h1>
+        </div>
         <div id="page_content_inner">
-
             <h4 class="heading_a uk-margin-bottom">Channels</h4>
             
             <div class="md-card uk-margin-medium-bottom">

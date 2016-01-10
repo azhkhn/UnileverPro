@@ -12,7 +12,7 @@ class DaoSalePromotion extends CI_Model{
 				"code" 					 => 		$v->getCode(),
 				"name" 					 => 		$v->getName(),
 				"description"			 => 		$v->getDescription(),
-				"type"   				 =>			$v->getType(),
+				//"type"   				 =>			$v->getType(),
 				"start_date"    		 => 		$v->getStart_date(),
 				"end_date"      		 => 		$v->getEnd_date(),
 				"created_by"    		 => 		$v->getCreated_by()
@@ -32,7 +32,7 @@ class DaoSalePromotion extends CI_Model{
 				"code" 					 => 		$v->getCode(),
 				"name" 					 => 		$v->getName(),
 				"description"			 => 		$v->getDescription(),
-				"type"   				 =>			$v->getType(),
+				//"type"   				 =>			$v->getType(),
 				"start_date"    		 => 		$v->getStart_date(),
 				"end_date"      		 => 		$v->getEnd_date(),
 				"updated_by"    		 => 		$v->getUpdated_by()

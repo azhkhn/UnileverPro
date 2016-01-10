@@ -15,8 +15,10 @@
     
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">CHANNEL MANAGEMENT</h1>
+        </div>
         <div id="page_content_inner">
-
         <form action="#" id="channelform">
         
             <div class="md-card">

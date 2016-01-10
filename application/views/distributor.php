@@ -16,10 +16,10 @@
    
 
     <div id="page_content">
-        <div id="page_content_inner">
-
-            <h4 class="heading_a uk-margin-bottom">Distributor</h4>
-            
+        <div id="page_heading">
+            <h1 id="product_edit_name">DISTRIBUTOR MANAGEMENT</h1>
+        </div>
+        <div id="page_content_inner">            
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
                     <table id="vu-table" class="uk-table" cellspacing="0" width="100%">

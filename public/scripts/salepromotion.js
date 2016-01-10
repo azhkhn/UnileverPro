@@ -8,10 +8,7 @@ $(function() {
 			.submit(
 					function(event) {
 						event.preventDefault();
-						
-						
-						modal = UIkit.modal
-								.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>');
+						modal = UIkit.modal.blockUI('<div class=\'uk-text-center\'>Processing...<br/><img class=\'uk-margin-top\' src=\'<?php echo base_url()?>public/assets/img/spinners/spinner.gif\' alt=\'\'>');
 						$.ajax({
 							type : "POST",
 							url : SITE_URL + "SalePromotion/addSalePromotion",
@@ -20,7 +17,7 @@ $(function() {
 								code			   	 : $.trim($("#code").val()),
 								name			   	 : $.trim($("#name").val()),
 								description		     : $.trim($("#description").val()),
-								type				 : $.trim($("#type").val()),
+								//type				 : $.trim($("#type").val()),
 								start_date		     : $.trim($("#start_date").val()),
 								end_date		     : $.trim($("#end_date").val())
 							},success: function(data){
@@ -68,20 +65,18 @@ $(function() {
 				
 				console.log("Success " +data.code);
 				
-				var $selectType = $("#type").selectize();
-				var selectType = $selectType[0].selectize;
+				/*var $selectType = $("#type").selectize();
+				var selectType = $selectType[0].selectize;*/
 				
 				
 				$("#code").val(data.code);
 				$("#oldcode").val(data.code);
 				$("#name").val(data.name);
 				$("#oldname").val(data.name);
-				selectType.setValue(data.type); 
+				//selectType.setValue(data.type); 
 				$("#start_date").val(data.start_date);
 				$("#end_date").val(data.end_date);
 				$("#description").val(data.description);
-				
-				
 				
 				modal.hide();
 				$("#btnSave").hide();
@@ -119,7 +114,7 @@ $(function() {
 				oldname			   	 : $.trim($("#oldname").val()),
 				oldcode			   	 : $.trim($("#oldcode").val()),
 				description		     : $.trim($("#description").val()),
-				type				 : $.trim($("#type").val()),
+				//type				 : $.trim($("#type").val()),
 				start_date		     : $.trim($("#start_date").val()),
 				end_date		     : $.trim($("#end_date").val())
 				},

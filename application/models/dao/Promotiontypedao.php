@@ -1,16 +1,17 @@
 <?php 
 	
-	class PromotionTypeDAO extends CI_Model{
-		public function PromotionTypeDAO(){
+	class Promotiontypedao extends CI_Model{
+		public function Promotiontypedao(){
 			parent::__construct();
-			$this->load->model("dto/DtoPromotionType");
+			$this->load->model("dto/Dtopromotiontype");
 		}
 
-		public function addPromotiontype(DtoPromotionType $dto){
+		public function addPromotiontype(Dtopromotiontype $dto){
 			$data = array(
 								'code'				=>	$dto->getCode(),
 								'name'				=> 	$dto->getName(),
 								'size'				=>	$dto->getSize(),
+								'sale_promotion_id'=> $dto->getSalePromotion(),
 								'created_by'		=>	$dto->getCreated_by()
 							);
 			$this->db->set('created_date', 'NOW()', FALSE);
@@ -18,11 +19,12 @@
 			return $this->db->insert('promotion_types', $data);
 		}
 		
-		public function updatePromotiontype(DtoPromotionType $dto){
+		public function updatePromotiontype(Dtopromotiontype $dto){
 			$data = array(
 							'code'				=>	$dto->getCode(),
 							'name'				=> 	$dto->getName(),
 							'size'				=>	$dto->getSize(),
+							'sale_promotion_id'=> $dto->getSalePromotion(),
 							"updated_by"		=>	$dto->getUpdated_by()
 			);
 			$this->db->set('updated_date', 'NOW()', FALSE);
@@ -38,17 +40,18 @@
 		}
 		
 		public function getPromotiontype($id){
-			$this->db->select('id, code, name ,size , created_date, created_by, updated_date, updated_by, status, deleted_at');
+			$this->db->select('id, code, name ,size ,sale_promotion_id, created_date, created_by, updated_date, updated_by, status, deleted_at');
 			$this->db->from('promotion_types');
 			$this->db->where('id', $id);
 			$this->db->limit(1);
 			$query = $this->db->get();
-			return $query->result();
+			return $query->row();
 		}
 		
 		public function listPromotiontypes(){
-			$this->db->select('id, code, name ,size , created_date, created_by, updated_date, updated_by, status, deleted_at');
-			$this->db->from('promotion_types');
+			$this->db->select('A.id, A.code, A.name ,A.size , B.name AS sale_promotion, A.created_date, A.sale_promotion_id, A.created_by, A.updated_date, A.updated_by, A.status, A.deleted_at');
+			$this->db->from('promotion_types A');
+			$this->db->join('sale_promotions B', 'A.sale_promotion_id = B.id','LEFT');
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();

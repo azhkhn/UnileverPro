@@ -21,15 +21,14 @@
     
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">OUTLET MANAGEMENT</h1>
+        </div>
         <div id="page_content_inner">
-
         <form action="#" id="outletform">
-        
             <div class="md-card">
                 <div class="md-card-content">
-                    <h3 class="heading_a">Add Outlet</h3>
                     <div class="uk-grid" data-uk-grid-margin>
-                       
                         <div class="uk-width-medium-1-2">
                             <div class="uk-form-row">
                                 <label>DMS Code</label>
@@ -56,12 +55,11 @@
                             </div> -->
                             
                             <div class="uk-form-row">
-								<label for="supervisor">Distributor</label>
-								<select id="distributorid" name="distributorid" data-md-selectize data-md-selectize-bottom>
-									<option>Choose</option>
-				                    
-				                </select>
-							</div>
+                								<label for="supervisor">Distributor</label>
+                								<div class="uk-form-row">
+                                     <input id="distributorid" name="distributorid" class="uk-form-width-medium"  />
+                                </div>
+							             </div>
                             
                             
                             
@@ -125,12 +123,6 @@
     <!-- right sidebar -->
     <?php $this->load->view('_rightside') ?>    
     <!-- right sidebar end -->
-    
-    
-
-    
-    
-    
      <!-- google web fonts -->
     <script>
         WebFontConfig = {
@@ -382,9 +374,5 @@
             <?php } ?>
         });
     </script>
-    
-    
-    
-    
 </body>
 </html>

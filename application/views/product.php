@@ -17,10 +17,10 @@
 
 
 	<div id="page_content">
+	    <div id="page_heading">
+            <h1 id="product_edit_name">PRODUCT MANAGEMENT</h1>
+        </div>
 		<div id="page_content_inner">
-
-			<h4 class="heading_a uk-margin-bottom">Products</h4>
-
 			<div class="md-card uk-margin-medium-bottom">
 				<div class="md-card-content">
 					<table id="to_table" class="uk-table" cellspacing="0" width="100%">

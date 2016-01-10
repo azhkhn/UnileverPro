@@ -23,10 +23,11 @@
 
 
 	<div id="page_content">
+		<div id="page_heading">
+            <h1 id="product_edit_name">PRODUCT MANAGEMENT</h1>
+        </div>
 		<div id="page_content_inner">
-
 			<form name="productform" action="<?php  echo site_url('product/addproduct')?>" id="productform">
-
 				<div class="md-card">
 					<div class="md-card-content">
 						<h3 class="heading_a">Add product</h3>
