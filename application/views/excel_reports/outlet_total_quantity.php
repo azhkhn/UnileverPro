@@ -187,7 +187,7 @@
 
             // TODO: WHEN CLICK ON THE BUTTON EXPORT EXCEL
             $("#btnExportExcel").click(function(){
-                location.href=SITE_URL+"outletexcel/outlet_items_excel/"+$("#selectYear").val();
+                location.href=SITE_URL+"outletexcel/quantity/"+$("#selectYear").val();
             });            
 
             // TODO: WHEN CLICK ON THE COMBO BOX YEAR

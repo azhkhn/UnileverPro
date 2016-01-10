@@ -138,7 +138,7 @@
 			return true;
 		}
 
-		public function getAllUsersByGroupId($id=3){
+		public function getAllUserBsyGroupId($id=3){
 			if($this->ion_auth->in_group('SUPERVISOR')){
 				$this->db->select("A.id,
 								   A.code,
