@@ -51,5 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'auth';
 $route['admin'] = 'admin/auth';
+/*$route['supervisor/products/update'] = 'supervisor/products_update';*/
 $route['404_override'] = 'ERROR_404';
 $route['translate_uri_dashes'] = FALSE;

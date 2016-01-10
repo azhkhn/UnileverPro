@@ -65,7 +65,9 @@
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtOutletName">Outlet Name</label>
-                                            <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value=""/>
+                                            <select id="selectOutletName" name="selectOutletName">
+                                                <option value="">Outlet Name</option>
+                                            </select>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtDMSCode">DMS Code</label>
