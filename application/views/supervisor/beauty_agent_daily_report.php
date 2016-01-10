@@ -239,7 +239,7 @@
     </div>
 
 
-        <div>
+        
         <div class="uk-modal" id="modalAddNewSale">
             <div class="uk-modal-dialog uk-modal-dialog-large">
                 <button type="button" class="uk-modal-close uk-close"></button>
@@ -271,7 +271,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    
 
 
 

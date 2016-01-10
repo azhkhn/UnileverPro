@@ -70,8 +70,8 @@ $(function(){
 					$("#txtYearToDateAchievementPercent").val('% ' + data.user.year_achievement_percent);
 					$('.md-input-wrapper').addClass('md-input-filled');
 					if(data.products.length>0){
-						$("tbody#CONTENTS").html('');
-						$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
+						//$("tbody#CONTENTS").html('');
+						//$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
 						var dataSource = new kendo.data.DataSource({
 				           /*pageSize: 20,*/
 				           //data: data.products,
