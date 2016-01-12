@@ -89,7 +89,7 @@
 		
 		public function listbas(){
 			$this->db->select('g.user_id as ba_id, u.first_name');
-			$this->db->from('users_groups g');
+			$this->db->from('user_group g');
 			$this->db->join('users u','g.user_id = u.id', 'LEFT');
 			$this->db->where('g.group_id' , 3);
 			$this->db->order_by("g.user_id", "desc");
@@ -97,28 +97,5 @@
 			return $query->result();
 			
 		}
-
-		public function getAllOutletsByBA($id){
-			$this->db->select("A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS outlet_type, A.address");
-			$this->db->from("outlets A");
-			$this->db->join("distributors B", "A.distributor = B.id", "LEFT");
-			$this->db->join("channels C", "A.channel_id = C.id", "LEFT");
-			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
-			$this->db->where("A.ba_id", $id);
-			$query = $this->db->get();
-			return $query->result();
-		}
-
-		public function getOutletById($id){
-			$this->db->select("A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS customer_type, A.address AS outlet_address");
-			$this->db->from("outlets A");
-			$this->db->join("distributors B", "A.distributor = B.id", "LEFT");
-			$this->db->join("channels C", "A.channel_id = C.id", "LEFT");
-			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
-			$this->db->where("A.id", $id);
-			$query = $this->db->get();
-			return $query->row();	
-		}
-		
 	}
 ?>

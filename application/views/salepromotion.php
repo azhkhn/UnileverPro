@@ -20,9 +20,10 @@
    
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">SALE PROMOTION</h1>
+        </div>
         <div id="page_content_inner">
-
-            <h4 class="heading_a uk-margin-bottom">Sale Promotion</h4>
             
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
@@ -32,7 +33,7 @@
                             <th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Type</th>
+                            <!-- <th>Type</th> -->
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Action</th>
@@ -44,7 +45,7 @@
                             <th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Type</th>
+                            <!-- <th>Type</th> -->
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Action</th>
@@ -58,11 +59,10 @@
                             <td><?= $v->id ?></td>
                             <td><?= $v->code ?></td>
                             <td><?= $v->name ?></td>
-                            <td><?= $v->type ?></td>
+                            <!-- <td><?= $v->type ?></td> -->
                             <td><?= $v->start_date ?></td>
                             <td><?= $v->end_date ?></td>
                             <td>
-                            	
                             	<a href="#" id="btnUpdate" data="<?php echo $v->id?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
                             	<a href="<?php  echo site_url('salepromotion/delete')?>/<?= $v->id ?>" onClick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
                             </td>
@@ -123,7 +123,7 @@
 												<input type="text" id="name" name="name" class="md-input" required />
 											</div>
 											
-											<div class="uk-form-row">
+											<!-- <div class="uk-form-row">
 												<label for="type">Type  <span class="req">*</span></label>
 												<select id="type" name="type" data-md-selectize
 													data-md-selectize-bottom required>
@@ -132,7 +132,7 @@
 														value="<?php echo $v->id;?>"><?php echo $v->name;?></option>
 				                                     <?php endforeach?>
 				                                    </select>
-											</div>
+											</div> -->
 											
 											
 											<div class="uk-grid uk-grid-medium uk-form-row">

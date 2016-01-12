@@ -20,13 +20,14 @@
    
 
     <div id="page_content">
-        <div id="page_content_inner">
-
-            <h4 class="heading_a uk-margin-bottom">Sale Target</h4>
-            
+        <div id="page_heading">
+            <h1 id="product_edit_name">SALE TARGET</h1>
+        </div>
+        <div id="page_content_inner">            
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
-                    <table id="to-table" class="uk-table" cellspacing="0" width="100%">
+                    <div id="grid"></div>
+                    <table id="to-table" class="uk-table" cellspacing="0" width="100%" style="display:none;">
                         <thead>
                         <tr>
                             <th>No</th>
@@ -210,12 +211,12 @@
 
 
 
-	<div class="md-fab-wrapper">
+	<!-- <div class="md-fab-wrapper">
 		<a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew"
 			data-uk-modal="{target:'#modalSaleTarget'}"> <i
 			class="material-icons">&#xE145;</i>
 		</a>
-	</div>
+	</div> -->
 	
 	
     
@@ -279,13 +280,14 @@
     	var SITE_URL = '<?php echo site_url(); ?>';
         $(function() {
             altair_helpers.retina_images();
-            $("#to-table").DataTable();
+            //$("#to-table").DataTable();
             $("#end_date,#start_date").kendoDatePicker({
             	  format: "yyyy-MM-dd"
            	});
         });
     </script>
-    
+    <script src="http://kendo.cdn.telerik.com/2014.3.1029/js/jszip.min.js"></script>
+    <script src="<?php echo base_url()?>public/assets/js/kendo.all.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/saletarget.js"></script>
     
     <script>

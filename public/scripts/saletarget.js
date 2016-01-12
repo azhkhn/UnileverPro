@@ -139,8 +139,151 @@ $(function() {
 			}
 		});
 	});
-	
-	
-	
+
+
+
+	//TODO: KENDO GRID	
+
+	var dataSource = new kendo.data.DataSource({
+	   	/*pageSize: 20,*/
+	   	//data: data.products,
+	   	change: function(e) {
+	      if (e.action == "itemchange")  {
+	        if (e.field == "quantity" || e.field == "price") {
+	       
+	          var item=  e.items[0];
+	         	item.trigger("change", {field: "amount"})
+	        } 
+	      }
+
+	    },
+	   	transport: {
+	        read:  {
+	            url: SITE_URL + "saletarget/all",
+	            dataType: "json"
+	        },
+	        update: {
+	            url: SITE_URL + "saletarget/update_rows",
+	            type: "POST",
+	            dataType: "json",
+	            beforeSend: function(){
+	     			modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+	            },
+	            complete: function(data){
+	            	modal.hide();
+	            	console.log(data.responseText.message);
+	            	$("#grid").data("kendoGrid").dataSource.read(); 
+	            }
+	        },
+	        /*destroy: {
+	            url: SITE_URL + "/Products/Destroy",
+	            dataType: "jsonp"
+	        },*/
+	        create: {
+	            url: SITE_URL + "saletarget/create",
+	            type: "POST",
+	            dataType: "json",
+	            beforeSend: function(){
+	     			modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+	            },
+	            complete: function(data){
+	            	modal.hide();
+	            	console.log(data.responseText.message);
+	            	$("#grid").data("kendoGrid").dataSource.read(); 
+	            }
+	        },
+	        parameterMap: function(options, operation) {
+	            if (operation !== "read" && options.models) {
+	                return { 
+	                	models: kendo.stringify(options.models),
+	                };
+	            }
+	        }
+	    },
+	   batch: true,
+	   /*autoSync: true,*/
+	   schema: {
+	       model: {
+	       	 Total:function() {
+	          return this.get("price") * this.get("quantity");
+	         },
+	         id: "id",
+	         fields: {
+	         	ba_id: { editable: true, nullable: false },
+	            ba_name: { editable: true, nullable: false },
+	            target_achievement: {type: "number", editable: true, validation: { required: true, min: 0}},
+	            start_date: { editable: true, nullable: false},
+	            end_date: { editable: true}
+	         },
+
+	       }
+	   }
+	});
+
+	var dataSourceBA = new kendo.data.DataSource({
+       transport: {
+            read:  {
+                url: SITE_URL + "saletarget/ba_all",
+                dataType: "json"
+            },
+            parameterMap: function(options, operation) {
+                if (operation !== "read" && options.models) {
+                    return { 
+                    	models: kendo.stringify(options.models)
+                    };
+                }
+            }
+        },
+       batch: true
+    });
+
+	var _grid = $("#grid").kendoGrid({
+		dataSource: dataSource,
+	    sortable: true,
+	    pageable: true,
+	    pageSize: 2,
+	    toolbar: ["create","save", "excel"],
+	    excel: {
+	        fileName: "SALE TARGET REPORT.xlsx"
+	    },
+	    editable: true,
+	    selectable: true,
+	    columns: [
+	        { field:"id",title:"Id", hidden: true},
+	        { field: "ba_name", title:"BA Name", 
+	    		editor: function(container, options) {
+        			console.log(container, options);
+        			console.log(dataSource);
+	                $("<input data-bind='value:ba_name' />")
+                    .attr("id", "ddl_roleTitle")
+                    .appendTo(container)
+                    .kendoDropDownList({
+                        dataSource : dataSourceBA,
+                        dataTextField: "username",
+                        dataValueField: "username",
+                        template: "<span data-id='${data.id}'>${data.username}</span>",
+                        select: function(e) {
+                        	console.log(this.dataItem(e.item.index()));
+                            var id = e.item.find("span").attr("data-id");
+                            var dataItem = e.sender.dataItem();
+							//options.model.set("promotiontype1", this.dataItem(e.item.index()).name);
+							options.model.set("ba_id", this.dataItem(e.item.index()).id);
+                        }
+                    });
+				} 
+
+	    	},
+	        { field: "target_achievement", title: "Target Achievement", width: "20%"},
+	        { field: "start_date", title: "Start Date", width: "15%",format:"{0:dd-MM-yyyy}", editor: dateTimeEditor} ,
+	        { field: "end_date", title: "End Date", width: "15%",format:"{0:dd-MM-yyyy}",editor: dateTimeEditor} 
+	    ]
+	});
+
+
+	function dateTimeEditor(container, options) {
+    $('<input data-text-field="' + options.field + '" data-value-field="' + options.field + '" data-bind="value:' + options.field + '" data-format="' + options.format + '"/>')
+            .appendTo(container)
+            .kendoDatePicker({});
+	}
 	
 });

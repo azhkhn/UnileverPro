@@ -15,13 +15,13 @@
     
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">CUSTOMER TYPE MANAGEMENT</h1>
+        </div>
         <div id="page_content_inner">
-
         <form action="#" id="outlettypeform">
-        
             <div class="md-card">
                 <div class="md-card-content">
-                    <h3 class="heading_a">Add Outlettype</h3>
                     <div class="uk-grid" data-uk-grid-margin>
                        
                       

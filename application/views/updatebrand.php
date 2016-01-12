@@ -24,16 +24,14 @@
     
 
     <div id="page_content">
-        <div id="page_content_inner">
-
-        
-        
+        <div id="page_heading">
+            <h1 id="product_edit_name">UPDATE BRAND</h1>
+        </div>
+        <div id="page_content_inner">     
         <form action="<?php  echo site_url('brand/updateBrand')?>" id="frmUpdateBrand" method="post" >
         
             <div class="md-card">
-                <div class="md-card-content">
-                    <h3 class="heading_a">Edit Brand</h3>
-                    
+                <div class="md-card-content">                    
                    		<div class="uk-form-row" style="width: 80%;display: none" id="msgError" >
                        		<div class="uk-alert uk-alert-danger" data-uk-alert="">
                                 <a href="#" class="uk-alert-close uk-close"></a>

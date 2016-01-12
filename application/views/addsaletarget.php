@@ -25,8 +25,10 @@
 
 
 	<div id="page_content">
+		<div id="page_heading">
+            <h1 id="product_edit_name">SALE TARGET</h1>
+        </div>
 		<div id="page_content_inner">
-
 			<form action="<?php  echo site_url('saletarget/addSaleTarget')?>"
 				name="frmSaleTarget" id="frmSaleTarget" method="post">
 

@@ -5,8 +5,8 @@
 
 		public function __construct(){
 			parent::__construct();
-			$this->load->model("dto/DtoPromotionType");
-			$this->load->model("dao/PromotionTypeDAO");
+			$this->load->model("dto/Dtopromotiontype");
+			$this->load->model("dao/Promotiontypedao");
 		}
 
 		public function index(){
@@ -15,41 +15,47 @@
 		}
 		
 		public function add(){
-			$this->load->view('addpromotiontype');
+			$this->load->model("dao/Daosalepromotion");
+			$this->data["sale_promotions"] = $this->Daosalepromotion->listSalePromotion();
+			$this->load->view('addpromotiontype', $this->data);
 		}
 		
 		public function addingpro(){
-			$this->DtoPromotionType->setCode($this->input->post('code'));
-			$this->DtoPromotionType->setName($this->input->post('name'));
-			$this->DtoPromotionType->setSize($this->input->post('size'));
-			$this->DtoPromotionType->setCreated_by($this->ion_auth->get_user_id());
-			$this->PromotionTypeDAO->addPromotiontype($this->DtoPromotionType);
+			$this->Dtopromotiontype->setCode($this->input->post('code'));
+			$this->Dtopromotiontype->setName($this->input->post('name'));
+			$this->Dtopromotiontype->setSize($this->input->post('size'));
+			$this->Dtopromotiontype->setSalePromotion($this->input->post('sale_promotion_id'));
+			$this->Dtopromotiontype->setCreated_by($this->ion_auth->get_user_id());
+			$this->Promotiontypedao->addPromotiontype($this->Dtopromotiontype);
 			redirect("promotiontype");
 		}
 		
 		public function listpro(){
-			$data['lists'] = $this->PromotionTypeDAO->listPromotiontypes();
+			$data['lists'] = $this->Promotiontypedao->listPromotiontypes();
 			$this->load->view('promotiontype', $data);
 		}
 		
 		public function deletepro($id){
-			$this->PromotionTypeDAO->deletePromotiontype($id);
+			$this->Promotiontypedao->deletePromotiontype($id);
 			redirect('promotiontype');
 		}
 
 		public function getpro($id){
-			$data['getpro'] = $this->PromotionTypeDAO->getPromotiontype($id);
-			$this->load->view('addpromotiontype', $data);
+			$this->load->model("dao/Daosalepromotion");
+			$this->data['getpro'] = $this->Promotiontypedao->getPromotiontype($id);
+			$this->data["sale_promotions"] = $this->Daosalepromotion->listSalePromotion();
+			$this->load->view('addpromotiontype', $this->data);
 		}
 
 		public function updatepro($id){
-			$this->DtoPromotionType->setId($id);
-			$this->DtoPromotionType->setCode($this->input->post('code'));
-			$this->DtoPromotionType->setName($this->input->post('name'));
-			$this->DtoPromotionType->setSize($this->input->post('size'));
-			$this->DtoPromotionType->setUpdated_by($this->ion_auth->get_user_id());
+			$this->Dtopromotiontype->setId($id);
+			$this->Dtopromotiontype->setCode($this->input->post('code'));
+			$this->Dtopromotiontype->setName($this->input->post('name'));
+			$this->Dtopromotiontype->setSize($this->input->post('size'));
+			$this->Dtopromotiontype->setSalePromotion($this->input->post('sale_promotion_id'));
+			$this->Dtopromotiontype->setUpdated_by($this->ion_auth->get_user_id());
 			
-			$this->PromotionTypeDAO->updatePromotiontype($this->DtoPromotionType);
+			$this->Promotiontypedao->updatePromotiontype($this->Dtopromotiontype);
 			redirect('promotiontype');
 			
 		}

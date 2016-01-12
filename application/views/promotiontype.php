@@ -16,10 +16,10 @@
    
 
     <div id="page_content">
+        <div id="page_heading">
+            <h1 id="product_edit_name">PROMOTION TYPE</h1>
+        </div>
         <div id="page_content_inner">
-
-            <h4 class="heading_a uk-margin-bottom">Promotion type</h4>
-            
             <div class="md-card uk-margin-medium-bottom">
                 <div class="md-card-content">
                     <table id="vu-table" class="uk-table" cellspacing="0" width="100%">
@@ -29,6 +29,7 @@
                             <th>Code</th>
                             <th>Name</th>
                             <th>Size</th>
+                            <th>Sale Promotion</th>
                             <th>Created Date</th>
                             <th>Created By</th>
                             <th>Status</th>
@@ -42,6 +43,7 @@
                             <th>Code</th>
                             <th>Name</th>
                             <th>Size</th>
+                            <th>Sale Promotion</th>
                             <th>Created Date</th>
                             <th>Created By</th>
                             <th>Status</th>
@@ -58,6 +60,7 @@
                             <td><?php echo $data->code ?></td>
                             <td><?php echo $data->name ?></td>
                             <td><?php echo $data->size ?></td>
+                            <td><?php echo $data->sale_promotion ?></td>
                             <td><?php echo $data->created_date ?></td>
                             <td><?php echo $data->created_by ?></td>
                             <td>

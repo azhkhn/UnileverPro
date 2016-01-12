@@ -284,12 +284,16 @@
 				$item["status"] = 1;
 				//$saleItem["sale_id"] = $saleId;
 				//$saleItem["status"] = 1;
-				//if($saleItem["promotion_id"]==""){
-				//$saleItem["promotion_id"] = NULL;
-				//}
-				//if($saleItem["promotion_type_id"]==""){
-				//$saleItem["promotion_type_id"] = NULL;
-				//}
+				if($saleItem["promotion"]==""){
+					$saleItem["promotion"] = NULL;
+				}else{
+					$item["promotion_id"] = $saleItem["promotion"];
+				}
+				if($saleItem["promotion_type_id"]==""){
+					$saleItem["promotion_type_id"] = NULL;
+				}else{
+					$item["promotion_type_id"] = $saleItem["promotion_type_id"];
+				}
 				/*$saleItem["created_by"] = $sale->getSaleBy();
 				$saleItem["created_date"] = date('Y-m-d H:i:s');*/
 				$this->db->insert("sale_items",$item);

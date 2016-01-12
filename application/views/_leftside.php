@@ -102,6 +102,18 @@
                         <li><a href="<?php echo site_url('Outlettype/add')?>">Add  Outlet type</a></li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href="#">
+                       <i class="menu_icon material-icons">&#xE8D1;</i>
+                        Outlet Reports
+                    </a>
+                    <ul>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_items')?>">Outlet Items</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_amount')?>">Outlet Total Amount</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_quantity')?>">Outlet Total Quantity</a></li>
+                    </ul>
+                </li>
                 
                 <!-- <li >
                     <a href="<?php echo site_url('sale')?>">

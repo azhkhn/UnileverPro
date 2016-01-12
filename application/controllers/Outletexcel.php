@@ -426,6 +426,7 @@ class Outletexcel extends CI_Controller {
     			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setWidth(12);
     			$this->excel->getActiveSheet()->getStyle($columnID."5")->getFont()->setBold(true);
     	}
+    	$this->excel->getActiveSheet()->getColumnDimension("A")->setWidth(1);
     	$this->excel->getActiveSheet()->getColumnDimension("B")->setAutoSize(true);
 
     	$this->excel->getActiveSheet()->freezePane('B6');
@@ -518,6 +519,7 @@ class Outletexcel extends CI_Controller {
 		        ),
 		    ),
 		);
+		$this->excel->getActiveSheet()->getColumnDimension("A")->setWidth(1);
 		$this->excel->getActiveSheet()->getStyle('B5:P5')->applyFromArray($styleArray);
 
     	$this->excel->getActiveSheet()->fromArray($outlets, NULL, 'B6');

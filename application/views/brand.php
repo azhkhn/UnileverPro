@@ -17,10 +17,10 @@
 
 
 	<div id="page_content">
+	    <div id="page_heading">
+            <h1 id="product_edit_name">BRAND MANAGEMENT</h1>
+        </div>
 		<div id="page_content_inner">
-
-			<h4 class="heading_a uk-margin-bottom">Brands </h4>
-
 			<div class="md-card uk-margin-medium-bottom">
 				<div class="md-card-content">
 					<table id="to-table" class="uk-table" cellspacing="0"
@@ -76,7 +76,7 @@
 			<div class="uk-modal-dialog uk-modal-dialog">
 				<button type="button" class="uk-modal-close uk-close"></button>
 				<div class="uk-modal-header">
-					<h3 class="uk-modal-title"> + Brand</h3>
+					<h3 class="uk-modal-title"> + BRAND</h3>
 				</div>
 				
 				<form action="#"  id="frmAddBrand" class="uk-form-stacked" method="POST">

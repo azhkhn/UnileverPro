@@ -239,7 +239,7 @@
     </div>
 
 
-        <div>
+        
         <div class="uk-modal" id="modalAddNewSale">
             <div class="uk-modal-dialog uk-modal-dialog-large">
                 <button type="button" class="uk-modal-close uk-close"></button>
@@ -271,7 +271,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    
 
 
 
@@ -353,6 +353,7 @@
     <script src="<?php echo base_url()?>public/assets/js/example.js"></script>
     -->
     <script src="<?php echo base_url()?>public/assets/js/jquery.tmpl.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2014.3.1029/js/jszip.min.js"></script>
     <script src="<?php echo base_url()?>public/assets/js/kendo.all.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/ba_report.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
