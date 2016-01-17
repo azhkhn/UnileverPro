@@ -59,15 +59,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div>
+                <div>
                     <div class="md-card">
                         <div class="md-card-content">
-                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_live peity_data">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></div>
-                            <span class="uk-text-muted uk-text-small">Visitors (live)</span>
-                            <h2 class="uk-margin-remove" id="peity_live_text">0<noscript>46</noscript></h2>
+                            <!-- <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_live peity_data">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></div> -->
+                            <span class="uk-text-muted uk-text-small">TOTAL OUTLETS </span>
+                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_outlet ?></noscript></span></h2>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
 
 

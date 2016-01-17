@@ -1,6 +1,6 @@
 <?php
 
-	class OutletsDAO extends CI_Model{
+	class Outletsdao extends CI_Model{
 
 		public function OutletsDAO(){
 			parent::__construct();
@@ -127,6 +127,12 @@
 			$this->db->where('status', $status);
 			$query = $this->db->get();
 			return $query->result();
+		}
+
+		public function count(){
+			$this->db->from('outlets');
+			$this->db->where("status", 1);
+			return $this->db->count_all_results();
 		}
 	}
 ?>
