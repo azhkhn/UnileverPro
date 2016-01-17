@@ -82,9 +82,10 @@ class Daosaletarget  extends CI_Model{
 	}
 
 	public function getAllSaleTargets(){
-		$this->db->select("A.id, A.target_achievement, A.start_date, A.end_date, A.ba_id, CONCAT(B.last_name,' ',B.first_name) AS ba_name", FALSE);
+		/*$this->db->select("A.id, A.target_achievement, A.start_date, A.end_date, A.ba_id, CONCAT(B.last_name,' ',B.first_name) AS ba_name", FALSE);*/
+		$this->db->select("A.id, A.target_achievement, A.start_date, A.end_date, B.id AS ba_id, B.name AS ba_name", FALSE);
 		$this->db->from('sale_targets A');
-		$this->db->join('users B','A.ba_id = B.id', 'LEFT');
+		$this->db->join('outlets B','A.ba_id = B.id', 'LEFT');
 		$this->db->where('A.status' , 1);
 		$this->db->order_by(6, 4);
 		$query = $this->db->get();

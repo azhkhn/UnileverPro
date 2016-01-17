@@ -91,7 +91,7 @@
 
 		public function ba_all(){
 			$this->load->model('dao/Daouser');
-			$this->data["users"] = $this->Daouser->getAllUsersByGroupId();
+			$this->data["users"] = $this->Daouser->getAllUserBsyGroupId();
 			echo json_encode($this->data["users"]);				
 		}
 
@@ -114,6 +114,12 @@
 
 			echo json_encode($data);
 
+		}
+
+		public function outlets_all(){
+			$this->load->model('dao/Outletsdao');
+			$this->data = $this->Outletsdao->getAllOutlets();
+			echo json_encode($this->data);
 		}
 	}
 	

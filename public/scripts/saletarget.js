@@ -237,6 +237,22 @@ $(function() {
        batch: true
     });
 
+    var dataSourceOutlets = new kendo.data.DataSource({
+       transport: {
+            read:  {
+                url: SITE_URL + "saletarget/outlets_all",
+                dataType: "json"
+            },
+            parameterMap: function(options, operation) {
+                if (operation !== "read" && options.models) {
+                    return { 
+                    	models: kendo.stringify(options.models)
+                    };
+                }
+            }
+        }
+    });
+
 	var _grid = $("#grid").kendoGrid({
 		dataSource: dataSource,
 	    sortable: true,
@@ -250,7 +266,7 @@ $(function() {
 	    selectable: true,
 	    columns: [
 	        { field:"id",title:"Id", hidden: true},
-	        { field: "ba_name", title:"BA Name", 
+	        { field: "ba_name", title:"Outlet Name", 
 	    		editor: function(container, options) {
         			console.log(container, options);
         			console.log(dataSource);
@@ -258,15 +274,14 @@ $(function() {
                     .attr("id", "ddl_roleTitle")
                     .appendTo(container)
                     .kendoDropDownList({
-                        dataSource : dataSourceBA,
-                        dataTextField: "username",
-                        dataValueField: "username",
-                        template: "<span data-id='${data.id}'>${data.username}</span>",
+                        dataSource : dataSourceOutlets,
+                        dataTextField: "name",
+                        dataValueField: "name",
+                        template: "<span data-id='${data.id}'>${data.name}</span>",
                         select: function(e) {
                         	console.log(this.dataItem(e.item.index()));
                             var id = e.item.find("span").attr("data-id");
                             var dataItem = e.sender.dataItem();
-							//options.model.set("promotiontype1", this.dataItem(e.item.index()).name);
 							options.model.set("ba_id", this.dataItem(e.item.index()).id);
                         }
                     });
