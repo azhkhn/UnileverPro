@@ -416,14 +416,15 @@
 					  (
 					    SELECT _U.parent_id, SUM(_SI.quantity*_SI.price) sumachievement
 					    FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
-							LEFT JOIN users _U ON _U.id=_S.ba_id
+						LEFT JOIN users _U ON _U.id=_S.ba_id
 					    WHERE (DATE(_S.sale_date) BETWEEN '".$sale->getStartDate()."' AND '".$sale->getEndDate()."')
 					    GROUP BY _U.parent_id
 					  ) S1 ON U1.id=S1.parent_id
 						LEFT JOIN (
 							SELECT _U.parent_id, SUM(target_achievement) sumtarget , SUM(target_achievement/26) AS sumtodaytarget
 					    FROM sale_targets _ST
-							LEFT JOIN users _U ON _U.id=_ST.ba_id
+							LEFT JOIN outlets _O ON _O.id = _ST.outlet_id
+							LEFT JOIN users _U ON _U.id=_O.ba_id
 							WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') 
 							GROUP BY parent_id
 					  ) ST ON U1.id=ST.parent_id
@@ -454,7 +455,8 @@
 					    LEFT JOIN (
 					        SELECT _U.parent_id, SUM(target_achievement) yeartarget 
 					        FROM sale_targets _S
-						LEFT JOIN users _U ON _U.id=_S.ba_id
+						LEFT JOIN Outlets _O ON _O.id=_S.outlet_id
+						LEFT JOIN users _U ON _U.id = _O.ba_id
 						WHERE (YEAR(end_date)>=YEAR('".$sale->getStartDate()."') AND YEAR(start_date)<= YEAR('".$sale->getEndDate()."'))
 						GROUP BY _U.parent_id
 					    ) _ST ON YS.parent_id=_ST.parent_id
@@ -507,8 +509,9 @@
 						  ) S1 ON U1.id=S1.parent_id
 							LEFT JOIN (
 								SELECT _U.parent_id, SUM(target_achievement) sumtarget , SUM(target_achievement/26) AS sumtodaytarget
-						    	FROM sale_targets _ST
-								LEFT JOIN users _U ON _U.id=_ST.ba_id
+						    FROM sale_targets _ST
+								LEFT JOIN outlets _O ON _O.id = _ST.outlet_id
+								LEFT JOIN users _U ON _U.id=_O.ba_id
 								WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') 
 								GROUP BY parent_id
 						  ) ST ON U1.id=ST.parent_id
@@ -536,17 +539,19 @@
 						    ) MS ON YS.parent_id=MS.parent_id
 						    LEFT JOIN(
 						      SELECT _U.parent_id, SUM(_SI.quantity*_SI.price) dayachievement
-						      FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
-							  LEFT JOIN users _U ON _U.id=_S.ba_id
+						      FROM sales _S 
+									INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
+									LEFT JOIN users _U ON _U.id=_S.ba_id
 						      WHERE _S.sale_date between DATE_FORMAT(NOW() ,'%Y-%m-%d') AND CONVERT_TZ(NOW(), @@session.time_zone, '+07:00') 
 						      GROUP BY _U.parent_id
 						    ) DS ON YS.parent_id=DS.parent_id
 						    LEFT JOIN (
 						        SELECT _U.parent_id, SUM(target_achievement) yeartarget 
 						        FROM sale_targets _S
-								LEFT JOIN users _U ON _U.id=_S.ba_id
-								WHERE (YEAR(end_date)>=YEAR('".$sale->getStartDate()."') AND YEAR(start_date)<= YEAR('".$sale->getEndDate()."'))
-								GROUP BY _U.parent_id
+										LEFT JOIN outlets _O ON _O.id = _S.outlet_id
+										LEFT JOIN users _U ON _U.id=_O.ba_id
+										WHERE (YEAR(end_date)>=YEAR('".$sale->getStartDate()."') AND YEAR(start_date)<= YEAR('".$sale->getEndDate()."'))
+										GROUP BY _U.parent_id
 						    ) _ST ON YS.parent_id=_ST.parent_id
 						  ) S ON U1.id=S.parent_id
 						WHERE U2.parent_id IS NULL
@@ -567,17 +572,19 @@
 						CONCAT(users.last_name, ' ', users.first_name) username,
 						(SELECT  COALESCE(SUM(target_achievement),0)
 						 FROM sale_targets
-						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND status = 1
+						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND sale_targets.status = 1
 						) sumtarget,
 						(SELECT COALESCE(SUM(target_achievement/26),0)
 						FROM users
-						LEFT JOIN sale_targets ON users.id = sale_targets.ba_id
-						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND status = 1
+						LEFT JOIN outlets ON users.id = outlets.ba_id
+						LEFT JOIN sale_targets ON outlets.id = sale_targets.outlet_id
+						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND sale_targets.status = 1
 						) todaytarget,
 						(SELECT COALESCE(SUM(target_achievement),0)
 						FROM users
-						LEFT JOIN sale_targets ON users.id = sale_targets.ba_id
-						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND status = 1
+						LEFT JOIN outlets ON users.id = outlets.ba_id
+						LEFT JOIN sale_targets ON outlets.id = sale_targets.outlet_id
+						WHERE (DATE(end_date)>='".$sale->getStartDate()."' AND DATE(start_date)<= '".$sale->getEndDate()."') AND sale_targets.status = 1
 						) yeartarget,
 						(SELECT  COALESCE(SUM(_SI.quantity*_SI.price),0)
 					        FROM sales _S INNER JOIN sale_items _SI ON _S.id=_SI.sale_id 
@@ -597,7 +604,8 @@
 					FROM users
 					LEFT JOIN users_groups ON users.id = users_groups.user_id
 					WHERE users_groups.group_id = 4
-					) A");
+					) A
+			WHERE A.id = ". $this->ion_auth->get_user_id());
 			return $query->row();
 		}
 

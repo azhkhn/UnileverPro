@@ -1,7 +1,7 @@
 $(function(){
 
-	$("#startDate").val(moment('2015-01-01').format('DD-MMMM-YYYY'));
-	$("#endDate").val(moment('2015-12-31').format('DD-MMMM-YYYY'));
+	$("#startDate").val(moment().date(1).format('DD-MMMM-YYYY'));
+	$("#endDate").val(moment().add('years', 1).date(0).format('DD-MMMM-YYYY'));
 
 	var report = {};
 	
@@ -12,8 +12,8 @@ $(function(){
 			type: "POST",
 			dataType: "JSON",
 			data: {
-				'start_date' : $("#startDate").val(),
-				'end_date' : $("#endDate").val()
+				'start_date' : moment($("#startDate").val()).format("YYYY-MM-DD"),
+				'end_date' :  moment($("#endDate").val()).format("YYYY-MM-DD")
 			},
 			success: function(data){
 				//$('.md-input-wrapper').find('.md-input').val('');
