@@ -209,7 +209,7 @@ $(function() {
 	         },
 	         id: "id",
 	         fields: {
-	         	ba_id: { editable: true, nullable: false },
+	         	outlet_id: { editable: true, nullable: false },
 	            ba_name: { editable: true, nullable: false },
 	            target_achievement: {type: "number", editable: true, validation: { required: true, min: 0}},
 	            start_date: { editable: true, nullable: false},
@@ -257,7 +257,7 @@ $(function() {
 		dataSource: dataSource,
 	    sortable: true,
 	    pageable: true,
-	    pageSize: 2,
+	    /*pageSize: 2,*/
 	    toolbar: ["create","save", "excel"],
 	    excel: {
 	        fileName: "SALE TARGET REPORT.xlsx"
@@ -282,7 +282,7 @@ $(function() {
                         	console.log(this.dataItem(e.item.index()));
                             var id = e.item.find("span").attr("data-id");
                             var dataItem = e.sender.dataItem();
-							options.model.set("ba_id", this.dataItem(e.item.index()).id);
+							options.model.set("outlet_id", this.dataItem(e.item.index()).id);
                         }
                     });
 				} 
@@ -298,7 +298,10 @@ $(function() {
 	function dateTimeEditor(container, options) {
     $('<input data-text-field="' + options.field + '" data-value-field="' + options.field + '" data-bind="value:' + options.field + '" data-format="' + options.format + '"/>')
             .appendTo(container)
-            .kendoDatePicker({});
+            .kendoDatePicker({
+            	format: "yyyy-MM-dd",
+            	parseFormats:["yyyy-MM-dd"]
+            });
 	}
 	
 });
