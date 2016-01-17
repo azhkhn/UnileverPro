@@ -300,7 +300,8 @@ $(function() {
             .appendTo(container)
             .kendoDatePicker({
             	format: "yyyy-MM-dd",
-            	parseFormats:["yyyy-MM-dd"]
+            	parseFormats:["yyyy-MM-dd"],
+            	culture: "de-DE"
             });
 	}
 	
