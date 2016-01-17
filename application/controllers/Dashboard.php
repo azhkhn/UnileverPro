@@ -8,7 +8,13 @@
 		}
 
 		public function index(){
-			$this->load->view('dashboard');
+			$this->load->model("dao/Daouser");
+			$this->load->model("dao/Daoproduct");
+			$this->load->model("dao/Daobrand");
+			$this->data["total_ba"] = $this->Daouser->countUsersByGroupId(3);
+			$this->data["total_product"] = $this->Daoproduct->count();
+			$this->data["total_brand"] = $this->Daobrand->count();
+			$this->load->view('dashboard', $this->data);
 		}
 	
 	}

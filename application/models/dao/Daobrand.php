@@ -71,6 +71,12 @@ class DaoBrand extends CI_Model{
 		$this->db->where('name', $brand);
 		return $this->db->count_all_results();
 	}
+
+	public function count(){
+		$this->db->from('brands');
+		$this->db->where("status", 1);
+		return $this->db->count_all_results();
+	}
 	
 }
 	

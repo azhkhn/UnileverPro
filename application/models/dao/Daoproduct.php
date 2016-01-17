@@ -117,5 +117,11 @@ class DaoProduct extends CI_Model {
 		$query = $this->db->get();
 		return $query->result();
 	}
+
+	public function count(){
+		$this->db->from('products');
+		$this->db->where("status", 1);
+		return $this->db->count_all_results();
+	}
 }
 	

@@ -1,4 +1,4 @@
-<aside id="sidebar_secondary">
+<!-- <aside id="sidebar_secondary">
         <div class="sidebar_secondary_wrapper">
             <h4 class="heading_c uk-margin-bottom">Recent Activity</h4>
 
@@ -68,4 +68,4 @@
 
             </div>
         </div>
-    </aside>
+    </aside> -->

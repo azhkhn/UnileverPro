@@ -41,6 +41,12 @@
 			return $this->db->count_all_results();
 		}
 
+		public function countUsersByGroupId($group_id){
+			$this->db->from('users_groups');
+			$this->db->where("group_id", $group_id);
+			return $this->db->count_all_results();
+		}
+
 
 
 		public function getAllUsersByGroupName($name=''){

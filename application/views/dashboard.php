@@ -35,31 +35,31 @@
                 <div>
                     <div class="md-card">
                         <div class="md-card-content">
-                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_visitors peity_data">5,3,9,6,5,9,7</span></div>
-                            <span class="uk-text-muted uk-text-small">Visitors (last 7d)</span>
-                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript>12456</noscript></span></h2>
+                            <!-- <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_visitors peity_data">5,3,9,6,5,9,7</span></div> -->
+                            <span class="uk-text-muted uk-text-small">TOTAL BA</span>
+                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_ba ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="md-card">
                         <div class="md-card-content">
-                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_sale peity_data">5,3,9,6,5,9,7,3,5,2</span></div>
-                            <span class="uk-text-muted uk-text-small">Sale</span>
-                            <h2 class="uk-margin-remove">$<span class="countUpMe">0<noscript>142384</noscript></span></h2>
+                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><i class="material-icons">&#xE854;</i></div>
+                            <span class="uk-text-muted uk-text-small">TOTAL PRODUCTS</span>
+                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_product ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div class="md-card">
                         <div class="md-card-content">
-                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div>
-                            <span class="uk-text-muted uk-text-small">Orders Completed</span>
-                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript>64</noscript></span>%</h2>
+                            <!-- <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div> -->
+                            <span class="uk-text-muted uk-text-small">TOTAL BRANDS</span>
+                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_brand ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
-                <div>
+                <!-- <div>
                     <div class="md-card">
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_live peity_data">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></div>
@@ -67,12 +67,12 @@
                             <h2 class="uk-margin-remove" id="peity_live_text">0<noscript>46</noscript></h2>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
 
             <!-- circular charts -->
-            <div class="uk-grid uk-grid-width-small-1-2 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-5 uk-text-center uk-sortable sortable-handler" id="dashboard_sortable_cards" data-uk-sortable data-uk-grid-margin>
+            <!-- <div class="uk-grid uk-grid-width-small-1-2 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-5 uk-text-center uk-sortable sortable-handler" id="dashboard_sortable_cards" data-uk-sortable data-uk-grid-margin>
                 <div>
                     <div class="md-card md-card-hover md-card-overlay">
                         <div class="md-card-content">
@@ -159,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
         </div>
@@ -167,7 +167,7 @@
 
     
     <!-- right sidebar -->
-    <?php $this->load->view('_rightside') ?>    
+    <?php //$this->load->view('_rightside') ?>    
     <!-- right sidebar end -->
     
     <!-- google web fonts -->
