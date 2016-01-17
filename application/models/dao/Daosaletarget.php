@@ -119,6 +119,8 @@ class Daosaletarget  extends CI_Model{
 			$data["updated_by"] = $this->ion_auth->get_user_id();
 			$data["updated_date"] = date('Y-m-d H:i:s');
 			$data["status"] = 1;
+			$data["start_date"] = date('Y-m-d H:i:s',date(strtotime("+1 day", strtotime($data["start_date"]))));
+			$data["end_date"] = date('Y-m-d H:i:s',date(strtotime("+1 day", strtotime($data["end_date"]))));
 			$this->db->where('id' , $id);
 			$this->db->update("sale_targets",$data);
 		}
