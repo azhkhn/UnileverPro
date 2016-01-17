@@ -2,8 +2,41 @@ $(function(){
 	
 	var dmsCode = false;
 	$("#txtTransactionOf").val(moment().format('DD-MMMM-YYYY'));
+
 	// TODO: ON CHANGE ON BA 
 	$("#selectedBA").change(function(){
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'supervisor/selectedBA',
+			type: "POST",
+			dataType: "JSON",
+			data: {
+				'ba_id' : $("#selectedBA").val(),
+			},
+			success: function(data){
+				console.log(data);
+				modal.hide();
+				if(data.outlets){
+					$("#selectOutletName").html("<option value=''>Select Outlet Name</option>");
+					if(data.outlets.length>0){
+						for(var i=0; i<data.outlets.length;i++){
+							console.log($("#selectOutletName").html());
+							$("#selectOutletName").append("<option value='"+data.outlets[i].id+"'>"+data.outlets[i].outlet_name+"</option>");
+						}
+						$("#selectOutletName").attr('data-md-selectize','');
+						$("#selectOutletName").attr('data-md-data-md-selectize-bottom','');
+		
+					}                      
+				}
+			},
+			error: function(data){
+				modal.hide();
+				console.log(data);
+			}
+		});
+	});
+
+	$("#selectOutletName").change(function(){
 		var start_date = moment().date(1).format('YYYY-MM-DD');
 		var end_date = moment().add('months', 1).date(0).format('YYYY-MM-DD');
 		if(dmsCode==true){
@@ -17,6 +50,7 @@ $(function(){
 			dataType: "JSON",
 			data: {
 				'ba_id' : $("#selectedBA").val(),
+				'outlet_id' : $("#selectOutletName").val(),
 				'start_date' : start_date,
 				'end_date' : end_date
 			},
@@ -24,40 +58,17 @@ $(function(){
 				console.log(data);
 				$('.md-input-wrapper').find('.md-input').not("#txtTransactionOf,#txtNumberOfWorking").val('');
 				$('.md-input-wrapper').removeClass('md-input-filled');
-				if(data.outlets){
-					$("#selectOutletName").html("<option value=''>Outlet Name</option>");
-					if(data.outlets.length>0){
-						for(var i=0; i<data.outlets.length;i++){
-							console.log($("#selectOutletName").html());
-							$("#selectOutletName").append("<option value='"+data.outlets[i].id+"'>"+data.outlets[i].outlet_name+"</option>");
-						}
-						$("#selectOutletName").attr('data-md-selectize','');
-						$("#selectOutletName").attr('data-md-data-md-selectize-bottom','');
-		
-					}
 
-					 /*$("#selectOutletName").kendoDropDownList({
-                          dataTextField: "outlet_name",
-                          dataValueField: "id",
-                          dataSource: data.outlets,
-                          height: 100,
-                          select: function(e){
-                          	console.log(e).item;
-                          }
-                      });*/
-                      
-				}
 				if(data.user){
 					$("#txtPhoto").attr('src',data.user.photo);
 					$("#txtSupervisorName").val(data.user.supervisor);
 					$("#txtBAExecutive").val(data.user.executive);
-
-/*					$("#txtMarketName").val(data.user.outlet_address);
-					$("#txtOutletName").val(data.user.outlet_name);
+					$("#txtMarketName").val(data.user.outlet_address);
+					//$("#txtOutletName").val(data.user.outlet_name);
 					$("#txtDMSCode").val(data.user.dms_code);
 					$("#txtDT").val(data.user.distributor);
 					$("#txtCustomerType").val(data.user.customer_type);
-					$("#txtChannel").val(data.user.channel);*/
+					$("#txtChannel").val(data.user.channel);
 					$("#txtMonthlyTarget").val('$ '+ data.user.sumtarget);
 					$("#txtTodayTarget").val('$ ' + data.user.sumtodaytarget);
 					$("#startDate").val(moment(start_date).format('DD-MMMM-YYYY'));
@@ -69,6 +80,7 @@ $(function(){
 					$("#txtMonthToDateAchievementPercent").val('% ' + data.user.month_achievement_percent);
 					$("#txtYearToDateAchievementPercent").val('% ' + data.user.year_achievement_percent);
 					$('.md-input-wrapper').addClass('md-input-filled');
+					modal.hide();
 					if(data.products.length>0){
 						//$("tbody#CONTENTS").html('');
 						//$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
@@ -223,7 +235,7 @@ $(function(){
 						$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
 					}
 				}
-				modal.hide();
+				
 			},
 			error: function(data){
 				$('.md-input-wrapper').find('.md-input').val('');
@@ -392,7 +404,7 @@ $(function(){
 
 	});
 
-	$("#selectOutletName").change(function(){
+	/*$("#selectOutletName").change(function(){
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
 		$.ajax({
 			url: SITE_URL+'supervisor/outlet/'+$(this).val(),
@@ -401,7 +413,7 @@ $(function(){
 			success: function(data){
 				if(data.outlet){
 					$("#txtMarketName").val(data.outlet.outlet_address);
-					/*$("#txtOutletName").val(data.outlet.outlet_name);*/
+					//$("#txtOutletName").val(data.outlet.outlet_name);
 					$("#txtDMSCode").val(data.outlet.dms_code);
 					$("#txtDT").val(data.outlet.distributor);
 					$("#txtCustomerType").val(data.outlet.customer_type);
@@ -414,6 +426,6 @@ $(function(){
 				console.log(data);
 			}
 		});
-	});
+	});*/
 
 });

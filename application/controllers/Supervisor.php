@@ -62,7 +62,7 @@
 		}
 
 		public function changeBA(){
-			$this->load->model('dao/Daosale');
+			/*$this->load->model('dao/Daosale');
 			$this->load->model('dto/Dtosale');
 			$this->load->model('dao/Daoproduct');
 			$this->load->model('dao/Outletsdao');
@@ -71,6 +71,24 @@
 			$this->Dtosale->setEndDate($this->input->post('end_date'));
 			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
 			$this->data["products"] = $this->Daoproduct->getAllProductsOnSale();
+			$this->data["outlets"] = $this->Outletsdao->getAllOutletsByBA($this->input->post("ba_id"));
+			echo json_encode($this->data);*/
+
+			$this->load->model('dao/Outletsdao');
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtosale');
+			$this->load->model('dao/Daoproduct');
+			$this->Dtosale->setBaId($this->input->post("ba_id"));
+			$this->Dtosale->setOutletId($this->input->post("outlet_id"));
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
+			$this->data["products"] = $this->Daoproduct->getAllProductsOnSale();
+			echo json_encode($this->data);
+		}
+
+		public function selectedBA(){
+			$this->load->model('dao/Outletsdao');
 			$this->data["outlets"] = $this->Outletsdao->getAllOutletsByBA($this->input->post("ba_id"));
 			echo json_encode($this->data);
 		}
@@ -114,6 +132,14 @@
 
 		public function outlet($id){
 			$this->load->model('dao/Outletsdao');
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtosale');
+			$this->load->model('dao/Daoproduct');
+			$this->Dtosale->setBaId($this->input->post("ba_id"));
+			$this->Dtosale->setStartDate($this->input->post('start_date'));
+			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
+			$this->data["products"] = $this->Daoproduct->getAllProductsOnSale();
 			$this->data["outlet"] = $this->Outletsdao->getOutletById($id);
 			echo json_encode($this->data);
 		}

@@ -4,6 +4,39 @@ $(function(){
 
 	// TODO: ON CHANGE ON BA 
 	$("#selectedBA").change(function(){
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'report/selectedBA',
+			type: "POST",
+			dataType: "JSON",
+			data: {
+				'ba_id' : $("#selectedBA").val(),
+			},
+			success: function(data){
+				console.log(data);
+				modal.hide();
+				if(data.outlets){
+					$("#selectOutletName").html("<option value=''>Select Outlet Name</option>");
+					if(data.outlets.length>0){
+						for(var i=0; i<data.outlets.length;i++){
+							console.log($("#selectOutletName").html());
+							$("#selectOutletName").append("<option value='"+data.outlets[i].id+"'>"+data.outlets[i].outlet_name+"</option>");
+						}
+						$("#selectOutletName").attr('data-md-selectize','');
+						$("#selectOutletName").attr('data-md-data-md-selectize-bottom','');
+		
+					}                      
+				}
+			},
+			error: function(data){
+				modal.hide();
+				console.log(data);
+			}
+		});
+	});
+
+	// TODO: ON CHANGE ON OUTLET NAME
+	$("#selectOutletName").change(function(){
 		var start_date = moment().date(1).format('YYYY-MM-DD');
 		var end_date = moment().add('months', 1).date(0).format('YYYY-MM-DD');
 		if(dmsCode==true){
@@ -17,6 +50,7 @@ $(function(){
 			dataType: "JSON",
 			data: {
 				'ba_id' : $("#selectedBA").val(),
+				'outlet_id' : $("#selectOutletName").val(),
 				'start_date' : start_date,
 				'end_date' : end_date
 			},
@@ -30,7 +64,7 @@ $(function(){
 					$("#txtSupervisorName").val(data.user.supervisor);
 					$("#txtBAExecutive").val(data.user.executive);
 					$("#txtMarketName").val(data.user.outlet_address);
-					$("#txtOutletName").val(data.user.outlet_name);
+					//$("#txtOutletName").val(data.user.outlet_name);
 					$("#txtDMSCode").val(data.user.dms_code);
 					$("#txtDT").val(data.user.distributor);
 					$("#txtCustomerType").val(data.user.customer_type);

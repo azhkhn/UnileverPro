@@ -58,9 +58,15 @@
                                             <label for="txtMarketName">Market Name</label>
                                             <input type="text" class="md-input" id="txtMarketName" name="txtMarketName" value=""/>
                                         </div>
-                                        <div class="uk-form-row">
+                                       <!--  <div class="uk-form-row">
                                             <label for="txtOutletName">Outlet Name</label>
                                             <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value=""/>
+                                        </div> -->
+                                        <div class="uk-form-row">
+                                            <label for="txtOutletName">Outlet Name</label>
+                                            <select id="selectOutletName" name="selectOutletName">
+                                                <option value="">Select Outlet Name</option>
+                                            </select>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtDMSCode">DMS Code</label>

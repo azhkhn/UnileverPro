@@ -22,7 +22,14 @@
 			$this->Dtosale->setBaId($this->input->post("ba_id"));
 			$this->Dtosale->setStartDate($this->input->post('start_date'));
 			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->Dtosale->setOutletId($this->input->post("outlet_id"));
 			$this->data["user"] = $this->Daosale->getBAReport($this->Dtosale);
+			echo json_encode($this->data);
+		}
+
+		public function selectedBA(){
+			$this->load->model('dao/Outletsdao');
+			$this->data["outlets"] = $this->Outletsdao->getAllOutletsByBA($this->input->post("ba_id"));
 			echo json_encode($this->data);
 		}
 
