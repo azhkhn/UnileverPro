@@ -28,7 +28,7 @@
             <!--<span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">SM-G925TZKFTMB</span>-->
         </div>
         <div id="page_content_inner">
-              <form style="display:none;" id="myform" method="post" action="http://localhost/unileverpro/outletexcel/weekly">
+              <form style="display:none;" id="myform" method="post" action="<?php echo base_url('outletexcel/weekly') ?>">
                 <input name="duration" id="duration" type="hidden"/>
                 <input name="outlet_id" value="3" type="hidden"/>
                 <input type="submit" onClick="submitFormToIFrame();"/>
