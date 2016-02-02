@@ -1,7 +1,66 @@
 $(function(){
 	
 	var dmsCode = false;
+/*	var begin = moment().isoWeekday(1).startOf('week');
+var begin2 = moment().startOf('week');
+// could check to see if day 1 = Sunday  then add 1 day
+// my mac on bst still treats day 1 as sunday    
 
+var firstDay = moment().startOf('week').format('dddd') === 'Sunday' ?     
+moment().startOf('week').add('d',1).format('dddd DD-MM-YYYY') : 
+moment().startOf('week').format('dddd DD-MM-YYYY');
+alert(moment().add('week', 1).date(1).format('YYYY-MM-DD') + moment().add('week', 1).date(7).format('YYYY-MM-DD'));
+
+document.body.innerHTML = '<b>could be monday or sunday depending on client: </b><br />' + 
+begin.format('dddd DD-MM-YYYY') + 
+'<br /><br /> <b>should be monday:</b> <br>' + firstDay + 
+'<br><br> <b>could also be sunday or monday </b><br> ' + 
+begin2.format('dddd DD-MM-YYYY');*/
+
+var date = moment('2016-01-06'),
+begin = moment(date).add('week',1).startOf('week').isoWeekday(1);
+var str = [];
+for (var i=0; i<7; i++) {
+	var data = {};
+	data["date"] = begin.format('YYYY-MM-DD');
+	data["name"] = begin.format('dddd');
+    str.push(data); //+ '<br>';
+    begin.add('d', 1);
+}
+$("#duration").val(JSON.stringify(str));
+
+function submitFormToIFrame(){
+    //IE
+    if( document.myform ){
+        document.myform.setAttribute('target','frame_x');
+        document.myform.submit();
+    //FF
+    } else {
+        var form=document.getElementById('myform');
+        form.setAttribute('target', 'frame_x');
+        form.submit();
+    }
+}
+submitFormToIFrame();
+//alert(JSON.stringify(str));
+
+/*$.ajax({
+	url: SITE_URL+'outletexcel/weekly',
+	type: "POST",
+	dataType: "JSON",
+	data: {
+		'duration' : str,
+		'outlet_id' : 1
+	},
+	success: function(data){
+		console.log(data);
+	},
+	error: function(data){
+		console.log(data);
+	}
+});*/
+
+//document.body.innerHTML = str;
 	// TODO: ON CHANGE ON BA 
 	$("#selectedBA").change(function(){
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 

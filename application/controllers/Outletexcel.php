@@ -648,5 +648,111 @@ class Outletexcel extends CI_Controller {
     	$data["outlets"] = $this->Daoexcelreport->getOutletWithItems($year);	
     	echo json_encode($data);
  	}
+
+ 	public function weekly(){
+
+ 		$this->inputData["duration"] = array();
+		$this->inputData["duration"] = json_decode($this->input->post('duration'),true);
+		$this->inputData["outlet_id"] = $this->input->post('outlet_id');
+		$this->load->model('dao/Daoexcelreport');
+		$data = $this->Daoexcelreport->getAllProductsSalesByOutlets($this->inputData);	
+
+		//load our new PHPExcel library
+		$this->load->library('excel');
+		//activate worksheet number 1
+		$this->excel->setActiveSheetIndex(0);
+		//name the worksheet
+		$this->excel->getActiveSheet()->setTitle('BA KPI FOR 2016');
+
+		$this->excel->getActiveSheet()->setCellValue('B2',"BEAUTY ADVISOR PRODUCTIVITY REPORT");
+		$this->excel->getActiveSheet()->getStyle('B2')->getFont()->setSize(16);
+		$this->excel->getActiveSheet()->getRowDimension('2')->setRowHeight(30);
+		$this->excel->getActiveSheet()->getRowDimension('5')->setRowHeight(20);
+
+		$this->excel->getActiveSheet()
+        			->getStyle('B2')
+        			->getFill()
+        			->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+        			->getStartColor()
+        			->setRGB('FF6699');
+		$this->excel->getActiveSheet()->getStyle('B2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+		$this->excel->getActiveSheet()->getStyle('B2')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+		$this->excel->getActiveSheet()->mergeCells('B2:R2');
+		
+		$this->excel->getActiveSheet()->setCellValue('B4',"BA NAME:");
+		$this->excel->getActiveSheet()->setCellValue('B5',"OUTLETS:");
+		$this->excel->getActiveSheet()->setCellValue('B6',"DMS Code:");
+		$this->excel->getActiveSheet()->setCellValue('B7',"Distributors:");
+		$this->excel->getActiveSheet()->setCellValue('B8',"Supervisor:");
+
+ 
+
+
+
+		$this->excel->getActiveSheet()->setCellValue('Q5',"DATE:");
+		$this->excel->getActiveSheet()->setCellValue('Q6',"Start Time:");
+		$this->excel->getActiveSheet()->setCellValue('Q7',"Break Time:");
+		$this->excel->getActiveSheet()->setCellValue('Q8',"End Time:");
+
+
+		$headers = array('No',
+						 'Item Codes',
+						 'Product Description',
+						 'Size',
+						 'Unit/Case',
+						 'Price',
+						 'Target',
+						 'Mon',
+						 'Tue',
+						 'Wed',
+						 'Thu',
+						 'Fri',
+						 'Sat',
+						 'Sun',
+						 'Total',
+						 'Qty in Price',
+						 'Ach%'
+						 );
+		foreach(range('B','R') as $key=>$columnID)
+		{
+				$this->excel->getActiveSheet()->setCellValue($columnID."10",$headers[$key]);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(false);
+    			$this->excel->getActiveSheet()->getColumnDimension($columnID)->setWidth(12);
+    			$this->excel->getActiveSheet()->getStyle($columnID."10")->getFont()->setBold(true);
+    			$this->excel->getActiveSheet()->getStyle($columnID."10")->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+		$this->excel->getActiveSheet()->getStyle($columnID."10")->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
+    	}
+    	$this->excel->getActiveSheet()->getColumnDimension("A")->setWidth(1);
+    	$this->excel->getActiveSheet()->getColumnDimension("B")->setWidth(5);
+    	$this->excel->getActiveSheet()->getColumnDimension("C")->setAutoSize(true);
+    	$this->excel->getActiveSheet()->getColumnDimension("D")->setAutoSize(true);
+
+    	$this->excel->getActiveSheet()->freezePane('B11');
+    	$styleArray = array(
+		    'borders' => array(
+		        'outline' => array(
+		            'style' => PHPExcel_Style_Border::BORDER_THIN
+		            //'color' => array('argb' => 'FFFF0000'),
+		        ),
+		        'inside' => array(
+		            'style' => PHPExcel_Style_Border::BORDER_THIN
+		        ),
+		    ),
+		);
+		$this->excel->getActiveSheet()->getStyle('B10:R10')->applyFromArray($styleArray);
+    	$this->excel->getActiveSheet()->fromArray($data, NULL, 'B11');
+    	$this->excel->getActiveSheet()->getStyle('B10:R'.(count($data)+10))->applyFromArray($styleArray);
+
+		$filename='BA KPI YEAR 2016_'.date('YmdHis').'.xlsx'; //save our workbook as this file name
+		header('Content-Type: application/vnd.ms-excel'); //mime type
+		header('Content-Disposition: attachment;filename="'.$filename.'"'); //tell browser what's the file name
+		header('Cache-Control: max-age=0'); //no cache
+		            
+		//save it to Excel5 format (excel 2003 .XLS file), change this to 'Excel2007' (and adjust the filename extension, also the header mime type)
+		//if you want to save it as .XLSX Excel 2007 format
+		$objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel2007');  
+		//force user to download the Excel file without writing it to server's HD
+		$objWriter->save('php://output');
+	}
 }
 ?>

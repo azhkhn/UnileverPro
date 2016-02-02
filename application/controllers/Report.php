@@ -95,5 +95,14 @@
 			$this->data["user"] = $this->Daosale->getProjectHolderReport($this->Dtosale);
 			echo json_encode($this->data);
 		}
+
+		public function weekly(){
+			$this->data["duration"] = array();
+			$this->data["duration"] = $this->input->post('duration');
+			$this->data["outlet_id"] = $this->input->post('outlet_id');
+			$this->load->model('dao/Daoexcelreport');
+    		$data["products"] = $this->Daoexcelreport->getAllProductsSalesByOutlets($this->data);	
+    		echo json_encode($data);
+		}
 	}
 ?>

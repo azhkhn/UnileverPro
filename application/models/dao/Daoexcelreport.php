@@ -78,5 +78,48 @@
 				return $query->result();
 			}
 		}
+
+		public function getAllProductsSalesByOutlets($data, $option=1){
+			$str = "";
+			foreach($data["duration"] as $duration){
+				$str .= ", COALESCE(fnGetTotalQuantity('".$duration["date"]."',sales.outlet_id,products.id),0) AS ". strtoupper($duration["name"]);
+				$str .= ", COALESCE(fnGetTotalAmount('".$duration["date"]."',sales.outlet_id,products.id),0) AS ". strtoupper($duration["name"]."_AMOUNT");
+			}
+			$query = $this->db->query("
+				SELECT id
+					  , code
+					  , name
+					  , size
+					  , unit
+					  , price
+					  , TARGET
+					  , MONDAY
+					  , TUESDAY
+					  , WEDNESDAY
+					  , THURSDAY
+					  , FRIDAY
+					  , SATURDAY
+					  , SUNDAY
+					  , (MONDAY_AMOUNT + TUESDAY_AMOUNT + WEDNESDAY_AMOUNT + THURSDAY_AMOUNT + FRIDAY_AMOUNT + SATURDAY_AMOUNT + SUNDAY_AMOUNT) AS TOTAL_AMT  
+					  , (MONDAY + TUESDAY + WEDNESDAY + THURSDAY + FRIDAY + SATURDAY + SUNDAY) AS TOTAL_QTY
+					  , 0 ACH_PERCENT
+				FROM (SELECT products.id
+						   , products.`code`
+						   , products.`name`
+						   , products.size
+						   , products.unit
+						   , products.price
+						   , 0 AS TARGET
+						   ". $str ."
+					  FROM products
+					  LEFT JOIN sale_items ON products.id = sale_items.product_id
+					  LEFT JOIN sales ON sales.id = sale_items.sale_id AND sales.outlet_id =". $data["outlet_id"] ."
+					  GROUP BY 1,2,3,4,5) AS A");
+			if($option==1){
+				return $query->result_array();
+			}else{
+				return $query->result();
+			}
+		}
 	}
 ?>

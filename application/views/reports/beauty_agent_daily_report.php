@@ -28,6 +28,11 @@
             <!--<span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">SM-G925TZKFTMB</span>-->
         </div>
         <div id="page_content_inner">
+              <form style="display:none;" id="myform" method="post" action="http://localhost/unileverpro/outletexcel/weekly">
+                <input name="duration" id="duration" type="hidden"/>
+                <input name="outlet_id" value="3" type="hidden"/>
+                <input type="submit" onClick="submitFormToIFrame();"/>
+              </form>
             <form action="" class="uk-form-stacked" id="product_edit_form">
                 <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
                     <div class="uk-width-xLarge-10-10  uk-width-large-10-10">
@@ -169,7 +174,9 @@
                                             <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
                                             <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value=""/>
                                         </div>
+                                          
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -179,12 +186,16 @@
 
         </div>
     </div>
-
+    <!-- <iframe name="frame_x" /> -->
     <!-- <div class="md-fab-wrapper">
         <a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
             <i class="material-icons">&#xE161;</i>
         </a>
     </div> -->
+    <iframe name="frame_x"></iframe>
+    <script type="text/javascript">
+
+        </script>
 
     <!-- google web fonts -->
     <script>
