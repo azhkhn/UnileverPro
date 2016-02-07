@@ -29,7 +29,7 @@
 
     <div id="page_content" style="background: white;">
         <div id="page_heading">
-            <h1 id="product_edit_name">WELCOME TO UNILEVER REPORTING SYSTEM IT WILL MAKE YOU FUN WHEN YOU HAVE USED IT.</h1>
+            <h1 id="product_edit_name">WELCOME TO UNILEVER REPORTING SYSTEM ENJOY YOUR WORKING.</h1>
         </div>
         <div id="page_content_inner">
 
