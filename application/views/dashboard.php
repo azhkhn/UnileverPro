@@ -1,9 +1,9 @@
-		
-	<!-- main header -->
-	<?php $this->load->view('_include') ?>  
+        
+    <!-- main header -->
+    <?php $this->load->view('_include') ?>  
      <!-- /main header end -->
      
-		<!-- additional styles for plugins -->
+        <!-- additional styles for plugins -->
         <!-- weather icons -->
         <link rel="stylesheet" href="<?php echo base_url('public/bower_components/weather-icons/css/weather-icons.min.css') ?>" media="all">
         <!-- metrics graphics (charts) -->
@@ -17,32 +17,47 @@
     
     
     <!--  header -->
-	<?php $this->load->view('_header') ?>  
+    <?php $this->load->view('_header') ?>  
      <!-- / header end -->
     
     
     <!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
+    <?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
     
     
 
-    <div id="page_content">
+    <div id="page_content" style="background: white;">
+        <div id="page_heading">
+            <h1 id="product_edit_name">WELCOME TO UNILEVER REPORTING SYSTEM IT WILL MAKE YOU FUN WHEN YOU HAVE USED IT.</h1>
+        </div>
         <div id="page_content_inner">
 
             <!-- statistics (small charts) -->
             <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-medium uk-sortable sortable-handler hierarchical_show" data-uk-sortable data-uk-grid-margin>
                 <div>
-                    <div class="md-card">
+                    <div class="md-card" style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f902f9+0,fd89d7+0,f907ad+52,f92fb9+54,ff7cd8+100 */
+background: #f902f9; /* Old browsers */
+background: -moz-linear-gradient(top,  #f902f9 0%, #fd89d7 0%, #f907ad 52%, #f92fb9 54%, #ff7cd8 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f902f9 0%,#fd89d7 0%,#f907ad 52%,#f92fb9 54%,#ff7cd8 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f902f9 0%,#fd89d7 0%,#f907ad 52%,#f92fb9 54%,#ff7cd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f902f9', endColorstr='#ff7cd8',GradientType=0 ); /* IE6-9 */
+">
                         <div class="md-card-content">
-                            <!-- <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_visitors peity_data">5,3,9,6,5,9,7</span></div> -->
+                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_visitors peity_data">5,3,9,6,5,9,7</span></div>
                             <span class="uk-text-muted uk-text-small">TOTAL BA</span>
                             <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_ba ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="md-card">
+                    <div class="md-card"  style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+50,80c217+51,7cbc0a+100;Green+Gloss+%231 */
+background: #9dd53a; /* Old browsers */
+background: -moz-linear-gradient(top,  #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+">
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><i class="material-icons">&#xE854;</i></div>
                             <span class="uk-text-muted uk-text-small">TOTAL PRODUCTS</span>
@@ -51,18 +66,30 @@
                     </div>
                 </div>
                 <div>
-                    <div class="md-card">
+                    <div class="md-card" style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6db3f2+0,54a3ee+50,3690f0+51,1e69de+100;Blue+Gloss+%233 */
+background: #6db3f2; /* Old browsers */
+background: -moz-linear-gradient(top,  #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); /* IE6-9 */
+">
                         <div class="md-card-content">
-                            <!-- <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div> -->
+                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div> 4
                             <span class="uk-text-muted uk-text-small">TOTAL BRANDS</span>
                             <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_brand ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="md-card">
+                    <div class="md-card" style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
+background: #f85032; /* Old browsers */
+background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+">
                         <div class="md-card-content">
-                            <!-- <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_live peity_data">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></div> -->
+                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_live peity_data">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></div> 
                             <span class="uk-text-muted uk-text-small">TOTAL OUTLETS </span>
                             <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_outlet ?></noscript></span></h2>
                         </div>
@@ -72,7 +99,7 @@
 
 
             <!-- circular charts -->
-            <!-- <div class="uk-grid uk-grid-width-small-1-2 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-5 uk-text-center uk-sortable sortable-handler" id="dashboard_sortable_cards" data-uk-sortable data-uk-grid-margin>
+            <div  class="uk-grid uk-grid-width-small-1-2 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-5 uk-text-center uk-sortable sortable-handler" id="dashboard_sortable_cards" data-uk-sortable data-uk-grid-margin>
                 <div>
                     <div class="md-card md-card-hover md-card-overlay">
                         <div class="md-card-content">
@@ -159,7 +186,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div> 
 
 
         </div>

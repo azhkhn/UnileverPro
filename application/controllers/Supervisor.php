@@ -143,6 +143,21 @@
 			$this->data["outlet"] = $this->Outletsdao->getOutletById($id);
 			echo json_encode($this->data);
 		}
+
+		public function ajax(){
+			$user = $this->ion_auth->user()->row();
+			$this->load->model('dao/Daosale');
+			$this->load->model('dto/Dtosale');
+			$this->Dtosale->setBaId($this->input->post('ba_id'));
+			$this->Dtosale->setOutletId($this->input->post('outlet_id'));
+			$this->Dtosale->setSaleDate($this->input->post('sale_date'));
+			$total_rows = $this->Daosale->count($this->Dtosale); 
+			$this->load->helper('app');
+			$this->data["page_links"] = pagination($total_rows, 15);
+			$this->data["count"] = $total_rows;
+			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale, 15,'sale/ajax', 3);
+			echo json_encode($this->data);
+		}
 	}
 
 ?>

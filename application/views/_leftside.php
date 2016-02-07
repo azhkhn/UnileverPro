@@ -1,7 +1,7 @@
 <aside id="sidebar_main">
         <a href="#" class="uk-close sidebar_main_close_button"></a>
         <div class="sidebar_main_header">
-            <div class="sidebar_logo"><a href="<?php echo site_url('admin/dashboard')?>"><!-- <img src="<?php echo base_url('public/assets/img/logo_main.png')?>" alt="" height="15" width="71"/> --><h4>Unilever Reporting System</h4></a></div>
+            <div class="sidebar_logo"><a href="<?php echo site_url('dashboard')?>"><img src="<?php echo base_url('/public/assets/img/unilever-logo_tcm244-409314.svg')?>" style="padding-top: 10px; width:25px; height:25px; float:left;" alt="" height="15" width="71"/><h4>Unilever Reporting System</h4></a></div>
             <!-- <div class="sidebar_actions">
                 <select id="lang_switcher" name="lang_switcher">
                     <option value="gb" selected>English</option>
@@ -95,11 +95,11 @@
                  <li>
                     <a href="#">
                        <i class="menu_icon material-icons">&#xE865;</i>
-                        Outlet type
+                        Customer Type
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('Outlettype/')?>">  Outlet type</a></li>
-                        <li><a href="<?php echo site_url('Outlettype/add')?>">Add  Outlet type</a></li>
+                        <li><a href="<?php echo site_url('Outlettype/')?>">Customer type</a></li>
+                        <li><a href="<?php echo site_url('Outlettype/add')?>">Add  Customer type</a></li>
                     </ul>
                 </li>
 

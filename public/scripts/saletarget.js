@@ -209,7 +209,7 @@ $(function() {
 	         },
 	         id: "id",
 	         fields: {
-	         	outlet_id: { editable: true, nullable: false },
+	         	ba_id: { editable: true, nullable: false },
 	            ba_name: { editable: true, nullable: false },
 	            target_achievement: {type: "number", editable: true, validation: { required: true, min: 0}},
 	            start_date: { editable: true, nullable: false},
@@ -274,15 +274,15 @@ $(function() {
                     .attr("id", "ddl_roleTitle")
                     .appendTo(container)
                     .kendoDropDownList({
-                        dataSource : dataSourceOutlets,
-                        dataTextField: "name",
-                        dataValueField: "name",
-                        template: "<span data-id='${data.id}'>${data.name}</span>",
+                        dataSource : dataSourceBA,
+                        dataTextField: "username",
+                        dataValueField: "username",
+                        template: "<span data-id='${data.id}'>${data.username}</span>",
                         select: function(e) {
                         	console.log(this.dataItem(e.item.index()));
                             var id = e.item.find("span").attr("data-id");
                             var dataItem = e.sender.dataItem();
-							options.model.set("outlet_id", this.dataItem(e.item.index()).id);
+							options.model.set("ba_id", this.dataItem(e.item.index()).id);
                         }
                     });
 				} 

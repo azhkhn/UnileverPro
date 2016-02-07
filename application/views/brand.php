@@ -76,7 +76,7 @@
 			<div class="uk-modal-dialog uk-modal-dialog">
 				<button type="button" class="uk-modal-close uk-close"></button>
 				<div class="uk-modal-header">
-					<h3 class="uk-modal-title"> + BRAND</h3>
+					<h3 class="uk-modal-title"> REGISTER A NEW BRAND</h3>
 				</div>
 				
 				<form action="#"  id="frmAddBrand" class="uk-form-stacked" method="POST">

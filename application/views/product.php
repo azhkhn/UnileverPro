@@ -94,7 +94,7 @@
 			<div class="uk-modal-dialog uk-modal-dialog-large">
 				<button type="button" class="uk-modal-close uk-close"></button>
 				<div class="uk-modal-header">
-					<h3 class="uk-modal-title">+ Product</h3>
+					<h3 class="uk-modal-title">PRODUCT</h3>
 				</div>
 				<form action="#" class="uk-form-stacked" id="frmProduct" name="frmProduct"
 					method="POST">
@@ -211,7 +211,7 @@
 			<div class="uk-modal-dialog uk-modal-dialog-large">
 				<button type="button" class="uk-modal-close uk-close"></button>
 				<div class="uk-modal-header">
-					<h3 class="uk-modal-title">Product</h3>
+					<h3 class="uk-modal-title">PRODUCT INFORMATION DETAILS</h3>
 				</div>
 				<form action="#" class="uk-form-stacked" id="frmProduct"
 					method="POST">

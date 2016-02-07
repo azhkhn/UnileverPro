@@ -28,33 +28,36 @@
         </div>
         <div id="page_content_inner">
             <div class="md-card">
-                            <div class="md-card-content large-padding">
-                                <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
-                                    <div class="uk-width-large-1-4">
-                                        <div class="uk-form-row">
-                                            <label for="selectedBA"> Outlet Name</label>
-                                            <select id="selectedOutlet" name="selectedOutlet" data-md-selectize data-md-selectize-bottom>
-                                                <!-- <option value="">Outlet Name</option> -->
-                                                <?php foreach ($outlets as $outlet):?>
-                                                    <option value="<?php echo $outlet->id ?>"> <?php echo $outlet->name ?></option>
-                                                <?php endforeach;?>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="uk-width-large-1-4">
-                                        <div class="uk-form-row">
-                                            <label for="txtMarketName">Weekly</label>
-                                            <input class="md-input" type="text" id="weeklyDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
-                                        </div>
-                                    </div>
-                                    <!-- <div class="uk-width-large-1-4">
-                                        <div class="uk-form-row">
-                                            <input type="button"  id="btnExcel" name="btnExcel" value="Export Excel"/>
-                                        </div>
-                                    </div> -->
-                                </div>
+                <div id="page_heading">
+                    <h1>SEARCHING BY</h1>
+                </div>
+                <div class="md-card-content large-padding">
+                    <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                        <div class="uk-width-large-1-4">
+                            <div class="uk-form-row">
+                                <label for="selectedBA"> Outlet Name</label>
+                                <select id="selectedOutlet" name="selectedOutlet" data-md-selectize data-md-selectize-bottom>
+                                    <!-- <option value="">Outlet Name</option> -->
+                                    <?php foreach ($outlets as $outlet):?>
+                                        <option value="<?php echo $outlet->id ?>"> <?php echo $outlet->name ?></option>
+                                    <?php endforeach;?>
+                                </select>
                             </div>
                         </div>
+                        <div class="uk-width-large-1-4">
+                            <div class="uk-form-row">
+                                <label for="txtMarketName">Weekly</label>
+                                <input class="md-input" type="text" id="weeklyDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
+                            </div>
+                        </div>
+                        <!-- <div class="uk-width-large-1-4">
+                            <div class="uk-form-row">
+                                <input type="button"  id="btnExcel" name="btnExcel" value="Export Excel"/>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
             <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-grid" data-uk-grid-margin>
@@ -113,7 +116,7 @@
     </div>
     <div class="md-fab-wrapper">
         <a class="md-fab md-fab-primary" href="#" id="btnExportExcel">
-            <i class="material-icons">&#xE161;</i>
+            <i class="material-icons">&#xE2C0;</i>
         </a>
     </div>
     <form style="display:none;" id="myform" method="post" action="<?php echo base_url('outletexcel/weekly') ?>">
@@ -188,8 +191,8 @@
             $('.md-input-wrapper').addClass('md-input-filled');
             $("#weeklyDate").val(moment().format('DD-MMMM-YYYY'));
             /*alert($('#weeklyDate').val());*/
-            var date = moment('2016-01-06'),
-            begin = moment(date).add('week',1).startOf('week').isoWeekday(1);
+            var date = moment(),
+            begin = moment(date).startOf('iweek').isoWeekday(1);
             var str = [];
             for (var i=0; i<7; i++) {
                 var data = {};
@@ -200,9 +203,7 @@
             }
             //$("#duration").val(JSON.stringify(str));
             var excel = {};
-            //var currentYear = new Date().getFullYear()
-            $("#selectYear").val();
-            excel.getAllProducts = function(year){
+            excel.getAllProducts = function(){
                 var start_date = moment().date(1).format('YYYY-MM-DD');
                 var end_date = moment().add('months', 1).date(0).format('YYYY-MM-DD');
                 modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
@@ -256,10 +257,24 @@
                 submitFormToIFrame();
             });            
 
-            // TODO: WHEN CLICK ON THE COMBO BOX YEAR
-            /*$("#selectYear").change(function(){
-                excel.getAllProducts($(this).val());
-            });*/
+            // TODO: WHEN CLICK ON THE COMBO BOX OUTLET
+            $("#selectedOutlet").change(function(){
+                excel.getAllProducts();
+            });
+
+            $("#weeklyDate").change(function(){
+                var date = moment($(this).val()).format('YYYY-MM-DD'),
+                begin = moment(date).startOf('iweek').isoWeekday(1);
+                str = [];
+                for (var i=0; i<7; i++) {
+                    var data = {};
+                    data["date"] = begin.format('YYYY-MM-DD');
+                    data["name"] = begin.format('dddd');
+                    str.push(data); //+ '<br>';
+                    begin.add('d', 1);
+                }
+                excel.getAllProducts();
+            });
         });
     </script>
 </body>

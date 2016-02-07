@@ -1,6 +1,6 @@
-		
-	<!-- main header -->
-	<?php $this->load->view('_include') ?>  
+        
+    <!-- main header -->
+    <?php $this->load->view('_include') ?>  
      <!-- /main header end -->
          <!-- kendo UI -->
     <link rel="stylesheet" href="<?php echo base_url()?>public/bower_components/kendo-ui-core/styles/kendo.common-material.min.css"/>
@@ -14,12 +14,12 @@
 
 </head>
 <body>
-	<!--  header -->
-	<?php $this->load->view('_header') ?>  
+    <!--  header -->
+    <?php $this->load->view('_header') ?>  
      <!-- / header end -->
  
     <!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
+    <?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
 
     <div id="page_content">
@@ -58,15 +58,9 @@
                                             <label for="txtMarketName">Market Name</label>
                                             <input type="text" class="md-input" id="txtMarketName" name="txtMarketName" value=""/>
                                         </div>
-                                       <!--  <div class="uk-form-row">
-                                            <label for="txtOutletName">Outlet Name</label>
-                                            <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value=""/>
-                                        </div> -->
                                         <div class="uk-form-row">
                                             <label for="txtOutletName">Outlet Name</label>
-                                            <select id="selectOutletName" name="selectOutletName">
-                                                <option value="">Select Outlet Name</option>
-                                            </select>
+                                            <input type="text" class="md-input" id="txtOutletName" name="txtOutletName" value=""/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtDMSCode">DMS Code</label>
@@ -169,9 +163,7 @@
                                             <label for="txtYearToDateAchievementPercent">% Year to Date Achievement</label>
                                             <input type="text" class="md-input" id="txtYearToDateAchievementPercent" name="txtYearToDateAchievementPercent" value=""/>
                                         </div>
-                                          
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -181,15 +173,12 @@
 
         </div>
     </div>
-    <!-- <iframe name="frame_x" /> -->
+
     <!-- <div class="md-fab-wrapper">
         <a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
             <i class="material-icons">&#xE161;</i>
         </a>
     </div> -->
-    <script type="text/javascript">
-
-        </script>
 
     <!-- google web fonts -->
     <script>

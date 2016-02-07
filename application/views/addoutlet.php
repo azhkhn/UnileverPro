@@ -74,7 +74,7 @@
                         </div>
                         <div class="uk-width-medium-1-4">                             
                             <div class="uk-form-row">
-                                <label>Outlet Type</label>
+                                <label>Customer Type</label>
                                 <div class="uk-form-row">
                                      <input id="outlettypeid"  class="uk-form-width-medium"  />
                                 </div>

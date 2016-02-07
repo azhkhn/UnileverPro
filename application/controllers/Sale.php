@@ -11,8 +11,8 @@
 				// redirect them to the login page
 				redirect('auth/login', 'refresh');
 			}
-			if(!$this->ion_auth->in_group('BEAUTY_AGENT')){
-				return show_error('You must be an beauty agent to view this page.');
+			if(!$this->ion_auth->in_group('BEAUTY_AGENT','SUPERVISOR','ADMIN')){
+				return show_error('You must be an beauty agent or supervisor or ba executive to view this page.');
 			}
 		}
 

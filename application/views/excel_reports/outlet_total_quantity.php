@@ -28,11 +28,15 @@
         </div>
         <div id="page_content_inner">
             <div class="md-card">
-                <div class="md-card-content">
-                    <div class="uk-grid" data-uk-grid-margin>
-                        <div class="uk-width-1-1">
-                            <div class="uk-overflow-container">
-                                <select id="selectYear">
+                <div id="page_heading">
+                    <h1>SEARCHING BY</h1>
+                </div>
+                <div class="md-card-content large-padding">
+                    <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                        <div class="uk-width-large-1-4">
+                            <div class="uk-form-row">
+                                <label for="selectYear">Year</label>
+                                <select id="selectYear" name="selectYear" data-md-selectize data-md-selectize-bottom>
                                     <option value="2010">2010</option>
                                     <option value="2011">2011</option>
                                     <option value="2012">2012</option>
@@ -48,8 +52,23 @@
                                     <option value="2022">2022</option>
                                     <option value="2023">2023</option>
                                     <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
                                 </select>
-                                <button id="btnExportExcel" class>Export Excel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-grid" data-uk-grid-margin>
+                        <div class="uk-width-1-1">
+                            <div class="uk-overflow-container">
                                 <table class="uk-table">
                                     <thead>
                                         <tr>
@@ -81,7 +100,11 @@
 
         </div>
     </div>
-
+    <div class="md-fab-wrapper">
+        <a class="md-fab md-fab-primary" href="#" id="btnExportExcel">
+            <i class="material-icons">&#xE2C0;</i>
+        </a>
+    </div>
     <!-- google web fonts -->
     <script>
         WebFontConfig = {

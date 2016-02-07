@@ -1,6 +1,6 @@
-		
-	<!-- main header -->
-	<?php $this->load->view('_include') ?>  
+        
+    <!-- main header -->
+    <?php $this->load->view('_include') ?>  
      <!-- /main header end -->
          <!-- kendo UI -->
     <link rel="stylesheet" href="<?php echo base_url()?>public/bower_components/kendo-ui-core/styles/kendo.common-material.min.css"/>
@@ -11,20 +11,15 @@
             border-left: 0px;
         }
     </style>
-    <link href="<?php echo base_url()?>public/assets/css/semantic.min.css" rel="stylesheet">
-
-<!--     <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.1111/styles/kendo.common-material.min.css" />
-    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2015.3.1111/styles/kendo.material.min.css" /> -->
-    
 
 </head>
 <body>
-	<!--  header -->
-	<?php $this->load->view('_header') ?>  
+    <!--  header -->
+    <?php $this->load->view('_header') ?>  
      <!-- / header end -->
  
     <!-- left side bar -->
-	<?php $this->load->view('_leftside_supervisor') ?>    
+    <?php $this->load->view('_leftside_supervisor') ?>    
     <!-- /left side bar -->
 
     <div id="page_content">
@@ -65,9 +60,7 @@
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtOutletName">Outlet Name</label>
-                                            <select id="selectOutletName" name="selectOutletName">
-                                                <option value="">Outlet Name</option>
-                                            </select>
+                                            <input type="text" class="md-input" id="txtOutletName" data-id="" name="txtOutletName" value=""/>
                                         </div>
                                         <div class="uk-form-row">
                                             <label for="txtDMSCode">DMS Code</label>
@@ -123,9 +116,9 @@
                                                     </span>
                                                     <div class="md-input-wrapper md-input-filled">
                                                         <label for="validOfDate">Valid Of Target</label>
-                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                            <input class="md-input" type="text" id="startDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
-                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD/MMMM/YYYY'}">
+                                                            <input class="md-input" type="text" id="endDate" data-uk-datepicker="{format:'DD-MMMM-YYYY'}">
                                                         <span class="md-input-bar"></span>
                                                     </div>
                                                 </div>
@@ -231,6 +224,63 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="md-card">
+                            <div id="page_heading">
+                                <h1>Sale Transaction History</h1>
+                            </div>
+                            <div class="md-card-content large-padding">
+                                <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                    <div class="uk-width-large">
+                                        <div class="uk-width-large-1-4">
+                                            <div class="uk-form-row">
+                                                <div class="uk-input-group">
+                                                    <span class="uk-input-group-addon">
+                                                        <i class="uk-input-group-icon uk-icon-calendar"></i>
+                                                    </span>
+                                                    <div class="md-input-wrapper md-input-filled">
+                                                        <label for="txtTransactionOfsaleTransactionHistorys">Transaction Of</label>
+                                                        <input class="md-input" type="text" id="txtTransactionOfsaleTransactionHistory" data-uk-datepicker="{format:'DD-MMMM-YYYY', }">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-large">
+                                        <div class="uk-width-large">
+                                            <div class="uk-form-row">
+                                                <div class="uk-grid" data-uk-grid-margin>
+                                                    <div class="uk-width-1-1">
+                                                        <div class="uk-overflow-container">
+                                                            <table class="uk-table" id="saleTransactionHistory">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="width:10%;">Item Code</th>
+                                                                        <th style="width:30%;">Item Name</th>
+                                                                        <th style="width:10%;">Price</th>
+                                                                        <th style="width:10%;">Quantity Sold</th>
+                                                                        <th style="width:10%;">Amount</th>
+                                                                        <th style="width:15%;">Promotion</th>
+                                                                        <th style="width:15%;">Promotion Type</th>
+                                                                        <th style="width:15%;">Transaction</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="CONTENTSsaleTransactionHistory">
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div id="PAGINATIONsaleTransactionHistory">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="uk-modal-footer uk-text-right">
+                                            <input type="button" class="md-btn md-btn-primary" id="btnSave" value="Save" />
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -286,12 +336,13 @@
     <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
         <tr>
             <td id="itemCode">{{= code}}</td>
-            <td id="itemName">{{= name}}</td>
-            <td id="price">{{= price}}</td>
-            <td id="quantitySold" class="td-editable">{{= quantity}}</td>
-            <td id="amount">{{= amount}}</td>
-            <td id="promotion" class="td-editable">{{= promotion_name }}</td>
-            <td id="promotionType" class="td-editable">{{= promotion_type }}</td>
+            <td id="itemName">{{= product_name}}</td>
+            <td id="price" style="text-align:center;">{{= price}}</td>
+            <td id="quantitySold" style="text-align:center;">{{= quantity}}</td>
+            <td id="amount" style="text-align:center;">{{= amount}}</td>
+            <td id="promotion">{{= promotion_name }}</td>
+            <td id="promotionType">{{= promotion_type }}</td>
+            <td id="saleTime">{{= sale_time }}</td>
         </tr>
     </script>
 

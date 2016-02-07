@@ -91,7 +91,7 @@
 
 		public function ba_all(){
 			$this->load->model('dao/Daouser');
-			$this->data["users"] = $this->Daouser->getAllUserBsyGroupId();
+			$this->data["users"] = $this->Daouser->getAllUsersByGroupId();
 			echo json_encode($this->data["users"]);				
 		}
 
