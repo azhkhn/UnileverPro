@@ -167,6 +167,63 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="md-card" style="display:none;">
+                            <div class="md-card-content large-padding">
+                                <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                    <div class="uk-width-large">
+                                        <div class="uk-width-large-1-4">
+                                            <div class="uk-form-row">
+                                                <div class="uk-input-group">
+                                                    <span class="uk-input-group-addon">
+                                                        <i class="uk-input-group-icon uk-icon-calendar"></i>
+                                                    </span>
+                                                    <div class="md-input-wrapper md-input-filled">
+                                                        <label for="txtTransactionOf1">Transaction Of</label>
+                                                        <input class="md-input" type="text" id="txtTransactionOf1" data-uk-datepicker="{format:'DD-MMMM-YYYY', }">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-width-large">
+                                        <div class="uk-width-large">
+                                            <div class="uk-form-row">
+                                                <div class="uk-grid" data-uk-grid-margin>
+                                                    <div class="uk-width-1-1">
+                                                        <div class="uk-overflow-container">
+                                                            <table class="uk-table" id="saleTransaction1" style="display:none;">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="width:10%;">Item Code</th>
+                                                                        <th style="width:30%;">Item Name</th>
+                                                                        <th style="width:10%;">Price</th>
+                                                                        <th style="width:10%;">Quantity Sold</th>
+                                                                        <th style="width:10%;">Amount</th>
+                                                                        <th style="width:15%;">Promotion</th>
+                                                                        <th style="width:15%;">Promotion Type</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="CONTENTS">
+                                                                </tbody>
+                                                            </table>
+                                                        <div id="grid"></div>
+                                                        </div>
+                                                        <div id="PAGINATION" style="display:none;">
+                                                            <!--<?php
+                                                               echo $page_links;
+                                                            ?>-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="uk-modal-footer uk-text-right">
+                                            <input type="button" class="md-btn md-btn-primary" id="btnSave" value="Save" />
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="md-card">
                             <div class="md-card-content large-padding">
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
@@ -191,7 +248,7 @@
                                                 <div class="uk-grid" data-uk-grid-margin>
                                                     <div class="uk-width-1-1">
                                                         <div class="uk-overflow-container">
-                                                            <table class="uk-table" id="saleTransaction" style="display:none;">
+                                                            <table class="uk-table" id="saleTransaction1" style="display:none;">
                                                                 <thead>
                                                                     <tr>
                                                                         <th style="width:10%;">Item Code</th>
@@ -206,9 +263,9 @@
                                                                 <tbody id="CONTENTS">
                                                                 </tbody>
                                                             </table>
-                                                        <div id="grid"></div>
+                                                        <div id="grid1"></div>
                                                         </div>
-                                                        <div id="PAGINATION" style="display:none;">
+                                                        <div id="PAGINATION1" style="display:none;">
                                                             <!--<?php
                                                                echo $page_links;
                                                             ?>-->

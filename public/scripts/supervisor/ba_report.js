@@ -482,7 +482,7 @@ $(function(){
 				}else{
 					$("tbody#CONTENTSsaleTransactionHistory").html('<tr>NO CONTENTS</tr>');
 				}
-				modal.hide();
+				//modal.hide();
 			},
 			error: function(data){
 				modal.hide();
@@ -513,5 +513,218 @@ $(function(){
 		sales.getAllSales(SITE_URL+"supervisor/ajax");
 	});
 
+
+	//TODO: KENDO GRID	
+	var dataSource = new kendo.data.DataSource({
+	   	/*pageSize: 20,*/
+	   	//data: data.products,
+	   	change: function(e) {
+	      	if (e.action == "itemchange")  {
+	        	if (e.field == "price" || e.field == "quantity") {
+	          		var item=  e.items[0];
+	          		if(item.quantity=="" || item.price=="" || item.quantity===undefined || item.price ===undefined){
+	          			return false;
+	          		}else{
+	         			item.trigger("change", {field: "amount"})
+	         		}
+	       		}
+       		}
+
+	    },
+	   	transport: {
+	        /*read:  {
+	            url: SITE_URL + "supervisor/products",
+	            dataType: "json"
+	        },*/
+	        /*update: {
+	            url: SITE_URL + "saletarget/update_rows",
+	            type: "POST",
+	            dataType: "json",
+	            beforeSend: function(){
+	     			modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+	            },
+	            complete: function(data){
+	            	modal.hide();
+	            	//console.log(data.responseText.message);
+	            	$("#grid").data("kendoGrid").dataSource.read(); 
+	            }
+	        },*/
+	        /*destroy: {
+	            url: SITE_URL + "/Products/Destroy",
+	            dataType: "jsonp"
+	        },*/
+	        create: {
+	            url: SITE_URL + "supervisor/products_update",
+                type: "POST",
+                data: {
+                	"ba_id" : 1,
+                	"outlet_id" : $("#txtOutletName").data("id")
+                },
+                dataType: "json",
+                beforeSend: function(){
+         			modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+                },
+                complete: function(data){
+                	modal.hide();
+                	//console.log(data.responseText.message);
+                	//$("#grid1").data("kendoGrid").refresh();
+                	//$("#grid1").data("kendoGrid").dataSource.empty();
+                	$("#grid1").data('kendoGrid').dataSource.data([]);  
+                	sales.getAllSales(SITE_URL+"supervisor/ajax");
+                }
+	        },
+	        parameterMap: function(options, operation) {
+	            if (operation !== "read" && options.models) {
+                    return { 
+                    	models: kendo.stringify(options.models),
+                    	//models: options.models,
+                    	ba_id : $("#selectedBA").val(),
+                    	outlet_id : $("#txtOutletName").data("id")
+
+                    };
+                }
+	        }
+	    },
+	   batch: true,
+	   /*autoSync: true,*/
+	   schema: {
+	       model: {
+	       	 Total:function() {
+	       	 	var value = this.get("price") * this.get("quantity");
+	       	 	if(value!==NaN){
+	          		return value;
+	          	}
+	         },
+	         Name: function() {
+	         	return this.get("name");
+	         },
+	         id: "product_id",
+             fields: {
+             	product_id: { editable: true, nullable: false},
+                code: { editable: true, nullable: false },
+                name: { editable: true },
+                price: { editable: true, nullable: false},
+                quantity: { type: "number", editable: true, validation: { required: {message: "Must not be empty!"}, min: 1} },
+                amount: { 
+                	editable: false,  validation: { min:0}
+                },
+                promotion: { },
+                promotion_name: { 
+                	editable: true
+                },
+                promotiontype: { editable: true},
+                promotiontype1: {},
+                promotion_type_id: {}
+             },
+
+	       }
+	   }
+	});
+
+    var dataSourceProducts = new kendo.data.DataSource({
+       transport: {
+            read:  {
+                url: SITE_URL + "supervisor/products",
+                dataType: "json"
+            },
+            parameterMap: function(options, operation) {
+                if (operation !== "read" && options.models) {
+                    return { 
+                    	models: kendo.stringify(options.models)
+                    };
+                }
+            }
+        }
+    });
+
+	var _grid = $("#grid1").kendoGrid({
+		dataSource: dataSource,
+	    sortable: true,
+	    pageable: false,
+	    pageSize: 20,
+	    toolbar: ["create","save"],
+	    editable: true,
+	    selectable: true,
+	    columns: [
+            { field:"product_id",title:"Id", hidden: true},
+            { field: "code", title: "Code", width:"15%" , 
+	    		editor: function(container, options) {
+        			console.log(container, options);
+        			console.log(dataSource);
+	                $("<input data-bind='value:code' />")
+                    .attr("id", "ddl_roleTitle")
+                    .appendTo(container)
+                    .kendoDropDownList({
+                        dataSource : dataSourceProducts,
+                        dataTextField: "code",
+                        dataValueField: "code",
+                        template: "<span data-id='${data.code}'>${data.code}</span>",
+                        select: function(e) {
+                        	console.log(this.dataItem(e.item.index()));
+                            var id = e.item.find("span").attr("data-id");
+                            var dataItem = e.sender.dataItem();
+                            options.model.set("name", this.dataItem(e.item.index()).name);
+                            options.model.set("price", this.dataItem(e.item.index()).price);
+							options.model.set("product_id", this.dataItem(e.item.index()).product_id);
+							options.model.set("promotion", this.dataItem(e.item.index()).promotion);
+							options.model.set("quantity", 1);
+							options.model.set("amount", this.dataItem(e.item.index()).amount);
+							options.model.set("promotion_name", this.dataItem(e.item.index()).promotion_name);
+							options.model.set("promotiontype", this.dataItem(e.item.index()).promotiontype);
+                        }
+                    });
+				} 
+        	},
+            { field: "name", title:"Product Name"},
+            { field: "price", title: "Unit Price", format: "{0:c2}", width: "10%", attributes: {'data-format': 'c' },},
+            { field: "quantity", title: "Quantity", width: "10%"},
+            { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
+            { field: "promotion", title: "Promotion", width: "10%", hidden:true}, 
+            { field: "promotion_name", title: "Promotion", width:"10%"},
+            { field: "promotiontype", title: "Promotion Type", width: "10%", hidden:true},
+            { field: "promotiontype1", title: "Promotion Type", width: "10%",
+        		editor: function(container, options) {
+        			var dataSource = $.parseJSON('[' + options.model["promotiontype"] + ']');
+        			console.log(container, options);
+        			console.log(dataSource);
+	                $("<input data-bind='value:promotiontype1.id' />")
+                    .attr("id", "ddl_roleTitle")
+                    .appendTo(container)
+                    .kendoDropDownList({
+                        dataSource : new kendo.data.DataSource({
+						    data : dataSource											    
+						}),
+                        dataTextField: "name",
+                        dataValueField: "id",
+                        template: "<span data-id='${data.id}'>${data.name}</span>",
+                        select: function(e) {
+                        	console.log(this.dataItem(e.item.index()));
+                            var id = e.item.find("span").attr("data-id");
+                            var dataItem = e.sender.dataItem();
+							options.model.set("promotiontype1", this.dataItem(e.item.index()).name);
+							options.model.set("promotion_type_id", this.dataItem(e.item.index()).id);
+                        }
+                    });
+				}
+		    },
+		    { command: { text: "Save", name: "Save", click: onSave }, title: " ", width: "10%"}
+        ],
+        create: true,
+	});
+
+	function onSave(e){
+		//_grid.saveChanges();
+		$("#grid1").data("kendoGrid").saveChanges(); 
+	}
+	
+	function dateTimeEditor(container, options) {
+    	$('<input data-text-field="' + options.field + '" data-value-field="' + options.field + '" data-bind="value:' + options.field + '" data-format="' + options.format + '"/>')
+            .appendTo(container)
+            .kendoDatePicker({
+            	format: "yyyy-MM-dd",
+            	parseFormats:["yyyy-MM-dd"],
+            	culture: "de-DE"
+            });
+	}
 
 });

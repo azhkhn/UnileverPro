@@ -143,7 +143,6 @@ $(function() {
 
 
 	//TODO: KENDO GRID	
-
 	var dataSource = new kendo.data.DataSource({
 	   	/*pageSize: 20,*/
 	   	//data: data.products,
@@ -153,8 +152,8 @@ $(function() {
 	       
 	          var item=  e.items[0];
 	         	item.trigger("change", {field: "amount"})
-	        } 
-	      }
+	       } 
+	       }
 
 	    },
 	   	transport: {
@@ -296,7 +295,7 @@ $(function() {
 
 
 	function dateTimeEditor(container, options) {
-    $('<input data-text-field="' + options.field + '" data-value-field="' + options.field + '" data-bind="value:' + options.field + '" data-format="' + options.format + '"/>')
+    	$('<input data-text-field="' + options.field + '" data-value-field="' + options.field + '" data-bind="value:' + options.field + '" data-format="' + options.format + '"/>')
             .appendTo(container)
             .kendoDatePicker({
             	format: "yyyy-MM-dd",
