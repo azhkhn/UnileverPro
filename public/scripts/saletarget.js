@@ -266,7 +266,7 @@ $(function() {
 	    selectable: true,
 	    columns: [
 	        { field:"id",title:"Id", hidden: true},
-	        { field: "ba_name", title:"Outlet Name", 
+	        { field: "ba_name", title:"BA Name", 
 	    		editor: function(container, options) {
         			console.log(container, options);
         			console.log(dataSource);
