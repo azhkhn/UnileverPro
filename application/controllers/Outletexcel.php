@@ -649,8 +649,22 @@ class Outletexcel extends CI_Controller {
     	echo json_encode($data);
  	}
 
- 	public function weekly(){
+ 	public function outlet_product(){
+ 		$this->load->model("dao/Daoexcelreport");
+ 		$this->data["outlets"] = $this->Daoexcelreport->getAllOutlets();
+ 		return $this->load->view("excel_reports/outlet_total_product", $this->data);
+ 	}
 
+ 	public function outlet_product_ajax(){
+ 		$this->data["duration"] = array();
+		$this->data["duration"] = $this->input->post('duration');
+		$this->data["outlet_id"] = $this->input->post('outlet_id');
+		$this->load->model('dao/Daoexcelreport');
+		$data["products"] = $this->Daoexcelreport->getAllProductsSalesByOutlets($this->data,2);	
+		echo json_encode($data);
+ 	}
+
+ 	public function weekly(){
  		$this->inputData["duration"] = array();
 		$this->inputData["duration"] = json_decode($this->input->post('duration'),true);
 		$this->inputData["outlet_id"] = $this->input->post('outlet_id');

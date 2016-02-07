@@ -112,6 +112,7 @@
                         <li><a href="<?php echo site_url('outletexcel/outlet_items')?>">Outlet Items</a></li>
                         <li><a href="<?php echo site_url('outletexcel/outlet_amount')?>">Outlet Total Amount</a></li>
                         <li><a href="<?php echo site_url('outletexcel/outlet_quantity')?>">Outlet Total Quantity</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_product')?>">Outlet Total Product Weekly</a></li>
                     </ul>
                 </li>
                 

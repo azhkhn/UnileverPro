@@ -28,11 +28,6 @@
             <!--<span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">SM-G925TZKFTMB</span>-->
         </div>
         <div id="page_content_inner">
-              <form style="display:none;" id="myform" method="post" action="<?php echo base_url('outletexcel/weekly') ?>">
-                <input name="duration" id="duration" type="hidden"/>
-                <input name="outlet_id" value="3" type="hidden"/>
-                <input type="submit" onClick="submitFormToIFrame();"/>
-              </form>
             <form action="" class="uk-form-stacked" id="product_edit_form">
                 <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
                     <div class="uk-width-xLarge-10-10  uk-width-large-10-10">
@@ -192,7 +187,6 @@
             <i class="material-icons">&#xE161;</i>
         </a>
     </div> -->
-    <iframe name="frame_x"></iframe>
     <script type="text/javascript">
 
         </script>

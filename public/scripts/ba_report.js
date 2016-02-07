@@ -17,7 +17,7 @@ begin.format('dddd DD-MM-YYYY') +
 '<br><br> <b>could also be sunday or monday </b><br> ' + 
 begin2.format('dddd DD-MM-YYYY');*/
 
-var date = moment('2016-01-06'),
+/*var date = moment('2016-01-06'),
 begin = moment(date).add('week',1).startOf('week').isoWeekday(1);
 var str = [];
 for (var i=0; i<7; i++) {
@@ -41,7 +41,7 @@ function submitFormToIFrame(){
         form.submit();
     }
 }
-submitFormToIFrame();
+submitFormToIFrame();*/
 //alert(JSON.stringify(str));
 
 /*$.ajax({

@@ -85,8 +85,10 @@
 				$str .= ", COALESCE(fnGetTotalQuantity('".$duration["date"]."',sales.outlet_id,products.id),0) AS ". strtoupper($duration["name"]);
 				$str .= ", COALESCE(fnGetTotalAmount('".$duration["date"]."',sales.outlet_id,products.id),0) AS ". strtoupper($duration["name"]."_AMOUNT");
 			}
+			$this->db->query("SET @no=0;");
 			$query = $this->db->query("
-				SELECT id
+				SELECT @no := @no+1 AS No
+					  /*, id*/
 					  , code
 					  , name
 					  , size
@@ -120,6 +122,15 @@
 			}else{
 				return $query->result();
 			}
+		}
+
+		public function getAllOutlets(){
+			$this->db->select('id, dms_code, distributor, channel_id, outlet_type_id, name, address, ba_id, created_date, created_by, updated_date, updated_by, status, deleted_at');
+			$this->db->from('outlets');
+			$this->db->order_by("id", "desc");
+			$this->db->where("status", 1);
+			$query = $this->db->get();
+			return $query->result();
 		}
 	}
 ?>
