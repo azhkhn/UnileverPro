@@ -33,7 +33,8 @@
                 <strong><div id="infoMessage"><?php echo $message;?></div></strong>
             </div>
                 <div class="login_heading">
-                    <div class="user_avatar"></div>
+                    <!-- <div class="user_avatar"></div> -->
+                    <div><img src="<?php echo base_url('/public/assets/img/unilever-logo_tcm244-409314.svg')?>" style="width:50%; height:50%;"/></div>
                 </div>
                 <form action="<?php echo base_url('auth/login')?>" method="POST">
                     <div class="uk-form-row">

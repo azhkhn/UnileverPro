@@ -26,7 +26,7 @@ $(function(){
 				$('.md-input-wrapper').find('.md-input').not("#txtTransactionOf,#txtTransactionOfsaleTransactionHistory, #txtNumberOfWorking").val('');
 				$('.md-input-wrapper').removeClass('md-input-filled');
 				if(data.outlets){
-					$("#selectOutletName").html("<option value=''>Outlet Name</option>");
+					/*$("#selectOutletName").html("<option value=''>Outlet Name</option>");
 					if(data.outlets.length>0){
 						for(var i=0; i<data.outlets.length;i++){
 							console.log($("#selectOutletName").html());
@@ -35,7 +35,7 @@ $(function(){
 						$("#selectOutletName").attr('data-md-selectize','');
 						$("#selectOutletName").attr('data-md-data-md-selectize-bottom','');
 		
-					}
+					}*/
 
 					 /*$("#selectOutletName").kendoDropDownList({
                           dataTextField: "outlet_name",

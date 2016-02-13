@@ -80,6 +80,17 @@
                         <li><a href="<?php echo site_url('distributor/add')?>">Add distributor</a></li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href="#">
+                       <i class="menu_icon material-icons">&#xE865;</i>
+                        Customer Type
+                    </a>
+                    <ul>
+                        <li><a href="<?php echo site_url('Outlettype/')?>">Customer type</a></li>
+                        <li><a href="<?php echo site_url('Outlettype/add')?>">Add  Customer type</a></li>
+                    </ul>
+                </li>
                 
                 <li>
                     <a href="#">
@@ -92,17 +103,6 @@
                     </ul>
                 </li>
                 
-                 <li>
-                    <a href="#">
-                       <i class="menu_icon material-icons">&#xE865;</i>
-                        Customer Type
-                    </a>
-                    <ul>
-                        <li><a href="<?php echo site_url('Outlettype/')?>">Customer type</a></li>
-                        <li><a href="<?php echo site_url('Outlettype/add')?>">Add  Customer type</a></li>
-                    </ul>
-                </li>
-
                 <li>
                     <a href="#">
                        <i class="menu_icon material-icons">&#xE8D1;</i>
