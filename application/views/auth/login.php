@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?php echo base_url()?>public/assets/css/login_page.min.css" />
 
 </head>
-<body class="login_page">
+<body class="login_page" style="background-color:white;">
     <!--<h1><?php echo lang('login_heading');?></h1>
     <p><?php echo lang('login_subheading');?></p>-->
     

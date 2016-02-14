@@ -36,13 +36,7 @@
             <!-- statistics (small charts) -->
             <div class="uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-2 uk-grid-medium uk-sortable sortable-handler hierarchical_show" data-uk-sortable data-uk-grid-margin>
                 <div>
-                    <div class="md-card" style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f902f9+0,fd89d7+0,f907ad+52,f92fb9+54,ff7cd8+100 */
-background: #f902f9; /* Old browsers */
-background: -moz-linear-gradient(top,  #f902f9 0%, #fd89d7 0%, #f907ad 52%, #f92fb9 54%, #ff7cd8 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #f902f9 0%,#fd89d7 0%,#f907ad 52%,#f92fb9 54%,#ff7cd8 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #f902f9 0%,#fd89d7 0%,#f907ad 52%,#f92fb9 54%,#ff7cd8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f902f9', endColorstr='#ff7cd8',GradientType=0 ); /* IE6-9 */
-">
+                    <div class="md-card">
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_visitors peity_data">5,3,9,6,5,9,7</span></div>
                             <span class="uk-text-muted uk-text-small">TOTAL BA</span>
@@ -51,13 +45,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f902f9', end
                     </div>
                 </div>
                 <div>
-                    <div class="md-card"  style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,a1d54f+50,80c217+51,7cbc0a+100;Green+Gloss+%231 */
-background: #9dd53a; /* Old browsers */
-background: -moz-linear-gradient(top,  #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
-">
+                    <div class="md-card">
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><i class="material-icons">&#xE854;</i></div>
                             <span class="uk-text-muted uk-text-small">TOTAL PRODUCTS</span>
@@ -66,13 +54,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', end
                     </div>
                 </div>
                 <div>
-                    <div class="md-card" style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6db3f2+0,54a3ee+50,3690f0+51,1e69de+100;Blue+Gloss+%233 */
-background: #6db3f2; /* Old browsers */
-background: -moz-linear-gradient(top,  #6db3f2 0%, #54a3ee 50%, #3690f0 51%, #1e69de 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #6db3f2 0%,#54a3ee 50%,#3690f0 51%,#1e69de 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); /* IE6-9 */
-">
+                    <div class="md-card">
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div> 4
                             <span class="uk-text-muted uk-text-small">TOTAL BRANDS</span>
@@ -81,13 +63,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
                     </div>
                 </div>
                 <div>
-                    <div class="md-card" style="/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
-background: #f85032; /* Old browsers */
-background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
-">
+                    <div class="md-card">
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_live peity_data">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></div> 
                             <span class="uk-text-muted uk-text-small">TOTAL OUTLETS </span>
@@ -97,96 +73,115 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', end
                 </div>
             </div>
 
-
-            <!-- circular charts -->
-            <div  class="uk-grid uk-grid-width-small-1-2 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-5 uk-text-center uk-sortable sortable-handler" id="dashboard_sortable_cards" data-uk-sortable data-uk-grid-margin>
-                <div>
-                    <div class="md-card md-card-hover md-card-overlay">
-                        <div class="md-card-content">
-                            <div class="epc_chart" data-percent="76" data-bar-color="#03a9f4">
-                                <span class="epc_chart_icon"><i class="material-icons">&#xE0BE;</i></span>
-                            </div>
+            <div class="md-card">
+                        <div id="clndr_events" class="clndr-wrapper">
+                            <script>
+                                // calendar events
+                                clndrEvents = [
+                                    { date: '2015-07-08', title: 'Doctor appointment', url: 'javascript:void(0)', timeStart: '10:00', timeEnd: '11:00' },
+                                    { date: '2015-07-09', title: 'John\'s Birthday', url: 'javascript:void(0)' },
+                                    { date: '2015-07-09', title: 'Party', url: 'javascript:void(0)', timeStart: '08:00', timeEnd: '08:30' },
+                                    { date: '2015-07-13', title: 'Meeting', url: 'javascript:void(0)', timeStart: '18:00', timeEnd: '18:20' },
+                                    { date: '2015-07-18', title: 'Work Out', url: 'javascript:void(0)', timeStart: '07:00', timeEnd: '08:00' },
+                                    { date: '2015-07-18', title: 'Business Meeting', url: 'javascript:void(0)', timeStart: '11:10', timeEnd: '11:45' },
+                                    { date: '2015-07-23', title: 'Meeting', url: 'javascript:void(0)', timeStart: '20:25', timeEnd: '20:50' },
+                                    { date: '2015-07-26', title: 'Haircut', url: 'javascript:void(0)' },
+                                    { date: '2015-07-26', title: 'Lunch with Katy', url: 'javascript:void(0)', timeStart: '08:45', timeEnd: '09:45' },
+                                    { date: '2015-07-26', title: 'Concept review', url: 'javascript:void(0)', timeStart: '15:00', timeEnd: '16:00' },
+                                    { date: '2015-07-27', title: 'Swimming Poll', url: 'javascript:void(0)', timeStart: '13:50', timeEnd: '14:20' },
+                                    { date: '2015-07-29', title: 'Team Meeting', url: 'javascript:void(0)', timeStart: '17:25', timeEnd: '18:15' },
+                                    { date: '2015-08-02', title: 'Dinner with John', url: 'javascript:void(0)', timeStart: '16:25', timeEnd: '18:45' },
+                                    { date: '2015-08-13', title: 'Business Meeting', url: 'javascript:void(0)', timeStart: '10:00', timeEnd: '11:00' }
+                                ]
+                            </script>
+                            <script id="clndr_events_template" type="text/x-handlebars-template">
+                                <div class="md-card-toolbar">
+                                    <div class="md-card-toolbar-actions">
+                                        <!--<i class="md-icon clndr_add_event material-icons">&#xE145;</i>-->
+                                        <i class="md-icon clndr_today material-icons">&#xE8DF;</i>
+                                        <i class="md-icon clndr_previous material-icons">&#xE408;</i>
+                                        <i class="md-icon clndr_next material-icons uk-margin-remove">&#xE409;</i>
+                                    </div>
+                                    <h3 class="md-card-toolbar-heading-text">
+                                        {{ month }} {{ year }}
+                                    </h3>
+                                </div>
+                                <div class="clndr_days">
+                                    <div class="clndr_days_names">
+                                        {{#each daysOfTheWeek}}
+                                        <div class="day-header">{{ this }}</div>
+                                        {{/each}}
+                                    </div>
+                                    <div class="clndr_days_grid">
+                                        {{#each days}}
+                                        <div class="{{ this.classes }}" {{#if this.id }} id="{{ this.id }}" {{/if}}>
+                                            <span>{{ this.day }}</span>
+                                        </div>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                                <div class="clndr_events">
+                                    <i class="material-icons clndr_events_close_button">&#xE5CD;</i>
+                                    {{#each eventsThisMonth}}
+                                    <div class="clndr_event" data-clndr-event="{{ dateFormat this.date format='YYYY-MM-DD' }}">
+                                        <a href="{{ this.url }}">
+                                            <span class="clndr_event_title">{{ this.title }}</span>
+                                            <span class="clndr_event_more_info">
+                                                {{~dateFormat this.date format='MMM Do'}}
+                                                {{~#ifCond this.timeStart '||' this.timeEnd}} ({{/ifCond}}
+                                                {{~#if this.timeStart }} {{~this.timeStart~}} {{/if}}
+                                                {{~#ifCond this.timeStart '&&' this.timeEnd}} - {{/ifCond}}
+                                                {{~#if this.timeEnd }} {{~this.timeEnd~}} {{/if}}
+                                                {{~#ifCond this.timeStart '||' this.timeEnd}}){{/ifCond~}}
+                                            </span>
+                                        </a>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </script>
                         </div>
-                        <div class="md-card-overlay-content">
-                            <div class="uk-clearfix md-card-overlay-header">
-                                <i class="md-icon material-icons md-card-overlay-toggler">&#xE5D4;</i>
-                                <h3>
-                                    User Messages
-                                </h3>
+                        <div class="uk-modal" id="modal_clndr_new_event">
+                            <div class="uk-modal-dialog">
+                                <div class="uk-modal-header">
+                                    <h3 class="uk-modal-title">New Event</h3>
+                                </div>
+                                <div class="uk-margin-bottom">
+                                    <label for="clndr_event_title_control">Event Title</label>
+                                    <input type="text" class="md-input" id="clndr_event_title_control" />
+                                </div>
+                                <div class="uk-margin-medium-bottom">
+                                    <label for="clndr_event_link_control">Event Link</label>
+                                    <input type="text" class="md-input" id="clndr_event_link_control" />
+                                </div>
+                                <div class="uk-grid uk-grid-width-medium-1-3 uk-margin-large-bottom" data-uk-grid-margin>
+                                    <div>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-calendar"></i></span>
+                                            <label for="clndr_event_date_control">Event Date</label>
+                                            <input class="md-input" type="text" id="clndr_event_date_control" data-uk-datepicker="{format:'YYYY-MM-DD', addClass: 'dropdown-modal', minDate: '2015-07-20' }">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-clock-o"></i></span>
+                                            <label for="clndr_event_start_control">Event Start</label>
+                                            <input class="md-input" type="text" id="clndr_event_start_control" data-uk-timepicker>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="uk-input-group">
+                                            <span class="uk-input-group-addon"><i class="uk-input-group-icon uk-icon-clock-o"></i></span>
+                                            <label for="clndr_event_end_control">Event End</label>
+                                            <input class="md-input" type="text" id="clndr_event_end_control" data-uk-timepicker>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-modal-footer uk-text-right">
+                                    <button type="button" class="md-btn md-btn-flat uk-modal-close">Close</button><button type="button" class="md-btn md-btn-flat md-btn-flat-primary" id="clndr_new_event_submit">Add Event</button>
+                                </div>
                             </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias consectetur.
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="md-card md-card-hover md-card-overlay">
-                        <div class="md-card-content uk-flex uk-flex-center uk-flex-middle">
-                            <span class="peity_conversions_large peity_data">5,3,9,6,5,9,7</span>
-                        </div>
-                        <div class="md-card-overlay-content">
-                            <div class="uk-clearfix md-card-overlay-header">
-                                <i class="md-icon material-icons md-card-overlay-toggler">&#xE5D4;</i>
-                                <h3>
-                                    Conversions
-                                </h3>
-                            </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="md-card md-card-hover md-card-overlay">
-                        <div class="md-card-content uk-flex uk-flex-center uk-flex-middle">
-                            <span class="peity_conversions_large peity_data">5,3,9,6,5,9,7</span>
-                        </div>
-                        <div class="md-card-overlay-content">
-                            <div class="uk-clearfix md-card-overlay-header">
-                                <i class="md-icon material-icons md-card-overlay-toggler">&#xE5D4;</i>
-                                <h3>
-                                    Conversions
-                                </h3>
-                            </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="md-card md-card-hover md-card-overlay">
-                        <div class="md-card-content">
-                            <div class="epc_chart" data-percent="53" data-bar-color="#009688">
-                                <span class="epc_chart_text"><span class="countUpMe">53</span>%</span>
-                            </div>
-                        </div>
-                        <div class="md-card-overlay-content">
-                            <div class="uk-clearfix md-card-overlay-header">
-                                <i class="md-icon material-icons md-card-overlay-toggler">&#xE5D4;</i>
-                                <h3>
-                                    Orders
-                                </h3>
-                            </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="md-card md-card-hover md-card-overlay">
-                        <div class="md-card-content">
-                            <div class="epc_chart" data-percent="37" data-bar-color="#607d8b">
-                                <span class="epc_chart_icon"><i class="material-icons">&#xE7FE;</i></span>
-                            </div>
-                        </div>
-                        <div class="md-card-overlay-content">
-                            <div class="uk-clearfix md-card-overlay-header">
-                                <i class="md-icon material-icons md-card-overlay-toggler">&#xE5D4;</i>
-                                <h3>
-                                    User Registrations
-                                </h3>
-                            </div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
-                    </div>
-                </div>
-            </div> 
 
 
         </div>

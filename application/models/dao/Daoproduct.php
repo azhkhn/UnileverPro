@@ -105,12 +105,12 @@ class DaoProduct extends CI_Model {
 						, price
 						, 0 AS quantity
 						, 0 AS amount
-						, promotion
+						, sale_promotions.id
 						, sale_promotions.name AS promotion_name
 						, GROUP_CONCAT(CONCAT('{\"id\":\"', promotion_types.id, '\", \"name\":\"',promotion_types.name,'\"}')) promotiontype", FALSE);
 		$this->db->from('products');
 		$this->db->join('sale_promotions', 'products.promotion = sale_promotions.id AND sale_promotions.end_date>=NOW()', 'LEFT');
-		$this->db->join('promotion_types', 'sale_promotions.id = promotion_types.sale_promotion_id','LEFT');
+		$this->db->join('promotion_types', 'sale_promotions.id = promotion_types.sale_promotion_id AND sale_promotions.end_date>=NOW()','LEFT');
 		$this->db->group_by('products.name');
 		$this->db->order_by("products.name");
 		$this->db->where('products.status', 1);
