@@ -39,7 +39,7 @@
 			$this->Dtoproduct->setUnit($this->input->post('unit'));
 			$this->Dtoproduct->setBrand($this->input->post('brand'));
 			$this->Dtoproduct->setPrice($this->input->post('price'));
-			$this->Dtoproduct->setPromotion($this->input->post('promotion'));
+			$this->Dtoproduct->setPromotion(($this->input->post('promotion')=="") ? NULL : $this->input->post('promotion'));
 			$this->Dtoproduct->setCreated_by($this->ion_auth->get_user_id());
 			if($this->Daoproduct->addProduct($this->Dtoproduct)){
 				$data["ERROR"] = false;
@@ -64,7 +64,7 @@
 			$this->Dtoproduct->setUnit($this->input->post('unit'));
 			$this->Dtoproduct->setBrand($this->input->post('brand'));
 			$this->Dtoproduct->setPrice($this->input->post('price'));
-			$this->Dtoproduct->setPromotion($this->input->post('promotion'));
+			$this->Dtoproduct->setPromotion(($this->input->post('promotion')=="") ? NULL : $this->input->post('promotion'));
 			$this->Dtoproduct->setUpdated_by($this->ion_auth->get_user_id());
 			if($this->Daoproduct->updateProduct($this->Dtoproduct)){
 				$data["NO_ERROR"] = false;
