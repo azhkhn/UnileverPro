@@ -102,23 +102,15 @@
 
 						<div class="uk-width-xLarge-12-12  uk-width-large-12-12">
 							<div class="md-card1">
-
-
 								<div class="md-card-content large-padding">
-
-
 									<div class="uk-grid uk-grid-divider uk-grid-medium"
 										data-uk-grid-margin>
 										<div class="uk-width-large-1-2">
-
 											<div class="uk-form-row">
 												<label>Code <span class="req">*</span></label> <input
 													type="text" id="code" class="md-input" required />
 
 											</div>
-
-
-
 											<div class="uk-form-row">
 												<label>Size <span class="req">*</span></label> <input
 													type="text" id="size" class="md-input" required />

@@ -15,7 +15,11 @@ class Outlet extends ADMIN_Controller{
 		}
 	
 		public function add(){
-			$this->load->view('addoutlet');
+			$this->data["distributors"] = $this->OutletsDAO->listdistributors();
+			$this->data["channels"] = $this->OutletsDAO->listchannels();
+			$this->data["outlettypes"] = $this->OutletsDAO->listoutlettypes();
+			$this->data["bas"] = $this->OutletsDAO->listbas();
+			$this->load->view('addoutlet', $this->data);
 		}
 	
 		public function addingpro(){
@@ -25,7 +29,7 @@ class Outlet extends ADMIN_Controller{
 			$this->DtoOutlets->setOutlet_type_id($this->input->post('outlet_type_id'));
 			$this->DtoOutlets->setName($this->input->post('name'));
 			$this->DtoOutlets->setAddress($this->input->post('address'));
-			$this->DtoOutlets->setBa_id($this->input->post('ba_id'));
+			$this->DtoOutlets->setBa_id(($this->input->post('ba_id')=="") ? NULL : $this->input->post('ba_id'));
 			$this->DtoOutlets->setCreated_by($this->ion_auth->get_user_id());
 			
 			$this->OutletsDAO->addOutlet($this->DtoOutlets);
@@ -33,8 +37,12 @@ class Outlet extends ADMIN_Controller{
 		}
 		
 		public function listpro(){
-			$data['lists'] = $this->OutletsDAO->listOutlets();
-			$this->load->view('outlet', $data);
+			$this->data['lists'] = $this->OutletsDAO->listOutlets();
+			$this->data["distributors"] = $this->OutletsDAO->listdistributors();
+			$this->data["channels"] = $this->OutletsDAO->listchannels();
+			$this->data["outlettypes"] = $this->OutletsDAO->listoutlettypes();
+			$this->data["bas"] = $this->OutletsDAO->listbas();
+			$this->load->view('outlet', $this->data);
 		}
 		
 		public function deletepro($id){
@@ -43,8 +51,12 @@ class Outlet extends ADMIN_Controller{
 		}
 
 		public function getpro($id){
-			$data['getpro'] = $this->OutletsDAO->getOutlets($id);
-			$this->load->view('addoutlet', $data);
+			$this->data['getpro'] = $this->OutletsDAO->getOutlets($id);
+			$this->data["distributors"] = $this->OutletsDAO->listdistributors();
+			$this->data["channels"] = $this->OutletsDAO->listchannels();
+			$this->data["outlettypes"] = $this->OutletsDAO->listoutlettypes();
+			$this->data["bas"] = $this->OutletsDAO->listbas();
+			$this->load->view('addoutlet', $this->data);
 		}
 
 		public function updatepro($id){
@@ -55,7 +67,7 @@ class Outlet extends ADMIN_Controller{
 			$this->DtoOutlets->setOutlet_type_id($this->input->post('outlet_type_id'));
 			$this->DtoOutlets->setName($this->input->post('name'));
 			$this->DtoOutlets->setAddress($this->input->post('address'));
-			$this->DtoOutlets->setBa_id($this->input->post('ba_id'));
+			$this->DtoOutlets->setBa_id(($this->input->post('ba_id')=="") ? NULL : $this->input->post('ba_id'));
 			$this->DtoOutlets->setUpdated_by($this->ion_auth->get_user_id());
 			
 			$this->OutletsDAO->updateOutlet($this->DtoOutlets);

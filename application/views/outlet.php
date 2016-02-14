@@ -1,17 +1,17 @@
-	<!-- main header -->
-	<?php $this->load->view('_include') ?>  
+    <!-- main header -->
+    <?php $this->load->view('_include') ?>  
      <!-- /main header end -->
 
 </head>
-<body class="sidebar_main_open">
+<body>
     
     <!--  header -->
-	<?php $this->load->view('_header') ?>  
+    <?php $this->load->view('_header') ?>  
      <!-- / header end -->
 
-	
-   	<!-- left side bar -->
-	<?php $this->load->view('_leftside') ?>    
+    
+    <!-- left side bar -->
+    <?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
    
 
@@ -24,11 +24,17 @@
                 <div class="md-card-content">
                     <table id="vu-table" class="uk-table" cellspacing="0" width="100%">
                         <thead>
-                        <tr>
+                         <tr>
                             <th>No</th>
                             <th>DMS Code</th>
                             <th>Name</th>
+                            <th>Channel</th>
+                            <th>Distributor</th>
+                            <th>Customer Type</th>
+                            <th>BA Name</th>
+                            <th>Address</th>
                             <th>Created Date</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -38,7 +44,13 @@
                             <th>No</th>
                             <th>DMS Code</th>
                             <th>Name</th>
+                            <th>Channel</th>
+                            <th>Distributor</th>
+                            <th>Customer Type</th>
+                            <th>BA Name</th>
+                            <th>Address</th>
                             <th>Created Date</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                         </tfoot>
@@ -50,9 +62,16 @@
                         <tr>
                             <td><?php echo $data->id ?></td>
                             <td><?php echo $data->dms_code ?></td>
-                            <td><?php echo $data->name ?></td>
-                           
+                            <td><?php echo $data->outlet_name ?></td>
+                            <td><?php echo $data->channel ?></td>
+                            <td><?php echo $data->distributor ?></td>
+                            <td><?php echo $data->customer_type ?></td>
+                            <td><?php echo $data->ba_name ?></td>
+                            <td><?php echo $data->outlet_address ?></td>
                             <td><?php echo $data->created_date ?></td>
+                            <td>
+                                <input type="checkbox" id="btnStatus" data="<?php echo $data->id?>" data-switchery data-switchery-color="#1e88e5" <?php echo ($data->status==1)?"checked":""?> <?php echo ($data->status==1)?" value='on'":" value='off'"?>/>
+                            </td>
                             <td>
                                 <a href="<?php echo site_url()?>outlet/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="md-icon material-icons">edit</i></a>
                                 <a href="<?php echo site_url()?>outlet/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="md-icon material-icons">delete</i></a>
