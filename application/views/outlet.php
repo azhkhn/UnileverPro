@@ -1,17 +1,17 @@
-    <!-- main header -->
-    <?php $this->load->view('_include') ?>  
+	<!-- main header -->
+	<?php $this->load->view('_include') ?>  
      <!-- /main header end -->
 
 </head>
 <body>
     
     <!--  header -->
-    <?php $this->load->view('_header') ?>  
+	<?php $this->load->view('_header') ?>  
      <!-- / header end -->
 
-    
-    <!-- left side bar -->
-    <?php $this->load->view('_leftside') ?>    
+	
+   	<!-- left side bar -->
+	<?php $this->load->view('_leftside') ?>    
     <!-- /left side bar -->
    
 

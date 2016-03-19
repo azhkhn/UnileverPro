@@ -284,8 +284,8 @@ $(function(){
 		$("#btnSave").show();
 		$('.md-input-wrapper').find('.md-input').val('');
 		$('.md-input-wrapper').removeClass('md-input-filled');
+		$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
 		$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
-		$('.md-input-wrapper').addClass('md-input-filled');
 		$("#photo").attr('src', SITE_URL+"public/assets/img/ecommerce/s6_edge.jpg");
 	});
 });
