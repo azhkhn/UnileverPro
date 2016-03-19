@@ -169,7 +169,10 @@
     <script type="text/javascript">
         $(function(){
             var excel = {};
-            var currentYear = new Date().getFullYear()
+            var currentYear = new Date().getFullYear();
+            var $selectYear = $("#selectYear").selectize();
+			var selectYear = $selectYear[0].selectize;
+			selectYear.setValue(currentYear);
             $("#selectYear").val(currentYear);
             excel.getAllProducts = function(year){
                 var start_date = moment().date(1).format('YYYY-MM-DD');

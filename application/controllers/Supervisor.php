@@ -115,6 +115,7 @@
 			$this->load->model('dto/Dtosale');	            
 			$this->Dtosale->setBaId($this->input->post('ba_id'));
             $this->Dtosale->setSaleBy($this->ion_auth->get_user_id());
+            $this->Dtosale->setSaleDate($this->input->post('sale_date'));
             $this->Dtosale->setOutletId($this->input->post('outlet_id'));
             $this->Dtosale->setSaleItems($this->models);
 			if($this->Daosale->addNewSale($this->Dtosale)){
@@ -157,6 +158,23 @@
 			$this->data["count"] = $total_rows;
 			$this->data["sales"] = $this->Daosale->getAllSales($this->Dtosale, 15,'sale/ajax', 3);
 			echo json_encode($this->data);
+		}
+		
+		public function deleteSale(){
+			$this->load->model('dao/Daosale');
+			$saleId = $this->input->post("sale_id");
+			$productId = $this->input->post("product_id");
+			if($this->Daosale->deleteSale($saleId, $productId)){
+	            echo json_encode(array(
+	            		'message' => 'You have been deleted successfully.',
+	            		'status'  => TRUE
+	            	));
+            }else{
+            	echo json_encode(array(
+	            		'message' => 'You have failed when deleted new sale please try again!',
+	            		'status'  => FALSE
+	            	));
+            }
 		}
 	}
 

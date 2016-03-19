@@ -4,8 +4,94 @@
 			parent::__construct();
 		}
 
-		public function getOutletWithItems($year, $option=1){
-			$query = $this->db->query("CALL ITEM_TO_OUTLET(?)", $year);
+		public function getOutletWithItems($data, $option=1){
+			/*$data = array($year);*/
+			$query = $this->db->query("CALL ITEM_TO_OUTLET(?,?,?,?,?)", $data);
+       		if($option==1){
+				$result =  $query->result_array();
+			}else{
+				$result =  $query->result();
+			}
+			$query->next_result(); // Dump the extra resultset.
+       		$query->free_result(); // Does what it says.
+
+       		return $result;
+			
+		}
+		
+		public function getOutletWithItemsYear($data, $option=1){
+			/*$data = array($year);*/
+			$query = $this->db->query("CALL ITEM_TO_OUTLET_YEARS(?,?)", $data);
+       		if($option==1){
+				$result =  $query->result_array();
+			}else{
+				$result =  $query->result();
+			}
+			$query->next_result(); // Dump the extra resultset.
+       		$query->free_result(); // Does what it says.
+
+       		return $result;
+			
+		}
+		
+		public function getOutletWithItemsAmountMonth($data, $option=1){
+			$query = $this->db->query("CALL ITEM_TO_OUTLET_AMOUNT_MONTHS(?,?,?,?)", $data);
+       		if($option==1){
+				$result =  $query->result_array();
+			}else{
+				$result =  $query->result();
+			}
+			$query->next_result(); // Dump the extra resultset.
+       		$query->free_result(); // Does what it says.
+
+       		return $result;
+			
+		}
+		
+		public function getOutletWithItemsMonth($data, $option=1){
+			/*$data = array($year);*/
+			$query = $this->db->query("CALL ITEM_TO_OUTLET_MONTHS(?,?,?,?)", $data);
+       		if($option==1){
+				$result =  $query->result_array();
+			}else{
+				$result =  $query->result();
+			}
+			$query->next_result(); // Dump the extra resultset.
+       		$query->free_result(); // Does what it says.
+
+       		return $result;
+			
+		}
+		
+		public function getOutletWithItemsAmountYear($data, $option=1){
+			$query = $this->db->query("CALL ITEM_TO_OUTLET_AMOUNT_YEARS(?,?)", $data);
+       		if($option==1){
+				$result =  $query->result_array();
+			}else{
+				$result =  $query->result();
+			}
+			$query->next_result(); // Dump the extra resultset.
+       		$query->free_result(); // Does what it says.
+
+       		return $result;
+			
+		}
+		
+		public function getAllSupervisors(){
+			$this->db->select("A.id,
+						   A.code,
+						   CONCAT(A.last_name, ' ', A.first_name) AS username", FALSE);
+			$this->db->from('users A');
+			$this->db->join('users_groups B','A.id = B.user_id', 'LEFT');
+			$this->db->where('A.active', 1);
+			$this->db->where('B.group_id', 2);
+			$this->db->order_by(3);
+			$query = $this->db->get();
+			return $query->result();							   
+		}
+		
+		public function getOutletWithItemsAmount($data, $option=1){
+			$query = $this->db->query("CALL ITEM_TO_OUTLET_AMOUNT(?,?,?,?,?)", $data);
        		if($option==1){
 				$result =  $query->result_array();
 			}else{

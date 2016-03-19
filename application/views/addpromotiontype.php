@@ -40,7 +40,7 @@
                             </div>
                         </div>	  	 
                    <br/>
-                    <div class="uk-grid" data-uk-grid-margin>
+                   <!-- <div class="uk-grid" data-uk-grid-margin>
                        <div class="uk-width-1-2">
                             <div class="uk-form-row">
                                 <label>Size</label>
@@ -53,13 +53,13 @@
                                <select id="selectSalePromotion" name="type" data-md-selectize data-md-selectize-bottom required>
                                     <option value="">Sale Promotion</option>
                                     <?php foreach ($sale_promotions as $v):?>
-                                        <option value="<?php echo $v->id;?>" <?php if($v->id == $getpro->sale_promotion_id) echo "selected"?>><?php echo $v->name;?></option>
+                                        <option value="<?php echo $v->id;?>"><?php echo $v->name;?></option>
                                      <?php endforeach?>                                    
                                </select>
                             </div>
                         </div>
                        
-                    </div>
+                    </div>-->
                    
 
                    <br/>

@@ -49,7 +49,7 @@ class Daosaletarget  extends CI_Model{
 	}
 	
 	public function listSaleTarget(){
-		$this->db->select("s.id,s.name,s.description, CONCAT(last_name,'',first_name) AS ba_id,s.start_date,s.end_date,s.target_achievement,s.created_date,s.created_by,s.updated_date,s.updated_by,s.status,s.deleted_at", FALSE);
+		$this->db->select("s.id,s.name,s.description, CONCAT(last_name,' ',first_name) AS ba_id,s.start_date,s.end_date,s.target_achievement,s.created_date,s.created_by,s.updated_date,s.updated_by,s.status,s.deleted_at", FALSE);
 		$this->db->from('sale_targets s');
 		$this->db->join('users b','s.ba_id = b.id', 'LEFT');
 		$this->db->where('s.status' , 1);
@@ -119,8 +119,8 @@ class Daosaletarget  extends CI_Model{
 			$data["updated_by"] = $this->ion_auth->get_user_id();
 			$data["updated_date"] = date('Y-m-d H:i:s');
 			$data["status"] = 1;
-			$data["start_date"] = date('Y-m-d H:i:s',date(strtotime("+1 day", strtotime($data["start_date"]))));
-			$data["end_date"] = date('Y-m-d H:i:s',date(strtotime("+1 day", strtotime($data["end_date"]))));
+			$data["start_date"] = date('Y-m-d H:i:s',strtotime($data["start_date"]));
+			$data["end_date"] = date('Y-m-d H:i:s',strtotime($data["end_date"]));
 			$this->db->where('id' , $id);
 			$this->db->update("sale_targets",$data);
 		}

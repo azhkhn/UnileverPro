@@ -29,7 +29,7 @@
 							<tr>
 								<th>No</th>
 								<th>Name</th>
-								<th>Brand parent</th>
+								<th>Parent Brand</th>
 								<th>Action</th>
 							</tr>
 						</thead>

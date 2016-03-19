@@ -1,4 +1,4 @@
-<header id="header_main">
+<header id="header_main" >
         <div class="header_main_content">
             <nav class="uk-navbar">
                 <!-- main sidebar switch -->

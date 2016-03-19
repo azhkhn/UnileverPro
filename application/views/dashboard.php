@@ -56,9 +56,9 @@
                 <div>
                     <div class="md-card">
                         <div class="md-card-content">
-                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div> 4
+                            <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div>
                             <span class="uk-text-muted uk-text-small">TOTAL BRANDS</span>
-                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_brand ?></noscript></span></h2>
+                            <h2 class="uk-margin-remove"><span class="countUpMe"><?php echo $total_brand ?><noscript></noscript></span></h2>
                         </div>
                     </div>
                 </div>
@@ -255,6 +255,52 @@
         var SITE_URL = '<?php echo site_url() ?>';
         $(function() {
             altair_helpers.retina_images();
+        });
+        
+    </script>
+    <script>
+        var workbook = new kendo.ooxml.Workbook({
+          sheets: [
+            {
+              // Column settings (width)
+              columns: [
+                { autoWidth: true },
+                { autoWidth: true }
+              ],
+              // Title of the sheet
+              title: "Customers",
+              // Rows of the sheet
+              rows: [
+                // First row (header)
+                {
+                  cells: [
+                    // First cell
+                    { value: "Company Name" },
+                    // Second cell
+                    { value: "Contact" }
+                  ]
+                },
+                // Second row (data)
+                {
+                  cells: [
+                    { value: "Around the Horn" },
+                    { value: "Thomas Hardy" }
+                  ]
+                },
+                // Third row (data)
+                {
+                  cells: [
+                    { value: "B's Beverages" },
+                    { value: "Victoria Ashworth" }
+                  ]
+                }
+              ]
+            }
+          ]
+        });
+        kendo.saveAs({
+            dataURI: workbook.toDataURL(),
+            fileName: "Test.xlsx"
         });
     </script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>

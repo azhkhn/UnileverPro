@@ -1,0 +1,3 @@
+[30-Nov-2015 14:42:06 Europe/Rome] PHP Fatal error:  Call to undefined function foldersize() in /home/ubuntu/workspace/public/responsivefilemanager/filemanager/ajax_calls.php on line 329
+[30-Nov-2015 14:42:06 Europe/Rome] PHP Stack trace:
+[30-Nov-2015 14:42:06 Europe/Rome] PHP   1. {main}() /home/ubuntu/workspace/public/responsivefilemanager/filemanager/ajax_calls.php:0

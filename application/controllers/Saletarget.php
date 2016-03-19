@@ -30,13 +30,20 @@
 			$this->Dtosaletarget->setTarget_achievement($this->input->post('target_achievement'));
 			$this->Dtosaletarget->setCreated_by($this->ion_auth->get_user_id());
 			
-			if($this->Daosaletarget->checkIfNameExist($this->input->post('name'))>0){
+			/*if($this->Daosaletarget->checkIfNameExist($this->input->post('name'))>0){
 				$data["ERROR"] = true;
 				$data["MSG"] = "SaleTarget name has already existed.";
 			}else{
 				$this->Daosaletarget->addSaleTarget($this->Dtosaletarget);
 				$data["ERROR"] = false;
 				$data["MSG"] = "SaleTarget has inserted sucessfully.";
+			}*/
+			if($this->Daosaletarget->addSaleTarget($this->Dtosaletarget)){
+				$data["ERROR"] = false;
+				$data["MSG"] = "SaleTarget has inserted sucessfully.";
+			}else{
+				$data["ERROR"] = true;
+				$data["MSG"] = "SaleTarget has not been inserted failure.";
 			}
 			echo json_encode($data);
 		}
@@ -51,17 +58,17 @@
 		}
 		
 		public function updateSaleTarget($id){
-			$this->Dtosaletarget->setId($this->ion_auth->get_user_id());
+			$this->Dtosaletarget->setId($id);
 			$this->Dtosaletarget->setName($this->input->post('name'));
 			$this->Dtosaletarget->setDescription($this->input->post('description'));
 			$this->Dtosaletarget->setBa_id($this->input->post('ba_id'));
 			$this->Dtosaletarget->setStart_date($this->input->post('start_date'));
 			$this->Dtosaletarget->setEnd_date($this->input->post('end_date'));
 			$this->Dtosaletarget->setTarget_achievement($this->input->post('target_achievement'));
-			$this->Dtosaletarget->setUpdated_by(2);
+			$this->Dtosaletarget->setUpdated_by($this->ion_auth->get_user_id());
 				
 			// If SaleTarget name is changed
-			if($this->input->post('oldname') != $this->input->post('name')){
+			/*if($this->input->post('oldname') != $this->input->post('name')){
 				if($this->Daosaletarget->checkIfNameExist($this->input->post('name'))>0){
 					$data["ERROR"] = true;
 					$data["CHANGE"] = "EXISTED";
@@ -79,6 +86,15 @@
 				$data["CHANGE"] = "NOT_CHANGE";
 				$data["MSG"] = "SaleTarget was updated sucessfully.";
 			
+			}*/
+			if($this->Daosaletarget->updateSaleTarget($this->Dtosaletarget)){
+				$data["ERROR"] = false;
+				$data["CHANGE"] = "CHANGED";
+				$data["MSG"] = "SaleTarget was updated sucessfully.";
+			}else{
+				$data["ERROR"] = true;
+				$data["CHANGE"] = "NOT CHANGED";
+				$data["MSG"] = "SaleTarget has not been updated failure.";
 			}
 			
 			echo json_encode($data);

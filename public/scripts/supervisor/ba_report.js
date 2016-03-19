@@ -99,7 +99,8 @@ $(function(){
                                     type: "POST",
                                     data: {
                                     	"ba_id" : 1,
-                                    	"outlet_id" : $("#txtOutletName").data("id")
+                                    	"outlet_id" : $("#txtOutletName").data("id"),
+                                    	"sale_date" : moment($("#txtTransactionOf").val()).format("YYYY-MM-DD") +" "+ moment().format("HH:mm:ss")
                                     },
                                     dataType: "json",
                                     beforeSend: function(){
@@ -126,8 +127,8 @@ $(function(){
                                         	models: kendo.stringify(options.models),
                                         	//models: options.models,
                                         	ba_id : $("#selectedBA").val(),
-                                        	outlet_id : $("#txtOutletName").data("id")
-
+                                        	outlet_id : $("#txtOutletName").data("id"),
+											sale_date : moment($("#txtTransactionOf").val()).format("YYYY-MM-DD") +" "+ moment().format("HH:mm:ss")
                                         };
                                     }
                                 }
@@ -507,6 +508,31 @@ $(function(){
 		}
 		return false;
 	});
+	
+	$(document).on('click',"#btnDelete", function(e){
+		if(confirm("Do you really want to delete it?")){
+			var _this = $(this);
+			modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+			$.ajax({
+				url: SITE_URL+"supervisor/deleteSale",
+				type: "POST",
+				dataType: "JSON",
+				data: {
+					'product_id' : _this.parent().data("productid"),
+					'sale_id' : _this.parent().data("saleid")
+				},
+				success: function(data){
+					sales.getAllSales(SITE_URL+"supervisor/ajax");
+				},
+				error: function(data){
+					modal.hide();
+					console.log(data);
+				}
+			}).done(function(){
+				modal.hide();
+			});
+		}		
+	});
 
 	// TODO: ON CHANGE ON Transaction Of Date
 	$("#txtTransactionOfsaleTransactionHistory").change(function(){
@@ -558,7 +584,8 @@ $(function(){
                 type: "POST",
                 data: {
                 	"ba_id" : 1,
-                	"outlet_id" : $("#txtOutletName").data("id")
+                	"outlet_id" : $("#txtOutletName").data("id"),
+                	"sale_date" : moment($("#txtTransactionOf").val()).format("YYYY-MM-DD") +" "+ moment().format("HH:mm:ss")
                 },
                 dataType: "json",
                 beforeSend: function(){
@@ -579,7 +606,8 @@ $(function(){
                     	models: kendo.stringify(options.models),
                     	//models: options.models,
                     	ba_id : $("#selectedBA").val(),
-                    	outlet_id : $("#txtOutletName").data("id")
+                    	outlet_id : $("#txtOutletName").data("id"),
+                    	sale_date : moment($("#txtTransactionOf").val()).format("YYYY-MM-DD") +" "+ moment().format("HH:mm:ss")
 
                     };
                 }
@@ -679,7 +707,7 @@ $(function(){
             { field: "price", title: "Unit Price", format: "{0:c2}", width: "10%", attributes: {'data-format': 'c' },},
             { field: "quantity", title: "Quantity", width: "10%"},
             { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
-            { field: "promotion", title: "Promotion", width: "10%", hidden:true}, 
+            { field: "promotion", title: "Promotion", width: "0%", hidden:true}, 
             { field: "promotion_name", title: "Promotion", width:"10%"},
             { field: "promotiontype", title: "Promotion Type", width: "10%", hidden:true},
             { field: "promotiontype1", title: "Promotion Type", width: "10%",

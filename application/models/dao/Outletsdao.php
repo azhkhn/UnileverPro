@@ -56,9 +56,13 @@
 		}
 		
 		public function listOutlets(){
-			$this->db->select('id, dms_code, distributor, channel_id, outlet_type_id, name, address, ba_id, created_date, created_by, updated_date, updated_by, status, deleted_at');
-			$this->db->from('outlets');
-			$this->db->order_by("id", "desc");
+			$this->db->select("A.outlet_type_id, A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS customer_type, A.address AS outlet_address, CONCAT(E.last_name, ' ', E.first_name) AS ba_name, A.created_date, A.status", FALSE);
+			$this->db->from("outlets A");
+			$this->db->join("distributors B", "A.distributor = B.id", "LEFT");
+			$this->db->join("channels C", "A.channel_id = C.id", "LEFT");
+			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
+			$this->db->join("users E", "A.ba_id = E.id", "LEFT");
+			$this->db->order_by("A.id", "desc");
 			$query = $this->db->get();
 			return $query->result();
 		}
@@ -66,6 +70,7 @@
 		public function listdistributors(){
 			$this->db->select('id, name');
 			$this->db->from('distributors');
+			$this->db->where("status", 1);
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -74,6 +79,7 @@
 		public function listchannels(){
 			$this->db->select('id, name');
 			$this->db->from('channels');
+			$this->db->where("status", 1);
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -82,16 +88,18 @@
 		public function listoutlettypes(){
 			$this->db->select('id, name');
 			$this->db->from('outlet_types');
+			$this->db->where("status", 1);
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();
 		}
 		
 		public function listbas(){
-			$this->db->select('g.user_id as ba_id, u.first_name');
+			$this->db->select("g.user_id as ba_id, CONCAT(u.last_name, ' ', u.first_name) AS name", FALSE);
 			$this->db->from('users_groups g');
 			$this->db->join('users u','g.user_id = u.id', 'LEFT');
 			$this->db->where('g.group_id' , 3);
+			$this->db->where('u.active' , 1);
 			$this->db->order_by("g.user_id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -99,32 +107,39 @@
 		}
 
 		public function getAllOutletsByBA($id){
-			$this->db->select("A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS outlet_type, A.address");
+			$this->db->select("A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS customer_type, A.address AS outlet_address, CONCAT(E.last_name, ' ', E.first_name) AS ba_name, A.created_date, A.status", FALSE);
 			$this->db->from("outlets A");
 			$this->db->join("distributors B", "A.distributor = B.id", "LEFT");
 			$this->db->join("channels C", "A.channel_id = C.id", "LEFT");
 			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
+			$this->db->where("A.status", 1);
 			$this->db->where("A.ba_id", $id);
 			$query = $this->db->get();
 			return $query->result();
 		}
 
 		public function getOutletById($id){
-			$this->db->select("A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS customer_type, A.address AS outlet_address");
+			$this->db->select("A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS customer_type, A.address AS outlet_address, CONCAT(E.last_name, ' ', E.first_name) AS ba_name, A.created_date, A.status", FALSE);
 			$this->db->from("outlets A");
 			$this->db->join("distributors B", "A.distributor = B.id", "LEFT");
 			$this->db->join("channels C", "A.channel_id = C.id", "LEFT");
 			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
+			$this->db->join("users E", "A.ba_id = E.id", "LEFT");
+			$this->db->where("A.status", 1);
 			$this->db->where("A.id", $id);
 			$query = $this->db->get();
 			return $query->row();	
 		}
 		
 		public function getAllOutlets($status=1){
-			$this->db->select('id, dms_code, name, ba_id');
-			$this->db->from('outlets');
-			$this->db->order_by("name");
-			$this->db->where('status', $status);
+			$this->db->select("A.id, A.dms_code, A.name AS outlet_name, B.name AS distributor, C.name AS channel, D.name AS customer_type, A.address AS outlet_address, CONCAT(E.last_name, ' ', E.first_name) AS ba_name", FALSE);
+			$this->db->from('outlets A');
+			$this->db->join("distributors B", "A.distributor = B.id", "LEFT");
+			$this->db->join("channels C", "A.channel_id = C.id", "LEFT");
+			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
+			$this->db->join("users E", "A.ba_id = E.id", "LEFT");
+			$this->db->order_by("A.name");
+			$this->db->where('A.status', $status);
 			$query = $this->db->get();
 			return $query->result();
 		}

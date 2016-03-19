@@ -17,6 +17,7 @@
 		public function add(){
 			$this->load->model("dao/Daosalepromotion");
 			$this->data["sale_promotions"] = $this->Daosalepromotion->listSalePromotion();
+			//print_r($this->data);
 			$this->load->view('addpromotiontype', $this->data);
 		}
 		

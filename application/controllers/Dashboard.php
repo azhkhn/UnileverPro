@@ -18,6 +18,6 @@
 			$this->data["total_outlet"] = $this->Outletsdao->count();
 			$this->load->view('dashboard', $this->data);
 		}
-	
+
 	}
 ?>

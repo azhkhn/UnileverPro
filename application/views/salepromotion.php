@@ -34,8 +34,8 @@
                             <th>Code</th>
                             <th>Name</th>
                             <!-- <th>Type</th> -->
-                            <th>Start Date</th>
-                            <th>End Date</th>
+                            <!--<th>Start Date</th>
+                            <th>End Date</th>-->
                             <th>Action</th>
                         </tr>
                         </thead>
@@ -46,8 +46,8 @@
                             <th>Code</th>
                             <th>Name</th>
                             <!-- <th>Type</th> -->
-                            <th>Start Date</th>
-                            <th>End Date</th>
+                            <!--<th>Start Date</th>
+                            <th>End Date</th>-->
                             <th>Action</th>
                         </tr>
                         </tfoot>
@@ -60,8 +60,8 @@
                             <td><?= $v->code ?></td>
                             <td><?= $v->name ?></td>
                             <!-- <td><?= $v->type ?></td> -->
-                            <td><?= $v->start_date ?></td>
-                            <td><?= $v->end_date ?></td>
+                            <!--<td><?= $v->start_date ?></td>
+                            <td><?= $v->end_date ?></td>-->
                             <td>
                             	<a href="#" id="btnUpdate" data="<?php echo $v->id?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
                             	<a href="<?php  echo site_url('salepromotion/delete')?>/<?= $v->id ?>" onClick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
@@ -135,7 +135,7 @@
 											</div> -->
 											
 											
-											<div class="uk-grid uk-grid-medium uk-form-row">
+											<!--<div class="uk-grid uk-grid-medium uk-form-row">
 												<div class="uk-width-medium-1-2">
 														<div class="uk-input-group">
 															<label for="kUI_datepicker_a" class="uk-form-label">Start date <span class="req">*</span></label>
@@ -149,7 +149,7 @@
 														</div>
 												</div>
 												
-											</div>
+											</div>-->
 											
 											<div class="uk-form-row">
 												<div class="uk-width-1-1">
@@ -159,29 +159,9 @@
 													</div>
 												</div>
 											</div>
-											
-											
-											
-											
-											
-											
-											
-											
-											
-											
-
 										</div>
-
-
 									</div>
-
-
 								</div>
-
-
-
-
-
 							</div>
 						</div>
 					</div>
@@ -269,9 +249,9 @@
         $(function() {
             altair_helpers.retina_images();
             $("#to-table").DataTable();
-            $("#end_date,#start_date").kendoDatePicker({
+            /*$("#end_date,#start_date").kendoDatePicker({
             	  format: "yyyy-MM-dd"
-           	});
+           	});*/
         });
     </script>
     

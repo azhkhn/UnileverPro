@@ -637,15 +637,41 @@ class Outletexcel extends CI_Controller {
  		$this->load->model('dao/Daoexcelreport');
     	$data["outlets"] = $this->Daoexcelreport->getoutletsaleAmountPerYear($year,2);
     	echo json_encode($data);
+    
  	}
 
  	public function outlet_items(){
- 		return $this->load->view("excel_reports/outlet_items");	
+ 		$this->load->model('dao/Daoexcelreport');
+ 		$this->data["supervisors"] = $this->Daoexcelreport->getAllSupervisors();
+ 		return $this->load->view("excel_reports/outlet_items", $this->data);	
  	}
 
  	public function outlet_items_ajax($year){
 		$this->load->model('dao/Daoexcelreport');
-    	$data["outlets"] = $this->Daoexcelreport->getOutletWithItems($year);	
+		$week = $this->input->post("week");
+		$startDate = 1;
+		$endDate = 7;
+		if($week==1){
+			$startDate = 1;
+			$endDate = 7;
+		}elseif($week==2){
+			$startDate = 8;
+			$endDate = 15;
+		}elseif($week==3){
+			$startDate = 16;
+			$endDate = 23;
+		}elseif($week==4){
+			$startDate=24;
+			$endDate = 31;
+		}else{
+			$startDate=1;
+			$endDate =31;
+		}
+		$input = array($year, $this->input->post('supervisor'), $this->input->post('month'), $startDate, $endDate);
+		//var_dump($input);
+		
+    	$data["outlets"] = $this->Daoexcelreport->getOutletWithItems($input);	
+    	$data["outlets_amount"] = $this->Daoexcelreport->getOutletWithItemsAmount($input);
     	echo json_encode($data);
  	}
 
@@ -768,5 +794,100 @@ class Outletexcel extends CI_Controller {
 		//force user to download the Excel file without writing it to server's HD
 		$objWriter->save('php://output');
 	}
+	
+	public function html(){
+		$this->exportData($_REQUEST["data"]);	
+	}
+	
+	public function save($resutlString, $fileName){
+        header("Content-Description: File Transfer"); 
+        header("Content-Type: application/octet-stream"); 
+        header("Content-Transfer-Encoding: Binary");
+        header("Content-Disposition: attachment; filename=\"$fileName\"");
+        echo $resutlString;
+        return "";
+    }
+    
+    function exportData($data){
+        $fileName = "MASTER REPORT-" . date("Y-m-d H_i_s") . ".xls";
+        $a = "<html xmlns:v='urn:schemas-microsoft-com:vml' 
+        xmlns:o='urn:schemas-microsoft-com:office:office' 
+        xmlns:x='urn:schemas-microsoft-com:office:excel' 
+        <Worksheet ss:Name='Sheet3'>
+				<WorksheetOptions xmlns='urn:schemas-microsoft-com:office:excel'>
+				<ProtectObjects>False</ProtectObjects>
+				<ProtectScenarios>False</ProtectScenarios>
+				</WorksheetOptions>
+		</Worksheet>
+        xmlns='http://www.w3.org/TR/REC-html40'>
+        <head>
+        	<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+        	<meta name=ProgId content=Week1.Sheet>
+        	<meta name=Generator content='Microsoft Excel 10'>
+        	
+        	<style type='text/css'>
+        		table{border: 1px solid #e5e3e3;border-collapse:collapse}
+        		table td, table th{border: 1px solid #e5e3e3; width:100px; max-width:300px; overflow: hidden; font-size: 16px;}
+        		table th{background:#F5F5F5} 
+        		tr{height:30px;}
+        		td, .text-center{text-align:center}
+        		table tr td:first-child + td + td{width:300px !important;}
+        	</style>
+        </head>
+        <body>
+        	<table><caption>WEEK1</caption>$data</table>
+        </body></html>";
+        
+        
+        return $this->save($a, $fileName);
+    }
+    
+    public function supervisors(){
+    	$this->load->model('dao/Daouser');
+    	$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
+    	echo json_encode($this->data);
+    }
+    
+    public function outlet_items_month(){
+    	$this->load->model('dao/Daoexcelreport');
+ 		$this->data["supervisors"] = $this->Daoexcelreport->getAllSupervisors();
+    	return $this->load->view("excel_reports/outlet_items_month", $this->data);
+    }
+    
+    public function outlet_items_year(){
+    	$this->load->model('dao/Daoexcelreport');
+ 		$this->data["supervisors"] = $this->Daoexcelreport->getAllSupervisors();
+    	return $this->load->view("excel_reports/outlet_items_year", $this->data);
+    }
+    
+    public function outlet_items_ajax_year($year){
+		$this->load->model('dao/Daoexcelreport');
+
+		$input = array($year, $this->input->post('supervisor'));
+    	$data["outlets"] = $this->Daoexcelreport->getOutletWithItemsYear($input);	
+    	$data["outlets_amount"] = $this->Daoexcelreport->getOutletWithItemsAmountYear($input);
+    	echo json_encode($data);
+ 	}
+ 	
+ 	/*public function outlet_items_month(){
+    	$this->load->model('dao/Daoexcelreport');
+ 		$this->data["supervisors"] = $this->Daoexcelreport->getAllSupervisors();
+    	return $this->load->view("excel_reports/outlet_items_year", $this->data);
+    }*/
+    
+    public function outlet_items_ajax_month($year){
+		$this->load->model('dao/Daoexcelreport');
+		$startMonth = $this->input->post("month");
+		$endMonth = $this->input->post("month");
+		if($this->input->post("month")==13){
+			$startMonth = 1;
+			$endMonth = 12;
+		}else
+		$input = array($year, $this->input->post('supervisor'),$startMonth,$endMonth);
+    	$data["outlets"] = $this->Daoexcelreport->getOutletWithItemsMonth($input);	
+    	$data["outlets_amount"] = $this->Daoexcelreport->getOutletWithItemsAmountMonth($input);
+    	echo json_encode($data);
+ 	}
+    
 }
 ?>

@@ -312,13 +312,14 @@
                                                                 <thead>
                                                                     <tr>
                                                                         <th style="width:10%;">Item Code</th>
-                                                                        <th style="width:30%;">Item Name</th>
-                                                                        <th style="width:10%;">Price</th>
-                                                                        <th style="width:10%;">Quantity Sold</th>
-                                                                        <th style="width:10%;">Amount</th>
+                                                                        <th style="width:20%;">Item Name</th>
+                                                                        <th style="width:10%;text-align:right;">Price</th>
+                                                                        <th style="width:10%;text-align:right;">Quantity Sold</th>
+                                                                        <th style="width:10%;text-align:right;">Amount</th>
                                                                         <th style="width:15%;">Promotion</th>
                                                                         <th style="width:15%;">Promotion Type</th>
                                                                         <th style="width:15%;">Transaction</th>
+                                                                        <th style="width:10%">Action</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody id="CONTENTSsaleTransactionHistory">
@@ -345,8 +346,7 @@
         </div>
     </div>
 
-
-        
+    <div>
         <div class="uk-modal" id="modalAddNewSale">
             <div class="uk-modal-dialog uk-modal-dialog-large">
                 <button type="button" class="uk-modal-close uk-close"></button>
@@ -364,27 +364,56 @@
                                 </div>
                                 <div class="md-card-content large-padding">
                                     <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
-                                        
+                                        <div class="uk-width-large-1-2">
+                                            <div class="uk-form-row">
+                                                <label for="txtItemCode" class="uk-form-label">Item Code<span class="req">*</span></label>
+                                                <select id="selectedItemCode" name="selectedItemCode" data-md-selectize data-md-selectize-bottom>
+                                                    <option value="">Select Product Code</option>
+                                                </select>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="selectedItemName" class="uk-form-label">Item Name<span class="req">*</span></label>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="txtQuantitySold" class="uk-form-label">Quantity Sold<span class="req">*</span></label>
+                                                <input type="text" name="txtQuantitySold" required class="md-input" id="txtQuantitySold" value="0"/>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="txtPrice" class="uk-form-label">Price<span class="req">*</span></label>
+                                                <input type="text" name="txtPrice" required class="md-input" id="txtPrice" readonly="readonly" value="0"/>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="txtAmount" class="uk-form-label">Amount<span class="req">*</span></label>
+                                                <input type="text" name="txtAmount" required class="md-input" id="txtAmount" readonly="readonly" value="0"/>
+                                            </div>                                           
+                                        </div>
+                                        <div class="uk-width-large-1-2">
+                                            <div class="uk-form-row">
+                                                <label for="txtPromotion" class="uk-form-label">Promotion</label>
+                                                <input type="text" name="txtPromotion" id="txtPromotion" data-parsley-trigger="change" class="md-input" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="txtPromotionType" class="uk-form-label">Promotion Type</label>
+                                                <select id="selectedPromotionType" name="selectedPromotionType" data-md-selectize data-md-selectize-bottom>
+                                                    <option value="">Select Promotion Type</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 <div class="uk-modal-footer uk-text-right">
-                    <!-- <button type="button" class="md-btn uk-modal-close">Close</button>
-                    <input type="button" class="md-btn md-btn-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
-                    <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" /> -->
+                    <button type="button" class="md-btn uk-modal-close">Close</button>
+                    <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" />
                 </div>
                 </form>
             </div>
         </div>
-    
+    </div>
 
-
-
-
-
-<!--     <div class="md-fab-wrapper">
+    <!--     <div class="md-fab-wrapper">
         <a class="md-fab md-fab-primary" href="#" id="btnOpenAddNew" data-uk-modal="{target:'#modalAddNewSale'}">
             <i class="material-icons">&#xE145;</i>
         </a>
@@ -394,12 +423,16 @@
         <tr>
             <td id="itemCode">{{= code}}</td>
             <td id="itemName">{{= product_name}}</td>
-            <td id="price" style="text-align:center;">{{= price}}</td>
-            <td id="quantitySold" style="text-align:center;">{{= quantity}}</td>
-            <td id="amount" style="text-align:center;">{{= amount}}</td>
+            <td id="price" style="text-align:right;">{{= price}}</td>
+            <td id="quantitySold" style="text-align:right;">{{= quantity}}</td>
+            <td id="amount" style="text-align:right;">{{= amount}}</td>
             <td id="promotion">{{= promotion_name }}</td>
             <td id="promotionType">{{= promotion_type }}</td>
             <td id="saleTime">{{= sale_time }}</td>
+            <td id="action" data-productid="{{= product_id}}" data-saleid="{{= id}}">
+				<a data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete"title="Delete">
+				<i class="material-icons">delete </i></a>
+            </td>
         </tr>
     </script>
 
@@ -461,7 +494,7 @@
     <script src="<?php echo base_url()?>public/assets/js/example.js"></script>
     -->
     <script src="<?php echo base_url()?>public/assets/js/jquery.tmpl.min.js"></script>
-    <script src="http://kendo.cdn.telerik.com/2014.3.1029/js/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2014.3.1029/js/jszip.min.js"></script>
     <script src="<?php echo base_url()?>public/assets/js/kendo.all.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/supervisor/ba_report.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>

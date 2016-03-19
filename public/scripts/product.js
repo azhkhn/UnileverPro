@@ -48,6 +48,99 @@ $(function() {
 						
 						
 						
+	$(document).on('click', '#btnAddPromotion, #btnCloseAddNewPromotion', function(){
+		var id = $(this).attr("data");
+		$("#btnAddNewPromotion").attr("data",id);
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			type : "POST",
+			url : SITE_URL + "product/getallpromotions/"+id,
+			dataType : 'json',
+			success : function(data) {
+				console.log(data);
+				if(data.length>0){
+					$("tbody#PROMOTIONS").html('');
+					$("#CONTENT_TEMPLATE").tmpl(data).appendTo("tbody#PROMOTIONS");
+				}else{
+					$("tbody#PROMOTIONS").html('<tr>NO CONTENTS</tr>');
+				}
+				var modalPopup = UIkit.modal("#modalPromotion");
+				if ( modalPopup.isActive() ) {
+				    modalPopup.hide();
+				} else {
+				    modalPopup.show();
+				    
+				}
+				modal.hide();
+			},
+			error : function(data) {
+				modal.hide();
+				console.log("ERROR" + data);
+			}
+		});
+	});			
+	
+	$(document).on('click', '#btnAddNewPromotion', function(){
+		var id = $(this).attr("data");
+		$("#btnSaveNewPromotion").attr("data",id);
+		$("#btnCloseAddNewPromotion").attr("data",id);
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			type : "POST",
+			url : SITE_URL + "product/promotions",
+			dataType : 'json',
+			data: {
+				product_id : $.trim(id),
+			},
+			success : function(data) {
+				console.log(data);
+				var modalPopup = UIkit.modal("#modalAddNewPromotion");
+				if ( modalPopup.isActive() ) {
+				    modalPopup.hide();
+				} else {
+				    modalPopup.show();
+				}
+				modal.hide();
+			},
+			error : function(data) {
+				modal.hide();
+				console.log("ERROR" + data);
+			}
+		});
+		
+	});
+	
+	$(document).on('click', '#btnSaveNewPromotion', function(e){
+		e.preventDefault();
+		var id = $(this).attr("data");
+		$("#btnSaveNewPromotion").attr("data",id);
+		$("#btnUpdatePromotion").attr("data",id);
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		//var $selectPromotion = $("#selectPromotions").selectize();
+		//var selectPromotion = $selectPromotion[0].selectize;
+		$.ajax({
+			type : "POST",
+			url : SITE_URL + "product/addpromotion",
+			dataType : 'json',
+			data: {
+				product_id : id,
+				promotion_id : $("#selectPromotions").val(),
+				buy : $("#BUY").val(),
+				free : $("#FREE").val(),
+				start_date : $("#start_date").val(),
+				end_date : $("#end_date").val()
+			},
+			success : function(data) {
+				console.log(data);
+				modal.hide();
+			},
+			error : function(data) {
+				modal.hide();
+				console.log("ERROR" + data);
+			}
+		});
+	});
+	
 	$(document).on('click','#btnUpdate', function(){
 		var id = $(this).attr("data");
 		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
@@ -167,12 +260,142 @@ $(function() {
 
 			},
 			error: function(data){
-				console.log("Error" + data);
+				console.log("Error", data);
 				modal.hide();
 				UIkit.modal.alert(data.message);
 			}
 		});
 	});
 	
+	var promotions = {};
+	promotions.getAllPromotions = function(){
+		var id =$("#btnAddNewPromotion").attr("data");
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			type : "POST",
+			url : SITE_URL + "product/getallpromotions/"+id,
+			dataType : 'json',
+			success : function(data) {
+				console.log(data);
+				if(data.length>0){
+					$("tbody#PROMOTIONS").html('');
+					$("#CONTENT_TEMPLATE").tmpl(data).appendTo("tbody#PROMOTIONS");
+				}else{
+					$("tbody#PROMOTIONS").html('<tr>NO CONTENTS</tr>');
+				}
+				modal.hide();
+			},
+			error : function(data) {
+				modal.hide();
+				console.log("ERROR" + data);
+			}
+		});
+	};
 	
+	$(document).on('click', "#btnDeletePromotion", function(e){
+		e.preventDefault();
+		var promotion_id= $(this).data("promotionid");
+		var product_id = $(this).data("productid");
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'product/deletepromotion/',
+			type: "POST",
+			dataType: "JSON",
+			data: {
+				product_id : product_id,
+				promotion_id : promotion_id
+			},
+			success: function(data){
+				console.log(data);
+				//UIkit.modal.alert(data.MSG);
+				modal.hide();
+				promotions.getAllPromotions();
+				//$("#btnCloseAddNewPromotion").trigger("click");
+			},
+			error: function(data){
+				console.log("Error", data);
+				modal.hide();
+				UIkit.modal.alert(data.message);
+			}
+		});
+	});
+	
+	$(document).on('click', '#btnUpdatePromotion', function(e){
+		e.preventDefault();
+		var promotion_id= $(this).data("promotionid");
+		var product_id = $(this).data("productid");
+		$("#btnSaveNewPromotion").attr("data",product_id);
+		$("#btnCloseAddNewPromotion").attr("data",product_id);
+		$("#btnSaveNewPromotion").hide();
+		$("#btnUpdateSavePromotion").show();
+		$("#btnUpdateSavePromotion").data("productid",product_id);
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'product/getpromotion/',
+			type: "POST",
+			dataType: "JSON",
+			data: {
+				product_id : product_id,
+				promotion_id : promotion_id
+			},
+			success: function(data){
+				console.log(data);
+				//UIkit.modal.alert(data.MSG);
+				
+				$("#FREE").val(data.free);
+				$("#BUY").val(data.buy);
+				$("#start_date").val(moment(data.start_date).format("DD-MM-YYYY"));
+				$("#end_date").val(moment(data.end_date).format("DD-MM-YYYY"));
+				var $selectPromotion = $("#selectPromotions").selectize();
+				var selectPromotion = $selectPromotion[0].selectize;
+				selectPromotion.setValue(data.promotion_id);
+				$("#selectPromotions").attr('readonly','readonly');
+				$("#btnSaveNewPromotion").data("product_id", data.product_id);
+				$("#btnSaveNewPromotion").data("promotion_id", data.promotion_id);
+				$('.md-input-wrapper').addClass('md-input-filled');
+				var modalPopup = UIkit.modal("#modalAddNewPromotion");
+				if ( modalPopup.isActive() ) {
+				    modalPopup.hide();
+				} else {
+				    modalPopup.show();
+				}
+				modal.hide();
+			},
+			error: function(data){
+				console.log("Error", data);
+				modal.hide();
+				UIkit.modal.alert(data.message);
+			}
+		});	
+	});
+	
+	$(document).on('click', "#btnUpdateSavePromotion", function(e){
+		e.preventDefault();
+		var promotion_id= $(this).data("promotionid");
+		var product_id = $(this).data("productid");
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'product/updatepromotion/',
+			type: "POST",
+			dataType: "JSON",
+			data: {
+				product_id : product_id,
+				promotion_id : $("#selectPromotions").val(),
+				buy : $("#BUY").val(),
+				free : $("#FREE").val(),
+				start_date : moment($("#start_date").val()).format("YYYY-MM-DD"),
+				end_date : moment($("#end_date").val()).format("YYYY-MM-DD")
+			},
+			success: function(data){
+				console.log(data);
+				UIkit.modal.alert(data.MSG);
+				modal.hide();
+			},
+			error: function(data){
+				console.log("Error", data);
+				modal.hide();
+				UIkit.modal.alert(data.message);
+			}
+		});	
+	});
 });

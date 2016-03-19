@@ -58,7 +58,7 @@ $(function() {
 			dataType: "JSON",
 			success: function(data){
 				
-				console.log("Success " +data);
+				console.log("Success ",data);
 				
 				var $selectBrand = $("#parentid").selectize();
 				var selecttBrand = $selectBrand[0].selectize;

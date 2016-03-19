@@ -74,7 +74,7 @@
 				$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
 				$this->db->where('C.name', $name);
 				$this->db->where('A.parent_id', $this->ion_auth->get_user_id());
-				$this->db->order_by('A.parent_id');
+				$this->db->order_by('A.id');
 				$query = $this->db->get();
 				return $query->result();
 			}else{
@@ -100,7 +100,7 @@
 				$this->db->join('groups C','B.group_id = C.id','LEFT');
 				$this->db->join('users D', 'A.parent_id = D.id', 'LEFT');
 				$this->db->where('C.name', $name);
-				$this->db->order_by('A.parent_id');
+				$this->db->order_by('A.id');
 				$query = $this->db->get();
 				return $query->result();
 			}

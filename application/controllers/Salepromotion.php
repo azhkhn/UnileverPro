@@ -1,7 +1,7 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
 
-	class SalePromotion extends ADMIN_Controller{
+	class Salepromotion extends ADMIN_Controller{
 
 	public function __construct(){
 			parent::__construct();
@@ -20,7 +20,7 @@
 			$this->load->view('addsalepromotion');
 		}
 		
-		public function addSalePromotion(){
+		public function addsalepromotion(){
 			$this->Dtosalepromotion->setName($this->input->post('name'));
 			$this->Dtosalepromotion->setCode($this->input->post('code'));
 			$this->Dtosalepromotion->setDescription($this->input->post('description'));
@@ -52,7 +52,7 @@
 			echo json_encode($this->Daosalepromotion->getSalePromotion($id));
 		}
 		
-		public function updateSalePromotion($id){
+		public function updatesalepromotion($id){
 			$this->Dtosalepromotion->setId($id);
 			$this->Dtosalepromotion->setName($this->input->post('name'));
 			$this->Dtosalepromotion->setCode($this->input->post('code'));

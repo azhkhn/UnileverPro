@@ -46,6 +46,7 @@
 		public function listChannels(){
 			$this->db->select('id,name,description, created_date, created_by, updated_date, updated_by, status, deleted_at');
 			$this->db->from('channels');
+			$this->db->where('status', TRUE);
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();

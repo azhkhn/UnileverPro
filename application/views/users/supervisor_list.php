@@ -81,6 +81,7 @@
                                             <th>Username</th>
                                             <th>Telephone</th>
                                             <th>BA's Executive</th>
+                                            <th>Start Working</th>
                                             <th>Remark</th>
                                             <th>Active</th>
                                             <th>Action</th>
@@ -104,6 +105,7 @@
                                             <td>
                                                 <?php echo $user->supervisor ?>
                                             </td>
+                                            <td><?php echo $user->starting_date ?></td>
                                             <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info"><?php echo $user->remark ? $user->remark : "No Remark"; ?></span></td>
                                             <td>
                                                 <input type="checkbox" id="btnStatus" data="<?php echo $user->id?>" data-switchery data-switchery-color="#1e88e5" <?php echo ($user->active==1)?"checked":""?> <?php echo ($user->active==1)?" value='on'":" value='off'"?>/>

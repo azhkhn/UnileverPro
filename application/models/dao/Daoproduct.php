@@ -6,7 +6,7 @@ class DaoProduct extends CI_Model {
 	}
 	public function addProduct(DtoProduct $v) {
 		$dto = array (
-				"code" => $v->getName (),
+				"code" => $v->getCode (),
 				"name" => $v->getName (),
 				"description" => $v->getDescription (),
 				"size" => $v->getSize (),
@@ -50,7 +50,7 @@ class DaoProduct extends CI_Model {
 		$this->db->select ( 'p.id,p.code,p.name,p.description,p.size,p.unit,b.name as brand,p.price,pro.name as promotion,p.created_by,p.created_date,p.updated_date,p.updated_by,p.status,p.deleted_at' );
 		$this->db->from ( 'products p' );
 		$this->db->join ( 'brands b', 'p.brand = b.id', 'LEFT' );
-		$this->db->join ( 'sale_promotions pro', 'p.promotion = pro.id', 'LEFT' );
+		$this->db->join ( 'sale_promotions pro', 'p.promotion = pro.id AND pro.status=1', 'LEFT' );
 		$this->db->where ( 'p.status', 1 );
 		$this->db->order_by ( "p.id", "desc" );
 		$query = $this->db->get ();
@@ -67,6 +67,7 @@ class DaoProduct extends CI_Model {
 	public function listSalePromotion() {
 		$this->db->select ( 'id,  name' );
 		$this->db->from ( 'sale_promotions' );
+		$this->db->where('status', 1);
 		$this->db->order_by ( "id", "desc" );
 		$query = $this->db->get ();
 		return $query->result ();
@@ -105,12 +106,14 @@ class DaoProduct extends CI_Model {
 						, price
 						, 0 AS quantity
 						, 0 AS amount
-						, sale_promotions.id
+						, sale_promotions.id AS promotion
 						, sale_promotions.name AS promotion_name
 						, GROUP_CONCAT(CONCAT('{\"id\":\"', promotion_types.id, '\", \"name\":\"',promotion_types.name,'\"}')) promotiontype", FALSE);
 		$this->db->from('products');
-		$this->db->join('sale_promotions', 'products.promotion = sale_promotions.id AND sale_promotions.end_date>=NOW()', 'LEFT');
-		$this->db->join('promotion_types', 'sale_promotions.id = promotion_types.sale_promotion_id AND sale_promotions.end_date>=NOW()','LEFT');
+		$this->db->join('product_promotion','product_promotion.product_id = products.id AND product_promotion.start_date <=NOW() AND product_promotion.end_date>=NOW()
+									AND product_promotion.status =1','LEFT');
+		$this->db->join('sale_promotions', 'product_promotion.promotion_id = sale_promotions.id AND sale_promotions.status=1', 'LEFT');
+		$this->db->join('promotion_types', 'sale_promotions.id = promotion_types.sale_promotion_id AND product_promotion.start_date <=NOW() AND product_promotion.end_date>=NOW() AND promotion_types.status=1','LEFT');
 		$this->db->group_by('products.name');
 		$this->db->order_by("products.name");
 		$this->db->where('products.status', 1);
@@ -122,6 +125,91 @@ class DaoProduct extends CI_Model {
 		$this->db->from('products');
 		$this->db->where("status", 1);
 		return $this->db->count_all_results();
+	}
+	
+	public function getAllSalesPromotions(){
+		$this->db->select("id, name");
+		$this->db->from('promotion_types');
+		$this->db->where('status', 1);
+		$query = $this->db->get();
+		return $query->result();
+	}
+	
+	public function getAllPromotionsById($id){
+		$this->db->select("
+							product_promotion.product_id,
+							product_promotion.promotion_id,
+							product_promotion.free,
+							product_promotion.buy,
+							DATE_FORMAT(product_promotion.start_date,'%d-%m-%Y') AS start_date,
+							DATE_FORMAT(product_promotion.end_date,'%d-%m-%Y') AS end_date,
+							sale_promotions.name
+						",FALSE);
+		$this->db->from("product_promotion");
+		$this->db->join("sale_promotions","product_promotion.promotion_id = sale_promotions.id AND sale_promotions.status =1");
+		$this->db->where("product_promotion.status", 1);
+		$this->db->where("product_id", $id);
+		$query = $this->db->get();
+		return $query->result();
+	}
+	
+	public function addNewProductPromotion($data){
+		$this->db->set ('created_date', 'NOW()', FALSE);
+		$this->db->set('created_by', $this->ion_auth->get_user_id());
+		$this->db->set ('status', TRUE);
+		$this->db->insert ("product_promotion", $data);
+		if ($this->db->affected_rows () == 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public function deleteProductPromotion($data){
+		$this->db->set ('updated_date', 'NOW()', FALSE);
+		$this->db->set('updated_by', $this->ion_auth->get_user_id());
+		$this->db->set ('status', FALSE);
+		$this->db->where("product_id", $data["product_id"]);
+		$this->db->where("promotion_id", $data["promotion_id"]);
+		$this->db->update("product_promotion");
+		if ($this->db->affected_rows () == 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public function getProductPromotion($data){
+		$this->db->select("
+							product_promotion.product_id,
+							product_promotion.promotion_id,
+							product_promotion.free,
+							product_promotion.buy,
+							DATE_FORMAT(product_promotion.start_date,'%d-%m-%Y') AS start_date,
+							DATE_FORMAT(product_promotion.end_date,'%d-%m-%Y') AS end_date,
+							sale_promotions.name
+						",FALSE);
+		$this->db->from("product_promotion");
+		$this->db->join("sale_promotions","product_promotion.promotion_id = sale_promotions.id AND sale_promotions.status =1");
+		$this->db->where('product_promotion.status', 1);
+		$this->db->where("product_id", $data["product_id"]);
+		$this->db->where("promotion_id", $data["promotion_id"]);
+		return $this->db->get()->row();
+	}
+	
+	public function updateProductPromotion($data){
+		$this->db->set ('updated_date', 'NOW()', FALSE);
+		$this->db->set('updated_by', $this->ion_auth->get_user_id());
+		$this->db->set("free", $data["free"]);
+		$this->db->set("buy", $data["buy"]);
+		$this->db->where("product_id", $data["product_id"]);
+		$this->db->where("promotion_id", $data["promotion_id"]);
+		$this->db->update("product_promotion");
+		if ($this->db->affected_rows () == 1) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
 	

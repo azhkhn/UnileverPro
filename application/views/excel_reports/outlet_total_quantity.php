@@ -175,8 +175,10 @@
     <script type="text/javascript">
         $(function(){
             var excel = {};
-            var currentYear = new Date().getFullYear()
-            $("#selectYear").val(currentYear);
+            var currentYear = new Date().getFullYear();
+            var $selectYear = $("#selectYear").selectize();
+			var selectYear = $selectYear[0].selectize;
+			selectYear.setValue(currentYear);
             excel.getAllProducts = function(year){
                 var start_date = moment().date(1).format('YYYY-MM-DD');
                 var end_date = moment().add('months', 1).date(0).format('YYYY-MM-DD');

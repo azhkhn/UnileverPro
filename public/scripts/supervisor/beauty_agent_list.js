@@ -103,7 +103,7 @@ $(function(){
 				$("#txtFirstName").val(data.first_name);
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
-				selectSupervisor.setValue(data.parent_id);
+				selectSupervisor.setValue(data.supervisor);
 				$("#txtEmail").val(data.email);
 				$("#startWorking").val(data.starting_date)
 				$("#txtRemark").val(data.remark);

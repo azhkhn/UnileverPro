@@ -9,7 +9,7 @@
     <script src="<?php echo base_url()?>public/assets/js/common.min.js"></script>
     
 </head>
-<body class="sidebar_main_open">
+<body>
    
      <!--  header -->
 	<?php $this->load->view('_header') ?>  
@@ -47,62 +47,62 @@
                     <br/>
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-medium-1-4">                             
-                            <!-- <div class="uk-form-row">
-                                <label>Distributor</label>
-                                <div class="uk-form-row">
-                                     <input id="distributorid"  class="uk-form-width-medium"  />
-                                </div>
-                            </div> -->
-                            
                             <div class="uk-form-row">
-                								<label for="supervisor">Distributor</label>
-                								<div class="uk-form-row">
-                                     <input id="distributorid" name="distributorid" class="uk-form-width-medium"  />
+								<label for="supervisor">Distributor</label>
+								<div class="uk-form-row">
+                                  <select id="selectedDT" name="selectedDT" data-md-selectize data-md-selectize-bottom>
+                                    <option value="">PLEASE SELECT Distributor</option>                                          
+                                    <?php foreach ($distributors as $distributor):?>
+                                        <option value="<?php echo $distributor->id;?>"><?php echo $distributor->name; ?></option>
+                                    <?php endforeach?>
+                                  </select>
                                 </div>
 							             </div>
-                            
-                            
-                            
                         </div>
                         <div class="uk-width-medium-1-4">                             
                             <div class="uk-form-row">
                                 <label>Channels</label>
-                                <div class="uk-form-row">
-                                     <input id="channelid"  class="uk-form-width-medium"  />
-                                </div>
+                                <select id="selectedCN" name="selectedCN" data-md-selectize data-md-selectize-bottom>
+                                    <option value="">PLEASE SELECT Channel</option>
+                                    <?php foreach ($channels as $channel):?>
+                                        <option value="<?php echo $channel->id;?>"><?php echo $channel->name; ?></option>
+                                    <?php endforeach?>                                          
+                                </select>
                             </div> 
                         </div>
                         <div class="uk-width-medium-1-4">                             
                             <div class="uk-form-row">
                                 <label>Customer Type</label>
-                                <div class="uk-form-row">
-                                     <input id="outlettypeid"  class="uk-form-width-medium"  />
-                                </div>
+                                <select id="selectedCT" name="selectedCT" data-md-selectize data-md-selectize-bottom>
+                                  <option value="">PLEASE SELECT Customer Type</option> 
+                                  <?php foreach ($outlettypes as $outlettype):?>
+                                      <option value="<?php echo $outlettype->id;?>"><?php echo $outlettype->name; ?></option>
+                                  <?php endforeach?>                                           
+                                </select>
                             </div> 
                         </div>
                         <div class="uk-width-medium-1-4">                             
                             <div class="uk-form-row">
-                                <label>Choose BA</label>
-                                <div class="uk-form-row">
-                                     <input id="baid"  class="uk-form-width-medium"  />
-                                </div>
+                                <label>BA</label>
+                                <select id="selectedBA" name="selectedBA" data-md-selectize data-md-selectize-bottom>
+                                    <option value="">PLEASE SELECT BA</option>
+                                    <?php foreach ($bas as $ba):?>
+                                      <option value="<?php echo $ba->ba_id;?>"><?php echo $ba->name; ?></option>
+                                  <?php endforeach?>                                          
+                                </select>
                             </div> 
                         </div>
                     </div>
                       <br/>
-                            
                      	 <div class="uk-form-row">
-                               <div class="uk-width-1-1">
-		                            <div class="uk-form-row">
-		                                <label>Address</label>
-		                                <textarea cols="30" rows="4" class="md-input" id="address"> </textarea>
-		                            </div>
-		                        </div>
+                           <div class="uk-width-1-1">
+                            <div class="uk-form-row">
+                                <label>Address</label>
+                                <textarea cols="30" rows="4" class="md-input" id="address"> </textarea>
                             </div>
-                            
-                            <br/>
-                            
-                            
+                        </div>
+                        </div>
+                        <br/>
                     <div class="uk-grid" data-uk-grid-margin>
                         <div class="uk-width-large-1-12 uk-width-medium-1-2">
                             <div class="uk-input-group">
@@ -111,18 +111,11 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
-
           </form>  
-            
         </div>
     </div>
-
-    <!-- right sidebar -->
-    <?php $this->load->view('_rightside') ?>    
-    <!-- right sidebar end -->
      <!-- google web fonts -->
     <script>
         WebFontConfig = {
@@ -171,141 +164,6 @@
     <!--  kendoui functions -->
     <script src="<?php echo base_url()?>public/assets/js/pages/kendoui.min.js"></script>
     <!-- enable hires images -->
-        <script type="text/javascript">
-          $(document).ready(function() {
-            $("#distributorid").kendoComboBox({
-              placeholder: "Select Distributor",
-              dataTextField: "name",
-              dataValueField: "id",
-              filter: "contains",
-              autoBind: true,
-              minLength: 3,
-              <?php if(isset($getpro)) { 
-                foreach ($getpro as $data ) {
-                ?>
-                index : <?php echo $data->distributor?> ,
-                <?php }  }?>
-              dataSource: {
-                type: "odata",
-                serverFiltering: true,
-                transport: {
-                  read: {
-                    url: "<?php  echo site_url('outlet/listdistributorjson')?>",
-                  }
-                }
-              },
-              change: function(e) {
-                var widget = e.sender;
-                if (widget.value() && widget.select() === -1) {
-                  //custom has been selected
-                  widget.value(""); //reset widget
-                }
-              }
-            });
-
-
-            //Channel
-            $("#channelid").kendoComboBox({
-              placeholder: "Select Channel",
-              dataTextField: "name",
-              dataValueField: "id",
-              filter: "contains",
-              autoBind: true,
-              minLength: 3,
-              <?php if(isset($getpro)) { 
-                foreach ($getpro as $data ) {
-                ?>
-                index : <?php echo $data->channel_id?> ,
-                <?php }  }?>
-              dataSource: {
-                type: "odata",
-                serverFiltering: true,
-                transport: {
-                  read: {
-                    url: "<?php  echo site_url('outlet/listchanneljson')?>",
-                  }
-                }
-              },
-              change: function(e) {
-                var widget = e.sender;
-                if (widget.value() && widget.select() === -1) {
-                  //custom has been selected
-                  widget.value(""); //reset widget
-                }
-              }
-            });
-
-
-
-            //OutletType
-            $("#outlettypeid").kendoComboBox({
-              placeholder: "Select OutletType",
-              dataTextField: "name",
-              dataValueField: "id",
-              filter: "contains",
-              autoBind: true,
-              minLength: 3,
-               <?php if(isset($getpro)) { 
-                foreach ($getpro as $data ) {
-                ?>
-                index : <?php echo $data->outlet_type_id?> ,
-                <?php }  }?>
-
-              dataSource: {
-                type: "odata",
-                serverFiltering: true,
-                transport: {
-                  read: {
-                    url: "<?php  echo site_url('outlet/listoutlettypejson')?>",
-                  }
-                }
-              },
-              change: function(e) {
-                var widget = e.sender;
-                if (widget.value() && widget.select() === -1) {
-                  //custom has been selected
-                  widget.value(""); //reset widget
-                }
-              }
-            });
-
-
-            //BA
-            $("#baid").kendoComboBox({
-              placeholder: "Select BA",
-              dataTextField: "first_name",
-              dataValueField: "ba_id",
-              filter: "contains",
-              autoBind: true,
-              minLength: 3,
-               <?php if(isset($getpro)) { 
-                foreach ($getpro as $data ) {
-                ?>
-                index : <?php echo $data->ba_id?> ,
-                <?php }  }?>
-
-              dataSource: {
-                type: "odata",
-                serverFiltering: true,
-                transport: {
-                  read: {
-                    url: "<?php  echo site_url('outlet/listbajson')?>",
-                  }
-                }
-              },
-              change: function(e) {
-                var widget = e.sender;
-                if (widget.value() && widget.select() === -1) {
-                  //custom has been selected
-                  widget.value(""); //reset widget
-                }
-              }
-            }); 
-
-
-
-          });
-    </script>   
       <script>
         $(function() {
            altair_helpers.retina_images();
@@ -314,9 +172,20 @@
             ?>
                 $("#dms_code").val("<?php echo $data->dms_code ?>");
                 $("#name").val("<?php echo $data->name ?>");
-                $("#name").focus();
-                $("#dms_code").focus();
+                $('.md-input-wrapper').addClass('md-input-filled');
                 $("#address").val("<?php echo $data->address ?>");
+                var $selectedDT = $("#selectedDT").selectize();
+                var selectedDT = $selectedDT[0].selectize;
+                selectedDT.setValue("<?php echo $data->distributor ?>");
+                var $selectedCN = $("#selectedCN").selectize();
+                var selectedCN = $selectedCN[0].selectize;
+                selectedCN.setValue("<?php echo $data->channel_id ?>");
+                var $selectedCT = $("#selectedCT").selectize();
+                var selectedCT = $selectedCT[0].selectize;
+                selectedCT.setValue("<?php echo $data->outlet_type_id ?>");
+                var $selectedBA = $("#selectedBA").selectize();
+                var selectedBA = $selectedBA[0].selectize;
+                selectedBA.setValue("<?php echo $data->ba_id ?>");
                 editid = <?php echo $data->id ?> ;
 
             <?php } ?>
@@ -330,16 +199,20 @@
                     method: "POST",
                     data: {
                             dms_code : $("#dms_code").val(),
-                            distributor : $("#distributorid").val(),
-                            channel_id : $("#channelid").val(),
-                            outlet_type_id : $("#outlettypeid").val(),
+                            distributor : $("#selectedDT").val(),
+                            channel_id : $("#selectedCN").val(),
+                            outlet_type_id : $("#selectedCT").val(),
                             name : $("#name").val(),
                             address : $("#address").val(),
-                            ba_id : $("#baid").val()
+                            ba_id : $("#selectedBA").val()
                     },
                     success : function(data){
                         modal.hide();
                         location.href="<?php echo site_url()?>outlet";
+                    },
+                    error: function(data){
+                        modal.hide();
+                        UIkit.modal.alert(data);
                     }
                 });
 
@@ -355,16 +228,20 @@
                         method: "POST",
                         data: {
                             dms_code : $("#dms_code").val(),
-                            distributor : $("#distributorid").val(),
-                            channel_id : $("#channelid").val(),
-                            outlet_type_id : $("#outlettypeid").val(),
+                            distributor : $("#selectedDT").val(),
+                            channel_id : $("#selectedCN").val(),
+                            outlet_type_id : $("#selectedCT").val(),
                             name : $("#name").val(),
                             address : $("#address").val(),
-                            ba_id : $("#baid").val()
+                            ba_id : $("#selectedBA").val()
                         },
                         success : function(data){
                             modal.hide();
                             location.href="<?php echo site_url()?>outlet";
+                        },
+                        error: function(data){
+                            modal.hide();
+                            UIkit.modal.alert(data);
                         }
                     });
 

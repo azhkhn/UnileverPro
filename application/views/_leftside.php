@@ -28,12 +28,12 @@
                         Product
                     </a>
                 </li>
-                 <li>
+                 <!--<li>
                     <a href="<?php echo site_url('group/')?>">
                         <i class="menu_icon material-icons">&#xE02F;</i>
                         Group
                     </a>
-                </li>
+                </li>-->
                  <li>
                     <a href="<?php echo site_url('saletarget/')?>">
                     	<i class="menu_icon material-icons">&#xE163;</i>
@@ -41,12 +41,12 @@
                     </a>
                 </li>
                 
-                <li>
+<!--                <li>
                     <a href="<?php echo site_url('salepromotion/')?>">
                         <i class="menu_icon material-icons">&#xE547;</i>
                         Sale Promotion
                     </a>
-                </li>
+                </li>-->
                 
                 <li>
                     <a href="#">
@@ -109,10 +109,12 @@
                         Outlet Reports
                     </a>
                     <ul>
-                        <li><a href="<?php echo site_url('outletexcel/outlet_items')?>">Outlet Items</a></li>
-                        <li><a href="<?php echo site_url('outletexcel/outlet_amount')?>">Outlet Total Amount</a></li>
-                        <li><a href="<?php echo site_url('outletexcel/outlet_quantity')?>">Outlet Total Quantity</a></li>
-                        <li><a href="<?php echo site_url('outletexcel/outlet_product')?>">Outlet Total Product Weekly</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_items')?>">OUTLET & ITEMS WEEKLY</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_items_month')?>">OUTLET & ITEMS MONTHLY</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_items_year')?>">OUTLET & ITEMS YEARLY</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_amount')?>">OUTLET TOTAL AMOUNT</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_quantity')?>">OUTLET TOTAL QUANTITY</a></li>
+                        <li><a href="<?php echo site_url('outletexcel/outlet_product')?>">OUTLET & ITEMS DAILY PER WEEK</a></li>
                     </ul>
                 </li>
                 
