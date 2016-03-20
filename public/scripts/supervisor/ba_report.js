@@ -533,6 +533,36 @@ $(function(){
 			});
 		}		
 	});
+	
+	$(document).on('click','#btnUpdate', function(){
+		//alert($(this).parent().data("productid"));
+		$("#selectedItemCode").val($(this).parent().data("itemcode"));
+		$("#selectedItemName").val($(this).parent().data("itemname"));
+		$("#txtQuantitySold").val($(this).parent().data("quantitysold"));
+		$("#txtPrice").val($(this).parent().data("price"));
+		$("#txtAmount").val($(this).parent().data("amount"));
+		$("#txtPromotion").val($(this).parent().data("promotionname"));
+		$("#btnSave").data("productid", $(this).parent().data("productid"));
+		$("#btnSave").data("saleid", $(this).parent().data("saleid"));
+		$("#btnSave").data("promotionid", $(this).parent().data("promotionid"));
+		var modalPopup = UIkit.modal("#modalAddNewSale");
+		if ( modalPopup.isActive() ) {
+		    modalPopup.hide();
+		} else {
+		    modalPopup.show();
+		}
+	});
+	
+	$("#txtQuantitySold").change(function(){
+		$("#txtAmount").val($("#txtQuantitySold").val() * $("#txtPrice").val());
+	});
+	
+	$(document).on('click', "#btnSave", function(e){
+		e.preventDefault();
+		alert($(this).data("productid"));
+		alert($(this).data("saleid"));
+		alert($(this).data("promotionid"));
+	});
 
 	// TODO: ON CHANGE ON Transaction Of Date
 	$("#txtTransactionOfsaleTransactionHistory").change(function(){
@@ -551,7 +581,7 @@ $(function(){
 	          		if(item.quantity=="" || item.price=="" || item.quantity===undefined || item.price ===undefined){
 	          			return false;
 	          		}else{
-	         			item.trigger("change", {field: "amount"})
+	         			item.trigger("change", {field: "amount"});
 	         		}
 	       		}
 	       		
@@ -560,9 +590,8 @@ $(function(){
 	       			if(item.quantity=="" || item.price=="" || item.quantity===undefined || item.price ===undefined){
 	          			return false;
 	          		}else{
-	         			alert(item.promotion_id);
 	         			item.promotion = item.promotion_id;
-	         			e.fields["promotion_name"] = promotion_name;
+	         			item.trigger("change", {field: "promotion_name"});
 	         		}
 	       		}
        		}
@@ -637,6 +666,13 @@ $(function(){
 	         Name: function() {
 	         	return this.get("name");
 	         },
+	         Promotion: function(){
+	         	if(this.get("quantity")>=this.get("buy")){
+	         		return this.get("promotion_name1");
+	         	}else{
+	         		return "";
+	         	}
+	         },
 	         id: "product_id",
              fields: {
              	product_id: { editable: true, nullable: false},
@@ -709,6 +745,8 @@ $(function(){
 							options.model.set("quantity", 1);
 							options.model.set("amount", this.dataItem(e.item.index()).amount);
 							options.model.set("promotion_id", this.dataItem(e.item.index()).promotion);
+							options.model.set("promotion_name1", this.dataItem(e.item.index()).promotion_name);
+							options.model.set("buy", this.dataItem(e.item.index()).buy);
 							if(this.dataItem(e.item.index()).buy>1){
 								//options.model.set("promotion_name", "");	
 							}else{
@@ -725,7 +763,7 @@ $(function(){
             { field: "quantity", title: "Quantity", width: "10%"},
             { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
             { field: "promotion", title: "Promotion", width: "0%", hidden:true}, 
-            { field: "promotion_name", title: "Promotion", width:"20%"},
+            { field: "promotion_name", title: "Promotion", width:"20%", template: "#=Promotion()#"},
             { field: "promotiontype", title: "Promotion Type", width: "20%", hidden:true},
             /*{ field: "promotiontype1", title: "Promotion Type", width: "10%",
         		editor: function(container, options) {
@@ -771,5 +809,5 @@ $(function(){
             	culture: "de-DE"
             });
 	}
-
+	
 });

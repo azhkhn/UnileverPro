@@ -127,16 +127,15 @@
 							  , sale_items.price
 							  , (sale_items.price*sale_items.quantity) AS amount
 							  , sale_items.promotion_id
-							  , sale_promotions.name As promotion_name
-							  , promotion_types.name As promotion_type
+							  , CONCAT('BUY ', product_promotion.buy, ' FREE ', product_promotion.free) AS promotion_name
 							  , DATE_FORMAT(sales.sale_date,'%H:%i:%s') As sale_time
- 							");
+ 							", FALSE);
 			$this->db->from('sales');
 			$this->db->join('sale_items', 'sales.id=sale_items.sale_id', 'LEFT');
 			$this->db->join('products', 'sale_items.product_id=products.id', 'LEFT');
 			$this->db->join('users', 'sales.ba_id = users.id', 'LEFT');
-			$this->db->join('sale_promotions', 'sale_items.promotion_id=sale_promotions.id', "LEFT");
-			$this->db->join('promotion_types', 'sale_items.promotion_type_id=promotion_types.id',"LEFT");
+			$this->db->join("product_promotion", "sale_items.promotion_id=product_promotion.id", "LEFT");
+			$this->db->join('promotion_types', 'product_promotion.promotion_id=promotion_types.id',"LEFT");
 			$this->db->where('sales.status', 1);
 			$this->db->where('sale_items.status', 1);
 			$this->db->where('sales.ba_id', $Dtosale->getBaId());
@@ -147,6 +146,7 @@
 			$this->db->limit($limit, $offset);
 			$query = $this->db->get ();
 			return $query->result ();	
+			//$this->db->join('sale_promotions', 'sale_items.promotion_id=sale_promotions.id', "LEFT");
 		}
 
 		public function count(Dtosale $Dtosale){
@@ -661,6 +661,22 @@
 			$this->db->where('sale_id', $saleId);
 			$this->db->where('product_id', $productId);
 			return $this->db->update('sale_items');
+		}
+		
+		public function check($productId, $quantity){
+			$query = $this->db->query("
+					SELECT * 
+					FROM product_promotion
+					WHERE product_id = ".$productId."
+					AND buy >= ".$quantity."
+					AND start_date<=NOW() 
+					AND end_date>=NOW()
+					AND status = 1;");
+			return $query->row();
+			$this->db->from("product_promotion");
+			$this->db->where("product_id",$productId);
+			$this->db->where("start_date");
+			return $query->row();
 		}
 	}
 ?>

@@ -176,6 +176,10 @@
 	            	));
             }
 		}
+		
+		public function checkpromotion(){
+			
+		}
 	}
 
 ?>

@@ -225,6 +225,9 @@
                             </div>
                         </div>
                         <div class="md-card">
+                            <div id="page_heading">
+                                <h1>Sale Transaction Data Entry</h1>
+                            </div>
                             <div class="md-card-content large-padding">
                                 <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
                                     <div class="uk-width-large">
@@ -317,7 +320,6 @@
                                                                         <th style="width:10%;text-align:right;">Quantity Sold</th>
                                                                         <th style="width:10%;text-align:right;">Amount</th>
                                                                         <th style="width:15%;">Promotion</th>
-                                                                        <th style="width:15%;">Promotion Type</th>
                                                                         <th style="width:15%;">Transaction</th>
                                                                         <th style="width:10%">Action</th>
                                                                     </tr>
@@ -351,7 +353,7 @@
             <div class="uk-modal-dialog uk-modal-dialog-large">
                 <button type="button" class="uk-modal-close uk-close"></button>
                 <div class="uk-modal-header">
-                    <h3 class="uk-modal-title">ADD NEW SALE</h3>
+                    <h3 class="uk-modal-title">UPDATE SALE INFORMATION</h3>
                 </div>
                 <form action="" class="uk-form-stacked" id="frmAddNewSale" method="POST">
                     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
@@ -364,15 +366,17 @@
                                 </div>
                                 <div class="md-card-content large-padding">
                                     <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
-                                        <div class="uk-width-large-1-2">
+                                        <div class="uk-width-small">
                                             <div class="uk-form-row">
                                                 <label for="txtItemCode" class="uk-form-label">Item Code<span class="req">*</span></label>
-                                                <select id="selectedItemCode" name="selectedItemCode" data-md-selectize data-md-selectize-bottom>
+                                                <!--<select id="selectedItemCode" name="selectedItemCode" data-md-selectize data-md-selectize-bottom>
                                                     <option value="">Select Product Code</option>
-                                                </select>
+                                                </select>-->
+                                                <input type="text" name="selectedItemCode" required class="md-input" id="selectedItemCode" value=""  readonly="readonly"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="selectedItemName" class="uk-form-label">Item Name<span class="req">*</span></label>
+                                                <input type="text" name="selectedItemName" required class="md-input" id="selectedItemName" value="" readonly="readonly"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtQuantitySold" class="uk-form-label">Quantity Sold<span class="req">*</span></label>
@@ -380,25 +384,23 @@
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtPrice" class="uk-form-label">Price<span class="req">*</span></label>
-                                                <input type="text" name="txtPrice" required class="md-input" id="txtPrice" readonly="readonly" value="0"/>
+                                                <input type="text" name="txtPrice" required class="md-input" id="txtPrice" readonly="readonly" value="0"  readonly="readonly"/>
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="txtAmount" class="uk-form-label">Amount<span class="req">*</span></label>
-                                                <input type="text" name="txtAmount" required class="md-input" id="txtAmount" readonly="readonly" value="0"/>
-                                            </div>                                           
+                                                <input type="text" name="txtAmount" required class="md-input" id="txtAmount" readonly="readonly" value="0" readonly="readonly"/>
+                                            </div>    
+                                            <div class="uk-form-row">
+                                                <label for="txtPromotion" class="uk-form-label">Promotion</label>
+                                                <input type="text" name="txtPromotion" id="txtPromotion" data-parsley-trigger="change" class="md-input"  readonly="readonly"/>
+                                            </div>
                                         </div>
-                                        <div class="uk-width-large-1-2">
+                                        <!--<div class="uk-width-large-1-2">
                                             <div class="uk-form-row">
                                                 <label for="txtPromotion" class="uk-form-label">Promotion</label>
                                                 <input type="text" name="txtPromotion" id="txtPromotion" data-parsley-trigger="change" class="md-input" />
                                             </div>
-                                            <div class="uk-form-row">
-                                                <label for="txtPromotionType" class="uk-form-label">Promotion Type</label>
-                                                <select id="selectedPromotionType" name="selectedPromotionType" data-md-selectize data-md-selectize-bottom>
-                                                    <option value="">Select Promotion Type</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -427,11 +429,18 @@
             <td id="quantitySold" style="text-align:right;">{{= quantity}}</td>
             <td id="amount" style="text-align:right;">{{= amount}}</td>
             <td id="promotion">{{= promotion_name }}</td>
-            <td id="promotionType">{{= promotion_type }}</td>
             <td id="saleTime">{{= sale_time }}</td>
-            <td id="action" data-productid="{{= product_id}}" data-saleid="{{= id}}">
+            <td id="action" data-productid="{{= product_id}}" data-saleid="{{= id}}" 
+                   data-itemcode="{{= code}}" data-itemname="{{= product_name}}"
+				   data-price="{{= price}}" data-quantitysold="{{= quantity}}"
+				   data-amount="{{= amount}}" data-promotionname="{{= promotion_name}}"
+				   data-saleTime="{{= sale_time}}" data-promotionid="{{= promotion_id}}">
 				<a data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete"title="Delete">
-				<i class="material-icons">delete </i></a>
+				    <i class="material-icons">delete </i>
+				</a>
+				<a data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnUpdate" title="Update">
+				    <i class="material-icons">edit </i>
+				</a>
             </td>
         </tr>
     </script>
