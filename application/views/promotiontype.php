@@ -28,8 +28,8 @@
                             <th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Size</th>
-                            <th>Sale Promotion</th>
+                            <!--<th>Size</th>
+                            <th>Sale Promotion</th>-->
                             <th>Created Date</th>
                             <th>Created By</th>
                             <th>Status</th>
@@ -42,8 +42,8 @@
                             <th>No</th>
                             <th>Code</th>
                             <th>Name</th>
-                            <th>Size</th>
-                            <th>Sale Promotion</th>
+                            <!--<th>Size</th>
+                            <th>Sale Promotion</th>-->
                             <th>Created Date</th>
                             <th>Created By</th>
                             <th>Status</th>
@@ -59,8 +59,6 @@
                             <td><?php echo $data->id ?></td>
                             <td><?php echo $data->code ?></td>
                             <td><?php echo $data->name ?></td>
-                            <td><?php echo $data->size ?></td>
-                            <td><?php echo $data->sale_promotion ?></td>
                             <td><?php echo $data->created_date ?></td>
                             <td><?php echo $data->created_by ?></td>
                             <td>

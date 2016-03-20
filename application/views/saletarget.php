@@ -137,7 +137,7 @@
 											
 											
 											
-											<div class="uk-grid uk-grid-medium uk-form-row">
+											<!--<div class="uk-grid uk-grid-medium uk-form-row">
 												<div class="uk-width-medium-1-2">
 														<div class="uk-input-group">
 															<label for="kUI_datepicker_a" class="uk-form-label">Start date<span class="req">*</span></label>
@@ -150,7 +150,19 @@
 															<input id="end_date" required="required"/>
 														</div>
 												</div>
-												
+									
+											</div>-->
+											<div class="uk-form-row">
+												<div class="md-input-wrapper md-input-filled">
+                                                    <label for="startWorking" >Start Date<span class="req">*</span></label>
+                                                    <input class="md-input" type="text" id="start_date" name="start_date" data-uk-datepicker="{format:'DD-MM-YYYY', addClass: 'dropdown-modal'}" required>
+                                                </div>
+											</div>
+											<div class="uk-form-row">
+												<div class="md-input-wrapper md-input-filled">
+                                                    <label for="startWorking" >End Date<span class="req">*</span></label>
+                                                    <input class="md-input" type="text" id="end_date" name="end_date" data-uk-datepicker="{format:'DD-MM-YYYY', addClass: 'dropdown-modal'}" required>
+                                                </div>
 											</div>
 											
 											
@@ -279,9 +291,6 @@
         $(function() {
             altair_helpers.retina_images();
             $("#to-table").DataTable();
-            $("#end_date,#start_date").kendoDatePicker({
-            	  format: "dd-MM-yyyy"
-           	});
         });
     </script>
     

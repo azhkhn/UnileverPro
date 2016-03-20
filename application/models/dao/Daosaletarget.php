@@ -8,12 +8,14 @@ class Daosaletarget  extends CI_Model{
 	}
 	
 	public function addSaleTarget(Dtosaletarget $v){
+		$start_date = DateTime::createFromFormat('d-m-Y', $v->getStart_date());
+		$end_date = DateTime::createFromFormat('d-m-Y', $v->getEnd_date());
 		$dto = array(
 				"name" 					 => 		$v->getName(),
 				"description"			 => 		$v->getDescription(),
 				"ba_id"   				 =>			$v->getBa_id(),
-				"start_date"    		 => 		$v->getStart_date(),
-				"end_date"      		 => 		$v->getEnd_date(),
+				"start_date"    		 => 		$start_date->format('Y-m-d'),
+				"end_date"      		 => 		$end_date->format('Y-m-d'),
 				"target_achievement"     => 		$v->getTarget_achievement(),
 				"created_by"    		 => 		$v->getCreated_by()
 		);
@@ -28,12 +30,14 @@ class Daosaletarget  extends CI_Model{
 	}
 	
 	public function updateSaleTarget(Dtosaletarget $v){
+		$start_date = DateTime::createFromFormat('d-m-Y', $v->getStart_date());
+		$end_date = DateTime::createFromFormat('d-m-Y', $v->getEnd_date());
 		$dto = array(
 				"name" 					 => 		$v->getName(),
 				"description"			 => 		$v->getDescription(),
 				"ba_id"   				 =>			$v->getBa_id(),
-				"start_date"    		 => 		$v->getStart_date(),
-				"end_date"      		 => 		$v->getEnd_date(),
+				"start_date"    		 => 		$start_date->format('Y-m-d'),
+				"end_date"      		 => 		$end_date->format('Y-m-d'),
 				"target_achievement"     => 		$v->getTarget_achievement(),
 				"updated_by"    		 => 		$v->getUpdated_by()
 		);
@@ -49,7 +53,18 @@ class Daosaletarget  extends CI_Model{
 	}
 	
 	public function listSaleTarget(){
-		$this->db->select("s.id,s.name,s.description, CONCAT(last_name,' ',first_name) AS ba_id,s.start_date,s.end_date,s.target_achievement,s.created_date,s.created_by,s.updated_date,s.updated_by,s.status,s.deleted_at", FALSE);
+		$this->db->select("s.id,s.name,
+						   s.description, 
+						   CONCAT(last_name,' ',first_name) AS ba_id,
+						   DATE_FORMAT(s.start_date,'%d-%m-%Y') AS start_date,
+						   DATE_FORMAT(s.end_date,'%d-%m-%Y') AS end_date,
+						   s.target_achievement,
+						   s.created_date,
+						   s.created_by,
+						   s.updated_date,
+						   s.updated_by,
+						   s.status,
+						   s.deleted_at", FALSE);
 		$this->db->from('sale_targets s');
 		$this->db->join('users b','s.ba_id = b.id', 'LEFT');
 		$this->db->where('s.status' , 1);
@@ -67,7 +82,19 @@ class Daosaletarget  extends CI_Model{
 	}
 	
 	public function getSaleTarget($id){
-		$this->db->select('id,name,description,ba_id,start_date,end_date,target_achievement,created_date,created_by,updated_date,updated_by,status,deleted_at');
+		$this->db->select("id,
+						   name,
+						   description,
+						   ba_id,
+						   DATE_FORMAT(start_date,'%d-%m-%Y') AS start_date,
+						   DATE_FORMAT(end_date,'%d-%m-%Y') AS end_date,
+						   target_achievement,
+						   created_date,
+						   created_by,
+						   updated_date,
+						   updated_by,
+						   status,
+						   deleted_at",FALSE);
 		$this->db->from('sale_targets');
 		$this->db->where('id',$id);
 		$this->db->where('status' , 1);

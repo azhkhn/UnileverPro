@@ -134,9 +134,9 @@
            <?php if(isset($getpro)) {?>
                 $("#code").val("<?php echo $getpro->code ?>");
                 $("#name").val("<?php echo $getpro->name ?>");
-                $("#size").val("<?php echo $getpro->size ?>");
-                $("#selectSalePromotion").val("<?php echo $getpro->sale_promotion_id ?>");                
-                $("#size").focus();
+                //$("#size").val("<?php echo $getpro->size ?>");
+                //$("#selectSalePromotion").val("<?php echo $getpro->sale_promotion_id ?>");                
+                //$("#size").focus();
                 $("#name").focus();
                 $("#code").focus();
                 editid = <?php echo $getpro->id ?> ;
@@ -151,8 +151,8 @@
                     data: {
                         code : $("#code").val(),
                         name : $("#name").val(),
-                        size : $("#size").val(),
-                        sale_promotion_id : $("#selectSalePromotion").val()
+                        size : 1,//$("#size").val(),
+                        sale_promotion_id : 14//$("#selectSalePromotion").val()
                     },
                     success : function(data){
                         modal.hide();
@@ -173,8 +173,8 @@
                         data: {
                            code : $("#code").val(),
                            name : $("#name").val(),
-                           size : $("#size").val(),
-                           sale_promotion_id : $("#selectSalePromotion").val()
+                           size : 1,//$("#size").val(),
+                           sale_promotion_id : 14//$("#selectSalePromotion").val()
                         },
                         success : function(data){
                             modal.hide();

@@ -111,6 +111,7 @@
 				$data["ERROR"] = true;
 				$data["MSG"] = "Product Promotion has not been inserted sucessfully.";
 			}
+			var_dump($data);
 			echo json_encode($data);
 		}
 		
@@ -118,6 +119,7 @@
 			$data = array(
 				"product_id"=> $this->input->post("product_id"),
 				"promotion_id"=> $this->input->post("promotion_id"),
+				"id" => $this->input->post("id")
 			);
 			if($this->Daoproduct->deleteProductPromotion($data)){
 				$data["ERROR"] = false;
@@ -133,6 +135,7 @@
 			$data = array(
 				"product_id"=> $this->input->post("product_id"),
 				"promotion_id"=> $this->input->post("promotion_id"),
+				"id"=> $this->input->post('id')
 			);
 			echo json_encode($this->Daoproduct->getProductPromotion($data));
 		}
@@ -144,7 +147,8 @@
 				"product_id"=> $this->input->post("product_id"),
 				"promotion_id"=> $this->input->post("promotion_id"),
 				"start_date"=> $this->input->post("start_date"),
-				"end_date"=> $this->input->post("end_date")
+				"end_date"=> $this->input->post("end_date"),
+				"id" => $this->input->post("id")
 			);
 			if($this->Daoproduct->updateProductPromotion($data)){
 				$data["ERROR"] = false;

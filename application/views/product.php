@@ -275,16 +275,16 @@
 												<input class="md-input" type="text" id="FREE">
 											</div>
 											<div class="uk-form-row">
-												<div class="uk-input-group">
-													<label for="kUI_datepicker_a" class="uk-form-label">Start date<span class="req">*</span></label>
-													<input id="start_date" required="required" />
-												</div>
+												<div class="md-input-wrapper md-input-filled">
+                                                    <label for="start_date" >Start Date<span class="req">*</span></label>
+                                                    <input class="md-input" type="text" id="start_date" name="start_date" data-uk-datepicker="{format:'DD-MM-YYYY', addClass: 'dropdown-modal'}" required>
+                                                </div>
 											</div>
 											<div class="uk-form-row">
-												<div class="uk-input-group">
-													<label for="kUI_datepicker_a" class="uk-form-label">End date<span class="req">*</span></label>
-													<input id="end_date" required="required"/>
-												</div>
+												<div class="md-input-wrapper md-input-filled">
+                                                    <label for="end_date" >End Date<span class="req">*</span></label>
+                                                    <input class="md-input" type="text" id="end_date" name="end_date" data-uk-datepicker="{format:'DD-MM-YYYY', addClass: 'dropdown-modal'}" required>
+                                                </div>
 											</div>
 										</div>
 									</div>
@@ -378,12 +378,12 @@
 											
 											<hr class="uk-grid-divider">
 											
-											<div class="uk-grid uk-grid-small">
+											<!--<div class="uk-grid uk-grid-small">
 												<div class="uk-width-large-1-3">
 													<span class="uk-text-muted uk-text-small">Promotion</span>
 												</div>
 												<div class="uk-width-large-2-3" id="getPromotion">  </div>
-											</div>
+											</div>-->
 											
 											
 											<hr class="uk-grid-divider uk-hidden-large">
@@ -443,9 +443,9 @@
 			<td>{{= start_date}}</td>
 			<td>{{= end_date}}</td>
 			<td>
-				<a href="#" id="btnUpdatePromotion" data-uk-tooltip="{pos:'left}" data-promotionid="{{= promotion_id}}" data-productid="{{= product_id}}" title="EDIT PROMOTION">
+				<a href="#" id="btnUpdatePromotion" data-uk-tooltip="{pos:'left}" data-promotionid="{{= promotion_id}}" data-productid="{{= product_id}}" data-id="{{= id}}" title="EDIT PROMOTION">
 				<i class="material-icons">edit </i></a>
-				<a href="#" id="btnDeletePromotion" data-uk-tooltip="{pos:'left'}" data-promotionid="{{= promotion_id}}" data-productid="{{= product_id}}" title="DELETE PROMOTION">
+				<a href="#" id="btnDeletePromotion" data-uk-tooltip="{pos:'left'}" data-promotionid="{{= promotion_id}}" data-productid="{{= product_id}}" data-id="{{= id}}" title="DELETE PROMOTION">
 				<i class="material-icons">delete </i></a>
 			</td>
 		</tr>
@@ -516,9 +516,6 @@
         $(function() {
         	$("#to_table").DataTable();
             altair_helpers.retina_images();
-            $("#end_date,#start_date").kendoDatePicker({
-            	  format: "dd-MM-yyyy"
-           	});
         });
     </script>
 

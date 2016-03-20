@@ -49,9 +49,10 @@
 		}
 		
 		public function listPromotiontypes(){
-			$this->db->select('A.id, A.code, A.name ,A.size , B.name AS sale_promotion, A.created_date, A.sale_promotion_id, A.created_by, A.updated_date, A.updated_by, A.status, A.deleted_at');
+			$this->db->select("A.id, A.code, A.name ,A.size , B.name AS sale_promotion, A.created_date, A.sale_promotion_id, CONCAT(C.last_name,' ',C.first_name) AS created_by, A.updated_date, A.updated_by, A.status, A.deleted_at", FALSE);
 			$this->db->from('promotion_types A');
-			$this->db->join('sale_promotions B', 'A.sale_promotion_id = B.id AND B.status=1');
+			$this->db->join('sale_promotions B', 'A.sale_promotion_id = B.id AND B.status=1','LEFT');
+			$this->db->join('users C', 'A.created_by = C.id');
 			$this->db->where('A.status', TRUE);
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();

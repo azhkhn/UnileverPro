@@ -287,14 +287,20 @@
 				//$saleItem["sale_id"] = $saleId;
 				//$saleItem["status"] = 1;
 				if(!isset($saleItem["promotion"])){
-					$saleItem["promotion"] = NULL;
+					$item["promotion_id"] = NULL;
 				}else{
 					$item["promotion_id"] = $saleItem["promotion"];
+					if($item["promotion_id"]==""){
+						$item["promotion_id"] = NULL;	
+					}
 				}
 				if($saleItem["promotion_type_id"]==""){
-					$saleItem["promotion_type_id"] = NULL;
+					$item["promotion_type_id"] = NULL;
 				}else{
 					$item["promotion_type_id"] = $saleItem["promotion_type_id"];
+					if($item["promotion_type_id"]==""){
+						$item["promotion_type_id"] = NULL;	
+					}
 				}
 				/*$saleItem["created_by"] = $sale->getSaleBy();
 				$saleItem["created_date"] = date('Y-m-d H:i:s');*/

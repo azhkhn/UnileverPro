@@ -173,7 +173,7 @@
                 $("#dms_code").val("<?php echo $data->dms_code ?>");
                 $("#name").val("<?php echo $data->name ?>");
                 $('.md-input-wrapper').addClass('md-input-filled');
-                $("#address").val("<?php echo $data->address ?>");
+                $("#address").html("<?php echo preg_replace("/\r\n|\r|\n/",' ', $data->address) ?>");
                 var $selectedDT = $("#selectedDT").selectize();
                 var selectedDT = $selectedDT[0].selectize;
                 selectedDT.setValue("<?php echo $data->distributor ?>");

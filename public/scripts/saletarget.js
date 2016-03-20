@@ -22,8 +22,8 @@ $(function() {
 								description		     : $.trim($("#description").val()),
 								ba_id				 : $.trim($("#ba_id").val()),
 								target_achievement   : $.trim($("#target_achievement").val()),
-								start_date		     : moment($.trim($("#start_date").val())).format('YYYY-MM-DD'),
-								end_date		     : moment($.trim($("#end_date").val())).format('YYYY-MM-DD')
+								start_date		     : $.trim($("#start_date").val()),
+								end_date		     : $.trim($("#end_date").val())
 							},
 							success : function(data) {
 								console.log(data);
@@ -68,8 +68,8 @@ $(function() {
 				//$("#name").val(data.name);
 				//$("#oldname").val(data.name);
 				$("#target_achievement").val(data.target_achievement);
-				$("#start_date").val(moment(data.start_date).format("DD-MM-YYYY"));
-				$("#end_date").val(moment(data.end_date).format("DD-MM-YYYY"));
+				$("#start_date").val(data.start_date);
+				$("#end_date").val(data.end_date);
 				selectBA.setValue(data.ba_id); 
 				$("#description").val(data.description);
 				
@@ -110,8 +110,8 @@ $(function() {
 				description		     : $.trim($("#description").val()),
 				ba_id				 : $.trim($("#ba_id").val()),
 				target_achievement   : $.trim($("#target_achievement").val()),
-				start_date		     : moment($.trim($("#start_date").val())).format('YYYY-MM-DD'),
-				end_date		     : moment($.trim($("#end_date").val())).format('YYYY-MM-DD')
+				start_date		     : $.trim($("#start_date").val()),
+				end_date		     : $.trim($("#end_date").val())
 			},
 			success : function(data) {
 				console.log(data);

@@ -197,8 +197,8 @@ $(function(){
 	                            { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
 	                            { field: "promotion", title: "Promotion", width: "15%", hidden:true}, 
 	                            { field: "promotion_name", title: "Promotion", width:"15%"},
-	                            { field: "promotiontype", title: "Promotion Type", width: "15%", hidden:true},
-	                            { field: "promotiontype1", title: "Promotion Type", width: "15%",
+	                            { field: "promotiontype", title: "Promotion Type", width: "15%", hidden:true}
+	                            /*{ field: "promotiontype1", title: "Promotion Type", width: "15%",
                             		editor: function(container, options) {
                             			var dataSource = $.parseJSON('[' + options.model["promotiontype"] + ']');
                             			console.log(container, options);
@@ -222,7 +222,7 @@ $(function(){
 					                        }
 					                    });
 									}
-							    }
+							    }*/
 	                        ]
 					    });
 					}else{
@@ -554,6 +554,17 @@ $(function(){
 	         			item.trigger("change", {field: "amount"})
 	         		}
 	       		}
+	       		
+	       		if(e.field =="quantity"){
+	       			var item = e.items[0];
+	       			if(item.quantity=="" || item.price=="" || item.quantity===undefined || item.price ===undefined){
+	          			return false;
+	          		}else{
+	         			alert(item.promotion_id);
+	         			item.promotion = item.promotion_id;
+	         			e.fields["promotion_name"] = promotion_name;
+	         		}
+	       		}
        		}
 
 	    },
@@ -642,7 +653,8 @@ $(function(){
                 },
                 promotiontype: { editable: true},
                 promotiontype1: {},
-                promotion_type_id: {}
+                promotion_type_id: {},
+                promotion_id:{}
              },
 
 	       }
@@ -694,10 +706,15 @@ $(function(){
                             options.model.set("name", this.dataItem(e.item.index()).name);
                             options.model.set("price", this.dataItem(e.item.index()).price);
 							options.model.set("product_id", this.dataItem(e.item.index()).product_id);
-							options.model.set("promotion", this.dataItem(e.item.index()).promotion);
 							options.model.set("quantity", 1);
 							options.model.set("amount", this.dataItem(e.item.index()).amount);
-							options.model.set("promotion_name", this.dataItem(e.item.index()).promotion_name);
+							options.model.set("promotion_id", this.dataItem(e.item.index()).promotion);
+							if(this.dataItem(e.item.index()).buy>1){
+								//options.model.set("promotion_name", "");	
+							}else{
+								options.model.set("promotion", this.dataItem(e.item.index()).promotion);
+								options.model.set("promotion_name", this.dataItem(e.item.index()).promotion_name);
+							}
 							options.model.set("promotiontype", this.dataItem(e.item.index()).promotiontype);
                         }
                     });
@@ -708,9 +725,9 @@ $(function(){
             { field: "quantity", title: "Quantity", width: "10%"},
             { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
             { field: "promotion", title: "Promotion", width: "0%", hidden:true}, 
-            { field: "promotion_name", title: "Promotion", width:"10%"},
-            { field: "promotiontype", title: "Promotion Type", width: "10%", hidden:true},
-            { field: "promotiontype1", title: "Promotion Type", width: "10%",
+            { field: "promotion_name", title: "Promotion", width:"20%"},
+            { field: "promotiontype", title: "Promotion Type", width: "20%", hidden:true},
+            /*{ field: "promotiontype1", title: "Promotion Type", width: "10%",
         		editor: function(container, options) {
         			var dataSource = $.parseJSON('[' + options.model["promotiontype"] + ']');
         			console.log(container, options);
@@ -734,7 +751,7 @@ $(function(){
                         }
                     });
 				}
-		    },
+		    },*/
 		    { command: { text: "Save", name: "Save", click: onSave }, title: " ", width: "10%"}
         ],
         create: true,
