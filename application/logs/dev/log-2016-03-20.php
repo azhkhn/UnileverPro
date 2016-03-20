@@ -12685,3 +12685,4281 @@ INFO - 2016-03-20 02:43:09 --> Form Validation Class Initialized
 INFO - 2016-03-20 02:43:09 --> Language file loaded: language/english/auth_lang.php
 DEBUG - 2016-03-20 02:43:09 --> Language_loader...
 INFO - 2016-03-20 02:43:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:56:28 --> Config Class Initialized
+INFO - 2016-03-20 02:56:28 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:28 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:28 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:28 --> URI Class Initialized
+INFO - 2016-03-20 02:56:28 --> Router Class Initialized
+INFO - 2016-03-20 02:56:28 --> Output Class Initialized
+INFO - 2016-03-20 02:56:28 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:28 --> Input Class Initialized
+INFO - 2016-03-20 02:56:28 --> Language Class Initialized
+INFO - 2016-03-20 02:56:28 --> Loader Class Initialized
+INFO - 2016-03-20 02:56:28 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:56:28 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:56:28 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:56:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:56:29 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:56:29 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:56:29 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:56:29 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:56:29 --> Email Class Initialized
+INFO - 2016-03-20 02:56:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:56:29 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:56:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:56:29 --> Model Class Initialized
+INFO - 2016-03-20 02:56:29 --> Model Class Initialized
+INFO - 2016-03-20 02:56:29 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:56:29 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:56:29 --> Language_loader...
+INFO - 2016-03-20 02:56:29 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:56:29 --> Model Class Initialized
+INFO - 2016-03-20 02:56:29 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 02:56:29 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 02:56:29 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 02:56:29 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 02:56:29 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 02:56:29 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 02:56:29 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 02:56:29 --> Final output sent to browser
+DEBUG - 2016-03-20 02:56:29 --> Total execution time: 1.5131
+INFO - 2016-03-20 02:56:32 --> Config Class Initialized
+INFO - 2016-03-20 02:56:32 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:32 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:32 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:32 --> URI Class Initialized
+INFO - 2016-03-20 02:56:32 --> Router Class Initialized
+INFO - 2016-03-20 02:56:32 --> Output Class Initialized
+INFO - 2016-03-20 02:56:32 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:32 --> Input Class Initialized
+INFO - 2016-03-20 02:56:32 --> Language Class Initialized
+ERROR - 2016-03-20 02:56:32 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 02:56:35 --> Config Class Initialized
+INFO - 2016-03-20 02:56:35 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:35 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:35 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:35 --> URI Class Initialized
+INFO - 2016-03-20 02:56:35 --> Router Class Initialized
+INFO - 2016-03-20 02:56:35 --> Output Class Initialized
+INFO - 2016-03-20 02:56:35 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:35 --> Input Class Initialized
+INFO - 2016-03-20 02:56:35 --> Language Class Initialized
+ERROR - 2016-03-20 02:56:35 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 02:56:35 --> Config Class Initialized
+INFO - 2016-03-20 02:56:35 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:35 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:35 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:35 --> URI Class Initialized
+INFO - 2016-03-20 02:56:35 --> Router Class Initialized
+INFO - 2016-03-20 02:56:35 --> Output Class Initialized
+INFO - 2016-03-20 02:56:35 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:35 --> Input Class Initialized
+INFO - 2016-03-20 02:56:35 --> Language Class Initialized
+INFO - 2016-03-20 02:56:35 --> Loader Class Initialized
+INFO - 2016-03-20 02:56:35 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:56:35 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:56:35 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:56:36 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:56:36 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:56:36 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:56:36 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:56:36 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:56:36 --> Email Class Initialized
+INFO - 2016-03-20 02:56:36 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:56:36 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:56:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:56:36 --> Model Class Initialized
+INFO - 2016-03-20 02:56:36 --> Model Class Initialized
+INFO - 2016-03-20 02:56:36 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:56:36 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:56:36 --> Language_loader...
+INFO - 2016-03-20 02:56:36 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:56:36 --> Model Class Initialized
+INFO - 2016-03-20 02:56:36 --> Model Class Initialized
+INFO - 2016-03-20 02:56:36 --> Model Class Initialized
+INFO - 2016-03-20 02:56:37 --> Final output sent to browser
+DEBUG - 2016-03-20 02:56:37 --> Total execution time: 1.2445
+INFO - 2016-03-20 02:56:37 --> Config Class Initialized
+INFO - 2016-03-20 02:56:37 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:37 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:37 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:37 --> URI Class Initialized
+INFO - 2016-03-20 02:56:37 --> Router Class Initialized
+INFO - 2016-03-20 02:56:37 --> Output Class Initialized
+INFO - 2016-03-20 02:56:37 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:37 --> Input Class Initialized
+INFO - 2016-03-20 02:56:37 --> Language Class Initialized
+INFO - 2016-03-20 02:56:37 --> Loader Class Initialized
+INFO - 2016-03-20 02:56:37 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:56:37 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:56:37 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:56:37 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:56:37 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:56:37 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:56:37 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:56:37 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:56:37 --> Email Class Initialized
+INFO - 2016-03-20 02:56:37 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:56:37 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:56:37 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:56:37 --> Model Class Initialized
+INFO - 2016-03-20 02:56:37 --> Model Class Initialized
+INFO - 2016-03-20 02:56:37 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:56:37 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:56:38 --> Language_loader...
+INFO - 2016-03-20 02:56:38 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:56:38 --> Model Class Initialized
+INFO - 2016-03-20 02:56:38 --> Helper loaded: app_helper
+INFO - 2016-03-20 02:56:38 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 02:56:38 --> Pagination Class Initialized
+INFO - 2016-03-20 02:56:38 --> Final output sent to browser
+DEBUG - 2016-03-20 02:56:38 --> Total execution time: 1.3259
+INFO - 2016-03-20 02:56:38 --> Config Class Initialized
+INFO - 2016-03-20 02:56:38 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:38 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:38 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:38 --> URI Class Initialized
+INFO - 2016-03-20 02:56:38 --> Router Class Initialized
+INFO - 2016-03-20 02:56:38 --> Output Class Initialized
+INFO - 2016-03-20 02:56:38 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:38 --> Input Class Initialized
+INFO - 2016-03-20 02:56:38 --> Language Class Initialized
+INFO - 2016-03-20 02:56:38 --> Loader Class Initialized
+INFO - 2016-03-20 02:56:38 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:56:38 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:56:38 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:56:39 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:56:39 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:56:39 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:56:39 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:56:39 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:56:39 --> Email Class Initialized
+INFO - 2016-03-20 02:56:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:56:39 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:56:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:56:39 --> Model Class Initialized
+INFO - 2016-03-20 02:56:39 --> Model Class Initialized
+INFO - 2016-03-20 02:56:39 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:56:39 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:56:39 --> Language_loader...
+INFO - 2016-03-20 02:56:39 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:56:39 --> Model Class Initialized
+INFO - 2016-03-20 02:56:39 --> Final output sent to browser
+DEBUG - 2016-03-20 02:56:39 --> Total execution time: 1.0271
+INFO - 2016-03-20 02:56:39 --> Config Class Initialized
+INFO - 2016-03-20 02:56:39 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:39 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:39 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:39 --> URI Class Initialized
+INFO - 2016-03-20 02:56:39 --> Router Class Initialized
+INFO - 2016-03-20 02:56:39 --> Output Class Initialized
+INFO - 2016-03-20 02:56:39 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:39 --> Input Class Initialized
+INFO - 2016-03-20 02:56:39 --> Language Class Initialized
+INFO - 2016-03-20 02:56:39 --> Loader Class Initialized
+INFO - 2016-03-20 02:56:39 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:56:39 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:56:39 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:56:40 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:56:40 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:56:40 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:56:40 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:56:40 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:56:40 --> Email Class Initialized
+INFO - 2016-03-20 02:56:40 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:56:40 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:56:40 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:56:40 --> Model Class Initialized
+INFO - 2016-03-20 02:56:40 --> Model Class Initialized
+INFO - 2016-03-20 02:56:40 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:56:40 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:56:40 --> Language_loader...
+INFO - 2016-03-20 02:56:40 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:56:40 --> Model Class Initialized
+INFO - 2016-03-20 02:56:40 --> Final output sent to browser
+DEBUG - 2016-03-20 02:56:40 --> Total execution time: 0.9978
+INFO - 2016-03-20 02:56:51 --> Config Class Initialized
+INFO - 2016-03-20 02:56:51 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:51 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:51 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:51 --> URI Class Initialized
+INFO - 2016-03-20 02:56:51 --> Router Class Initialized
+INFO - 2016-03-20 02:56:51 --> Output Class Initialized
+INFO - 2016-03-20 02:56:51 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:51 --> Input Class Initialized
+INFO - 2016-03-20 02:56:51 --> Language Class Initialized
+INFO - 2016-03-20 02:56:51 --> Loader Class Initialized
+INFO - 2016-03-20 02:56:51 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:56:51 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:56:51 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:56:51 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:56:51 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:56:51 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:56:51 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:56:51 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:56:51 --> Email Class Initialized
+INFO - 2016-03-20 02:56:51 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:56:51 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:56:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:56:51 --> Model Class Initialized
+INFO - 2016-03-20 02:56:51 --> Model Class Initialized
+INFO - 2016-03-20 02:56:51 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:56:51 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:56:51 --> Language_loader...
+INFO - 2016-03-20 02:56:51 --> Language file loaded: language/english/unilever_lang.php
+ERROR - 2016-03-20 02:56:51 --> Severity: Notice --> Undefined property: Supervisor::$Daosale /home/ubuntu/workspace/application/controllers/Supervisor.php 183
+INFO - 2016-03-20 02:56:58 --> Config Class Initialized
+INFO - 2016-03-20 02:56:58 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:56:58 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:56:58 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:56:58 --> URI Class Initialized
+INFO - 2016-03-20 02:56:58 --> Router Class Initialized
+INFO - 2016-03-20 02:56:58 --> Output Class Initialized
+INFO - 2016-03-20 02:56:58 --> Security Class Initialized
+DEBUG - 2016-03-20 02:56:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:56:58 --> Input Class Initialized
+INFO - 2016-03-20 02:56:58 --> Language Class Initialized
+INFO - 2016-03-20 02:56:58 --> Loader Class Initialized
+INFO - 2016-03-20 02:56:58 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:56:58 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:56:58 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:56:58 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:56:58 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:56:58 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:56:58 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:56:58 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:56:58 --> Email Class Initialized
+INFO - 2016-03-20 02:56:58 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:56:58 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:56:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:56:58 --> Model Class Initialized
+INFO - 2016-03-20 02:56:58 --> Model Class Initialized
+INFO - 2016-03-20 02:56:58 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:56:58 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:56:58 --> Language_loader...
+INFO - 2016-03-20 02:56:58 --> Language file loaded: language/english/unilever_lang.php
+ERROR - 2016-03-20 02:56:58 --> Severity: Notice --> Undefined property: Supervisor::$Daosale /home/ubuntu/workspace/application/controllers/Supervisor.php 183
+INFO - 2016-03-20 02:57:58 --> Config Class Initialized
+INFO - 2016-03-20 02:57:58 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:57:58 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:57:58 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:57:58 --> URI Class Initialized
+DEBUG - 2016-03-20 02:57:58 --> No URI present. Default controller set.
+INFO - 2016-03-20 02:57:58 --> Router Class Initialized
+INFO - 2016-03-20 02:57:58 --> Output Class Initialized
+INFO - 2016-03-20 02:57:58 --> Security Class Initialized
+DEBUG - 2016-03-20 02:57:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:57:58 --> Input Class Initialized
+INFO - 2016-03-20 02:57:58 --> Language Class Initialized
+INFO - 2016-03-20 02:57:58 --> Loader Class Initialized
+INFO - 2016-03-20 02:57:58 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:57:58 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:57:58 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:57:59 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:57:59 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:57:59 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:57:59 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:57:59 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:57:59 --> Email Class Initialized
+INFO - 2016-03-20 02:57:59 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:57:59 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:57:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:57:59 --> Model Class Initialized
+INFO - 2016-03-20 02:57:59 --> Model Class Initialized
+INFO - 2016-03-20 02:57:59 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:57:59 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:57:59 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:57:59 --> Helper loaded: form_helper
+INFO - 2016-03-20 02:57:59 --> Form Validation Class Initialized
+INFO - 2016-03-20 02:57:59 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 02:57:59 --> Language_loader...
+INFO - 2016-03-20 02:57:59 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:58:15 --> Config Class Initialized
+INFO - 2016-03-20 02:58:15 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:58:15 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:58:15 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:58:15 --> URI Class Initialized
+INFO - 2016-03-20 02:58:15 --> Router Class Initialized
+INFO - 2016-03-20 02:58:15 --> Output Class Initialized
+INFO - 2016-03-20 02:58:15 --> Security Class Initialized
+DEBUG - 2016-03-20 02:58:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:58:15 --> Input Class Initialized
+INFO - 2016-03-20 02:58:15 --> Language Class Initialized
+INFO - 2016-03-20 02:58:15 --> Loader Class Initialized
+INFO - 2016-03-20 02:58:15 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:58:15 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:58:15 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:58:15 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:58:15 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:58:15 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:58:15 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:58:15 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:58:15 --> Email Class Initialized
+INFO - 2016-03-20 02:58:15 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:58:15 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:58:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:58:15 --> Model Class Initialized
+INFO - 2016-03-20 02:58:15 --> Model Class Initialized
+INFO - 2016-03-20 02:58:15 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:58:15 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:58:16 --> Language_loader...
+INFO - 2016-03-20 02:58:16 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:58:16 --> Model Class Initialized
+INFO - 2016-03-20 02:58:16 --> Final output sent to browser
+DEBUG - 2016-03-20 02:58:16 --> Total execution time: 1.0277
+INFO - 2016-03-20 02:59:09 --> Config Class Initialized
+INFO - 2016-03-20 02:59:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 02:59:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 02:59:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 02:59:09 --> URI Class Initialized
+INFO - 2016-03-20 02:59:09 --> Router Class Initialized
+INFO - 2016-03-20 02:59:09 --> Output Class Initialized
+INFO - 2016-03-20 02:59:09 --> Security Class Initialized
+DEBUG - 2016-03-20 02:59:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 02:59:09 --> Input Class Initialized
+INFO - 2016-03-20 02:59:09 --> Language Class Initialized
+INFO - 2016-03-20 02:59:09 --> Loader Class Initialized
+INFO - 2016-03-20 02:59:09 --> Helper loaded: url_helper
+INFO - 2016-03-20 02:59:09 --> Helper loaded: language_helper
+INFO - 2016-03-20 02:59:09 --> Database Driver Class Initialized
+INFO - 2016-03-20 02:59:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 02:59:09 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 02:59:09 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 02:59:09 --> Encryption Class Initialized
+DEBUG - 2016-03-20 02:59:09 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 02:59:09 --> Email Class Initialized
+INFO - 2016-03-20 02:59:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 02:59:09 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 02:59:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 02:59:09 --> Model Class Initialized
+INFO - 2016-03-20 02:59:09 --> Model Class Initialized
+INFO - 2016-03-20 02:59:09 --> Helper loaded: date_helper
+INFO - 2016-03-20 02:59:09 --> Controller Class Initialized
+DEBUG - 2016-03-20 02:59:09 --> Language_loader...
+INFO - 2016-03-20 02:59:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 02:59:09 --> Model Class Initialized
+INFO - 2016-03-20 02:59:10 --> Final output sent to browser
+DEBUG - 2016-03-20 02:59:10 --> Total execution time: 1.0018
+INFO - 2016-03-20 03:01:04 --> Config Class Initialized
+INFO - 2016-03-20 03:01:04 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:04 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:04 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:04 --> URI Class Initialized
+INFO - 2016-03-20 03:01:04 --> Router Class Initialized
+INFO - 2016-03-20 03:01:04 --> Output Class Initialized
+INFO - 2016-03-20 03:01:04 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:04 --> Input Class Initialized
+INFO - 2016-03-20 03:01:04 --> Language Class Initialized
+INFO - 2016-03-20 03:01:04 --> Loader Class Initialized
+INFO - 2016-03-20 03:01:04 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:01:04 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:01:04 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:01:04 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:01:04 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:01:04 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:01:04 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:01:04 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:01:04 --> Email Class Initialized
+INFO - 2016-03-20 03:01:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:01:04 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:01:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:01:04 --> Model Class Initialized
+INFO - 2016-03-20 03:01:04 --> Model Class Initialized
+INFO - 2016-03-20 03:01:04 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:01:04 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:01:04 --> Language_loader...
+INFO - 2016-03-20 03:01:04 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:01:04 --> Model Class Initialized
+INFO - 2016-03-20 03:01:05 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 03:01:05 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 03:01:05 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 03:01:05 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 03:01:05 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 03:01:05 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 03:01:05 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 03:01:05 --> Final output sent to browser
+DEBUG - 2016-03-20 03:01:05 --> Total execution time: 1.3416
+INFO - 2016-03-20 03:01:08 --> Config Class Initialized
+INFO - 2016-03-20 03:01:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:08 --> URI Class Initialized
+INFO - 2016-03-20 03:01:08 --> Router Class Initialized
+INFO - 2016-03-20 03:01:08 --> Output Class Initialized
+INFO - 2016-03-20 03:01:08 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:08 --> Input Class Initialized
+INFO - 2016-03-20 03:01:08 --> Language Class Initialized
+ERROR - 2016-03-20 03:01:08 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:01:08 --> Config Class Initialized
+INFO - 2016-03-20 03:01:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:08 --> URI Class Initialized
+INFO - 2016-03-20 03:01:08 --> Router Class Initialized
+INFO - 2016-03-20 03:01:08 --> Output Class Initialized
+INFO - 2016-03-20 03:01:08 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:08 --> Input Class Initialized
+INFO - 2016-03-20 03:01:08 --> Language Class Initialized
+ERROR - 2016-03-20 03:01:08 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:01:26 --> Config Class Initialized
+INFO - 2016-03-20 03:01:26 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:26 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:26 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:26 --> URI Class Initialized
+INFO - 2016-03-20 03:01:26 --> Router Class Initialized
+INFO - 2016-03-20 03:01:26 --> Output Class Initialized
+INFO - 2016-03-20 03:01:26 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:26 --> Input Class Initialized
+INFO - 2016-03-20 03:01:26 --> Language Class Initialized
+INFO - 2016-03-20 03:01:26 --> Loader Class Initialized
+INFO - 2016-03-20 03:01:26 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:01:26 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:01:26 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:01:27 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:01:27 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:01:27 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:01:27 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:01:27 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:01:27 --> Email Class Initialized
+INFO - 2016-03-20 03:01:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:01:27 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:01:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:01:27 --> Model Class Initialized
+INFO - 2016-03-20 03:01:27 --> Model Class Initialized
+INFO - 2016-03-20 03:01:27 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:01:27 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:01:27 --> Language_loader...
+INFO - 2016-03-20 03:01:27 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:01:27 --> Model Class Initialized
+INFO - 2016-03-20 03:01:27 --> Model Class Initialized
+INFO - 2016-03-20 03:01:27 --> Model Class Initialized
+INFO - 2016-03-20 03:01:28 --> Final output sent to browser
+DEBUG - 2016-03-20 03:01:28 --> Total execution time: 2.1832
+INFO - 2016-03-20 03:01:28 --> Config Class Initialized
+INFO - 2016-03-20 03:01:28 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:28 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:28 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:28 --> URI Class Initialized
+INFO - 2016-03-20 03:01:28 --> Router Class Initialized
+INFO - 2016-03-20 03:01:28 --> Output Class Initialized
+INFO - 2016-03-20 03:01:28 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:28 --> Input Class Initialized
+INFO - 2016-03-20 03:01:28 --> Language Class Initialized
+INFO - 2016-03-20 03:01:28 --> Loader Class Initialized
+INFO - 2016-03-20 03:01:28 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:01:28 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:01:28 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:01:28 --> Config Class Initialized
+INFO - 2016-03-20 03:01:28 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:28 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:28 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:28 --> URI Class Initialized
+INFO - 2016-03-20 03:01:28 --> Router Class Initialized
+INFO - 2016-03-20 03:01:28 --> Output Class Initialized
+INFO - 2016-03-20 03:01:28 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:28 --> Input Class Initialized
+INFO - 2016-03-20 03:01:28 --> Language Class Initialized
+INFO - 2016-03-20 03:01:28 --> Loader Class Initialized
+INFO - 2016-03-20 03:01:28 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:01:28 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:01:28 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:01:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:01:29 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:01:29 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:01:29 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:01:29 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:01:29 --> Email Class Initialized
+INFO - 2016-03-20 03:01:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:01:29 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:01:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:01:29 --> Model Class Initialized
+INFO - 2016-03-20 03:01:29 --> Model Class Initialized
+INFO - 2016-03-20 03:01:29 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:01:29 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:01:29 --> Language_loader...
+INFO - 2016-03-20 03:01:29 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:01:29 --> Model Class Initialized
+INFO - 2016-03-20 03:01:29 --> Helper loaded: app_helper
+INFO - 2016-03-20 03:01:29 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 03:01:29 --> Pagination Class Initialized
+INFO - 2016-03-20 03:01:29 --> Final output sent to browser
+DEBUG - 2016-03-20 03:01:29 --> Total execution time: 1.3539
+INFO - 2016-03-20 03:01:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:01:29 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:01:29 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:01:29 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:01:29 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:01:29 --> Email Class Initialized
+INFO - 2016-03-20 03:01:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:01:29 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:01:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:01:29 --> Model Class Initialized
+INFO - 2016-03-20 03:01:29 --> Model Class Initialized
+INFO - 2016-03-20 03:01:29 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:01:29 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:01:30 --> Language_loader...
+INFO - 2016-03-20 03:01:30 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:01:30 --> Model Class Initialized
+INFO - 2016-03-20 03:01:30 --> Final output sent to browser
+DEBUG - 2016-03-20 03:01:30 --> Total execution time: 1.5525
+INFO - 2016-03-20 03:01:35 --> Config Class Initialized
+INFO - 2016-03-20 03:01:35 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:35 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:35 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:35 --> URI Class Initialized
+INFO - 2016-03-20 03:01:35 --> Router Class Initialized
+INFO - 2016-03-20 03:01:35 --> Output Class Initialized
+INFO - 2016-03-20 03:01:35 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:35 --> Input Class Initialized
+INFO - 2016-03-20 03:01:35 --> Language Class Initialized
+INFO - 2016-03-20 03:01:35 --> Loader Class Initialized
+INFO - 2016-03-20 03:01:35 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:01:35 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:01:35 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:01:35 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:01:35 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:01:35 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:01:35 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:01:35 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:01:35 --> Email Class Initialized
+INFO - 2016-03-20 03:01:35 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:01:35 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:01:35 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:01:35 --> Model Class Initialized
+INFO - 2016-03-20 03:01:35 --> Model Class Initialized
+INFO - 2016-03-20 03:01:35 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:01:35 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:01:36 --> Language_loader...
+INFO - 2016-03-20 03:01:36 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:01:36 --> Model Class Initialized
+INFO - 2016-03-20 03:01:36 --> Final output sent to browser
+DEBUG - 2016-03-20 03:01:36 --> Total execution time: 0.9980
+INFO - 2016-03-20 03:01:41 --> Config Class Initialized
+INFO - 2016-03-20 03:01:41 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:01:41 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:01:41 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:01:41 --> URI Class Initialized
+INFO - 2016-03-20 03:01:41 --> Router Class Initialized
+INFO - 2016-03-20 03:01:41 --> Output Class Initialized
+INFO - 2016-03-20 03:01:41 --> Security Class Initialized
+DEBUG - 2016-03-20 03:01:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:01:41 --> Input Class Initialized
+INFO - 2016-03-20 03:01:41 --> Language Class Initialized
+INFO - 2016-03-20 03:01:41 --> Loader Class Initialized
+INFO - 2016-03-20 03:01:41 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:01:41 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:01:41 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:01:41 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:01:41 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:01:41 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:01:41 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:01:41 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:01:41 --> Email Class Initialized
+INFO - 2016-03-20 03:01:41 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:01:41 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:01:41 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:01:41 --> Model Class Initialized
+INFO - 2016-03-20 03:01:41 --> Model Class Initialized
+INFO - 2016-03-20 03:01:41 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:01:41 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:01:41 --> Language_loader...
+INFO - 2016-03-20 03:01:41 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:01:41 --> Model Class Initialized
+INFO - 2016-03-20 03:01:42 --> Final output sent to browser
+DEBUG - 2016-03-20 03:01:42 --> Total execution time: 0.9967
+INFO - 2016-03-20 03:02:56 --> Config Class Initialized
+INFO - 2016-03-20 03:02:56 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:02:56 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:02:56 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:02:56 --> URI Class Initialized
+INFO - 2016-03-20 03:02:56 --> Router Class Initialized
+INFO - 2016-03-20 03:02:56 --> Output Class Initialized
+INFO - 2016-03-20 03:02:56 --> Security Class Initialized
+DEBUG - 2016-03-20 03:02:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:02:56 --> Input Class Initialized
+INFO - 2016-03-20 03:02:56 --> Language Class Initialized
+INFO - 2016-03-20 03:02:56 --> Loader Class Initialized
+INFO - 2016-03-20 03:02:56 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:02:56 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:02:56 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:02:57 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:02:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:02:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:02:57 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:02:57 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:02:57 --> Email Class Initialized
+INFO - 2016-03-20 03:02:57 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:02:57 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:02:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:02:57 --> Model Class Initialized
+INFO - 2016-03-20 03:02:57 --> Model Class Initialized
+INFO - 2016-03-20 03:02:57 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:02:57 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:02:57 --> Language_loader...
+INFO - 2016-03-20 03:02:57 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:02:57 --> Model Class Initialized
+INFO - 2016-03-20 03:02:57 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 03:02:57 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 03:02:57 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 03:02:57 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 03:02:57 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 03:02:57 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 03:02:57 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 03:02:57 --> Final output sent to browser
+DEBUG - 2016-03-20 03:02:57 --> Total execution time: 1.3375
+INFO - 2016-03-20 03:03:00 --> Config Class Initialized
+INFO - 2016-03-20 03:03:00 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:00 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:00 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:00 --> URI Class Initialized
+INFO - 2016-03-20 03:03:00 --> Router Class Initialized
+INFO - 2016-03-20 03:03:00 --> Output Class Initialized
+INFO - 2016-03-20 03:03:00 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:00 --> Input Class Initialized
+INFO - 2016-03-20 03:03:00 --> Language Class Initialized
+ERROR - 2016-03-20 03:03:00 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:03:00 --> Config Class Initialized
+INFO - 2016-03-20 03:03:00 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:00 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:00 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:00 --> URI Class Initialized
+INFO - 2016-03-20 03:03:00 --> Router Class Initialized
+INFO - 2016-03-20 03:03:00 --> Output Class Initialized
+INFO - 2016-03-20 03:03:00 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:00 --> Input Class Initialized
+INFO - 2016-03-20 03:03:00 --> Language Class Initialized
+ERROR - 2016-03-20 03:03:00 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:03:08 --> Config Class Initialized
+INFO - 2016-03-20 03:03:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:08 --> URI Class Initialized
+INFO - 2016-03-20 03:03:08 --> Router Class Initialized
+INFO - 2016-03-20 03:03:08 --> Output Class Initialized
+INFO - 2016-03-20 03:03:08 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:08 --> Input Class Initialized
+INFO - 2016-03-20 03:03:08 --> Language Class Initialized
+INFO - 2016-03-20 03:03:08 --> Loader Class Initialized
+INFO - 2016-03-20 03:03:08 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:03:08 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:03:08 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:03:08 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:03:08 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:03:08 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:03:08 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:03:08 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:03:08 --> Email Class Initialized
+INFO - 2016-03-20 03:03:08 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:03:08 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:03:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:03:08 --> Model Class Initialized
+INFO - 2016-03-20 03:03:08 --> Model Class Initialized
+INFO - 2016-03-20 03:03:08 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:03:08 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:03:09 --> Language_loader...
+INFO - 2016-03-20 03:03:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:03:09 --> Model Class Initialized
+INFO - 2016-03-20 03:03:09 --> Model Class Initialized
+INFO - 2016-03-20 03:03:09 --> Model Class Initialized
+INFO - 2016-03-20 03:03:09 --> Final output sent to browser
+DEBUG - 2016-03-20 03:03:09 --> Total execution time: 1.5910
+INFO - 2016-03-20 03:03:09 --> Config Class Initialized
+INFO - 2016-03-20 03:03:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:09 --> URI Class Initialized
+INFO - 2016-03-20 03:03:09 --> Router Class Initialized
+INFO - 2016-03-20 03:03:09 --> Output Class Initialized
+INFO - 2016-03-20 03:03:09 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:09 --> Input Class Initialized
+INFO - 2016-03-20 03:03:09 --> Language Class Initialized
+INFO - 2016-03-20 03:03:09 --> Loader Class Initialized
+INFO - 2016-03-20 03:03:09 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:03:09 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:03:09 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:03:10 --> Config Class Initialized
+INFO - 2016-03-20 03:03:10 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:10 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:10 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:10 --> URI Class Initialized
+INFO - 2016-03-20 03:03:10 --> Router Class Initialized
+INFO - 2016-03-20 03:03:10 --> Output Class Initialized
+INFO - 2016-03-20 03:03:10 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:10 --> Input Class Initialized
+INFO - 2016-03-20 03:03:10 --> Language Class Initialized
+INFO - 2016-03-20 03:03:10 --> Loader Class Initialized
+INFO - 2016-03-20 03:03:10 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:03:10 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:03:10 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:03:10 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:03:10 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:03:10 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:03:10 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:03:10 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:03:10 --> Email Class Initialized
+INFO - 2016-03-20 03:03:10 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:03:10 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:03:10 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:03:10 --> Model Class Initialized
+INFO - 2016-03-20 03:03:10 --> Model Class Initialized
+INFO - 2016-03-20 03:03:10 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:03:10 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:03:10 --> Language_loader...
+INFO - 2016-03-20 03:03:10 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:03:10 --> Model Class Initialized
+INFO - 2016-03-20 03:03:11 --> Helper loaded: app_helper
+INFO - 2016-03-20 03:03:11 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 03:03:11 --> Pagination Class Initialized
+INFO - 2016-03-20 03:03:11 --> Final output sent to browser
+DEBUG - 2016-03-20 03:03:11 --> Total execution time: 1.5319
+INFO - 2016-03-20 03:03:15 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:03:15 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:03:15 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:03:15 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:03:15 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:03:15 --> Email Class Initialized
+INFO - 2016-03-20 03:03:15 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:03:15 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:03:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:03:15 --> Model Class Initialized
+INFO - 2016-03-20 03:03:15 --> Model Class Initialized
+INFO - 2016-03-20 03:03:15 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:03:15 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:03:15 --> Language_loader...
+INFO - 2016-03-20 03:03:15 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:03:15 --> Model Class Initialized
+INFO - 2016-03-20 03:03:15 --> Final output sent to browser
+DEBUG - 2016-03-20 03:03:15 --> Total execution time: 5.8171
+INFO - 2016-03-20 03:03:16 --> Config Class Initialized
+INFO - 2016-03-20 03:03:16 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:16 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:16 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:16 --> URI Class Initialized
+INFO - 2016-03-20 03:03:16 --> Router Class Initialized
+INFO - 2016-03-20 03:03:16 --> Output Class Initialized
+INFO - 2016-03-20 03:03:16 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:16 --> Input Class Initialized
+INFO - 2016-03-20 03:03:16 --> Language Class Initialized
+INFO - 2016-03-20 03:03:16 --> Loader Class Initialized
+INFO - 2016-03-20 03:03:16 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:03:16 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:03:16 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:03:16 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:03:16 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:03:16 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:03:16 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:03:16 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:03:16 --> Email Class Initialized
+INFO - 2016-03-20 03:03:16 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:03:16 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:03:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:03:16 --> Model Class Initialized
+INFO - 2016-03-20 03:03:16 --> Model Class Initialized
+INFO - 2016-03-20 03:03:16 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:03:16 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:03:16 --> Language_loader...
+INFO - 2016-03-20 03:03:16 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:03:16 --> Model Class Initialized
+INFO - 2016-03-20 03:03:17 --> Final output sent to browser
+DEBUG - 2016-03-20 03:03:17 --> Total execution time: 1.0070
+INFO - 2016-03-20 03:03:28 --> Config Class Initialized
+INFO - 2016-03-20 03:03:28 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:28 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:28 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:28 --> URI Class Initialized
+INFO - 2016-03-20 03:03:28 --> Router Class Initialized
+INFO - 2016-03-20 03:03:28 --> Output Class Initialized
+INFO - 2016-03-20 03:03:28 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:28 --> Input Class Initialized
+INFO - 2016-03-20 03:03:28 --> Language Class Initialized
+INFO - 2016-03-20 03:03:28 --> Loader Class Initialized
+INFO - 2016-03-20 03:03:28 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:03:28 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:03:28 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:03:28 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:03:28 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:03:28 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:03:28 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:03:28 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:03:28 --> Email Class Initialized
+INFO - 2016-03-20 03:03:28 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:03:28 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:03:28 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:03:28 --> Model Class Initialized
+INFO - 2016-03-20 03:03:28 --> Model Class Initialized
+INFO - 2016-03-20 03:03:28 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:03:28 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:03:28 --> Language_loader...
+INFO - 2016-03-20 03:03:28 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:03:28 --> Model Class Initialized
+INFO - 2016-03-20 03:03:29 --> Final output sent to browser
+DEBUG - 2016-03-20 03:03:29 --> Total execution time: 0.9959
+INFO - 2016-03-20 03:03:42 --> Config Class Initialized
+INFO - 2016-03-20 03:03:42 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:42 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:42 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:42 --> URI Class Initialized
+INFO - 2016-03-20 03:03:42 --> Router Class Initialized
+INFO - 2016-03-20 03:03:42 --> Output Class Initialized
+INFO - 2016-03-20 03:03:42 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:42 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:42 --> Input Class Initialized
+INFO - 2016-03-20 03:03:42 --> Language Class Initialized
+INFO - 2016-03-20 03:03:42 --> Loader Class Initialized
+INFO - 2016-03-20 03:03:42 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:03:42 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:03:42 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:03:42 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:03:42 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:03:42 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:03:42 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:03:42 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:03:42 --> Email Class Initialized
+INFO - 2016-03-20 03:03:42 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:03:42 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:03:42 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:03:42 --> Model Class Initialized
+INFO - 2016-03-20 03:03:42 --> Model Class Initialized
+INFO - 2016-03-20 03:03:42 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:03:42 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:03:42 --> Language_loader...
+INFO - 2016-03-20 03:03:42 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:03:42 --> Model Class Initialized
+INFO - 2016-03-20 03:03:43 --> Final output sent to browser
+DEBUG - 2016-03-20 03:03:43 --> Total execution time: 0.9947
+INFO - 2016-03-20 03:03:50 --> Config Class Initialized
+INFO - 2016-03-20 03:03:50 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:03:50 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:03:50 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:03:50 --> URI Class Initialized
+INFO - 2016-03-20 03:03:50 --> Router Class Initialized
+INFO - 2016-03-20 03:03:50 --> Output Class Initialized
+INFO - 2016-03-20 03:03:50 --> Security Class Initialized
+DEBUG - 2016-03-20 03:03:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:03:50 --> Input Class Initialized
+INFO - 2016-03-20 03:03:50 --> Language Class Initialized
+INFO - 2016-03-20 03:03:50 --> Loader Class Initialized
+INFO - 2016-03-20 03:03:50 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:03:50 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:03:50 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:03:50 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:03:50 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:03:50 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:03:50 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:03:50 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:03:50 --> Email Class Initialized
+INFO - 2016-03-20 03:03:50 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:03:50 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:03:50 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:03:50 --> Model Class Initialized
+INFO - 2016-03-20 03:03:50 --> Model Class Initialized
+INFO - 2016-03-20 03:03:50 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:03:50 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:03:50 --> Language_loader...
+INFO - 2016-03-20 03:03:50 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:03:50 --> Model Class Initialized
+INFO - 2016-03-20 03:03:51 --> Final output sent to browser
+DEBUG - 2016-03-20 03:03:51 --> Total execution time: 0.9921
+INFO - 2016-03-20 03:04:04 --> Config Class Initialized
+INFO - 2016-03-20 03:04:04 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:04:04 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:04:04 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:04:04 --> URI Class Initialized
+INFO - 2016-03-20 03:04:04 --> Router Class Initialized
+INFO - 2016-03-20 03:04:04 --> Output Class Initialized
+INFO - 2016-03-20 03:04:04 --> Security Class Initialized
+DEBUG - 2016-03-20 03:04:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:04:04 --> Input Class Initialized
+INFO - 2016-03-20 03:04:04 --> Language Class Initialized
+INFO - 2016-03-20 03:04:04 --> Loader Class Initialized
+INFO - 2016-03-20 03:04:04 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:04:04 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:04:04 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:04:04 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:04:04 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:04:04 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:04:04 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:04:04 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:04:04 --> Email Class Initialized
+INFO - 2016-03-20 03:04:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:04:04 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:04:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:04:04 --> Model Class Initialized
+INFO - 2016-03-20 03:04:04 --> Model Class Initialized
+INFO - 2016-03-20 03:04:04 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:04:04 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:04:04 --> Language_loader...
+INFO - 2016-03-20 03:04:04 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:04:04 --> Model Class Initialized
+INFO - 2016-03-20 03:04:05 --> Final output sent to browser
+DEBUG - 2016-03-20 03:04:05 --> Total execution time: 0.9925
+INFO - 2016-03-20 03:13:02 --> Config Class Initialized
+INFO - 2016-03-20 03:13:02 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:13:02 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:13:02 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:13:02 --> URI Class Initialized
+DEBUG - 2016-03-20 03:13:02 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:13:02 --> Router Class Initialized
+INFO - 2016-03-20 03:13:02 --> Output Class Initialized
+INFO - 2016-03-20 03:13:02 --> Security Class Initialized
+DEBUG - 2016-03-20 03:13:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:13:02 --> Input Class Initialized
+INFO - 2016-03-20 03:13:02 --> Language Class Initialized
+INFO - 2016-03-20 03:13:02 --> Loader Class Initialized
+INFO - 2016-03-20 03:13:02 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:13:02 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:13:02 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:13:02 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:13:02 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:13:02 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:13:02 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:13:02 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:13:02 --> Email Class Initialized
+INFO - 2016-03-20 03:13:02 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:13:02 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:13:02 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:02 --> Model Class Initialized
+INFO - 2016-03-20 03:13:02 --> Model Class Initialized
+INFO - 2016-03-20 03:13:02 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:13:02 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:13:02 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:02 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:13:02 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:13:02 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:13:02 --> Language_loader...
+INFO - 2016-03-20 03:13:02 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:13:03 --> Config Class Initialized
+INFO - 2016-03-20 03:13:03 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:13:03 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:13:03 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:13:03 --> URI Class Initialized
+DEBUG - 2016-03-20 03:13:03 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:13:03 --> Router Class Initialized
+INFO - 2016-03-20 03:13:03 --> Output Class Initialized
+INFO - 2016-03-20 03:13:03 --> Security Class Initialized
+DEBUG - 2016-03-20 03:13:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:13:03 --> Input Class Initialized
+INFO - 2016-03-20 03:13:03 --> Language Class Initialized
+INFO - 2016-03-20 03:13:03 --> Loader Class Initialized
+INFO - 2016-03-20 03:13:03 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:13:03 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:13:03 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:13:04 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:13:04 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:13:04 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:13:04 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:13:04 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:13:04 --> Email Class Initialized
+INFO - 2016-03-20 03:13:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:13:04 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:13:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:04 --> Model Class Initialized
+INFO - 2016-03-20 03:13:04 --> Model Class Initialized
+INFO - 2016-03-20 03:13:04 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:13:04 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:13:04 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:04 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:13:04 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:13:04 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:13:04 --> Language_loader...
+INFO - 2016-03-20 03:13:04 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:13:04 --> Config Class Initialized
+INFO - 2016-03-20 03:13:04 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:13:04 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:13:04 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:13:04 --> URI Class Initialized
+DEBUG - 2016-03-20 03:13:04 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:13:04 --> Router Class Initialized
+INFO - 2016-03-20 03:13:04 --> Output Class Initialized
+INFO - 2016-03-20 03:13:04 --> Security Class Initialized
+DEBUG - 2016-03-20 03:13:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:13:04 --> Input Class Initialized
+INFO - 2016-03-20 03:13:04 --> Language Class Initialized
+INFO - 2016-03-20 03:13:04 --> Loader Class Initialized
+INFO - 2016-03-20 03:13:04 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:13:04 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:13:04 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:13:05 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:13:05 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:13:05 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:13:05 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:13:05 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:13:05 --> Email Class Initialized
+INFO - 2016-03-20 03:13:05 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:13:05 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:13:05 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:05 --> Model Class Initialized
+INFO - 2016-03-20 03:13:05 --> Model Class Initialized
+INFO - 2016-03-20 03:13:05 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:13:05 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:13:05 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:05 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:13:05 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:13:05 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:13:05 --> Language_loader...
+INFO - 2016-03-20 03:13:05 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:13:09 --> Config Class Initialized
+INFO - 2016-03-20 03:13:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:13:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:13:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:13:09 --> URI Class Initialized
+DEBUG - 2016-03-20 03:13:09 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:13:09 --> Router Class Initialized
+INFO - 2016-03-20 03:13:09 --> Output Class Initialized
+INFO - 2016-03-20 03:13:09 --> Security Class Initialized
+DEBUG - 2016-03-20 03:13:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:13:09 --> Input Class Initialized
+INFO - 2016-03-20 03:13:09 --> Language Class Initialized
+INFO - 2016-03-20 03:13:09 --> Loader Class Initialized
+INFO - 2016-03-20 03:13:09 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:13:09 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:13:09 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:13:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:13:09 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:13:09 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:13:09 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:13:09 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:13:09 --> Email Class Initialized
+INFO - 2016-03-20 03:13:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:13:09 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:13:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:09 --> Model Class Initialized
+INFO - 2016-03-20 03:13:09 --> Model Class Initialized
+INFO - 2016-03-20 03:13:09 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:13:09 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:13:09 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:13:09 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:13:09 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:13:09 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:13:09 --> Language_loader...
+INFO - 2016-03-20 03:13:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:28:51 --> Config Class Initialized
+INFO - 2016-03-20 03:28:51 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:28:51 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:28:51 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:28:51 --> URI Class Initialized
+DEBUG - 2016-03-20 03:28:51 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:28:51 --> Router Class Initialized
+INFO - 2016-03-20 03:28:51 --> Output Class Initialized
+INFO - 2016-03-20 03:28:51 --> Security Class Initialized
+DEBUG - 2016-03-20 03:28:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:28:51 --> Input Class Initialized
+INFO - 2016-03-20 03:28:51 --> Language Class Initialized
+INFO - 2016-03-20 03:28:51 --> Loader Class Initialized
+INFO - 2016-03-20 03:28:51 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:28:51 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:28:51 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:28:51 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:28:51 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:28:51 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:28:51 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:28:51 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:28:51 --> Email Class Initialized
+INFO - 2016-03-20 03:28:51 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:28:51 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:28:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:51 --> Model Class Initialized
+INFO - 2016-03-20 03:28:51 --> Model Class Initialized
+INFO - 2016-03-20 03:28:51 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:28:51 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:28:51 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:51 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:28:51 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:28:51 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:28:51 --> Language_loader...
+INFO - 2016-03-20 03:28:51 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:28:52 --> Config Class Initialized
+INFO - 2016-03-20 03:28:52 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:28:52 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:28:52 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:28:52 --> URI Class Initialized
+DEBUG - 2016-03-20 03:28:52 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:28:52 --> Router Class Initialized
+INFO - 2016-03-20 03:28:52 --> Output Class Initialized
+INFO - 2016-03-20 03:28:52 --> Security Class Initialized
+DEBUG - 2016-03-20 03:28:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:28:52 --> Input Class Initialized
+INFO - 2016-03-20 03:28:52 --> Language Class Initialized
+INFO - 2016-03-20 03:28:52 --> Loader Class Initialized
+INFO - 2016-03-20 03:28:52 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:28:52 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:28:52 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:28:53 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:28:53 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:28:53 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:28:53 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:28:53 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:28:53 --> Email Class Initialized
+INFO - 2016-03-20 03:28:53 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:28:53 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:28:53 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:53 --> Model Class Initialized
+INFO - 2016-03-20 03:28:53 --> Model Class Initialized
+INFO - 2016-03-20 03:28:53 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:28:53 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:28:53 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:53 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:28:53 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:28:53 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:28:53 --> Language_loader...
+INFO - 2016-03-20 03:28:53 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:28:53 --> Config Class Initialized
+INFO - 2016-03-20 03:28:53 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:28:53 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:28:53 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:28:53 --> URI Class Initialized
+DEBUG - 2016-03-20 03:28:53 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:28:53 --> Router Class Initialized
+INFO - 2016-03-20 03:28:53 --> Output Class Initialized
+INFO - 2016-03-20 03:28:53 --> Security Class Initialized
+DEBUG - 2016-03-20 03:28:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:28:53 --> Input Class Initialized
+INFO - 2016-03-20 03:28:53 --> Language Class Initialized
+INFO - 2016-03-20 03:28:53 --> Loader Class Initialized
+INFO - 2016-03-20 03:28:53 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:28:53 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:28:53 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:28:54 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:28:54 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:28:54 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:28:54 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:28:54 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:28:54 --> Email Class Initialized
+INFO - 2016-03-20 03:28:54 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:28:54 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:28:54 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:54 --> Model Class Initialized
+INFO - 2016-03-20 03:28:54 --> Model Class Initialized
+INFO - 2016-03-20 03:28:54 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:28:54 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:28:54 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:54 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:28:54 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:28:54 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:28:54 --> Language_loader...
+INFO - 2016-03-20 03:28:54 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:28:58 --> Config Class Initialized
+INFO - 2016-03-20 03:28:58 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:28:58 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:28:58 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:28:58 --> URI Class Initialized
+DEBUG - 2016-03-20 03:28:58 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:28:58 --> Router Class Initialized
+INFO - 2016-03-20 03:28:58 --> Output Class Initialized
+INFO - 2016-03-20 03:28:58 --> Security Class Initialized
+DEBUG - 2016-03-20 03:28:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:28:58 --> Input Class Initialized
+INFO - 2016-03-20 03:28:58 --> Language Class Initialized
+INFO - 2016-03-20 03:28:58 --> Loader Class Initialized
+INFO - 2016-03-20 03:28:58 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:28:58 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:28:58 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:28:58 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:28:58 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:28:58 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:28:58 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:28:58 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:28:58 --> Email Class Initialized
+INFO - 2016-03-20 03:28:58 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:28:58 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:28:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:58 --> Model Class Initialized
+INFO - 2016-03-20 03:28:58 --> Model Class Initialized
+INFO - 2016-03-20 03:28:58 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:28:58 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:28:58 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:28:58 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:28:58 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:28:58 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:28:58 --> Language_loader...
+INFO - 2016-03-20 03:28:58 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:43:05 --> Config Class Initialized
+INFO - 2016-03-20 03:43:05 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:43:05 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:43:05 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:43:05 --> URI Class Initialized
+DEBUG - 2016-03-20 03:43:05 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:43:05 --> Router Class Initialized
+INFO - 2016-03-20 03:43:05 --> Output Class Initialized
+INFO - 2016-03-20 03:43:05 --> Security Class Initialized
+DEBUG - 2016-03-20 03:43:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:43:05 --> Input Class Initialized
+INFO - 2016-03-20 03:43:05 --> Language Class Initialized
+INFO - 2016-03-20 03:43:05 --> Loader Class Initialized
+INFO - 2016-03-20 03:43:05 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:43:05 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:43:05 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:43:05 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:43:05 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:43:05 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:43:05 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:43:05 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:43:05 --> Email Class Initialized
+INFO - 2016-03-20 03:43:05 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:43:05 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:43:05 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:05 --> Model Class Initialized
+INFO - 2016-03-20 03:43:05 --> Model Class Initialized
+INFO - 2016-03-20 03:43:05 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:43:05 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:43:05 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:05 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:43:05 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:43:05 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:43:05 --> Language_loader...
+INFO - 2016-03-20 03:43:05 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:43:06 --> Config Class Initialized
+INFO - 2016-03-20 03:43:06 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:43:06 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:43:06 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:43:06 --> URI Class Initialized
+DEBUG - 2016-03-20 03:43:06 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:43:06 --> Router Class Initialized
+INFO - 2016-03-20 03:43:06 --> Output Class Initialized
+INFO - 2016-03-20 03:43:06 --> Security Class Initialized
+DEBUG - 2016-03-20 03:43:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:43:06 --> Input Class Initialized
+INFO - 2016-03-20 03:43:06 --> Language Class Initialized
+INFO - 2016-03-20 03:43:06 --> Loader Class Initialized
+INFO - 2016-03-20 03:43:06 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:43:06 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:43:06 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:43:07 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:43:07 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:43:07 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:43:07 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:43:07 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:43:07 --> Email Class Initialized
+INFO - 2016-03-20 03:43:07 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:43:07 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:43:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:07 --> Model Class Initialized
+INFO - 2016-03-20 03:43:07 --> Model Class Initialized
+INFO - 2016-03-20 03:43:07 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:43:07 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:43:07 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:07 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:43:07 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:43:07 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:43:07 --> Language_loader...
+INFO - 2016-03-20 03:43:07 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:43:07 --> Config Class Initialized
+INFO - 2016-03-20 03:43:07 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:43:07 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:43:07 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:43:07 --> URI Class Initialized
+DEBUG - 2016-03-20 03:43:07 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:43:07 --> Router Class Initialized
+INFO - 2016-03-20 03:43:07 --> Output Class Initialized
+INFO - 2016-03-20 03:43:07 --> Security Class Initialized
+DEBUG - 2016-03-20 03:43:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:43:07 --> Input Class Initialized
+INFO - 2016-03-20 03:43:07 --> Language Class Initialized
+INFO - 2016-03-20 03:43:07 --> Loader Class Initialized
+INFO - 2016-03-20 03:43:07 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:43:07 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:43:07 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:43:08 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:43:08 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:43:08 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:43:08 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:43:08 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:43:08 --> Email Class Initialized
+INFO - 2016-03-20 03:43:08 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:43:08 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:43:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:08 --> Model Class Initialized
+INFO - 2016-03-20 03:43:08 --> Model Class Initialized
+INFO - 2016-03-20 03:43:08 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:43:08 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:43:08 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:08 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:43:08 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:43:08 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:43:08 --> Language_loader...
+INFO - 2016-03-20 03:43:08 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:43:12 --> Config Class Initialized
+INFO - 2016-03-20 03:43:12 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:43:12 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:43:12 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:43:12 --> URI Class Initialized
+DEBUG - 2016-03-20 03:43:12 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:43:12 --> Router Class Initialized
+INFO - 2016-03-20 03:43:12 --> Output Class Initialized
+INFO - 2016-03-20 03:43:12 --> Security Class Initialized
+DEBUG - 2016-03-20 03:43:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:43:12 --> Input Class Initialized
+INFO - 2016-03-20 03:43:12 --> Language Class Initialized
+INFO - 2016-03-20 03:43:12 --> Loader Class Initialized
+INFO - 2016-03-20 03:43:12 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:43:12 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:43:12 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:43:12 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:43:12 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:43:12 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:43:12 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:43:12 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:43:12 --> Email Class Initialized
+INFO - 2016-03-20 03:43:12 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:43:12 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:43:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:12 --> Model Class Initialized
+INFO - 2016-03-20 03:43:12 --> Model Class Initialized
+INFO - 2016-03-20 03:43:12 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:43:12 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:43:12 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:43:12 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:43:12 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:43:12 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:43:12 --> Language_loader...
+INFO - 2016-03-20 03:43:12 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:49:39 --> Config Class Initialized
+INFO - 2016-03-20 03:49:39 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:49:39 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:49:39 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:49:39 --> URI Class Initialized
+INFO - 2016-03-20 03:49:39 --> Router Class Initialized
+INFO - 2016-03-20 03:49:39 --> Output Class Initialized
+INFO - 2016-03-20 03:49:39 --> Security Class Initialized
+DEBUG - 2016-03-20 03:49:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:49:39 --> Input Class Initialized
+INFO - 2016-03-20 03:49:39 --> Language Class Initialized
+INFO - 2016-03-20 03:49:39 --> Loader Class Initialized
+INFO - 2016-03-20 03:49:39 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:49:39 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:49:39 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:49:39 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:49:39 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:49:39 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:49:39 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:49:39 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:49:39 --> Email Class Initialized
+INFO - 2016-03-20 03:49:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:49:39 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:49:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:49:39 --> Model Class Initialized
+INFO - 2016-03-20 03:49:39 --> Model Class Initialized
+INFO - 2016-03-20 03:49:39 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:49:39 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:49:40 --> Language_loader...
+INFO - 2016-03-20 03:49:40 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:49:40 --> Model Class Initialized
+INFO - 2016-03-20 03:49:40 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 03:49:40 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 03:49:40 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 03:49:40 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 03:49:40 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 03:49:40 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 03:49:40 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 03:49:40 --> Final output sent to browser
+DEBUG - 2016-03-20 03:49:40 --> Total execution time: 1.3837
+INFO - 2016-03-20 03:49:45 --> Config Class Initialized
+INFO - 2016-03-20 03:49:45 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:49:45 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:49:45 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:49:45 --> URI Class Initialized
+INFO - 2016-03-20 03:49:45 --> Router Class Initialized
+INFO - 2016-03-20 03:49:45 --> Output Class Initialized
+INFO - 2016-03-20 03:49:45 --> Security Class Initialized
+DEBUG - 2016-03-20 03:49:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:49:45 --> Input Class Initialized
+INFO - 2016-03-20 03:49:45 --> Language Class Initialized
+ERROR - 2016-03-20 03:49:45 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:49:45 --> Config Class Initialized
+INFO - 2016-03-20 03:49:45 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:49:45 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:49:45 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:49:45 --> URI Class Initialized
+INFO - 2016-03-20 03:49:45 --> Router Class Initialized
+INFO - 2016-03-20 03:49:45 --> Output Class Initialized
+INFO - 2016-03-20 03:49:45 --> Security Class Initialized
+DEBUG - 2016-03-20 03:49:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:49:45 --> Input Class Initialized
+INFO - 2016-03-20 03:49:45 --> Language Class Initialized
+ERROR - 2016-03-20 03:49:45 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:52:49 --> Config Class Initialized
+INFO - 2016-03-20 03:52:49 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:52:49 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:52:49 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:52:49 --> URI Class Initialized
+INFO - 2016-03-20 03:52:49 --> Router Class Initialized
+INFO - 2016-03-20 03:52:49 --> Output Class Initialized
+INFO - 2016-03-20 03:52:49 --> Security Class Initialized
+DEBUG - 2016-03-20 03:52:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:52:49 --> Input Class Initialized
+INFO - 2016-03-20 03:52:49 --> Language Class Initialized
+INFO - 2016-03-20 03:52:49 --> Loader Class Initialized
+INFO - 2016-03-20 03:52:49 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:52:49 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:52:49 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:52:49 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:52:49 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:52:49 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:52:49 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:52:49 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:52:49 --> Email Class Initialized
+INFO - 2016-03-20 03:52:49 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:52:49 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:52:49 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:52:49 --> Model Class Initialized
+INFO - 2016-03-20 03:52:49 --> Model Class Initialized
+INFO - 2016-03-20 03:52:49 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:52:49 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:52:50 --> Language_loader...
+INFO - 2016-03-20 03:52:50 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:52:50 --> Model Class Initialized
+INFO - 2016-03-20 03:52:50 --> Model Class Initialized
+INFO - 2016-03-20 03:52:50 --> Model Class Initialized
+INFO - 2016-03-20 03:52:50 --> Final output sent to browser
+DEBUG - 2016-03-20 03:52:50 --> Total execution time: 1.1951
+INFO - 2016-03-20 03:52:51 --> Config Class Initialized
+INFO - 2016-03-20 03:52:51 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:52:51 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:52:51 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:52:51 --> URI Class Initialized
+INFO - 2016-03-20 03:52:51 --> Router Class Initialized
+INFO - 2016-03-20 03:52:51 --> Output Class Initialized
+INFO - 2016-03-20 03:52:51 --> Security Class Initialized
+DEBUG - 2016-03-20 03:52:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:52:51 --> Input Class Initialized
+INFO - 2016-03-20 03:52:51 --> Language Class Initialized
+INFO - 2016-03-20 03:52:51 --> Loader Class Initialized
+INFO - 2016-03-20 03:52:51 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:52:51 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:52:51 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:52:51 --> Config Class Initialized
+INFO - 2016-03-20 03:52:51 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:52:51 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:52:51 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:52:51 --> URI Class Initialized
+INFO - 2016-03-20 03:52:51 --> Router Class Initialized
+INFO - 2016-03-20 03:52:51 --> Output Class Initialized
+INFO - 2016-03-20 03:52:51 --> Security Class Initialized
+DEBUG - 2016-03-20 03:52:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:52:51 --> Input Class Initialized
+INFO - 2016-03-20 03:52:51 --> Language Class Initialized
+INFO - 2016-03-20 03:52:51 --> Loader Class Initialized
+INFO - 2016-03-20 03:52:51 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:52:51 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:52:51 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:52:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:52:52 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:52:52 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:52:52 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:52:52 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:52:52 --> Email Class Initialized
+INFO - 2016-03-20 03:52:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:52:52 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:52:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:52:52 --> Model Class Initialized
+INFO - 2016-03-20 03:52:52 --> Model Class Initialized
+INFO - 2016-03-20 03:52:52 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:52:52 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:52:52 --> Language_loader...
+INFO - 2016-03-20 03:52:52 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:52:52 --> Model Class Initialized
+INFO - 2016-03-20 03:52:52 --> Final output sent to browser
+DEBUG - 2016-03-20 03:52:52 --> Total execution time: 1.0657
+INFO - 2016-03-20 03:52:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:52:52 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:52:52 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:52:52 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:52:52 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:52:52 --> Email Class Initialized
+INFO - 2016-03-20 03:52:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:52:52 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:52:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:52:52 --> Model Class Initialized
+INFO - 2016-03-20 03:52:52 --> Model Class Initialized
+INFO - 2016-03-20 03:52:52 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:52:52 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:52:52 --> Language_loader...
+INFO - 2016-03-20 03:52:52 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:52:52 --> Config Class Initialized
+INFO - 2016-03-20 03:52:52 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:52:52 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:52:52 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:52:52 --> URI Class Initialized
+INFO - 2016-03-20 03:52:52 --> Router Class Initialized
+INFO - 2016-03-20 03:52:52 --> Output Class Initialized
+INFO - 2016-03-20 03:52:52 --> Security Class Initialized
+DEBUG - 2016-03-20 03:52:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:52:52 --> Input Class Initialized
+INFO - 2016-03-20 03:52:52 --> Language Class Initialized
+INFO - 2016-03-20 03:52:52 --> Loader Class Initialized
+INFO - 2016-03-20 03:52:52 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:52:52 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:52:52 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:52:53 --> Model Class Initialized
+INFO - 2016-03-20 03:52:53 --> Helper loaded: app_helper
+INFO - 2016-03-20 03:52:53 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 03:52:53 --> Pagination Class Initialized
+INFO - 2016-03-20 03:52:53 --> Final output sent to browser
+DEBUG - 2016-03-20 03:52:53 --> Total execution time: 2.1052
+INFO - 2016-03-20 03:52:57 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:52:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:52:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:52:57 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:52:57 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:52:57 --> Email Class Initialized
+INFO - 2016-03-20 03:52:57 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:52:57 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:52:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:52:57 --> Model Class Initialized
+INFO - 2016-03-20 03:52:57 --> Model Class Initialized
+INFO - 2016-03-20 03:52:57 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:52:57 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:52:57 --> Language_loader...
+INFO - 2016-03-20 03:52:57 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:52:57 --> Model Class Initialized
+INFO - 2016-03-20 03:52:57 --> Final output sent to browser
+DEBUG - 2016-03-20 03:52:57 --> Total execution time: 4.6083
+INFO - 2016-03-20 03:53:06 --> Config Class Initialized
+INFO - 2016-03-20 03:53:06 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:53:06 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:53:06 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:53:06 --> URI Class Initialized
+INFO - 2016-03-20 03:53:06 --> Router Class Initialized
+INFO - 2016-03-20 03:53:06 --> Output Class Initialized
+INFO - 2016-03-20 03:53:06 --> Security Class Initialized
+DEBUG - 2016-03-20 03:53:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:53:06 --> Input Class Initialized
+INFO - 2016-03-20 03:53:06 --> Language Class Initialized
+INFO - 2016-03-20 03:53:06 --> Loader Class Initialized
+INFO - 2016-03-20 03:53:06 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:53:06 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:53:06 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:53:06 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:53:06 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:53:06 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:53:06 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:53:06 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:53:06 --> Email Class Initialized
+INFO - 2016-03-20 03:53:06 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:53:06 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:53:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:53:06 --> Model Class Initialized
+INFO - 2016-03-20 03:53:06 --> Model Class Initialized
+INFO - 2016-03-20 03:53:06 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:53:06 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:53:07 --> Language_loader...
+INFO - 2016-03-20 03:53:07 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:53:07 --> Model Class Initialized
+INFO - 2016-03-20 03:53:07 --> Final output sent to browser
+DEBUG - 2016-03-20 03:53:07 --> Total execution time: 0.9962
+INFO - 2016-03-20 03:53:13 --> Config Class Initialized
+INFO - 2016-03-20 03:53:13 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:53:13 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:53:13 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:53:13 --> URI Class Initialized
+INFO - 2016-03-20 03:53:13 --> Router Class Initialized
+INFO - 2016-03-20 03:53:13 --> Output Class Initialized
+INFO - 2016-03-20 03:53:13 --> Security Class Initialized
+DEBUG - 2016-03-20 03:53:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:53:13 --> Input Class Initialized
+INFO - 2016-03-20 03:53:13 --> Language Class Initialized
+INFO - 2016-03-20 03:53:13 --> Loader Class Initialized
+INFO - 2016-03-20 03:53:13 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:53:13 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:53:13 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:53:13 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:53:13 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:53:13 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:53:13 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:53:13 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:53:13 --> Email Class Initialized
+INFO - 2016-03-20 03:53:13 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:53:13 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:53:13 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:53:13 --> Model Class Initialized
+INFO - 2016-03-20 03:53:13 --> Model Class Initialized
+INFO - 2016-03-20 03:53:13 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:53:13 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:53:14 --> Language_loader...
+INFO - 2016-03-20 03:53:14 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:53:14 --> Model Class Initialized
+ERROR - 2016-03-20 03:53:14 --> Query error: Cannot add or update a child row: a foreign key constraint fails (`vuthea_unilever`.`sale_items`, CONSTRAINT `sale_items_ibfk_3` FOREIGN KEY (`promotion_id`) REFERENCES `product_promotion` (`id`)) - Invalid query: UPDATE `sale_items` SET `promotion_id` = '10', `quantity` = '2', `updated_date` = '2016-03-20 03:53:14', `updated_by` = '34'
+WHERE `sale_id` = '176'
+AND `product_id` = '121'
+INFO - 2016-03-20 03:53:14 --> Language file loaded: language/english/db_lang.php
+INFO - 2016-03-20 03:54:06 --> Config Class Initialized
+INFO - 2016-03-20 03:54:06 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:06 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:06 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:06 --> URI Class Initialized
+INFO - 2016-03-20 03:54:06 --> Router Class Initialized
+INFO - 2016-03-20 03:54:06 --> Output Class Initialized
+INFO - 2016-03-20 03:54:06 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:06 --> Input Class Initialized
+INFO - 2016-03-20 03:54:06 --> Language Class Initialized
+INFO - 2016-03-20 03:54:06 --> Loader Class Initialized
+INFO - 2016-03-20 03:54:06 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:54:06 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:54:06 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:54:06 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:54:06 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:54:06 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:54:06 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:54:06 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:54:06 --> Email Class Initialized
+INFO - 2016-03-20 03:54:06 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:54:06 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:54:06 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:54:06 --> Model Class Initialized
+INFO - 2016-03-20 03:54:06 --> Model Class Initialized
+INFO - 2016-03-20 03:54:06 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:54:06 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:54:07 --> Language_loader...
+INFO - 2016-03-20 03:54:07 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:54:07 --> Model Class Initialized
+INFO - 2016-03-20 03:54:07 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 03:54:07 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 03:54:07 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 03:54:07 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 03:54:07 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 03:54:07 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 03:54:07 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 03:54:07 --> Final output sent to browser
+DEBUG - 2016-03-20 03:54:07 --> Total execution time: 1.3290
+INFO - 2016-03-20 03:54:11 --> Config Class Initialized
+INFO - 2016-03-20 03:54:11 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:11 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:11 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:11 --> URI Class Initialized
+INFO - 2016-03-20 03:54:11 --> Router Class Initialized
+INFO - 2016-03-20 03:54:11 --> Output Class Initialized
+INFO - 2016-03-20 03:54:11 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:11 --> Input Class Initialized
+INFO - 2016-03-20 03:54:11 --> Language Class Initialized
+ERROR - 2016-03-20 03:54:11 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:54:11 --> Config Class Initialized
+INFO - 2016-03-20 03:54:11 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:11 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:11 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:11 --> URI Class Initialized
+INFO - 2016-03-20 03:54:11 --> Router Class Initialized
+INFO - 2016-03-20 03:54:11 --> Output Class Initialized
+INFO - 2016-03-20 03:54:11 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:11 --> Input Class Initialized
+INFO - 2016-03-20 03:54:11 --> Language Class Initialized
+ERROR - 2016-03-20 03:54:11 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:54:34 --> Config Class Initialized
+INFO - 2016-03-20 03:54:34 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:34 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:34 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:34 --> URI Class Initialized
+INFO - 2016-03-20 03:54:34 --> Router Class Initialized
+INFO - 2016-03-20 03:54:34 --> Output Class Initialized
+INFO - 2016-03-20 03:54:34 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:34 --> Input Class Initialized
+INFO - 2016-03-20 03:54:34 --> Language Class Initialized
+INFO - 2016-03-20 03:54:34 --> Loader Class Initialized
+INFO - 2016-03-20 03:54:34 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:54:34 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:54:34 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:54:34 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:54:34 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:54:34 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:54:34 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:54:34 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:54:34 --> Email Class Initialized
+INFO - 2016-03-20 03:54:34 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:54:34 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:54:34 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:54:34 --> Model Class Initialized
+INFO - 2016-03-20 03:54:34 --> Model Class Initialized
+INFO - 2016-03-20 03:54:34 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:54:34 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:54:34 --> Language_loader...
+INFO - 2016-03-20 03:54:34 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:54:34 --> Model Class Initialized
+INFO - 2016-03-20 03:54:34 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 03:54:35 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 03:54:35 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 03:54:35 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 03:54:35 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 03:54:35 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 03:54:35 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 03:54:35 --> Final output sent to browser
+DEBUG - 2016-03-20 03:54:35 --> Total execution time: 1.3321
+INFO - 2016-03-20 03:54:43 --> Config Class Initialized
+INFO - 2016-03-20 03:54:43 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:43 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:43 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:43 --> URI Class Initialized
+INFO - 2016-03-20 03:54:43 --> Router Class Initialized
+INFO - 2016-03-20 03:54:43 --> Output Class Initialized
+INFO - 2016-03-20 03:54:43 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:43 --> Input Class Initialized
+INFO - 2016-03-20 03:54:43 --> Language Class Initialized
+ERROR - 2016-03-20 03:54:43 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:54:43 --> Config Class Initialized
+INFO - 2016-03-20 03:54:43 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:43 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:43 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:43 --> URI Class Initialized
+INFO - 2016-03-20 03:54:43 --> Router Class Initialized
+INFO - 2016-03-20 03:54:43 --> Output Class Initialized
+INFO - 2016-03-20 03:54:43 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:43 --> Input Class Initialized
+INFO - 2016-03-20 03:54:43 --> Language Class Initialized
+ERROR - 2016-03-20 03:54:43 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 03:54:44 --> Config Class Initialized
+INFO - 2016-03-20 03:54:44 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:44 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:44 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:44 --> URI Class Initialized
+INFO - 2016-03-20 03:54:44 --> Router Class Initialized
+INFO - 2016-03-20 03:54:44 --> Output Class Initialized
+INFO - 2016-03-20 03:54:44 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:44 --> Input Class Initialized
+INFO - 2016-03-20 03:54:44 --> Language Class Initialized
+INFO - 2016-03-20 03:54:44 --> Loader Class Initialized
+INFO - 2016-03-20 03:54:44 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:54:44 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:54:44 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:54:45 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:54:45 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:54:45 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:54:45 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:54:45 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:54:45 --> Email Class Initialized
+INFO - 2016-03-20 03:54:45 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:54:45 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:54:45 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:54:45 --> Model Class Initialized
+INFO - 2016-03-20 03:54:45 --> Model Class Initialized
+INFO - 2016-03-20 03:54:45 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:54:45 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:54:45 --> Language_loader...
+INFO - 2016-03-20 03:54:45 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:54:45 --> Model Class Initialized
+INFO - 2016-03-20 03:54:45 --> Model Class Initialized
+INFO - 2016-03-20 03:54:45 --> Model Class Initialized
+INFO - 2016-03-20 03:54:45 --> Final output sent to browser
+DEBUG - 2016-03-20 03:54:45 --> Total execution time: 1.2012
+INFO - 2016-03-20 03:54:55 --> Config Class Initialized
+INFO - 2016-03-20 03:54:55 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:55 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:55 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:55 --> URI Class Initialized
+INFO - 2016-03-20 03:54:55 --> Router Class Initialized
+INFO - 2016-03-20 03:54:55 --> Output Class Initialized
+INFO - 2016-03-20 03:54:55 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:55 --> Input Class Initialized
+INFO - 2016-03-20 03:54:55 --> Language Class Initialized
+INFO - 2016-03-20 03:54:55 --> Loader Class Initialized
+INFO - 2016-03-20 03:54:55 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:54:55 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:54:55 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:54:56 --> Config Class Initialized
+INFO - 2016-03-20 03:54:56 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:54:56 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:54:56 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:54:56 --> URI Class Initialized
+INFO - 2016-03-20 03:54:56 --> Router Class Initialized
+INFO - 2016-03-20 03:54:56 --> Output Class Initialized
+INFO - 2016-03-20 03:54:56 --> Security Class Initialized
+DEBUG - 2016-03-20 03:54:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:54:56 --> Input Class Initialized
+INFO - 2016-03-20 03:54:56 --> Language Class Initialized
+INFO - 2016-03-20 03:54:56 --> Loader Class Initialized
+INFO - 2016-03-20 03:54:56 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:54:56 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:54:56 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:54:56 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:54:56 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:54:56 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:54:56 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:54:56 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:54:56 --> Email Class Initialized
+INFO - 2016-03-20 03:54:56 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:54:56 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:54:56 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:54:56 --> Model Class Initialized
+INFO - 2016-03-20 03:54:56 --> Model Class Initialized
+INFO - 2016-03-20 03:54:56 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:54:56 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:54:56 --> Language_loader...
+INFO - 2016-03-20 03:54:56 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:54:56 --> Model Class Initialized
+INFO - 2016-03-20 03:54:57 --> Helper loaded: app_helper
+INFO - 2016-03-20 03:54:57 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 03:54:57 --> Pagination Class Initialized
+INFO - 2016-03-20 03:54:57 --> Final output sent to browser
+DEBUG - 2016-03-20 03:54:57 --> Total execution time: 1.3959
+INFO - 2016-03-20 03:55:00 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:55:00 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:55:00 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:55:00 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:55:00 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:55:00 --> Email Class Initialized
+INFO - 2016-03-20 03:55:00 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:55:00 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:55:00 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:55:00 --> Model Class Initialized
+INFO - 2016-03-20 03:55:00 --> Model Class Initialized
+INFO - 2016-03-20 03:55:00 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:55:00 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:55:00 --> Language_loader...
+INFO - 2016-03-20 03:55:00 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:55:00 --> Model Class Initialized
+INFO - 2016-03-20 03:55:00 --> Final output sent to browser
+DEBUG - 2016-03-20 03:55:00 --> Total execution time: 4.5020
+INFO - 2016-03-20 03:55:00 --> Config Class Initialized
+INFO - 2016-03-20 03:55:00 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:55:00 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:55:00 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:55:00 --> URI Class Initialized
+INFO - 2016-03-20 03:55:00 --> Router Class Initialized
+INFO - 2016-03-20 03:55:00 --> Output Class Initialized
+INFO - 2016-03-20 03:55:00 --> Security Class Initialized
+DEBUG - 2016-03-20 03:55:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:55:00 --> Input Class Initialized
+INFO - 2016-03-20 03:55:00 --> Language Class Initialized
+INFO - 2016-03-20 03:55:00 --> Loader Class Initialized
+INFO - 2016-03-20 03:55:00 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:55:00 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:55:00 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:55:01 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:55:01 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:55:01 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:55:01 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:55:01 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:55:01 --> Email Class Initialized
+INFO - 2016-03-20 03:55:01 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:55:01 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:55:01 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:55:01 --> Model Class Initialized
+INFO - 2016-03-20 03:55:01 --> Model Class Initialized
+INFO - 2016-03-20 03:55:01 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:55:01 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:55:01 --> Language_loader...
+INFO - 2016-03-20 03:55:01 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:55:01 --> Model Class Initialized
+INFO - 2016-03-20 03:55:01 --> Final output sent to browser
+DEBUG - 2016-03-20 03:55:01 --> Total execution time: 0.9996
+INFO - 2016-03-20 03:55:19 --> Config Class Initialized
+INFO - 2016-03-20 03:55:19 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:55:19 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:55:19 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:55:19 --> URI Class Initialized
+INFO - 2016-03-20 03:55:19 --> Router Class Initialized
+INFO - 2016-03-20 03:55:19 --> Output Class Initialized
+INFO - 2016-03-20 03:55:19 --> Security Class Initialized
+DEBUG - 2016-03-20 03:55:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:55:19 --> Input Class Initialized
+INFO - 2016-03-20 03:55:19 --> Language Class Initialized
+INFO - 2016-03-20 03:55:19 --> Loader Class Initialized
+INFO - 2016-03-20 03:55:19 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:55:19 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:55:19 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:55:19 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:55:19 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:55:19 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:55:19 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:55:19 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:55:19 --> Email Class Initialized
+INFO - 2016-03-20 03:55:19 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:55:19 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:55:19 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:55:19 --> Model Class Initialized
+INFO - 2016-03-20 03:55:19 --> Model Class Initialized
+INFO - 2016-03-20 03:55:19 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:55:19 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:55:20 --> Language_loader...
+INFO - 2016-03-20 03:55:20 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:55:20 --> Model Class Initialized
+INFO - 2016-03-20 03:55:20 --> Final output sent to browser
+DEBUG - 2016-03-20 03:55:20 --> Total execution time: 1.0028
+INFO - 2016-03-20 03:55:23 --> Config Class Initialized
+INFO - 2016-03-20 03:55:23 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:55:23 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:55:23 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:55:23 --> URI Class Initialized
+INFO - 2016-03-20 03:55:23 --> Router Class Initialized
+INFO - 2016-03-20 03:55:23 --> Output Class Initialized
+INFO - 2016-03-20 03:55:23 --> Security Class Initialized
+DEBUG - 2016-03-20 03:55:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:55:23 --> Input Class Initialized
+INFO - 2016-03-20 03:55:23 --> Language Class Initialized
+INFO - 2016-03-20 03:55:23 --> Loader Class Initialized
+INFO - 2016-03-20 03:55:23 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:55:23 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:55:23 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:55:23 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:55:23 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:55:23 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:55:23 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:55:23 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:55:23 --> Email Class Initialized
+INFO - 2016-03-20 03:55:23 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:55:23 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:55:23 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:55:23 --> Model Class Initialized
+INFO - 2016-03-20 03:55:23 --> Model Class Initialized
+INFO - 2016-03-20 03:55:23 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:55:23 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:55:23 --> Language_loader...
+INFO - 2016-03-20 03:55:23 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:55:23 --> Model Class Initialized
+INFO - 2016-03-20 03:55:24 --> Final output sent to browser
+DEBUG - 2016-03-20 03:55:24 --> Total execution time: 0.9917
+INFO - 2016-03-20 03:55:39 --> Config Class Initialized
+INFO - 2016-03-20 03:55:39 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:55:39 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:55:39 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:55:39 --> URI Class Initialized
+INFO - 2016-03-20 03:55:39 --> Router Class Initialized
+INFO - 2016-03-20 03:55:39 --> Output Class Initialized
+INFO - 2016-03-20 03:55:39 --> Security Class Initialized
+DEBUG - 2016-03-20 03:55:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:55:39 --> Input Class Initialized
+INFO - 2016-03-20 03:55:39 --> Language Class Initialized
+INFO - 2016-03-20 03:55:39 --> Loader Class Initialized
+INFO - 2016-03-20 03:55:39 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:55:39 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:55:39 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:55:39 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:55:39 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:55:39 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:55:39 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:55:39 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:55:39 --> Email Class Initialized
+INFO - 2016-03-20 03:55:39 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:55:39 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:55:39 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:55:39 --> Model Class Initialized
+INFO - 2016-03-20 03:55:39 --> Model Class Initialized
+INFO - 2016-03-20 03:55:39 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:55:39 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:55:40 --> Language_loader...
+INFO - 2016-03-20 03:55:40 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:55:40 --> Model Class Initialized
+INFO - 2016-03-20 03:55:40 --> Helper loaded: app_helper
+INFO - 2016-03-20 03:55:40 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 03:55:40 --> Pagination Class Initialized
+INFO - 2016-03-20 03:55:40 --> Final output sent to browser
+DEBUG - 2016-03-20 03:55:40 --> Total execution time: 1.4149
+INFO - 2016-03-20 03:55:55 --> Config Class Initialized
+INFO - 2016-03-20 03:55:55 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:55:55 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:55:55 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:55:55 --> URI Class Initialized
+INFO - 2016-03-20 03:55:55 --> Router Class Initialized
+INFO - 2016-03-20 03:55:55 --> Output Class Initialized
+INFO - 2016-03-20 03:55:55 --> Security Class Initialized
+DEBUG - 2016-03-20 03:55:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:55:55 --> Input Class Initialized
+INFO - 2016-03-20 03:55:55 --> Language Class Initialized
+INFO - 2016-03-20 03:55:55 --> Loader Class Initialized
+INFO - 2016-03-20 03:55:55 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:55:55 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:55:55 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:55:55 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:55:55 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:55:55 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:55:55 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:55:55 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:55:55 --> Email Class Initialized
+INFO - 2016-03-20 03:55:55 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:55:55 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:55:55 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:55:55 --> Model Class Initialized
+INFO - 2016-03-20 03:55:55 --> Model Class Initialized
+INFO - 2016-03-20 03:55:55 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:55:55 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:55:56 --> Language_loader...
+INFO - 2016-03-20 03:55:56 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:55:56 --> Model Class Initialized
+INFO - 2016-03-20 03:55:56 --> Final output sent to browser
+DEBUG - 2016-03-20 03:55:56 --> Total execution time: 1.0946
+INFO - 2016-03-20 03:55:58 --> Config Class Initialized
+INFO - 2016-03-20 03:55:58 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:55:58 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:55:58 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:55:58 --> URI Class Initialized
+INFO - 2016-03-20 03:55:58 --> Router Class Initialized
+INFO - 2016-03-20 03:55:58 --> Output Class Initialized
+INFO - 2016-03-20 03:55:58 --> Security Class Initialized
+DEBUG - 2016-03-20 03:55:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:55:58 --> Input Class Initialized
+INFO - 2016-03-20 03:55:58 --> Language Class Initialized
+INFO - 2016-03-20 03:55:58 --> Loader Class Initialized
+INFO - 2016-03-20 03:55:58 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:55:58 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:55:58 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:55:59 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:55:59 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:55:59 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:55:59 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:55:59 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:55:59 --> Email Class Initialized
+INFO - 2016-03-20 03:55:59 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:55:59 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:55:59 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:55:59 --> Model Class Initialized
+INFO - 2016-03-20 03:55:59 --> Model Class Initialized
+INFO - 2016-03-20 03:55:59 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:55:59 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:55:59 --> Language_loader...
+INFO - 2016-03-20 03:55:59 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:55:59 --> Model Class Initialized
+INFO - 2016-03-20 03:55:59 --> Final output sent to browser
+DEBUG - 2016-03-20 03:55:59 --> Total execution time: 1.0131
+INFO - 2016-03-20 03:56:11 --> Config Class Initialized
+INFO - 2016-03-20 03:56:11 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:56:11 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:56:11 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:56:11 --> URI Class Initialized
+INFO - 2016-03-20 03:56:11 --> Router Class Initialized
+INFO - 2016-03-20 03:56:11 --> Output Class Initialized
+INFO - 2016-03-20 03:56:11 --> Security Class Initialized
+DEBUG - 2016-03-20 03:56:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:56:11 --> Input Class Initialized
+INFO - 2016-03-20 03:56:11 --> Language Class Initialized
+INFO - 2016-03-20 03:56:11 --> Loader Class Initialized
+INFO - 2016-03-20 03:56:11 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:56:11 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:56:11 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:56:11 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:56:11 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:56:11 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:56:11 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:56:11 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:56:11 --> Email Class Initialized
+INFO - 2016-03-20 03:56:11 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:56:11 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:56:11 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:56:11 --> Model Class Initialized
+INFO - 2016-03-20 03:56:11 --> Model Class Initialized
+INFO - 2016-03-20 03:56:11 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:56:11 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:56:12 --> Language_loader...
+INFO - 2016-03-20 03:56:12 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:56:12 --> Model Class Initialized
+INFO - 2016-03-20 03:56:12 --> Helper loaded: app_helper
+INFO - 2016-03-20 03:56:12 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 03:56:12 --> Pagination Class Initialized
+INFO - 2016-03-20 03:56:12 --> Final output sent to browser
+DEBUG - 2016-03-20 03:56:12 --> Total execution time: 1.4717
+INFO - 2016-03-20 03:56:24 --> Config Class Initialized
+INFO - 2016-03-20 03:56:24 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:56:24 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:56:24 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:56:24 --> URI Class Initialized
+INFO - 2016-03-20 03:56:24 --> Router Class Initialized
+INFO - 2016-03-20 03:56:24 --> Output Class Initialized
+INFO - 2016-03-20 03:56:24 --> Security Class Initialized
+DEBUG - 2016-03-20 03:56:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:56:24 --> Input Class Initialized
+INFO - 2016-03-20 03:56:24 --> Language Class Initialized
+INFO - 2016-03-20 03:56:24 --> Loader Class Initialized
+INFO - 2016-03-20 03:56:24 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:56:24 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:56:24 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:56:24 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:56:24 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:56:24 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:56:24 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:56:24 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:56:24 --> Email Class Initialized
+INFO - 2016-03-20 03:56:24 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:56:24 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:56:24 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:56:24 --> Model Class Initialized
+INFO - 2016-03-20 03:56:24 --> Model Class Initialized
+INFO - 2016-03-20 03:56:24 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:56:24 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:56:25 --> Language_loader...
+INFO - 2016-03-20 03:56:25 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:56:25 --> Model Class Initialized
+INFO - 2016-03-20 03:56:25 --> Final output sent to browser
+DEBUG - 2016-03-20 03:56:25 --> Total execution time: 0.9921
+INFO - 2016-03-20 03:56:27 --> Config Class Initialized
+INFO - 2016-03-20 03:56:27 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:56:27 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:56:27 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:56:27 --> URI Class Initialized
+INFO - 2016-03-20 03:56:27 --> Router Class Initialized
+INFO - 2016-03-20 03:56:27 --> Output Class Initialized
+INFO - 2016-03-20 03:56:27 --> Security Class Initialized
+DEBUG - 2016-03-20 03:56:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:56:27 --> Input Class Initialized
+INFO - 2016-03-20 03:56:27 --> Language Class Initialized
+INFO - 2016-03-20 03:56:27 --> Loader Class Initialized
+INFO - 2016-03-20 03:56:27 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:56:27 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:56:27 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:56:27 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:56:27 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:56:27 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:56:27 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:56:27 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:56:27 --> Email Class Initialized
+INFO - 2016-03-20 03:56:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:56:27 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:56:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:56:27 --> Model Class Initialized
+INFO - 2016-03-20 03:56:27 --> Model Class Initialized
+INFO - 2016-03-20 03:56:27 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:56:27 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:56:27 --> Language_loader...
+INFO - 2016-03-20 03:56:27 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:56:27 --> Model Class Initialized
+INFO - 2016-03-20 03:56:28 --> Final output sent to browser
+DEBUG - 2016-03-20 03:56:28 --> Total execution time: 1.1468
+INFO - 2016-03-20 03:56:44 --> Config Class Initialized
+INFO - 2016-03-20 03:56:44 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:56:44 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:56:44 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:56:44 --> URI Class Initialized
+INFO - 2016-03-20 03:56:44 --> Router Class Initialized
+INFO - 2016-03-20 03:56:44 --> Output Class Initialized
+INFO - 2016-03-20 03:56:44 --> Security Class Initialized
+DEBUG - 2016-03-20 03:56:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:56:44 --> Input Class Initialized
+INFO - 2016-03-20 03:56:44 --> Language Class Initialized
+INFO - 2016-03-20 03:56:44 --> Loader Class Initialized
+INFO - 2016-03-20 03:56:44 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:56:44 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:56:44 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:56:44 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:56:44 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:56:44 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:56:44 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:56:44 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:56:44 --> Email Class Initialized
+INFO - 2016-03-20 03:56:44 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:56:44 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:56:44 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:56:44 --> Model Class Initialized
+INFO - 2016-03-20 03:56:44 --> Model Class Initialized
+INFO - 2016-03-20 03:56:44 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:56:44 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:56:45 --> Language_loader...
+INFO - 2016-03-20 03:56:45 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:56:45 --> Model Class Initialized
+INFO - 2016-03-20 03:56:45 --> Helper loaded: app_helper
+INFO - 2016-03-20 03:56:45 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 03:56:45 --> Pagination Class Initialized
+INFO - 2016-03-20 03:56:45 --> Final output sent to browser
+DEBUG - 2016-03-20 03:56:45 --> Total execution time: 1.3429
+INFO - 2016-03-20 03:58:07 --> Config Class Initialized
+INFO - 2016-03-20 03:58:07 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:58:07 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:58:07 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:58:07 --> URI Class Initialized
+DEBUG - 2016-03-20 03:58:07 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:58:07 --> Router Class Initialized
+INFO - 2016-03-20 03:58:07 --> Output Class Initialized
+INFO - 2016-03-20 03:58:07 --> Security Class Initialized
+DEBUG - 2016-03-20 03:58:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:58:07 --> Input Class Initialized
+INFO - 2016-03-20 03:58:07 --> Language Class Initialized
+INFO - 2016-03-20 03:58:07 --> Loader Class Initialized
+INFO - 2016-03-20 03:58:07 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:58:07 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:58:07 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:58:07 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:58:07 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:58:07 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:58:07 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:58:07 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:58:07 --> Email Class Initialized
+INFO - 2016-03-20 03:58:07 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:58:07 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:58:07 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:07 --> Model Class Initialized
+INFO - 2016-03-20 03:58:07 --> Model Class Initialized
+INFO - 2016-03-20 03:58:07 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:58:07 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:58:07 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:07 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:58:07 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:58:07 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:58:07 --> Language_loader...
+INFO - 2016-03-20 03:58:07 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:58:08 --> Config Class Initialized
+INFO - 2016-03-20 03:58:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:58:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:58:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:58:08 --> URI Class Initialized
+DEBUG - 2016-03-20 03:58:08 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:58:08 --> Router Class Initialized
+INFO - 2016-03-20 03:58:08 --> Output Class Initialized
+INFO - 2016-03-20 03:58:08 --> Security Class Initialized
+DEBUG - 2016-03-20 03:58:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:58:08 --> Input Class Initialized
+INFO - 2016-03-20 03:58:08 --> Language Class Initialized
+INFO - 2016-03-20 03:58:08 --> Loader Class Initialized
+INFO - 2016-03-20 03:58:08 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:58:08 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:58:08 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:58:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:58:09 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:58:09 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:58:09 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:58:09 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:58:09 --> Email Class Initialized
+INFO - 2016-03-20 03:58:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:58:09 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:58:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:09 --> Model Class Initialized
+INFO - 2016-03-20 03:58:09 --> Model Class Initialized
+INFO - 2016-03-20 03:58:09 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:58:09 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:58:09 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:09 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:58:09 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:58:09 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:58:09 --> Language_loader...
+INFO - 2016-03-20 03:58:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:58:09 --> Config Class Initialized
+INFO - 2016-03-20 03:58:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:58:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:58:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:58:09 --> URI Class Initialized
+DEBUG - 2016-03-20 03:58:09 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:58:09 --> Router Class Initialized
+INFO - 2016-03-20 03:58:09 --> Output Class Initialized
+INFO - 2016-03-20 03:58:09 --> Security Class Initialized
+DEBUG - 2016-03-20 03:58:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:58:09 --> Input Class Initialized
+INFO - 2016-03-20 03:58:09 --> Language Class Initialized
+INFO - 2016-03-20 03:58:09 --> Loader Class Initialized
+INFO - 2016-03-20 03:58:09 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:58:09 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:58:09 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:58:10 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:58:10 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:58:10 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:58:10 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:58:10 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:58:10 --> Email Class Initialized
+INFO - 2016-03-20 03:58:10 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:58:10 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:58:10 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:10 --> Model Class Initialized
+INFO - 2016-03-20 03:58:10 --> Model Class Initialized
+INFO - 2016-03-20 03:58:10 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:58:10 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:58:10 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:10 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:58:10 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:58:10 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:58:10 --> Language_loader...
+INFO - 2016-03-20 03:58:10 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 03:58:15 --> Config Class Initialized
+INFO - 2016-03-20 03:58:15 --> Hooks Class Initialized
+DEBUG - 2016-03-20 03:58:15 --> UTF-8 Support Enabled
+INFO - 2016-03-20 03:58:15 --> Utf8 Class Initialized
+INFO - 2016-03-20 03:58:15 --> URI Class Initialized
+DEBUG - 2016-03-20 03:58:15 --> No URI present. Default controller set.
+INFO - 2016-03-20 03:58:15 --> Router Class Initialized
+INFO - 2016-03-20 03:58:15 --> Output Class Initialized
+INFO - 2016-03-20 03:58:15 --> Security Class Initialized
+DEBUG - 2016-03-20 03:58:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 03:58:15 --> Input Class Initialized
+INFO - 2016-03-20 03:58:15 --> Language Class Initialized
+INFO - 2016-03-20 03:58:15 --> Loader Class Initialized
+INFO - 2016-03-20 03:58:15 --> Helper loaded: url_helper
+INFO - 2016-03-20 03:58:15 --> Helper loaded: language_helper
+INFO - 2016-03-20 03:58:15 --> Database Driver Class Initialized
+INFO - 2016-03-20 03:58:15 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 03:58:15 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 03:58:15 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 03:58:15 --> Encryption Class Initialized
+DEBUG - 2016-03-20 03:58:15 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 03:58:15 --> Email Class Initialized
+INFO - 2016-03-20 03:58:15 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 03:58:15 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 03:58:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:15 --> Model Class Initialized
+INFO - 2016-03-20 03:58:15 --> Model Class Initialized
+INFO - 2016-03-20 03:58:15 --> Helper loaded: date_helper
+INFO - 2016-03-20 03:58:15 --> Controller Class Initialized
+DEBUG - 2016-03-20 03:58:15 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 03:58:15 --> Helper loaded: form_helper
+INFO - 2016-03-20 03:58:15 --> Form Validation Class Initialized
+INFO - 2016-03-20 03:58:15 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 03:58:15 --> Language_loader...
+INFO - 2016-03-20 03:58:15 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:03:30 --> Config Class Initialized
+INFO - 2016-03-20 04:03:30 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:03:30 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:03:30 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:03:30 --> URI Class Initialized
+INFO - 2016-03-20 04:03:30 --> Router Class Initialized
+INFO - 2016-03-20 04:03:30 --> Output Class Initialized
+INFO - 2016-03-20 04:03:30 --> Security Class Initialized
+DEBUG - 2016-03-20 04:03:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:03:30 --> Input Class Initialized
+INFO - 2016-03-20 04:03:30 --> Language Class Initialized
+INFO - 2016-03-20 04:03:30 --> Loader Class Initialized
+INFO - 2016-03-20 04:03:30 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:03:30 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:03:30 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:03:31 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:03:31 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:03:31 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:03:31 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:03:31 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:03:31 --> Email Class Initialized
+INFO - 2016-03-20 04:03:31 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:03:31 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:03:31 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:03:31 --> Model Class Initialized
+INFO - 2016-03-20 04:03:31 --> Model Class Initialized
+INFO - 2016-03-20 04:03:31 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:03:31 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:03:31 --> Language_loader...
+INFO - 2016-03-20 04:03:31 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:03:31 --> Model Class Initialized
+INFO - 2016-03-20 04:03:31 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 04:03:31 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 04:03:31 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 04:03:31 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 04:03:31 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 04:03:31 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 04:03:31 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 04:03:31 --> Final output sent to browser
+DEBUG - 2016-03-20 04:03:31 --> Total execution time: 1.3525
+INFO - 2016-03-20 04:03:34 --> Config Class Initialized
+INFO - 2016-03-20 04:03:34 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:03:34 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:03:34 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:03:34 --> URI Class Initialized
+INFO - 2016-03-20 04:03:34 --> Router Class Initialized
+INFO - 2016-03-20 04:03:34 --> Output Class Initialized
+INFO - 2016-03-20 04:03:34 --> Security Class Initialized
+DEBUG - 2016-03-20 04:03:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:03:34 --> Input Class Initialized
+INFO - 2016-03-20 04:03:34 --> Language Class Initialized
+ERROR - 2016-03-20 04:03:34 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:03:34 --> Config Class Initialized
+INFO - 2016-03-20 04:03:34 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:03:34 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:03:34 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:03:34 --> URI Class Initialized
+INFO - 2016-03-20 04:03:34 --> Router Class Initialized
+INFO - 2016-03-20 04:03:34 --> Output Class Initialized
+INFO - 2016-03-20 04:03:34 --> Security Class Initialized
+DEBUG - 2016-03-20 04:03:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:03:34 --> Input Class Initialized
+INFO - 2016-03-20 04:03:34 --> Language Class Initialized
+ERROR - 2016-03-20 04:03:34 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:04:03 --> Config Class Initialized
+INFO - 2016-03-20 04:04:03 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:03 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:03 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:03 --> URI Class Initialized
+INFO - 2016-03-20 04:04:03 --> Router Class Initialized
+INFO - 2016-03-20 04:04:03 --> Output Class Initialized
+INFO - 2016-03-20 04:04:03 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:03 --> Input Class Initialized
+INFO - 2016-03-20 04:04:03 --> Language Class Initialized
+INFO - 2016-03-20 04:04:03 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:03 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:03 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:03 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:03 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:03 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:03 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:03 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:03 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:03 --> Email Class Initialized
+INFO - 2016-03-20 04:04:03 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:03 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:03 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:03 --> Model Class Initialized
+INFO - 2016-03-20 04:04:03 --> Model Class Initialized
+INFO - 2016-03-20 04:04:03 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:03 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:04 --> Language_loader...
+INFO - 2016-03-20 04:04:04 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:04 --> Model Class Initialized
+INFO - 2016-03-20 04:04:04 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 04:04:04 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 04:04:04 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 04:04:04 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 04:04:04 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 04:04:04 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 04:04:04 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 04:04:04 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:04 --> Total execution time: 1.4018
+INFO - 2016-03-20 04:04:09 --> Config Class Initialized
+INFO - 2016-03-20 04:04:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:09 --> URI Class Initialized
+INFO - 2016-03-20 04:04:09 --> Router Class Initialized
+INFO - 2016-03-20 04:04:09 --> Output Class Initialized
+INFO - 2016-03-20 04:04:09 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:09 --> Input Class Initialized
+INFO - 2016-03-20 04:04:09 --> Language Class Initialized
+ERROR - 2016-03-20 04:04:09 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:04:09 --> Config Class Initialized
+INFO - 2016-03-20 04:04:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:09 --> URI Class Initialized
+INFO - 2016-03-20 04:04:09 --> Router Class Initialized
+INFO - 2016-03-20 04:04:09 --> Output Class Initialized
+INFO - 2016-03-20 04:04:09 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:09 --> Input Class Initialized
+INFO - 2016-03-20 04:04:09 --> Language Class Initialized
+ERROR - 2016-03-20 04:04:09 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:04:25 --> Config Class Initialized
+INFO - 2016-03-20 04:04:25 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:25 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:25 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:25 --> URI Class Initialized
+INFO - 2016-03-20 04:04:25 --> Router Class Initialized
+INFO - 2016-03-20 04:04:25 --> Output Class Initialized
+INFO - 2016-03-20 04:04:25 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:25 --> Input Class Initialized
+INFO - 2016-03-20 04:04:25 --> Language Class Initialized
+INFO - 2016-03-20 04:04:25 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:25 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:25 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:25 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:25 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:25 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:25 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:25 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:25 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:25 --> Email Class Initialized
+INFO - 2016-03-20 04:04:25 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:25 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:25 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:25 --> Model Class Initialized
+INFO - 2016-03-20 04:04:25 --> Model Class Initialized
+INFO - 2016-03-20 04:04:25 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:25 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:26 --> Language_loader...
+INFO - 2016-03-20 04:04:26 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:26 --> Model Class Initialized
+INFO - 2016-03-20 04:04:26 --> Model Class Initialized
+INFO - 2016-03-20 04:04:26 --> Model Class Initialized
+INFO - 2016-03-20 04:04:26 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:26 --> Total execution time: 1.2276
+INFO - 2016-03-20 04:04:27 --> Config Class Initialized
+INFO - 2016-03-20 04:04:27 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:27 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:27 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:27 --> URI Class Initialized
+INFO - 2016-03-20 04:04:27 --> Router Class Initialized
+INFO - 2016-03-20 04:04:27 --> Output Class Initialized
+INFO - 2016-03-20 04:04:27 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:27 --> Input Class Initialized
+INFO - 2016-03-20 04:04:27 --> Language Class Initialized
+INFO - 2016-03-20 04:04:27 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:27 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:27 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:27 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:27 --> Config Class Initialized
+INFO - 2016-03-20 04:04:27 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:27 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:27 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:27 --> URI Class Initialized
+INFO - 2016-03-20 04:04:27 --> Router Class Initialized
+INFO - 2016-03-20 04:04:27 --> Output Class Initialized
+INFO - 2016-03-20 04:04:27 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:27 --> Input Class Initialized
+INFO - 2016-03-20 04:04:27 --> Language Class Initialized
+INFO - 2016-03-20 04:04:27 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:27 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:27 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:27 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:28 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:28 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:28 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:28 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:28 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:28 --> Email Class Initialized
+INFO - 2016-03-20 04:04:28 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:28 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:28 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:28 --> Model Class Initialized
+INFO - 2016-03-20 04:04:28 --> Model Class Initialized
+INFO - 2016-03-20 04:04:28 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:28 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:28 --> Language_loader...
+INFO - 2016-03-20 04:04:28 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:28 --> Model Class Initialized
+INFO - 2016-03-20 04:04:28 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:04:28 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:04:28 --> Pagination Class Initialized
+INFO - 2016-03-20 04:04:28 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:28 --> Total execution time: 1.3908
+INFO - 2016-03-20 04:04:28 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:28 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:28 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:28 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:28 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:28 --> Email Class Initialized
+INFO - 2016-03-20 04:04:28 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:28 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:28 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:28 --> Model Class Initialized
+INFO - 2016-03-20 04:04:28 --> Model Class Initialized
+INFO - 2016-03-20 04:04:28 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:28 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:28 --> Language_loader...
+INFO - 2016-03-20 04:04:28 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:28 --> Model Class Initialized
+INFO - 2016-03-20 04:04:29 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:29 --> Total execution time: 1.5769
+INFO - 2016-03-20 04:04:29 --> Config Class Initialized
+INFO - 2016-03-20 04:04:29 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:29 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:29 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:29 --> URI Class Initialized
+INFO - 2016-03-20 04:04:29 --> Router Class Initialized
+INFO - 2016-03-20 04:04:29 --> Output Class Initialized
+INFO - 2016-03-20 04:04:29 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:29 --> Input Class Initialized
+INFO - 2016-03-20 04:04:29 --> Language Class Initialized
+INFO - 2016-03-20 04:04:29 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:29 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:29 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:29 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:29 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:29 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:29 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:29 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:29 --> Email Class Initialized
+INFO - 2016-03-20 04:04:29 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:29 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:29 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:29 --> Model Class Initialized
+INFO - 2016-03-20 04:04:29 --> Model Class Initialized
+INFO - 2016-03-20 04:04:29 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:29 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:30 --> Language_loader...
+INFO - 2016-03-20 04:04:30 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:30 --> Model Class Initialized
+INFO - 2016-03-20 04:04:30 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:30 --> Total execution time: 0.9973
+INFO - 2016-03-20 04:04:35 --> Config Class Initialized
+INFO - 2016-03-20 04:04:35 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:35 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:35 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:35 --> URI Class Initialized
+INFO - 2016-03-20 04:04:35 --> Router Class Initialized
+INFO - 2016-03-20 04:04:35 --> Output Class Initialized
+INFO - 2016-03-20 04:04:35 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:35 --> Input Class Initialized
+INFO - 2016-03-20 04:04:35 --> Language Class Initialized
+INFO - 2016-03-20 04:04:35 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:35 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:35 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:35 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:36 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:36 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:36 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:36 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:36 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:36 --> Email Class Initialized
+INFO - 2016-03-20 04:04:36 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:36 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:36 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:36 --> Model Class Initialized
+INFO - 2016-03-20 04:04:36 --> Model Class Initialized
+INFO - 2016-03-20 04:04:36 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:36 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:36 --> Language_loader...
+INFO - 2016-03-20 04:04:36 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:36 --> Model Class Initialized
+INFO - 2016-03-20 04:04:36 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:36 --> Total execution time: 0.9902
+INFO - 2016-03-20 04:04:43 --> Config Class Initialized
+INFO - 2016-03-20 04:04:43 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:43 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:43 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:43 --> URI Class Initialized
+INFO - 2016-03-20 04:04:43 --> Router Class Initialized
+INFO - 2016-03-20 04:04:43 --> Output Class Initialized
+INFO - 2016-03-20 04:04:43 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:43 --> Input Class Initialized
+INFO - 2016-03-20 04:04:43 --> Language Class Initialized
+INFO - 2016-03-20 04:04:43 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:43 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:43 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:43 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:43 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:43 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:43 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:43 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:43 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:43 --> Email Class Initialized
+INFO - 2016-03-20 04:04:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:43 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:43 --> Model Class Initialized
+INFO - 2016-03-20 04:04:43 --> Model Class Initialized
+INFO - 2016-03-20 04:04:43 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:43 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:44 --> Language_loader...
+INFO - 2016-03-20 04:04:44 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:44 --> Model Class Initialized
+INFO - 2016-03-20 04:04:44 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:44 --> Total execution time: 0.9965
+INFO - 2016-03-20 04:04:51 --> Config Class Initialized
+INFO - 2016-03-20 04:04:51 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:04:51 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:04:51 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:04:51 --> URI Class Initialized
+INFO - 2016-03-20 04:04:51 --> Router Class Initialized
+INFO - 2016-03-20 04:04:51 --> Output Class Initialized
+INFO - 2016-03-20 04:04:51 --> Security Class Initialized
+DEBUG - 2016-03-20 04:04:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:04:51 --> Input Class Initialized
+INFO - 2016-03-20 04:04:51 --> Language Class Initialized
+INFO - 2016-03-20 04:04:51 --> Loader Class Initialized
+INFO - 2016-03-20 04:04:51 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:04:51 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:04:51 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:04:51 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:04:51 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:04:51 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:04:51 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:04:51 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:04:51 --> Email Class Initialized
+INFO - 2016-03-20 04:04:51 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:04:51 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:04:51 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:04:51 --> Model Class Initialized
+INFO - 2016-03-20 04:04:51 --> Model Class Initialized
+INFO - 2016-03-20 04:04:51 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:04:51 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:04:52 --> Language_loader...
+INFO - 2016-03-20 04:04:52 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:04:52 --> Model Class Initialized
+INFO - 2016-03-20 04:04:52 --> Final output sent to browser
+DEBUG - 2016-03-20 04:04:52 --> Total execution time: 0.9938
+INFO - 2016-03-20 04:05:52 --> Config Class Initialized
+INFO - 2016-03-20 04:05:52 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:05:52 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:05:52 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:05:52 --> URI Class Initialized
+INFO - 2016-03-20 04:05:52 --> Router Class Initialized
+INFO - 2016-03-20 04:05:52 --> Output Class Initialized
+INFO - 2016-03-20 04:05:52 --> Security Class Initialized
+DEBUG - 2016-03-20 04:05:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:05:52 --> Input Class Initialized
+INFO - 2016-03-20 04:05:52 --> Language Class Initialized
+INFO - 2016-03-20 04:05:52 --> Loader Class Initialized
+INFO - 2016-03-20 04:05:52 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:05:52 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:05:52 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:05:52 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:05:52 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:05:52 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:05:52 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:05:52 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:05:52 --> Email Class Initialized
+INFO - 2016-03-20 04:05:52 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:05:52 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:05:52 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:05:52 --> Model Class Initialized
+INFO - 2016-03-20 04:05:52 --> Model Class Initialized
+INFO - 2016-03-20 04:05:52 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:05:52 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:05:53 --> Language_loader...
+INFO - 2016-03-20 04:05:53 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:05:53 --> Model Class Initialized
+INFO - 2016-03-20 04:05:53 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 04:05:53 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 04:05:53 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 04:05:53 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 04:05:53 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 04:05:53 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 04:05:53 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 04:05:53 --> Final output sent to browser
+DEBUG - 2016-03-20 04:05:53 --> Total execution time: 1.3413
+INFO - 2016-03-20 04:05:57 --> Config Class Initialized
+INFO - 2016-03-20 04:05:57 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:05:57 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:05:57 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:05:57 --> URI Class Initialized
+INFO - 2016-03-20 04:05:57 --> Router Class Initialized
+INFO - 2016-03-20 04:05:57 --> Output Class Initialized
+INFO - 2016-03-20 04:05:57 --> Security Class Initialized
+DEBUG - 2016-03-20 04:05:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:05:57 --> Input Class Initialized
+INFO - 2016-03-20 04:05:57 --> Language Class Initialized
+ERROR - 2016-03-20 04:05:57 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:05:57 --> Config Class Initialized
+INFO - 2016-03-20 04:05:57 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:05:57 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:05:57 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:05:57 --> URI Class Initialized
+INFO - 2016-03-20 04:05:57 --> Router Class Initialized
+INFO - 2016-03-20 04:05:57 --> Output Class Initialized
+INFO - 2016-03-20 04:05:57 --> Security Class Initialized
+DEBUG - 2016-03-20 04:05:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:05:57 --> Input Class Initialized
+INFO - 2016-03-20 04:05:57 --> Language Class Initialized
+ERROR - 2016-03-20 04:05:57 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:06:07 --> Config Class Initialized
+INFO - 2016-03-20 04:06:07 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:06:07 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:06:07 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:06:07 --> URI Class Initialized
+INFO - 2016-03-20 04:06:07 --> Router Class Initialized
+INFO - 2016-03-20 04:06:07 --> Output Class Initialized
+INFO - 2016-03-20 04:06:07 --> Security Class Initialized
+DEBUG - 2016-03-20 04:06:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:06:07 --> Input Class Initialized
+INFO - 2016-03-20 04:06:07 --> Language Class Initialized
+INFO - 2016-03-20 04:06:07 --> Loader Class Initialized
+INFO - 2016-03-20 04:06:07 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:06:07 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:06:07 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:06:08 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:06:08 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:06:08 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:06:08 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:06:08 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:06:08 --> Email Class Initialized
+INFO - 2016-03-20 04:06:08 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:06:08 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:06:08 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:06:08 --> Model Class Initialized
+INFO - 2016-03-20 04:06:08 --> Model Class Initialized
+INFO - 2016-03-20 04:06:08 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:06:08 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:06:08 --> Language_loader...
+INFO - 2016-03-20 04:06:08 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:06:08 --> Model Class Initialized
+INFO - 2016-03-20 04:06:08 --> Model Class Initialized
+INFO - 2016-03-20 04:06:08 --> Model Class Initialized
+INFO - 2016-03-20 04:06:08 --> Final output sent to browser
+DEBUG - 2016-03-20 04:06:08 --> Total execution time: 1.2525
+INFO - 2016-03-20 04:06:08 --> Config Class Initialized
+INFO - 2016-03-20 04:06:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:06:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:06:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:06:08 --> URI Class Initialized
+INFO - 2016-03-20 04:06:08 --> Router Class Initialized
+INFO - 2016-03-20 04:06:08 --> Output Class Initialized
+INFO - 2016-03-20 04:06:08 --> Security Class Initialized
+DEBUG - 2016-03-20 04:06:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:06:08 --> Input Class Initialized
+INFO - 2016-03-20 04:06:08 --> Language Class Initialized
+INFO - 2016-03-20 04:06:08 --> Loader Class Initialized
+INFO - 2016-03-20 04:06:08 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:06:08 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:06:08 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:06:08 --> Config Class Initialized
+INFO - 2016-03-20 04:06:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:06:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:06:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:06:08 --> URI Class Initialized
+INFO - 2016-03-20 04:06:08 --> Router Class Initialized
+INFO - 2016-03-20 04:06:08 --> Output Class Initialized
+INFO - 2016-03-20 04:06:08 --> Security Class Initialized
+DEBUG - 2016-03-20 04:06:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:06:08 --> Input Class Initialized
+INFO - 2016-03-20 04:06:08 --> Language Class Initialized
+INFO - 2016-03-20 04:06:08 --> Loader Class Initialized
+INFO - 2016-03-20 04:06:08 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:06:08 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:06:08 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:06:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:06:09 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:06:09 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:06:09 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:06:09 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:06:09 --> Email Class Initialized
+INFO - 2016-03-20 04:06:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:06:09 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:06:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:06:09 --> Model Class Initialized
+INFO - 2016-03-20 04:06:09 --> Model Class Initialized
+INFO - 2016-03-20 04:06:09 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:06:09 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:06:09 --> Language_loader...
+INFO - 2016-03-20 04:06:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:06:09 --> Model Class Initialized
+INFO - 2016-03-20 04:06:09 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:06:09 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:06:09 --> Pagination Class Initialized
+INFO - 2016-03-20 04:06:10 --> Final output sent to browser
+DEBUG - 2016-03-20 04:06:10 --> Total execution time: 1.3378
+INFO - 2016-03-20 04:06:10 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:06:10 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:06:10 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:06:10 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:06:10 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:06:10 --> Email Class Initialized
+INFO - 2016-03-20 04:06:10 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:06:10 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:06:10 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:06:10 --> Model Class Initialized
+INFO - 2016-03-20 04:06:10 --> Model Class Initialized
+INFO - 2016-03-20 04:06:10 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:06:10 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:06:10 --> Language_loader...
+INFO - 2016-03-20 04:06:10 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:06:10 --> Model Class Initialized
+INFO - 2016-03-20 04:06:10 --> Final output sent to browser
+DEBUG - 2016-03-20 04:06:10 --> Total execution time: 1.7967
+INFO - 2016-03-20 04:06:11 --> Config Class Initialized
+INFO - 2016-03-20 04:06:11 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:06:11 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:06:11 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:06:11 --> URI Class Initialized
+INFO - 2016-03-20 04:06:11 --> Router Class Initialized
+INFO - 2016-03-20 04:06:11 --> Output Class Initialized
+INFO - 2016-03-20 04:06:11 --> Security Class Initialized
+DEBUG - 2016-03-20 04:06:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:06:11 --> Input Class Initialized
+INFO - 2016-03-20 04:06:11 --> Language Class Initialized
+INFO - 2016-03-20 04:06:11 --> Loader Class Initialized
+INFO - 2016-03-20 04:06:11 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:06:11 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:06:11 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:06:12 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:06:12 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:06:12 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:06:12 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:06:12 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:06:12 --> Email Class Initialized
+INFO - 2016-03-20 04:06:12 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:06:12 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:06:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:06:12 --> Model Class Initialized
+INFO - 2016-03-20 04:06:12 --> Model Class Initialized
+INFO - 2016-03-20 04:06:12 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:06:12 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:06:12 --> Language_loader...
+INFO - 2016-03-20 04:06:12 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:06:12 --> Model Class Initialized
+INFO - 2016-03-20 04:06:12 --> Final output sent to browser
+DEBUG - 2016-03-20 04:06:12 --> Total execution time: 1.0090
+INFO - 2016-03-20 04:06:22 --> Config Class Initialized
+INFO - 2016-03-20 04:06:22 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:06:22 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:06:22 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:06:22 --> URI Class Initialized
+INFO - 2016-03-20 04:06:22 --> Router Class Initialized
+INFO - 2016-03-20 04:06:22 --> Output Class Initialized
+INFO - 2016-03-20 04:06:22 --> Security Class Initialized
+DEBUG - 2016-03-20 04:06:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:06:22 --> Input Class Initialized
+INFO - 2016-03-20 04:06:22 --> Language Class Initialized
+INFO - 2016-03-20 04:06:22 --> Loader Class Initialized
+INFO - 2016-03-20 04:06:22 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:06:22 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:06:22 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:06:22 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:06:22 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:06:22 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:06:22 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:06:22 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:06:22 --> Email Class Initialized
+INFO - 2016-03-20 04:06:22 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:06:22 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:06:22 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:06:22 --> Model Class Initialized
+INFO - 2016-03-20 04:06:22 --> Model Class Initialized
+INFO - 2016-03-20 04:06:22 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:06:22 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:06:23 --> Language_loader...
+INFO - 2016-03-20 04:06:23 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:06:23 --> Model Class Initialized
+INFO - 2016-03-20 04:06:23 --> Final output sent to browser
+DEBUG - 2016-03-20 04:06:23 --> Total execution time: 0.9998
+INFO - 2016-03-20 04:06:24 --> Config Class Initialized
+INFO - 2016-03-20 04:06:24 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:06:24 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:06:24 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:06:24 --> URI Class Initialized
+INFO - 2016-03-20 04:06:24 --> Router Class Initialized
+INFO - 2016-03-20 04:06:24 --> Output Class Initialized
+INFO - 2016-03-20 04:06:24 --> Security Class Initialized
+DEBUG - 2016-03-20 04:06:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:06:24 --> Input Class Initialized
+INFO - 2016-03-20 04:06:24 --> Language Class Initialized
+INFO - 2016-03-20 04:06:24 --> Loader Class Initialized
+INFO - 2016-03-20 04:06:24 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:06:24 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:06:24 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:06:25 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:06:25 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:06:25 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:06:25 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:06:25 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:06:25 --> Email Class Initialized
+INFO - 2016-03-20 04:06:25 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:06:25 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:06:25 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:06:25 --> Model Class Initialized
+INFO - 2016-03-20 04:06:25 --> Model Class Initialized
+INFO - 2016-03-20 04:06:25 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:06:25 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:06:25 --> Language_loader...
+INFO - 2016-03-20 04:06:25 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:06:25 --> Model Class Initialized
+INFO - 2016-03-20 04:06:25 --> Final output sent to browser
+DEBUG - 2016-03-20 04:06:25 --> Total execution time: 1.0643
+INFO - 2016-03-20 04:07:12 --> Config Class Initialized
+INFO - 2016-03-20 04:07:12 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:07:12 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:07:12 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:07:12 --> URI Class Initialized
+INFO - 2016-03-20 04:07:12 --> Router Class Initialized
+INFO - 2016-03-20 04:07:12 --> Output Class Initialized
+INFO - 2016-03-20 04:07:12 --> Security Class Initialized
+DEBUG - 2016-03-20 04:07:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:07:12 --> Input Class Initialized
+INFO - 2016-03-20 04:07:12 --> Language Class Initialized
+INFO - 2016-03-20 04:07:12 --> Loader Class Initialized
+INFO - 2016-03-20 04:07:12 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:07:12 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:07:12 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:07:12 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:07:12 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:07:12 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:07:12 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:07:12 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:07:12 --> Email Class Initialized
+INFO - 2016-03-20 04:07:12 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:07:12 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:07:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:07:12 --> Model Class Initialized
+INFO - 2016-03-20 04:07:12 --> Model Class Initialized
+INFO - 2016-03-20 04:07:12 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:07:12 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:07:13 --> Language_loader...
+INFO - 2016-03-20 04:07:13 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:07:13 --> Model Class Initialized
+INFO - 2016-03-20 04:07:13 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:07:13 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:07:13 --> Pagination Class Initialized
+INFO - 2016-03-20 04:07:13 --> Final output sent to browser
+DEBUG - 2016-03-20 04:07:13 --> Total execution time: 1.3495
+INFO - 2016-03-20 04:07:21 --> Config Class Initialized
+INFO - 2016-03-20 04:07:21 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:07:21 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:07:21 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:07:21 --> URI Class Initialized
+INFO - 2016-03-20 04:07:21 --> Router Class Initialized
+INFO - 2016-03-20 04:07:21 --> Output Class Initialized
+INFO - 2016-03-20 04:07:21 --> Security Class Initialized
+DEBUG - 2016-03-20 04:07:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:07:21 --> Input Class Initialized
+INFO - 2016-03-20 04:07:21 --> Language Class Initialized
+INFO - 2016-03-20 04:07:21 --> Loader Class Initialized
+INFO - 2016-03-20 04:07:21 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:07:21 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:07:21 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:07:21 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:07:21 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:07:21 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:07:21 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:07:21 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:07:21 --> Email Class Initialized
+INFO - 2016-03-20 04:07:21 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:07:21 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:07:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:07:21 --> Model Class Initialized
+INFO - 2016-03-20 04:07:21 --> Model Class Initialized
+INFO - 2016-03-20 04:07:21 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:07:21 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:07:22 --> Language_loader...
+INFO - 2016-03-20 04:07:22 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:07:22 --> Model Class Initialized
+INFO - 2016-03-20 04:07:22 --> Final output sent to browser
+DEBUG - 2016-03-20 04:07:22 --> Total execution time: 1.0016
+INFO - 2016-03-20 04:07:30 --> Config Class Initialized
+INFO - 2016-03-20 04:07:30 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:07:30 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:07:30 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:07:30 --> URI Class Initialized
+INFO - 2016-03-20 04:07:30 --> Router Class Initialized
+INFO - 2016-03-20 04:07:30 --> Output Class Initialized
+INFO - 2016-03-20 04:07:30 --> Security Class Initialized
+DEBUG - 2016-03-20 04:07:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:07:30 --> Input Class Initialized
+INFO - 2016-03-20 04:07:30 --> Language Class Initialized
+INFO - 2016-03-20 04:07:30 --> Loader Class Initialized
+INFO - 2016-03-20 04:07:30 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:07:30 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:07:30 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:07:30 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:07:30 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:07:30 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:07:30 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:07:30 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:07:30 --> Email Class Initialized
+INFO - 2016-03-20 04:07:30 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:07:30 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:07:30 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:07:30 --> Model Class Initialized
+INFO - 2016-03-20 04:07:30 --> Model Class Initialized
+INFO - 2016-03-20 04:07:30 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:07:30 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:07:31 --> Language_loader...
+INFO - 2016-03-20 04:07:31 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:07:31 --> Model Class Initialized
+INFO - 2016-03-20 04:07:31 --> Final output sent to browser
+DEBUG - 2016-03-20 04:07:31 --> Total execution time: 1.0008
+INFO - 2016-03-20 04:07:57 --> Config Class Initialized
+INFO - 2016-03-20 04:07:57 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:07:57 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:07:57 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:07:57 --> URI Class Initialized
+INFO - 2016-03-20 04:07:57 --> Router Class Initialized
+INFO - 2016-03-20 04:07:57 --> Output Class Initialized
+INFO - 2016-03-20 04:07:57 --> Security Class Initialized
+DEBUG - 2016-03-20 04:07:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:07:57 --> Input Class Initialized
+INFO - 2016-03-20 04:07:57 --> Language Class Initialized
+INFO - 2016-03-20 04:07:57 --> Loader Class Initialized
+INFO - 2016-03-20 04:07:57 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:07:57 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:07:57 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:07:57 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:07:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:07:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:07:57 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:07:57 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:07:57 --> Email Class Initialized
+INFO - 2016-03-20 04:07:57 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:07:57 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:07:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:07:57 --> Model Class Initialized
+INFO - 2016-03-20 04:07:57 --> Model Class Initialized
+INFO - 2016-03-20 04:07:57 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:07:57 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:07:58 --> Language_loader...
+INFO - 2016-03-20 04:07:58 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:07:58 --> Model Class Initialized
+INFO - 2016-03-20 04:07:58 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:07:58 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:07:58 --> Pagination Class Initialized
+INFO - 2016-03-20 04:07:58 --> Final output sent to browser
+DEBUG - 2016-03-20 04:07:58 --> Total execution time: 1.3323
+INFO - 2016-03-20 04:08:03 --> Config Class Initialized
+INFO - 2016-03-20 04:08:03 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:03 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:03 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:03 --> URI Class Initialized
+INFO - 2016-03-20 04:08:03 --> Router Class Initialized
+INFO - 2016-03-20 04:08:03 --> Output Class Initialized
+INFO - 2016-03-20 04:08:03 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:03 --> Input Class Initialized
+INFO - 2016-03-20 04:08:03 --> Language Class Initialized
+INFO - 2016-03-20 04:08:03 --> Loader Class Initialized
+INFO - 2016-03-20 04:08:03 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:08:03 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:08:03 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:08:04 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:08:04 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:08:04 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:08:04 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:08:04 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:08:04 --> Email Class Initialized
+INFO - 2016-03-20 04:08:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:08:04 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:08:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:08:04 --> Model Class Initialized
+INFO - 2016-03-20 04:08:04 --> Model Class Initialized
+INFO - 2016-03-20 04:08:04 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:08:04 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:08:04 --> Language_loader...
+INFO - 2016-03-20 04:08:04 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:08:04 --> Model Class Initialized
+INFO - 2016-03-20 04:08:04 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 04:08:05 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 04:08:05 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 04:08:05 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 04:08:05 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 04:08:05 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 04:08:05 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 04:08:05 --> Final output sent to browser
+DEBUG - 2016-03-20 04:08:05 --> Total execution time: 1.3285
+INFO - 2016-03-20 04:08:08 --> Config Class Initialized
+INFO - 2016-03-20 04:08:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:08 --> URI Class Initialized
+INFO - 2016-03-20 04:08:08 --> Router Class Initialized
+INFO - 2016-03-20 04:08:08 --> Output Class Initialized
+INFO - 2016-03-20 04:08:08 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:08 --> Input Class Initialized
+INFO - 2016-03-20 04:08:08 --> Language Class Initialized
+ERROR - 2016-03-20 04:08:08 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:08:08 --> Config Class Initialized
+INFO - 2016-03-20 04:08:08 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:08 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:08 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:08 --> URI Class Initialized
+INFO - 2016-03-20 04:08:08 --> Router Class Initialized
+INFO - 2016-03-20 04:08:08 --> Output Class Initialized
+INFO - 2016-03-20 04:08:08 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:08 --> Input Class Initialized
+INFO - 2016-03-20 04:08:08 --> Language Class Initialized
+ERROR - 2016-03-20 04:08:08 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:08:15 --> Config Class Initialized
+INFO - 2016-03-20 04:08:15 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:15 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:15 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:15 --> URI Class Initialized
+INFO - 2016-03-20 04:08:15 --> Router Class Initialized
+INFO - 2016-03-20 04:08:15 --> Output Class Initialized
+INFO - 2016-03-20 04:08:15 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:15 --> Input Class Initialized
+INFO - 2016-03-20 04:08:15 --> Language Class Initialized
+INFO - 2016-03-20 04:08:15 --> Loader Class Initialized
+INFO - 2016-03-20 04:08:15 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:08:15 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:08:15 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:08:15 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:08:15 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:08:15 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:08:15 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:08:15 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:08:15 --> Email Class Initialized
+INFO - 2016-03-20 04:08:15 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:08:15 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:08:15 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:08:15 --> Model Class Initialized
+INFO - 2016-03-20 04:08:15 --> Model Class Initialized
+INFO - 2016-03-20 04:08:15 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:08:15 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:08:16 --> Language_loader...
+INFO - 2016-03-20 04:08:16 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:08:16 --> Model Class Initialized
+INFO - 2016-03-20 04:08:16 --> Model Class Initialized
+INFO - 2016-03-20 04:08:16 --> Model Class Initialized
+INFO - 2016-03-20 04:08:16 --> Final output sent to browser
+DEBUG - 2016-03-20 04:08:16 --> Total execution time: 1.1717
+INFO - 2016-03-20 04:08:17 --> Config Class Initialized
+INFO - 2016-03-20 04:08:17 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:17 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:17 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:17 --> URI Class Initialized
+INFO - 2016-03-20 04:08:17 --> Router Class Initialized
+INFO - 2016-03-20 04:08:17 --> Output Class Initialized
+INFO - 2016-03-20 04:08:17 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:17 --> Input Class Initialized
+INFO - 2016-03-20 04:08:17 --> Language Class Initialized
+INFO - 2016-03-20 04:08:17 --> Loader Class Initialized
+INFO - 2016-03-20 04:08:17 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:08:17 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:08:17 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:08:17 --> Config Class Initialized
+INFO - 2016-03-20 04:08:17 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:17 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:17 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:17 --> URI Class Initialized
+INFO - 2016-03-20 04:08:17 --> Router Class Initialized
+INFO - 2016-03-20 04:08:17 --> Output Class Initialized
+INFO - 2016-03-20 04:08:17 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:17 --> Input Class Initialized
+INFO - 2016-03-20 04:08:17 --> Language Class Initialized
+INFO - 2016-03-20 04:08:17 --> Loader Class Initialized
+INFO - 2016-03-20 04:08:17 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:08:17 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:08:17 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:08:17 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:08:17 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:08:17 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:08:17 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:08:17 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:08:17 --> Email Class Initialized
+INFO - 2016-03-20 04:08:17 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:08:17 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:08:17 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:08:17 --> Model Class Initialized
+INFO - 2016-03-20 04:08:17 --> Model Class Initialized
+INFO - 2016-03-20 04:08:17 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:08:17 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:08:18 --> Language_loader...
+INFO - 2016-03-20 04:08:18 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:08:18 --> Model Class Initialized
+INFO - 2016-03-20 04:08:18 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:08:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:08:18 --> Pagination Class Initialized
+INFO - 2016-03-20 04:08:18 --> Final output sent to browser
+DEBUG - 2016-03-20 04:08:18 --> Total execution time: 1.3236
+INFO - 2016-03-20 04:08:18 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:08:18 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:08:18 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:08:18 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:08:18 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:08:18 --> Email Class Initialized
+INFO - 2016-03-20 04:08:18 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:08:18 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:08:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:08:18 --> Model Class Initialized
+INFO - 2016-03-20 04:08:18 --> Model Class Initialized
+INFO - 2016-03-20 04:08:18 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:08:18 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:08:18 --> Language_loader...
+INFO - 2016-03-20 04:08:18 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:08:18 --> Model Class Initialized
+INFO - 2016-03-20 04:08:18 --> Final output sent to browser
+DEBUG - 2016-03-20 04:08:18 --> Total execution time: 1.5141
+INFO - 2016-03-20 04:08:19 --> Config Class Initialized
+INFO - 2016-03-20 04:08:19 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:19 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:19 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:19 --> URI Class Initialized
+INFO - 2016-03-20 04:08:19 --> Router Class Initialized
+INFO - 2016-03-20 04:08:19 --> Output Class Initialized
+INFO - 2016-03-20 04:08:19 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:19 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:19 --> Input Class Initialized
+INFO - 2016-03-20 04:08:19 --> Language Class Initialized
+INFO - 2016-03-20 04:08:19 --> Loader Class Initialized
+INFO - 2016-03-20 04:08:19 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:08:19 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:08:19 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:08:19 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:08:19 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:08:19 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:08:19 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:08:19 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:08:19 --> Email Class Initialized
+INFO - 2016-03-20 04:08:19 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:08:19 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:08:19 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:08:19 --> Model Class Initialized
+INFO - 2016-03-20 04:08:19 --> Model Class Initialized
+INFO - 2016-03-20 04:08:19 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:08:19 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:08:20 --> Language_loader...
+INFO - 2016-03-20 04:08:20 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:08:20 --> Model Class Initialized
+INFO - 2016-03-20 04:08:20 --> Final output sent to browser
+DEBUG - 2016-03-20 04:08:20 --> Total execution time: 1.0982
+INFO - 2016-03-20 04:08:43 --> Config Class Initialized
+INFO - 2016-03-20 04:08:43 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:43 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:43 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:43 --> URI Class Initialized
+INFO - 2016-03-20 04:08:43 --> Router Class Initialized
+INFO - 2016-03-20 04:08:43 --> Output Class Initialized
+INFO - 2016-03-20 04:08:43 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:43 --> Input Class Initialized
+INFO - 2016-03-20 04:08:43 --> Language Class Initialized
+INFO - 2016-03-20 04:08:43 --> Loader Class Initialized
+INFO - 2016-03-20 04:08:43 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:08:43 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:08:43 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:08:43 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:08:43 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:08:43 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:08:43 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:08:43 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:08:43 --> Email Class Initialized
+INFO - 2016-03-20 04:08:43 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:08:43 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:08:43 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:08:43 --> Model Class Initialized
+INFO - 2016-03-20 04:08:43 --> Model Class Initialized
+INFO - 2016-03-20 04:08:43 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:08:43 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:08:44 --> Language_loader...
+INFO - 2016-03-20 04:08:44 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:08:44 --> Model Class Initialized
+INFO - 2016-03-20 04:08:44 --> Final output sent to browser
+DEBUG - 2016-03-20 04:08:44 --> Total execution time: 1.0252
+INFO - 2016-03-20 04:08:50 --> Config Class Initialized
+INFO - 2016-03-20 04:08:50 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:08:50 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:08:50 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:08:50 --> URI Class Initialized
+INFO - 2016-03-20 04:08:50 --> Router Class Initialized
+INFO - 2016-03-20 04:08:50 --> Output Class Initialized
+INFO - 2016-03-20 04:08:50 --> Security Class Initialized
+DEBUG - 2016-03-20 04:08:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:08:50 --> Input Class Initialized
+INFO - 2016-03-20 04:08:50 --> Language Class Initialized
+INFO - 2016-03-20 04:08:50 --> Loader Class Initialized
+INFO - 2016-03-20 04:08:50 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:08:50 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:08:50 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:08:50 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:08:50 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:08:50 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:08:50 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:08:50 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:08:50 --> Email Class Initialized
+INFO - 2016-03-20 04:08:50 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:08:50 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:08:50 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:08:50 --> Model Class Initialized
+INFO - 2016-03-20 04:08:50 --> Model Class Initialized
+INFO - 2016-03-20 04:08:50 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:08:50 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:08:51 --> Language_loader...
+INFO - 2016-03-20 04:08:51 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:08:51 --> Model Class Initialized
+INFO - 2016-03-20 04:08:51 --> Final output sent to browser
+DEBUG - 2016-03-20 04:08:51 --> Total execution time: 1.0446
+INFO - 2016-03-20 04:09:13 --> Config Class Initialized
+INFO - 2016-03-20 04:09:13 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:09:13 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:09:13 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:09:13 --> URI Class Initialized
+INFO - 2016-03-20 04:09:13 --> Router Class Initialized
+INFO - 2016-03-20 04:09:13 --> Output Class Initialized
+INFO - 2016-03-20 04:09:13 --> Security Class Initialized
+DEBUG - 2016-03-20 04:09:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:09:13 --> Input Class Initialized
+INFO - 2016-03-20 04:09:13 --> Language Class Initialized
+INFO - 2016-03-20 04:09:13 --> Loader Class Initialized
+INFO - 2016-03-20 04:09:13 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:09:13 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:09:13 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:09:14 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:09:14 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:09:14 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:09:14 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:09:14 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:09:14 --> Email Class Initialized
+INFO - 2016-03-20 04:09:14 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:09:14 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:09:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:09:14 --> Model Class Initialized
+INFO - 2016-03-20 04:09:14 --> Model Class Initialized
+INFO - 2016-03-20 04:09:14 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:09:14 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:09:14 --> Language_loader...
+INFO - 2016-03-20 04:09:14 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:09:14 --> Model Class Initialized
+INFO - 2016-03-20 04:09:14 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:09:14 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:09:14 --> Pagination Class Initialized
+INFO - 2016-03-20 04:09:15 --> Final output sent to browser
+DEBUG - 2016-03-20 04:09:15 --> Total execution time: 1.3994
+INFO - 2016-03-20 04:11:27 --> Config Class Initialized
+INFO - 2016-03-20 04:11:27 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:27 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:27 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:27 --> URI Class Initialized
+INFO - 2016-03-20 04:11:27 --> Router Class Initialized
+INFO - 2016-03-20 04:11:27 --> Output Class Initialized
+INFO - 2016-03-20 04:11:27 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:27 --> Input Class Initialized
+INFO - 2016-03-20 04:11:27 --> Language Class Initialized
+INFO - 2016-03-20 04:11:27 --> Loader Class Initialized
+INFO - 2016-03-20 04:11:27 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:11:27 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:11:27 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:11:27 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:11:27 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:11:27 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:11:27 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:11:27 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:11:27 --> Email Class Initialized
+INFO - 2016-03-20 04:11:27 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:11:27 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:11:27 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:11:27 --> Model Class Initialized
+INFO - 2016-03-20 04:11:27 --> Model Class Initialized
+INFO - 2016-03-20 04:11:27 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:11:27 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:11:28 --> Language_loader...
+INFO - 2016-03-20 04:11:28 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:11:28 --> Model Class Initialized
+INFO - 2016-03-20 04:11:28 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 04:11:28 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 04:11:28 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 04:11:28 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 04:11:28 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 04:11:28 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 04:11:28 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 04:11:28 --> Final output sent to browser
+DEBUG - 2016-03-20 04:11:28 --> Total execution time: 1.3442
+INFO - 2016-03-20 04:11:31 --> Config Class Initialized
+INFO - 2016-03-20 04:11:31 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:31 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:31 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:31 --> URI Class Initialized
+INFO - 2016-03-20 04:11:31 --> Router Class Initialized
+INFO - 2016-03-20 04:11:31 --> Output Class Initialized
+INFO - 2016-03-20 04:11:31 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:31 --> Input Class Initialized
+INFO - 2016-03-20 04:11:31 --> Language Class Initialized
+ERROR - 2016-03-20 04:11:31 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:11:31 --> Config Class Initialized
+INFO - 2016-03-20 04:11:31 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:31 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:31 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:31 --> URI Class Initialized
+INFO - 2016-03-20 04:11:31 --> Router Class Initialized
+INFO - 2016-03-20 04:11:31 --> Output Class Initialized
+INFO - 2016-03-20 04:11:31 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:31 --> Input Class Initialized
+INFO - 2016-03-20 04:11:31 --> Language Class Initialized
+ERROR - 2016-03-20 04:11:31 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:11:38 --> Config Class Initialized
+INFO - 2016-03-20 04:11:38 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:38 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:38 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:38 --> URI Class Initialized
+INFO - 2016-03-20 04:11:38 --> Router Class Initialized
+INFO - 2016-03-20 04:11:38 --> Output Class Initialized
+INFO - 2016-03-20 04:11:38 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:38 --> Input Class Initialized
+INFO - 2016-03-20 04:11:38 --> Language Class Initialized
+INFO - 2016-03-20 04:11:38 --> Loader Class Initialized
+INFO - 2016-03-20 04:11:38 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:11:38 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:11:38 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:11:38 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:11:38 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:11:38 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:11:38 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:11:38 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:11:38 --> Email Class Initialized
+INFO - 2016-03-20 04:11:38 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:11:38 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:11:38 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:11:38 --> Model Class Initialized
+INFO - 2016-03-20 04:11:38 --> Model Class Initialized
+INFO - 2016-03-20 04:11:38 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:11:38 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:11:39 --> Language_loader...
+INFO - 2016-03-20 04:11:39 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:11:39 --> Model Class Initialized
+INFO - 2016-03-20 04:11:39 --> Model Class Initialized
+INFO - 2016-03-20 04:11:39 --> Model Class Initialized
+INFO - 2016-03-20 04:11:39 --> Final output sent to browser
+DEBUG - 2016-03-20 04:11:39 --> Total execution time: 1.2278
+INFO - 2016-03-20 04:11:39 --> Config Class Initialized
+INFO - 2016-03-20 04:11:39 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:39 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:39 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:39 --> URI Class Initialized
+INFO - 2016-03-20 04:11:39 --> Router Class Initialized
+INFO - 2016-03-20 04:11:39 --> Output Class Initialized
+INFO - 2016-03-20 04:11:39 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:39 --> Input Class Initialized
+INFO - 2016-03-20 04:11:39 --> Language Class Initialized
+INFO - 2016-03-20 04:11:39 --> Loader Class Initialized
+INFO - 2016-03-20 04:11:39 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:11:39 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:11:39 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:11:39 --> Config Class Initialized
+INFO - 2016-03-20 04:11:39 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:39 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:39 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:39 --> URI Class Initialized
+INFO - 2016-03-20 04:11:39 --> Router Class Initialized
+INFO - 2016-03-20 04:11:39 --> Output Class Initialized
+INFO - 2016-03-20 04:11:39 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:39 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:39 --> Input Class Initialized
+INFO - 2016-03-20 04:11:39 --> Language Class Initialized
+INFO - 2016-03-20 04:11:39 --> Loader Class Initialized
+INFO - 2016-03-20 04:11:39 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:11:39 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:11:39 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:11:40 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:11:40 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:11:40 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:11:40 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:11:40 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:11:40 --> Email Class Initialized
+INFO - 2016-03-20 04:11:40 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:11:40 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:11:40 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:11:40 --> Model Class Initialized
+INFO - 2016-03-20 04:11:40 --> Model Class Initialized
+INFO - 2016-03-20 04:11:40 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:11:40 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:11:40 --> Language_loader...
+INFO - 2016-03-20 04:11:40 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:11:40 --> Model Class Initialized
+INFO - 2016-03-20 04:11:40 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:11:40 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:11:40 --> Pagination Class Initialized
+INFO - 2016-03-20 04:11:40 --> Final output sent to browser
+DEBUG - 2016-03-20 04:11:40 --> Total execution time: 1.3297
+INFO - 2016-03-20 04:11:40 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:11:40 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:11:40 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:11:40 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:11:40 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:11:40 --> Email Class Initialized
+INFO - 2016-03-20 04:11:40 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:11:40 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:11:40 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:11:40 --> Model Class Initialized
+INFO - 2016-03-20 04:11:40 --> Model Class Initialized
+INFO - 2016-03-20 04:11:40 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:11:40 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:11:41 --> Language_loader...
+INFO - 2016-03-20 04:11:41 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:11:41 --> Model Class Initialized
+INFO - 2016-03-20 04:11:41 --> Final output sent to browser
+DEBUG - 2016-03-20 04:11:41 --> Total execution time: 1.5094
+INFO - 2016-03-20 04:11:46 --> Config Class Initialized
+INFO - 2016-03-20 04:11:46 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:46 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:46 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:46 --> URI Class Initialized
+INFO - 2016-03-20 04:11:46 --> Router Class Initialized
+INFO - 2016-03-20 04:11:46 --> Output Class Initialized
+INFO - 2016-03-20 04:11:46 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:46 --> Input Class Initialized
+INFO - 2016-03-20 04:11:46 --> Language Class Initialized
+INFO - 2016-03-20 04:11:46 --> Loader Class Initialized
+INFO - 2016-03-20 04:11:46 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:11:46 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:11:46 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:11:47 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:11:47 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:11:47 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:11:47 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:11:47 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:11:47 --> Email Class Initialized
+INFO - 2016-03-20 04:11:47 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:11:47 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:11:47 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:11:47 --> Model Class Initialized
+INFO - 2016-03-20 04:11:47 --> Model Class Initialized
+INFO - 2016-03-20 04:11:47 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:11:47 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:11:47 --> Language_loader...
+INFO - 2016-03-20 04:11:47 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:11:47 --> Model Class Initialized
+INFO - 2016-03-20 04:11:47 --> Final output sent to browser
+DEBUG - 2016-03-20 04:11:47 --> Total execution time: 1.0397
+INFO - 2016-03-20 04:11:53 --> Config Class Initialized
+INFO - 2016-03-20 04:11:53 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:53 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:53 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:53 --> URI Class Initialized
+INFO - 2016-03-20 04:11:53 --> Router Class Initialized
+INFO - 2016-03-20 04:11:53 --> Output Class Initialized
+INFO - 2016-03-20 04:11:53 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:53 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:53 --> Input Class Initialized
+INFO - 2016-03-20 04:11:53 --> Language Class Initialized
+INFO - 2016-03-20 04:11:53 --> Loader Class Initialized
+INFO - 2016-03-20 04:11:53 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:11:53 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:11:53 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:11:53 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:11:53 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:11:53 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:11:53 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:11:53 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:11:53 --> Email Class Initialized
+INFO - 2016-03-20 04:11:53 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:11:53 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:11:53 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:11:53 --> Model Class Initialized
+INFO - 2016-03-20 04:11:53 --> Model Class Initialized
+INFO - 2016-03-20 04:11:53 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:11:53 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:11:54 --> Language_loader...
+INFO - 2016-03-20 04:11:54 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:11:54 --> Model Class Initialized
+INFO - 2016-03-20 04:11:54 --> Final output sent to browser
+DEBUG - 2016-03-20 04:11:54 --> Total execution time: 1.0203
+INFO - 2016-03-20 04:11:57 --> Config Class Initialized
+INFO - 2016-03-20 04:11:57 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:11:57 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:11:57 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:11:57 --> URI Class Initialized
+INFO - 2016-03-20 04:11:57 --> Router Class Initialized
+INFO - 2016-03-20 04:11:57 --> Output Class Initialized
+INFO - 2016-03-20 04:11:57 --> Security Class Initialized
+DEBUG - 2016-03-20 04:11:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:11:57 --> Input Class Initialized
+INFO - 2016-03-20 04:11:57 --> Language Class Initialized
+INFO - 2016-03-20 04:11:57 --> Loader Class Initialized
+INFO - 2016-03-20 04:11:57 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:11:57 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:11:57 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:11:57 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:11:57 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:11:57 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:11:57 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:11:57 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:11:57 --> Email Class Initialized
+INFO - 2016-03-20 04:11:57 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:11:57 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:11:57 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:11:57 --> Model Class Initialized
+INFO - 2016-03-20 04:11:57 --> Model Class Initialized
+INFO - 2016-03-20 04:11:57 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:11:57 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:11:58 --> Language_loader...
+INFO - 2016-03-20 04:11:58 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:11:58 --> Model Class Initialized
+INFO - 2016-03-20 04:11:58 --> Final output sent to browser
+DEBUG - 2016-03-20 04:11:58 --> Total execution time: 1.0554
+INFO - 2016-03-20 04:12:04 --> Config Class Initialized
+INFO - 2016-03-20 04:12:04 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:12:04 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:12:04 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:12:04 --> URI Class Initialized
+INFO - 2016-03-20 04:12:04 --> Router Class Initialized
+INFO - 2016-03-20 04:12:04 --> Output Class Initialized
+INFO - 2016-03-20 04:12:04 --> Security Class Initialized
+DEBUG - 2016-03-20 04:12:04 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:12:04 --> Input Class Initialized
+INFO - 2016-03-20 04:12:04 --> Language Class Initialized
+INFO - 2016-03-20 04:12:04 --> Loader Class Initialized
+INFO - 2016-03-20 04:12:04 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:12:04 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:12:04 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:12:04 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:12:04 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:12:04 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:12:04 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:12:04 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:12:04 --> Email Class Initialized
+INFO - 2016-03-20 04:12:04 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:12:04 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:12:04 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:12:04 --> Model Class Initialized
+INFO - 2016-03-20 04:12:04 --> Model Class Initialized
+INFO - 2016-03-20 04:12:04 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:12:04 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:12:04 --> Language_loader...
+INFO - 2016-03-20 04:12:04 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:12:04 --> Model Class Initialized
+INFO - 2016-03-20 04:12:05 --> Final output sent to browser
+DEBUG - 2016-03-20 04:12:05 --> Total execution time: 0.9930
+INFO - 2016-03-20 04:12:16 --> Config Class Initialized
+INFO - 2016-03-20 04:12:16 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:12:16 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:12:16 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:12:16 --> URI Class Initialized
+INFO - 2016-03-20 04:12:16 --> Router Class Initialized
+INFO - 2016-03-20 04:12:16 --> Output Class Initialized
+INFO - 2016-03-20 04:12:16 --> Security Class Initialized
+DEBUG - 2016-03-20 04:12:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:12:16 --> Input Class Initialized
+INFO - 2016-03-20 04:12:16 --> Language Class Initialized
+INFO - 2016-03-20 04:12:16 --> Loader Class Initialized
+INFO - 2016-03-20 04:12:16 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:12:16 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:12:16 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:12:16 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:12:16 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:12:16 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:12:16 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:12:16 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:12:16 --> Email Class Initialized
+INFO - 2016-03-20 04:12:16 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:12:16 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:12:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:12:16 --> Model Class Initialized
+INFO - 2016-03-20 04:12:16 --> Model Class Initialized
+INFO - 2016-03-20 04:12:16 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:12:16 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:12:17 --> Language_loader...
+INFO - 2016-03-20 04:12:17 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:12:17 --> Model Class Initialized
+INFO - 2016-03-20 04:12:17 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:12:17 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:12:17 --> Pagination Class Initialized
+INFO - 2016-03-20 04:12:17 --> Final output sent to browser
+DEBUG - 2016-03-20 04:12:17 --> Total execution time: 1.3357
+INFO - 2016-03-20 04:12:58 --> Config Class Initialized
+INFO - 2016-03-20 04:12:58 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:12:58 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:12:58 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:12:58 --> URI Class Initialized
+INFO - 2016-03-20 04:12:58 --> Router Class Initialized
+INFO - 2016-03-20 04:12:58 --> Output Class Initialized
+INFO - 2016-03-20 04:12:58 --> Security Class Initialized
+DEBUG - 2016-03-20 04:12:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:12:58 --> Input Class Initialized
+INFO - 2016-03-20 04:12:58 --> Language Class Initialized
+INFO - 2016-03-20 04:12:58 --> Loader Class Initialized
+INFO - 2016-03-20 04:12:58 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:12:58 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:12:58 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:12:58 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:12:58 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:12:58 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:12:58 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:12:58 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:12:58 --> Email Class Initialized
+INFO - 2016-03-20 04:12:58 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:12:58 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:12:58 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:12:58 --> Model Class Initialized
+INFO - 2016-03-20 04:12:58 --> Model Class Initialized
+INFO - 2016-03-20 04:12:58 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:12:58 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:12:59 --> Language_loader...
+INFO - 2016-03-20 04:12:59 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:12:59 --> Model Class Initialized
+INFO - 2016-03-20 04:12:59 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 04:12:59 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 04:12:59 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 04:12:59 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 04:12:59 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 04:12:59 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 04:12:59 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 04:12:59 --> Final output sent to browser
+DEBUG - 2016-03-20 04:12:59 --> Total execution time: 1.3316
+INFO - 2016-03-20 04:13:02 --> Config Class Initialized
+INFO - 2016-03-20 04:13:02 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:02 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:02 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:02 --> URI Class Initialized
+INFO - 2016-03-20 04:13:02 --> Router Class Initialized
+INFO - 2016-03-20 04:13:02 --> Output Class Initialized
+INFO - 2016-03-20 04:13:02 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:02 --> Input Class Initialized
+INFO - 2016-03-20 04:13:02 --> Language Class Initialized
+ERROR - 2016-03-20 04:13:02 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:13:02 --> Config Class Initialized
+INFO - 2016-03-20 04:13:02 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:02 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:02 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:02 --> URI Class Initialized
+INFO - 2016-03-20 04:13:02 --> Router Class Initialized
+INFO - 2016-03-20 04:13:02 --> Output Class Initialized
+INFO - 2016-03-20 04:13:02 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:02 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:02 --> Input Class Initialized
+INFO - 2016-03-20 04:13:02 --> Language Class Initialized
+ERROR - 2016-03-20 04:13:02 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:13:09 --> Config Class Initialized
+INFO - 2016-03-20 04:13:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:09 --> URI Class Initialized
+INFO - 2016-03-20 04:13:09 --> Router Class Initialized
+INFO - 2016-03-20 04:13:09 --> Output Class Initialized
+INFO - 2016-03-20 04:13:09 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:09 --> Input Class Initialized
+INFO - 2016-03-20 04:13:09 --> Language Class Initialized
+INFO - 2016-03-20 04:13:09 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:09 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:09 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:09 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:09 --> Config Class Initialized
+INFO - 2016-03-20 04:13:09 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:09 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:09 --> URI Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> No URI present. Default controller set.
+INFO - 2016-03-20 04:13:09 --> Router Class Initialized
+INFO - 2016-03-20 04:13:09 --> Output Class Initialized
+INFO - 2016-03-20 04:13:09 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:09 --> Input Class Initialized
+INFO - 2016-03-20 04:13:09 --> Language Class Initialized
+INFO - 2016-03-20 04:13:09 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:09 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:09 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:09 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:09 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:09 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:09 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:09 --> Email Class Initialized
+INFO - 2016-03-20 04:13:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:09 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:09 --> Model Class Initialized
+INFO - 2016-03-20 04:13:09 --> Model Class Initialized
+INFO - 2016-03-20 04:13:09 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:09 --> Controller Class Initialized
+INFO - 2016-03-20 04:13:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:09 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:09 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:09 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:09 --> Email Class Initialized
+INFO - 2016-03-20 04:13:09 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:09 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:09 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:09 --> Model Class Initialized
+INFO - 2016-03-20 04:13:09 --> Model Class Initialized
+INFO - 2016-03-20 04:13:09 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:09 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:09 --> Ion_auth class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:09 --> Helper loaded: form_helper
+INFO - 2016-03-20 04:13:09 --> Form Validation Class Initialized
+INFO - 2016-03-20 04:13:09 --> Language file loaded: language/english/auth_lang.php
+DEBUG - 2016-03-20 04:13:09 --> Language_loader...
+INFO - 2016-03-20 04:13:09 --> Language file loaded: language/english/unilever_lang.php
+DEBUG - 2016-03-20 04:13:09 --> Language_loader...
+INFO - 2016-03-20 04:13:09 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:09 --> Model Class Initialized
+INFO - 2016-03-20 04:13:09 --> Model Class Initialized
+INFO - 2016-03-20 04:13:09 --> Model Class Initialized
+INFO - 2016-03-20 04:13:10 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:10 --> Total execution time: 1.1655
+INFO - 2016-03-20 04:13:10 --> Config Class Initialized
+INFO - 2016-03-20 04:13:10 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:10 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:10 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:10 --> URI Class Initialized
+INFO - 2016-03-20 04:13:10 --> Router Class Initialized
+INFO - 2016-03-20 04:13:10 --> Output Class Initialized
+INFO - 2016-03-20 04:13:10 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:10 --> Input Class Initialized
+INFO - 2016-03-20 04:13:10 --> Language Class Initialized
+INFO - 2016-03-20 04:13:10 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:10 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:10 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:10 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:10 --> Config Class Initialized
+INFO - 2016-03-20 04:13:10 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:10 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:10 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:10 --> URI Class Initialized
+INFO - 2016-03-20 04:13:10 --> Router Class Initialized
+INFO - 2016-03-20 04:13:10 --> Output Class Initialized
+INFO - 2016-03-20 04:13:10 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:10 --> Input Class Initialized
+INFO - 2016-03-20 04:13:10 --> Language Class Initialized
+INFO - 2016-03-20 04:13:10 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:10 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:10 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:10 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:11 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:11 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:11 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:11 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:11 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:11 --> Email Class Initialized
+INFO - 2016-03-20 04:13:11 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:11 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:11 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:11 --> Model Class Initialized
+INFO - 2016-03-20 04:13:11 --> Model Class Initialized
+INFO - 2016-03-20 04:13:11 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:11 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:11 --> Language_loader...
+INFO - 2016-03-20 04:13:11 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:11 --> Model Class Initialized
+INFO - 2016-03-20 04:13:11 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:13:11 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:13:11 --> Pagination Class Initialized
+INFO - 2016-03-20 04:13:11 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:11 --> Total execution time: 1.3276
+INFO - 2016-03-20 04:13:11 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:11 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:11 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:11 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:11 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:11 --> Email Class Initialized
+INFO - 2016-03-20 04:13:11 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:11 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:11 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:11 --> Model Class Initialized
+INFO - 2016-03-20 04:13:11 --> Model Class Initialized
+INFO - 2016-03-20 04:13:11 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:11 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:11 --> Language_loader...
+INFO - 2016-03-20 04:13:11 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:11 --> Model Class Initialized
+INFO - 2016-03-20 04:13:12 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:12 --> Total execution time: 1.5313
+INFO - 2016-03-20 04:13:12 --> Config Class Initialized
+INFO - 2016-03-20 04:13:12 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:12 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:12 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:12 --> URI Class Initialized
+INFO - 2016-03-20 04:13:12 --> Router Class Initialized
+INFO - 2016-03-20 04:13:12 --> Output Class Initialized
+INFO - 2016-03-20 04:13:12 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:12 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:12 --> Input Class Initialized
+INFO - 2016-03-20 04:13:12 --> Language Class Initialized
+INFO - 2016-03-20 04:13:12 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:12 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:12 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:12 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:12 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:12 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:12 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:12 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:12 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:12 --> Email Class Initialized
+INFO - 2016-03-20 04:13:12 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:12 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:12 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:12 --> Model Class Initialized
+INFO - 2016-03-20 04:13:12 --> Model Class Initialized
+INFO - 2016-03-20 04:13:12 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:12 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:13 --> Language_loader...
+INFO - 2016-03-20 04:13:13 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:13 --> Model Class Initialized
+INFO - 2016-03-20 04:13:13 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:13 --> Total execution time: 0.9955
+INFO - 2016-03-20 04:13:16 --> Config Class Initialized
+INFO - 2016-03-20 04:13:16 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:16 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:16 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:16 --> URI Class Initialized
+INFO - 2016-03-20 04:13:16 --> Router Class Initialized
+INFO - 2016-03-20 04:13:16 --> Output Class Initialized
+INFO - 2016-03-20 04:13:16 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:16 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:16 --> Input Class Initialized
+INFO - 2016-03-20 04:13:16 --> Language Class Initialized
+INFO - 2016-03-20 04:13:16 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:16 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:16 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:16 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:16 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:16 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:16 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:16 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:16 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:16 --> Email Class Initialized
+INFO - 2016-03-20 04:13:16 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:16 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:16 --> Model Class Initialized
+INFO - 2016-03-20 04:13:16 --> Model Class Initialized
+INFO - 2016-03-20 04:13:16 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:16 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:16 --> Language_loader...
+INFO - 2016-03-20 04:13:16 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:16 --> Model Class Initialized
+INFO - 2016-03-20 04:13:17 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:17 --> Total execution time: 0.9927
+INFO - 2016-03-20 04:13:21 --> Config Class Initialized
+INFO - 2016-03-20 04:13:21 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:21 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:21 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:21 --> URI Class Initialized
+INFO - 2016-03-20 04:13:21 --> Router Class Initialized
+INFO - 2016-03-20 04:13:21 --> Output Class Initialized
+INFO - 2016-03-20 04:13:21 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:21 --> Input Class Initialized
+INFO - 2016-03-20 04:13:21 --> Language Class Initialized
+INFO - 2016-03-20 04:13:21 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:21 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:21 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:21 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:21 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:21 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:21 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:21 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:21 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:21 --> Email Class Initialized
+INFO - 2016-03-20 04:13:21 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:21 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:21 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:21 --> Model Class Initialized
+INFO - 2016-03-20 04:13:21 --> Model Class Initialized
+INFO - 2016-03-20 04:13:21 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:21 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:22 --> Language_loader...
+INFO - 2016-03-20 04:13:22 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:22 --> Model Class Initialized
+INFO - 2016-03-20 04:13:22 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:22 --> Total execution time: 1.0456
+INFO - 2016-03-20 04:13:28 --> Config Class Initialized
+INFO - 2016-03-20 04:13:28 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:28 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:28 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:28 --> URI Class Initialized
+INFO - 2016-03-20 04:13:28 --> Router Class Initialized
+INFO - 2016-03-20 04:13:28 --> Output Class Initialized
+INFO - 2016-03-20 04:13:28 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:28 --> Input Class Initialized
+INFO - 2016-03-20 04:13:28 --> Language Class Initialized
+INFO - 2016-03-20 04:13:28 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:28 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:28 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:28 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:28 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:28 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:28 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:28 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:28 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:28 --> Email Class Initialized
+INFO - 2016-03-20 04:13:28 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:28 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:28 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:28 --> Model Class Initialized
+INFO - 2016-03-20 04:13:28 --> Model Class Initialized
+INFO - 2016-03-20 04:13:28 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:28 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:29 --> Language_loader...
+INFO - 2016-03-20 04:13:29 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:29 --> Model Class Initialized
+INFO - 2016-03-20 04:13:29 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:13:29 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:13:29 --> Pagination Class Initialized
+INFO - 2016-03-20 04:13:29 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:29 --> Total execution time: 1.3249
+INFO - 2016-03-20 04:13:46 --> Config Class Initialized
+INFO - 2016-03-20 04:13:46 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:46 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:46 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:46 --> URI Class Initialized
+INFO - 2016-03-20 04:13:46 --> Router Class Initialized
+INFO - 2016-03-20 04:13:46 --> Output Class Initialized
+INFO - 2016-03-20 04:13:46 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:46 --> Input Class Initialized
+INFO - 2016-03-20 04:13:46 --> Language Class Initialized
+INFO - 2016-03-20 04:13:46 --> Loader Class Initialized
+INFO - 2016-03-20 04:13:46 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:13:46 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:13:46 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:13:47 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:13:47 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:13:47 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:13:47 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:13:47 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:13:47 --> Email Class Initialized
+INFO - 2016-03-20 04:13:47 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:13:47 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:13:47 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:13:47 --> Model Class Initialized
+INFO - 2016-03-20 04:13:47 --> Model Class Initialized
+INFO - 2016-03-20 04:13:47 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:13:47 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:13:47 --> Language_loader...
+INFO - 2016-03-20 04:13:47 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:13:47 --> Model Class Initialized
+INFO - 2016-03-20 04:13:47 --> File loaded: /home/ubuntu/workspace/application/views/_include.php
+INFO - 2016-03-20 04:13:48 --> File loaded: /home/ubuntu/workspace/application/views/changeuserpassword.php
+INFO - 2016-03-20 04:13:48 --> File loaded: /home/ubuntu/workspace/application/views/_header.php
+INFO - 2016-03-20 04:13:48 --> File loaded: /home/ubuntu/workspace/application/views/_leftside_supervisor.php
+ERROR - 2016-03-20 04:13:48 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 213
+ERROR - 2016-03-20 04:13:48 --> Severity: Notice --> Undefined variable: page_links /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php 273
+INFO - 2016-03-20 04:13:48 --> File loaded: /home/ubuntu/workspace/application/views/supervisor/beauty_agent_daily_report.php
+INFO - 2016-03-20 04:13:48 --> Final output sent to browser
+DEBUG - 2016-03-20 04:13:48 --> Total execution time: 1.3621
+INFO - 2016-03-20 04:13:50 --> Config Class Initialized
+INFO - 2016-03-20 04:13:50 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:50 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:50 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:50 --> URI Class Initialized
+INFO - 2016-03-20 04:13:50 --> Router Class Initialized
+INFO - 2016-03-20 04:13:50 --> Output Class Initialized
+INFO - 2016-03-20 04:13:50 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:50 --> Input Class Initialized
+INFO - 2016-03-20 04:13:50 --> Language Class Initialized
+ERROR - 2016-03-20 04:13:50 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:13:50 --> Config Class Initialized
+INFO - 2016-03-20 04:13:50 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:13:50 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:13:50 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:13:50 --> URI Class Initialized
+INFO - 2016-03-20 04:13:50 --> Router Class Initialized
+INFO - 2016-03-20 04:13:50 --> Output Class Initialized
+INFO - 2016-03-20 04:13:50 --> Security Class Initialized
+DEBUG - 2016-03-20 04:13:50 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:13:50 --> Input Class Initialized
+INFO - 2016-03-20 04:13:50 --> Language Class Initialized
+ERROR - 2016-03-20 04:13:50 --> 404 Page Not Found: Public/bower_components
+INFO - 2016-03-20 04:14:14 --> Config Class Initialized
+INFO - 2016-03-20 04:14:14 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:14:14 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:14:14 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:14:14 --> URI Class Initialized
+INFO - 2016-03-20 04:14:14 --> Router Class Initialized
+INFO - 2016-03-20 04:14:14 --> Output Class Initialized
+INFO - 2016-03-20 04:14:14 --> Security Class Initialized
+DEBUG - 2016-03-20 04:14:14 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:14:14 --> Input Class Initialized
+INFO - 2016-03-20 04:14:14 --> Language Class Initialized
+INFO - 2016-03-20 04:14:14 --> Loader Class Initialized
+INFO - 2016-03-20 04:14:14 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:14:14 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:14:14 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:14:14 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:14:14 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:14:14 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:14:14 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:14:14 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:14:14 --> Email Class Initialized
+INFO - 2016-03-20 04:14:14 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:14:14 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:14:14 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:14:14 --> Model Class Initialized
+INFO - 2016-03-20 04:14:14 --> Model Class Initialized
+INFO - 2016-03-20 04:14:14 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:14:14 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:14:14 --> Language_loader...
+INFO - 2016-03-20 04:14:14 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:14:14 --> Model Class Initialized
+INFO - 2016-03-20 04:14:14 --> Model Class Initialized
+INFO - 2016-03-20 04:14:14 --> Model Class Initialized
+INFO - 2016-03-20 04:14:15 --> Final output sent to browser
+DEBUG - 2016-03-20 04:14:15 --> Total execution time: 1.1700
+INFO - 2016-03-20 04:14:15 --> Config Class Initialized
+INFO - 2016-03-20 04:14:15 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:14:15 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:14:15 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:14:15 --> URI Class Initialized
+INFO - 2016-03-20 04:14:15 --> Router Class Initialized
+INFO - 2016-03-20 04:14:15 --> Output Class Initialized
+INFO - 2016-03-20 04:14:15 --> Security Class Initialized
+DEBUG - 2016-03-20 04:14:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:14:15 --> Input Class Initialized
+INFO - 2016-03-20 04:14:15 --> Language Class Initialized
+INFO - 2016-03-20 04:14:15 --> Loader Class Initialized
+INFO - 2016-03-20 04:14:15 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:14:15 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:14:15 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:14:15 --> Config Class Initialized
+INFO - 2016-03-20 04:14:15 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:14:15 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:14:15 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:14:15 --> URI Class Initialized
+INFO - 2016-03-20 04:14:15 --> Router Class Initialized
+INFO - 2016-03-20 04:14:15 --> Output Class Initialized
+INFO - 2016-03-20 04:14:15 --> Security Class Initialized
+DEBUG - 2016-03-20 04:14:15 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:14:15 --> Input Class Initialized
+INFO - 2016-03-20 04:14:15 --> Language Class Initialized
+INFO - 2016-03-20 04:14:15 --> Loader Class Initialized
+INFO - 2016-03-20 04:14:15 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:14:15 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:14:15 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:14:16 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:14:16 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:14:16 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:14:16 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:14:16 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:14:16 --> Email Class Initialized
+INFO - 2016-03-20 04:14:16 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:14:16 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:14:16 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:14:16 --> Model Class Initialized
+INFO - 2016-03-20 04:14:16 --> Model Class Initialized
+INFO - 2016-03-20 04:14:16 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:14:16 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:14:16 --> Language_loader...
+INFO - 2016-03-20 04:14:16 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:14:16 --> Model Class Initialized
+INFO - 2016-03-20 04:14:16 --> Helper loaded: app_helper
+INFO - 2016-03-20 04:14:16 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2016-03-20 04:14:16 --> Pagination Class Initialized
+INFO - 2016-03-20 04:14:16 --> Final output sent to browser
+DEBUG - 2016-03-20 04:14:16 --> Total execution time: 1.3465
+INFO - 2016-03-20 04:14:17 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:14:17 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:14:17 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:14:17 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:14:17 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:14:17 --> Email Class Initialized
+INFO - 2016-03-20 04:14:17 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:14:17 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:14:17 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:14:17 --> Model Class Initialized
+INFO - 2016-03-20 04:14:17 --> Model Class Initialized
+INFO - 2016-03-20 04:14:17 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:14:17 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:14:17 --> Language_loader...
+INFO - 2016-03-20 04:14:17 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:14:17 --> Model Class Initialized
+INFO - 2016-03-20 04:14:17 --> Final output sent to browser
+DEBUG - 2016-03-20 04:14:17 --> Total execution time: 1.7828
+INFO - 2016-03-20 04:14:17 --> Config Class Initialized
+INFO - 2016-03-20 04:14:17 --> Hooks Class Initialized
+DEBUG - 2016-03-20 04:14:17 --> UTF-8 Support Enabled
+INFO - 2016-03-20 04:14:17 --> Utf8 Class Initialized
+INFO - 2016-03-20 04:14:17 --> URI Class Initialized
+INFO - 2016-03-20 04:14:17 --> Router Class Initialized
+INFO - 2016-03-20 04:14:17 --> Output Class Initialized
+INFO - 2016-03-20 04:14:17 --> Security Class Initialized
+DEBUG - 2016-03-20 04:14:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2016-03-20 04:14:17 --> Input Class Initialized
+INFO - 2016-03-20 04:14:17 --> Language Class Initialized
+INFO - 2016-03-20 04:14:17 --> Loader Class Initialized
+INFO - 2016-03-20 04:14:17 --> Helper loaded: url_helper
+INFO - 2016-03-20 04:14:17 --> Helper loaded: language_helper
+INFO - 2016-03-20 04:14:17 --> Database Driver Class Initialized
+INFO - 2016-03-20 04:14:18 --> Session: Class initialized using 'files' driver.
+DEBUG - 2016-03-20 04:14:18 --> Encryption: Auto-configured driver 'openssl'.
+INFO - 2016-03-20 04:14:18 --> Encryption: OpenSSL initialized with method AES-128-CBC.
+INFO - 2016-03-20 04:14:18 --> Encryption Class Initialized
+DEBUG - 2016-03-20 04:14:18 --> Config file loaded: /home/ubuntu/workspace/application/config/ion_auth.php
+INFO - 2016-03-20 04:14:18 --> Email Class Initialized
+INFO - 2016-03-20 04:14:18 --> Language file loaded: language/english/ion_auth_lang.php
+INFO - 2016-03-20 04:14:18 --> Helper loaded: cookie_helper
+DEBUG - 2016-03-20 04:14:18 --> Session class already loaded. Second attempt ignored.
+INFO - 2016-03-20 04:14:18 --> Model Class Initialized
+INFO - 2016-03-20 04:14:18 --> Model Class Initialized
+INFO - 2016-03-20 04:14:18 --> Helper loaded: date_helper
+INFO - 2016-03-20 04:14:18 --> Controller Class Initialized
+DEBUG - 2016-03-20 04:14:18 --> Language_loader...
+INFO - 2016-03-20 04:14:18 --> Language file loaded: language/english/unilever_lang.php
+INFO - 2016-03-20 04:14:18 --> Model Class Initialized
+INFO - 2016-03-20 04:14:18 --> Final output sent to browser
+DEBUG - 2016-03-20 04:14:18 --> Total execution time: 1.0031

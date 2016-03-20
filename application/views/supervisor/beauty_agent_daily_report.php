@@ -407,7 +407,7 @@
                         </div>
                     </div>
                 <div class="uk-modal-footer uk-text-right">
-                    <button type="button" class="md-btn uk-modal-close">Close</button>
+                    <button type="button" class="md-btn uk-modal-close" id="btnClose">Close</button>
                     <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" />
                 </div>
                 </form>

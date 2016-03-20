@@ -178,8 +178,34 @@
 		}
 		
 		public function checkpromotion(){
-			
+			$this->load->model('dao/Daosale');
+			$productId= $this->input->post("product_id");
+			$quantity= $this->input->post("quantity");
+			$this->data["promotion"] = $this->Daosale->check($productId, $quantity);
+			echo json_encode($this->data);
 		}
+		
+		public function updatesale(){
+			$this->load->model('dao/Daosale');
+			$saleId = $this->input->post("sale_id");
+			$productId = $this->input->post("product_id");
+			$quantity = $this->input->post("quantity");
+			$promotionId = $this->input->post("promotion_id");
+			if($this->Daosale->updateSale($saleId, $productId, $quantity, $promotionId)){
+	            echo json_encode(array(
+	            		'message' => 'You have been updated successfully.',
+	            		'status'  => TRUE
+	            	));
+            }else{
+            	echo json_encode(array(
+	            		'message' => 'You have failed when update sale please try again!',
+	            		'status'  => FALSE
+	            	));
+            }
+				
+		}
+		
+		
 	}
 
 ?>

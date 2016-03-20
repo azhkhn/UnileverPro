@@ -668,7 +668,7 @@
 					SELECT * 
 					FROM product_promotion
 					WHERE product_id = ".$productId."
-					AND buy >= ".$quantity."
+					AND buy <= ".$quantity."
 					AND start_date<=NOW() 
 					AND end_date>=NOW()
 					AND status = 1;");
@@ -677,6 +677,19 @@
 			$this->db->where("product_id",$productId);
 			$this->db->where("start_date");
 			return $query->row();
+		}
+		
+		public function updateSale($saleId, $productId, $quantity, $promotionId){
+			if($promotionId==""){
+				$promotionId = NULL;
+			}
+			$this->db->set('promotion_id', $promotionId);
+			$this->db->set("quantity", $quantity);
+			$this->db->set('updated_date', date('Y-m-d H:i:s'));
+			$this->db->set('updated_by', $this->ion_auth->get_user_id());
+			$this->db->where('sale_id', $saleId);
+			$this->db->where('product_id', $productId);
+			return $this->db->update('sale_items');
 		}
 	}
 ?>

@@ -555,13 +555,66 @@ $(function(){
 	
 	$("#txtQuantitySold").change(function(){
 		$("#txtAmount").val($("#txtQuantitySold").val() * $("#txtPrice").val());
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+"supervisor/checkpromotion",
+			type: "POST",
+			dataType: "JSON",
+			data: {
+				'product_id' : $("#btnSave").data("productid"),
+				'quantity' : $("#txtQuantitySold").val()
+			},
+			success: function(data){
+				console.log(data);
+				if(data.promotion){
+					$("#btnSave").data("promotionid", data.promotion.id);
+					$("#txtPromotion").val("BUY "+ data.promotion.buy + " FREE " + data.promotion.free);
+				}else{
+					$("#btnSave").data("promotionid", "");
+					$("#txtPromotion").val("");
+				}
+				modal.hide();
+			},
+			error: function(data){
+				console.log(data);
+				modal.hide();
+			}
+		}).done(function(data){
+			console.log(data);
+			modal.hide();
+		});
 	});
 	
 	$(document).on('click', "#btnSave", function(e){
 		e.preventDefault();
-		alert($(this).data("productid"));
-		alert($(this).data("saleid"));
-		alert($(this).data("promotionid"));
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+"supervisor/updatesale",
+			type: "POST",
+			dataType: "JSON",
+			data: {
+				'sale_id' : $("#btnSave").data("saleid"),
+				'product_id' : $("#btnSave").data("productid"),
+				'quantity' : $("#txtQuantitySold").val(),
+				'promotion_id': $("#btnSave").data("promotionid")
+			},
+			success: function(data){
+				console.log(data);
+				UIkit.modal.alert(data.message);
+				modal.hide();
+			},
+			error: function(data){
+				console.log(data);
+				modal.hide();
+			}
+		}).done(function(data){
+			console.log(data);
+			modal.hide();
+		});
+	});
+	
+	$("#btnClose").click(function(){
+		sales.getAllSales(SITE_URL+"supervisor/ajax");	
 	});
 
 	// TODO: ON CHANGE ON Transaction Of Date
