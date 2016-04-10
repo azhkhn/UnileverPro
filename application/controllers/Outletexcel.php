@@ -809,7 +809,11 @@ class Outletexcel extends CI_Controller {
     }
     
     function exportData($data){
-        $fileName = "MASTER REPORT-" . date("Y-m-d H_i_s") . ".xls";
+    	$supervisor= $this->input->post("supervisor_name");
+    	$year = $this->input->post("year");
+    	$month = $this->input->post("month");
+    	$week = $this->input->post("week");
+        $fileName = "MASTER REPORT-".$supervisor."_". $year."_".$month."_".$week."_" . date("Y-m-d H_i_s") . ".xls";
         $a = "<html xmlns:v='urn:schemas-microsoft-com:vml' 
         xmlns:o='urn:schemas-microsoft-com:office:office' 
         xmlns:x='urn:schemas-microsoft-com:office:excel' 

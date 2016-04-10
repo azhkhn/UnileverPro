@@ -50,8 +50,8 @@
                             <td><?php echo $data->name ?></td>
                             <td><?php echo $data->created_date ?></td>
                             <td>
-                                <a href="<?php echo site_url()?>outlettype/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="md-icon material-icons">edit</i></a>
-                                <a href="<?php echo site_url()?>outlettype/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="md-icon material-icons">delete</i></a>
+                                <a href="<?php echo site_url()?>outlettype/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
+                                <a href="<?php echo site_url()?>outlettype/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
                      

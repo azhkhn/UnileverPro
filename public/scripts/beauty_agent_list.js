@@ -1,9 +1,21 @@
 $(function(){
 
 	$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
-	$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
+	//$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
 	// TODO: CREATE USERS OBJECT
 	var users = {};
+	var table;
+    var bDestroy;
+    if(table != null) {
+        bDestroy = true;
+        table.destroy();
+        $("#BA_TABLE").empty();
+    }
+    table = $("#BA_TABLE").DataTable({
+       order: [[ 1, 'asc' ]],
+        "bDestroy": bDestroy
+    });
+    
 
 	// TODO: LIST ALL USERS
 	users.getAllUsers = function(URL){
@@ -56,8 +68,8 @@ $(function(){
 				'position' : $("#txtPosition").val(),
 				'supervisor' : $("#selectSupervisor").val(),
 				'username' : $("#txtUsername").val(),
-				'password' : $("#txtPassword").val(),
-				'confirmpassword' : $("#txtConfirmationPassword").val(),
+				'password' : "12345678",//$("#txtPassword").val(),
+				'confirmpassword' : "12345678",//$("#txtConfirmationPassword").val(),
 				'startworking' : moment($("#startWorking").val()).format('YYYY-MM-DD'),
 				'remark'   : $("#txtRemark").val(),
 				'company'  : 'UNILEVER',
@@ -237,7 +249,7 @@ $(function(){
 		var id = $(this).attr('data');
 		var value = ($(this).val()=="on") ? 1 : 0 ;
 		var _this = $(this);
-		UIkit.modal.confirm('Are you sure?', 
+		UIkit.modal.confirm('Are you really want to delete th?', 
 			function(){ 
 				modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
 				$.ajax({
@@ -266,9 +278,42 @@ $(function(){
 			}
 		);		
 	});
-
-
-	// TODO: DELETE USER
+	
+	
+	// TODO: DELETE BA
+	$(document).on('click','#btnDelete', function(){
+		var id = $(this).attr('data');
+		var _this = $(this);
+		UIkit.modal.confirm('Do you want to delete that BA?', 
+			function(){ 
+				UIkit.modal.confirm("Are you really want to delete that BA?",
+					function(){
+						modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+						$.ajax({
+							url: SITE_URL+'user/delete/'+id,
+							type: "POST",
+							dataType: "JSON",
+							success: function(data){
+								modal.hide();
+								console.log(data);
+								if(data){
+									UIkit.modal.alert('You have been deleted successfully!'); 	
+									location.href=SITE_URL + "user/bainformation";
+								}else{
+									UIkit.modal.alert('You have an error when delete the ba. Please try again!'); 	
+								}
+							},
+							error: function(data){
+								modal.hide();
+								console.log(data);
+							}
+						});
+					}
+				
+				);
+			}
+		);			
+	});
 
 	// TODO: PAGINATION ON USER
 	$('body').on('click', '.uk-pagination a', function(e){
@@ -280,12 +325,30 @@ $(function(){
 
 	// TODO: OPEN ADD NEW FORM
 	$("#btnOpenAddNew").click(function(){
+		$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
+		$("#txtPassword").parent('.md-input-wrapper').addClass('md-input-filled');
+		$("#txtConfirmationPassword").parent('.md-input-wrapper').addClass('md-input-filled');
 		$("#btnUpdateSave").hide();
 		$("#btnSave").show();
 		$('.md-input-wrapper').find('.md-input').val('');
-		$('.md-input-wrapper').removeClass('md-input-filled');
-		$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
+		$('.md-input-wrapper').find('.md-input').not("#startWorking","txtPassword","txtConfirmationPassword").val('');
+		$('.md-input-wrapper').find('.md-input').not("#startWorking").removeClass("md-input-filled");
 		$("#startWorking").val(moment().format('DD-MMMM-YYYY'));
+		$("#txtPassword").val("12345678");
+		$("#txtConfirmationPassword").val("12345678");
 		$("#photo").attr('src', SITE_URL+"public/assets/img/ecommerce/s6_edge.jpg");
 	});
+	
+	
+	$("#txtLastName").change(function(){
+		$("#txtUsername").val(($("#txtLastName").val()+$("#txtFirstName").val()).toLowerCase());
+		$("#txtUsername").parent('.md-input-wrapper').addClass('md-input-filled');
+	});
+	
+	$("#txtFirstName").change(function(){
+		$("#txtUsername").val(($("#txtLastName").val()+$("#txtFirstName").val()).toLowerCase());
+		$("#txtUsername").parent('.md-input-wrapper').addClass('md-input-filled');
+	});
+	
+	$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
 });

@@ -161,16 +161,135 @@
 
         </div>
     </div>
-
+    <div>
+        <div class="uk-modal" id="modalRegisterNewBA">
+            <div class="uk-modal-dialog uk-modal-dialog-large">
+                <button type="button" class="uk-modal-close uk-close"></button>
+                <div class="uk-modal-header">
+                    <h3 class="uk-modal-title">REGISTER A NEW BEAUTY AGENT</h3>
+                </div>
+                <form action="" class="uk-form-stacked" id="frmAddNewBeautyAgent">
+                    <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+                        <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
+                            <div class="md-card">
+                                <div class="md-card-toolbar">
+                                    <div class="md-card-toolbar-actions">
+                                        <i class="md-icon material-icons">&#xE146;</i>
+                                    </div>
+                                    <h3 class="md-card-toolbar-heading-text">
+                                        Photo
+                                    </h3>
+                                </div>
+                                <div class="md-card-content">
+                                    <div class="uk-margin-bottom uk-text-center uk-position-relative">
+                                        <img src="<?php echo base_url()?>public/assets/img/ecommerce/s6_edge.jpg" alt="" class="img_medium" id="photo"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="md-card">
+                                <div class="md-card-content">
+                                    <div class="uk-float-right">
+                                        <input type="checkbox" data-switchery data-switchery-color="#1e88e5" id="active"/>
+                                    </div>
+                                    <label class="uk-display-block uk-margin-small-top" for="user_active_control">Active</label>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+                            <div class="md-card">
+                                <div class="md-card-toolbar">
+                                    <h3 class="md-card-toolbar-heading-text">
+                                        INFORMATION DETAILS
+                                    </h3>
+                                </div>
+                                <div class="md-card-content large-padding">
+                                    <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
+                                        <div class="uk-width-large-1-2">
+                                            <div class="uk-form-row">
+                                                <label for="fullname" >Code<span class="req">*</span></label>
+                                                <input type="text" name="code" required class="md-input"  id="txtCode"/>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="fullname" >Last Name<span class="req">*</span></label>
+                                                <input type="text" name="lastname" required class="md-input" id="txtLastName" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="fullname" >First Name<span class="req">*</span></label>
+                                                <input type="text" name="firstname" required class="md-input" id="txtFirstName" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="gender" >Gender<span class="req">*</span></label>
+                                                <select name="gender" required data-md-selectize id="selectGender">
+                                                    <option value="">Gender</option>
+                                                    <option value="F" selected>Female</option>
+                                                    <option value="M">Male</option>
+                                                </select>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="supervisor" >Supervisor<span class="req">*</span></label>
+                                               <input type="text" class="md-input" id="txtSupervisor" name="txtSupervisor" required value=""/>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="telephone" >Telephone<span class="req">*</span></label>
+                                                <input type="text" class="md-input" id="txtTelephone" name="telephone" required value=""/>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="uk-width-large-1-2">
+                                            <div class="uk-form-row">
+                                                <label for="email" >Username<span class="req">*</span></label>
+                                                <input type="email" name="email" id="txtEmail" data-parsley-trigger="change" required  class="md-input" />
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="password" >Password<span class="req">*</span></label>
+                                                <input type="password" class="md-input" id="txtPassword" name="password" required value=""/>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="confirmation_password" >Confirmation Password<span class="req">*</span></label>
+                                                <input type="password" class="md-input" id="txtConfirmationPassword" name="confirmation_password" required value=""/>
+                                            </div>
+                                            
+                                            <div class="uk-form-row">
+                                                <div class="md-input-wrapper md-input-filled">
+                                                    <label for="startWorking" >Start Working<span class="req">*</span></label>
+                                                    <input class="md-input" type="text" id="startWorking" name="startWorking" data-uk-datepicker="{format:'DD-MMMM-YYYY', addClass: 'dropdown-modal'}" required>
+                                                </div>
+                                            </div>
+                                            <div class="uk-form-row">
+                                                <label for="remark" >Remark</label>
+                                                <textarea class="md-input" name="remark" id="txtRemark" cols="30" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button type="button" class="md-btn uk-modal-close">Close</button>
+                    <input type="button" class="md-btn md-btn-primary" data='' id="btnUpdateSave" value="Update" style="display:none;"/>
+                    <input type="submit" class="md-btn md-btn-primary" id="btnSave" value="Save" />
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- <div class="md-fab-wrapper">
         <a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
             <i class="material-icons">&#xE161;</i>
         </a>
     </div> -->
-
+    
     <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
-        <tr>
+        <tr style="font-weight:bold" >
+            <td>{{= no}}</td>
             <td>{{= username}}</td>
+            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info">{{= starting_date}}</span></td>
+            <td class="uk-text-nowrap"><span class="uk-badge uk-badge-info">{{= phone}}</span></td>
+            <td>
+                <a title="VIEW BA INFORMATION" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnViewInfo" data="{{= id}}"><i class="material-icons  md-24">&#xE8A6;</i></a>
+                <a title="VIEW BA DAILY REPORT" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnView" data="{{= id}}"><i class="material-icons md-24">&#xE8F4;</i></a>
+            </td>
         </tr>
     </script>
 

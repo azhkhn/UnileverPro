@@ -249,7 +249,41 @@ $(function(){
 	});
 
 
-	// TODO: DELETE USER
+	// TODO: DELETE BA
+	$(document).on('click','#btnDelete', function(){
+		var id = $(this).attr('data');
+		var _this = $(this);
+		UIkit.modal.confirm('Do you want to delete that BA Executive?', 
+			function(){ 
+				UIkit.modal.confirm("Are you really want to delete that BA Executive?",
+					function(){
+						modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+						$.ajax({
+							url: SITE_URL+'user/delete/'+id,
+							type: "POST",
+							dataType: "JSON",
+							success: function(data){
+								modal.hide();
+								console.log(data);
+								if(data){
+									UIkit.modal.alert('You have been deleted successfully!'); 	
+									location.href=SITE_URL + "user/baexecutiveinformation";
+								}else{
+									UIkit.modal.alert('You have an error when delete the ba. Please try again!'); 	
+								}
+							},
+							error: function(data){
+								modal.hide();
+								console.log(data);
+							}
+						});
+					}
+				
+				);
+			}
+		);			
+	});
+
 
 	// TODO: PAGINATION ON USER
 	$('body').on('click', '.uk-pagination a', function(e){
@@ -261,10 +295,11 @@ $(function(){
 
 	// TODO: OPEN ADD NEW FORM
 	$("#btnOpenAddNew").click(function(){
+		$("#startworking").parent('.md-input-wrapper').addClass('md-input-filled');
 		$("#btnUpdateSave").hide();
 		$("#btnSave").show();
 		$('.md-input-wrapper').find('.md-input').val('');
-		$('.md-input-wrapper').removeClass('md-input-filled');
+		$('.md-input-wrapper').find('.md-input').not("#startWorking").removeClass("md-input-filled");
 		$("#photo").attr('src', SITE_URL+"public/assets/img/ecommerce/s6_edge.jpg");
 	});
 

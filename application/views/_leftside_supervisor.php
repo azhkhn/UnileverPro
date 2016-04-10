@@ -12,7 +12,13 @@
         </div>
         <div class="menu_section">
             <ul>
-                <li class="act_section">
+                <li class="act_section">        
+                    <a href="<?php echo site_url('supervisor')?>">
+                        <i class="menu_icon material-icons">&#xE41D;</i>
+                        Supervisor's Daily Report
+                    </a>
+                </li>
+                <li>
                     <a href="<?php echo site_url('supervisor/bainformation')?>">
                     	<i class="menu_icon material-icons">&#xE871;</i>
                         BA's Information
@@ -24,12 +30,7 @@
                         BA's Daily Report
                     </a>
                 </li>
-                <li>        
-                    <a href="<?php echo site_url('supervisor')?>">
-                        <i class="menu_icon material-icons">&#xE41D;</i>
-                        Supervisor's Daily Report
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </aside>

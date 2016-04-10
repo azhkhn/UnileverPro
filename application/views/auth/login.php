@@ -18,9 +18,8 @@
 
     <!-- altair admin login page -->
     <link rel="stylesheet" href="<?php echo base_url()?>public/assets/css/login_page.min.css" />
-
 </head>
-<body class="login_page" style="background-color:white;">
+<body class="login_page" style="background:white;">
     <!--<h1><?php echo lang('login_heading');?></h1>
     <p><?php echo lang('login_subheading');?></p>-->
     
@@ -79,7 +78,7 @@
         </div>
        
     </div>
-
+    
     <!-- common functions -->
     <script src="<?php echo base_url()?>public/assets/js/common.min.js"></script>
     <!-- altair core functions -->
@@ -87,6 +86,15 @@
 
     <!-- altair login page functions -->
     <script src="<?php echo base_url()?>public/assets/js/pages/login_page.min.js"></script>
+    <!-- common functions -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script src="<?php echo base_url()?>public/assets/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('body').backstretch("https://dl.dropbox.com/u/515046/www/garfield-interior.jpg");
+        });
+    </script>
 
 </body>
 </html>

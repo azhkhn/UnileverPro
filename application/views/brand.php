@@ -127,7 +127,7 @@
 												<select id="parentid" name="parentid" data-md-selectize data-md-selectize-bottom>
 													<option></option>
 				                                     <?php foreach ($lstBrand as $brand):?>
-				                                       <option value="<?php echo $brand->id;?>"><?php echo $brand->id . ' '. $brand->name;?></option>
+				                                       <option value="<?php echo $brand->id;?>"><?php echo $brand->name;?></option>
 				                                     <?php endforeach?>
 				                                    </select>
 											</div>

@@ -73,8 +73,10 @@
                                 <input type="checkbox" id="btnStatus" data="<?php echo $data->id?>" data-switchery data-switchery-color="#1e88e5" <?php echo ($data->status==1)?"checked":""?> <?php echo ($data->status==1)?" value='on'":" value='off'"?>/>
                             </td>
                             <td>
-                                <a href="<?php echo site_url()?>outlet/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="md-icon material-icons">edit</i></a>
-                                <a href="<?php echo site_url()?>outlet/deletepro/<?php echo $data->id ?>" onclick="return confirm('Do you want to delete?');" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="md-icon material-icons">delete</i></a>
+                                <a href="<?php echo site_url()?>outlet/getpro/<?php echo $data->id ?>" data-uk-tooltip="{pos:'left'}" title="Edit"><i class="material-icons">edit</i></a>
+                                <!--<a href="#" data-uk-tooltip="{pos:'left'}" title="View BA" id="btnAddBA" data="<?php echo $data->id?>">
+                                <i class="material-icons">&#xE02F; </i></a>-->
+                                <a href="#" data-id="<?php echo $data->id ?>" id="btnDelete" data-uk-tooltip="{pos:'left'}" title="Delete"><i class="material-icons">delete</i></a>
                             </td>
                         </tr>
                      
@@ -146,6 +148,7 @@
     <script>
         var SITE_URL = '<?php echo site_url(); ?>';
     </script>
+    <script type="text/javascript" src="<?php echo base_url()?>public/scripts/outlet.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>public/scripts/changeuserpassword.js"></script>
 </body>
 </html>

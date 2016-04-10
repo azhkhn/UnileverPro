@@ -44,10 +44,10 @@ class Outlet extends ADMIN_Controller{
 			$this->data["bas"] = $this->OutletsDAO->listbas();
 			$this->load->view('outlet', $this->data);
 		}
-		
+	
 		public function deletepro($id){
-			$this->OutletsDAO->deleteOutlet($id);
-			redirect('outlet');
+			echo json_encode($this->OutletsDAO->deleteOutlet($id));
+			//redirect('outlet');
 		}
 
 		public function getpro($id){
@@ -92,6 +92,12 @@ class Outlet extends ADMIN_Controller{
 		public function listbajson(){
 			$result = $this->OutletsDAO->listbas();
 			$this->output->set_content_type('application/json')->set_output(json_encode($result));
+		}
+		
+		public function changeStatus($id){
+			$this->DtoOutlets->setId($id);
+			$this->DtoOutlets->setStatus($this->input->post('status'));
+			echo json_encode($this->OutletsDAO->changeStatus($this->DtoOutlets));
 		}
 }
 ?>

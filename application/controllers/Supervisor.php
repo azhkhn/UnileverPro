@@ -29,6 +29,7 @@
 			$this->Dtosale->setBaId($this->ion_auth->get_user_id());
 			$this->Dtosale->setStartDate($this->input->post('start_date'));
 			$this->Dtosale->setEndDate($this->input->post('end_date'));
+			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
 			$this->data["user"] = $this->Daosale->getSupervisorReport($this->Dtosale);
 			echo json_encode($this->data);
 		}
@@ -54,10 +55,11 @@
 			echo json_encode($this->Daouser->changeStatus($this->Dtouser));
 		}
 
-		public function dailyBAReport(){
+		public function dailyBAReport($id=""){
 			$this->load->model('dao/Daouser');
 			$this->load->model('dto/Dtouser');
 			$this->data["ba_users"] = $this->Daouser->getAllUsersByGroupId(3);
+			$this->data["id"] = $id;
 			$this->load->view('supervisor/beauty_agent_daily_report', $this->data);
 		}
 
@@ -103,9 +105,9 @@
 			echo json_encode($this->data);	
 		}
 
-		public function products(){
+		public function products($date){
 			$this->load->model('dao/Daoproduct');
-			$this->data = $this->Daoproduct->getAllProductsOnSale();
+			$this->data = $this->Daoproduct->getAllProductsOnSale($date);
 			echo json_encode($this->data);
 		}
 

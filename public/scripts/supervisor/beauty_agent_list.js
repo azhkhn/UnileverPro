@@ -95,15 +95,13 @@ $(function(){
 			success: function(data){
 				var $select = $("#selectGender").selectize();
 				var selectize = $select[0].selectize;
-				var $selectSupervisor = $("#selectSupervisor").selectize();
-				var selectSupervisor = $selectSupervisor[0].selectize;
 				console.log(data);
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
-				selectSupervisor.setValue(data.supervisor);
+				$("#txtSupervisor").val(data.supervisor);
 				$("#txtEmail").val(data.email);
 				$("#startWorking").val(data.starting_date)
 				$("#txtRemark").val(data.remark);
@@ -140,17 +138,14 @@ $(function(){
 			success: function(data){
 				var $select = $("#selectGender").selectize();
 				var selectize = $select[0].selectize;
-				var $selectSupervisor = $("#selectSupervisor").selectize();
-				var selectSupervisor = $selectSupervisor[0].selectize;
 				console.log(data);
 				$("#txtCode").val(data.code);
 				$("#txtLastName").val(data.last_name);
 				$("#txtFirstName").val(data.first_name);
-				//$("#selectGender").val(data.gender);
+			
 				selectize.setValue(data.gender); 
 				$("#txtTelephone").val(data.phone);
-				//$("#selectSupervisor").val(data.parent_id);
-				selectSupervisor.setValue(data.parent_id);
+				$("#txtSupervisor").val(data.supervisor);
 				$("#txtEmail").val(data.email);
 				$("#startWorking").val(data.starting_date)
 				$("#txtRemark").val(data.remark);

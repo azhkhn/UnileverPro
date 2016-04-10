@@ -56,15 +56,15 @@
 
 						<tbody>
                         
-                          <?php foreach ($product as $v) {?>
+                          <?php foreach ($product as $k=>$v) {?>
                         <tr>
-								<td><?= $v->id ?></td>
+								<td><?= ($k+1) ?></td>
 								<td><?= $v->code ?></td>
 								<td><?= $v->name ?></td>
 								<td><?= $v->size ?></td>
 								<td><?= $v->unit ?></td>
 								<td><?= $v->brand ?></td>
-								<td><?= $v->price ?></td>
+								<td>$<?= $v->price ?></td>
 								<!--<td><?= $v->promotion ?></td>-->
 								<td>
 									<a href="#" data-uk-tooltip="{pos:'left'}" title="Detail" id="btnView" data="<?php echo $v->id?>">

@@ -130,6 +130,9 @@
     </div>
     <form style="display:none;" id="myform" method="post" action="<?php echo base_url('outletexcel/html') ?>">
         <input name="data" id="data" type="hidden"/>
+        <input name="supervisor_name" id="supervisor_name" type="hidden" />
+        <input name="year" id="year" type="hidden" />
+        <input name="month" id="month" type="hidden" />
     </form>
     <iframe name="frame_x"></iframe>
 
@@ -379,6 +382,9 @@
             $("#btnExportExcel").click(function(){
                 //location.href=SITE_URL+"outletexcel/outlet_items_excel/"+$("#selectYear").val();
                 $("#data").val($("#EXCEL table").html());
+                $("#supervisor_name").val($("#selectedSupervisorName").text());
+                $("#year").val($("#selectedYear").text());
+                $("#month").val($("#selectedMonth").text());
                 function submitFormToIFrame(){
                     //IE
                     if( document.myform ){

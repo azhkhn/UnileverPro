@@ -208,10 +208,7 @@
                                             </div>
                                             <div class="uk-form-row">
                                                 <label for="supervisor" >Supervisor<span class="req">*</span></label>
-                                                <select id="selectSupervisor" name="supervisor" data-md-selectize data-md-selectize-bottom required>
-                                                <?php foreach ($supervisors as $supervisor):?>
-                                                    <option value="<?php echo $supervisor->id;?>"><?php echo $supervisor->last_name . ' '. $supervisor->first_name;?></option>
-                                                <?php endforeach?>
+                                                <input type="text" class="md-input" id="txtSupervisor" name="txtSupervisor" required value=""/>
                                                 </select>
                                             </div>
                                             <div class="uk-form-row">

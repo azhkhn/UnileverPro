@@ -40,7 +40,7 @@
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_visitors peity_data">5,3,9,6,5,9,7</span></div>
                             <span class="uk-text-muted uk-text-small">TOTAL BA</span>
-                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_ba ?></noscript></span></h2>
+                            <h2 class="uk-margin-remove" id="TOTAL_BA"><span class="countUpMe">0<noscript><?php echo $total_ba ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><i class="material-icons">&#xE854;</i></div>
                             <span class="uk-text-muted uk-text-small">TOTAL PRODUCTS</span>
-                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_product ?></noscript></span></h2>
+                            <h2 class="uk-margin-remove"  id="TOTAL_PRODUCTS"><span class="countUpMe">0<noscript><?php echo $total_product ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_orders peity_data">64/100</span></div>
                             <span class="uk-text-muted uk-text-small">TOTAL BRANDS</span>
-                            <h2 class="uk-margin-remove"><span class="countUpMe"><?php echo $total_brand ?><noscript></noscript></span></h2>
+                            <h2 class="uk-margin-remove"  id="TOTAL_BRANDS"><span class="countUpMe"><?php echo $total_brand ?><noscript></noscript></span></h2>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         <div class="md-card-content">
                             <div class="uk-float-right uk-margin-top uk-margin-small-right"><span class="peity_live peity_data">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span></div> 
                             <span class="uk-text-muted uk-text-small">TOTAL OUTLETS </span>
-                            <h2 class="uk-margin-remove"><span class="countUpMe">0<noscript><?php echo $total_outlet ?></noscript></span></h2>
+                            <h2 class="uk-margin-remove" id="TOTAL_OUTLETS"><span class="countUpMe">0<noscript><?php echo $total_outlet ?></noscript></span></h2>
                         </div>
                     </div>
                 </div>
@@ -255,6 +255,75 @@
         var SITE_URL = '<?php echo site_url() ?>';
         $(function() {
             altair_helpers.retina_images();
+            $(document).on('click','.clndr_previous',function(){
+               var date = $('.clndr .md-card-toolbar-heading-text').html().trim();
+               date = "31-"+date.replace(" ","-");
+               date = moment(date).add(-1,'month').format("YYYY-MM-DD");
+               modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+               $.ajax({
+        			url: SITE_URL+'dashboard/changedate',
+        			type: "POST",
+        			dataType: "JSON",
+        			data: {
+        				"date": date
+        			},
+        			success: function(data){
+        			    $("#TOTAL_BA").html(data.total_ba);
+        			    $("#TOTAL_OUTLETS").html(data.total_outlet);
+        			    $("#TOTAL_PRODUCTS").html(data.total_product);
+        			    $("#TOTAL_BRANDS").html(data.total_brand);
+        				modal.hide();
+        			},error: function(data){
+        			    modal.hide();
+        			}
+                });
+            });
+            
+            $(document).on('click','.clndr_next',function(){
+                var date = $('.clndr .md-card-toolbar-heading-text').html().trim();
+                date = "31-"+date.replace(" ","-");
+                date = moment(date).add(1,'month').format("YYYY-MM-DD");
+               modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+               $.ajax({
+        			url: SITE_URL+'dashboard/changedate',
+        			type: "POST",
+        			dataType: "JSON",
+        			data: {
+        				"date": date
+        			},
+        			success: function(data){
+        			    $("#TOTAL_BA").html(data.total_ba);
+        			    $("#TOTAL_OUTLETS").html(data.total_outlet);
+        			    $("#TOTAL_PRODUCTS").html(data.total_product);
+        			    $("#TOTAL_BRANDS").html(data.total_brand);
+        				modal.hide();
+        			},error: function(data){
+        			    modal.hide();
+        			}
+                });
+            });
+            
+            $(document).on('click','.clndr_today', function(){
+               date = moment().format("YYYY-MM-DD");
+               modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+               $.ajax({
+        			url: SITE_URL+'dashboard/changedate',
+        			type: "POST",
+        			dataType: "JSON",
+        			data: {
+        				"date": date
+        			},
+        			success: function(data){
+        			    $("#TOTAL_BA").html(data.total_ba);
+        			    $("#TOTAL_OUTLETS").html(data.total_outlet);
+        			    $("#TOTAL_PRODUCTS").html(data.total_product);
+        			    $("#TOTAL_BRANDS").html(data.total_brand);
+        				modal.hide();
+        			},error: function(data){
+        			    modal.hide();
+        			}
+                });
+            });
         });
         
     </script>

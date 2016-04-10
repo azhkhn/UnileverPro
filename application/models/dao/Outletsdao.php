@@ -39,10 +39,20 @@
 			$this->db->where('id', $dto->getId());
 			return $this->db->update('outlets', $outlet);
 		}
+		
 		public function deleteOutlet($id){
-			$this->db->set('status', FALSE);
+			//$this->db->set('status', FALSE);
 			$this->db->set('deleted_at', 'NOW()', FALSE);
+			$this->db->set('deleted_by', $this->ion_auth->get_user_id());
 			$this->db->where('id', $id);
+			return $this->db->update('outlets');
+		}
+		
+		public function changeStatus(DtoOutlets $outlet){
+			$this->db->set('updated_date', date('Y-m-d H:i:s'));
+			$this->db->set('updated_by', $this->ion_auth->get_user_id());
+			$this->db->set('status', 1 - $outlet->getStatus());
+			$this->db->where('id', $outlet->getId());
 			return $this->db->update('outlets');
 		}
 		
@@ -50,6 +60,8 @@
 			$this->db->select('id, dms_code, distributor, channel_id, outlet_type_id, name, address, ba_id, created_date, created_by, updated_date, updated_by, status, deleted_at');
 			$this->db->from('outlets');
 			$this->db->where('id', $id);
+			$this->db->where("deleted_at",'0000-00-00 00:00:00');
+			$this->db->or_where("deleted_at", null);
 			$this->db->limit(1);
 			$query = $this->db->get();
 			return $query->result();
@@ -62,6 +74,8 @@
 			$this->db->join("channels C", "A.channel_id = C.id", "LEFT");
 			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
 			$this->db->join("users E", "A.ba_id = E.id", "LEFT");
+			$this->db->where("A.deleted_at",'0000-00-00 00:00:00');
+			$this->db->or_where("A.deleted_at", null);
 			$this->db->order_by("A.id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -71,6 +85,7 @@
 			$this->db->select('id, name');
 			$this->db->from('distributors');
 			$this->db->where("status", 1);
+			$this->db->where("deleted_at",'0000-00-00 00:00:00');
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -80,6 +95,7 @@
 			$this->db->select('id, name');
 			$this->db->from('channels');
 			$this->db->where("status", 1);
+			$this->db->where("deleted_at",'0000-00-00 00:00:00');
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -89,6 +105,7 @@
 			$this->db->select('id, name');
 			$this->db->from('outlet_types');
 			$this->db->where("status", 1);
+			$this->db->where("deleted_at",'0000-00-00 00:00:00');
 			$this->db->order_by("id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -100,6 +117,7 @@
 			$this->db->join('users u','g.user_id = u.id', 'LEFT');
 			$this->db->where('g.group_id' , 3);
 			$this->db->where('u.active' , 1);
+			$this->db->where("u.deleted_at",null);
 			$this->db->order_by("g.user_id", "desc");
 			$query = $this->db->get();
 			return $query->result();
@@ -114,6 +132,7 @@
 			$this->db->join("outlet_types D", "A.outlet_type_id = D.id", "LEFT");
 			$this->db->where("A.status", 1);
 			$this->db->where("A.ba_id", $id);
+			$this->db->where("A.deleted_at",'0000-00-00 00:00:00');
 			$query = $this->db->get();
 			return $query->result();
 		}
@@ -127,6 +146,7 @@
 			$this->db->join("users E", "A.ba_id = E.id", "LEFT");
 			$this->db->where("A.status", 1);
 			$this->db->where("A.id", $id);
+			$this->db->where("A.deleted_at",'0000-00-00 00:00:00');
 			$query = $this->db->get();
 			return $query->row();	
 		}
@@ -140,13 +160,18 @@
 			$this->db->join("users E", "A.ba_id = E.id", "LEFT");
 			$this->db->order_by("A.name");
 			$this->db->where('A.status', $status);
+			$this->db->where("A.deleted_at",'0000-00-00 00:00:00');
 			$query = $this->db->get();
 			return $query->result();
 		}
 
-		public function count(){
+		public function count($date = ''){
 			$this->db->from('outlets');
 			$this->db->where("status", 1);
+			$this->db->where('deleted_by', null);
+			if($date!=''){
+				$this->db->where("created_date <='".$date."'");	
+			}
 			return $this->db->count_all_results();
 		}
 	}

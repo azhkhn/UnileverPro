@@ -111,9 +111,9 @@
                                                 <input type="checkbox" id="btnStatus" data="<?php echo $user->id?>" data-switchery data-switchery-color="#1e88e5" <?php echo ($user->active==1)?"checked":""?> <?php echo ($user->active==1)?" value='on'":" value='off'"?>/>
                                             </td>
                                             <td class="uk-text-nowrap">
-                                                <a title="View" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnView" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE8F4;</i></a>
-                                                <a title="Update" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnUpdate" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE3C9;</i></a>
-                                                <a title="Delete" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons md-24">&#xE872;</i></a>
+                                                <a title="View" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnView" data="<?php echo $user->id?>"><i class="material-icons">&#xE8F4;</i></a>
+                                                <a title="Update" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnUpdate" data="<?php echo $user->id?>"><i class="material-icons">&#xE3C9;</i></a>
+                                                <a title="Delete" data-uk-tooltip="{pos:'left'}" href="javascript:;" id="btnDelete" data="<?php echo $user->id?>"><i class="material-icons">&#xE872;</i></a>
                                             </td>
                                         </tr>
                                         <?php endforeach;?>

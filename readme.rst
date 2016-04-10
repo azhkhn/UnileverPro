@@ -67,3 +67,9 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+
+
+1.http://www.emailondeck.com/
+2.https://www.textnow.com
+3.Facebook

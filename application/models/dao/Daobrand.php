@@ -72,9 +72,12 @@ class DaoBrand extends CI_Model{
 		return $this->db->count_all_results();
 	}
 
-	public function count(){
+	public function count($date=""){
 		$this->db->from('brands');
 		$this->db->where("status", 1);
+		if($date!=""){
+			$this->db->where("created_date <='".$date."'");	
+		}
 		return $this->db->count_all_results();
 	}
 	

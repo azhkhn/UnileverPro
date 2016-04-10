@@ -249,7 +249,41 @@ $(function(){
 	});
 
 
-	// TODO: DELETE USER
+	// TODO: DELETE BA
+	$(document).on('click','#btnDelete', function(){
+		var id = $(this).attr('data');
+		var _this = $(this);
+		UIkit.modal.confirm('Do you want to delete that Project Holder?', 
+			function(){ 
+				UIkit.modal.confirm("Are you really want to delete that Project Holder?",
+					function(){
+						modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+						$.ajax({
+							url: SITE_URL+'user/delete/'+id,
+							type: "POST",
+							dataType: "JSON",
+							success: function(data){
+								modal.hide();
+								console.log(data);
+								if(data){
+									UIkit.modal.alert('You have been deleted successfully!'); 	
+									location.href=SITE_URL + "user/projectholderinformation";
+								}else{
+									UIkit.modal.alert('You have an error when delete the ba. Please try again!'); 	
+								}
+							},
+							error: function(data){
+								modal.hide();
+								console.log(data);
+							}
+						});
+					}
+				
+				);
+			}
+		);			
+	});
+
 
 	// TODO: PAGINATION ON USER
 	$('body').on('click', '.uk-pagination a', function(e){

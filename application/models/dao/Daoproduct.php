@@ -52,7 +52,7 @@ class DaoProduct extends CI_Model {
 		$this->db->join ( 'brands b', 'p.brand = b.id', 'LEFT' );
 		$this->db->join ( 'sale_promotions pro', 'p.promotion = pro.id AND pro.status=1', 'LEFT' );
 		$this->db->where ( 'p.status', 1 );
-		$this->db->order_by ( "p.id", "desc" );
+		$this->db->order_by ( "p.id", "asc" );
 		$query = $this->db->get ();
 		return $query->result ();
 	}
@@ -99,7 +99,7 @@ class DaoProduct extends CI_Model {
 		return $query->row ();
 	}
 
-	public function getAllProductsOnSale(){
+	public function getAllProductsOnSale($date='NOW()'){
 		$this->db->select("products.id AS product_id
 						, products.code
 						, products.name
@@ -108,23 +108,28 @@ class DaoProduct extends CI_Model {
 						, 0 AS amount
 						, buy
 						, product_promotion.id AS promotion
+						, product_promotion.id AS promotion_id
 						, CONCAT('BUY ', product_promotion.buy, ' FREE ', product_promotion.free) AS promotion_name
+						, CONCAT('BUY ', product_promotion.buy, ' FREE ', product_promotion.free) AS remark
 						", FALSE);
 		$this->db->from('products');
-		$this->db->join('product_promotion','product_promotion.product_id = products.id AND product_promotion.start_date <=NOW() AND product_promotion.end_date>=NOW()
-									AND product_promotion.status =1','LEFT');
+		$this->db->join('product_promotion',"product_promotion.product_id = products.id AND product_promotion.start_date <='".$date."' AND product_promotion.end_date>='".$date."'
+									AND product_promotion.status =1",'LEFT');
 		//$this->db->join('sale_promotions', 'product_promotion.promotion_id = sale_promotions.id AND sale_promotions.status=1', 'LEFT');
-		$this->db->join('promotion_types', 'product_promotion.promotion_id = promotion_types.id AND product_promotion.start_date <=NOW() AND product_promotion.end_date>=NOW() AND promotion_types.status=1','LEFT');
+		$this->db->join('promotion_types', "product_promotion.promotion_id = promotion_types.id AND product_promotion.start_date <='".$date."' AND product_promotion.end_date>='".$date."' AND promotion_types.status=1",'LEFT');
 		$this->db->group_by('products.name');
-		$this->db->order_by("products.name");
+		$this->db->order_by("products.code");
 		$this->db->where('products.status', 1);
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	public function count(){
+	public function count($date=''){
 		$this->db->from('products');
 		$this->db->where("status", 1);
+		if($date!=""){
+			$this->db->where("created_date <='".$date."'");	
+		}
 		return $this->db->count_all_results();
 	}
 	

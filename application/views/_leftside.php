@@ -41,12 +41,12 @@
                     </a>
                 </li>
                 
-<!--                <li>
-                    <a href="<?php echo site_url('salepromotion/')?>">
+                <li>
+                    <a href="<?php echo site_url('saletransaction/')?>">
                         <i class="menu_icon material-icons">&#xE547;</i>
-                        Sale Promotion
+                        Sale Transaction
                     </a>
-                </li>-->
+                </li>
                 
                 <li>
                     <a href="#">

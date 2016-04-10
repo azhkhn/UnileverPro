@@ -31,6 +31,13 @@
 			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
 			$this->load->view('users/beauty_agent_list', $this->data);
 		}
+		
+		public function ba_ajax(){
+			$this->load->model('dao/Daouser');
+			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('BEAUTY_AGENT');
+			$this->data["supervisors"] = $this->Daouser->getAllUsersByGroupName('SUPERVISOR');
+			echo json_encode($this->data);
+		}
 
 		/*
 		public function BAInformation(){
@@ -105,21 +112,29 @@
 		}
 
 		public function BAExecutiveInformation(){
-			$this->data['users'] = $this->ion_auth->users('ADMIN')->result();
+			/*$this->data['users'] = $this->ion_auth->users('ADMIN')->result();
 			foreach ($this->data['users'] as $k => $user)
 			{
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
+			$this->load->view('users/beauty_agent_executive_list', $this->data);*/
+			$this->load->model('dao/Daouser');
+			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('ADMIN');
 			$this->load->view('users/beauty_agent_executive_list', $this->data);
 		}
 
 		public function projectHolderInformation(){
-			$this->data['users'] = $this->ion_auth->users('PROJECT_HOLDER')->result();
+/*			$this->data['users'] = $this->ion_auth->users('PROJECT_HOLDER')->result();
 			foreach ($this->data['users'] as $k => $user)
 			{
 				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
 			}
-			$this->load->view('users/project_holder_list', $this->data);	
+			$this->load->view('users/project_holder_list', $this->data);*/	
+			/*$this->data["users"] = $this->Daouser->getAllUsersByGroupName('ADMIN');
+			$this->load->view('users/project_holder_list', $this->data);*/
+			$this->load->model('dao/Daouser');
+			$this->data["users"] = $this->Daouser->getAllUsersByGroupName('PROJECT_HOLDER');
+			$this->load->view('users/project_holder_list', $this->data);
 		}
 
 		public function registerNewBA(){
@@ -409,6 +424,14 @@
 		public function getUser($id){
 			$this->load->model('dao/Daouser');
 			echo json_encode($this->Daouser->getUserById($id));
+		}
+		
+		public function delete($id){
+			$this->load->model('dao/Daouser');
+			$this->load->model('dto/Dtouser');
+			$this->Dtouser->setId($id);
+			echo json_encode($this->Daouser->deleteUser($this->Dtouser));
+			
 		}
 
 		public function changeStatus($id){

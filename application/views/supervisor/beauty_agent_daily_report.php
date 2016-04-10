@@ -12,6 +12,12 @@
         }
     </style>
 
+    <style>html { font-size: 14px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.406/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="//kendo.cdn.telerik.com/2016.1.406/styles/kendo.material.min.css" />
+
+    <script src="//kendo.cdn.telerik.com/2016.1.406/js/jquery.min.js"></script>
+    <script src="//kendo.cdn.telerik.com/2016.1.406/js/kendo.all.min.js"></script>
 </head>
 <body>
     <!--  header -->
@@ -39,8 +45,8 @@
                                             <label for="selectedBA"> BA Name</label>
                                             <select id="selectedBA" name="selectedBA" data-md-selectize data-md-selectize-bottom>
                                                 <option value="">BA Name</option>
-                                                <?php foreach ($ba_users as $user):?>
-                                                    <option value="<?php echo $user->id;?>"><?php echo $user->username; ?></option>
+                                                <?php foreach ($ba_users as $key=>$user):?>
+                                                    <option value="<?php echo $user->id;?>"><?php echo ($key+1).' '.$user->username; ?></option>
                                                 <?php endforeach?>
                                             </select>
                                         </div>
@@ -423,7 +429,7 @@
 
     <script id="CONTENT_TEMPLATE" type="text/x-jquery-tmpl">
         <tr>
-            <td id="itemCode">{{= code}}</td>
+            <td id="itemCode" style="width:13%">{{= code}}</td>
             <td id="itemName">{{= product_name}}</td>
             <td id="price" style="text-align:right;">{{= price}}</td>
             <td id="quantitySold" style="text-align:right;">{{= quantity}}</td>
@@ -492,6 +498,7 @@
     <!-- enable hires images -->
     <script>
         var SITE_URL = '<?php echo site_url(); ?>';
+        var BA_ID ='<?php echo $id;?>';
         $(function() {
             altair_helpers.retina_images();
         });

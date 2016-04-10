@@ -1,10 +1,11 @@
 $(function(){
 	
+	var supervisor ={}
 	var dmsCode = false;
 	$("#txtTransactionOf").val(moment().format('DD-MMMM-YYYY'));
 	$("#txtTransactionOfsaleTransactionHistory").val(moment().format('DD-MMMM-YYYY'));
-	// TODO: ON CHANGE ON BA 
-	$("#selectedBA").change(function(){
+	
+	supervisor.selectBA = function(id){
 		var start_date = moment().date(1).format('YYYY-MM-DD');
 		var end_date = moment().add('months', 1).date(0).format('YYYY-MM-DD');
 		if(dmsCode==true){
@@ -17,7 +18,7 @@ $(function(){
 			type: "POST",
 			dataType: "JSON",
 			data: {
-				'ba_id' : $("#selectedBA").val(),
+				'ba_id' : id,
 				'start_date' : start_date,
 				'end_date' : end_date
 			},
@@ -25,29 +26,6 @@ $(function(){
 				console.log(data);
 				$('.md-input-wrapper').find('.md-input').not("#txtTransactionOf,#txtTransactionOfsaleTransactionHistory, #txtNumberOfWorking").val('');
 				$('.md-input-wrapper').removeClass('md-input-filled');
-				if(data.outlets){
-					/*$("#selectOutletName").html("<option value=''>Outlet Name</option>");
-					if(data.outlets.length>0){
-						for(var i=0; i<data.outlets.length;i++){
-							console.log($("#selectOutletName").html());
-							$("#selectOutletName").append("<option value='"+data.outlets[i].id+"'>"+data.outlets[i].outlet_name+"</option>");
-						}
-						$("#selectOutletName").attr('data-md-selectize','');
-						$("#selectOutletName").attr('data-md-data-md-selectize-bottom','');
-		
-					}*/
-
-					 /*$("#selectOutletName").kendoDropDownList({
-                          dataTextField: "outlet_name",
-                          dataValueField: "id",
-                          dataSource: data.outlets,
-                          height: 100,
-                          select: function(e){
-                          	console.log(e).item;
-                          }
-                      });*/
-                      
-				}
 				if(data.user){
 					$("#txtPhoto").attr('src',data.user.photo);
 					$("#txtSupervisorName").val(data.user.supervisor);
@@ -77,7 +55,7 @@ $(function(){
 						//$("tbody#CONTENTS").html('');
 						//$("#CONTENT_TEMPLATE").tmpl(data.products).appendTo("tbody#CONTENTS");
 						var dataSource = new kendo.data.DataSource({
-				           /*pageSize: 20,*/
+				           //pageSize: 20,
 				           //data: data.products,
 				           change: function(e) {
 						      if (e.action == "itemchange")  {
@@ -91,7 +69,7 @@ $(function(){
 						    },
 				           transport: {
                                 read:  {
-                                    url: SITE_URL + "supervisor/products",
+                                    url: SITE_URL + "supervisor/products/"+moment($("#txtTransactionOf")).format("YYYY-MM-DD"),
                                     dataType: "json"
                                 },
                                 update: {
@@ -171,12 +149,12 @@ $(function(){
 						  console.log(view[1].name); // displays "Ham"
 						});
 
-			        	var _promotionTypeDataSource = new kendo.data.DataSource({
+			        	/*var _promotionTypeDataSource = new kendo.data.DataSource({
 						    data: [
 						        { id: 1, promotiontype: "BUY 1 FREE 1" },
 						        { id: 2, promotiontype: "BUY 2 FREE 2" }
 						    ]
-						});
+						});*/
 				        var _grid = $("#grid").kendoGrid({
 			        		dataSource: dataSource,
 			                sortable: true,
@@ -239,7 +217,19 @@ $(function(){
 				console.log(data);
 			}
 		});
+	}
+	
+	// TODO: ON CHANGE ON BA 
+	$("#selectedBA").change(function(){
+		supervisor.selectBA($("#selectedBA").val());
 	});
+	
+	if(BA_ID!="" || BA_ID!=null){
+		//supervisor.selectBA(BA_ID);
+		var $selectedBA = $("#selectedBA").selectize();
+		var selectedBA = $selectedBA[0].selectize;
+		selectedBA.setValue(BA_ID);
+	}
 
 
 	$(document).on('click','.td-editable', function(e){
@@ -626,12 +616,15 @@ $(function(){
 	//TODO: KENDO GRID	
 	var dataSource = new kendo.data.DataSource({
 	   	/*pageSize: 20,*/
-	   	//data: data.products,
+	   	//data: ,
 	   	change: function(e) {
 	      	if (e.action == "itemchange")  {
 	        	if (e.field == "price" || e.field == "quantity") {
 	          		var item=  e.items[0];
 	          		if(item.quantity=="" || item.price=="" || item.quantity===undefined || item.price ===undefined){
+	          			if(item.quantity==0){
+	          				item.trigger("change", {field: "amount"});	
+	          			}
 	          			return false;
 	          		}else{
 	         			item.trigger("change", {field: "amount"});
@@ -641,20 +634,30 @@ $(function(){
 	       		if(e.field =="quantity"){
 	       			var item = e.items[0];
 	       			if(item.quantity=="" || item.price=="" || item.quantity===undefined || item.price ===undefined){
-	          			return false;
+	       				if(item.quantity==0){
+	          				item.promotion = null;
+	         				item.trigger("change", {field: "promotion_name"});
+	          			}else{
+	          				return false;
+	          			}
 	          		}else{
-	         			item.promotion = item.promotion_id;
-	         			item.trigger("change", {field: "promotion_name"});
+	          			if(item.quantity>=item.buy){
+	         				item.promotion = item.promotion_id;
+	         				item.trigger("change", {field: "promotion_name"});
+	          			}else{
+	          				item.promotion = null;
+	          				item.trigger("change", {field: "promotion_name"});
+	          			}
 	         		}
 	       		}
        		}
 
 	    },
 	   	transport: {
-	        /*read:  {
-	            url: SITE_URL + "supervisor/products",
+	        read:  {
+	            url: SITE_URL + "supervisor/products/"+moment($("#txtTransactionOf").val()).format("YYYY-MM-DD"),
 	            dataType: "json"
-	        },*/
+	        },
 	        /*update: {
 	            url: SITE_URL + "saletarget/update_rows",
 	            type: "POST",
@@ -672,14 +675,14 @@ $(function(){
 	            url: SITE_URL + "/Products/Destroy",
 	            dataType: "jsonp"
 	        },*/
-	        create: {
+	        update: {
 	            url: SITE_URL + "supervisor/products_update",
                 type: "POST",
-                data: {
-                	"ba_id" : 1,
+                /*data: {
+                	"ba_id" : $("#selectedBA").val(),
                 	"outlet_id" : $("#txtOutletName").data("id"),
                 	"sale_date" : moment($("#txtTransactionOf").val()).format("YYYY-MM-DD") +" "+ moment().format("HH:mm:ss")
-                },
+                },*/
                 dataType: "json",
                 beforeSend: function(){
          			modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
@@ -687,9 +690,9 @@ $(function(){
                 complete: function(data){
                 	modal.hide();
                 	//console.log(data.responseText.message);
-                	//$("#grid1").data("kendoGrid").refresh();
+                	$("#grid1").data("kendoGrid").dataSource.read();
                 	//$("#grid1").data("kendoGrid").dataSource.empty();
-                	$("#grid1").data('kendoGrid').dataSource.data([]);  
+                	//$("#grid1").data('kendoGrid').dataSource.data([]);  
                 	sales.getAllSales(SITE_URL+"supervisor/ajax");
                 }
 	        },
@@ -703,7 +706,7 @@ $(function(){
                     	sale_date : moment($("#txtTransactionOf").val()).format("YYYY-MM-DD") +" "+ moment().format("HH:mm:ss")
 
                     };
-                }
+               }
 	        }
 	    },
 	   batch: true,
@@ -712,7 +715,7 @@ $(function(){
 	       model: {
 	       	 Total:function() {
 	       	 	var value = this.get("price") * this.get("quantity");
-	       	 	if(value!==NaN){
+	       	 	if(!isNaN(value)){
 	          		return value;
 	          	}
 	         },
@@ -721,26 +724,32 @@ $(function(){
 	         },
 	         Promotion: function(){
 	         	if(this.get("quantity")>=this.get("buy")){
-	         		return this.get("promotion_name1");
+	         		return (this.get("promotion_name")==null) ? "" : this.get("promotion_name");
+	         	}else{
+	         		return "";
+	         	}
+	         },
+	         PromotionId: function(){
+	         	if(this.get("quantity")>=this.get("buy")){
+	         		return (this.get("promotion")==null) ? "" : this.get("promotion");
 	         	}else{
 	         		return "";
 	         	}
 	         },
 	         id: "product_id",
              fields: {
-             	product_id: { editable: true, nullable: false},
-                code: { editable: true, nullable: false },
-                name: { editable: true },
-                price: { editable: true, nullable: false},
-                quantity: { type: "number", editable: true, validation: { required: {message: "Must not be empty!"}, min: 1} },
+             	product_id: { editable: false, nullable: false},
+                code: { editable: false, nullable: false },
+                name: { editable: false },
+                price: { editable: false, nullable: false},
+                quantity: { type: "number", editable: true, validation: { required: {message: "Must not be empty!"}, min: 0} },
                 amount: { 
                 	editable: false,  validation: { min:0}
                 },
-                promotion: { },
-                promotion_name: { 
-                	editable: true
-                },
-                promotiontype: { editable: true},
+                promotion: { editable: false},
+                promotion_name: { editable: false },
+                remark: {editable: false},
+                promotiontype: { editable: false},
                 promotiontype1: {},
                 promotion_type_id: {},
                 promotion_id:{}
@@ -750,7 +759,7 @@ $(function(){
 	   }
 	});
 
-    var dataSourceProducts = new kendo.data.DataSource({
+/*    var dataSourceProducts = new kendo.data.DataSource({
        transport: {
             read:  {
                 url: SITE_URL + "supervisor/products",
@@ -764,22 +773,31 @@ $(function(){
                 }
             }
         }
-    });
+    });*/
 
 	var _grid = $("#grid1").kendoGrid({
 		dataSource: dataSource,
 	    sortable: true,
 	    pageable: false,
+	    scrollable: false,
 	    pageSize: 20,
-	    toolbar: ["create","save"],
+	   	toolbar: ["save"],
 	    editable: true,
 	    selectable: true,
+	    filterable: {
+        	mode: "row"
+        },
 	    columns: [
             { field:"product_id",title:"Id", hidden: true},
-            { field: "code", title: "Code", width:"15%" , 
+            { field: "code", title: "Code", width:"13%",filterable: {
+                                cell: {
+                                    operator: "contains",
+                                    showOperators: false
+                                }
+                            } /*, 
 	    		editor: function(container, options) {
-        			console.log(container, options);
-        			console.log(dataSource);
+        			//console.log(container, options);
+        			//console.log(dataSource);
 	                $("<input data-bind='value:code' />")
                     .attr("id", "ddl_roleTitle")
                     .appendTo(container)
@@ -809,15 +827,17 @@ $(function(){
 							options.model.set("promotiontype", this.dataItem(e.item.index()).promotiontype);
                         }
                     });
-				} 
+				} */
         	},
             { field: "name", title:"Product Name"},
             { field: "price", title: "Unit Price", format: "{0:c2}", width: "10%", attributes: {'data-format': 'c' },},
             { field: "quantity", title: "Quantity", width: "10%"},
             { field: "amount", title: "Amount", format: "{0:c}", width: "10%", template: "#=Total()#" },
-            { field: "promotion", title: "Promotion", width: "0%", hidden:true}, 
-            { field: "promotion_name", title: "Promotion", width:"20%", template: "#=Promotion()#"},
-            { field: "promotiontype", title: "Promotion Type", width: "20%", hidden:true},
+            { field: "promotion", title: "Promotion", width: "0%", hidden:true, template:"#=PromotionId()#"}, 
+            { field: "promotion_name", title: "Promotion", width:"10%", template: "#=Promotion()#"},
+            { field: "remark", title: "Remark", width:"10%"},
+            //{ field: "promotiontype", title: "Promotion Type", width: "20%", hidden:true},
+            //{ field: "buy", title: "Buy", width: "0%", hidden:true},
             /*{ field: "promotiontype1", title: "Promotion Type", width: "10%",
         		editor: function(container, options) {
         			var dataSource = $.parseJSON('[' + options.model["promotiontype"] + ']');
@@ -852,6 +872,16 @@ $(function(){
 		//_grid.saveChanges();
 		$("#grid1").data("kendoGrid").saveChanges(); 
 	}
+	
+	$("#txtTransactionOf").change(function(){
+		//Assign grid to variable
+		var grid = $("#grid1").data("kendoGrid");
+		//Set url property of the grid data source
+		grid.dataSource.transport.options.read.url = SITE_URL + "supervisor/products/"+moment($("#txtTransactionOf").val()).format("YYYY-MM-DD");
+		
+		//Read data source to update
+		grid.dataSource.read();	
+	});
 	
 	function dateTimeEditor(container, options) {
     	$('<input data-text-field="' + options.field + '" data-value-field="' + options.field + '" data-bind="value:' + options.field + '" data-format="' + options.format + '"/>')

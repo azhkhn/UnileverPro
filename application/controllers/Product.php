@@ -111,7 +111,6 @@
 				$data["ERROR"] = true;
 				$data["MSG"] = "Product Promotion has not been inserted sucessfully.";
 			}
-			var_dump($data);
 			echo json_encode($data);
 		}
 		

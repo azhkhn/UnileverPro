@@ -18,6 +18,19 @@
 			$this->data["total_outlet"] = $this->Outletsdao->count();
 			$this->load->view('dashboard', $this->data);
 		}
+		
+		public function changedate(){
+			$this->load->model("dao/Daouser");
+			$this->load->model("dao/Daoproduct");
+			$this->load->model("dao/Daobrand");
+			$this->load->model("dao/Outletsdao");
+			$date = $this->input->post("date");
+			$this->data["total_ba"] = $this->Daouser->countUsersByGroupId(3,$date);
+			$this->data["total_product"] = $this->Daoproduct->count($date);
+			$this->data["total_brand"] = $this->Daobrand->count($date);
+			$this->data["total_outlet"] = $this->Outletsdao->count($date);
+			echo json_encode($this->data);
+		}
 
 	}
 ?>

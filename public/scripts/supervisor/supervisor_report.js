@@ -22,6 +22,11 @@ $(function(){
 				$("#txtNumberOfWorking").val(26);
 				if(data.ba_users.length>0){
 					$("tbody#CONTENTS").html('');
+					var j=1;
+					for(var i=0;i<data.ba_users.length;i++){
+						data.ba_users[i]["no"] = j;
+						j++;
+					}
 					$("#CONTENT_TEMPLATE").tmpl(data.ba_users).appendTo("tbody#CONTENTS");
 				}else{
 					$("tbody#CONTENTS").html('<tr>NO CONTENTS</tr>');
@@ -105,5 +110,54 @@ $(function(){
 				console.log(data);
 			}
 		});
+	});
+	
+	// TODO: VIEW USER INFORMATION DETAILS
+	$(document).on('click','#btnViewInfo', function(){
+		var id = $(this).attr("data");
+		modal = UIkit.modal.blockUI("<div class='uk-text-center'>Processing...<br/><img class='uk-margin-top' src='"+SITE_URL+"public/assets/img/spinners/spinner.gif' alt=''"); 
+		$.ajax({
+			url: SITE_URL+'supervisor/getuser/'+id,
+			type: "GET",
+			dataType: "JSON",
+			success: function(data){
+				var $select = $("#selectGender").selectize();
+				var selectize = $select[0].selectize;
+				console.log(data);
+				$("#txtCode").val(data.code);
+				$("#txtLastName").val(data.last_name);
+				$("#txtFirstName").val(data.first_name);
+				selectize.setValue(data.gender); 
+				$("#txtTelephone").val(data.phone);
+				$("#txtSupervisor").val(data.supervisor);
+				$("#txtEmail").val(data.email);
+				$("#startWorking").val(data.starting_date)
+				$("#txtRemark").val(data.remark);
+				$('#txtPassword').val('');
+				$('#txtConfirmationPassword').val('');
+				modal.hide();
+				$("#btnSave").hide();
+				$("#btnUpdateSave").hide();
+				var modalPopup = UIkit.modal("#modalRegisterNewBA");
+				if ( modalPopup.isActive() ) {
+				    modalPopup.hide();
+				} else {
+				    modalPopup.show();
+				}
+
+				$('.md-input-wrapper').addClass('md-input-filled');
+			},
+			error: function(data){
+				console.log(data);
+				modal.hide();
+				UIkit.modal.alert(data.message);
+			}
+		});
+	});
+	
+	// TODO: VIEW USER BA DAILY REPORT
+	$(document).on('click','#btnView', function(){
+		var id = $(this).attr("data");
+		location.href=SITE_URL+"supervisor/dailybareport/"+id;
 	});
 });

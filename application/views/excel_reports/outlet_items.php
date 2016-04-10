@@ -142,6 +142,10 @@
     </div>
     <form style="display:none;" id="myform" method="post" action="<?php echo base_url('outletexcel/html') ?>">
         <input name="data" id="data" type="hidden"/>
+        <input name="supervisor_name" id="supervisor_name" type="hidden" />
+        <input name="year" id="year" type="hidden" />
+        <input name="month" id="month" type="hidden" />
+        <input name="week" id="week" type="hidden" />
     </form>
     <iframe name="frame_x"></iframe>
 
@@ -284,7 +288,9 @@
                         var JSONData = [];
                         var j = 0;
                         var k = 0;
+                        var no = 1;
                         $.each(data.outlets, function(key, value){
+                            value["No"] = no;
                             if(value["PROMOTION"]>2){
                                 htmlBody +="<tr style='font-weight:bold'>"    
                             }else{
@@ -318,6 +324,7 @@
                             //console.log(JSONData);
                             htmlBody +="</tr>"
                             k++;
+                            no++;
                         });
                         
                         
@@ -340,7 +347,7 @@
                            fixedColumns:   {
                                 leftColumns: 8
                             },
-                           order: [[ 0, 'asc' ]],
+                           //order: [[ 0, 'asc' ]],
                             "fnRowCallback": function( nRow, aData, iDisplayIndex, iDisplayIndexFull ) {
                                 console.log(aData);
                                 if(aData[7]>0){
@@ -403,6 +410,10 @@
             $("#btnExportExcel").click(function(){
                 //location.href=SITE_URL+"outletexcel/outlet_items_excel/"+$("#selectYear").val();
                 $("#data").val($("#EXCEL table").html());
+                $("#supervisor_name").val($("#selectedSupervisorName").text());
+                $("#year").val($("#selectedYear").text());
+                $("#month").val($("#selectedMonth").text());
+                $("#week").val($("#selectedWeek").text());
                 function submitFormToIFrame(){
                     //IE
                     if( document.myform ){
@@ -434,139 +445,6 @@
             });
             
         });
-/*            var tableToExcel = (function () {
-                var uri = 'data:application/vnd.ms-excel;base64,'
-                , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--><style type="text/css">    		table{border: 1px solid #e5e3e3;border-collapse:collapse}       		table td, table th{border: 1px solid #e5e3e3; width:100px; max-width:300px; overflow: hidden; font-size: 16px;}        		table th{background:#F5F5F5}         		tr{height:30px;}        		td, .text-center{text-align:center}        		table tr td:first-child + td + td{width:300px !important;}        	</style></head><body><table>{table}</table></body></html>'
-                , base64 = function (s) { return window.btoa(unescape(encodeURIComponent(s))) }
-                , format = function (s, c) { return s.replace(/{(\w+)}/g, function (m, p) { return c[p]; }) }
-                return function (table, name, filename) {
-                    if (!table.nodeType) table = document.getElementById(table)
-                    
-                    var ctx = { worksheet: name || 'Worksheet', table: table.innerHTML };
-
-                    document.getElementById("dlink").href = uri + base64(format(template, ctx));
-                    document.getElementById("dlink").download = filename;
-                    document.getElementById("dlink").click();
-        
-                }
-            })();*/
-            
-            /*var tablesToExcel = (function() {
-                var uri = 'data:application/vnd.ms-excel;base64,'
-                , tmplWorkbookXML = '<?xml version="1.0"?><?mso-application progid="Excel.Sheet"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">'
-                  + '<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"><Author>DARA PENHCHET</Author><Created>{created}</Created></DocumentProperties>'
-                  + '<Styles>'
-                  + '<Style ss:ID="Currency"><NumberFormat ss:Format="Currency"></NumberFormat></Style>'
-                  + '<Style ss:ID="Date"><NumberFormat ss:Format="Medium Date"></NumberFormat></Style>'
-                  + '</Styles>' 
-                  + '{worksheets}</Workbook>'
-                , tmplWorksheetXML = '<Worksheet ss:Name="{nameWS}"><Table>{rows}</Table></Worksheet>'
-                , tmplCellXML = '<Cell{attributeStyleID}{attributeFormula}><Data ss:Type="{nameType}">{data}</Data></Cell>'
-                , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
-                , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
-                return function(tables, wsnames, wbname, appname) {
-                  var ctx = "";
-                  var workbookXML = "";
-                  var worksheetsXML = "";
-                  var rowsXML = "";
-            
-                  for (var i = 0; i < tables.length; i++) {
-                    if (!tables[i].nodeType) tables[i] = document.getElementById(tables[i]);
-                    for (var j = 0; j < tables[i].rows.length; j++) {
-                      rowsXML += '<Row>'
-                      for (var k = 0; k < tables[i].rows[j].cells.length; k++) {
-                        var dataType = tables[i].rows[j].cells[k].getAttribute("data-type");
-                        var dataStyle = tables[i].rows[j].cells[k].getAttribute("data-style");
-                        var dataValue = tables[i].rows[j].cells[k].getAttribute("data-value");
-                        dataValue = (dataValue)?dataValue:tables[i].rows[j].cells[k].innerHTML;
-                        var dataFormula = tables[i].rows[j].cells[k].getAttribute("data-formula");
-                        dataFormula = (dataFormula)?dataFormula:(appname=='Calc' && dataType=='DateTime')?dataValue:null;
-                        ctx = {  attributeStyleID: (dataStyle=='Currency' || dataStyle=='Date')?' ss:StyleID="'+dataStyle+'"':''
-                               , nameType: (dataType=='Number' || dataType=='DateTime' || dataType=='Boolean' || dataType=='Error')?dataType:'String'
-                               , data: (dataFormula)?'':dataValue
-                               , attributeFormula: (dataFormula)?' ss:Formula="'+dataFormula+'"':''
-                              };
-                        rowsXML += format(tmplCellXML, ctx);
-                      }
-                      rowsXML += '</Row>'
-                    }
-                    ctx = {rows: rowsXML, nameWS: wsnames[i] || 'Sheet' + i};
-                    worksheetsXML += format(tmplWorksheetXML, ctx);
-                    rowsXML = "";
-                  }
-            
-                  ctx = {created: (new Date()).getTime(), worksheets: worksheetsXML};
-                  workbookXML = format(tmplWorkbookXML, ctx);
-            
-            //console.log(workbookXML);
-            
-                  var link = document.createElement("A");
-                  link.href = uri + base64(workbookXML);
-                  link.download = wbname || 'Workbook.xls';
-                  link.target = '_blank';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }
-          })();*/
-          
-          var tablesToExcel = (function () {
-            var uri = 'data:application/vnd.ms-excel;base64,'
-            , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><style type="text/css">		table{border: 1px solid #e5e3e3;border-collapse:collapse}        		table td, table th{border: 1px solid #e5e3e3; width:100px; max-width:300px; overflow: hidden; font-size: 16px;}        		table th{background:#F5F5F5}         		tr{height:30px;}        		td, .text-center{text-align:center}        		table tr td:first-child + td + td{width:300px !important;}        	</style><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets>'
-            , templateend = '</x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head>'
-            , body = '<body>'
-            , tablevar = '<table>{table'
-            , tablevarend = '}</table>'
-            , bodyend = '</body></html>'
-            , worksheet = '<x:ExcelWorksheet><x:Name>'
-            , worksheetend = '</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>'
-            , worksheetvar = '{worksheet'
-            , worksheetvarend = '}'
-            , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
-            , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
-            , wstemplate = ''
-            , tabletemplate = '';
-        
-            return function (table, name, filename) {
-                var tables = table;
-        
-                for (var i = 0; i < tables.length; ++i) {
-                    wstemplate += worksheet + worksheetvar + i + worksheetvarend + worksheetend;
-                    tabletemplate += tablevar + i + tablevarend;
-                }
-        
-                var allTemplate = template + wstemplate + templateend;
-                var allWorksheet = body + tabletemplate + bodyend;
-                var allOfIt = allTemplate + allWorksheet;
-        
-                var ctx = {};
-                for (var j = 0; j < tables.length; ++j) {
-                    ctx['worksheet' + j] = name[j];
-                }
-        
-                for (var k = 0; k < tables.length; ++k) {
-                    var exceltable;
-                    if (!tables[k].nodeType) exceltable = document.getElementById(tables[k]);
-                    ctx['table' + k] = exceltable.innerHTML;
-                }
-        
-                //document.getElementById("dlink").href = uri + base64(format(allOfIt, ctx));
-                //document.getElementById("dlink").download = filename;
-                //document.getElementById("dlink").click();
-        
-                //console.log(ctx);
-                //window.location.href = uri + base64(format(allOfIt, ctx));
-                
-                workbookXML = format(allOfIt, ctx);         
-                var link = document.createElement("A");
-                  link.href = uri + base64(workbookXML);
-                  link.download = filename || 'Workbook.xls';
-                  link.target = '_blank';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-            }
-        })();
     </script>
 </body>
 </html>
